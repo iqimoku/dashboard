@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage Analysis + Minervini Trend Template — WIG20 | WIG | DAX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --bg:#08090e; --surface:#0f1018; --surface2:#141520; --border:#1d1f2e;
+  --text:#e8eaf0; --muted:#4a506a;
+  --s1:#4fc3f7; --s2:#00e5a0; --s3:#f5a623; --s4:#ff4d4d;
+  --mtt-full:#a78bfa; --mtt-high:#6ee7b7; --mtt-mid:#fbbf24; --mtt-low:#f87171;
+  --accent:#a78bfa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+/* ── HEADER ── */
+.header{background:linear-gradient(135deg,#0b0c18 0%,#131424 60%,#08090e 100%);border-bottom:1px solid var(--border);padding:22px 36px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.h-eyebrow{font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:5px;}
+.h-title{font-size:28px;font-weight:800;line-height:1;background:linear-gradient(135deg,#fff 20%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.h-sub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5;}
+.h-badges{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;}
+.h-badge{padding:6px 14px;border-radius:7px;font-size:11px;font-family:'Space Mono',monospace;font-weight:700;}
+.hb-ws{background:rgba(0,229,160,.12);color:var(--s2);border:1px solid rgba(0,229,160,.25);}
+.hb-mtt{background:rgba(167,139,250,.12);color:var(--accent);border:1px solid rgba(167,139,250,.25);}
+
+/* ── TABS ── */
+.tabs{background:var(--surface);border-bottom:1px solid var(--border);padding:0 36px;display:flex;gap:0;overflow-x:auto;}
+.tab{padding:13px 22px;font-size:13px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;color:var(--muted);transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:8px;}
+.tab:hover{color:var(--text);}
+.tab.active{color:#fff;border-bottom-color:var(--accent);}
+.tab-cnt{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;border-radius:4px;font-size:9px;font-family:'Space Mono',monospace;font-weight:700;background:rgba(167,139,250,.18);color:var(--accent);padding:0 4px;}
+
+/* ── LEGEND ── */
+.legend-bar{background:var(--surface2);border-bottom:1px solid var(--border);padding:9px 36px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+.leg-group{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+.leg-sep{color:var(--border);font-size:16px;}
+.leg-label{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
+.li{display:flex;align-items:center;gap:5px;font-size:11px;}
+.ld{width:9px;height:9px;border-radius:2px;}
+.ld.s1{background:var(--s1);}.ld.s2{background:var(--s2);}.ld.s3{background:var(--s3);}.ld.s4{background:var(--s4);}
+.ld.mtt-full{background:var(--mtt-full);}.ld.mtt-high{background:var(--mtt-high);}.ld.mtt-mid{background:var(--mtt-mid);}.ld.mtt-low{background:var(--mtt-low);}
+
+/* ── CONTROLS ── */
+.controls{padding:12px 36px;display:flex;gap:7px;flex-wrap:wrap;align-items:center;}
+.btn{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:6px 13px;border-radius:6px;font-size:11px;font-family:'Outfit',sans-serif;cursor:pointer;transition:all .2s;}
+.btn:hover{color:var(--text);}
+.btn.active{border-color:var(--accent);color:var(--accent);background:rgba(167,139,250,.07);}
+.btn.s1a.active{border-color:var(--s1);color:var(--s1);background:rgba(79,195,247,.07);}
+.btn.s2a.active{border-color:var(--s2);color:var(--s2);background:rgba(0,229,160,.07);}
+.btn.s3a.active{border-color:var(--s3);color:var(--s3);background:rgba(245,166,35,.07);}
+.btn.s4a.active{border-color:var(--s4);color:var(--s4);background:rgba(255,77,77,.07);}
+.btn.mtta.active{border-color:var(--mtt-full);color:var(--mtt-full);background:rgba(167,139,250,.07);}
+.c-sep{width:1px;height:24px;background:var(--border);margin:0 4px;}
+.c-right{margin-left:auto;display:flex;gap:7px;align-items:center;}
+.search-wrap{position:relative;}
+.search-input{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 12px 6px 30px;border-radius:6px;font-size:11px;font-family:'Outfit',sans-serif;outline:none;width:200px;transition:border-color .2s;}
+.search-input:focus{border-color:var(--accent);}
+.search-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:11px;}
+select.sector-sel{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:11px;font-family:'Outfit',sans-serif;outline:none;cursor:pointer;}
+
+/* ── GRID ── */
+.grid{padding:8px 36px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:13px;}
+.no-results{padding:60px;text-align:center;color:var(--muted);font-size:14px;grid-column:1/-1;}
+
+/* ── CARD ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:11px;overflow:hidden;cursor:pointer;position:relative;transition:transform .17s,border-color .17s,box-shadow .17s;}
+.card:hover{transform:translateY(-2px);}
+.card.stage-1{border-top:3px solid var(--s1);}.card.stage-1:hover{border-color:var(--s1);box-shadow:0 6px 28px rgba(79,195,247,.1);}
+.card.stage-2{border-top:3px solid var(--s2);}.card.stage-2:hover{border-color:var(--s2);box-shadow:0 6px 28px rgba(0,229,160,.1);}
+.card.stage-3{border-top:3px solid var(--s3);}.card.stage-3:hover{border-color:var(--s3);box-shadow:0 6px 28px rgba(245,166,35,.1);}
+.card.stage-4{border-top:3px solid var(--s4);}.card.stage-4:hover{border-color:var(--s4);box-shadow:0 6px 28px rgba(255,77,77,.1);}
+.card-hint{position:absolute;top:9px;right:9px;font-size:9px;color:var(--muted);font-family:'Space Mono',monospace;opacity:0;transition:opacity .2s;}
+.card:hover .card-hint{opacity:1;}
+
+/* card header */
+.card-header{padding:14px 15px 8px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+.ch-info{flex:1;min-width:0;}
+.c-ticker{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;}
+.c-name{font-size:14px;font-weight:700;margin-top:2px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.c-sector{font-size:10px;color:var(--muted);margin-top:2px;}
+.c-idx{display:inline-block;font-size:8px;font-family:'Space Mono',monospace;padding:1px 5px;border-radius:3px;margin-top:3px;font-weight:700;}
+.idx-wig20{background:rgba(124,108,248,.15);color:#a78bfa;}
+.idx-mwig40{background:rgba(240,180,41,.15);color:#f0b429;}
+.idx-swig80{background:rgba(56,189,248,.15);color:#38bdf8;}
+.idx-dax{background:rgba(232,180,75,.15);color:#e8b44b;}
+.ch-badges{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
+.stage-badge{display:flex;flex-direction:column;align-items:center;gap:1px;}
+.stage-num{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:16px;font-weight:700;}
+.stage-1 .stage-num{background:rgba(79,195,247,.15);color:var(--s1);}
+.stage-2 .stage-num{background:rgba(0,229,160,.15);color:var(--s2);}
+.stage-3 .stage-num{background:rgba(245,166,35,.15);color:var(--s3);}
+.stage-4 .stage-num{background:rgba(255,77,77,.15);color:var(--s4);}
+.stage-lbl{font-size:7px;font-family:'Space Mono',monospace;text-align:center;}
+.stage-1 .stage-lbl{color:var(--s1);}.stage-2 .stage-lbl{color:var(--s2);}
+.stage-3 .stage-lbl{color:var(--s3);}.stage-4 .stage-lbl{color:var(--s4);}
+
+/* ── WEINSTEIN MINI CYCLE ── */
+.mini-chart{padding:2px 15px 7px;position:relative;height:38px;}
+.mini-bar-bg{height:3px;background:var(--border);border-radius:2px;position:absolute;bottom:15px;left:15px;right:15px;}
+.mini-bar-fill{height:3px;border-radius:2px;}
+.stage-1 .mini-bar-fill{background:linear-gradient(90deg,var(--border),var(--s1));}
+.stage-2 .mini-bar-fill{background:linear-gradient(90deg,var(--s1),var(--s2));}
+.stage-3 .mini-bar-fill{background:linear-gradient(90deg,var(--s2),var(--s3));}
+.stage-4 .mini-bar-fill{background:linear-gradient(90deg,var(--s3),var(--s4));}
+.mini-dot{width:8px;height:8px;border-radius:50%;position:absolute;bottom:12px;border:2px solid var(--bg);transform:translateX(-50%);}
+.stage-1 .mini-dot{background:var(--s1);}.stage-2 .mini-dot{background:var(--s2);}
+.stage-3 .mini-dot{background:var(--s3);}.stage-4 .mini-dot{background:var(--s4);}
+.mini-lbls{display:flex;justify-content:space-between;position:absolute;bottom:2px;left:15px;right:15px;}
+.mini-lbls span{font-size:7px;color:var(--muted);font-family:'Space Mono',monospace;}
+
+/* ── MTT BAR ── */
+.mtt-bar-wrap{padding:2px 15px 10px;border-top:1px solid var(--border);padding-top:9px;}
+.mtt-bar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;}
+.mtt-bar-label{font-size:9px;font-family:'Space Mono',monospace;color:var(--muted);letter-spacing:1px;display:flex;align-items:center;gap:5px;}
+.mtt-logo{font-size:8px;font-family:'Space Mono',monospace;font-weight:700;padding:1px 5px;border-radius:3px;background:rgba(167,139,250,.15);color:var(--accent);border:1px solid rgba(167,139,250,.2);}
+.mtt-score-txt{font-size:11px;font-weight:700;font-family:'Space Mono',monospace;}
+.mtt-score-full{color:var(--mtt-full);}
+.mtt-score-high{color:var(--mtt-high);}
+.mtt-score-mid{color:var(--mtt-mid);}
+.mtt-score-low{color:var(--mtt-low);}
+.mtt-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden;}
+.mtt-fill{height:100%;border-radius:3px;transition:width .6s ease;}
+.mtt-dots{display:flex;gap:3px;margin-top:5px;}
+.mtt-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.mtt-dot.pass{background:var(--mtt-high);}
+.mtt-dot.fail{background:rgba(255,255,255,.08);}
+.mtt-dot.partial{background:var(--mtt-mid);}
+
+/* card metrics */
+.card-metrics{padding:0 15px 9px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;}
+.cm{background:rgba(255,255,255,.028);border-radius:5px;padding:5px 7px;}
+.cm-l{font-size:8px;color:var(--muted);font-family:'Space Mono',monospace;margin-bottom:1px;}
+.cm-v{font-size:12px;font-weight:600;font-family:'Space Mono',monospace;}
+.cm-v.up{color:var(--s2);}.cm-v.dn{color:var(--s4);}.cm-v.nu{color:var(--text);}
+.card-analysis{padding:0 15px 9px;font-size:11px;color:#8090a8;line-height:1.5;border-top:1px solid var(--border);padding-top:8px;}
+.card-analysis strong{color:var(--text);}
+.card-signals{padding:0 15px 13px;display:flex;gap:4px;flex-wrap:wrap;}
+.stag{padding:2px 7px;border-radius:3px;font-size:8px;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;}
+.tag-buy{background:rgba(0,229,160,.12);color:var(--s2);border:1px solid rgba(0,229,160,.2);}
+.tag-watch{background:rgba(79,195,247,.12);color:var(--s1);border:1px solid rgba(79,195,247,.2);}
+.tag-caution{background:rgba(245,166,35,.12);color:var(--s3);border:1px solid rgba(245,166,35,.2);}
+.tag-avoid{background:rgba(255,77,77,.12);color:var(--s4);border:1px solid rgba(255,77,77,.2);}
+.tag-neutral{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--border);}
+.tag-mtt{background:rgba(167,139,250,.14);color:var(--accent);border:1px solid rgba(167,139,250,.25);}
+.card.hidden{display:none;}
+
+/* ── SUMMARY ── */
+.summary{background:var(--surface);border-top:1px solid var(--border);padding:15px 36px;display:flex;gap:28px;flex-wrap:wrap;align-items:center;}
+.sum-t{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
+.sum-stats{display:flex;gap:22px;flex-wrap:wrap;}
+.ss{display:flex;flex-direction:column;gap:1px;}
+.ss-l{font-size:10px;color:var(--muted);}
+.ss-v{font-size:20px;font-weight:800;font-family:'Space Mono',monospace;}
+.ss-v.s1{color:var(--s1);}.ss-v.s2{color:var(--s2);}.ss-v.s3{color:var(--s3);}.ss-v.s4{color:var(--s4);}
+.ss-v.mtt{color:var(--accent);}
+.sum-note{margin-left:auto;font-size:11px;color:var(--muted);max-width:280px;line-height:1.5;}
+.disclaimer{padding:11px 36px;font-size:10px;color:var(--muted);border-top:1px solid var(--border);line-height:1.6;}
+
+/* ── MODAL ── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .22s;}
+.overlay.open{opacity:1;pointer-events:all;}
+.modal{background:#0f1018;border:1px solid var(--border);border-radius:14px;width:100%;max-width:720px;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.97);transition:transform .22s;}
+.overlay.open .modal{transform:translateY(0) scale(1);}
+.modal.stage-1{border-top:4px solid var(--s1);}.modal.stage-2{border-top:4px solid var(--s2);}
+.modal.stage-3{border-top:4px solid var(--s3);}.modal.stage-4{border-top:4px solid var(--s4);}
+.modal-close{position:absolute;top:14px;right:14px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);width:30px;height:30px;border-radius:7px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;z-index:2;}
+.modal-close:hover{color:var(--text);border-color:var(--text);}
+
+.modal-hero{padding:22px 26px 16px;display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid var(--border);}
+.mh-l{flex:1;}
+.mh-ticker{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:3px;}
+.mh-name{font-size:22px;font-weight:800;margin-top:3px;}
+.mh-sector{font-size:12px;color:var(--muted);margin-top:2px;}
+.mh-r{text-align:right;}
+.mh-price{font-size:24px;font-weight:800;font-family:'Space Mono',monospace;}
+.mh-chg{font-size:14px;font-family:'Space Mono',monospace;margin-top:3px;}
+.mh-chg.up{color:var(--s2);}.mh-chg.dn{color:var(--s4);}
+
+/* cycle viz */
+.sec{padding:16px 26px;border-bottom:1px solid var(--border);}
+.sec-title{font-size:9px;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:2px;text-transform:uppercase;margin-bottom:11px;}
+.cycle-track{display:flex;height:50px;background:var(--surface2);border-radius:8px;overflow:hidden;}
+.cseg{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;opacity:.18;transition:opacity .3s;border-right:1px solid rgba(255,255,255,.03);}
+.cseg.active{opacity:1;}
+.cseg.s1.active{background:rgba(79,195,247,.12);}.cseg.s2.active{background:rgba(0,229,160,.12);}
+.cseg.s3.active{background:rgba(245,166,35,.12);}.cseg.s4.active{background:rgba(255,77,77,.12);}
+.cseg-n{font-weight:700;font-size:11px;font-family:'Space Mono',monospace;}
+.cseg-s{font-size:8px;opacity:.7;font-family:'Space Mono',monospace;}
+.cseg.s1 .cseg-n{color:var(--s1);}.cseg.s2 .cseg-n{color:var(--s2);}
+.cseg.s3 .cseg-n{color:var(--s3);}.cseg.s4 .cseg-n{color:var(--s4);}
+
+/* MTT modal section */
+.mtt-modal{padding:16px 26px;border-bottom:1px solid var(--border);}
+.mtt-modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.mtt-modal-score{display:flex;align-items:center;gap:10px;}
+.mtt-big-score{font-size:32px;font-weight:800;font-family:'Space Mono',monospace;}
+.mtt-big-label{font-size:11px;color:var(--muted);}
+.mtt-verdict{padding:6px 14px;border-radius:7px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace;}
+.verdict-full{background:rgba(167,139,250,.15);color:var(--mtt-full);border:1px solid rgba(167,139,250,.3);}
+.verdict-high{background:rgba(110,231,183,.12);color:var(--mtt-high);border:1px solid rgba(110,231,183,.25);}
+.verdict-mid{background:rgba(251,191,36,.12);color:var(--mtt-mid);border:1px solid rgba(251,191,36,.25);}
+.verdict-low{background:rgba(248,113,113,.12);color:var(--mtt-low);border:1px solid rgba(248,113,113,.25);}
+.mtt-track-big{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:14px;}
+.mtt-fill-big{height:100%;border-radius:4px;}
+.mtt-criteria-list{display:flex;flex-direction:column;gap:6px;}
+.mtt-crit{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--surface2);border-radius:7px;}
+.mtt-crit-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px;}
+.mtt-pass{background:rgba(110,231,183,.15);color:var(--mtt-high);}
+.mtt-fail{background:rgba(248,113,113,.15);color:var(--mtt-low);}
+.mtt-partial{background:rgba(251,191,36,.12);color:var(--mtt-mid);}
+.mtt-crit-body{flex:1;}
+.mtt-crit-title{font-size:12px;color:var(--text);font-weight:600;}
+.mtt-crit-desc{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.4;}
+
+/* metrics grid */
+.modal-metrics{padding:16px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;border-bottom:1px solid var(--border);}
+.mm{background:var(--surface2);border-radius:7px;padding:10px 12px;}
+.mm-l{font-size:9px;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:1px;margin-bottom:3px;}
+.mm-v{font-size:15px;font-weight:700;font-family:'Space Mono',monospace;}
+.mm-v.up{color:var(--s2);}.mm-v.dn{color:var(--s4);}.mm-v.nu{color:var(--text);}
+.mm-s{font-size:9px;color:var(--muted);margin-top:2px;}
+
+.modal-analysis{padding:16px 26px;border-bottom:1px solid var(--border);}
+.ma-text{font-size:13px;color:#9aa0b4;line-height:1.65;}
+.ma-text strong{color:var(--text);}
+
+.modal-action{padding:16px 26px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.act-btn{padding:10px 18px;border-radius:7px;font-size:12px;font-weight:700;font-family:'Outfit',sans-serif;cursor:default;border:none;}
+.act-buy{background:rgba(0,229,160,.15);color:var(--s2);border:1px solid rgba(0,229,160,.3);}
+.act-watch{background:rgba(79,195,247,.15);color:var(--s1);border:1px solid rgba(79,195,247,.3);}
+.act-caution{background:rgba(245,166,35,.15);color:var(--s3);border:1px solid rgba(245,166,35,.3);}
+.act-avoid{background:rgba(255,77,77,.15);color:var(--s4);border:1px solid rgba(255,77,77,.3);}
+.act-note{font-size:11px;color:var(--muted);line-height:1.5;}
+
+.modal::-webkit-scrollbar{width:4px;}
+.modal::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="h-eyebrow">Analiza Techniczna • GPW Warszawa + Frankfurt</div>
+    <div class="h-title">Stage Analysis + Minervini Trend Template</div>
+    <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · WIG · DAX • Czerwiec 2026</div>
+  </div>
+  <div class="h-badges">
+    <div class="h-badge hb-ws">Weinstein S1–S4</div>
+    <div class="h-badge hb-mtt">Minervini MTT 8/8</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" id="tab-wig20" onclick="switchTab('wig20')">🇵🇱 WIG20 <span class="tab-cnt" id="cnt-wig20">20</span></div>
+  <div class="tab" id="tab-mwig40" onclick="switchTab('mwig40')">📊 mWIG40 <span class="tab-cnt" id="cnt-mwig40">40</span></div>
+  <div class="tab" id="tab-swig80" onclick="switchTab('swig80')">📈 sWIG80 <span class="tab-cnt" id="cnt-swig80">80</span></div>
+  <div class="tab" id="tab-dax" onclick="switchTab('dax')">🇩🇪 DAX 40 <span class="tab-cnt" id="cnt-dax">40</span></div>
+</div>
+
+<div class="legend-bar">
+  <span class="leg-label">Weinstein:</span>
+  <div class="leg-group">
+    <div class="li"><div class="ld s1"></div>Faza 1</div>
+    <div class="li"><div class="ld s2"></div>Faza 2</div>
+    <div class="li"><div class="ld s3"></div>Faza 3</div>
+    <div class="li"><div class="ld s4"></div>Faza 4</div>
+  </div>
+  <span class="leg-sep">|</span>
+  <span class="leg-label">MTT:</span>
+  <div class="leg-group">
+    <div class="li"><div class="ld mtt-full"></div>8/8 Pełny</div>
+    <div class="li"><div class="ld mtt-high"></div>6–7 Wysoki</div>
+    <div class="li"><div class="ld mtt-mid"></div>4–5 Średni</div>
+    <div class="li"><div class="ld mtt-low"></div>0–3 Niski</div>
+  </div>
+</div>
+
+<div class="controls" id="ctrl-bar">
+  <button class="btn active" id="fall" onclick="filterStage('all',this)">Wszystkie</button>
+  <button class="btn s1a" onclick="filterStage('1',this)">Faza 1</button>
+  <button class="btn s2a" onclick="filterStage('2',this)">Faza 2</button>
+  <button class="btn s3a" onclick="filterStage('3',this)">Faza 3</button>
+  <button class="btn s4a" onclick="filterStage('4',this)">Faza 4</button>
+  <span class="c-sep"></span>
+  <button class="btn mtta" id="fmtt" onclick="filterMTT()">⚡ MTT ≥ 6/8</button>
+  <button class="btn mtta" id="fmtt8" onclick="filterMTT8()">🏆 MTT 8/8</button>
+  <span class="c-sep"></span>
+  <select class="sector-sel" id="sector-sel" onchange="filterSector(this.value)">
+    <option value="all">Wszystkie sektory</option>
+  </select>
+  <div class="c-right">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="search" placeholder="Szukaj spółki..." oninput="onSearch()">
+    </div>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="summary" id="summary"></div>
+<div class="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Czerwiec 2026. Kliknij spółkę po szczegóły.</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+// MTT helpers
+// ══════════════════════════════════════════════════
+// Each stock has an `mtt` array of 8 booleans corresponding to:
+// 1. Price > MA150 & MA200
+// 2. MA150 > MA200
+// 3. MA200 trending up (≥1 month)
+// 4. MA50 > MA150 & MA200
+// 5. Price > MA50
+// 6. Price ≥ 25% above 52W low
+// 7. Price ≤ 25% below 52W high
+// 8. Relative Strength ≥ 70 (vs index)
+
+const MTT_LABELS = [
+  {short:"Cena > MA150 & MA200", desc:"Kurs powyżej obu długoterminowych średnich — fundament trendu wzrostowego"},
+  {short:"MA150 > MA200", desc:"Średnioterminowa MA powyżej długoterminowej — potwierdzenie kierunku"},
+  {short:"MA200 rosnąca (≥1M)", desc:"200-tyg. średnia rośnie przynajmniej od miesiąca — trend dojrzały"},
+  {short:"MA50 > MA150 & MA200", desc:"Krótkoterminowa MA powyżej długich — momentum wzrostowe potwierdzone"},
+  {short:"Cena > MA50", desc:"Kurs powyżej 50-tyg. średniej — brak technicznej słabości"},
+  {short:"≥25% nad 52T dołkiem", desc:"Kurs conajmniej 25% powyżej rocznego dna — siła strukturalna"},
+  {short:"≤25% pod 52T szczytem", desc:"Kurs max 25% poniżej rocznego szczytu — brak głębokiej korekty"},
+  {short:"RS ≥ 70 vs indeks", desc:"Relatywna siła wyższa niż 70% spółek w indeksie — lider rynku"},
+];
+
+function mttScore(mtt){return mtt.filter(Boolean).length;}
+function mttColor(s){return s===8?'var(--mtt-full)':s>=6?'var(--mtt-high)':s>=4?'var(--mtt-mid)':'var(--mtt-low)';}
+function mttScoreClass(s){return s===8?'mtt-score-full':s>=6?'mtt-score-high':s>=4?'mtt-score-mid':'mtt-score-low';}
+function mttVerdictClass(s){return s===8?'verdict-full':s>=6?'verdict-high':s>=4?'verdict-mid':'verdict-low';}
+function mttVerdictText(s){return s===8?'✅ PEŁNY MTT':s>=6?'⬆ WYSOKI':s>=4?'⚡ CZĘŚCIOWY':'❌ BRAK MTT';}
+function mttFillPct(s){return Math.round(s/8*100);}
+
+function mttBarHTML(mtt){
+  const s=mttScore(mtt);
+  const col=mttColor(s);
+  const cls=mttScoreClass(s);
+  const pct=mttFillPct(s);
+  const dots=mtt.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
+  return `
+  <div class="mtt-bar-wrap">
+    <div class="mtt-bar-header">
+      <div class="mtt-bar-label"><span class="mtt-logo">MTT</span> Minervini Trend Template</div>
+      <div class="mtt-score-txt ${cls}">${s}/8</div>
+    </div>
+    <div class="mtt-track"><div class="mtt-fill" style="width:${pct}%;background:${col}"></div></div>
+    <div class="mtt-dots">${dots}</div>
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// DATA  — each stock: { ticker, name, sector, idx, price, chg, stage, ma30w, matrend, vol, rs, h52, analysis, action, anote, signals, mtt:[8 bools] }
+// ══════════════════════════════════════════════════
+
+const STOCKS = {
+
+wig20: [
+  {ticker:"PKO",name:"PKO Bank Polski",sector:"Bankowość",idx:"wig20",price:86.68,chg:"+0.18%",stage:2,ma30w:79.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-3%",
+   analysis:"<strong>Solidna Faza 2.</strong> Kurs ~9% powyżej rosnącej MA30W. Największy bank PL korzysta z wysokich stóp. Wolumen wzrostowy.",
+   action:"buy",anote:"Stop-loss: ~79 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"PKN",name:"PKN Orlen",sector:"Energia",idx:"wig20",price:129.58,chg:"+0.92%",stage:1,ma30w:132.40,matrend:"płaska →",vol:"Malejący",rs:"Słaba",h52:"-18%",
+   analysis:"<strong>Faza 1 — konsolidacja.</strong> Kurs poniżej spłaszczonej MA30W. Fuzja z Lotosem/PGNiG absorbowana.",
+   action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:63.16,chg:"+0.67%",stage:2,ma30w:57.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~9% powyżej rosnącej MA30W. Lider dywidendowy GPW.",
+   action:"buy",anote:"Stop-loss: ~58 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"PEKAO",name:"Pekao",sector:"Bankowość",idx:"wig20",price:211.00,chg:"+0.57%",stage:2,ma30w:191.00,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"Silna",h52:"-2%",
+   analysis:"<strong>Jeden z najsilniejszych trendów WIG20.</strong> ~10% powyżej stromie rosnącej MA30W.",
+   action:"buy",anote:"Stop-loss: ~195 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"SANT",name:"Santander Bank PL",sector:"Bankowość",idx:"wig20",price:548.60,chg:"+0.07%",stage:3,ma30w:532.00,matrend:"zwalnia →",vol:"Mieszany",rs:"Neutralna",h52:"-8%",
+   analysis:"<strong>Sygnały Fazy 3.</strong> MA30W zwalnia, kurs -8% od szczytu.",
+   action:"caution",anote:"Redukuj przy rally",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,true,true,true,true,true,false,false]},
+
+  {ticker:"KGHM",name:"KGHM",sector:"Metale",idx:"wig20",price:283.50,chg:"+0.32%",stage:2,ma30w:248.00,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Silna",h52:"-6%",
+   analysis:"<strong>Beneficjent hossy na miedzi — Faza 2.</strong> 14% powyżej MA30W.",
+   action:"buy",anote:"Stop-loss: ~252 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"PGE",name:"PGE",sector:"Energetyka",idx:"wig20",price:9.52,chg:"+0.42%",stage:1,ma30w:9.65,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-20%",
+   analysis:"<strong>Faza 1 bez impulsu.</strong> Kurs blisko spłaszczonej MA30W. Odpis 12 mld PLN.",
+   action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"ALR",name:"Alior Bank",sector:"Bankowość",idx:"wig20",price:109.75,chg:"-0.23%",stage:2,ma30w:96.50,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-7%",
+   analysis:"<strong>Faza 2 aktywna.</strong> ~14% powyżej MA30W. Korzysta z wysokich stóp.",
+   action:"buy",anote:"Stop-loss: ~97 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BDX",name:"Budimex",sector:"Budownictwo",idx:"wig20",price:655.40,chg:"-0.09%",stage:3,ma30w:630.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-12%",
+   analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W traci nachylenie, -12% od szczytu.",
+   action:"caution",anote:"Sell on rallies",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,true,true,true,true,true,false,false]},
+
+  {ticker:"MDVP",name:"CCC (MODIVO)",sector:"Handel",idx:"wig20",price:94.22,chg:"-0.95%",stage:2,ma30w:82.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-15%",
+   analysis:"<strong>Wczesna Faza 2.</strong> Odbicie po restrukturyzacji. Wysoka zmienność.",
+   action:"buy",anote:"High risk. Stop: ~83 PLN",signals:[["buy","S2 WCZESNY"]],
+   mtt:[true,true,false,true,true,true,false,false]},
+
+  {ticker:"CDR",name:"CD Projekt",sector:"Gaming",idx:"wig20",price:246.30,chg:"-0.24%",stage:1,ma30w:250.00,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-22%",
+   analysis:"<strong>Granica S1/S4.</strong> Kurs poniżej lekko opadającej MA30W.",
+   action:"watch",anote:"Nie kupuj przy opadającej MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"KRU",name:"Kruk",sector:"Windykacja",idx:"wig20",price:447.60,chg:"-0.42%",stage:2,ma30w:405.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Silna dojrzała Faza 2.</strong> ~10% powyżej rosnącej MA30W. RS wysoka.",
+   action:"buy",anote:"Stop-loss: ~408 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"GKY",name:"Grupa Kęty",sector:"Aluminium",idx:"wig20",price:954.50,chg:"+0.16%",stage:2,ma30w:890.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Stabilna Faza 2.</strong> ~7% powyżej MA30W. Korzysta z cen aluminium.",
+   action:"buy",anote:"Stop-loss: ~893 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"LPP",name:"LPP",sector:"Odzież",idx:"wig20",price:19300,chg:"+1.10%",stage:2,ma30w:17200,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"Silna",h52:"-1%",
+   analysis:"<strong>Lider WIG20 — wybitny trend.</strong> Blisko ATH, MA30W stromie rosnąca.",
+   action:"buy",anote:"Stop-loss: ~17 300 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"DNP",name:"Dino Polska",sector:"Handel spożywczy",idx:"wig20",price:41.46,chg:"+0.66%",stage:3,ma30w:40.20,matrend:"spłaszcza →",vol:"Spada",rs:"Pogarszająca",h52:"-30%",
+   analysis:"<strong>Zaawansowana Faza 3.</strong> -30% od ATH. Spowolnienie wzrostu sieci.",
+   action:"caution",anote:"Sell on rallies",signals:[["caution","FAZA 3/4"]],
+   mtt:[false,false,false,false,true,true,false,false]},
+
+  {ticker:"ALE",name:"Allegro",sector:"E-commerce",idx:"wig20",price:27.25,chg:"-1.27%",stage:4,ma30w:32.50,matrend:"opadająca ↓↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-28%",
+   analysis:"<strong>Faza 4 — aktywny spadek.</strong> -16% poniżej MA30W. Konkurencja Temu/Shein.",
+   action:"avoid",anote:"Weinstein: nie kupuj Fazy 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"PCO",name:"Pepco Group",sector:"Handel",idx:"wig20",price:27.64,chg:"+3.44%",stage:1,ma30w:27.10,matrend:"płaska →",vol:"Wzrostowy!",rs:"Neutralna",h52:"-18%",
+   analysis:"<strong>Potencjalny sygnał S1→S2.</strong> Dziś +3.44% z wolumenem, kurs próbuje przebić MA30W.",
+   action:"watch",anote:"Obserwuj zamknięcie tygodniowe",signals:[["watch","PRE-S2 ⚡"]],
+   mtt:[true,false,false,false,true,true,false,false]},
+
+  {ticker:"ZBK",name:"Żabka Group",sector:"Convenience",idx:"wig20",price:20.50,chg:"+1.08%",stage:1,ma30w:21.80,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-24%",
+   analysis:"<strong>Debiutant WIG20 — baza IPO.</strong> Kurs poniżej MA30W. Brak historii tygodniowej.",
+   action:"watch",anote:"Za wcześnie na ocenę",signals:[["watch","BAZA/IPO"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"OPL",name:"Orange Polska",sector:"Telekomunikacja",idx:"wig20",price:12.90,chg:"-0.62%",stage:4,ma30w:14.80,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-25%",
+   analysis:"<strong>Faza 4 — trend spadkowy.</strong> -13% poniżej opadającej MA30W.",
+   action:"avoid",anote:"Żadnych długich pozycji",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"MBK",name:"mBank",sector:"Bankowość",idx:"wig20",price:1026.50,chg:"+6.13%",stage:2,ma30w:920.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"Silna",h52:"+1%",
+   analysis:"<strong>BREAKOUT! +6.1% z ogromnym wolumenem.</strong> Wyczyścił rezerwy CHF. Klasyczny S2 acceleration.",
+   action:"buy",anote:"Buyable breakout. Stop: ~922 PLN",signals:[["buy","BREAKOUT!"],["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+],
+
+mwig40: [
+  {ticker:"PXM",name:"Polimex-Mostostal",sector:"Budownictwo",idx:"mwig40",price:7.69,chg:"-1.85%",stage:2,ma30w:6.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-8%",
+   analysis:"<strong>Faza 2 — zbrojenia i infrastruktura.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~6.85 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ACP",name:"Asseco Poland",sector:"IT",idx:"mwig40",price:196.50,chg:"+2.13%",stage:2,ma30w:178.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — IT/obronność.</strong> ~10% powyżej MA30W. Ekspansja UE.",action:"buy",anote:"Stop: ~180 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MIL",name:"Bank Millennium",sector:"Bankowość",idx:"mwig40",price:19.04,chg:"+2.42%",stage:2,ma30w:16.80,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~13% powyżej MA30W. Zakończył rezerwy CHF.",action:"buy",anote:"Stop: ~17 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ENA",name:"Enea",sector:"Energetyka",idx:"mwig40",price:20.26,chg:"-0.49%",stage:1,ma30w:20.10,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-15%",
+   analysis:"<strong>Faza 1 — baza.</strong> Kurs blisko spłaszczonej MA30W.",action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"EUR",name:"Eurocash",sector:"Dystrybucja",idx:"mwig40",price:5.58,chg:"-0.53%",stage:4,ma30w:6.40,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-28%",
+   analysis:"<strong>Faza 4.</strong> -13% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ABS",name:"AB SA",sector:"Dystrybucja IT",idx:"mwig40",price:139.60,chg:"+2.20%",stage:2,ma30w:124.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-3%",
+   analysis:"<strong>Faza 2.</strong> ~12% powyżej MA30W. Silna dystrybucja IT w CEE.",action:"buy",anote:"Stop: ~125 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ASB",name:"ASBIS",sector:"Dystrybucja IT",idx:"mwig40",price:70.50,chg:"+2.32%",stage:2,ma30w:62.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Silna Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~63 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:22.00,chg:"+1.01%",stage:1,ma30w:22.50,matrend:"płaska →",vol:"Malejący",rs:"Słaba",h52:"-35%",
+   analysis:"<strong>Faza 1 — głęboka baza.</strong> Wymaga przełomu cenowego gazu.",action:"watch",anote:"Czekaj na MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:4474,chg:"+0.63%",stage:2,ma30w:3980,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-3%",
+   analysis:"<strong>Silna Faza 2 — MultiSport monopol.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~3 990 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"BHW",name:"Bank Handlowy",sector:"Bankowość",idx:"mwig40",price:121.40,chg:"+2.71%",stage:2,ma30w:108.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — dywidendowy bank Citi.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~109 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:820.00,chg:"+1.61%",stage:2,ma30w:745.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — lider dystrybucji części.</strong> ~10% powyżej MA30W.",action:"buy",anote:"Stop: ~748 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:260.00,chg:"-1.89%",stage:3,ma30w:252.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-10%",
+   analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W zwalnia.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,true,false,true,true,true,false,false]},
+  {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:10.60,chg:"-1.12%",stage:4,ma30w:12.80,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-32%",
+   analysis:"<strong>Faza 4.</strong> -17% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GPW",name:"GPW",sector:"Finanse",idx:"mwig40",price:79.45,chg:"-0.31%",stage:2,ma30w:72.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2.</strong> ~10% powyżej MA30W. Hossa na GPW napędza przychody.",action:"buy",anote:"Stop: ~73 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ING",name:"ING Bank Śląski",sector:"Bankowość",idx:"mwig40",price:408.20,chg:"+1.74%",stage:2,ma30w:368.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-3%",
+   analysis:"<strong>Faza 2 — silny bank detaliczny.</strong> ~11% powyżej MA30W.",action:"buy",anote:"Stop: ~370 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"JSW",name:"JSW",sector:"Górnictwo",idx:"mwig40",price:26.32,chg:"-0.49%",stage:4,ma30w:32.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-40%",
+   analysis:"<strong>Faza 4 — głęboki spadek.</strong> -18% poniżej MA30W.",action:"avoid",anote:"Nie kupuj",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LBW",name:"Lubawa",sector:"Obronność",idx:"mwig40",price:9.30,chg:"-1.59%",stage:2,ma30w:8.20,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — beneficjent zbrojeń.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~8.30 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"DVL",name:"Develia",sector:"Deweloperzy",idx:"mwig40",price:11.00,chg:"+6.18%",stage:2,ma30w:9.60,matrend:"rosnąca ↑",vol:"B. wysoki!",rs:"Dobra",h52:"-8%",
+   analysis:"<strong>Faza 2 z akceleracją!</strong> Dziś +6.18% z dużym wolumenem.",action:"buy",anote:"Stop: ~9.70 PLN",signals:[["buy","BREAKOUT!"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MBR",name:"Mo-Bruk",sector:"Odpady",idx:"mwig40",price:365.00,chg:"+0.97%",stage:2,ma30w:325.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2 — niszowy lider recyklingu.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~328 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"NEU",name:"Neuca",sector:"Farmacja",idx:"mwig40",price:759.00,chg:"-0.78%",stage:2,ma30w:695.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — dystrybucja farmaceutyczna.</strong> ~9% powyżej MA30W.",action:"buy",anote:"Stop: ~698 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"PEP",name:"Polenergia",sector:"OZE",idx:"mwig40",price:49.20,chg:"-0.10%",stage:2,ma30w:44.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-7%",
+   analysis:"<strong>Faza 2 — OZE hossa.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~44.50 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"RBW",name:"Rainbow Tours",sector:"Turystyka",idx:"mwig40",price:137.00,chg:"+2.93%",stage:2,ma30w:118.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Silna Faza 2 — turystyka boom.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~119 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"VXL",name:"Voxel",sector:"Medycyna",idx:"mwig40",price:94.30,chg:"-0.74%",stage:2,ma30w:84.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — diagnostyka medyczna.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~85 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"SNT",name:"Synektik",sector:"Medtech",idx:"mwig40",price:282.60,chg:"-0.98%",stage:2,ma30w:248.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2 — robotyka chirurgiczna.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~250 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"TXT",name:"Text (LiveChat)",sector:"SaaS",idx:"mwig40",price:42.80,chg:"+3.63%",stage:1,ma30w:44.00,matrend:"lekko ↓",vol:"Wzrostowy",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 1 — baza SaaS po korekcie.</strong> Dziś +3.6% z wolumenem.",action:"watch",anote:"Czekaj na trwałe przebicie MA30W",signals:[["watch","PRE-S2?"]],
+   mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"NWG",name:"Newag",sector:"Tabor",idx:"mwig40",price:111.00,chg:"+1.09%",stage:2,ma30w:98.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — modernizacja kolejowa.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~99 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.50,chg:"-0.17%",stage:3,ma30w:57.20,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-14%",
+   analysis:"<strong>Faza 3 sygnały.</strong> MA30W zwalnia.",action:"caution",anote:"Obserwuj MA30W",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"XTB",name:"XTB",sector:"Fintech",idx:"mwig40",price:109.04,chg:"+1.62%",stage:2,ma30w:96.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-3%",
+   analysis:"<strong>Silna Faza 2 — rekordowe przychody.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~97 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"APR",name:"Auto Partner",sector:"Motoryzacja",idx:"mwig40",price:26.00,chg:"+1.56%",stage:2,ma30w:23.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2 — dystrybucja części.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~23.20 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"BNP",name:"BNP Paribas PL",sector:"Bankowość",idx:"mwig40",price:143.80,chg:"+0.14%",stage:2,ma30w:130.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — sektor bankowy.</strong> ~11% powyżej MA30W.",action:"buy",anote:"Stop: ~131 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"CFG",name:"Cyber_Folks",sector:"Cloud/Hosting",idx:"mwig40",price:204.00,chg:"+2.67%",stage:2,ma30w:178.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — cloud hosting PL.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~180 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"TSG",name:"Ten Square Games",sector:"Gaming",idx:"mwig40",price:94.00,chg:"-1.36%",stage:3,ma30w:92.00,matrend:"płaska →",vol:"Malejący",rs:"Słabnąca",h52:"-20%",
+   analysis:"<strong>Faza 3 sygnały.</strong> MA30W spłaszczona.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"VER",name:"Vercom",sector:"SaaS",idx:"mwig40",price:129.40,chg:"+1.89%",stage:2,ma30w:114.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — komunikacja chmurowa.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~115 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"CRE",name:"Creotech",sector:"Kosmonautyka",idx:"mwig40",price:952.00,chg:"+10.19%",stage:2,ma30w:740.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"B. silna",h52:"+5%",
+   analysis:"<strong>Lider wzrostu — breakout +10%!</strong> ~29% powyżej MA30W.",action:"buy",anote:"Rozciągnięty. Pullback ryzyko.",signals:[["buy","BREAKOUT!"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"GRP",name:"Grupa Pracuj",sector:"HR",idx:"mwig40",price:43.50,chg:"+0.35%",stage:1,ma30w:44.50,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-18%",
+   analysis:"<strong>Faza 1/4 — baza po korekcie.</strong> Rynek pracy zwalnia.",action:"watch",anote:"Nie kupuj przy malejącej MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DIA",name:"Diagnostyka",sector:"Diagnostyka",idx:"mwig40",price:161.10,chg:"-0.06%",stage:2,ma30w:143.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — sieć laboratoriów.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~144 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"OPL2",name:"Orange Polska",sector:"Telekomunikacja",idx:"mwig40",price:16.10,chg:"-1.23%",stage:4,ma30w:17.80,matrend:"opadająca ↓",vol:"Wysoki↓",rs:"Słaba",h52:"-22%",
+   analysis:"<strong>Faza 4.</strong> Utrata udziałów rynkowych.",action:"avoid",anote:"Nie kupuj S4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CPS",name:"Cyfrowy Polsat",sector:"Media",idx:"mwig40",price:16.40,chg:"-1.44%",stage:4,ma30w:18.50,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-30%",
+   analysis:"<strong>Faza 4.</strong> Wysoki dług, presja streaming.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ASEE",name:"Asseco SEE",sector:"IT",idx:"mwig40",price:63.10,chg:"+0.96%",stage:2,ma30w:57.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — IT Bałkany.</strong> ~11% powyżej MA30W.",action:"buy",anote:"Stop: ~58 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+],
+
+swig80: [
+  {ticker:"BUM",name:"Bumech",sector:"Górnictwo",idx:"swig80",price:20.65,chg:"-1.67%",stage:2,ma30w:18.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — dostawca dla górnictwa.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~18.40 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ABS2",name:"Asseco BS",sector:"IT",idx:"swig80",price:77.00,chg:"0.00%",stage:2,ma30w:68.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-3%",
+   analysis:"<strong>Faza 2 — ERP oprogramowanie.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~69 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"AMB",name:"Ambra",sector:"FMCG",idx:"swig80",price:19.28,chg:"+0.42%",stage:2,ma30w:17.20,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~17.40 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DEC",name:"Decora",sector:"Dekoracje",idx:"swig80",price:73.00,chg:"-0.54%",stage:2,ma30w:64.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~65 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ELT",name:"Elektrotim",sector:"Elektroinstalacje",idx:"swig80",price:48.50,chg:"-0.41%",stage:2,ma30w:43.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — beneficjent zbrojeń.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~43.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ERB",name:"Erbud",sector:"Budownictwo",idx:"swig80",price:30.55,chg:"-0.49%",stage:2,ma30w:27.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~27.30 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MNI",name:"Mennica Polska",sector:"Metale szlachetne",idx:"swig80",price:45.80,chg:"-2.14%",stage:2,ma30w:40.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-8%",
+   analysis:"<strong>Faza 2 — złoto/srebro hossa.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~40.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MSZ",name:"Mostostal Zabrze",sector:"Stal/Obrona",idx:"swig80",price:6.11,chg:"+0.49%",stage:2,ma30w:5.40,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — przemysł obronny.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~5.45 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"SAT",name:"Stalexport",sector:"Infrastruktura",idx:"swig80",price:2.75,chg:"+1.10%",stage:2,ma30w:2.44,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — A4 cash flow.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~2.46 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"STL",name:"Stalprodukt",sector:"Stal specjalna",idx:"swig80",price:228.00,chg:"-0.44%",stage:2,ma30w:202.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-3%",
+   analysis:"<strong>Faza 2 — blachy transformer.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~204 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"TAR",name:"Tarczyński",sector:"FMCG",idx:"swig80",price:122.50,chg:"+0.82%",stage:2,ma30w:108.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~109 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DTW",name:"Datawalk",sector:"Big Data",idx:"swig80",price:160.54,chg:"-2.43%",stage:2,ma30w:138.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
+   analysis:"<strong>Faza 2 — analityka bezpieczeństwa.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~139 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,false]},
+  {ticker:"UNI",name:"Unibep",sector:"Budownictwo",idx:"swig80",price:16.35,chg:"-1.51%",stage:2,ma30w:14.40,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~14.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"VOT",name:"Votum",sector:"Prawo",idx:"swig80",price:46.10,chg:"-0.86%",stage:2,ma30w:40.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — odszkodowania frankowe.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~40.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"WWL",name:"Wawel",sector:"FMCG",idx:"swig80",price:850.00,chg:"+1.19%",stage:2,ma30w:760.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — defensywny wzrost.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~765 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MLP",name:"MLP Group",sector:"Logistyka",idx:"swig80",price:90.00,chg:"-1.32%",stage:2,ma30w:79.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — magazyny e-commerce.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~79.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"TPL",name:"Torpol",sector:"Budownictwo kolejowe",idx:"swig80",price:65.20,chg:"-2.54%",stage:2,ma30w:57.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — modernizacja PKP.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~57.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"CREO",name:"Creotech Instruments",sector:"Kosmonautyka",idx:"swig80",price:694.00,chg:"+0.29%",stage:2,ma30w:590.00,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"B. silna",h52:"+2%",
+   analysis:"<strong>Lider wzrostu sWIG80.</strong> ~18% powyżej MA30W.",action:"buy",anote:"Stop: ~593 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"XTP",name:"XTPL",sector:"Nanotechnologia",idx:"swig80",price:71.10,chg:"+7.08%",stage:2,ma30w:56.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"B. silna",h52:"+5%",
+   analysis:"<strong>Faza 2 BREAKOUT +7% — nowe szczyty!</strong> ~27% powyżej MA30W.",action:"buy",anote:"Spekulacja. Stop: ~57 PLN",signals:[["buy","BREAKOUT!"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"SHP",name:"Shoper",sector:"E-commerce SaaS",idx:"swig80",price:43.00,chg:"+2.14%",stage:2,ma30w:37.50,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — platforma e-commerce PL.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~37.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"CAP",name:"Captor Therapeutics",sector:"Biotech",idx:"swig80",price:86.20,chg:"-1.37%",stage:2,ma30w:74.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Silna",h52:"-6%",
+   analysis:"<strong>Faza 2 — biotech onkologiczny.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Spekulacja. Stop: ~74.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"SCF",name:"Scope Fluidics",sector:"Diagnostyka",idx:"swig80",price:142.20,chg:"+0.14%",stage:2,ma30w:123.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — diagnostyka Rapid Test.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~124 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"SLV",name:"Selvita",sector:"CRO",idx:"swig80",price:40.60,chg:"-2.17%",stage:2,ma30w:35.50,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — globalne CRO.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~35.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"CRJ",name:"Creepy Jar",sector:"Gaming",idx:"swig80",price:662.00,chg:"-0.60%",stage:2,ma30w:580.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — Green Hell.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~583 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"PLW",name:"Playway",sector:"Gaming",idx:"swig80",price:245.00,chg:"-0.81%",stage:2,ma30w:214.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~215 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"FRO",name:"Ferro",sector:"Armatura",idx:"swig80",price:30.20,chg:"+2.03%",stage:2,ma30w:26.50,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — budownictwo.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~26.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"OPN",name:"Oponeo",sector:"E-commerce",idx:"swig80",price:86.00,chg:"0.00%",stage:2,ma30w:76.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~76.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MCI",name:"MCI Capital",sector:"PE/Venture",idx:"swig80",price:28.10,chg:"+0.72%",stage:2,ma30w:24.50,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — PE/Venture.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~24.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"SEL",name:"Selena FM",sector:"Chemia budowlana",idx:"swig80",price:55.80,chg:"+0.36%",stage:2,ma30w:49.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~49.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"QRS",name:"Quercus TFI",sector:"Asset Management",idx:"swig80",price:11.20,chg:"-0.44%",stage:2,ma30w:9.80,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~9.90 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ARL",name:"Arlen",sector:"Budownictwo",idx:"swig80",price:31.70,chg:"-1.31%",stage:2,ma30w:27.80,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~28 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"MRP",name:"Murapol",sector:"Deweloperzy",idx:"swig80",price:39.65,chg:"-0.38%",stage:2,ma30w:34.80,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~35 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"ATL",name:"Atal",sector:"Deweloperzy",idx:"swig80",price:55.70,chg:"-1.07%",stage:2,ma30w:49.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~49.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"UNM",name:"Unimot",sector:"Paliwa",idx:"swig80",price:143.00,chg:"-2.05%",stage:2,ma30w:126.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
+   analysis:"<strong>Faza 2 — CNG/paliwa alternatywne.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~127 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"VGO",name:"Vigo System",sector:"Obronność",idx:"swig80",price:495.00,chg:"-0.20%",stage:2,ma30w:435.00,matrend:"rosnąca ↑",vol:"B. niski",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — IR dla wojska.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~438 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"4FUN",name:"Digital Network",sector:"Media",idx:"swig80",price:170.20,chg:"-2.07%",stage:2,ma30w:148.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~149 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DAD",name:"Dadelo",sector:"Sport e-comm",idx:"swig80",price:77.80,chg:"-0.77%",stage:2,ma30w:68.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~68.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"KGN",name:"Kogeneracja",sector:"Ciepłownictwo",idx:"swig80",price:72.00,chg:"-1.10%",stage:2,ma30w:64.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Neutralna",h52:"-5%",
+   analysis:"<strong>Faza 2.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~64.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"BOS",name:"BOŚ Bank",sector:"Bankowość",idx:"swig80",price:10.10,chg:"-1.75%",stage:1,ma30w:10.30,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-20%",
+   analysis:"<strong>Faza 1 — mała baza.</strong> Kurs przy MA30W.",action:"watch",anote:"Bez impulsu",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ECH",name:"Echo Investment",sector:"Deweloperzy",idx:"swig80",price:5.30,chg:"+0.38%",stage:1,ma30w:5.20,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-12%",
+   analysis:"<strong>Faza 1 — baza.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"BTO",name:"Bioton",sector:"Farmacja",idx:"swig80",price:4.07,chg:"-1.21%",stage:4,ma30w:4.80,matrend:"opadająca ↓",vol:"B. niski",rs:"Słaba",h52:"-28%",
+   analysis:"<strong>Faza 4.</strong>",action:"avoid",anote:"Unikaj",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BRS",name:"Boryszew",sector:"Motoryzacja",idx:"swig80",price:4.57,chg:"-6.35%",stage:4,ma30w:5.40,matrend:"opadająca ↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-35%",
+   analysis:"<strong>Faza 4 — silny spadek.</strong>",action:"avoid",anote:"Nie kupuj S4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AGO",name:"Agora",sector:"Media",idx:"swig80",price:8.66,chg:"-0.46%",stage:4,ma30w:9.80,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-25%",
+   analysis:"<strong>Faza 4.</strong> Media w trendzie spadkowym.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
+],
+
+dax: [
+  {ticker:"SAP",name:"SAP SE",sector:"Technologia",idx:"dax",price:171.88,chg:"-0.50%",stage:2,ma30w:150.00,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"B. silna",h52:"-4%",
+   analysis:"<strong>Lider DAX — Faza 2.</strong> ~15% powyżej MA30W. Cloud ERP migracja. RS #1 w DAX.",action:"buy",anote:"Stop: ~152 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"RHM",name:"Rheinmetall AG",sector:"Obrona",idx:"dax",price:1625.00,chg:"+2.04%",stage:2,ma30w:1180.00,matrend:"rosnąca ↑↑↑",vol:"Wysoki",rs:"#1 DAX",h52:"+20%",
+   analysis:"<strong>FENOMEN — ekstremalny Faza 2.</strong> ~38% powyżej MA30W. NATO zbrojenia.",action:"buy",anote:"Kurs rozciągnięty. Wejdź na korektach.",signals:[["buy","LIDER S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"ENR",name:"Siemens Energy",sector:"Energia",idx:"dax",price:148.75,chg:"-0.67%",stage:2,ma30w:108.00,matrend:"rosnąca ↑↑↑",vol:"B. wysoki",rs:"#2 DAX",h52:"+40%",
+   analysis:"<strong>MEGAHOSSA — transformatory i turbiny.</strong> ~38% powyżej MA30W.",action:"buy",anote:"Stop: ~110 EUR",signals:[["buy","LIDER S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"ALV",name:"Allianz",sector:"Finanse",idx:"dax",price:344.20,chg:"-0.98%",stage:2,ma30w:306.00,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"Silna",h52:"-8%",
+   analysis:"<strong>Silna Faza 2 — ubezpieczenia.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~308 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"MUV2",name:"Munich Re",sector:"Finanse",idx:"dax",price:523.40,chg:"-0.34%",stage:2,ma30w:462.00,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Silna Faza 2 — reasekuracja.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~464 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"SIE",name:"Siemens AG",sector:"Przemysł",idx:"dax",price:221.10,chg:"-1.65%",stage:2,ma30w:196.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — automatyzacja przemysłu.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~198 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"HNR1",name:"Hannover Rück",sector:"Finanse",idx:"dax",price:246.40,chg:"-0.96%",stage:2,ma30w:218.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — reasekuracja w hossie.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~220 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"RWE",name:"RWE AG",sector:"Energia",idx:"dax",price:53.30,chg:"+0.91%",stage:2,ma30w:46.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-7%",
+   analysis:"<strong>Faza 2 — lider OZE Europy.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~47 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DTE",name:"Deutsche Telekom",sector:"Telekomunikacja",idx:"dax",price:32.50,chg:"-1.10%",stage:2,ma30w:28.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — T-Mobile USA napędza wyniki.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~29 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DB1",name:"Deutsche Börse",sector:"Finanse",idx:"dax",price:242.30,chg:"+0.08%",stage:2,ma30w:214.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — hossa napędza przychody giełdy.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~215 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"DBK",name:"Deutsche Bank",sector:"Finanse",idx:"dax",price:26.55,chg:"-1.39%",stage:2,ma30w:22.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
+   analysis:"<strong>Faza 2 — transformacja bankowa.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~23 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,false,false]},
+  {ticker:"CBK",name:"Commerzbank",sector:"Finanse",idx:"dax",price:30.36,chg:"-0.69%",stage:2,ma30w:25.60,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
+   analysis:"<strong>Faza 2 — zainteresowanie UniCredit.</strong> ~19% powyżej MA30W.",action:"buy",anote:"Stop: ~26 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,false,false]},
+  {ticker:"MTX",name:"MTU Aero Engines",sector:"Przemysł/Lotnictwo",idx:"dax",price:340.90,chg:"-2.88%",stage:2,ma30w:295.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-8%",
+   analysis:"<strong>Faza 2 — MRO boom lotniczy.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~297 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"AIR",name:"Airbus Group",sector:"Przemysł/Lotnictwo",idx:"dax",price:175.34,chg:"-0.07%",stage:2,ma30w:153.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — Boeing problemy = Airbus zyski.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~155 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"HEIG",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:171.05,chg:"-1.75%",stage:2,ma30w:148.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — infrastruktura i obronność.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~150 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"GEA",name:"GEA Group",sector:"Przemysł",idx:"dax",price:62.10,chg:"+2.05%",stage:2,ma30w:54.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — food tech machines.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~54.50 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,true]},
+  {ticker:"EOAN",name:"E.ON SE",sector:"Energia",idx:"dax",price:18.44,chg:"-1.21%",stage:2,ma30w:16.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — sieć energetyczna.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~16.40 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"SHL",name:"Siemens Healthineers",sector:"Ochrona zdrowia",idx:"dax",price:40.00,chg:"-1.01%",stage:2,ma30w:35.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-7%",
+   analysis:"<strong>Faza 2 — diagnostyka obrazowa.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~35.50 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"FRE",name:"Fresenius SE",sector:"Ochrona zdrowia",idx:"dax",price:47.14,chg:"+0.88%",stage:2,ma30w:41.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 2 — szpitale Helios.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~42 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"FME",name:"Fresenius Medical Care",sector:"Ochrona zdrowia",idx:"dax",price:39.76,chg:"+0.71%",stage:2,ma30w:34.80,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — dializy wychodzą z kryzysu.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~35 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"G24",name:"Scout24 AG",sector:"Technologia",idx:"dax",price:74.20,chg:"-0.34%",stage:2,ma30w:65.50,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-4%",
+   analysis:"<strong>Faza 2 — PropTech monopol DE.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~66 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"HEN3",name:"Henkel",sector:"Dobra konsumpcyjne",idx:"dax",price:72.88,chg:"-2.36%",stage:2,ma30w:65.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
+   analysis:"<strong>Faza 2 — restrukturyzacja przynosi efekty.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~66 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,false,false]},
+  {ticker:"BAS",name:"BASF",sector:"Chemia",idx:"dax",price:44.79,chg:"-1.06%",stage:4,ma30w:50.20,matrend:"opadająca ↓↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-28%",
+   analysis:"<strong>Faza 4 — restrukturyzacja Ludwigshafen.</strong> -11% poniżej MA30W.",action:"avoid",anote:"Unikaj S4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BAYN",name:"Bayer",sector:"Chemia/Farmacja",idx:"dax",price:37.59,chg:"+3.30%",stage:1,ma30w:36.80,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 1 — potencjalne dno.</strong> Dziś +3.3%, kurs próbuje przebić MA30W.",action:"watch",anote:"Obserwuj tygodniowe zamknięcie",signals:[["watch","PRE-S2?"]],
+   mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"IFX",name:"Infineon",sector:"Technologia",idx:"dax",price:38.95,chg:"-1.19%",stage:1,ma30w:38.20,matrend:"lekko ↓",vol:"Wysoki",rs:"Neutralna",h52:"-30%",
+   analysis:"<strong>Faza 1 — baza chip cycle.</strong> Kurs przy MA30W.",action:"watch",anote:"Czekaj na sygnał",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"VNA",name:"Vonovia",sector:"Nieruchomości",idx:"dax",price:24.97,chg:"-3.22%",stage:1,ma30w:24.50,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 1 — nieruchomości po krachu stóp.</strong> ECB obniżki = katalizator.",action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"ZAL",name:"Zalando SE",sector:"E-commerce",idx:"dax",price:19.84,chg:"-2.36%",stage:1,ma30w:20.50,matrend:"lekko ↓",vol:"Powyżej śr.",rs:"Neutralna",h52:"-20%",
+   analysis:"<strong>Faza 1/4 granica.</strong> MA30W lekko opada.",action:"watch",anote:"Nie kupuj",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ADS",name:"Adidas",sector:"Dobra konsumpcyjne",idx:"dax",price:139.70,chg:"-2.10%",stage:3,ma30w:136.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-22%",
+   analysis:"<strong>Faza 3 — momentum słabnie.</strong> MA30W zwalnia, -22% od szczytu.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,true,false,true,true,true,false,false]},
+  {ticker:"MRK",name:"Merck KGaA",sector:"Farmacja",idx:"dax",price:107.65,chg:"-2.27%",stage:3,ma30w:106.00,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
+   analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W spłaszczona.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"SY1",name:"Symrise AG",sector:"Chemia specjalna",idx:"dax",price:71.20,chg:"-0.92%",stage:3,ma30w:70.50,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",
+   analysis:"<strong>Faza 3 sygnały.</strong> MA30W spłaszczona.",action:"caution",anote:"Obserwuj MA30W",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"BEI",name:"Beiersdorf",sector:"Dobra konsumpcyjne",idx:"dax",price:80.98,chg:"-3.71%",stage:3,ma30w:79.50,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
+   analysis:"<strong>Faza 3.</strong> MA30W zwalnia.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],
+   mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"CON",name:"Continental AG",sector:"Motoryzacja",idx:"dax",price:60.84,chg:"-4.22%",stage:4,ma30w:68.50,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-30%",
+   analysis:"<strong>Faza 4 — motoryzacja w bessie.</strong> -11% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DPW",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:45.51,chg:"-1.43%",stage:4,ma30w:50.80,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-25%",
+   analysis:"<strong>Faza 4 — spowolnienie e-comm.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MBG",name:"Mercedes-Benz",sector:"Motoryzacja",idx:"dax",price:54.25,chg:"-0.97%",stage:4,ma30w:62.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-35%",
+   analysis:"<strong>Faza 4 — Chiny/BYD eliminują marże.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"P911",name:"Porsche AG",sector:"Motoryzacja",idx:"dax",price:32.47,chg:"-3.13%",stage:4,ma30w:40.20,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-45%",
+   analysis:"<strong>Faza 4 — jeden z najsłabszych w DAX.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BMW",name:"BMW",sector:"Motoryzacja",idx:"dax",price:78.76,chg:"-1.30%",stage:4,ma30w:88.00,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-32%",
+   analysis:"<strong>Faza 4 — EV-transition i Chiny.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"VOW3",name:"Volkswagen",sector:"Motoryzacja",idx:"dax",price:87.82,chg:"-2.40%",stage:4,ma30w:103.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-38%",
+   analysis:"<strong>Faza 4 — zamknięcia fabryk w DE.</strong>",action:"avoid",anote:"Najsłabszy w DAX",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:44.40,chg:"-1.42%",stage:4,ma30w:52.00,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-28%",
+   analysis:"<strong>Faza 4.</strong> Normalizacja marż po pandemii.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DTR",name:"Daimler Truck",sector:"Motoryzacja",idx:"dax",price:39.71,chg:"-1.76%",stage:4,ma30w:45.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-28%",
+   analysis:"<strong>Faza 4 — ciężarówki pod presją.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+   mtt:[false,false,false,false,false,false,false,false]},
+]
+};
+
+// ══════════════════════════════════════════════════
+// APP
+// ══════════════════════════════════════════════════
+let currentTab='wig20', stageF='all', mttF=0, sectorF='all', searchQ='';
+const sp={1:25,2:50,3:75,4:100}, dp={1:12.5,2:37.5,3:62.5,4:87.5};
+const smap={buy:'tag-buy',watch:'tag-watch',caution:'tag-caution',avoid:'tag-avoid',neutral:'tag-neutral'};
+const amap={buy:'act-buy',watch:'act-watch',caution:'act-caution',avoid:'act-avoid'};
+const currency={wig20:'PLN',mwig40:'PLN',swig80:'PLN',dax:'€'};
+const idxName={wig20:'WIG20',mwig40:'mWIG40',swig80:'sWIG80',dax:'DAX 40'};
+
+function fmt(p,tab){
+  const c=tab||currentTab;
+  if(p>=10000) return p.toLocaleString(c==='dax'?'de-DE':'pl-PL',{minimumFractionDigits:0});
+  if(p>=1000)  return p.toLocaleString(c==='dax'?'de-DE':'pl-PL',{minimumFractionDigits:2});
+  return p.toFixed(2);
+}
+
+function renderCard(s){
+  const ch=s.chg.startsWith('+')?'up':'dn';
+  const mas=s.price>s.ma30w?'up':'dn';
+  const tags=s.signals.map(([sig,lbl])=>`<span class="stag ${smap[sig]}">${lbl}</span>`).join('');
+  const score=mttScore(s.mtt);
+  const col=mttColor(score);
+  const cls=mttScoreClass(score);
+  const pct=mttFillPct(score);
+  const dots=s.mtt.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
+  const cur=currency[s.idx];
+  if(score===8) tags?.[0] || true; // ensure mtt tag
+  const mttTag=score===8?`<span class="stag tag-mtt">✦ MTT 8/8</span>`:score>=6?`<span class="stag tag-mtt">${score}/8 MTT</span>`:'';
+
+  return `<div class="card stage-${s.stage}"
+    data-stage="${s.stage}" data-mtt="${score}" data-sector="${s.sector}"
+    data-name="${s.name.toLowerCase()}" data-ticker="${s.ticker.toLowerCase()}"
+    onclick="openModal('${s.ticker}','${s.idx}')">
+    <span class="card-hint">↗ szczegóły</span>
+    <div class="card-header">
+      <div class="ch-info">
+        <div class="c-ticker">${s.ticker}</div>
+        <div class="c-name">${s.name}</div>
+        <div class="c-sector">${s.sector}</div>
+        <span class="c-idx idx-${s.idx}">${idxName[s.idx]}</span>
+      </div>
+      <div class="ch-badges">
+        <div class="stage-badge">
+          <div class="stage-num">${s.stage}</div>
+          <div class="stage-lbl">${['','AKUM.','WZROST','DYST.','SPADEK'][s.stage]}</div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-chart">
+      <div class="mini-bar-bg">
+        <div class="mini-bar-fill" style="width:${sp[s.stage]}%"></div>
+        <div class="mini-dot" style="left:${dp[s.stage]}%"></div>
+      </div>
+      <div class="mini-lbls"><span>S1</span><span>S2</span><span>S3</span><span>S4</span></div>
+    </div>
+    <div class="mtt-bar-wrap">
+      <div class="mtt-bar-header">
+        <div class="mtt-bar-label"><span class="mtt-logo">MTT</span> Minervini Trend Template</div>
+        <div class="mtt-score-txt ${cls}">${score}/8</div>
+      </div>
+      <div class="mtt-track"><div class="mtt-fill" style="width:${pct}%;background:${col}"></div></div>
+      <div class="mtt-dots">${dots}</div>
+    </div>
+    <div class="card-metrics">
+      <div class="cm"><div class="cm-l">KURS (${cur})</div><div class="cm-v nu">${fmt(s.price,s.idx)}</div></div>
+      <div class="cm"><div class="cm-l">ZMIANA</div><div class="cm-v ${ch}">${s.chg}</div></div>
+      <div class="cm"><div class="cm-l">MA30W</div><div class="cm-v ${mas}">${fmt(s.ma30w,s.idx)}</div></div>
+      <div class="cm"><div class="cm-l">TREND MA</div><div class="cm-v nu" style="font-size:10px">${s.matrend}</div></div>
+      <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu" style="font-size:10px">${s.vol}</div></div>
+      <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu" style="font-size:10px">${s.rs}</div></div>
+    </div>
+    <div class="card-analysis">${s.analysis}</div>
+    <div class="card-signals">${tags}${mttTag}</div>
+  </div>`;
+}
+
+function getFiltered(){
+  return STOCKS[currentTab].filter(s=>{
+    if(stageF!=='all' && s.stage!==parseInt(stageF)) return false;
+    if(mttF>0 && mttScore(s.mtt)<mttF) return false;
+    if(sectorF!=='all' && !s.sector.toLowerCase().includes(sectorF.toLowerCase())) return false;
+    const q=searchQ.toLowerCase();
+    if(q && !s.name.toLowerCase().includes(q) && !s.ticker.toLowerCase().includes(q) && !s.sector.toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function renderGrid(){
+  const data=getFiltered();
+  const g=document.getElementById('grid');
+  g.innerHTML=data.length?data.map(renderCard).join(''):'<div class="no-results">Brak spółek spełniających kryteria.</div>';
+  renderSummary();
+}
+
+function renderSummary(){
+  const all=STOCKS[currentTab];
+  const c={1:0,2:0,3:0,4:0};
+  let mtt8=0,mtt6=0;
+  all.forEach(s=>{
+    c[s.stage]++;
+    const sc=mttScore(s.mtt);
+    if(sc===8)mtt8++;
+    if(sc>=6)mtt6++;
+  });
+  const n=all.length;
+  document.getElementById('summary').innerHTML=`
+    <span class="sum-t">Podsumowanie ${idxName[currentTab]}:</span>
+    <div class="sum-stats">
+      <div class="ss"><span class="ss-l">Faza 1</span><span class="ss-v s1">${c[1]}</span></div>
+      <div class="ss"><span class="ss-l">Faza 2</span><span class="ss-v s2">${c[2]}</span></div>
+      <div class="ss"><span class="ss-l">Faza 3</span><span class="ss-v s3">${c[3]}</span></div>
+      <div class="ss"><span class="ss-l">Faza 4</span><span class="ss-v s4">${c[4]}</span></div>
+      <div class="ss"><span class="ss-l">MTT 8/8</span><span class="ss-v mtt">${mtt8}</span></div>
+      <div class="ss"><span class="ss-l">MTT ≥6/8</span><span class="ss-v mtt">${mtt6}</span></div>
+    </div>
+    <div class="sum-note">
+      <strong style="color:var(--s2)">${Math.round(c[2]/n*100)}% w Fazie 2</strong> ·
+      <strong style="color:var(--accent)">${mtt8} spółek z pełnym MTT (8/8)</strong>
+    </div>`;
+}
+
+function buildSectorSelect(){
+  const sectors=[...new Set(STOCKS[currentTab].map(s=>s.sector))].sort();
+  const sel=document.getElementById('sector-sel');
+  sel.innerHTML='<option value="all">Wszystkie sektory</option>'+sectors.map(s=>`<option value="${s}">${s}</option>`).join('');
+}
+
+function switchTab(tab){
+  currentTab=tab;stageF='all';mttF=0;sectorF='all';searchQ='';
+  document.getElementById('search').value='';
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('fall').classList.add('active');
+  document.getElementById('fmtt').classList.remove('active');
+  document.getElementById('fmtt8').classList.remove('active');
+  buildSectorSelect();
+  renderGrid();
+}
+
+function filterStage(s,btn){
+  stageF=s;
+  document.querySelectorAll('.btn:not(#fmtt):not(#fmtt8)').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid();
+}
+
+function filterMTT(){
+  const btn=document.getElementById('fmtt');
+  if(mttF===6){mttF=0;btn.classList.remove('active');}
+  else{mttF=6;btn.classList.add('active');document.getElementById('fmtt8').classList.remove('active');}
+  renderGrid();
+}
+
+function filterMTT8(){
+  const btn=document.getElementById('fmtt8');
+  if(mttF===8){mttF=0;btn.classList.remove('active');}
+  else{mttF=8;btn.classList.add('active');document.getElementById('fmtt').classList.remove('active');}
+  renderGrid();
+}
+
+function filterSector(v){sectorF=v;renderGrid();}
+function onSearch(){searchQ=document.getElementById('search').value;renderGrid();}
+
+// ══════ MODAL ══════
+function openModal(ticker,idx){
+  const s=STOCKS[idx].find(x=>x.ticker===ticker);
+  if(!s)return;
+  const ch=s.chg.startsWith('+')?'up':'dn';
+  const mas=s.price>s.ma30w?'up':'dn';
+  const score=mttScore(s.mtt);
+  const col=mttColor(score);
+  const vcls=mttVerdictClass(score);
+  const vtxt=mttVerdictText(score);
+  const cur=currency[s.idx];
+
+  const segs=[1,2,3,4].map(n=>`
+    <div class="cseg s${n}${n===s.stage?' active':''}">
+      <span class="cseg-n">FAZA ${n}</span>
+      <span class="cseg-s">${['','Akumulacja','Wzrost','Dystrybucja','Spadek'][n]}</span>
+    </div>`).join('');
+
+  const critItems=s.mtt.map((v,i)=>`
+    <div class="mtt-crit">
+      <div class="mtt-crit-icon ${v?'mtt-pass':'mtt-fail'}">${v?'✓':'✗'}</div>
+      <div class="mtt-crit-body">
+        <div class="mtt-crit-title">${i+1}. ${MTT_LABELS[i].short}</div>
+        <div class="mtt-crit-desc">${MTT_LABELS[i].desc}</div>
+      </div>
+    </div>`).join('');
+
+  const acls={buy:'act-buy',watch:'act-watch',caution:'act-caution',avoid:'act-avoid'};
+  const albl={buy:'✅ KUPUJ / TRZYMAJ (S2)',watch:'👁 OBSERWUJ — Nie kupuj',caution:'⚠️ REDUKUJ / OSTROŻNIE',avoid:'🚫 UNIKAJ — Faza 4'};
+
+  document.getElementById('modal-content').innerHTML=`
+    <div class="modal-hero">
+      <div class="mh-l">
+        <div class="mh-ticker">${s.ticker} · ${idxName[s.idx]}</div>
+        <div class="mh-name">${s.name}</div>
+        <div class="mh-sector">${s.sector}</div>
+      </div>
+      <div class="mh-r">
+        <div class="mh-price">${fmt(s.price,s.idx)} ${cur}</div>
+        <div class="mh-chg ${ch}">${s.chg}</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">Weinstein — Pozycja w cyklu</div>
+      <div class="cycle-track">${segs}</div>
+    </div>
+
+    <div class="mtt-modal">
+      <div class="mtt-modal-header">
+        <div class="sec-title" style="margin-bottom:0">Minervini Trend Template — Wynik</div>
+        <div class="mtt-modal-score">
+          <div>
+            <div class="mtt-big-score" style="color:${col}">${score}/8</div>
+            <div class="mtt-big-label">kryteriów spełnionych</div>
+          </div>
+          <span class="mtt-verdict ${vcls}">${vtxt}</span>
+        </div>
+      </div>
+      <div class="mtt-track-big"><div class="mtt-fill-big" style="width:${mttFillPct(score)}%;background:${col}"></div></div>
+      <div class="mtt-criteria-list">${critItems}</div>
+    </div>
+
+    <div class="modal-metrics">
+      <div class="mm"><div class="mm-l">MA30W</div><div class="mm-v ${mas}">${fmt(s.ma30w,s.idx)} ${cur}</div><div class="mm-s">Kurs ${s.price>s.ma30w?'POWYŻEJ ↑':'PONIŻEJ ↓'}</div></div>
+      <div class="mm"><div class="mm-l">TREND MA30W</div><div class="mm-v nu" style="font-size:12px">${s.matrend}</div></div>
+      <div class="mm"><div class="mm-l">OD SZCZYTU 52T</div><div class="mm-v ${s.h52.startsWith('-')?'dn':'up'}">${s.h52}</div></div>
+      <div class="mm"><div class="mm-l">WOLUMEN</div><div class="mm-v nu" style="font-size:11px">${s.vol}</div></div>
+      <div class="mm"><div class="mm-l">REL. SIŁA</div><div class="mm-v nu" style="font-size:11px">${s.rs}</div></div>
+      <div class="mm"><div class="mm-l">FAZA</div><div class="mm-v" style="font-size:20px;color:var(--s${s.stage})">${s.stage}</div><div class="mm-s">${['','AKUMULACJA','WZROST','DYSTRYBUCJA','SPADEK'][s.stage]}</div></div>
+    </div>
+
+    <div class="modal-analysis">
+      <div class="sec-title">Analiza Weinsteina</div>
+      <div class="ma-text">${s.analysis}</div>
+    </div>
+
+    <div class="modal-action">
+      <button class="${acls[s.action]||'act-watch'} act-btn">${albl[s.action]||'👁 OBSERWUJ'}</button>
+      <div class="act-note">📌 ${s.anote}</div>
+    </div>`;
+
+  const m=document.getElementById('modal');
+  m.className=`modal stage-${s.stage}`;
+  document.getElementById('overlay').classList.add('open');
+  m.scrollTop=0;
+}
+
+function closeOverlay(){document.getElementById('overlay').classList.remove('open');}
+function closeModal(e){if(e.target===document.getElementById('overlay'))closeOverlay();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOverlay();});
+
+// init
+buildSectorSelect();
+renderGrid();
+</script>
+</body>
+</html>
