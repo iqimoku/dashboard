@@ -2282,6 +2282,10 @@ function openModal(ticker,idx){
     : s.chg;
   const isLive = !!ld.price;
 
+  // Reklasyfikacja fazy na podstawie live danych
+  const liveStage = ld.price ? calcStage(ld) : null;
+  const stage = liveStage ?? s.stage;
+
   // Recalculate MTT from live data if possible
   let mttArr = s.mtt;
   if (ld.price && ld.sma200 && ld.sma150 && ld.sma50 && ld.high52 && ld.low52) {
@@ -2305,10 +2309,11 @@ function openModal(ticker,idx){
   const vcls  = mttVerdictClass(score);
   const vtxt  = mttVerdictText(score);
   const cur   = currency[s.idx];
+  const stageBadge = (liveStage && liveStage !== s.stage) ? ` <span style="font-size:9px;padding:2px 6px;border-radius:3px;background:rgba(245,166,35,.15);color:#f5a623;font-family:'Space Mono',monospace;vertical-align:middle">FAZA ${liveStage} ↻</span>` : '';
   const liveBadge = isLive ? ' <span style="font-size:9px;padding:2px 6px;border-radius:3px;background:rgba(0,229,160,.15);color:#00e5a0;font-family:\'Space Mono\',monospace;vertical-align:middle">LIVE</span>' : '';
 
   const segs=[1,2,3,4].map(n=>`
-    <div class="cseg s${n}${n===s.stage?' active':''}">
+    <div class="cseg s${n}${n===stage?' active':''}">
       <span class="cseg-n">FAZA ${n}</span>
       <span class="cseg-s">${['','Akumulacja','Wzrost','Dystrybucja','Spadek'][n]}</span>
     </div>`).join('');
@@ -2333,7 +2338,7 @@ function openModal(ticker,idx){
     <div class="modal-hero">
       <div class="mh-l">
         <div class="mh-ticker">${s.ticker} · ${idxName[s.idx]}</div>
-        <div class="mh-name">${s.name}${liveBadge}</div>
+        <div class="mh-name">${s.name}${liveBadge}${stageBadge}</div>
         <div class="mh-sector">${s.sector}</div>
       </div>
       <div class="mh-r">
@@ -2368,7 +2373,7 @@ function openModal(ticker,idx){
       <div class="mm"><div class="mm-l">OD SZCZYTU 52T</div><div class="mm-v ${h52str.startsWith('-')?'dn':'up'}">${h52str}</div></div>
       <div class="mm"><div class="mm-l">WOLUMEN</div><div class="mm-v nu" style="font-size:11px">${s.vol}</div></div>
       <div class="mm"><div class="mm-l">REL. SIŁA</div><div class="mm-v nu" style="font-size:11px">${s.rs}</div></div>
-      <div class="mm"><div class="mm-l">FAZA</div><div class="mm-v" style="font-size:20px;color:var(--s${s.stage})">${s.stage}</div><div class="mm-s">${['','AKUMULACJA','WZROST','DYSTRYBUCJA','SPADEK'][s.stage]}</div></div>
+      <div class="mm"><div class="mm-l">FAZA</div><div class="mm-v" style="font-size:20px;color:var(--s${stage})">${stage}</div><div class="mm-s">${['','AKUMULACJA','WZROST','DYSTRYBUCJA','SPADEK'][stage]}</div></div>
     </div>
 
     <div class="modal-analysis">
@@ -2383,7 +2388,7 @@ function openModal(ticker,idx){
     </div>`;
 
   const m=document.getElementById('modal');
-  m.className=`modal stage-${s.stage}`;
+  m.className=`modal stage-${stage}`;
   document.getElementById('overlay').classList.add('open');
   m.scrollTop=0;
 }
@@ -2530,6 +2535,7 @@ const TV_COLUMNS = [
   '52_week_low',      // 10
   'Perf.W',           // 11 - % change 1 week
   'Perf.1M',          // 12 - % change 1 month
+  'SMA150[20]',       // 13 - SMA150 sprzed 20 sesji (~4 tyg) → nachylenie MA30W
 ];
 
 // Group tickers by exchange for batch TV requests
@@ -2609,7 +2615,38 @@ async function fetchTVBatch(market, tvTickers) {
   return [];
 }
 
-let liveData = {}; // ticker → {price, chg, sma200, sma150, sma50, rsi, high52, low52}
+let liveData = {}; // ticker → {price, chg, sma200, sma150, sma50, rsi, high52, low52, sma150_20}
+
+// ── Automatyczna klasyfikacja fazy Weinsteina ──────────────────────────────
+// Wymaga: price, sma150, sma200, sma150_20 (SMA150 sprzed 20 sesji)
+function calcStage(d) {
+  const { price, sma150, sma200, sma150_20 } = d;
+  if (!price || !sma150 || !sma200) return null; // brak danych
+
+  // Nachylenie MA30W: porównanie z wartością sprzed ~4 tygodni
+  // Jeśli sma150_20 niedostępne — wnioskujemy z relacji sma150 vs sma200
+  const ma_rising  = sma150_20 != null ? sma150 > sma150_20 * 1.001 : sma150 > sma200;
+  const ma_falling = sma150_20 != null ? sma150 < sma150_20 * 0.999 : sma150 < sma200;
+  // ma_flat = ani rosnąca ani opadająca
+
+  const above_ma = price > sma150;
+  const ma_above_sma200 = sma150 > sma200;
+
+  // Weinstein Stage logic:
+  // Faza 1 — Akumulacja: kurs przy/nad spłaszczoną MA30W, MA30W przestaje opadać
+  // Faza 2 — Wzrost:     kurs > rosnąca MA30W > SMA200
+  // Faza 3 — Dystrybucja: kurs przy/nad spłaszczoną/opadającą MA30W, ale MA30W zaczyna opadać
+  // Faza 4 — Spadek:     kurs < opadająca MA30W
+
+  if (above_ma && ma_rising && ma_above_sma200) return 2;  // klasyczna faza 2
+  if (above_ma && ma_rising && !ma_above_sma200) return 2; // wczesna faza 2 (MA150 jeszcze poniżej MA200)
+  if (!above_ma && ma_falling) return 4;                   // faza 4
+  if (above_ma && ma_falling) return 3;                    // faza 3 — kurs jeszcze nad MA ale MA opada
+  if (!above_ma && ma_rising) return 1;                    // faza 1 — kurs pod rosnącą MA (wczesna akumulacja)
+  // pozostałe przypadki (spłaszczona MA):
+  if (above_ma) return ma_above_sma200 ? 2 : 1;
+  return ma_above_sma200 ? 3 : 4;
+}
 let lastRefresh = null;
 let refreshInProgress = false;
 
@@ -2666,19 +2703,20 @@ async function refreshLiveData() {
         if (!internalTicker) return;
 
         liveData[internalTicker] = {
-          price:   d[0],
-          chg:     d[1],
-          volume:  d[2],
-          sma200:  d[3],
-          sma150:  d[4],  // ≈ MA30W weekly
-          sma50:   d[5],
-          rsi:     d[6],
-          macd:    d[7],
-          macdSig: d[8],
-          high52:  d[9],
-          low52:   d[10],
-          perfW:   d[11],
-          perf1M:  d[12],
+          price:    d[0],
+          chg:      d[1],
+          volume:   d[2],
+          sma200:   d[3],
+          sma150:   d[4],  // ≈ MA30W weekly
+          sma50:    d[5],
+          rsi:      d[6],
+          macd:     d[7],
+          macdSig:  d[8],
+          high52:   d[9],
+          low52:    d[10],
+          perfW:    d[11],
+          perf1M:   d[12],
+          sma150_20: d[13] ?? null,  // SMA150 sprzed 20 sesji — do oceny nachylenia
         };
         totalUpdated++;
       });
@@ -2778,6 +2816,26 @@ function updateCardsWithLiveData() {
     // Recalculate MTT dynamically from live data
     if (d.price && d.sma200 && d.sma150 && d.sma50 && d.high52 && d.low52) {
       recalcMTT(card, ticker, d);
+    }
+
+    // ── Reklasyfikacja fazy Weinsteina ──
+    const newStage = calcStage(d);
+    if (newStage) {
+      const oldStage = parseInt(card.dataset.stage) || 0;
+      if (newStage !== oldStage) {
+        // Update card classes
+        card.classList.remove('stage-1','stage-2','stage-3','stage-4');
+        card.classList.add(`stage-${newStage}`);
+        card.dataset.stage = newStage;
+        // Update stage badge
+        const stageNum = card.querySelector('.stage-num');
+        if (stageNum) stageNum.textContent = newStage;
+        const stageLbl = card.querySelector('.stage-lbl');
+        if (stageLbl) stageLbl.textContent = ['','AKUM','WZROST','DYSTR','SPADEK'][newStage];
+        // Update mini bar dot position
+        const dot = card.querySelector('.mini-dot');
+        if (dot) dot.style.left = `${(newStage - 0.5) * 25}%`;
+      }
     }
   });
 }
