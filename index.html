@@ -2532,6 +2532,26 @@ const TV_MAP = {
   'RPC':'GPW:RPC',   'TIT':'GPW:TOY',   'TEN':'GPW:TEN',   'MLT2':'GPW:MLT',
   'WOL':'GPW:WOL',   'PKO2':'GPW:PKO',  'GNB':'GPW:GNB',   'OGX':'GPW:OPL',
   'NXG':'GPW:NXG',   'CFN':'GPW:CFN',   'SFG':'GPW:SNT',   'HRP2':'GPW:HRP',
+  // ── WIG-Pozostałe dodatkowe ────────────────────────
+  'ERS':'GPW:ERS',   'KBC':'GPW:KBC',   'MBK2':'GPW:MIL',  'TOR':'GPW:TOR',
+  'PLI':'GPW:PLI',   'FEW':'GPW:FEW',   'PGN':'GPW:PGN',   'PAT':'GPW:PAT',
+  'PBG2':'GPW:PBG',  'PBX':'GPW:PBX',   'IZB2':'GPW:IZB',  'PCF':'GPW:PCF',
+  'RLP':'GPW:RLP',   'ABP':'GPW:AB',    'AEI':'GPW:AEI',   'ARI2':'GPW:ARH',
+  'AST2':'GPW:AST',  'BOC':'GPW:BRS',   'BPX':'GPW:BPX',   'CAP2':'GPW:CAP',
+  'CIE':'GPW:CIE',   'CPU':'GPW:CPU',   'CRJ2':'GPW:GRJ',  'CTR':'GPW:CTR',
+  'EKO':'GPW:EKO',   'ELM':'GPW:ELM',   'ELP':'GPW:EUR',   'ENT2':'GPW:EAT',
+  'FPP':'GPW:FPP',   'GCL':'GPW:GNB',   'GPP':'GPW:GPP',   'GRW':'GPW:GRW',
+  'HMI':'GPW:HMI',   'HOM':'GPW:HOM',   'I2D':'GPW:I2D',   'IDA':'GPW:IDA',
+  'INK':'GPW:INK',   'IPL':'GPW:IPL',   'ITC':'GPW:ITB',   'KGM':'GPW:KER',
+  'KOM':'GPW:KOM',   'KPD':'GPW:KPX',   'KRK':'GPW:KRU',   'KTY2':'GPW:KTY',
+  'LBS':'GPW:LWB',   'LEP':'GPW:LEP',   'MAB2':'GPW:MAK',  'MAB3':'GPW:MAB',
+  'MCI2':'GPW:MCI',  'MDG2':'GPW:MDG',  'MZA':'GPW:MZA',   'NCB':'GPW:NVT',
+  'NTE':'GPW:NET',   'OAT':'GPW:OAT',   'PEN':'GPW:PEN',   'PKP':'GPW:PKP',
+  'PMF':'GPW:PMF',   'POL':'GPW:POL',   'PRT':'GPW:PRT',   'PZS':'GPW:PZS',
+  'REI':'GPW:RON',   'RVU2':'GPW:RVU',  'SLN':'GPW:SLV',   'SNO':'GPW:SAN',
+  'SYN2':'GPW:SYN',  'TEN2':'GPW:TDO',  'TWG':'GPW:TWG',   'TXM':'GPW:TXM',
+  'WHI':'GPW:WHI',   'WTN':'GPW:WPL',   'XPL':'GPW:XTP',   'ZRL':'GPW:ZRL',
+  'ABC2':'GPW:ABM',  'CIR':'GPW:CIR',   'MDG2b':'GPW:MDG', 'MLP2b':'GPW:MLP',
   // ── DAX (XETR) ─────────────────────────────────────
   'BAS':'XETR:BAS',  'BAYN':'XETR:BAYN','ALV':'XETR:ALV',  'ADS':'XETR:ADS',
   'SIE':'XETR:SIE',  'DBK':'XETR:DBK',  'CON':'XETR:CON',  'MBG':'XETR:MBG',
@@ -2638,7 +2658,7 @@ function groupByExchange(tickers) {
     if (!tv) return;
     const [exch] = tv.split(':');
     const exchMap = {
-      'GPW':'poland','XETR':'germany','EPA':'france',
+      'GPW':'poland','XETR':'germany','EPA':'euronext',
       'NASDAQ':'america','NYSE':'america'
     };
     const market = exchMap[exch] || 'global';
