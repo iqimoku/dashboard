@@ -14,6 +14,64 @@
   --mtt-full:#a78bfa; --mtt-high:#6ee7b7; --mtt-mid:#fbbf24; --mtt-low:#f87171;
   --accent:#a78bfa;
 }
+
+/* ── INFO BANNER ── */
+.info-banner{background:linear-gradient(135deg,rgba(167,139,250,.08) 0%,rgba(0,229,160,.05) 100%);border-bottom:1px solid var(--border);padding:11px 36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.ib-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.ib-icon{font-size:20px;flex-shrink:0;}
+.ib-text{font-size:11px;color:#8090a8;line-height:1.6;}
+.ib-text strong{color:var(--text);}
+.ib-update{font-size:10px;font-family:'Space Mono',monospace;padding:4px 10px;border-radius:5px;background:rgba(245,166,35,.1);color:#f5a623;border:1px solid rgba(245,166,35,.2);flex-shrink:0;}
+.ib-update.fresh{background:rgba(0,229,160,.1);color:#00e5a0;border-color:rgba(0,229,160,.2);}
+.btn-method{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);color:var(--accent);padding:6px 14px;border-radius:6px;font-size:11px;font-family:'Outfit',sans-serif;cursor:pointer;transition:all .2s;font-weight:600;flex-shrink:0;}
+.btn-method:hover{background:rgba(167,139,250,.2);}
+
+/* ── METODOLOGIA MODAL ── */
+.meth-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .22s;}
+.meth-overlay.open{opacity:1;pointer-events:all;}
+.meth-modal{background:#0f1018;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:14px;width:100%;max-width:780px;max-height:88vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.97);transition:transform .22s;padding:0;}
+.meth-overlay.open .meth-modal{transform:none;}
+.meth-modal::-webkit-scrollbar{width:4px;}
+.meth-modal::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+.meth-header{padding:24px 28px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;}
+.meth-title{font-size:20px;font-weight:800;background:linear-gradient(135deg,#fff 20%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.meth-subtitle{font-size:11px;color:var(--muted);margin-top:4px;}
+.meth-close{background:var(--surface2);border:1px solid var(--border);color:var(--muted);width:30px;height:30px;border-radius:7px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.meth-close:hover{color:var(--text);}
+.meth-body{padding:0 28px 28px;}
+.meth-section{margin-top:24px;}
+.meth-section-title{font-family:'Space Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.meth-section-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.meth-h2{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.meth-p{font-size:12px;color:#8090a8;line-height:1.75;margin-bottom:10px;}
+.meth-p strong{color:var(--text);}
+.meth-phases{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.meth-phase{padding:12px 14px;border-radius:8px;border-left:3px solid;}
+.meth-phase.s1{background:rgba(79,195,247,.06);border-color:var(--s1);}
+.meth-phase.s2{background:rgba(0,229,160,.06);border-color:var(--s2);}
+.meth-phase.s3{background:rgba(245,166,35,.06);border-color:var(--s3);}
+.meth-phase.s4{background:rgba(255,77,77,.06);border-color:var(--s4);}
+.meth-phase-title{font-size:12px;font-weight:700;margin-bottom:4px;}
+.meth-phase.s1 .meth-phase-title{color:var(--s1);}
+.meth-phase.s2 .meth-phase-title{color:var(--s2);}
+.meth-phase.s3 .meth-phase-title{color:var(--s3);}
+.meth-phase.s4 .meth-phase-title{color:var(--s4);}
+.meth-phase p{font-size:11px;color:#8090a8;line-height:1.6;margin:0;}
+.meth-criteria{display:flex;flex-direction:column;gap:7px;margin:12px 0;}
+.meth-crit{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--surface2);border-radius:7px;}
+.meth-crit-num{width:20px;height:20px;border-radius:4px;background:rgba(167,139,250,.15);color:var(--accent);font-size:10px;font-weight:700;font-family:'Space Mono',monospace;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.meth-crit-body{flex:1;}
+.meth-crit-title{font-size:11px;font-weight:600;color:var(--text);}
+.meth-crit-desc{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.5;}
+.meth-live-box{background:rgba(0,229,160,.05);border:1px solid rgba(0,229,160,.15);border-radius:8px;padding:14px 16px;margin:12px 0;}
+.meth-live-title{font-size:12px;font-weight:700;color:#00e5a0;margin-bottom:8px;}
+.meth-live-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:11px;color:#8090a8;line-height:1.5;}
+.meth-live-row:last-child{margin-bottom:0;}
+.meth-live-dot{width:6px;height:6px;border-radius:50%;background:#00e5a0;flex-shrink:0;margin-top:4px;}
+.meth-update-box{background:rgba(245,166,35,.05);border:1px solid rgba(245,166,35,.15);border-radius:8px;padding:14px 16px;margin:12px 0;}
+.meth-update-title{font-size:12px;font-weight:700;color:#f5a623;margin-bottom:8px;}
+.meth-note{font-size:10px;color:var(--muted);font-style:italic;margin-top:16px;line-height:1.6;padding-top:12px;border-top:1px solid var(--border);}
+
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;}
 
@@ -339,6 +397,126 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 </style>
 </head>
 <body>
+
+
+<!-- ══ INFO BANNER ══ -->
+<div class="info-banner">
+  <div class="ib-left">
+    <div class="ib-icon">📊</div>
+    <div class="ib-text">
+      <strong>Jak działa to narzędzie?</strong> Każda spółka jest ręcznie klasyfikowana wg metody Weinsteina (faza 1–4) i Minervini (MTT 8 kryteriów).
+      Kliknij <strong>Odśwież live</strong> aby pobrać aktualne kursy, MA i RSI z TradingView — ceny i wskaźniki MTT zaktualizują się natychmiast.
+      Fazy i opisy są aktualizowane <strong>raz w tygodniu (niedziela)</strong> przez analityka — wtedy filtry i klasyfikacje są w pełni aktualne.
+    </div>
+  </div>
+  <div class="ib-update" id="ib-update-badge">🗓 Aktualizacja: niedziela</div>
+  <button class="btn-method" onclick="openMethodology()">📖 Metodologia</button>
+</div>
+
+<!-- ══ METODOLOGIA MODAL ══ -->
+<div class="meth-overlay" id="methOverlay" onclick="closeMethIfBg(event)">
+  <div class="meth-modal">
+    <div class="meth-header">
+      <div>
+        <div class="meth-title">Metodologia — Weinstein + Minervini</div>
+        <div class="meth-subtitle">Stage Analysis · Minervini Trend Template · Jak czytać dane live</div>
+      </div>
+      <button class="meth-close" onclick="closeMethodology()">✕</button>
+    </div>
+    <div class="meth-body">
+
+      <div class="meth-section">
+        <div class="meth-section-title">Stan Weinstein — Analiza Faz</div>
+        <div class="meth-h2">Czym jest Stage Analysis?</div>
+        <div class="meth-p">
+          Stan Weinstein w książce <strong>„Secrets for Profiting in Bull and Bear Markets"</strong> (1988) opisał metodę analizy akcji przez pryzmat czterech powtarzających się faz rynkowych. Kluczowym narzędziem jest <strong>30-tygodniowa średnia krocząca (MA30W)</strong> — odpowiednik 150-sesyjnej SMA na wykresie dziennym. Metoda pozwala ocenić, czy spółka jest w fazie wzrostu, dystrybucji, spadku czy akumulacji — i podejmować decyzje zgodnie z dominującym trendem.
+        </div>
+        <div class="meth-phases">
+          <div class="meth-phase s1">
+            <div class="meth-phase-title">Faza 1 — Akumulacja</div>
+            <p>Kurs konsoliduje się po wcześniejszych spadkach. MA30W spłaszcza się i przestaje opadać. Duży kapitał cicho akumuluje pozycje. <strong>Nie kupuj — czekaj na sygnał wyjścia.</strong></p>
+          </div>
+          <div class="meth-phase s2">
+            <div class="meth-phase-title">Faza 2 — Wzrost ✅</div>
+            <p>Kurs przebija MA30W z wolumenem. MA30W zaczyna rosnąć. To <strong>jedyna faza, w której warto kupować</strong>. Im wcześniej wejście po przebiciu, tym lepszy stosunek zysku do ryzyka.</p>
+          </div>
+          <div class="meth-phase s3">
+            <div class="meth-phase-title">Faza 3 — Dystrybucja</div>
+            <p>Kurs traci impet, MA30W spłaszcza się przy szczycie. Duże instytucje sprzedają. <strong>Redukuj pozycje, nie kupuj nowych.</strong> Często wygląda jak konsolidacja przed kolejnym wzrostem — to pułapka.</p>
+          </div>
+          <div class="meth-phase s4">
+            <div class="meth-phase-title">Faza 4 — Spadek 🚫</div>
+            <p>Kurs spada poniżej opadającej MA30W. Trendy spadkowe trwają długo. <strong>Unikaj całkowicie.</strong> Spółka może wyglądać „tanio" — nigdy nie kupuj w fazie 4.</p>
+          </div>
+        </div>
+        <div class="meth-p">
+          <strong>Kluczowa zasada Weinsteina:</strong> Kupuj tylko spółki w Fazie 2, sprzedawaj gdy wchodzą w Fazę 3. Zawsze ustawiaj stop-loss poniżej MA30W lub ostatniego dołka konsolidacji.
+        </div>
+      </div>
+
+      <div class="meth-section">
+        <div class="meth-section-title">Mark Minervini — Trend Template</div>
+        <div class="meth-h2">8 kryteriów selekcji liderów rynku</div>
+        <div class="meth-p">
+          Mark Minervini — czterokrotny mistrz US Investing Championship — w książce <strong>„Trade Like a Stock Market Wizard"</strong> opisał Minervini Trend Template (MTT): zestaw 8 warunków technicznych, które musi spełniać spółka, zanim w ogóle rozważysz zakup. MTT eliminuje słabe spółki i wskazuje tylko liderów z siłą strukturalną.
+        </div>
+        <div class="meth-criteria">
+          <div class="meth-crit"><div class="meth-crit-num">1</div><div class="meth-crit-body"><div class="meth-crit-title">Cena &gt; MA150 i MA200</div><div class="meth-crit-desc">Kurs powyżej obu długich średnich — fundament trendu wzrostowego. Spółka musi być „po właściwej stronie" rynku.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">2</div><div class="meth-crit-body"><div class="meth-crit-title">MA150 &gt; MA200</div><div class="meth-crit-desc">Średnioterminowa powyżej długoterminowej — potwierdzenie że trend wzrostowy jest dojrzały, nie chwilowy.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">3</div><div class="meth-crit-body"><div class="meth-crit-title">MA200 rośnie od co najmniej 1 miesiąca</div><div class="meth-crit-desc">Trend musi być ugruntowany. Świeże przesilenie po długim spadku to za mało — MA200 musi już rosnąć.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">4</div><div class="meth-crit-body"><div class="meth-crit-title">MA50 &gt; MA150 i MA200</div><div class="meth-crit-desc">Krótkoterminowa MA powyżej długich — momentum wzrostowe jest aktywne, nie słabnie.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">5</div><div class="meth-crit-body"><div class="meth-crit-title">Cena &gt; MA50</div><div class="meth-crit-desc">Kurs powyżej 50-sesyjnej średniej — brak oznak krótkoterminowej słabości, spółka nie jest w korekcie.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">6</div><div class="meth-crit-body"><div class="meth-crit-title">Cena ≥ 25% powyżej 52-tygodniowego dołka</div><div class="meth-crit-desc">Siła strukturalna — spółka oderwała się od rocznych minimów. Eliminuje spółki „walczące o przetrwanie".</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">7</div><div class="meth-crit-body"><div class="meth-crit-title">Cena ≤ 25% poniżej 52-tygodniowego szczytu</div><div class="meth-crit-desc">Spółka blisko rocznych szczytów — liderzy rynku zawsze notują nowe szczyty, a nie odrabiają głębokie straty.</div></div></div>
+          <div class="meth-crit"><div class="meth-crit-num">8</div><div class="meth-crit-body"><div class="meth-crit-title">Relatywna siła RS ≥ 70</div><div class="meth-crit-desc">RSI ≥ 70 lub siła relative vs indeks w górnym kwartylu — kupuj tylko liderów, nie maruderów.</div></div></div>
+        </div>
+        <div class="meth-p">
+          <strong>Wynik MTT:</strong> <span style="color:var(--mtt-full)">8/8 Pełny</span> — idealne warunki do zakupu. <span style="color:var(--mtt-high)">6–7 Wysoki</span> — dobra spółka, drobne zastrzeżenia. <span style="color:var(--mtt-mid)">4–5 Częściowy</span> — obserwuj, nie kupuj. <span style="color:var(--mtt-low)">0–3 Brak</span> — unikaj.
+        </div>
+      </div>
+
+      <div class="meth-section">
+        <div class="meth-section-title">Jak korzystać z narzędzia</div>
+        <div class="meth-live-box">
+          <div class="meth-live-title">⟳ Przycisk „Odśwież live" — co aktualizuje?</div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Kurs bieżący</strong> — pobierany z TradingView w czasie rzeczywistym (sesja musi być otwarta)</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Zmiana % dzisiaj</strong> — aktualna zmiana intraday</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>MA150 i MA200</strong> — aktualne wartości średnich kroczących (30W i 40W)</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>RSI 14</strong> — aktualny wskaźnik siły relatywnej</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Szczyty/dołki 52T</strong> — aktualne poziomy roczne</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>MTT (8 kryteriów)</strong> — przeliczany automatycznie na podstawie powyższych danych</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Faza Weinsteina</strong> — automatycznie przeliczana z nachylenia MA30W (porównanie z wartością sprzed 4 tygodni)</span></div>
+        </div>
+        <div class="meth-update-box">
+          <div class="meth-update-title">🗓 Cotygodniowa aktualizacja — niedziela</div>
+          <div class="meth-live-row" style="margin-bottom:5px;"><div class="meth-live-dot" style="background:#f5a623"></div><span>Ręczna weryfikacja i korekta faz Weinsteina dla wszystkich spółek</span></div>
+          <div class="meth-live-row" style="margin-bottom:5px;"><div class="meth-live-dot" style="background:#f5a623"></div><span>Aktualizacja opisów analizy — procent nad/pod MA30W, ocena wolumenu, kontekst fundamentalny</span></div>
+          <div class="meth-live-row" style="margin-bottom:5px;"><div class="meth-live-dot" style="background:#f5a623"></div><span>Aktualizacja rekomendacji (Kupuj / Obserwuj / Redukuj / Unikaj) i poziomów stop-loss</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot" style="background:#f5a623"></div><span>Po niedzielnej aktualizacji filtry faz (S1/S2/S3/S4) są w pełni aktualne i wiarygodne</span></div>
+        </div>
+        <div class="meth-p">
+          <strong>Ważne:</strong> Przycisk „Odśwież live" daje aktualny kurs i wskaźniki techniczne, ale <strong>opisy słowne i rekomendacje</strong> (np. „Stop-loss: 79 PLN") pochodzą z ostatniej niedzielnej aktualizacji i mogą nie odzwierciedlać najświeższego kontekstu rynkowego.
+        </div>
+      </div>
+
+      <div class="meth-note">
+        ⚠️ Narzędzie ma charakter edukacyjny i informacyjny. Nie stanowi rekomendacji inwestycyjnej w rozumieniu przepisów prawa. Każda decyzja inwestycyjna powinna być poprzedzona własną analizą i oceną ryzyka. Inwestowanie na giełdzie wiąże się z ryzykiem utraty części lub całości zainwestowanych środków.
+      </div>
+
+      <div style="margin-top:20px;padding:18px;background:linear-gradient(135deg,rgba(34,197,94,.08) 0%,rgba(134,239,172,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:10px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:8px;">☕</div>
+        <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:6px;">Podoba Ci się to narzędzie?</div>
+        <div style="font-size:12px;color:#9ca3af;margin-bottom:14px;line-height:1.6;">Tworzę je w wolnym czasie, aktualizuję co tydzień i udostępniam bezpłatnie.<br>Jeśli Ci pomaga — postaw mi kawę! ☕🙏</div>
+        <a href="https://buycoffee.to/iqimoku" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;text-decoration:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;font-family:'Outfit',sans-serif;letter-spacing:.3px;">
+          <span>☕</span> Postaw kawę na buycoffee.to
+        </a>
+        <div style="margin-top:10px;font-size:10px;color:#4b5563;font-family:'Space Mono',monospace;">buycoffee.to/iqimoku</div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <div class="header">
   <div>
@@ -2272,45 +2450,40 @@ function openModal(ticker,idx){
   const s=STOCKS[idx].find(x=>x.ticker===ticker);
   if(!s)return;
 
-  // Use live data if available, fall back to static
+  // Live data override
   const ld = liveData[ticker] || {};
   const price  = ld.price  ?? s.price;
   const ma30w  = ld.sma150 ?? s.ma30w;
   const chgNum = ld.chg    ?? null;
-  const chgStr = chgNum != null
-    ? (chgNum >= 0 ? '+' : '') + chgNum.toFixed(2) + '%'
-    : s.chg;
+  const chgStr = chgNum != null ? (chgNum>=0?'+':'')+chgNum.toFixed(2)+'%' : s.chg;
   const isLive = !!ld.price;
 
-  // Reklasyfikacja fazy na podstawie live danych
+  // Faza — live kalkulacja lub statyczna
   const liveStage = ld.price ? calcStage(ld) : null;
   const stage = liveStage ?? s.stage;
 
-  // Recalculate MTT from live data if possible
+  // MTT — live lub statyczne
   let mttArr = s.mtt;
   if (ld.price && ld.sma200 && ld.sma150 && ld.sma50 && ld.high52 && ld.low52) {
-    const {price: p, sma200, sma150, sma50, rsi, high52, low52} = ld;
+    const {price:p,sma200,sma150,sma50,rsi,high52,low52} = ld;
     mttArr = [
-      p > sma150 && p > sma200,
-      sma150 > sma200,
-      true,
-      sma50 > sma150 && sma50 > sma200,
-      p > sma50,
-      low52 > 0 && p >= low52 * 1.25,
-      high52 > 0 && p >= high52 * 0.75,
-      rsi != null && rsi >= 70,
+      p>sma150&&p>sma200, sma150>sma200, true,
+      sma50>sma150&&sma50>sma200, p>sma50,
+      low52>0&&p>=low52*1.25, high52>0&&p>=high52*0.75,
+      rsi!=null&&rsi>=70,
     ];
   }
 
   const ch  = chgStr.startsWith('+')?'up':'dn';
   const mas = price > ma30w ? 'up' : 'dn';
-  const score = mttScore(mttArr);
-  const col   = mttColor(score);
-  const vcls  = mttVerdictClass(score);
-  const vtxt  = mttVerdictText(score);
-  const cur   = currency[s.idx];
-  const stageBadge = (liveStage && liveStage !== s.stage) ? ` <span style="font-size:9px;padding:2px 6px;border-radius:3px;background:rgba(245,166,35,.15);color:#f5a623;font-family:'Space Mono',monospace;vertical-align:middle">FAZA ${liveStage} ↻</span>` : '';
-  const liveBadge = isLive ? ' <span style="font-size:9px;padding:2px 6px;border-radius:3px;background:rgba(0,229,160,.15);color:#00e5a0;font-family:\'Space Mono\',monospace;vertical-align:middle">LIVE</span>' : '';
+  const score=mttScore(mttArr);
+  const col=mttColor(score);
+  const vcls=mttVerdictClass(score);
+  const vtxt=mttVerdictText(score);
+  const cur=currency[s.idx];
+  const liveBadge = isLive ? ' <span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(0,229,160,.15);color:#00e5a0;font-family:Space Mono,monospace">LIVE</span>' : '';
+  const stageBadge = (liveStage && liveStage!==s.stage) ? ` <span style="font-size:9px;padding:2px 5px;border-radius:3px;background:rgba(245,166,35,.15);color:#f5a623;font-family:Space Mono,monospace">FAZA ${liveStage} ↻</span>` : '';
+  const h52str = ld.high52&&ld.price ? (((ld.price/ld.high52)-1)*100).toFixed(1)+'%' : s.h52;
 
   const segs=[1,2,3,4].map(n=>`
     <div class="cseg s${n}${n===stage?' active':''}">
@@ -2329,10 +2502,6 @@ function openModal(ticker,idx){
 
   const acls={buy:'act-buy',watch:'act-watch',caution:'act-caution',avoid:'act-avoid'};
   const albl={buy:'✅ KUPUJ / TRZYMAJ (S2)',watch:'👁 OBSERWUJ — Nie kupuj',caution:'⚠️ REDUKUJ / OSTROŻNIE',avoid:'🚫 UNIKAJ — Faza 4'};
-
-  const h52str = ld.high52 && ld.price
-    ? (((ld.price / ld.high52) - 1) * 100).toFixed(1) + '%'
-    : s.h52;
 
   document.getElementById('modal-content').innerHTML=`
     <div class="modal-hero">
@@ -2379,7 +2548,7 @@ function openModal(ticker,idx){
     <div class="modal-analysis">
       <div class="sec-title">Analiza Weinsteina</div>
       <div class="ma-text">${s.analysis}</div>
-      ${!isLive?'<p style="margin-top:8px;font-size:10px;color:var(--muted)">⚠️ Dane statyczne — kliknij <strong>Odśwież live</strong> aby zaktualizować kursy.</p>':''}
+      ${!isLive?'<p style="margin-top:8px;font-size:10px;color:var(--muted)">⚠️ Dane statyczne — kliknij <strong>Odśwież live</strong> aby zaktualizować kursy i MTT.</p>':''}
     </div>
 
     <div class="modal-action">
@@ -2450,6 +2619,26 @@ const TV_MAP = {
   'RPC':'GPW:RPC',   'TIT':'GPW:TOY',   'TEN':'GPW:TEN',   'MLT2':'GPW:MLT',
   'WOL':'GPW:WOL',   'PKO2':'GPW:PKO',  'GNB':'GPW:GNB',   'OGX':'GPW:OPL',
   'NXG':'GPW:NXG',   'CFN':'GPW:CFN',   'SFG':'GPW:SNT',   'HRP2':'GPW:HRP',
+  // ── WIG-Pozostałe dodatkowe ────────────────────────
+  'ERS':'GPW:ERS',   'KBC':'GPW:KBC',   'MBK2':'GPW:MIL',  'TOR':'GPW:TOR',
+  'PLI':'GPW:PLI',   'FEW':'GPW:FEW',   'PGN':'GPW:PGN',   'PAT':'GPW:PAT',
+  'PBG2':'GPW:PBG',  'PBX':'GPW:PBX',   'PCF':'GPW:PCF',   'RLP':'GPW:RLP',
+  'ABP':'GPW:AB',    'AEI':'GPW:AEI',   'ARI2':'GPW:ARH',  'AST2':'GPW:AST',
+  'BOC':'GPW:BRS',   'BPX':'GPW:BPX',   'CAP2':'GPW:CAP',  'CIE':'GPW:CIE',
+  'CPU':'GPW:CPU',   'CRJ2':'GPW:GRJ',  'CTR':'GPW:CTR',   'EKO':'GPW:EKO',
+  'ELM':'GPW:ELM',   'ELP':'GPW:EUR',   'ENT2':'GPW:EAT',  'FPP':'GPW:FPP',
+  'GCL':'GPW:GNB',   'GPP':'GPW:GPP',   'GRW':'GPW:GRW',   'HMI':'GPW:HMI',
+  'HOM':'GPW:HOM',   'I2D':'GPW:I2D',   'IDA':'GPW:IDA',   'INK':'GPW:INK',
+  'IPL':'GPW:IPL',   'ITC':'GPW:ITB',   'KGM':'GPW:KER',   'KOM':'GPW:KOM',
+  'KPD':'GPW:KPX',   'KRK':'GPW:KRU',   'KTY2':'GPW:KTY',  'LBS':'GPW:LWB',
+  'LEP':'GPW:LEP',   'MAB2':'GPW:MAK',  'MAB3':'GPW:MAB',  'MCI2':'GPW:MCI',
+  'MDG2':'GPW:MDG',  'MZA':'GPW:MZA',   'NCB':'GPW:NVT',   'NTE':'GPW:NET',
+  'OAT':'GPW:OAT',   'PEN':'GPW:PEN',   'PKP':'GPW:PKP',   'PMF':'GPW:PMF',
+  'POL':'GPW:POL',   'PRT':'GPW:PRT',   'PZS':'GPW:PZS',   'REI':'GPW:RON',
+  'RVU2':'GPW:RVU',  'SLN':'GPW:SLV',   'SNO':'GPW:SAN',   'SYN2':'GPW:SYN',
+  'TEN2':'GPW:TDO',  'TWG':'GPW:TWG',   'TXM':'GPW:TXM',   'WHI':'GPW:WHI',
+  'WTN':'GPW:WPL',   'XPL':'GPW:XTP',   'ZRL':'GPW:ZRL',   'ABC2':'GPW:ABM',
+  'CIR':'GPW:CIR',
   // ── DAX (XETR) ─────────────────────────────────────
   'BAS':'XETR:BAS',  'BAYN':'XETR:BAYN','ALV':'XETR:ALV',  'ADS':'XETR:ADS',
   'SIE':'XETR:SIE',  'DBK':'XETR:DBK',  'CON':'XETR:CON',  'MBG':'XETR:MBG',
@@ -2615,38 +2804,24 @@ async function fetchTVBatch(market, tvTickers) {
   return [];
 }
 
-let liveData = {}; // ticker → {price, chg, sma200, sma150, sma50, rsi, high52, low52, sma150_20}
-
-// ── Automatyczna klasyfikacja fazy Weinsteina ──────────────────────────────
-// Wymaga: price, sma150, sma200, sma150_20 (SMA150 sprzed 20 sesji)
+let liveData = {};
+// ── Automatyczna klasyfikacja fazy Weinsteina ─────────────────────────────
 function calcStage(d) {
   const { price, sma150, sma200, sma150_20 } = d;
-  if (!price || !sma150 || !sma200) return null; // brak danych
-
-  // Nachylenie MA30W: porównanie z wartością sprzed ~4 tygodni
-  // Jeśli sma150_20 niedostępne — wnioskujemy z relacji sma150 vs sma200
+  if (!price || !sma150 || !sma200) return null;
   const ma_rising  = sma150_20 != null ? sma150 > sma150_20 * 1.001 : sma150 > sma200;
   const ma_falling = sma150_20 != null ? sma150 < sma150_20 * 0.999 : sma150 < sma200;
-  // ma_flat = ani rosnąca ani opadająca
-
   const above_ma = price > sma150;
   const ma_above_sma200 = sma150 > sma200;
-
-  // Weinstein Stage logic:
-  // Faza 1 — Akumulacja: kurs przy/nad spłaszczoną MA30W, MA30W przestaje opadać
-  // Faza 2 — Wzrost:     kurs > rosnąca MA30W > SMA200
-  // Faza 3 — Dystrybucja: kurs przy/nad spłaszczoną/opadającą MA30W, ale MA30W zaczyna opadać
-  // Faza 4 — Spadek:     kurs < opadająca MA30W
-
-  if (above_ma && ma_rising && ma_above_sma200) return 2;  // klasyczna faza 2
-  if (above_ma && ma_rising && !ma_above_sma200) return 2; // wczesna faza 2 (MA150 jeszcze poniżej MA200)
-  if (!above_ma && ma_falling) return 4;                   // faza 4
-  if (above_ma && ma_falling) return 3;                    // faza 3 — kurs jeszcze nad MA ale MA opada
-  if (!above_ma && ma_rising) return 1;                    // faza 1 — kurs pod rosnącą MA (wczesna akumulacja)
-  // pozostałe przypadki (spłaszczona MA):
-  if (above_ma) return ma_above_sma200 ? 2 : 1;
+  if (above_ma && ma_rising && ma_above_sma200)  return 2;
+  if (above_ma && ma_rising && !ma_above_sma200) return 2;
+  if (!above_ma && ma_falling)                   return 4;
+  if (above_ma && ma_falling)                    return 3;
+  if (!above_ma && ma_rising)                    return 1;
+  if (above_ma)  return ma_above_sma200 ? 2 : 1;
   return ma_above_sma200 ? 3 : 4;
 }
+
 let lastRefresh = null;
 let refreshInProgress = false;
 
@@ -2707,7 +2882,7 @@ async function refreshLiveData() {
           chg:      d[1],
           volume:   d[2],
           sma200:   d[3],
-          sma150:   d[4],  // ≈ MA30W weekly
+          sma150:   d[4],
           sma50:    d[5],
           rsi:      d[6],
           macd:     d[7],
@@ -2716,7 +2891,7 @@ async function refreshLiveData() {
           low52:    d[10],
           perfW:    d[11],
           perf1M:   d[12],
-          sma150_20: d[13] ?? null,  // SMA150 sprzed 20 sesji — do oceny nachylenia
+          sma150_20: d[13] ?? null,
         };
         totalUpdated++;
       });
@@ -2817,24 +2992,18 @@ function updateCardsWithLiveData() {
     if (d.price && d.sma200 && d.sma150 && d.sma50 && d.high52 && d.low52) {
       recalcMTT(card, ticker, d);
     }
-
-    // ── Reklasyfikacja fazy Weinsteina ──
+    // Reklasyfikacja fazy Weinsteina
     const newStage = calcStage(d);
     if (newStage) {
       const oldStage = parseInt(card.dataset.stage) || 0;
       if (newStage !== oldStage) {
-        // Update card classes
         card.classList.remove('stage-1','stage-2','stage-3','stage-4');
         card.classList.add(`stage-${newStage}`);
         card.dataset.stage = newStage;
-        // Update stage badge
         const stageNum = card.querySelector('.stage-num');
         if (stageNum) stageNum.textContent = newStage;
         const stageLbl = card.querySelector('.stage-lbl');
         if (stageLbl) stageLbl.textContent = ['','AKUM','WZROST','DYSTR','SPADEK'][newStage];
-        // Update mini bar dot position
-        const dot = card.querySelector('.mini-dot');
-        if (dot) dot.style.left = `${(newStage - 0.5) * 25}%`;
       }
     }
   });
@@ -2873,6 +3042,43 @@ function recalcMTT(card, ticker, d) {
     });
   }
 }
+
+// ══════════════════════════════════════════════════
+// METODOLOGIA MODAL
+// ══════════════════════════════════════════════════
+// Data ostatniej pełnej aktualizacji (zmień co niedzielę)
+const LAST_UPDATE = '2025-06-08'; // format YYYY-MM-DD
+
+function openMethodology() {
+  document.getElementById('methOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMethodology() {
+  document.getElementById('methOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeMethIfBg(e) {
+  if (e.target === document.getElementById('methOverlay')) closeMethodology();
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeMethodology(); closeOverlay(); }
+});
+
+// Ustaw badge z datą aktualizacji
+(function() {
+  const badge = document.getElementById('ib-update-badge');
+  if (!badge) return;
+  const d = new Date(LAST_UPDATE);
+  const now = new Date();
+  const diffDays = Math.floor((now - d) / 86400000);
+  const formatted = d.toLocaleDateString('pl-PL', {day:'numeric', month:'long', year:'numeric'});
+  if (diffDays <= 7) {
+    badge.textContent = '✅ Aktualizacja: ' + formatted;
+    badge.classList.add('fresh');
+  } else {
+    badge.textContent = '🗓 Aktualizacja: ' + formatted;
+  }
+})();
 
 // init
 buildSectorSelect();
