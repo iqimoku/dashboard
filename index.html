@@ -354,6 +354,89 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .coffee-stat-v{font-size:18px;font-weight:800;color:#22c55e;font-family:'Space Mono',monospace;}
 .coffee-stat-l{font-size:9px;color:#6b7280;margin-top:2px;font-family:'Space Mono',monospace;letter-spacing:1px;text-transform:uppercase;}
 
+
+/* ══ STAN RYNKU (Market Overview) ══ */
+.market-view{display:none;padding:20px 24px 40px;}
+.market-view.active{display:block;}
+
+/* Regime Label */
+.regime-banner{
+  border-radius:12px;padding:20px 24px;margin-bottom:24px;
+  display:flex;align-items:center;gap:16px;
+  border:2px solid;
+}
+.regime-banner.bull{background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.3);}
+.regime-banner.transition{background:rgba(245,166,35,.08);border-color:rgba(245,166,35,.3);}
+.regime-banner.bear{background:rgba(255,77,77,.08);border-color:rgba(255,77,77,.3);}
+.regime-icon{font-size:36px;flex-shrink:0;}
+.regime-label{font-size:22px;font-weight:800;letter-spacing:.5px;}
+.regime-banner.bull .regime-label{color:var(--s2);}
+.regime-banner.transition .regime-label{color:var(--s3);}
+.regime-banner.bear .regime-label{color:var(--s4);}
+.regime-sub{font-size:11px;color:var(--muted);margin-top:4px;}
+
+/* Market selector */
+.market-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.mkt-tab{padding:7px 16px;border-radius:6px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:11px;font-family:'Space Mono',monospace;cursor:pointer;transition:all .2s;}
+.mkt-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(167,139,250,.1);}
+
+/* Sections grid */
+.mr-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+@media(max-width:900px){.mr-grid{grid-template-columns:1fr;}}
+.mr-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.mr-card-title{font-family:'Space Mono',monospace;font-size:9px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.mr-card-title::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* Stacked bar */
+.stage-stack-wrap{margin-bottom:8px;}
+.stage-stack-label{display:flex;justify-content:space-between;margin-bottom:6px;}
+.stage-stack-name{font-size:11px;font-weight:600;}
+.stage-stack-bar{height:28px;border-radius:6px;overflow:hidden;display:flex;}
+.ss-seg{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:rgba(255,255,255,.9);transition:width .4s ease;cursor:default;white-space:nowrap;overflow:hidden;}
+.ss-seg:hover{filter:brightness(1.15);}
+.ss-s1{background:var(--s1);}
+.ss-s2{background:var(--s2);}
+.ss-s3{background:var(--s3);}
+.ss-s4{background:var(--s4);}
+.stage-legend{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.sl-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted);}
+.sl-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+
+/* Gauge */
+.gauge-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.gauge-box{text-align:center;}
+.gauge-svg-wrap{position:relative;display:inline-block;}
+.gauge-val{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:18px;font-weight:800;font-family:'Space Mono',monospace;}
+.gauge-val.good{color:var(--s2);}
+.gauge-val.warn{color:var(--s3);}
+.gauge-val.bad{color:var(--s4);}
+.gauge-label{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;}
+.gauge-sub{font-size:9px;color:var(--muted);margin-top:2px;}
+.gauge-interp{font-size:10px;margin-top:6px;padding:5px 8px;border-radius:5px;text-align:left;}
+.gauge-interp.good{background:rgba(0,229,160,.08);color:var(--s2);}
+.gauge-interp.warn{background:rgba(245,166,35,.08);color:var(--s3);}
+.gauge-interp.bad{background:rgba(255,77,77,.08);color:var(--s4);}
+
+/* New highs / lows */
+.nh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.nh-box{padding:12px;border-radius:8px;text-align:center;}
+.nh-box.up{background:rgba(0,229,160,.06);border:1px solid rgba(0,229,160,.15);}
+.nh-box.dn{background:rgba(255,77,77,.06);border:1px solid rgba(255,77,77,.15);}
+.nh-count{font-size:28px;font-weight:800;font-family:'Space Mono',monospace;}
+.nh-box.up .nh-count{color:var(--s2);}
+.nh-box.dn .nh-count{color:var(--s4);}
+.nh-label{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;}
+.nh-pct{font-size:12px;font-weight:600;margin-top:2px;}
+.nh-box.up .nh-pct{color:var(--s2);}
+.nh-box.dn .nh-pct{color:var(--s4);}
+.nh-interp{margin-top:10px;font-size:10px;padding:6px 8px;border-radius:6px;line-height:1.5;}
+
+/* Alert banner */
+.market-alert{padding:10px 14px;border-radius:8px;font-size:11px;line-height:1.5;margin-top:10px;}
+.market-alert.bull{background:rgba(0,229,160,.08);border:1px solid rgba(0,229,160,.2);color:var(--s2);}
+.market-alert.warn{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);color:var(--s3);}
+.market-alert.bear{background:rgba(255,77,77,.08);border:1px solid rgba(255,77,77,.2);color:var(--s4);}
+
 /* ══ LIVE DATA REFRESH ══ */
 .btn-refresh{
   background:linear-gradient(135deg,rgba(0,229,160,.15),rgba(0,229,160,.08));
@@ -538,9 +621,10 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab" id="tab-wigr" onclick="switchTab('wigr')">🇵🇱 WIG-Pozostałe <span class="tab-cnt" id="cnt-wigr">133</span></div>
+  <div class="tab" id="tab-market" onclick="switchTabMarket()" style="background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.2);">📡 Stan Rynku</div>
 </div>
 
-<div class="legend-bar">
+<div class="legend-bar" id="legend-bar">
   <span class="leg-label">Weinstein:</span>
   <div class="leg-group">
     <div class="li"><div class="ld s1"></div>Faza 1</div>
@@ -588,7 +672,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 
 <div class="grid" id="grid"></div>
 <div class="summary" id="summary"></div>
-<div class="coffee-bar">
+<div class="coffee-bar" id="coffee-bar">
   <div class="coffee-left">
     <div class="coffee-icon">☕</div>
     <div class="coffee-text">
@@ -619,7 +703,65 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="coffee-stat"><div class="coffee-stat-v">S1-S4</div><div class="coffee-stat-l">Weinstein</div></div>
   </div>
 </div>
-<div class="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Czerwiec 2026. Kliknij spółkę po szczegóły.</div>
+<div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Czerwiec 2026. Kliknij spółkę po szczegóły.</div>
+
+<!-- ══ STAN RYNKU ══ -->
+<div class="market-view" id="market-view">
+  <div class="market-tabs">
+    <button class="mkt-tab active" id="mkt-wig20" onclick="setMarketView('wig20',this)">🇵🇱 WIG20</button>
+    <button class="mkt-tab" id="mkt-mwig40" onclick="setMarketView('mwig40',this)">📊 mWIG40</button>
+    <button class="mkt-tab" id="mkt-swig80" onclick="setMarketView('swig80',this)">📈 sWIG80</button>
+    <button class="mkt-tab" id="mkt-wigr" onclick="setMarketView('wigr',this)">🇵🇱 WIG Reszta</button>
+    <button class="mkt-tab" id="mkt-dax" onclick="setMarketView('dax',this)">🇩🇪 DAX</button>
+    <button class="mkt-tab" id="mkt-ndx" onclick="setMarketView('ndx',this)">🇺🇸 Nasdaq</button>
+    <button class="mkt-tab" id="mkt-nyse" onclick="setMarketView('nyse',this)">🏛 NYSE</button>
+    <button class="mkt-tab" id="mkt-all" onclick="setMarketView('all',this)">🌍 Wszystkie</button>
+  </div>
+
+  <!-- Regime banner -->
+  <div class="regime-banner" id="regime-banner">
+    <div class="regime-icon" id="regime-icon">📊</div>
+    <div>
+      <div class="regime-label" id="regime-label">Ładowanie...</div>
+      <div class="regime-sub" id="regime-sub">Obliczam na podstawie faz Weinsteina...</div>
+    </div>
+  </div>
+
+  <div class="mr-grid">
+    <!-- Stage Distribution -->
+    <div class="mr-card">
+      <div class="mr-card-title">📊 Rozkład Faz Weinsteina</div>
+      <div id="stage-stack-chart"></div>
+      <div class="stage-legend">
+        <div class="sl-item"><div class="sl-dot" style="background:var(--s1)"></div>Faza 1 Akumulacja</div>
+        <div class="sl-item"><div class="sl-dot" style="background:var(--s2)"></div>Faza 2 Wzrost</div>
+        <div class="sl-item"><div class="sl-dot" style="background:var(--s3)"></div>Faza 3 Dystr.</div>
+        <div class="sl-item"><div class="sl-dot" style="background:var(--s4)"></div>Faza 4 Spadek</div>
+      </div>
+    </div>
+
+    <!-- MA Gauges -->
+    <div class="mr-card">
+      <div class="mr-card-title">📈 % Spółek powyżej SMA</div>
+      <div class="gauge-grid" id="ma-gauges"></div>
+    </div>
+
+    <!-- New Highs / Lows -->
+    <div class="mr-card">
+      <div class="mr-card-title">🎯 Bliskość 52T Ekstremów</div>
+      <div class="nh-grid" id="nh-grid"></div>
+      <div id="nh-interp" class="nh-interp" style="display:none;"></div>
+    </div>
+
+    <!-- Summary stats -->
+    <div class="mr-card">
+      <div class="mr-card-title">📋 Statystyki MTT</div>
+      <div id="mtt-stats"></div>
+    </div>
+  </div>
+
+  <div id="market-alert" class="market-alert" style="display:none;"></div>
+</div>
 
 <!-- MODAL -->
 <div class="overlay" id="overlay" onclick="closeModal(event)">
@@ -695,8 +837,8 @@ wig20: [
    action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:63.16,chg:"+0.67%",stage:2,ma30w:57.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2.</strong> ~9% powyżej rosnącej MA30W. Lider dywidendowy GPW.",
+  {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:63.16,chg:"+0.67%",stage:1,ma30w:57.80,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
+   analysis:"<strong>Faza 1 — Korekta w trendzie wzrostowym.</strong> Kurs chwilowo poniżej rosnącej MA30W — klasyczna korekta S2→S1. MA30W nadal rośnie, co jest pozytywnym sygnałem długoterminowym. Obserwuj powrót kursu powyżej MA30W jako sygnał wznowienia Fazy 2. Stop-loss poniżej ostatniego dołka.",
    action:"buy",anote:"Stop-loss: ~58 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
 
@@ -705,8 +847,8 @@ wig20: [
    action:"buy",anote:"Stop-loss: ~195 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"SANT",name:"Santander Bank PL",sector:"Bankowość",idx:"wig20",price:548.60,chg:"+0.07%",stage:3,ma30w:532.00,matrend:"zwalnia →",vol:"Mieszany",rs:"Neutralna",h52:"-8%",
-   analysis:"<strong>Sygnały Fazy 3.</strong> MA30W zwalnia, kurs -8% od szczytu.",
+  {ticker:"SANT",name:"Santander Bank PL",sector:"Bankowość",idx:"wig20",price:548.60,chg:"+0.07%",stage:2,ma30w:532.00,matrend:"zwalnia →",vol:"Mieszany",rs:"Neutralna",h52:"-8%",
+   analysis:"<strong>Faza 2 — Kontynuacja hossy.</strong> Santander Bank Polska powyżej MA30W (+3%), -8% od szczytu. Sektor bankowy w sile — wysoka stopa procentowa wspiera wyniki.",
    action:"caution",anote:"Redukuj przy rally",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,true,true,true,true,true,false,false]},
 
@@ -725,8 +867,8 @@ wig20: [
    action:"buy",anote:"Stop-loss: ~97 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BDX",name:"Budimex",sector:"Budownictwo",idx:"wig20",price:655.40,chg:"-0.09%",stage:3,ma30w:630.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-12%",
-   analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W traci nachylenie, -12% od szczytu.",
+  {ticker:"BDX",name:"Budimex",sector:"Budownictwo",idx:"wig20",price:655.40,chg:"-0.09%",stage:2,ma30w:630.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-12%",
+   analysis:"<strong>Faza 2 — Trend wzrostowy utrzymany.</strong> Budimex powyżej MA30W, -12% od szczytu. Infrastruktura i budownictwo korzysta z inwestycji UE.",
    action:"caution",anote:"Sell on rallies",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,true,true,true,true,true,false,false]},
 
@@ -735,8 +877,8 @@ wig20: [
    action:"buy",anote:"High risk. Stop: ~83 PLN",signals:[["buy","S2 WCZESNY"]],
    mtt:[true,true,false,true,true,true,false,false]},
 
-  {ticker:"CDR",name:"CD Projekt",sector:"Gaming",idx:"wig20",price:246.30,chg:"-0.24%",stage:1,ma30w:250.00,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-22%",
-   analysis:"<strong>Granica S1/S4.</strong> Kurs poniżej lekko opadającej MA30W.",
+  {ticker:"CDR",name:"CD Projekt",sector:"Gaming",idx:"wig20",price:246.30,chg:"-0.24%",stage:4,ma30w:250.00,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-22%",
+   analysis:"<strong>Faza 4 — Trend spadkowy.</strong> Kurs poniżej opadającej MA30W (-22% od szczytu 52T). CD Projekt utraciło impet wzrostowy. Unikaj nowych pozycji do czasu stabilizacji powyżej MA30W.",
    action:"watch",anote:"Nie kupuj przy opadającej MA30W",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,false,false,false,false]},
 
@@ -765,13 +907,13 @@ wig20: [
    action:"avoid",anote:"Weinstein: nie kupuj Fazy 4",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"PCO",name:"Pepco Group",sector:"Handel",idx:"wig20",price:27.64,chg:"+3.44%",stage:1,ma30w:27.10,matrend:"płaska →",vol:"Wzrostowy!",rs:"Neutralna",h52:"-18%",
+  {ticker:"PCO",name:"Pepco Group",sector:"Handel",idx:"wig20",price:27.64,chg:"+3.44%",stage:3,ma30w:27.10,matrend:"płaska →",vol:"Wzrostowy!",rs:"Neutralna",h52:"-18%",
    analysis:"<strong>Potencjalny sygnał S1→S2.</strong> Dziś +3.44% z wolumenem, kurs próbuje przebić MA30W.",
    action:"watch",anote:"Obserwuj zamknięcie tygodniowe",signals:[["watch","PRE-S2 ⚡"]],
    mtt:[true,false,false,false,true,true,false,false]},
 
-  {ticker:"ZBK",name:"Żabka Group",sector:"Convenience",idx:"wig20",price:20.50,chg:"+1.08%",stage:1,ma30w:21.80,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-24%",
-   analysis:"<strong>Debiutant WIG20 — baza IPO.</strong> Kurs poniżej MA30W. Brak historii tygodniowej.",
+  {ticker:"ZBK",name:"Żabka Group",sector:"Convenience",idx:"wig20",price:20.50,chg:"+1.08%",stage:4,ma30w:21.80,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-24%",
+   analysis:"<strong>Faza 4 — Korekta trwa.</strong> Kurs poniżej lekko opadającej MA30W. -24% od szczytu. Poczekaj na formowanie bazy (Faza 1) z wolumenem akumulacji.",
    action:"watch",anote:"Za wcześnie na ocenę",signals:[["watch","BAZA/IPO"]],
    mtt:[false,false,false,false,false,false,false,false]},
 
@@ -796,8 +938,8 @@ mwig40: [
   {ticker:"MIL",name:"Bank Millennium",sector:"Bankowość",idx:"mwig40",price:19.04,chg:"+2.42%",stage:2,ma30w:16.80,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Dobra",h52:"-5%",
    analysis:"<strong>Faza 2.</strong> ~13% powyżej MA30W. Zakończył rezerwy CHF.",action:"buy",anote:"Stop: ~17 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"ENA",name:"Enea",sector:"Energetyka",idx:"mwig40",price:20.26,chg:"-0.49%",stage:1,ma30w:20.10,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-15%",
-   analysis:"<strong>Faza 1 — baza.</strong> Kurs blisko spłaszczonej MA30W.",action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],
+  {ticker:"ENA",name:"Enea",sector:"Energetyka",idx:"mwig40",price:20.26,chg:"-0.49%",stage:2,ma30w:20.10,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-15%",
+   analysis:"<strong>Faza 2 — Wczesny breakout.</strong> Kurs przebił MA30W (płaska). -15% od szczytu 52T — potencjał wzrostu. Obserwuj wolumen potwierdzający przebiecie.",action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,true,false,false,false]},
   {ticker:"EUR",name:"Eurocash",sector:"Dystrybucja",idx:"mwig40",price:5.58,chg:"-0.53%",stage:4,ma30w:6.40,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-28%",
    analysis:"<strong>Faza 4.</strong> -13% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
@@ -820,8 +962,8 @@ mwig40: [
   {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:820.00,chg:"+1.61%",stage:2,ma30w:745.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
    analysis:"<strong>Faza 2 — lider dystrybucji części.</strong> ~10% powyżej MA30W.",action:"buy",anote:"Stop: ~748 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:260.00,chg:"-1.89%",stage:3,ma30w:252.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-10%",
-   analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W zwalnia.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
+  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:260.00,chg:"-1.89%",stage:2,ma30w:252.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-10%",
+   analysis:"<strong>Faza 2 — Wzrostowy impet.</strong> Dom Development powyżej MA30W (+3%), -10% od szczytu. Deweloperzy mieszkaniowi w sile na tle niskiej podaży.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,true,false,true,true,true,false,false]},
   {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:10.60,chg:"-1.12%",stage:4,ma30w:12.80,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-32%",
    analysis:"<strong>Faza 4.</strong> -17% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
@@ -859,13 +1001,13 @@ mwig40: [
   {ticker:"SNT",name:"Synektik",sector:"Medtech",idx:"mwig40",price:282.60,chg:"-0.98%",stage:2,ma30w:248.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",
    analysis:"<strong>Faza 2 — robotyka chirurgiczna.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~250 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"TXT",name:"Text (LiveChat)",sector:"SaaS",idx:"mwig40",price:42.80,chg:"+3.63%",stage:1,ma30w:44.00,matrend:"lekko ↓",vol:"Wzrostowy",rs:"Neutralna",h52:"-15%",
-   analysis:"<strong>Faza 1 — baza SaaS po korekcie.</strong> Dziś +3.6% z wolumenem.",action:"watch",anote:"Czekaj na trwałe przebicie MA30W",signals:[["watch","PRE-S2?"]],
+  {ticker:"TXT",name:"Text (LiveChat)",sector:"SaaS",idx:"mwig40",price:42.80,chg:"+3.63%",stage:4,ma30w:44.00,matrend:"lekko ↓",vol:"Wzrostowy",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 4 — Brak sygnału kupna.</strong> MA30W opada, kurs poniżej średniej. -15% od szczytu 52T. Obserwuj stabilizację MA30W.",action:"watch",anote:"Czekaj na trwałe przebicie MA30W",signals:[["watch","PRE-S2?"]],
    mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"NWG",name:"Newag",sector:"Tabor",idx:"mwig40",price:111.00,chg:"+1.09%",stage:2,ma30w:98.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
    analysis:"<strong>Faza 2 — modernizacja kolejowa.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~99 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
-  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.50,chg:"-0.17%",stage:3,ma30w:57.20,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-14%",
+  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.50,chg:"-0.17%",stage:2,ma30w:57.20,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-14%",
    analysis:"<strong>Faza 3 sygnały.</strong> MA30W zwalnia.",action:"caution",anote:"Obserwuj MA30W",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,false,false,true,true,true,false,false]},
   {ticker:"XTB",name:"XTB",sector:"Fintech",idx:"mwig40",price:109.04,chg:"+1.62%",stage:2,ma30w:96.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-3%",
@@ -889,8 +1031,8 @@ mwig40: [
   {ticker:"CRE",name:"Creotech",sector:"Kosmonautyka",idx:"mwig40",price:952.00,chg:"+10.19%",stage:2,ma30w:740.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"B. silna",h52:"+5%",
    analysis:"<strong>Lider wzrostu — breakout +10%!</strong> ~29% powyżej MA30W.",action:"buy",anote:"Rozciągnięty. Pullback ryzyko.",signals:[["buy","BREAKOUT!"]],
    mtt:[true,true,true,true,true,true,true,true]},
-  {ticker:"GRP",name:"Grupa Pracuj",sector:"HR",idx:"mwig40",price:43.50,chg:"+0.35%",stage:1,ma30w:44.50,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-18%",
-   analysis:"<strong>Faza 1/4 — baza po korekcie.</strong> Rynek pracy zwalnia.",action:"watch",anote:"Nie kupuj przy malejącej MA30W",signals:[["watch","OBSERWUJ"]],
+  {ticker:"GRP",name:"Grupa Pracuj",sector:"HR",idx:"mwig40",price:43.50,chg:"+0.35%",stage:4,ma30w:44.50,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-18%",
+   analysis:"<strong>Faza 4 — Trend osłabiony.</strong> Kurs poniżej opadającej MA30W (-18% od szczytu). Brak sygnału wejścia do czasu powrotu do S1.",action:"watch",anote:"Nie kupuj przy malejącej MA30W",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"DIA",name:"Diagnostyka",sector:"Diagnostyka",idx:"mwig40",price:161.10,chg:"-0.06%",stage:2,ma30w:143.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
    analysis:"<strong>Faza 2 — sieć laboratoriów.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~144 PLN",signals:[["buy","KUPUJ S2"]],
@@ -985,8 +1127,8 @@ swig80: [
    analysis:"<strong>Faza 2.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~64.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"BOS",name:"BOŚ Bank",sector:"Bankowość",idx:"swig80",price:10.10,chg:"-1.75%",stage:1,ma30w:10.30,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-20%",
    analysis:"<strong>Faza 1 — mała baza.</strong> Kurs przy MA30W.",action:"watch",anote:"Bez impulsu",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ECH",name:"Echo Investment",sector:"Deweloperzy",idx:"swig80",price:5.30,chg:"+0.38%",stage:1,ma30w:5.20,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-12%",
-   analysis:"<strong>Faza 1 — baza.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"ECH",name:"Echo Investment",sector:"Deweloperzy",idx:"swig80",price:5.30,chg:"+0.38%",stage:2,ma30w:5.20,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-12%",
+   analysis:"<strong>Faza 2 — Akumulacja zakończona.</strong> Kurs powyżej stabilizującej się MA30W. Wczesna Faza 2 przy -12% od szczytu.",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,true,false,false]},
   {ticker:"BTO",name:"Bioton",sector:"Farmacja",idx:"swig80",price:4.07,chg:"-1.21%",stage:4,ma30w:4.80,matrend:"opadająca ↓",vol:"B. niski",rs:"Słaba",h52:"-28%",
    analysis:"<strong>Faza 4.</strong>",action:"avoid",anote:"Unikaj",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"BRS",name:"Boryszew",sector:"Motoryzacja",idx:"swig80",price:4.57,chg:"-6.35%",stage:4,ma30w:5.40,matrend:"opadająca ↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-35%",
@@ -1065,28 +1207,28 @@ dax: [
   {ticker:"BAS",name:"BASF",sector:"Chemia",idx:"dax",price:44.79,chg:"-1.06%",stage:4,ma30w:50.20,matrend:"opadająca ↓↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-28%",
    analysis:"<strong>Faza 4 — restrukturyzacja Ludwigshafen.</strong> -11% poniżej MA30W.",action:"avoid",anote:"Unikaj S4",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BAYN",name:"Bayer",sector:"Chemia/Farmacja",idx:"dax",price:37.59,chg:"+3.30%",stage:1,ma30w:36.80,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
-   analysis:"<strong>Faza 1 — potencjalne dno.</strong> Dziś +3.3%, kurs próbuje przebić MA30W.",action:"watch",anote:"Obserwuj tygodniowe zamknięcie",signals:[["watch","PRE-S2?"]],
+  {ticker:"BAYN",name:"Bayer",sector:"Chemia/Farmacja",idx:"dax",price:37.59,chg:"+3.30%",stage:2,ma30w:36.80,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 2 — Odreagowanie po Fazie 1.</strong> Bayer powyżej MA30W. -15% od szczytu. Sektor farmaceutyczny w odbiciu.",action:"watch",anote:"Obserwuj tygodniowe zamknięcie",signals:[["watch","PRE-S2?"]],
    mtt:[false,false,false,false,true,true,false,false]},
-  {ticker:"IFX",name:"Infineon",sector:"Technologia",idx:"dax",price:38.95,chg:"-1.19%",stage:1,ma30w:38.20,matrend:"lekko ↓",vol:"Wysoki",rs:"Neutralna",h52:"-30%",
+  {ticker:"IFX",name:"Infineon",sector:"Technologia",idx:"dax",price:38.95,chg:"-1.19%",stage:3,ma30w:38.20,matrend:"lekko ↓",vol:"Wysoki",rs:"Neutralna",h52:"-30%",
    analysis:"<strong>Faza 1 — baza chip cycle.</strong> Kurs przy MA30W.",action:"watch",anote:"Czekaj na sygnał",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,true,false,false,false]},
-  {ticker:"VNA",name:"Vonovia",sector:"Nieruchomości",idx:"dax",price:24.97,chg:"-3.22%",stage:1,ma30w:24.50,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
-   analysis:"<strong>Faza 1 — nieruchomości po krachu stóp.</strong> ECB obniżki = katalizator.",action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
+  {ticker:"VNA",name:"Vonovia",sector:"Nieruchomości",idx:"dax",price:24.97,chg:"-3.22%",stage:2,ma30w:24.50,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-15%",
+   analysis:"<strong>Faza 2 — Stabilizacja i wzrost.</strong> Vonovia powyżej MA30W. -15% od szczytu. Sektor nieruchomości odrabia po bessie stóp procentowych.",action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,true,false,false,false]},
-  {ticker:"ZAL",name:"Zalando SE",sector:"E-commerce",idx:"dax",price:19.84,chg:"-2.36%",stage:1,ma30w:20.50,matrend:"lekko ↓",vol:"Powyżej śr.",rs:"Neutralna",h52:"-20%",
-   analysis:"<strong>Faza 1/4 granica.</strong> MA30W lekko opada.",action:"watch",anote:"Nie kupuj",signals:[["watch","OBSERWUJ"]],
+  {ticker:"ZAL",name:"Zalando SE",sector:"E-commerce",idx:"dax",price:19.84,chg:"-2.36%",stage:4,ma30w:20.50,matrend:"lekko ↓",vol:"Powyżej śr.",rs:"Neutralna",h52:"-20%",
+   analysis:"<strong>Faza 4 — Korekta strukturalna.</strong> Kurs pod opadającą MA30W, -20% od szczytu rocznego. Czekaj na powrót do S1.",action:"watch",anote:"Nie kupuj",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"ADS",name:"Adidas",sector:"Dobra konsumpcyjne",idx:"dax",price:139.70,chg:"-2.10%",stage:3,ma30w:136.00,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-22%",
    analysis:"<strong>Faza 3 — momentum słabnie.</strong> MA30W zwalnia, -22% od szczytu.",action:"caution",anote:"Redukuj",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,true,false,true,true,true,false,false]},
-  {ticker:"MRK",name:"Merck KGaA",sector:"Farmacja",idx:"dax",price:107.65,chg:"-2.27%",stage:3,ma30w:106.00,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
+  {ticker:"MRK",name:"Merck KGaA",sector:"Farmacja",idx:"dax",price:107.65,chg:"-2.27%",stage:2,ma30w:106.00,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
    analysis:"<strong>Faza 3 — dystrybucja.</strong> MA30W spłaszczona.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,false,false,true,true,true,false,false]},
-  {ticker:"SY1",name:"Symrise AG",sector:"Chemia specjalna",idx:"dax",price:71.20,chg:"-0.92%",stage:3,ma30w:70.50,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",
-   analysis:"<strong>Faza 3 sygnały.</strong> MA30W spłaszczona.",action:"caution",anote:"Obserwuj MA30W",signals:[["caution","OSTROŻNIE"]],
+  {ticker:"SY1",name:"Symrise AG",sector:"Chemia specjalna",idx:"dax",price:71.20,chg:"-0.92%",stage:2,ma30w:70.50,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",
+   analysis:"<strong>Faza 2 — Trend wzrostowy.</strong> Siemens Energy powyżej MA30W, -12% od szczytu rocznego. Sektor energetyki odnawialnej w trendzie wzrostowym.",action:"caution",anote:"Obserwuj MA30W",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,false,false,true,true,true,false,false]},
-  {ticker:"BEI",name:"Beiersdorf",sector:"Dobra konsumpcyjne",idx:"dax",price:80.98,chg:"-3.71%",stage:3,ma30w:79.50,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
+  {ticker:"BEI",name:"Beiersdorf",sector:"Dobra konsumpcyjne",idx:"dax",price:80.98,chg:"-3.71%",stage:2,ma30w:79.50,matrend:"spłaszcza →",vol:"Malejący",rs:"Słabnąca",h52:"-18%",
    analysis:"<strong>Faza 3.</strong> MA30W zwalnia.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],
    mtt:[true,false,false,true,true,true,false,false]},
   {ticker:"CON",name:"Continental AG",sector:"Motoryzacja",idx:"dax",price:60.84,chg:"-4.22%",stage:4,ma30w:68.50,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-30%",
@@ -2144,7 +2286,7 @@ dax: [
   {ticker:"PRF",name:"Prochem",sector:"Inżynieria procesowa",idx:"wigr",price:188.00,chg:"+0.53%",stage:2,ma30w:168.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",analysis:"<strong>Faza 2 — projekty petrochemiczne i chemiczne.</strong> ~12% powyżej MA30W.",action:"buy",anote:"Stop: ~169 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"ZUE",name:"ZUE SA",sector:"Budownictwo kolejowe",idx:"wigr",price:19.40,chg:"-1.02%",stage:2,ma30w:17.20,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-6%",analysis:"<strong>Faza 2 — elektryfikacja kolei.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~17.40 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"TRK",name:"Trakcja PRKiI",sector:"Infrastruktura kolejowa",idx:"wigr",price:4.60,chg:"+0.44%",stage:2,ma30w:4.05,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — roboty torowe.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~4.08 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"PBX",name:"Prebens",sector:"Prefabrykaty betonowe",idx:"wigr",price:12.60,chg:"-0.79%",stage:1,ma30w:12.50,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — baza. Budownictwo prefabrykowane.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
+  {ticker:"PBX",name:"Prebens",sector:"Prefabrykaty betonowe",idx:"wigr",price:12.60,chg:"-0.79%",stage:2,ma30w:12.50,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — baza. Budownictwo prefabrykowane.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
   {ticker:"IZB",name:"Izostal",sector:"Rurociągi stalowe",idx:"wigr",price:5.42,chg:"+0.37%",stage:2,ma30w:4.80,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — izolowane rury stalowe dla gazociągów.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~4.83 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   // ── Sektor Energetyczny / OZE ──
   {ticker:"PGN",name:"PGNIG / PSG",sector:"Gaz ziemny/Dystrybucja",idx:"wigr",price:6.85,chg:"+0.29%",stage:1,ma30w:6.90,matrend:"płaska →",vol:"Stabilny",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 1 — gaz po fuzji z Orlenem.</strong> Kurs przy spłaszczonej MA30W. Integracja w toku.",action:"watch",anote:"Czekaj na sygnał",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,false,false]},
@@ -2154,7 +2296,7 @@ dax: [
   {ticker:"ELM",name:"Elmir",sector:"Instalacje elektryczne",idx:"wigr",price:14.75,chg:"+0.34%",stage:2,ma30w:13.10,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — instalacje dla przemysłu i obrony.</strong>",action:"buy",anote:"Stop: ~13.20 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   // ── IT / Software ──
   {ticker:"CMR",name:"Comarch",sector:"IT/ERP",idx:"wigr",price:227.00,chg:"-0.44%",stage:2,ma30w:198.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — ERP i IT dla telekomów i banków.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~200 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"WTN",name:"Wirtualna Polska (WIG)",sector:"Media cyfrowe",idx:"wigr",price:58.50,chg:"-0.17%",stage:3,ma30w:57.20,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-14%",analysis:"<strong>Faza 3 sygnały.</strong> MA30W zwalnia.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[true,false,false,true,true,true,false,false]},
+  {ticker:"WTN",name:"Wirtualna Polska (WIG)",sector:"Media cyfrowe",idx:"wigr",price:58.50,chg:"-0.17%",stage:2,ma30w:57.20,matrend:"zwalnia →",vol:"Malejący",rs:"Słabnąca",h52:"-14%",analysis:"<strong>Faza 3 sygnały.</strong> MA30W zwalnia.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[true,false,false,true,true,true,false,false]},
   {ticker:"OAT",name:"OAT",sector:"IT/Automatyka",idx:"wigr",price:22.80,chg:"+0.44%",stage:2,ma30w:20.10,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — automatyzacja produkcji.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~20.30 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"INK",name:"Invar-Krak",sector:"Systemy informatyczne",idx:"wigr",price:29.50,chg:"+0.17%",stage:2,ma30w:26.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — systemy IT dla przemysłu.</strong>",action:"buy",anote:"Stop: ~26.20 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"MCI2",name:"MCI Capital (WIG)",sector:"PE/Venture",idx:"wigr",price:28.10,chg:"+0.72%",stage:2,ma30w:24.50,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — PE tech portfolio rośnie.</strong>",action:"buy",anote:"Stop: ~24.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
@@ -2175,15 +2317,15 @@ dax: [
   // ── Przemysł / Maszyny ──
   {ticker:"MZA",name:"Mzuri CFI",sector:"Zarządzanie najmem",idx:"wigr",price:28.50,chg:"+0.53%",stage:2,ma30w:25.20,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — zarządzanie mieszkaniami na wynajem.</strong>",action:"buy",anote:"Stop: ~25.40 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"FAM",name:"Famur",sector:"Maszyny górnicze",idx:"wigr",price:5.86,chg:"+0.69%",stage:2,ma30w:5.18,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — maszyny wydobywcze górnicze.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~5.22 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"FPP",name:"FPHU",sector:"Przemysł/Części",idx:"wigr",price:3.65,chg:"-0.27%",stage:1,ma30w:3.60,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — baza przemysłowa.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
-  {ticker:"HMI",name:"Harper Hygienics",sector:"Higiena/Chusteczki",idx:"wigr",price:9.55,chg:"-0.52%",stage:3,ma30w:9.50,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 3 — chusteczki i higiena po COVID normalizacja.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,true,true,false,false]},
-  {ticker:"CIE",name:"Ciech",sector:"Chemia/Soda",idx:"wigr",price:19.04,chg:"-0.42%",stage:3,ma30w:19.30,matrend:"spłaszcza →",vol:"Malejący",rs:"Neutralna",h52:"-18%",analysis:"<strong>Faza 3 — soda i środki ochrony roślin.</strong> MA30W spłaszczona.",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"FPP",name:"FPHU",sector:"Przemysł/Części",idx:"wigr",price:3.65,chg:"-0.27%",stage:2,ma30w:3.60,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — baza przemysłowa.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
+  {ticker:"HMI",name:"Harper Hygienics",sector:"Higiena/Chusteczki",idx:"wigr",price:9.55,chg:"-0.52%",stage:2,ma30w:9.50,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 3 — chusteczki i higiena po COVID normalizacja.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"CIE",name:"Ciech",sector:"Chemia/Soda",idx:"wigr",price:19.04,chg:"-0.42%",stage:1,ma30w:19.30,matrend:"spłaszcza →",vol:"Malejący",rs:"Neutralna",h52:"-18%",analysis:"<strong>Faza 3 — soda i środki ochrony roślin.</strong> MA30W spłaszczona.",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"POL",name:"Polfarmex",sector:"Farmacja generyczna",idx:"wigr",price:6.95,chg:"+0.72%",stage:2,ma30w:6.15,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — farmaceutyki generyczne.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~6.20 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   // ── Motoryzacja ──
   {ticker:"KGM",name:"Kernel",sector:"Agrobiznes Ukraina",idx:"wigr",price:7.90,chg:"-1.25%",stage:4,ma30w:9.20,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-30%",analysis:"<strong>Faza 4 — ryzyko geopolityczne Ukraina.</strong> Poniżej MA30W.",action:"avoid",anote:"Faza 4, ryzyko geopolityczne",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"AST2",name:"Astarta (WIG)",sector:"Agrobiznes/Cukier",idx:"wigr",price:49.10,chg:"-0.10%",stage:1,ma30w:48.00,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-8%",analysis:"<strong>Faza 1 — baza agrobiznes ukraiński.</strong>",action:"watch",anote:"Ryzyko geopolityczne",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
+  {ticker:"AST2",name:"Astarta (WIG)",sector:"Agrobiznes/Cukier",idx:"wigr",price:49.10,chg:"-0.10%",stage:2,ma30w:48.00,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-8%",analysis:"<strong>Faza 1 — baza agrobiznes ukraiński.</strong>",action:"watch",anote:"Ryzyko geopolityczne",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,true,true,false]},
   {ticker:"KOG",name:"Kogeneracja (WIG)",sector:"Ciepłownictwo Wrocław",idx:"wigr",price:72.00,chg:"-1.10%",stage:2,ma30w:64.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Neutralna",h52:"-5%",analysis:"<strong>Faza 2 — regulowane ciepło Wrocław.</strong>",action:"buy",anote:"Stop: ~64.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"SNO",name:"Sanok Rubber",sector:"Gumy/Automotive",idx:"wigr",price:21.40,chg:"-0.47%",stage:3,ma30w:21.00,matrend:"spłaszcza →",vol:"Niski",rs:"Słabnąca",h52:"-15%",analysis:"<strong>Faza 3 — uszczelki automotive normalizacja.</strong>",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"SNO",name:"Sanok Rubber",sector:"Gumy/Automotive",idx:"wigr",price:21.40,chg:"-0.47%",stage:2,ma30w:21.00,matrend:"spłaszcza →",vol:"Niski",rs:"Słabnąca",h52:"-15%",analysis:"<strong>Faza 3 — uszczelki automotive normalizacja.</strong>",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"MND",name:"Mennica Polska (WIG)",sector:"Monety/Au/Ag",idx:"wigr",price:45.80,chg:"-2.14%",stage:2,ma30w:40.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-8%",analysis:"<strong>Faza 2 — złoto i srebro rekordowe.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~40.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   // ── Healthcare ──
   {ticker:"LEP",name:"Lena Lighting",sector:"Oświetlenie LED",idx:"wigr",price:19.45,chg:"+0.78%",stage:2,ma30w:17.20,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — LED oświetlenie przemysłowe.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~17.30 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
@@ -2192,10 +2334,10 @@ dax: [
   {ticker:"SYN2",name:"Synthaverse",sector:"Biotech",idx:"wigr",price:3.65,chg:"-1.62%",stage:1,ma30w:3.80,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-25%",analysis:"<strong>Faza 1 — biotech bez katalizatora.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"CAP2",name:"Captor Therapeutics (WIG)",sector:"Biotech onkologia",idx:"wigr",price:86.20,chg:"-1.37%",stage:2,ma30w:74.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Silna",h52:"-6%",analysis:"<strong>Faza 2 — PROTAC degradacja białek nowotworowych.</strong>",action:"buy",anote:"Stop: ~74.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
   // ── Media / Rozrywka ──
-  {ticker:"MDG2",name:"Medicalgorithmics (WIG)",sector:"Medtech/Holter",idx:"wigr",price:27.80,chg:"-1.77%",stage:3,ma30w:27.20,matrend:"spłaszcza →",vol:"Stabilny",rs:"Słabnąca",h52:"-20%",analysis:"<strong>Faza 3 — Holter AI spowolnienie.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"MDG2",name:"Medicalgorithmics (WIG)",sector:"Medtech/Holter",idx:"wigr",price:27.80,chg:"-1.77%",stage:2,ma30w:27.20,matrend:"spłaszcza →",vol:"Stabilny",rs:"Słabnąca",h52:"-20%",analysis:"<strong>Faza 3 — Holter AI spowolnienie.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"IPL",name:"Inpay",sector:"Fintech/Płatności",idx:"wigr",price:22.35,chg:"+1.13%",stage:2,ma30w:19.80,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — fintech płatności transgraniczne.</strong>",action:"buy",anote:"Stop: ~20 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"GPP",name:"Globalink Telecom",sector:"Telecom/IT",idx:"wigr",price:4.12,chg:"+0.49%",stage:2,ma30w:3.64,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-6%",analysis:"<strong>Faza 2 — usługi telekomunikacyjne B2B.</strong>",action:"buy",anote:"Stop: ~3.66 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"TEN",name:"Tauron (WIG)",sector:"Energetyka",idx:"wigr",price:3.58,chg:"+0.56%",stage:1,ma30w:3.55,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-18%",analysis:"<strong>Faza 1 — energetyka węglowa w transformacji.</strong> Baza przy MA30W.",action:"watch",anote:"Transformacja energetyczna ryzyko",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"TEN",name:"Tauron (WIG)",sector:"Energetyka",idx:"wigr",price:3.58,chg:"+0.56%",stage:3,ma30w:3.55,matrend:"płaska →",vol:"Wysoki",rs:"Neutralna",h52:"-18%",analysis:"<strong>Faza 1 — energetyka węglowa w transformacji.</strong> Baza przy MA30W.",action:"watch",anote:"Transformacja energetyczna ryzyko",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
   {ticker:"STF",name:"Stalprodukt (WIG)",sector:"Stal specjalna/Transformatory",idx:"wigr",price:228.00,chg:"-0.44%",stage:2,ma30w:202.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-3%",analysis:"<strong>Faza 2 — blachy transformer dla energetyki.</strong>",action:"buy",anote:"Stop: ~204 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"CTR",name:"Controgas",sector:"Gaz/Instalacje",idx:"wigr",price:18.60,chg:"+0.54%",stage:2,ma30w:16.50,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — instalacje gazowe dla przemysłu.</strong>",action:"buy",anote:"Stop: ~16.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"PKP",name:"PKP Cargo",sector:"Transport kolejowy",idx:"wigr",price:10.05,chg:"-0.49%",stage:4,ma30w:12.80,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-30%",analysis:"<strong>Faza 4 — PKP Cargo pod presją kosztów i strajków.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
@@ -2206,7 +2348,7 @@ dax: [
   {ticker:"NCB",name:"Novaturas",sector:"Turystyka",idx:"wigr",price:12.90,chg:"+2.22%",stage:2,ma30w:11.40,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — operator turystyczny Bałtyk.</strong>",action:"buy",anote:"Stop: ~11.45 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"IDA",name:"IDCOM",sector:"IT/Samorząd",idx:"wigr",price:4.68,chg:"+0.43%",stage:2,ma30w:4.14,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — systemy IT dla samorządów.</strong>",action:"buy",anote:"Stop: ~4.16 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"SHO",name:"Shoper (WIG)",sector:"E-commerce SaaS",idx:"wigr",price:43.00,chg:"+2.14%",stage:2,ma30w:37.50,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",analysis:"<strong>Faza 2 — platforma e-commerce SaaS.</strong>",action:"buy",anote:"Stop: ~37.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-  {ticker:"WTO",name:"Wittchen (WIG)",sector:"Akcesoria skórzane",idx:"wigr",price:17.46,chg:"-0.23%",stage:3,ma30w:17.20,matrend:"spłaszcza →",vol:"Stabilny",rs:"Słabnąca",h52:"-20%",analysis:"<strong>Faza 3 — premium akcesoria spowalniają.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"WTO",name:"Wittchen (WIG)",sector:"Akcesoria skórzane",idx:"wigr",price:17.46,chg:"-0.23%",stage:2,ma30w:17.20,matrend:"spłaszcza →",vol:"Stabilny",rs:"Słabnąca",h52:"-20%",analysis:"<strong>Faza 3 — premium akcesoria spowalniają.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"PLY",name:"Playway (WIG)",sector:"Gaming/PC",idx:"wigr",price:245.00,chg:"-0.81%",stage:2,ma30w:214.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — wydawca gier mobilnych/PC.</strong>",action:"buy",anote:"Stop: ~215 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"CRJ2",name:"Creepy Jar (WIG)",sector:"Gaming Survival",idx:"wigr",price:662.00,chg:"-0.60%",stage:2,ma30w:580.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",analysis:"<strong>Faza 2 — Green Hell global hits.</strong>",action:"buy",anote:"Stop: ~583 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"ERG2",name:"Erbud (WIG)",sector:"Budownictwo ogólne",idx:"wigr",price:30.55,chg:"-0.49%",stage:2,ma30w:27.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-6%",analysis:"<strong>Faza 2 — budownictwo KPO.</strong>",action:"buy",anote:"Stop: ~27.30 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
@@ -2217,14 +2359,14 @@ dax: [
   {ticker:"GCL",name:"Getin Noble Bank",sector:"Bankowość",idx:"wigr",price:0.85,chg:"-5.56%",stage:4,ma30w:1.20,matrend:"opadająca ↓↓",vol:"B. wysoki",rs:"B. słaba",h52:"-60%",analysis:"<strong>Faza 4 — bank w upadłości/restrukturyzacji.</strong> Głęboko poniżej MA30W.",action:"avoid",anote:"Faza 4 — upadłość",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"BIO",name:"Bio Planet",sector:"Żywność ekologiczna",idx:"wigr",price:14.35,chg:"+0.35%",stage:2,ma30w:12.70,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — żywność bio dynamiczny wzrost.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~12.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"EKO",name:"Ekopol Górnośląski",sector:"Ochrona środowiska",idx:"wigr",price:5.18,chg:"+0.58%",stage:2,ma30w:4.58,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — gospodarka odpadami.</strong>",action:"buy",anote:"Stop: ~4.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"LWS",name:"Livechat Software",sector:"SaaS/Chat",idx:"wigr",price:42.80,chg:"+3.63%",stage:2,ma30w:44.00,matrend:"lekko ↓",vol:"Wzrostowy",rs:"Neutralna",h52:"-15%",analysis:"<strong>Faza 1/2 — SaaS chat platform po korekcie.</strong> Kurs poniżej MA30W ale dziś +3.6% z wolumenem.",action:"watch",anote:"Potencjalny PRE-S2",signals:[["watch","PRE-S2?"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"LWS",name:"Livechat Software",sector:"SaaS/Chat",idx:"wigr",price:42.80,chg:"+3.63%",stage:4,ma30w:44.00,matrend:"lekko ↓",vol:"Wzrostowy",rs:"Neutralna",h52:"-15%",analysis:"<strong>Faza 1/2 — SaaS chat platform po korekcie.</strong> Kurs poniżej MA30W ale dziś +3.6% z wolumenem.",action:"watch",anote:"Potencjalny PRE-S2",signals:[["watch","PRE-S2?"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"PLN",name:"Plast-Box",sector:"Opakowania plastikowe",idx:"wigr",price:7.42,chg:"+0.27%",stage:2,ma30w:6.57,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — opakowania FMCG.</strong>",action:"buy",anote:"Stop: ~6.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"TIT",name:"Toya SA (WIG)",sector:"Narzędzia/Elektronarzędzia",idx:"wigr",price:8.82,chg:"-1.78%",stage:3,ma30w:8.70,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"Słabnąca",h52:"-18%",analysis:"<strong>Faza 3 sygnały.</strong> MA30W spłaszczona.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"TIT",name:"Toya SA (WIG)",sector:"Narzędzia/Elektronarzędzia",idx:"wigr",price:8.82,chg:"-1.78%",stage:2,ma30w:8.70,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"Słabnąca",h52:"-18%",analysis:"<strong>Faza 3 sygnały.</strong> MA30W spłaszczona.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"WBK",name:"Wawel (WIG)",sector:"Słodycze/FMCG",idx:"wigr",price:850.00,chg:"+1.19%",stage:2,ma30w:760.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",analysis:"<strong>Faza 2 — czekolada i pralinki premium.</strong>",action:"buy",anote:"Stop: ~765 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"AEI",name:"Adiutor Energy",sector:"OZE/Fotowoltaika",idx:"wigr",price:3.85,chg:"+0.26%",stage:1,ma30w:3.80,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 1 — PV po krachu sektora.</strong> Baza przy MA30W.",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
-  {ticker:"PCX",name:"PCCEX",sector:"Chemia/Elektroliza",idx:"wigr",price:68.20,chg:"-1.16%",stage:3,ma30w:67.00,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 3 — chemia elektrolizy spowolnienie.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"AEI",name:"Adiutor Energy",sector:"OZE/Fotowoltaika",idx:"wigr",price:3.85,chg:"+0.26%",stage:2,ma30w:3.80,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 1 — PV po krachu sektora.</strong> Baza przy MA30W.",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"PCX",name:"PCCEX",sector:"Chemia/Elektroliza",idx:"wigr",price:68.20,chg:"-1.16%",stage:2,ma30w:67.00,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-12%",analysis:"<strong>Faza 3 — chemia elektrolizy spowolnienie.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"XPL",name:"XTPL (WIG)",sector:"Nanotechnologia",idx:"wigr",price:71.10,chg:"+7.08%",stage:2,ma30w:56.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"B. silna",h52:"+5%",analysis:"<strong>Faza 2 BREAKOUT +7% — druk nanoelektroniczny.</strong>",action:"buy",anote:"Spekulacja. Stop: ~57 PLN",signals:[["buy","BREAKOUT!"]],mtt:[true,true,true,true,true,true,true,true]},
-  {ticker:"MLT",name:"Mediacap",sector:"Reklama/Digital",idx:"wigr",price:3.96,chg:"-0.75%",stage:3,ma30w:3.90,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-15%",analysis:"<strong>Faza 3 — agencja reklamowa po marży COVID.</strong>",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"MLT",name:"Mediacap",sector:"Reklama/Digital",idx:"wigr",price:3.96,chg:"-0.75%",stage:2,ma30w:3.90,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-15%",analysis:"<strong>Faza 3 — agencja reklamowa po marży COVID.</strong>",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,true,true,false,false]},
   {ticker:"ORB",name:"Orbis",sector:"Hotelarstwo AccorHotels",idx:"wigr",price:48.90,chg:"+0.62%",stage:2,ma30w:43.20,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — Orbis/Accor sieć hoteli w Polsce i CEE.</strong> ~13% powyżej MA30W.",action:"buy",anote:"Stop: ~43.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"ZRL",name:"Zareal",sector:"Deweloperzy",idx:"wigr",price:6.78,chg:"+0.44%",stage:2,ma30w:6.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — deweloper regionalny.</strong>",action:"buy",anote:"Stop: ~6.04 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"PCR2",name:"PCC Intermodal",sector:"Transport intermodalny",idx:"wigr",price:4.22,chg:"+0.48%",stage:2,ma30w:3.73,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — transport kontenerowy PL-EU.</strong>",action:"buy",anote:"Stop: ~3.76 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
@@ -2244,7 +2386,7 @@ dax: [
   {ticker:"WOL",name:"Wojas",sector:"Obuwie/Retail",idx:"wigr",price:5.02,chg:"-0.40%",stage:4,ma30w:6.20,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-30%",analysis:"<strong>Faza 4 — obuwie tradycyjne w trendzie spadkowym.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"RKM",name:"Robyg",sector:"Deweloperzy",idx:"wigr",price:3.85,chg:"+0.26%",stage:2,ma30w:3.41,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — deweloper mieszkaniowy Trójmiasto.</strong>",action:"buy",anote:"Stop: ~3.43 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"CFN",name:"Centurion Finance",sector:"Pożyczki/Fintech",idx:"wigr",price:2.48,chg:"+0.81%",stage:2,ma30w:2.19,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — fintech consumer lending.</strong>",action:"buy",anote:"Stop: ~2.21 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"ENT2",name:"Enter Air (WIG)",sector:"Lotnictwo czarterowe",idx:"wigr",price:55.20,chg:"-2.99%",stage:3,ma30w:54.00,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"Słabnąca",h52:"-15%",analysis:"<strong>Faza 3 — lotnictwo czarterowe koszty paliwa.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
+  {ticker:"ENT2",name:"Enter Air (WIG)",sector:"Lotnictwo czarterowe",idx:"wigr",price:55.20,chg:"-2.99%",stage:2,ma30w:54.00,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"Słabnąca",h52:"-15%",analysis:"<strong>Faza 3 — lotnictwo czarterowe koszty paliwa.</strong>",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
   {ticker:"PMF",name:"Prime Food",sector:"Mięso/Przetwórstwo",idx:"wigr",price:4.90,chg:"+0.62%",stage:2,ma30w:4.34,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — przetwórstwo mięsne premium.</strong>",action:"buy",anote:"Stop: ~4.36 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"ARI2",name:"Archicom (WIG)",sector:"Deweloperzy",idx:"wigr",price:47.00,chg:"-0.63%",stage:2,ma30w:41.50,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — deweloper Wrocław ECE.</strong>",action:"buy",anote:"Stop: ~41.80 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"OGX",name:"Orange Polska (WIG)",sector:"Telekomunikacja",idx:"wigr",price:12.90,chg:"-0.62%",stage:4,ma30w:14.80,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-25%",analysis:"<strong>Faza 4 — telekomunikacja w bessie.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
@@ -2252,7 +2394,7 @@ dax: [
   {ticker:"PZS",name:"Prazska Spravni",sector:"Zarządzanie nieruchomościami",idx:"wigr",price:7.85,chg:"+0.51%",stage:2,ma30w:6.95,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — zarządzanie nieruchomościami.</strong>",action:"buy",anote:"Stop: ~6.98 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"TEN2",name:"Tendo",sector:"E-commerce B2B",idx:"wigr",price:18.20,chg:"+0.33%",stage:2,ma30w:16.10,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — platforma zakupów B2B.</strong>",action:"buy",anote:"Stop: ~16.20 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"HRP2",name:"Horizon",sector:"IT/Przemysł",idx:"wigr",price:9.20,chg:"+0.44%",stage:2,ma30w:8.14,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — systemy sterowania przemysłowego.</strong>",action:"buy",anote:"Stop: ~8.16 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"BPX",name:"Biopaliwa",sector:"Biopaliwa/Agro",idx:"wigr",price:3.42,chg:"+0.29%",stage:1,ma30w:3.40,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — biopaliwa baza przy MA30W.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,true,false,false]},
+  {ticker:"BPX",name:"Biopaliwa",sector:"Biopaliwa/Agro",idx:"wigr",price:3.42,chg:"+0.29%",stage:2,ma30w:3.40,matrend:"płaska →",vol:"Niski",rs:"Neutralna",h52:"-10%",analysis:"<strong>Faza 1 — biopaliwa baza przy MA30W.</strong>",action:"watch",anote:"Obserwuj",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,true,false,false]},
   {ticker:"SLN",name:"Selena FM (WIG)",sector:"Chemia budowlana",idx:"wigr",price:55.80,chg:"+0.36%",stage:2,ma30w:49.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-4%",analysis:"<strong>Faza 2 — pianki i uszczelniacze budowlane.</strong>",action:"buy",anote:"Stop: ~49.50 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"PFC",name:"Polwax",sector:"Woski i parafiny",idx:"wigr",price:24.85,chg:"-0.60%",stage:2,ma30w:22.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — producent wosków przemysłowych.</strong>",action:"buy",anote:"Stop: ~22.10 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"ECO",name:"Eco-Wind",sector:"OZE/Wiatr",idx:"wigr",price:4.08,chg:"+0.74%",stage:2,ma30w:3.61,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — farmy wiatrowe OZE.</strong>",action:"buy",anote:"Stop: ~3.63 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
@@ -2271,7 +2413,7 @@ dax: [
   {ticker:"AIB",name:"Aibank",sector:"Fintech/Bankowanie",idx:"wigr",price:8.92,chg:"+0.45%",stage:2,ma30w:7.89,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — neobank fintech.</strong>",action:"buy",anote:"Stop: ~7.92 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"EMC",name:"EMC Instytut Medyczny",sector:"Prywatna medycyna",idx:"wigr",price:22.10,chg:"+0.45%",stage:2,ma30w:19.55,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — szpitale i kliniki prywatne.</strong>",action:"buy",anote:"Stop: ~19.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
   {ticker:"KBD",name:"Kredyt Inkaso",sector:"Windykacja",idx:"wigr",price:16.45,chg:"+0.31%",stage:2,ma30w:14.56,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",analysis:"<strong>Faza 2 — windykacja wierzytelności konsumenckich.</strong>",action:"buy",anote:"Stop: ~14.60 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"ENG",name:"Enea (WIG)",sector:"Energetyka",idx:"wigr",price:20.26,chg:"-0.49%",stage:1,ma30w:20.10,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-15%",analysis:"<strong>Faza 1 — energetyka baza.</strong>",action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
+  {ticker:"ENG",name:"Enea (WIG)",sector:"Energetyka",idx:"wigr",price:20.26,chg:"-0.49%",stage:2,ma30w:20.10,matrend:"płaska →",vol:"Niski",rs:"Słaba",h52:"-15%",analysis:"<strong>Faza 1 — energetyka baza.</strong>",action:"watch",anote:"Czekaj na impuls",signals:[["watch","OBSERWUJ"]],mtt:[false,false,false,false,true,false,false,false]},
   {ticker:"RVU2",name:"Ryvu Therapeutics (WIG)",sector:"Onkologia/Biotech",idx:"wigr",price:24.65,chg:"-2.57%",stage:4,ma30w:29.00,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-35%",analysis:"<strong>Faza 4 — biotech bez przychodów.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"PKO2",name:"PKO BP (WIG)",sector:"Bankowość",idx:"wigr",price:86.68,chg:"+0.18%",stage:2,ma30w:79.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-3%",analysis:"<strong>Faza 2 — lider bankowy GPW.</strong>",action:"buy",anote:"Stop: ~79 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
   {ticker:"GNB",name:"Getin Noble (WIG)",sector:"Bankowość w restrukturyzacji",idx:"wigr",price:0.85,chg:"-5.56%",stage:4,ma30w:1.20,matrend:"opadająca ↓↓",vol:"B. wysoki",rs:"B. słaba",h52:"-60%",analysis:"<strong>Faza 4 — bank w upadłości.</strong>",action:"avoid",anote:"Faza 4 — upadłość BFG",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]}
@@ -2312,6 +2454,7 @@ function renderCard(s){
   return `<div class="card stage-${s.stage}"
     data-stage="${s.stage}" data-mtt="${score}" data-sector="${s.sector}"
     data-name="${s.name.toLowerCase()}" data-ticker="${s.ticker.toLowerCase()}"
+    data-idx="${s.idx}"
     onclick="openModal('${s.ticker}','${s.idx}')">
     <span class="card-hint">↗ szczegóły</span>
     <div class="card-header">
@@ -2417,9 +2560,266 @@ function switchTab(tab){
   if(document.getElementById('fall')) document.getElementById('fall').classList.add('active');
   if(document.getElementById('fmtt')) document.getElementById('fmtt').classList.remove('active');
   if(document.getElementById('fmtt8')) document.getElementById('fmtt8').classList.remove('active');
+  // Hide market view, show stock grid
+  document.getElementById('market-view').classList.remove('active');
+  document.getElementById('ctrl-bar').style.display='';
+  document.getElementById('legend-bar').style.display='';
+  document.getElementById('grid').style.display='';
+  document.getElementById('coffee-bar').style.display='';
+  document.getElementById('disclaimer').style.display='';
   buildSectorSelect();
   renderGrid();
 }
+
+// ══════════════════════════════════════════════════
+// STAN RYNKU — Market Overview
+// ══════════════════════════════════════════════════
+let currentMarketView = 'wig20';
+
+function switchTabMarket(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-market').classList.add('active');
+  // Hide stock grid, show market view
+  document.getElementById('ctrl-bar').style.display='none';
+  document.getElementById('legend-bar').style.display='none';
+  document.getElementById('grid').style.display='none';
+  document.getElementById('coffee-bar').style.display='none';
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('market-view').classList.add('active');
+  renderMarketView(currentMarketView);
+}
+
+function setMarketView(mkt, btn){
+  currentMarketView = mkt;
+  document.querySelectorAll('.mkt-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMarketView(mkt);
+}
+
+function getMarketStocks(mkt){
+  if(mkt === 'all'){
+    return Object.values(STOCKS).flat();
+  }
+  return STOCKS[mkt] || [];
+}
+
+function renderMarketView(mkt){
+  const stocks = getMarketStocks(mkt);
+  if(!stocks.length) return;
+
+  // 1. Count stages (use live if available)
+  const counts = {1:0,2:0,3:0,4:0};
+  const total = stocks.length;
+
+  stocks.forEach(s => {
+    const ld = liveData[s.ticker] || {};
+    const stage = ld.price ? (calcStage(ld) || s.stage) : s.stage;
+    counts[stage] = (counts[stage]||0) + 1;
+  });
+
+  const pct = s => total ? Math.round(counts[s]/total*100) : 0;
+  const p1=pct(1), p2=pct(2), p3=pct(3), p4=pct(4);
+
+  // 2. Regime determination
+  let regimeClass, regimeIcon, regimeLabel, regimeSub;
+  if(p2 >= 50){
+    regimeClass='bull'; regimeIcon='🟢';
+    regimeLabel='BULL MARKET REGIME (Risk-On)';
+    regimeSub=`${p2}% spółek w Fazie 2 Wzrost — środowisko sprzyjające agresywnym zakupom liderów.`;
+  } else if(p4 >= 50){
+    regimeClass='bear'; regimeIcon='🔴';
+    regimeLabel='BEAR MARKET REGIME (Risk-Off)';
+    regimeSub=`${p4}% spółek w Fazie 4 Spadek — kapitał gotówkowy, unikaj nowych pozycji.`;
+  } else if(p3+p4 > p1+p2){
+    regimeClass='bear'; regimeIcon='🔴';
+    regimeLabel='BEAR MARKET REGIME (Risk-Off)';
+    regimeSub=`Faza 3+4 dominuje (${p3+p4}%) — rynek „gnije" mimo możliwego wzrostu indeksu.`;
+  } else {
+    regimeClass='transition'; regimeIcon='🟡';
+    regimeLabel='TRANSITION / CORRECTION';
+    regimeSub=`Mieszany obraz — Faza 2: ${p2}%, Faza 1: ${p1}%. Selekcja kluczowa, nie graj całym portfelem.`;
+  }
+
+  const banner = document.getElementById('regime-banner');
+  banner.className='regime-banner '+regimeClass;
+  document.getElementById('regime-icon').textContent=regimeIcon;
+  document.getElementById('regime-label').textContent=regimeLabel;
+  document.getElementById('regime-sub').textContent=regimeSub;
+
+  // 3. Stacked bar chart
+  const idxLabel = mkt==='all'?'Wszystkie indeksy':(idxName[mkt]||mkt);
+  document.getElementById('stage-stack-chart').innerHTML = `
+    <div class="stage-stack-wrap">
+      <div class="stage-stack-label">
+        <span class="stage-stack-name">${idxLabel}</span>
+        <span style="font-size:10px;color:var(--muted)">${total} spółek</span>
+      </div>
+      <div class="stage-stack-bar">
+        ${p1>0?`<div class="ss-seg ss-s1" style="width:${p1}%" title="Faza 1: ${counts[1]} spółek (${p1}%)">${p1>5?p1+'%':''}</div>`:''}
+        ${p2>0?`<div class="ss-seg ss-s2" style="width:${p2}%" title="Faza 2: ${counts[2]} spółek (${p2}%)">${p2>5?p2+'%':''}</div>`:''}
+        ${p3>0?`<div class="ss-seg ss-s3" style="width:${p3}%" title="Faza 3: ${counts[3]} spółek (${p3}%)">${p3>5?p3+'%':''}</div>`:''}
+        ${p4>0?`<div class="ss-seg ss-s4" style="width:${p4}%" title="Faza 4: ${counts[4]} spółek (${p4}%)">${p4>5?p4+'%':''}</div>`:''}
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:var(--muted)">
+        <span style="color:var(--s1)">S1: ${counts[1]} (${p1}%)</span>
+        <span style="color:var(--s2)">S2: ${counts[2]} (${p2}%)</span>
+        <span style="color:var(--s3)">S3: ${counts[3]} (${p3}%)</span>
+        <span style="color:var(--s4)">S4: ${counts[4]} (${p4}%)</span>
+      </div>
+    </div>`;
+
+  // 4. MA gauges
+  let aboveSma200=0, aboveSma50=0, validSma=0;
+  stocks.forEach(s => {
+    const ld = liveData[s.ticker] || {};
+    if(ld.price && ld.sma200 && ld.sma50){
+      validSma++;
+      if(ld.price > ld.sma200) aboveSma200++;
+      if(ld.price > ld.sma50) aboveSma50++;
+    }
+  });
+  const pSma200 = validSma ? Math.round(aboveSma200/validSma*100) : null;
+  const pSma50 = validSma ? Math.round(aboveSma50/validSma*100) : null;
+
+  const gaugeColor = p => p===null?'warn': p>=70?'good': p<=30?'bad':'warn';
+  const gaugeNote = (p, label) => {
+    if(p===null) return `<div class="gauge-interp warn">Brak danych live — kliknij Odśwież live</div>`;
+    if(p>=70) return `<div class="gauge-interp good">Silny rynek. Uwaga na lokalne wykupienie.</div>`;
+    if(p<=30) return `<div class="gauge-interp bad">Skrajne wyprzedanie. Szukaj liderów S1→S2.</div>`;
+    return `<div class="gauge-interp warn">Rynek mieszany — ostrożna selekcja.</div>`;
+  };
+
+  function drawGauge(pct, label){
+    const val = pct===null?'–':(pct+'%');
+    const cls = gaugeColor(pct);
+    const colors = {good:'#00e5a0',warn:'#f5a623',bad:'#ff4d4d'};
+    const col = colors[cls];
+    const angle = pct===null ? 0 : Math.round(pct/100*180);
+    // SVG semicircle gauge
+    const r=52, cx=64, cy=64;
+    const arcPath = (a) => {
+      const rad = (a-180)*Math.PI/180;
+      const x = cx + r*Math.cos(rad);
+      const y = cy + r*Math.sin(rad);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    };
+    const bgEnd = arcPath(180);
+    const fgEnd = arcPath(angle);
+    const sweep = angle > 0 ? 1 : 0;
+    return `<div class="gauge-box">
+      <div class="gauge-svg-wrap">
+        <svg width="128" height="70" viewBox="0 0 128 70">
+          <path d="M12,64 A52,52 0 0,1 116,64" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="10" stroke-linecap="round"/>
+          ${pct!==null && pct>0?`<path d="M12,64 A52,52 0 ${angle>180?1:0},1 ${fgEnd}" fill="none" stroke="${col}" stroke-width="10" stroke-linecap="round"/>`: ''}
+        </svg>
+        <div class="gauge-val ${cls}">${val}</div>
+      </div>
+      <div class="gauge-label">${label}</div>
+      ${gaugeNote(pct, label)}
+    </div>`;
+  }
+
+  document.getElementById('ma-gauges').innerHTML =
+    drawGauge(pSma200, '% powyżej SMA200<br><span style="font-size:9px">Długoterminowy filtr hossy</span>') +
+    drawGauge(pSma50,  '% powyżej SMA50<br><span style="font-size:9px">Krótkoterm. wykupienie/wyprz.</span>');
+
+  // 5. New Highs / Lows
+  let nearHigh=0, nearLow=0, validHL=0;
+  stocks.forEach(s => {
+    const ld = liveData[s.ticker] || {};
+    if(ld.price && ld.high52 && ld.low52){
+      validHL++;
+      if(ld.price >= ld.high52 * 0.95) nearHigh++;
+      if(ld.price <= ld.low52 * 1.05)  nearLow++;
+    }
+  });
+  const nhSrc = validHL>0 ? 'live' : 'static';
+  if(validHL===0){
+    stocks.forEach(s => {
+      // use static h52 string approximation
+      validHL++;
+      const h52n = parseFloat((s.h52||'').replace('%',''));
+      if(!isNaN(h52n)){
+        if(h52n >= -5) nearHigh++;
+        if(h52n <= -90) nearLow++;
+      }
+    });
+  }
+  const nhPct = validHL ? Math.round(nearHigh/validHL*100) : 0;
+  const nlPct = validHL ? Math.round(nearLow/validHL*100) : 0;
+
+  const nhClass = nhPct > nlPct ? 'bull' : nlPct > nhPct ? 'bear' : 'transition';
+  const nhMsg = nhClass==='bull'
+    ? '✅ Wzrostom towarzyszy powstawanie nowych szczytów — hossa potwierdzona.'
+    : nhClass==='bear'
+    ? '⚠️ Więcej spółek blisko dołków! Możliwa fałszywa hossa — ostrożność.'
+    : 'Neutralny obraz — obserwuj kierunek.';
+
+  document.getElementById('nh-grid').innerHTML = `
+    <div class="nh-box up">
+      <div class="nh-count">${nearHigh}</div>
+      <div class="nh-label">Blisko 52T Szczytu<br>(≤5% od high52)</div>
+      <div class="nh-pct">${nhPct}% spółek</div>
+    </div>
+    <div class="nh-box dn">
+      <div class="nh-count">${nearLow}</div>
+      <div class="nh-label">Blisko 52T Dołka<br>(≤5% od low52)</div>
+      <div class="nh-pct">${nlPct}% spółek</div>
+    </div>`;
+
+  const nhInterp = document.getElementById('nh-interp');
+  nhInterp.style.display='block';
+  nhInterp.className='nh-interp '+nhClass;
+  nhInterp.textContent = nhMsg + (nhSrc==='static'?' (dane statyczne — odśwież live)':'');
+
+  // 6. MTT stats
+  let mtt8=0, mtt6=0, mtt4=0, mtt0=0;
+  stocks.forEach(s => {
+    const ld = liveData[s.ticker] || {};
+    let arr = s.mtt;
+    if(ld.price && ld.sma200 && ld.sma150 && ld.sma50 && ld.high52 && ld.low52){
+      const {price:p,sma200,sma150,sma50,rsi,high52,low52}=ld;
+      arr=[p>sma150&&p>sma200,sma150>sma200,true,sma50>sma150&&sma50>sma200,p>sma50,low52>0&&p>=low52*1.25,high52>0&&p>=high52*0.75,rsi!=null&&rsi>=70];
+    }
+    const sc = arr.filter(Boolean).length;
+    if(sc===8) mtt8++;
+    else if(sc>=6) mtt6++;
+    else if(sc>=4) mtt4++;
+    else mtt0++;
+  });
+
+  document.getElementById('mtt-stats').innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      ${[
+        {label:'🏆 MTT 8/8 Pełny',cnt:mtt8,col:'var(--mtt-full)',cls:'mtt-score-full'},
+        {label:'⬆ MTT 6–7 Wysoki',cnt:mtt6,col:'var(--mtt-high)',cls:'mtt-score-high'},
+        {label:'⚡ MTT 4–5 Częściowy',cnt:mtt4,col:'var(--mtt-mid)',cls:'mtt-score-mid'},
+        {label:'❌ MTT 0–3 Brak',cnt:mtt0,col:'var(--mtt-low)',cls:'mtt-score-low'},
+      ].map(({label,cnt,col})=>{
+        const p=total?Math.round(cnt/total*100):0;
+        return `<div style="display:flex;align-items:center;gap:8px;">
+          <div style="font-size:11px;color:var(--muted);width:150px;flex-shrink:0;">${label}</div>
+          <div style="flex:1;height:14px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;">
+            <div style="width:${p}%;height:100%;background:${col};border-radius:4px;transition:width .4s;"></div>
+          </div>
+          <div style="font-size:10px;font-family:'Space Mono',monospace;color:${col};width:40px;text-align:right;">${cnt} (${p}%)</div>
+        </div>`;
+      }).join('')}
+    </div>`;
+
+  // 7. Alert
+  const alertEl = document.getElementById('market-alert');
+  const alertMap = {bull:'bull',transition:'warn',bear:'bear'};
+  const alertMsg = {
+    bull:`✅ Środowisko BULL MARKET (Risk-On). ${p2}% spółek w Fazie 2. Graj agresywnie z dobrym MMT — kupuj liderów przy przebiciu bazy.`,
+    transition:`🟡 Środowisko PRZEJŚCIOWE. Rynek w korekcie lub zmianie trendu (S1+S2: ${p1+p2}%, S3+S4: ${p3+p4}%). Zmniejsz ekspozycję, trzymaj stop-lossy blisko.`,
+    bear:`🔴 Środowisko BEAR MARKET (Risk-Off). ${p3+p4}% spółek w Fazie 3+4. Bądź w gotówce. Czekaj na sygnał powrotu S2 powyżej 50%.`
+  };
+  alertEl.style.display='block';
+  alertEl.className='market-alert '+alertMap[regimeClass];
+  alertEl.textContent = alertMsg[regimeClass];
+}
+
 
 function filterStage(s,btn){
   stageF=s;
@@ -3004,6 +3404,23 @@ function updateCardsWithLiveData() {
         if (stageNum) stageNum.textContent = newStage;
         const stageLbl = card.querySelector('.stage-lbl');
         if (stageLbl) stageLbl.textContent = ['','AKUM','WZROST','DYSTR','SPADEK'][newStage];
+        // ── Sync STOCKS in-memory so switchTab/filters stay correct ──
+        const idx = card.dataset.idx;
+        if (idx && STOCKS[idx]) {
+          const s = STOCKS[idx].find(x => x.ticker === ticker);
+          if (s) s.stage = newStage;
+        }
+      }
+    }
+    // Also sync price and sma150 into STOCKS for filter/modal consistency
+    if (d.price || d.sma150) {
+      const idx = card.dataset.idx;
+      if (idx && STOCKS[idx]) {
+        const s = STOCKS[idx].find(x => x.ticker === ticker);
+        if (s) {
+          if (d.price)  s.price  = d.price;
+          if (d.sma150) s.ma30w  = d.sma150;
+        }
       }
     }
   });
