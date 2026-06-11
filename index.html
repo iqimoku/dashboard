@@ -2564,16 +2564,16 @@ const TV_MAP = {
   'ZAL':'XETR:ZAL',  'G24':'XETR:GYC',  'AIR':'XETR:AIR',  'SHL':'XETR:SHL',
   'ENR':'XETR:ENR',  'DTR':'XETR:DTR',  'MMM':'XETR:MMM',
   // ── CAC 40 (EPA = Euronext Paris) ──────────────────
-  'MC.PA':'EURONEXT:MC',   'OR.PA':'EURONEXT:OR',   'TTE.PA':'EURONEXT:TTE', 'SAN.PA':'EURONEXT:SAN',
-  'BNP.PA':'EURONEXT:BNP', 'AIR.PA':'EURONEXT:AIR', 'SU.PA':'EURONEXT:SU',   'AI.PA':'EURONEXT:AI',
-  'CS.PA':'EURONEXT:CS',   'RMS.PA':'EURONEXT:RMS', 'SAF.PA':'EURONEXT:SAF', 'DG.PA':'EURONEXT:DG',
-  'KER.PA':'EURONEXT:KER', 'SGO.PA':'EURONEXT:SGO', 'CAP.PA':'EURONEXT:CAP', 'RI.PA':'EURONEXT:RI',
-  'CA.PA':'EURONEXT:CA',   'BVI.PA':'EURONEXT:BVI', 'VIE.PA':'EURONEXT:VIE', 'EN.PA':'EURONEXT:EN',
-  'ORA.PA':'EURONEXT:ORA', 'ACA.PA':'EURONEXT:ACA', 'DSY.PA':'EURONEXT:DSY', 'BN.PA':'EURONEXT:BN',
-  'RNO.PA':'EURONEXT:RNO', 'LR.PA':'EURONEXT:LR',   'STM.PA':'EURONEXT:STM', 'ML.PA':'EURONEXT:ML',
-  'SG.PA':'EURONEXT:GLE',  'PUB.PA':'EURONEXT:PUB', 'AC.PA':'EURONEXT:AC',   'EDF.PA':'EURONEXT:EDF',
-  'MT.PA':'EURONEXT:MT',   'ENGI.PA':'EURONEXT:ENGI','VIV.PA':'EURONEXT:VIV','WLN.PA':'EURONEXT:WLN',
-  'ERF.PA':'EURONEXT:ERF', 'TEP.PA':'EURONEXT:TEP', 'HO.PA':'EURONEXT:HO',
+  'MC.PA':'EPA:MC',   'OR.PA':'EPA:OR',   'TTE.PA':'EPA:TTE', 'SAN.PA':'EPA:SAN',
+  'BNP.PA':'EPA:BNP', 'AIR.PA':'EPA:AIR', 'SU.PA':'EPA:SU',   'AI.PA':'EPA:AI',
+  'CS.PA':'EPA:CS',   'RMS.PA':'EPA:RMS', 'SAF.PA':'EPA:SAF', 'DG.PA':'EPA:DG',
+  'KER.PA':'EPA:KER', 'SGO.PA':'EPA:SGO', 'CAP.PA':'EPA:CAP', 'RI.PA':'EPA:RI',
+  'CA.PA':'EPA:CA',   'BVI.PA':'EPA:BVI', 'VIE.PA':'EPA:VIE', 'EN.PA':'EPA:EN',
+  'ORA.PA':'EPA:ORA', 'ACA.PA':'EPA:ACA', 'DSY.PA':'EPA:DSY', 'BN.PA':'EPA:BN',
+  'RNO.PA':'EPA:RNO', 'LR.PA':'EPA:LR',   'STM.PA':'EPA:STM', 'ML.PA':'EPA:ML',
+  'SG.PA':'EPA:GLE',  'PUB.PA':'EPA:PUB', 'AC.PA':'EPA:AC',   'EDF.PA':'EPA:EDF',
+  'MT.PA':'EPA:MT',   'ENGI.PA':'EPA:ENGI','VIV.PA':'EPA:VIV','WLN.PA':'EPA:WLN',
+  'ERF.PA':'EPA:ERF', 'TEP.PA':'EPA:TEP', 'HO.PA':'EPA:HO',
   // ── NASDAQ ─────────────────────────────────────────
   'NVDA':'NASDAQ:NVDA',  'AAPL':'NASDAQ:AAPL',  'MSFT':'NASDAQ:MSFT',
   'AMZN':'NASDAQ:AMZN',  'GOOGL':'NASDAQ:GOOGL', 'GOOG':'NASDAQ:GOOG',
@@ -2658,7 +2658,7 @@ function groupByExchange(tickers) {
     if (!tv) return;
     const [exch] = tv.split(':');
     const exchMap = {
-      'GPW':'poland','XETR':'germany','EURONEXT':'euronext',
+      'GPW':'poland','XETR':'germany','EPA':'france',
       'NASDAQ':'america','NYSE':'america'
     };
     const market = exchMap[exch] || 'global';
@@ -2669,11 +2669,14 @@ function groupByExchange(tickers) {
 }
 
 async function fetchTVBatch(market, tvTickers) {
-  const body = JSON.stringify({
-    symbols: { tickers: tvTickers },
-    columns: TV_COLUMNS
-  });
-  const tvUrl = `https://scanner.tradingview.com/${market}/scan`;
+  // France (Euronext Paris) requires /global/scan with markets filter
+  const isFrance = market === 'france';
+  const tvUrl = isFrance
+    ? 'https://scanner.tradingview.com/global/scan'
+    : `https://scanner.tradingview.com/${market}/scan`;
+  const payload = { symbols: { tickers: tvTickers }, columns: TV_COLUMNS };
+  if (isFrance) payload.markets = ['france'];
+  const body = JSON.stringify(payload);
 
   // Strategy 1: Direct POST (works in browser — TV allows CORS from any origin)
   try {
