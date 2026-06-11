@@ -90,7 +90,6 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .idx-ndx{background:rgba(52,211,153,.15);color:#34d399;}
 .idx-nyse{background:rgba(251,113,133,.15);color:#fb7185;}
 .idx-wigr{background:rgba(52,211,153,.1);color:#6ee7b7;}
-.idx-cac{background:rgba(96,165,250,.15);color:#60a5fa;}
 .ch-badges{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
 .stage-badge{display:flex;flex-direction:column;align-items:center;gap:1px;}
 .stage-num{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:16px;font-weight:700;}
@@ -361,7 +360,6 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab" id="tab-wigr" onclick="switchTab('wigr')">🇵🇱 WIG-Pozostałe <span class="tab-cnt" id="cnt-wigr">133</span></div>
-  <div class="tab" id="tab-cac" onclick="switchTab('cac')">🇫🇷 CAC 40 <span class="tab-cnt" id="cnt-cac">39</span></div>
 </div>
 
 <div class="legend-bar">
@@ -2100,124 +2098,6 @@ dax: [
   {ticker:"PKO2",name:"PKO BP (WIG)",sector:"Bankowość",idx:"wigr",price:86.68,chg:"+0.18%",stage:2,ma30w:79.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-3%",analysis:"<strong>Faza 2 — lider bankowy GPW.</strong>",action:"buy",anote:"Stop: ~79 PLN",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
   {ticker:"GNB",name:"Getin Noble (WIG)",sector:"Bankowość w restrukturyzacji",idx:"wigr",price:0.85,chg:"-5.56%",stage:4,ma30w:1.20,matrend:"opadająca ↓↓",vol:"B. wysoki",rs:"B. słaba",h52:"-60%",analysis:"<strong>Faza 4 — bank w upadłości.</strong>",action:"avoid",anote:"Faza 4 — upadłość BFG",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]}
 ]
-,cac: [
-  {ticker:"MC.PA",name:"LVMH",sector:"Luksus/Fashion",idx:"cac",weight:"15.0%",price:598.40,chg:"-1.10%",stage:2,ma30w:540.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-10%",
-   analysis:"<strong>Faza 2 — luksusowe imperium powraca.</strong> ~11% powyżej MA30W. LVMH (Louis Vuitton, Dior, Hennessy) powrót Chin. Segment vins et spiritueux odrabia. Lider globalny luksusu.",action:"buy",anote:"Stop: ~542 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,true]},
-
-  {ticker:"OR.PA",name:"L'Oréal",sector:"Kosmetyki/FMCG",idx:"cac",weight:"9.8%",price:352.50,chg:"-0.68%",stage:2,ma30w:310.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Silna",h52:"-8%",
-   analysis:"<strong>Faza 2 — kosmetyki premium i masowe lider globalny.</strong> ~14% powyżej MA30W. L'Oréal Paris, Maybelline, Lancôme. Dermatologia rośnie. Chiny i Indie jako główne rynki wzrostu.",action:"buy",anote:"Stop: ~312 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"TTE.PA",name:"TotalEnergies",sector:"Energia/Ropa/LNG",idx:"cac",weight:"8.5%",price:62.48,chg:"+0.14%",stage:2,ma30w:56.20,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — największa europejska firma energetyczna.</strong> ~11% powyżej MA30W. TotalEnergies inwestuje zarówno w LNG jak i OZE. Dywidenda 5%+. FCF rekordowy.",action:"buy",anote:"Stop: ~56.80 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"SAN.PA",name:"Sanofi",sector:"Farmacja/Biotechnology",idx:"cac",weight:"7.2%",price:98.86,chg:"-0.80%",stage:2,ma30w:86.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — Sanofi po spin-offie Opella.</strong> ~15% powyżej MA30W. Dupixent (atopowe zapalenie skóry) to blockbuster 15+ mld EUR. Spin-off OTC (Opella) uwolnił wartość.",action:"buy",anote:"Stop: ~86.50 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"BNP.PA",name:"BNP Paribas",sector:"Bankowość/Finanse",idx:"cac",weight:"5.4%",price:74.50,chg:"+1.22%",stage:2,ma30w:64.80,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Silna",h52:"-8%",
-   analysis:"<strong>Faza 2 — największy bank Francji i Europy.</strong> ~15% powyżej MA30W. BNP korzysta z wyższych stóp. CIB i retail bankowość obu rośnie. Dywidenda >5%.",action:"buy",anote:"Stop: ~65.20 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,true]},
-
-  {ticker:"AIR.PA",name:"Airbus",sector:"Przemysł/Lotnictwo",idx:"cac",weight:"5.1%",price:175.34,chg:"-0.07%",stage:2,ma30w:153.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — backlog 8500+ samolotów na lata.</strong> ~15% powyżej MA30W. Boeing problemy = Airbus zyski. A320neo i A350 rekordowe zamówienia. Helikoptery wojskowe zbrojenia.",action:"buy",anote:"Stop: ~155 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"SU.PA",name:"Schneider Electric",sector:"Automatyka/Energia",idx:"cac",weight:"4.8%",price:224.70,chg:"-0.48%",stage:2,ma30w:195.00,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-5%",
-   analysis:"<strong>Faza 2 — lider zarządzania energią i automatyki.</strong> ~15% powyżej MA30W. Schneider beneficjent AI data center power management i grid modernization. EcoStruxure platforma.",action:"buy",anote:"Stop: ~197 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"AI.PA",name:"Air Liquide",sector:"Gazy przemysłowe",idx:"cac",weight:"4.5%",price:148.62,chg:"-0.36%",stage:2,ma30w:132.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — monopol gazów przemysłowych i medycznych.</strong> ~13% powyżej MA30W. Air Liquide dostarcza wodór dla energetyki i przemysłu. Dywidenda rosnąca 30 lat z rzędu.",action:"buy",anote:"Stop: ~133 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"CS.PA",name:"AXA",sector:"Ubezpieczenia",idx:"cac",weight:"3.9%",price:39.50,chg:"+0.61%",stage:2,ma30w:34.40,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — globalny ubezpieczyciel.</strong> ~15% powyżej MA30W. AXA lider ubezpieczeń P&C i życia globalnie. Wyniki rekordowe, dywidenda 6%+.",action:"buy",anote:"Stop: ~34.70 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"RMS.PA",name:"Hermès",sector:"Luksus ultra-premium",idx:"cac",weight:"3.8%",price:2350.00,chg:"-0.85%",stage:2,ma30w:2080.00,matrend:"rosnąca ↑↑",vol:"Niski",rs:"B. silna",h52:"-8%",
-   analysis:"<strong>Faza 2 — jedyna niereachable marka luksusowa.</strong> ~13% powyżej MA30W. Hermès Birkin i Kelly — lista oczekiwania lata. Marże 40%+, żadnych rabatów. Chiny wróciły.",action:"buy",anote:"Stop: ~2 095 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"SAF.PA",name:"Safran",sector:"Silniki lotnicze/Obronność",idx:"cac",weight:"3.5%",price:248.90,chg:"-0.56%",stage:2,ma30w:216.00,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-5%",
-   analysis:"<strong>Faza 2 — LEAP silnik dla Airbus A320neo/Boeing 737 MAX.</strong> ~15% powyżej MA30W. Każdy nowy samolot wąskokorpusowy ma silnik Safran/CFM. MRO boom. Zbrojenia ITAR-free.",action:"buy",anote:"Stop: ~218 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]},
-
-  {ticker:"DG.PA",name:"Vinci",sector:"Budownictwo/Koncesje",idx:"cac",weight:"3.2%",price:122.50,chg:"-0.65%",stage:2,ma30w:108.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — największy koncesjonariusz i budowniczy na świecie.</strong> ~13% powyżej MA30W. Vinci autostrady, lotniska (ADP), budownictwo Grands Projets. Infrastruktura obronna.",action:"buy",anote:"Stop: ~109 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"KER.PA",name:"Kering",sector:"Luksus/Gucci/YSL",idx:"cac",weight:"2.8%",price:212.60,chg:"-1.40%",stage:3,ma30w:220.00,matrend:"opadająca ↓",vol:"Wysoki",rs:"Słaba",h52:"-35%",
-   analysis:"<strong>Faza 4 — Gucci w strukturalnym kryzysie.</strong> Kurs poniżej opadającej MA30W. Gucci traci na tle LVMH. Sabato De Sarno kolekcja rozczarowuje rynek. Kering -35% od ATH.",action:"avoid",anote:"Faza 4, Gucci kryzys",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"SGO.PA",name:"Saint-Gobain",sector:"Materiały budowlane",idx:"cac",weight:"2.5%",price:82.12,chg:"-1.54%",stage:2,ma30w:71.80,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — izolacja budynków i materiały.</strong> ~14% powyżej MA30W. Saint-Gobain beneficjent renowacji energetycznej budynków EU (fala renowacji Green Deal).",action:"buy",anote:"Stop: ~72.20 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"CAP.PA",name:"Capgemini",sector:"IT Consulting/Cloud",idx:"cac",weight:"2.2%",price:178.85,chg:"+0.16%",stage:3,ma30w:195.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-20%",
-   analysis:"<strong>Faza 4 — IT consulting pod presją AI.</strong> Kurs poniżej opadającej MA30W. Capgemini traci kontrakty na AI automation. Podobna sytuacja jak Accenture.",action:"avoid",anote:"Faza 4, AI disruption",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"RI.PA",name:"Pernod Ricard",sector:"Alkohole premium",idx:"cac",weight:"2.0%",price:98.12,chg:"-0.89%",stage:4,ma30w:120.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-30%",
-   analysis:"<strong>Faza 4 — premium spirits w bessie.</strong> Kurs poniżej opadającej MA30W. Chiny: antydumpingowe cła na brandy. Destylaty spirytusowe normalize po COVID. Absolut sprzedaje się gorzej.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"CA.PA",name:"Carrefour",sector:"Handel/Supermarkety",idx:"cac",weight:"1.8%",price:20.58,chg:"+0.29%",stage:2,ma30w:18.20,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — hipermarkety z nową strategią digital.</strong> ~13% powyżej MA30W. Carrefour rozszerza format convenience i e-commerce grocery. Brazylia i Argentyna jako growth.",action:"buy",anote:"Stop: ~18.30 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"BVI.PA",name:"Bureau Veritas",sector:"Inspekcja/Certyfikacja",idx:"cac",weight:"1.6%",price:29.82,chg:"-0.40%",stage:2,ma30w:26.20,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — inspekcja i certyfikacja globalnie.</strong> ~14% powyżej MA30W. BV certyfikuje statki, budynki, żywność. ESG reporting boom — nowy growth driver.",action:"buy",anote:"Stop: ~26.40 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"VIE.PA",name:"Veolia Environnement",sector:"Woda/Odpady/Energia",idx:"cac",weight:"1.5%",price:30.86,chg:"-0.90%",stage:2,ma30w:27.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — zarządzanie wodą i odpadami globalnie.</strong> ~14% powyżej MA30W. Veolia po połączeniu z Suez. Regulowane usługi komunalne — defensywny wzrost.",action:"buy",anote:"Stop: ~27.20 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"EN.PA",name:"Bouygues",sector:"Budownictwo/Telecom/Media",idx:"cac",weight:"1.4%",price:36.24,chg:"+0.08%",stage:2,ma30w:31.90,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — konglomerat budowlano-medialno-telekomunikacyjny.</strong> ~14% powyżej MA30W. Bouygues buduje, ma Bouygues Telecom #3 we Francji i TF1 media.",action:"buy",anote:"Stop: ~32.10 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"ORA.PA",name:"Orange SA",sector:"Telekomunikacja",idx:"cac",weight:"1.3%",price:12.55,chg:"+0.16%",stage:2,ma30w:11.10,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — telekomunikacja europejska i afrykańska.</strong> ~13% powyżej MA30W. Orange Afryka rośnie dynamicznie — mobile money (Orange Money). Dywidenda 6%+.",action:"buy",anote:"Stop: ~11.20 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"ACA.PA",name:"Crédit Agricole",sector:"Bankowość spółdzielcza",idx:"cac",weight:"1.2%",price:17.72,chg:"+1.49%",stage:2,ma30w:15.50,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — największy bank spółdzielczy świata.</strong> ~14% powyżej MA30W. Crédit Agricole korzysta ze wzrostu stóp. Amundi asset management jako bonus.",action:"buy",anote:"Stop: ~15.60 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"DSY.PA",name:"Dassault Systèmes",sector:"Software/3D/CAD",idx:"cac",weight:"1.1%",price:38.30,chg:"-0.54%",stage:3,ma30w:38.80,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-20%",
-   analysis:"<strong>Faza 3 — CAD software normalizacja po hossie.</strong> MA30W spłaszczona, kurs przy niej. CATIA i SolidWorks defensywne ale bez trendu.",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
-
-  {ticker:"BN.PA",name:"Danone",sector:"Żywność/Nabiał/Wody",idx:"cac",weight:"1.1%",price:61.44,chg:"-0.10%",stage:2,ma30w:54.20,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — Danone restrukturyzacja przynosi efekty.</strong> ~13% powyżej MA30W. Activia, Evian, Nutricia. Nowy CEO Antoine de Saint-Affrique skupia się na profitability.",action:"buy",anote:"Stop: ~54.50 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"RNO.PA",name:"Renault",sector:"Motoryzacja/EV",idx:"cac",weight:"0.9%",price:54.84,chg:"-0.47%",stage:2,ma30w:47.90,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
-   analysis:"<strong>Faza 2 — Renault turnaround pod de Meo.</strong> ~14% powyżej MA30W. Ampere EV spinoff. Dacia i Renault 5 EV bestsellery. Profitability rekordowa. Ampere IPO opcja.",action:"buy",anote:"Stop: ~48.20 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,false]},
-
-  {ticker:"LR.PA",name:"Legrand",sector:"Elektryka budowlana",idx:"cac",weight:"0.9%",price:118.90,chg:"-0.59%",stage:2,ma30w:104.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — sprzęt elektryczny do budynków.</strong> ~14% powyżej MA30W. Legrand gniazdka, rozdzielnice, data center power. Beneficjent budownictwa i data centers.",action:"buy",anote:"Stop: ~104.50 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"STM.PA",name:"STMicroelectronics",sector:"Półprzewodniki",idx:"cac",weight:"0.8%",price:19.89,chg:"-1.73%",stage:4,ma30w:28.00,matrend:"opadająca ↓↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-45%",
-   analysis:"<strong>Faza 4 — ST w głębokim trendzie spadkowym.</strong> Kurs poniżej silnie opadającej MA30W. Automotive chipsy w supercyklu korekcji. Apple modem chip utracony na Qualcomm. Unikaj.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"ML.PA",name:"Michelin",sector:"Opony",idx:"cac",weight:"0.8%",price:29.24,chg:"-1.45%",stage:3,ma30w:29.50,matrend:"spłaszcza →",vol:"Stabilny",rs:"Neutralna",h52:"-15%",
-   analysis:"<strong>Faza 3 — opony po cyklu cenowym.</strong> MA30W spłaszczona, kurs przy niej. Rynek opon normalizuje się po inflacji surowców. Ostrożnie.",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
-
-  {ticker:"SG.PA",name:"Société Générale",sector:"Bankowość inwestycyjna",idx:"cac",weight:"0.8%",price:36.44,chg:"+2.20%",stage:2,ma30w:30.80,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Dobra",h52:"-8%",
-   analysis:"<strong>Faza 2 — SocGen po restrukturyzacji Slawomir Krupa.</strong> ~18% powyżej MA30W. Sprzedaż rosyjskiego banku zakończona. Capital markets i retail Francja odbudowane.",action:"buy",anote:"Stop: ~31.10 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,false]},
-
-  {ticker:"PUB.PA",name:"Publicis Groupe",sector:"Reklama/Marketing",idx:"cac",weight:"0.7%",price:98.84,chg:"-0.62%",stage:2,ma30w:86.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — agencja reklamowa z AI advantage.</strong> ~15% powyżej MA30W. Publicis Sapient + Marcel AI. Najlepiej pozycjonowana globalna agencja na AI transition.",action:"buy",anote:"Stop: ~86.50 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"AC.PA",name:"Accor",sector:"Hotelarstwo",idx:"cac",weight:"0.7%",price:25.20,chg:"+0.72%",stage:2,ma30w:22.10,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — Accor hotels globalnie boom turystyczny.</strong> ~14% powyżej MA30W. Accor asset-light transformation zakończona. Sofitel, Novotel, ibis — 5700+ hoteli.",action:"buy",anote:"Stop: ~22.30 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"EDF.PA",name:"EDF",sector:"Energia jądrowa",idx:"cac",weight:"0.6%",price:18.50,chg:"-0.27%",stage:2,ma30w:16.30,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — reaktory jądrowe renesans we Francji.</strong> ~13% powyżej MA30W. EDF 56 reaktorów PWR — renaissance nuklearny. EPR2 nowe reaktory na zamówienie. Znacjonalizowana.",action:"buy",anote:"Stop: ~16.40 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"MT.PA",name:"ArcelorMittal",sector:"Stal/Metale",idx:"cac",weight:"0.6%",price:20.14,chg:"-1.70%",stage:2,ma30w:17.60,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
-   analysis:"<strong>Faza 2 — stal beneficjent infrastruktury EU.</strong> ~14% powyżej MA30W. ArcelorMittal Green Steel projekty. HBI Hydrogen Based Ironmaking pilot.",action:"buy",anote:"Stop: ~17.80 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,false,false]},
-
-  {ticker:"ENGI.PA",name:"Engie",sector:"Energia/LNG/OZE",idx:"cac",weight:"0.6%",price:19.62,chg:"+0.31%",stage:2,ma30w:17.20,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   analysis:"<strong>Faza 2 — Engie energia jądrowa + OZE belgijska.</strong> ~14% powyżej MA30W. Doogal i Tihange belgijskie reaktory przedłużone. OZE 50 GW portfolio.",action:"buy",anote:"Stop: ~17.30 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,false]},
-
-  {ticker:"VIV.PA",name:"Vivendi",sector:"Media/Entertainment",idx:"cac",weight:"0.5%",price:10.18,chg:"-0.39%",stage:3,ma30w:10.40,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-15%",
-   analysis:"<strong>Faza 3 — Vivendi po spin-offach bez kierunku.</strong> MA30W spłaszczona. Canal+, CNews po spin-offach. Rynek niepewny wyceny konglomeratu.",action:"caution",anote:"Obserwuj",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
-
-  {ticker:"WLN.PA",name:"Worldline",sector:"Fintech/Płatności",idx:"cac",weight:"0.4%",price:7.25,chg:"-1.49%",stage:4,ma30w:15.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-55%",
-   analysis:"<strong>Faza 4 — Worldline katastrofa wyceny.</strong> Kurs głęboko poniżej opadającej MA30W. Profit warning za profit warningiem. Płatności europejskie pod presją Stripe/Adyen. Unikaj.",action:"avoid",anote:"Faza 4 — unikaj",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"ERF.PA",name:"Eurofins Scientific",sector:"Laboratoria/Diagnostyka",idx:"cac",weight:"0.4%",price:68.72,chg:"-0.55%",stage:3,ma30w:70.00,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-20%",
-   analysis:"<strong>Faza 3 — labs po COVID normalizacja.</strong> MA30W spłaszczona. Eurofins PCR testy minęły, rynek core labs rośnie wolno.",action:"caution",anote:"Ostrożnie",signals:[["caution","OSTROŻNIE"]],mtt:[false,false,false,false,false,true,false,false]},
-
-  {ticker:"TEP.PA",name:"Teleperformance",sector:"BPO/Call Center",idx:"cac",weight:"0.3%",price:80.98,chg:"-1.46%",stage:4,ma30w:120.00,matrend:"opadająca ↓↓",vol:"Wysoki↓",rs:"B. słaba",h52:"-50%",
-   analysis:"<strong>Faza 4 — BPO absolutnie zmiażdżony przez AI.</strong> Kurs głęboko poniżej opadającej MA30W. ChatGPT i AI agenci zastępują call center. Model biznesowy zagrożony strukturalnie.",action:"avoid",anote:"Faza 4 — AI destruction",signals:[["avoid","UNIKAJ S4"]],mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"HO.PA",name:"Thales",sector:"Obrona/Elektronika",idx:"cac",weight:"0.3%",price:228.80,chg:"+0.57%",stage:2,ma30w:194.00,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-5%",
-   analysis:"<strong>Faza 2 — elektronika obronna i bezpieczeństwo cybernetyczne.</strong> ~18% powyżej MA30W. Thales systemy radarów, cybersecurity, awionika. Zbrojenia NATO = boom.",action:"buy",anote:"Stop: ~196 EUR",signals:[["buy","KUPUJ S2"]],mtt:[true,true,true,true,true,true,true,true]}
-]
 
 }; // end STOCKS
 
@@ -2228,8 +2108,8 @@ let currentTab='wig20', stageF='all', mttF=0, sectorF='all', searchQ='';
 const sp={1:25,2:50,3:75,4:100}, dp={1:12.5,2:37.5,3:62.5,4:87.5};
 const smap={buy:'tag-buy',watch:'tag-watch',caution:'tag-caution',avoid:'tag-avoid',neutral:'tag-neutral'};
 const amap={buy:'act-buy',watch:'act-watch',caution:'act-caution',avoid:'act-avoid'};
-const currency={wig20:'PLN',mwig40:'PLN',swig80:'PLN',dax:'€',ndx:'$',nyse:'$',wigr:'PLN',cac:'€'};
-const idxName={wig20:'WIG20',mwig40:'mWIG40',swig80:'sWIG80',dax:'DAX 40',ndx:'Nasdaq 100',nyse:'NYSE 100',wigr:'WIG-Pozostałe',cac:'CAC 40'};
+const currency={wig20:'PLN',mwig40:'PLN',swig80:'PLN',dax:'€',ndx:'$',nyse:'$',wigr:'PLN'};
+const idxName={wig20:'WIG20',mwig40:'mWIG40',swig80:'sWIG80',dax:'DAX 40',ndx:'Nasdaq 100',nyse:'NYSE 100',wigr:'WIG-Pozostałe'};
 
 function fmt(p,tab){
   const c=tab||currentTab;
@@ -2532,26 +2412,6 @@ const TV_MAP = {
   'RPC':'GPW:RPC',   'TIT':'GPW:TOY',   'TEN':'GPW:TEN',   'MLT2':'GPW:MLT',
   'WOL':'GPW:WOL',   'PKO2':'GPW:PKO',  'GNB':'GPW:GNB',   'OGX':'GPW:OPL',
   'NXG':'GPW:NXG',   'CFN':'GPW:CFN',   'SFG':'GPW:SNT',   'HRP2':'GPW:HRP',
-  // ── WIG-Pozostałe dodatkowe ────────────────────────
-  'ERS':'GPW:ERS',   'KBC':'GPW:KBC',   'MBK2':'GPW:MIL',  'TOR':'GPW:TOR',
-  'PLI':'GPW:PLI',   'FEW':'GPW:FEW',   'PGN':'GPW:PGN',   'PAT':'GPW:PAT',
-  'PBG2':'GPW:PBG',  'PBX':'GPW:PBX',   'PCF':'GPW:PCF',   'RLP':'GPW:RLP',
-  'ABP':'GPW:AB',    'AEI':'GPW:AEI',   'ARI2':'GPW:ARH',  'AST2':'GPW:AST',
-  'BOC':'GPW:BRS',   'BPX':'GPW:BPX',   'CAP2':'GPW:CAP',  'CIE':'GPW:CIE',
-  'CPU':'GPW:CPU',   'CRJ2':'GPW:GRJ',  'CTR':'GPW:CTR',   'EKO':'GPW:EKO',
-  'ELM':'GPW:ELM',   'ELP':'GPW:EUR',   'ENT2':'GPW:EAT',  'FPP':'GPW:FPP',
-  'GCL':'GPW:GNB',   'GPP':'GPW:GPP',   'GRW':'GPW:GRW',   'HMI':'GPW:HMI',
-  'HOM':'GPW:HOM',   'I2D':'GPW:I2D',   'IDA':'GPW:IDA',   'INK':'GPW:INK',
-  'IPL':'GPW:IPL',   'ITC':'GPW:ITB',   'KGM':'GPW:KER',   'KOM':'GPW:KOM',
-  'KPD':'GPW:KPX',   'KRK':'GPW:KRU',   'KTY2':'GPW:KTY',  'LBS':'GPW:LWB',
-  'LEP':'GPW:LEP',   'MAB2':'GPW:MAK',  'MAB3':'GPW:MAB',  'MCI2':'GPW:MCI',
-  'MDG2':'GPW:MDG',  'MZA':'GPW:MZA',   'NCB':'GPW:NVT',   'NTE':'GPW:NET',
-  'OAT':'GPW:OAT',   'PEN':'GPW:PEN',   'PKP':'GPW:PKP',   'PMF':'GPW:PMF',
-  'POL':'GPW:POL',   'PRT':'GPW:PRT',   'PZS':'GPW:PZS',   'REI':'GPW:RON',
-  'RVU2':'GPW:RVU',  'SLN':'GPW:SLV',   'SNO':'GPW:SAN',   'SYN2':'GPW:SYN',
-  'TEN2':'GPW:TDO',  'TWG':'GPW:TWG',   'TXM':'GPW:TXM',   'WHI':'GPW:WHI',
-  'WTN':'GPW:WPL',   'XPL':'GPW:XTP',   'ZRL':'GPW:ZRL',   'ABC2':'GPW:ABM',
-  'CIR':'GPW:CIR',
   // ── DAX (XETR) ─────────────────────────────────────
   'BAS':'XETR:BAS',  'BAYN':'XETR:BAYN','ALV':'XETR:ALV',  'ADS':'XETR:ADS',
   'SIE':'XETR:SIE',  'DBK':'XETR:DBK',  'CON':'XETR:CON',  'MBG':'XETR:MBG',
@@ -2563,17 +2423,6 @@ const TV_MAP = {
   'EOAN':'XETR:EOAN','BNR':'XETR:BNR',  'VOW3':'XETR:VOW3','VNA':'XETR:VNA',
   'ZAL':'XETR:ZAL',  'G24':'XETR:GYC',  'AIR':'XETR:AIR',  'SHL':'XETR:SHL',
   'ENR':'XETR:ENR',  'DTR':'XETR:DTR',  'MMM':'XETR:MMM',
-  // ── CAC 40 (EPA = Euronext Paris) ──────────────────
-  'MC.PA':'EPA:MC',   'OR.PA':'EPA:OR',   'TTE.PA':'EPA:TTE', 'SAN.PA':'EPA:SAN',
-  'BNP.PA':'EPA:BNP', 'AIR.PA':'EPA:AIR', 'SU.PA':'EPA:SU',   'AI.PA':'EPA:AI',
-  'CS.PA':'EPA:CS',   'RMS.PA':'EPA:RMS', 'SAF.PA':'EPA:SAF', 'DG.PA':'EPA:DG',
-  'KER.PA':'EPA:KER', 'SGO.PA':'EPA:SGO', 'CAP.PA':'EPA:CAP', 'RI.PA':'EPA:RI',
-  'CA.PA':'EPA:CA',   'BVI.PA':'EPA:BVI', 'VIE.PA':'EPA:VIE', 'EN.PA':'EPA:EN',
-  'ORA.PA':'EPA:ORA', 'ACA.PA':'EPA:ACA', 'DSY.PA':'EPA:DSY', 'BN.PA':'EPA:BN',
-  'RNO.PA':'EPA:RNO', 'LR.PA':'EPA:LR',   'STM.PA':'EPA:STM', 'ML.PA':'EPA:ML',
-  'SG.PA':'EPA:GLE',  'PUB.PA':'EPA:PUB', 'AC.PA':'EPA:AC',   'EDF.PA':'EPA:EDF',
-  'MT.PA':'EPA:MT',   'ENGI.PA':'EPA:ENGI','VIV.PA':'EPA:VIV','WLN.PA':'EPA:WLN',
-  'ERF.PA':'EPA:ERF', 'TEP.PA':'EPA:TEP', 'HO.PA':'EPA:HO',
   // ── NASDAQ ─────────────────────────────────────────
   'NVDA':'NASDAQ:NVDA',  'AAPL':'NASDAQ:AAPL',  'MSFT':'NASDAQ:MSFT',
   'AMZN':'NASDAQ:AMZN',  'GOOGL':'NASDAQ:GOOGL', 'GOOG':'NASDAQ:GOOG',
@@ -2669,14 +2518,11 @@ function groupByExchange(tickers) {
 }
 
 async function fetchTVBatch(market, tvTickers) {
-  // France (Euronext Paris) requires /global/scan with markets filter
-  const isFrance = market === 'france';
-  const tvUrl = isFrance
-    ? 'https://scanner.tradingview.com/global/scan'
-    : `https://scanner.tradingview.com/${market}/scan`;
-  const payload = { symbols: { tickers: tvTickers }, columns: TV_COLUMNS };
-  if (isFrance) payload.markets = ['france'];
-  const body = JSON.stringify(payload);
+  const body = JSON.stringify({
+    symbols: { tickers: tvTickers },
+    columns: TV_COLUMNS
+  });
+  const tvUrl = `https://scanner.tradingview.com/${market}/scan`;
 
   // Strategy 1: Direct POST (works in browser — TV allows CORS from any origin)
   try {
@@ -2752,7 +2598,7 @@ async function refreshLiveData() {
   try {
     // Collect all tickers in current view
     const allTickers = [];
-    ['wig20','mwig40','swig80','wigr','dax','cac','ndx','nyse'].forEach(idx => {
+    ['wig20','mwig40','swig80','wigr','dax','ndx','nyse'].forEach(idx => {
       STOCKS[idx].forEach(s => allTickers.push(s.ticker));
     });
 
