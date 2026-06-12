@@ -375,6 +375,9 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 
 /* Market selector */
 .market-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+.mkt-refresh-btn{margin-left:auto;background:rgba(0,229,160,.12)!important;color:var(--s2)!important;border-color:rgba(0,229,160,.3)!important;font-weight:600;}
+.mkt-refresh-btn:hover{background:rgba(0,229,160,.22)!important;}
+.mkt-refresh-btn.spinning #mkt-rfIcon{display:inline-block;animation:spin .8s linear infinite;}
 .mkt-tab{padding:7px 16px;border-radius:6px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:11px;font-family:'Space Mono',monospace;cursor:pointer;transition:all .2s;}
 .mkt-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(167,139,250,.1);}
 
@@ -712,6 +715,9 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <button class="mkt-tab" id="mkt-ndx" onclick="setMarketView('ndx',this)">🇺🇸 Nasdaq</button>
     <button class="mkt-tab" id="mkt-nyse" onclick="setMarketView('nyse',this)">🏛 NYSE</button>
     <button class="mkt-tab" id="mkt-all" onclick="setMarketView('all',this)">🌍 Wszystkie</button>
+    <button class="mkt-tab mkt-refresh-btn" id="mkt-refresh" onclick="refreshLiveData()">
+      <span id="mkt-rfIcon">⟳</span> Odśwież dane
+    </button>
   </div>
 
   <!-- Regime banner -->
@@ -915,11 +921,11 @@ wig20: [
    action:"buy",anote:"Buyable breakout. Stop: ~922 PLN",signals:[["buy","BREAKOUT!"],["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"ERS",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:600.20,chg:"-1.12%",stage:2,ma30w:540.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+  {ticker:"EBP",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:600.20,chg:"-1.12%",stage:2,ma30w:540.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
    analysis:"<strong>Faza 2 — solidny trend wzrostowy.</strong> Erste Group Bank Austria, notowany na GPW. Kurs ~11% powyżej rosnącej MA30W. Beneficjent wysokich stóp procentowych w CEE.",
    action:"buy",anote:"Stop-loss: ~542 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"TAU",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.29,chg:"-1.13%",stage:1,ma30w:9.60,matrend:"spłaszcza →",vol:"Niski",rs:"Słaba",h52:"-22%",
+  {ticker:"TPE",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.29,chg:"-1.13%",stage:1,ma30w:9.60,matrend:"spłaszcza →",vol:"Niski",rs:"Słaba",h52:"-22%",
    analysis:"<strong>Faza 1 — konsolidacja przy wieloletnich dołkach.</strong> Kurs poniżej spłaszczonej MA30W. Sektor energetyczny pod presją transformacji. Brak impulsu do wzrostu.",
    action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
    mtt:[false,false,false,false,false,false,false,false]},
@@ -1088,12 +1094,6 @@ dax: [
   {ticker:"AIR",name:"Airbus Group",sector:"Przemysł/Lotnictwo",idx:"dax",price:175.34,chg:"-0.07%",stage:2,ma30w:153.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
    analysis:"<strong>Faza 2 — Boeing problemy = Airbus zyski.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~155 EUR",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
-  {ticker:"HEIG",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:171.05,chg:"-1.75%",stage:2,ma30w:148.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
-   analysis:"<strong>Faza 2 — infrastruktura i obronność.</strong> ~16% powyżej MA30W.",action:"buy",anote:"Stop: ~150 EUR",signals:[["buy","KUPUJ S2"]],
-   mtt:[true,true,true,true,true,true,true,true]},
-  {ticker:"GEA",name:"GEA Group",sector:"Przemysł",idx:"dax",price:62.10,chg:"+2.05%",stage:2,ma30w:54.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
-   analysis:"<strong>Faza 2 — food tech machines.</strong> ~15% powyżej MA30W.",action:"buy",anote:"Stop: ~54.50 EUR",signals:[["buy","KUPUJ S2"]],
-   mtt:[true,true,true,true,true,true,true,true]},
   {ticker:"EOAN",name:"E.ON SE",sector:"Energia",idx:"dax",price:18.44,chg:"-1.21%",stage:2,ma30w:16.20,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-5%",
    analysis:"<strong>Faza 2 — sieć energetyczna.</strong> ~14% powyżej MA30W.",action:"buy",anote:"Stop: ~16.40 EUR",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,false]},
@@ -1142,14 +1142,8 @@ dax: [
   {ticker:"CON",name:"Continental AG",sector:"Motoryzacja",idx:"dax",price:60.84,chg:"-4.22%",stage:4,ma30w:68.50,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-30%",
    analysis:"<strong>Faza 4 — motoryzacja w bessie.</strong> -11% poniżej MA30W.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DPW",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:45.51,chg:"-1.43%",stage:4,ma30w:50.80,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-25%",
-   analysis:"<strong>Faza 4 — spowolnienie e-comm.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
-   mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"MBG",name:"Mercedes-Benz",sector:"Motoryzacja",idx:"dax",price:54.25,chg:"-0.97%",stage:4,ma30w:62.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-35%",
    analysis:"<strong>Faza 4 — Chiny/BYD eliminują marże.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"P911",name:"Porsche AG",sector:"Motoryzacja",idx:"dax",price:32.47,chg:"-3.13%",stage:4,ma30w:40.20,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-45%",
-   analysis:"<strong>Faza 4 — jeden z najsłabszych w DAX.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
   {ticker:"BMW",name:"BMW",sector:"Motoryzacja",idx:"dax",price:78.76,chg:"-1.30%",stage:4,ma30w:88.00,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-32%",
    analysis:"<strong>Faza 4 — EV-transition i Chiny.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
@@ -1160,9 +1154,36 @@ dax: [
   {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:44.40,chg:"-1.42%",stage:4,ma30w:52.00,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-28%",
    analysis:"<strong>Faza 4.</strong> Normalizacja marż po pandemii.",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DTR",name:"Daimler Truck",sector:"Motoryzacja",idx:"dax",price:39.71,chg:"-1.76%",stage:4,ma30w:45.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-28%",
-   analysis:"<strong>Faza 4 — ciężarówki pod presją.</strong>",action:"avoid",anote:"Faza 4",signals:[["avoid","UNIKAJ S4"]],
+
+  {ticker:"DHL",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:39.80,chg:"-0.50%",stage:3,ma30w:42.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-24%",
+   analysis:"<strong>Faza 3 — dystrybucja.</strong> DHL Group poniżej spłaszczonej MA30W. Słabnący wolumen globalnego handlu.",
+   action:"avoid",anote:"Unikaj",signals:[["caution","OSTROŻNIE"]],
+   mtt:[false,false,false,true,true,true,false,false]},
+
+  {ticker:"DTG",name:"Daimler Truck Holding",sector:"Motoryzacja",idx:"dax",price:37.50,chg:"-0.80%",stage:3,ma30w:41.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-30%",
+   analysis:"<strong>Faza 3 — dystrybucja.</strong> Daimler Truck poniżej opadającej MA30W. Presja regulacyjna CO2.",
+   action:"avoid",anote:"Poczekaj na Fazę 1",signals:[["avoid","UNIKAJ S3"]],
+   mtt:[false,false,false,true,true,true,false,false]},
+
+  {ticker:"G1A",name:"GEA Group",sector:"Przemysł",idx:"dax",price:62.10,chg:"+2.05%",stage:2,ma30w:54.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-4%",
+   analysis:"<strong>Faza 2 — solidny trend wzrostowy.</strong> GEA Group — technologie dla przemysłu spożywczego i farmaceutycznego.",
+   action:"buy",anote:"Stop-loss: ~54 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"HEI",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:171.05,chg:"-1.75%",stage:2,ma30w:148.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — trend wzrostowy.</strong> Heidelberg Materials (cement). Beneficjent inwestycji infrastrukturalnych w Europie.",
+   action:"buy",anote:"Stop-loss: ~148 EUR",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"PAH3",name:"Porsche Automobil Holding",sector:"Motoryzacja",idx:"dax",price:34.50,chg:"-1.20%",stage:4,ma30w:44.00,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-42%",
+   analysis:"<strong>Faza 4 — głęboki trend spadkowy.</strong> Holding VW/Porsche AG. Dyskonto holdingowe + kryzys EV obciąża wycenę.",
+   action:"avoid",anote:"Żadnych długich pozycji",signals:[["avoid","UNIKAJ S4"]],
    mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"QIA",name:"QIAGEN NV",sector:"Biotechnologia",idx:"dax",price:40.20,chg:"+0.50%",stage:2,ma30w:37.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Neutralna",h52:"-8%",
+   analysis:"<strong>Faza 2 — umiarkowany trend wzrostowy.</strong> QIAGEN — diagnostyka molekularna. Defensywny charakter.",
+   action:"watch",anote:"Obserwuj przy korekcie",signals:[["watch","OBSERWUJ"]],
+   mtt:[true,true,true,true,true,false,false,false]},
 ]
 
 // ══════════════════════════════════════════════════
@@ -2741,7 +2762,7 @@ const TV_MAP = {
   'KGHM':'GPW:KGH',  'ALR':'GPW:ALR',   'BDX':'GPW:BDX',   'MDV':'GPW:MDV',
   'CDR':'GPW:CDR',   'KRU':'GPW:KRU',   'GKY':'GPW:KTY',   'LPP':'GPW:LPP',
   'DNP':'GPW:DNP',   'ALE':'GPW:ALE',   'PCO':'GPW:PCO',   'ZAB':'GPW:ZAB',
-  'MBK':'GPW:MBK',   'TAU':'GPW:TAU',  'PGE':'GPW:PGE',
+  'MBK':'GPW:MBK',   'TPE':'GPW:TPE',  'PGE':'GPW:PGE',
   // ── mWIG40 ─────────────────────────────────────────
   'ABE':'GPW:ABPL',   'ACP':'GPW:ASSECOPOL',   'APR':'GPW:AUTOPARTN',   'ASB':'GPW:ASBIS',
   'ASE':'GPW:ASSECOSEE',   'ATT':'GPW:GRUPAAZOTY',   'BFT':'GPW:BENEFIT',   'BHW':'GPW:HANDLOWY',
@@ -2791,7 +2812,7 @@ const TV_MAP = {
   'WOL':'GPW:WOL',   'PKO2':'GPW:PKO',  'GNB':'GPW:GNB',   'OGX':'GPW:OPL',
   'NXG':'GPW:NXG',   'CFN':'GPW:CFN',   'SFG':'GPW:SNT',   'HRP2':'GPW:HRP',
   // ── WIG-Pozostałe dodatkowe ────────────────────────
-  'ERS':'GPW:ERS',   'KBC':'GPW:KBC',   'MBK2':'GPW:MIL',  'TOR_R':'GPW:TOR',
+  'EBP':'GPW:EBP',   'KBC':'GPW:KBC',   'MBK2':'GPW:MIL',  'TOR_R':'GPW:TOR',
   'PLI':'GPW:PLI',   'FEW':'GPW:FEW',   'PGN':'GPW:PGN',   'PAT':'GPW:PAT',
   'PBG2':'GPW:PBG',  'PBX':'GPW:PBX',   'PCF':'GPW:PCF',   'RLP':'GPW:RLP',
   'ABP':'GPW:AB',    'AEI':'GPW:AEI',   'ARI2':'GPW:ARH',  'AST2':'GPW:AST',
@@ -2817,10 +2838,11 @@ const TV_MAP = {
   'BMW':'XETR:BMW',  'FME':'XETR:FME',  'DTE':'XETR:DTE',  'MRK':'XETR:MRK',
   'IFX':'XETR:IFX',  'MUV2':'XETR:MUV2','SAP':'XETR:SAP',  'RHM':'XETR:RHM',
   'BEI':'XETR:BEI',  'FRE':'XETR:FRE',  'GEA':'XETR:GEA',  'HNR1':'XETR:HNR1',
-  'RWE':'XETR:RWE',  'MTX':'XETR:MTX',  'SY1':'XETR:SY1',  'HEIG':'XETR:HEIG',
-  'EOAN':'XETR:EOAN','BNR':'XETR:BNR',  'VOW3':'XETR:VOW3','VNA':'XETR:VNA',
-  'ZAL':'XETR:ZAL',  'G24':'XETR:GYC',  'AIR':'XETR:AIR',  'SHL':'XETR:SHL',
-  'ENR':'XETR:ENR',  'DTR':'XETR:DTR',  'MMM':'XETR:MMM',
+  'RWE':'XETR:RWE',  'MTX':'XETR:MTX',  'SY1':'XETR:SY1',  'EOAN':'XETR:EOAN','BNR':'XETR:BNR',  'VOW3':'XETR:VOW3','VNA':'XETR:VNA',
+  'ZAL':'XETR:ZAL',  'G24':'XETR:G24',  'AIR':'XETR:AIR',  'SHL':'XETR:SHL',
+  'ENR':'XETR:ENR',  'DHL':'XETR:DHL',  'DTG':'XETR:DTG',  'G1A':'XETR:G1A',
+  'HEI':'XETR:HEI',  'PAH3':'XETR:PAH3', 'QIA':'XETR:QIA',
+,  'MMM':'XETR:MMM',
   // ── NASDAQ ─────────────────────────────────────────
   'PEPCO':'NASDAQ:PEP',
   'NVDA':'NASDAQ:NVDA',  'AAPL':'NASDAQ:AAPL',  'MSFT':'NASDAQ:MSFT',
@@ -3057,21 +3079,21 @@ async function refreshLiveData() {
       rows.forEach(row => {
         const tvSym = row.s; // e.g. 'WSE:PKO'
         const d = row.d;
-        if (!d || d.length < 11) return;
+        if (!d || d.length < 2) return; // need at least close + change
 
         // Find our internal ticker
         const internalTicker = Object.keys(TV_MAP).find(k => TV_MAP[k] === tvSym);
         if (!internalTicker) return;
 
         liveData[internalTicker] = {
-          price:    d[0],
-          chg:      d[1],
-          volume:   d[2],
-          sma200:   d[3],
-          sma150:   d[4],
-          sma50:    d[5],
-          rsi:      d[6],
-          macd:     d[7],
+          price:    d[0]  ?? null,
+          chg:      d[1]  ?? null,
+          volume:   d[2]  ?? null,
+          sma200:   d[3]  ?? null,
+          sma150:   d[4]  ?? null,
+          sma50:    d[5]  ?? null,
+          rsi:      d[6]  ?? null,
+          macd:     d[7]  ?? null,
           macdSig:  d[8],
           high52:   d[9],
           low52:    d[10],
@@ -3272,7 +3294,7 @@ function recalcMTT(card, ticker, d) {
 // METODOLOGIA MODAL
 // ══════════════════════════════════════════════════
 // Data ostatniej pełnej aktualizacji (zmień co niedzielę)
-const LAST_UPDATE = '2025-06-08'; // format YYYY-MM-DD
+const LAST_UPDATE = '2026-06-12'; // format YYYY-MM-DD
 
 function openMethodology() {
   document.getElementById('methOverlay').classList.add('open');
