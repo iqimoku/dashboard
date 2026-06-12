@@ -3091,7 +3091,9 @@ async function refreshLiveData() {
       throw new Error(`Brak danych (rynki: ${failedMarkets.join(', ')}). Sprawdź konsolę F12.`);
     }
 
-    // Update cards in DOM
+    // Sync ALL STOCKS[] with liveData (all tabs, not just visible)
+    syncAllStocksWithLiveData();
+    // Update cards currently in DOM
     updateCardsWithLiveData();
 
     lastRefresh = new Date();
@@ -3117,6 +3119,24 @@ async function refreshLiveData() {
   refreshInProgress = false;
 }
 
+function syncAllStocksWithLiveData() {
+  // Synchronize ALL tabs in STOCKS[] with liveData so switchTab always shows fresh data
+  ['wig20','mwig40','dax','ndx','nyse'].forEach(tabKey => {
+    const arr = STOCKS[tabKey];
+    if (!arr) return;
+    arr.forEach(s => {
+      const d = liveData[s.ticker];
+      if (!d) return;
+      if (d.price)  s.price  = d.price;
+      if (d.sma150) s.ma30w  = d.sma150;
+      if (d.chg != null) s.chg = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
+      // Recalculate stage
+      const newStage = calcStage(d);
+      if (newStage) s.stage = newStage;
+    });
+  });
+}
+
 function updateCardsWithLiveData() {
   const cards = document.querySelectorAll('.card[data-ticker]');
   cards.forEach(card => {
@@ -3132,6 +3152,7 @@ function updateCardsWithLiveData() {
     // Price (index 0)
     const priceEl = metrics[0]?.querySelector('.cm-v');
     if (priceEl && d.price) {
+      // Strip all non-numeric except dot — handles both PL (space sep) and EN (comma sep) formats
       const oldPrice = parseFloat(priceEl.textContent.replace(/[^0-9.]/g,''));
       const newPrice = d.price;
       const fmt = newPrice >= 1000
@@ -3139,14 +3160,14 @@ function updateCardsWithLiveData() {
         : newPrice.toFixed(2);
       priceEl.textContent = fmt;
       priceEl.className = 'cm-v ' + (newPrice > oldPrice ? 'live-up' : newPrice < oldPrice ? 'live-dn' : 'nu');
-      // Add LIVE badge to ticker header if not already there
-      const tickerEl = card.querySelector('.c-ticker');
-      if (tickerEl && !tickerEl.querySelector('.live-badge')) {
-        const badge = document.createElement('span');
-        badge.className = 'live-badge';
-        badge.textContent = 'LIVE';
-        tickerEl.appendChild(badge);
-      }
+    }
+    // Add LIVE badge whenever liveData exists for this ticker (regardless of price change)
+    const tickerEl = card.querySelector('.c-ticker');
+    if (tickerEl && !tickerEl.querySelector('.live-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'live-badge';
+      badge.textContent = 'LIVE';
+      tickerEl.appendChild(badge);
     }
 
     // Change % (index 1)
