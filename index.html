@@ -563,6 +563,63 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   box-shadow: 0 0 18px rgba(139,92,246,.25), inset 0 1px 0 rgba(255,255,255,.08);
 }
 
+
+/* ── Compact / Table mode toggle ────────────── */
+.view-toggle{display:flex;gap:2px;background:var(--surface3,rgba(255,255,255,.05));border-radius:6px;padding:2px;}
+.vt-btn{padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px;color:var(--muted);border:none;background:transparent;transition:all .15s;line-height:1;}
+.vt-btn.active{background:var(--accent);color:#000;font-weight:700;}
+.vt-btn:hover:not(.active){color:var(--text);}
+
+/* ── Compact table ───────────────────────────── */
+#grid.compact-mode{display:block;padding:4px 36px 40px;}
+.ctable{width:100%;border-collapse:collapse;font-size:12px;}
+.ctable thead th{
+  position:sticky;top:0;z-index:2;
+  background:var(--surface2);
+  padding:8px 10px;text-align:left;
+  font-family:'Space Mono',monospace;font-size:9px;
+  color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;user-select:none;white-space:nowrap;
+}
+.ctable thead th:hover{color:#fff;}
+.ctable thead th .sort-arrow{margin-left:4px;opacity:.4;font-size:8px;}
+.ctable thead th.sorted .sort-arrow{opacity:1;color:var(--accent);}
+.ctable tbody tr{
+  border-bottom:1px solid rgba(255,255,255,.04);
+  cursor:pointer;transition:background .1s;
+}
+.ctable tbody tr:hover{background:rgba(255,255,255,.04);}
+.ctable tbody td{padding:7px 10px;vertical-align:middle;}
+
+/* Stage pill in table */
+.ct-stage{display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:5px;font-size:10px;font-weight:700;
+  font-family:'Space Mono',monospace;}
+.ct-s1{background:rgba(148,163,184,.15);color:#94a3b8;}
+.ct-s2{background:rgba(0,229,160,.15);color:#00e5a0;}
+.ct-s3{background:rgba(251,191,36,.15);color:#fbbf24;}
+.ct-s4{background:rgba(239,68,68,.15);color:#ef4444;}
+
+/* Ticker + name cell */
+.ct-ticker{font-weight:700;font-family:'Space Mono',monospace;font-size:11px;}
+.ct-name{font-size:10px;color:var(--muted);margin-top:1px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.ct-live{display:inline-block;font-size:6px;background:rgba(0,229,160,.15);color:var(--accent);border:1px solid rgba(0,229,160,.25);border-radius:2px;padding:0 3px;margin-left:4px;vertical-align:middle;animation:live-pulse 2s ease-in-out infinite;}
+
+/* Numeric cells */
+.ct-up{color:#00e5a0;font-weight:600;}
+.ct-dn{color:#ef4444;font-weight:600;}
+.ct-nu{color:var(--text);}
+
+/* MTT bar in table */
+.ct-mtt-wrap{display:flex;align-items:center;gap:5px;}
+.ct-mtt-bar{width:48px;height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;}
+.ct-mtt-fill{height:100%;border-radius:3px;}
+.ct-mtt-score{font-size:10px;font-family:'Space Mono',monospace;width:22px;}
+
+/* Signal tag in table */
+.ct-sig{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700;white-space:nowrap;}
+
 </style>
 </head>
 <body>
@@ -743,6 +800,10 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
       <input type="text" class="search-input" id="search" placeholder="Szukaj spółki..." oninput="onSearch()">
+    </div>
+    <div class="view-toggle" id="view-toggle" title="Przełącz widok">
+      <button class="vt-btn active" id="vt-cards" onclick="setViewMode('cards')">▦</button>
+      <button class="vt-btn" id="vt-compact" onclick="setViewMode('compact')">☰</button>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin-left:8px;">
       <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()">
@@ -2461,10 +2522,139 @@ function getFiltered(){
   });
 }
 
+
+// ── View mode (cards / compact) ──────────────
+let viewMode = 'cards';
+
+function setViewMode(mode) {
+  viewMode = mode;
+  document.getElementById('vt-cards').classList.toggle('active', mode === 'cards');
+  document.getElementById('vt-compact').classList.toggle('active', mode === 'compact');
+  renderGrid();
+}
+
+function renderCompact(data) {
+  if (!data.length) return '<div class="no-results">Brak spółek spełniających kryteria.</div>';
+
+  // Sort state
+  const sortCol = renderCompact._sortCol || 'stage';
+  const sortDir = renderCompact._sortDir || 1;
+
+  const sorted = [...data].sort((a, b) => {
+    let va, vb;
+    switch(sortCol) {
+      case 'ticker':  va = a.ticker;  vb = b.ticker;  break;
+      case 'stage':   va = a.stage;   vb = b.stage;   break;
+      case 'price':   va = a.price;   vb = b.price;   break;
+      case 'chg':
+        va = parseFloat(String(a.chg).replace('%','').replace('+',''));
+        vb = parseFloat(String(b.chg).replace('%','').replace('+',''));
+        break;
+      case 'ma30w':   va = a.ma30w;   vb = b.ma30w;   break;
+      case 'mtt':     va = mttScore(a.mtt); vb = mttScore(b.mtt); break;
+      case 'sector':  va = a.sector;  vb = b.sector;  break;
+      default:        va = a.stage;   vb = b.stage;
+    }
+    if (va < vb) return -sortDir;
+    if (va > vb) return  sortDir;
+    return 0;
+  });
+
+  function th(col, label) {
+    const active = sortCol === col;
+    const arrow  = active ? (sortDir === 1 ? '▲' : '▼') : '▲';
+    return `<th class="${active ? 'sorted' : ''}" onclick="sortCompact('${col}')">${label}<span class="sort-arrow">${arrow}</span></th>`;
+  }
+
+  const sigColors = { buy:'#00e5a0', caution:'#fbbf24', watch:'#60a5fa', avoid:'#ef4444' };
+
+  const rows = sorted.map(s => {
+    const chgNum = parseFloat(String(s.chg).replace('%','').replace('+',''));
+    const chgCls = chgNum > 0 ? 'ct-up' : chgNum < 0 ? 'ct-dn' : 'ct-nu';
+    const masCls = s.price > s.ma30w ? 'ct-up' : 'ct-dn';
+    const score  = mttScore(s.mtt);
+    const col    = mttColor(score);
+    const pct    = mttFillPct(score);
+    const cls    = mttScoreClass(score);
+    const cur    = currency[s.idx];
+    const sig    = s.signals?.[0];
+    const sigHtml = sig ? `<span class="ct-sig" style="background:${sigColors[sig[0]]}22;color:${sigColors[sig[0]]}">${sig[1]}</span>` : '';
+    const liveBadge = liveData[s.ticker] ? '<span class="ct-live">LIVE</span>' : '';
+
+    return `<tr onclick="openModal('${s.ticker}','${s.idx}')" data-ticker="${s.ticker.toLowerCase()}" data-idx="${s.idx}">
+      <td><span class="ct-stage ct-s${s.stage}">${s.stage}</span></td>
+      <td>
+        <div class="ct-ticker">${s.ticker}${liveBadge}</div>
+        <div class="ct-name">${s.name}</div>
+      </td>
+      <td style="font-size:10px;color:var(--muted)">${s.sector}</td>
+      <td class="ct-nu" style="font-family:'Space Mono',monospace">${fmt(s.price, s.idx)}</td>
+      <td class="${chgCls}" style="font-family:'Space Mono',monospace">${s.chg}</td>
+      <td class="${masCls}" style="font-family:'Space Mono',monospace">${fmt(s.ma30w, s.idx)}</td>
+      <td style="font-size:10px;color:var(--muted);white-space:nowrap">${s.matrend}</td>
+      <td>
+        <div class="ct-mtt-wrap">
+          <div class="ct-mtt-bar"><div class="ct-mtt-fill" style="width:${pct}%;background:${col}"></div></div>
+          <span class="ct-mtt-score ${cls}">${score}/8</span>
+        </div>
+      </td>
+      <td>${sigHtml}</td>
+    </tr>`;
+  }).join('');
+
+  return `<table class="ctable" id="ctable">
+    <thead><tr>
+      ${th('stage','S')}
+      ${th('ticker','Ticker')}
+      ${th('sector','Sektor')}
+      ${th('price','Kurs')}
+      ${th('chg','Zmiana')}
+      ${th('ma30w','MA30W')}
+      <th>Trend MA</th>
+      ${th('mtt','MTT')}
+      <th>Sygnał</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+renderCompact._sortCol = 'stage';
+renderCompact._sortDir = 1;
+
+function sortCompact(col) {
+  if (renderCompact._sortCol === col) {
+    renderCompact._sortDir *= -1;
+  } else {
+    renderCompact._sortCol = col;
+    renderCompact._sortDir = 1;
+  }
+  renderGrid();
+}
+
 function renderGrid(){
   const data=getFiltered();
   const g=document.getElementById('grid');
-  g.innerHTML=data.length?data.map(renderCard).join(''):'<div class="no-results">Brak spółek spełniających kryteria.</div>';
+  if (viewMode === 'compact') {
+    g.classList.add('compact-mode');
+    g.innerHTML = renderCompact(data);
+    // re-apply live badges in compact mode
+    if (Object.keys(liveData).length > 0) {
+      g.querySelectorAll('tr[data-ticker]').forEach(row => {
+        const ticker = row.dataset.ticker?.toUpperCase();
+        const d = liveData[ticker];
+        if (!d) return;
+        const tickerEl = row.querySelector('.ct-ticker');
+        if (tickerEl && !tickerEl.querySelector('.ct-live')) {
+          const badge = document.createElement('span');
+          badge.className = 'ct-live';
+          badge.textContent = 'LIVE';
+          tickerEl.appendChild(badge);
+        }
+      });
+    }
+  } else {
+    g.classList.remove('compact-mode');
+    g.innerHTML=data.length?data.map(renderCard).join(''):'<div class="no-results">Brak spółek spełniających kryteria.</div>';
+  }
   renderSummary();
 }
 
@@ -3387,16 +3577,23 @@ async function refreshLiveData() {
   if (refreshInProgress) return;
   refreshInProgress = true;
 
-  const btn = document.getElementById('btnRefresh');
-  const lbl = document.getElementById('rfLabel');
-  const icon = document.getElementById('rfIcon');
+  // ── Koszyki: btnRefresh ──────────────────────
+  const btn    = document.getElementById('btnRefresh');
+  const lbl    = document.getElementById('rfLabel');
+  const icon   = document.getElementById('rfIcon');
   const status = document.getElementById('rfStatus');
 
-  btn.classList.add('loading');
-  btn.disabled = true;
-  lbl.textContent = 'Pobieranie...';
-  icon.textContent = '⟳';
-  status.textContent = '';
+  // ── Stan Rynku: mkt-refresh ──────────────────
+  const mktBtn  = document.getElementById('mkt-refresh');
+  const mktIcon = document.getElementById('mkt-rfIcon');
+
+  // Aktywuj spinner na obu przyciskach
+  if (btn)    { btn.classList.add('loading'); btn.disabled = true; }
+  if (lbl)    { lbl.textContent = 'Pobieranie...'; }
+  if (icon)   { icon.textContent = '⟳'; }
+  if (status) { status.textContent = ''; }
+  if (mktBtn) { mktBtn.disabled = true; mktBtn.style.opacity = '.6'; }
+  if (mktIcon){ mktIcon.textContent = '⟳'; mktIcon.style.animation = 'spin .8s linear infinite'; }
 
   try {
     // Collect all tickers in current view
@@ -3480,24 +3677,46 @@ async function refreshLiveData() {
 
     lastRefresh = new Date();
     const t = lastRefresh.toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-    lbl.textContent = 'Odśwież live';
-    icon.textContent = '✓';
-    status.textContent = `● ${t} | ${totalUpdated} spółek`;
-    status.style.color = '#00e5a0';
+    if (lbl)    { lbl.textContent = 'Odśwież live'; }
+    if (icon)   { icon.textContent = '✓'; }
+    if (status) { status.textContent = `● ${t} | ${totalUpdated} spółek`; status.style.color = '#00e5a0'; }
 
-    // Reset icon after 2s
-    setTimeout(() => { icon.textContent = '⟳'; }, 2000);
+    // Stan Rynku: sukces
+    if (mktIcon) {
+      mktIcon.style.animation = '';
+      mktIcon.textContent = '✓';
+    }
+    if (mktBtn) {
+      mktBtn.style.opacity = '1';
+      mktBtn.style.color = '#00e5a0';
+    }
+    // Przerenderuj Stan Rynku jeśli aktywny
+    const marketViewActive = document.getElementById('market-view')?.classList.contains('active');
+    if (marketViewActive) renderMarketView(currentMarketView);
+
+    // Reset icons after 2s
+    setTimeout(() => {
+      if (icon)    icon.textContent = '⟳';
+      if (mktIcon) { mktIcon.textContent = '⟳'; }
+      if (mktBtn)  { mktBtn.style.color = ''; }
+    }, 2000);
 
   } catch(e) {
-    lbl.textContent = 'Błąd — spróbuj ponownie';
-    icon.textContent = '✗';
-    status.textContent = `● Błąd: ${e.message}`;
-    status.style.color = '#ff4d4d';
-    setTimeout(() => { lbl.textContent = 'Odśwież live'; icon.textContent = '⟳'; }, 3000);
+    if (lbl)    { lbl.textContent = 'Błąd — spróbuj ponownie'; }
+    if (icon)   { icon.textContent = '✗'; }
+    if (status) { status.textContent = `● Błąd: ${e.message}`; status.style.color = '#ff4d4d'; }
+    if (mktIcon){ mktIcon.style.animation = ''; mktIcon.textContent = '✗'; }
+    if (mktBtn) { mktBtn.style.color = '#ff4d4d'; }
+    setTimeout(() => {
+      if (lbl)    lbl.textContent = 'Odśwież live';
+      if (icon)   icon.textContent = '⟳';
+      if (mktIcon){ mktIcon.textContent = '⟳'; }
+      if (mktBtn) { mktBtn.style.color = ''; mktBtn.style.opacity = '1'; }
+    }, 3000);
   }
 
-  btn.classList.remove('loading');
-  btn.disabled = false;
+  if (btn)    { btn.classList.remove('loading'); btn.disabled = false; }
+  if (mktBtn) { mktBtn.disabled = false; mktBtn.style.opacity = '1'; }
   refreshInProgress = false;
 }
 
@@ -3520,6 +3739,37 @@ function syncAllStocksWithLiveData() {
 }
 
 function updateCardsWithLiveData() {
+  // Compact mode: update table rows
+  if (viewMode === 'compact') {
+    document.querySelectorAll('#ctable tr[data-ticker]').forEach(row => {
+      const ticker = row.dataset.ticker?.toUpperCase();
+      const d = liveData[ticker];
+      if (!d) return;
+      // Price cell (td index 3)
+      const tds = row.querySelectorAll('td');
+      if (tds[3] && d.price) {
+        const cur = currency[row.dataset.idx] || '';
+        tds[3].textContent = d.price >= 1000
+          ? d.price.toLocaleString('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2})
+          : d.price.toFixed(2);
+        tds[3].className = '';
+      }
+      if (tds[4] && d.chg != null) {
+        const chgStr = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
+        tds[4].textContent = chgStr;
+        tds[4].className = d.chg > 0 ? 'ct-up' : d.chg < 0 ? 'ct-dn' : 'ct-nu';
+        tds[4].style.fontFamily = "'Space Mono',monospace";
+      }
+      // Live badge
+      const tickerEl = row.querySelector('.ct-ticker');
+      if (tickerEl && !tickerEl.querySelector('.ct-live')) {
+        const badge = document.createElement('span');
+        badge.className = 'ct-live'; badge.textContent = 'LIVE';
+        tickerEl.appendChild(badge);
+      }
+    });
+    return;
+  }
   const cards = document.querySelectorAll('.card[data-ticker]');
   cards.forEach(card => {
     const ticker = card.dataset.ticker?.toUpperCase();
