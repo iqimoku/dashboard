@@ -508,6 +508,61 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .top5-up{color:#00e5a0;}
 .top5-dn{color:#ff4d4d;}
 
+
+/* ── Stan Rynku tab — gradient premium ─────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.tab-market-btn {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(139,92,246,.18) 0%,
+    rgba(99,102,241,.14) 40%,
+    rgba(167,139,250,.20) 70%,
+    rgba(79,209,197,.12) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(139,92,246,.5) !important;
+  color: #c4b5fd !important;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  letter-spacing: .3px;
+}
+.tab-market-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg,
+    transparent 30%,
+    rgba(255,255,255,.06) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+.tab-market-btn:hover {
+  background: linear-gradient(135deg,
+    rgba(139,92,246,.28) 0%,
+    rgba(99,102,241,.22) 40%,
+    rgba(167,139,250,.30) 70%,
+    rgba(79,209,197,.20) 100%
+  ) !important;
+  color: #e0d4ff !important;
+}
+.tab-market-btn.active {
+  background: linear-gradient(135deg,
+    rgba(139,92,246,.35) 0%,
+    rgba(99,102,241,.28) 40%,
+    rgba(167,139,250,.38) 70%,
+    rgba(79,209,197,.25) 100%
+  ) !important;
+  border-bottom-color: #a78bfa !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(167,139,250,.7);
+  box-shadow: 0 0 18px rgba(139,92,246,.25), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
 </style>
 </head>
 <body>
@@ -650,7 +705,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-dax" onclick="switchTab('dax')">🇩🇪 DAX 40 <span class="tab-cnt" id="cnt-dax">40</span></div>
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
-  <div class="tab" id="tab-market" onclick="switchTabMarket()" style="background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.2);">📡 Stan Rynku</div>
+  <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
