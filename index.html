@@ -2766,16 +2766,16 @@ const TV_MAP = {
   'DNP':'GPW:DNP',   'ALE':'GPW:ALE',   'PCO':'GPW:PCO',   'ZAB':'GPW:ZAB',
   'MBK':'GPW:MBK',   'TPE':'GPW:TPE',  'PGE':'GPW:PGE',
   // ── mWIG40 ─────────────────────────────────────────
-  'ABE':'GPW:ABPL',   'ACP':'GPW:ASSECOPOL',   'APR':'GPW:AUTOPARTN',   'ASB':'GPW:ASBIS',
-  'ASE':'GPW:ASSECOSEE',   'ATT':'GPW:GRUPAAZOTY',   'BFT':'GPW:BENEFIT',   'BHW':'GPW:HANDLOWY',
-  'BNP':'GPW:BNPPPL',   'CAR':'GPW:INTERCARS',   'CBF':'GPW:CYBERFLKS',   'CPS':'GPW:CYFRPLSAT',
-  'CRI':'GPW:CREOTECH',   'DIA':'GPW:DIAG',   'DOM':'GPW:DOMDEV',   'DVL':'GPW:DEVELIA',
-  'EAT':'GPW:AMREST',   'ENA':'GPW:ENEA',   'EUR':'GPW:EUROCASH',   'GPP':'GPW:GRUPRACUJ',
-  'GPW':'GPW:GPW',   'ING':'GPW:INGBSK',   'JSW':'GPW:JSW',   'LBW':'GPW:LUBAWA',
-  'MBR':'GPW:MOBRUK',   'MIL':'GPW:MILLENNIUM',   'MRB':'GPW:MIRBUD',   'NEU':'GPW:NEUCA',
-  'NWG':'GPW:NEWAG',   'OPL':'GPW:ORANGEPL',   'PEP':'GPW:PEP',   'PXM':'GPW:POLIMEXMS',
-  'RBW':'GPW:RAINBOW',   'SNT':'GPW:SYNEKTIK',   'TEN':'GPW:TSGAMES',   'TXT':'GPW:TEXT',
-  'VOX':'GPW:VOXEL',   'VRC':'GPW:VERCOM',   'WPL':'GPW:WIRTUALNA',   'XTB':'GPW:XTB',
+  'ABE':'GPW:ABE',   'ACP':'GPW:ACP',   'APR':'GPW:APR',   'ASB':'GPW:ASB',
+  'ASE':'GPW:ASE',   'ATT':'GPW:ATT',   'BFT':'GPW:BFT',   'BHW':'GPW:BHW',
+  'BNP':'GPW:BNP',   'CAR':'GPW:CAR',   'CBF':'GPW:CBF',   'CPS':'GPW:CPS',
+  'CRI':'GPW:CRI',   'DIA':'GPW:DIA',   'DOM':'GPW:DOM',   'DVL':'GPW:DVL',
+  'EAT':'GPW:EAT',   'ENA':'GPW:ENA',   'EUR':'GPW:EUR',   'GPP':'GPW:GPP',
+  'GPW':'GPW:GPW',   'ING':'GPW:ING',   'JSW':'GPW:JSW',   'LBW':'GPW:LBW',
+  'MBR':'GPW:MBR',   'MIL':'GPW:MIL',   'MRB':'GPW:MIRBUD',   'NEU':'GPW:NEU',
+  'NWG':'GPW:NWG',   'OPL':'GPW:OPL',   'PEP':'GPW:PEP',   'PXM':'GPW:PXM',
+  'RBW':'GPW:RBW',   'SNT':'GPW:SNT',   'TEN':'GPW:TEN',   'TXT':'GPW:TXT',
+  'VOX':'GPW:VOX',   'VRC':'GPW:VRC',   'WPL':'GPW:WPL',   'XTB':'GPW:XTB',
   // ── sWIG80 ─────────────────────────────────────────
   '11B':'GPW:11BIT',   '1AT':'GPW:ATAL',   'ABS_R':'GPW:ASSECOBS',   'ACG':'GPW:ACAUTOGAZ',
   'AGO':'GPW:AGORA',   'ALL':'GPW:AILLERON',   'AMB':'GPW:AMBRA',   'AMC':'GPW:AMICA',
@@ -3084,8 +3084,17 @@ async function refreshLiveData() {
 
         // Find our internal ticker
         const internalTicker = Object.keys(TV_MAP).find(k => TV_MAP[k] === tvSym);
-        if (!internalTicker) return;
+        if (!internalTicker) {
+          // Debug: log unmatched symbols so we can see what TV returns
+          if (tvSym.startsWith('GPW:')) console.warn('⚠️ No match for TV symbol:', tvSym);
+          return;
+        }
 
+        // Log matched symbols for debugging mWIG40
+        const matchedTab = Object.keys(STOCKS).find(tab => 
+          Array.isArray(STOCKS[tab]) && STOCKS[tab].some(s => s.ticker === internalTicker)
+        );
+        if (matchedTab === 'mwig40') console.log('✅ mWIG40 match:', internalTicker, '←', tvSym);
         liveData[internalTicker] = {
           price:    d[0]  ?? null,
           chg:      d[1]  ?? null,
