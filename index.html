@@ -480,6 +480,34 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 }
 @keyframes live-pulse{0%,100%{opacity:1;}50%{opacity:.5;}}
 
+
+/* ── Sector Heatmap ─────────────────────────── */
+.sector-heatmap{display:flex;flex-direction:column;gap:5px;}
+.sh-row{display:flex;align-items:center;gap:8px;}
+.sh-name{font-size:10px;color:var(--muted);width:140px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sh-bar-wrap{flex:1;height:18px;background:var(--surface3,rgba(255,255,255,.04));border-radius:4px;overflow:hidden;position:relative;}
+.sh-bar{height:100%;border-radius:4px;transition:width .4s ease;display:flex;align-items:center;padding-left:6px;}
+.sh-bar-label{font-size:9px;font-family:'Space Mono',monospace;color:#fff;font-weight:600;white-space:nowrap;}
+.sh-pct{font-size:9px;color:var(--muted);width:30px;text-align:right;flex-shrink:0;}
+.sh-empty{font-size:11px;color:var(--muted);text-align:center;padding:12px;}
+.sh-legend{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;}
+.sh-leg-item{display:flex;align-items:center;gap:4px;font-size:9px;color:var(--muted);}
+.sh-leg-dot{width:8px;height:8px;border-radius:2px;}
+
+/* ── Top Leaders / Laggards ─────────────────── */
+.top5-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.top5-col-title{font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-family:'Space Mono',monospace;}
+.top5-list{display:flex;flex-direction:column;gap:4px;}
+.top5-item{display:flex;align-items:center;justify-content:space-between;padding:6px 8px;border-radius:6px;background:var(--surface3,rgba(255,255,255,.04));cursor:pointer;transition:background .15s;}
+.top5-item:hover{background:rgba(255,255,255,.08);}
+.top5-ticker{font-size:10px;font-weight:700;font-family:'Space Mono',monospace;}
+.top5-name{font-size:9px;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;}
+.top5-right{text-align:right;flex-shrink:0;}
+.top5-chg{font-size:11px;font-weight:700;font-family:'Space Mono',monospace;}
+.top5-score{font-size:8px;color:var(--muted);}
+.top5-up{color:#00e5a0;}
+.top5-dn{color:#ff4d4d;}
+
 </style>
 </head>
 <body>
@@ -606,7 +634,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 
 <div class="header">
   <div>
-    <div class="h-eyebrow">Analiza Techniczna • GPW Warszawa + Frankfurt</div>
+    <div class="h-eyebrow">Analiza Techniczna • GPW Warszawa + Frankfurt + NYSE/Nasdaq</div>
     <div class="h-title">Stage Analysis + Minervini Trend Template</div>
     <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Czerwiec 2026</div>
   </div>
@@ -698,9 +726,9 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     </div>
   </div>
   <div class="coffee-stats">
-    <div class="coffee-stat"><div class="coffee-stat-v">511</div><div class="coffee-stat-l">Spółek</div></div>
-    <div class="coffee-stat"><div class="coffee-stat-v">8</div><div class="coffee-stat-l">Rynków</div></div>
-    <div class="coffee-stat"><div class="coffee-stat-v">82</div><div class="coffee-stat-l">MTT 8/8</div></div>
+    <div class="coffee-stat"><div class="coffee-stat-v">297</div><div class="coffee-stat-l">Spółek</div></div>
+    <div class="coffee-stat"><div class="coffee-stat-v">5</div><div class="coffee-stat-l">Rynków</div></div>
+    <div class="coffee-stat"><div class="coffee-stat-v">59</div><div class="coffee-stat-l">MTT 8/8</div></div>
     <div class="coffee-stat"><div class="coffee-stat-v">S1-S4</div><div class="coffee-stat-l">Weinstein</div></div>
   </div>
 </div>
@@ -762,6 +790,18 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     </div>
   </div>
 
+
+    <!-- Sector Heatmap -->
+    <div class="mr-card">
+      <div class="mr-card-title">🌡 Heatmapa Sektorów</div>
+      <div id="sector-heatmap"></div>
+    </div>
+
+    <!-- Top Leaders / Laggards -->
+    <div class="mr-card">
+      <div class="mr-card-title">🏆 Liderzy i Maruderzy</div>
+      <div id="top5-container"></div>
+    </div>
   <div id="market-alert" class="market-alert" style="display:none;"></div>
 </div>
 
@@ -2463,6 +2503,181 @@ function getMarketStocks(mkt){
   return STOCKS[mkt] || [];
 }
 
+
+// ── Macro-sector mapping ─────────────────────
+const MACRO_SECTOR = {
+  'Bankowość':'Finanse','Bankowość detaliczna':'Finanse','Bankowość regionalna':'Finanse',
+  'Bankowość/Global':'Finanse','Finanse':'Finanse','Fintech':'Finanse',
+  'Fintech/Płatności':'Finanse','Investment Banking':'Finanse','Ubezpieczenia':'Finanse',
+  'Ubezpieczenia/Emerytury':'Finanse','Windykacja':'Finanse','Asset Management':'Finanse',
+  'Custody Banking':'Finanse','Private Equity/RE':'Finanse','P&C Ubezpieczenia':'Finanse',
+  'Technologia':'Technologia','Technologia/Cloud':'Technologia','IT':'Technologia',
+  'IT Consulting':'Technologia','IT Services':'Technologia','IT/AI Hybrid Cloud':'Technologia',
+  'Software/Creative':'Technologia','SaaS':'Technologia','Cloud ERP':'Technologia',
+  'Cloud ERP/Bazy danych':'Technologia','EDA/Software':'Technologia','CAD/Software':'Technologia',
+  'CRM/AI Cloud':'Technologia','HR/Cloud ERP':'Technologia','E-commerce/SaaS':'Technologia',
+  'AI/Analytics':'Technologia','Adtech/AI':'Technologia','Obserwability/Cloud':'Technologia',
+  'Media/Analytics':'Technologia','Analytics/Insurance':'Technologia',
+  'Półprzewodniki/AI':'Półprzewodniki','Półprzewodniki/Analog':'Półprzewodniki',
+  'Półprzewodniki/Auto':'Półprzewodniki','Półprzewodniki/CPU IP':'Półprzewodniki',
+  'Półprzewodniki/EUV':'Półprzewodniki','Półprzewodniki/Foundry':'Półprzewodniki',
+  'Półprzewodniki/Inspekcja':'Półprzewodniki','Półprzewodniki/Legacy':'Półprzewodniki',
+  'Półprzewodniki/MCU':'Półprzewodniki','Półprzewodniki/Mobile':'Półprzewodniki',
+  'Półprzewodniki/Networking':'Półprzewodniki','Półprzewodniki/Pamięć':'Półprzewodniki',
+  'Półprzewodniki/Power':'Półprzewodniki','Półprzewodniki/Sprzęt':'Półprzewodniki',
+  'Motoryzacja':'Motoryzacja','Motoryzacja/EV':'Motoryzacja','Motoryzacja/Retail':'Motoryzacja',
+  'Energetyka':'Energia','Energia':'Energia','OZE':'Energia','Energia/OZE':'Energia',
+  'Energia/Sieć':'Energia','Energia jądrowa':'Energia','Energia/Jądrowa':'Energia',
+  'Energia/LNG':'Energia','OZE/Wiatr/Solar':'Energia',
+  'Ropa/Gaz':'Paliwa & Wydobycie','Ropa/Shale':'Paliwa & Wydobycie','Górnictwo':'Paliwa & Wydobycie',
+  'Miedź/Peru/Mexico':'Paliwa & Wydobycie','Miedź/Złoto':'Paliwa & Wydobycie',
+  'Złoto/Górnictwo':'Paliwa & Wydobycie','Oilfield Services':'Paliwa & Wydobycie',
+  'Oilfield Equipment':'Paliwa & Wydobycie','Energia/Oilfield':'Paliwa & Wydobycie',
+  'Rurociągi/Gaz ziemny':'Paliwa & Wydobycie','Rurociągi/NGL':'Paliwa & Wydobycie',
+  'Farmacja':'Zdrowie','Farmacja rzadkie choroby':'Zdrowie','Farmacja/Genetyka':'Zdrowie',
+  'Farmacja/Healthcare':'Zdrowie','Farmacja/MedTech':'Zdrowie','Farmacja/Onkologia':'Zdrowie',
+  'Farmacja/Otyłość':'Zdrowie','Biotechnologia':'Zdrowie','Biotechnology':'Zdrowie',
+  'Biotechnology/HIV':'Zdrowie','Biotechnology/RNA':'Zdrowie','Diagnostyka':'Zdrowie',
+  'MedTech/Diagnostyka':'Zdrowie','MedTech/Szpitale':'Zdrowie','MedTech/Urządzenia':'Zdrowie',
+  'Medtech':'Zdrowie','Medtech/CGM':'Zdrowie','Medtech/Imaging':'Zdrowie',
+  'Medtech/Robotyka':'Zdrowie','Medycyna':'Zdrowie','Life Sciences/MedTech':'Zdrowie',
+  'Ortopedia/Implanty':'Zdrowie','Ochrona zdrowia':'Zdrowie','Healthcare/PBM':'Zdrowie',
+  'Healthcare/Ubezpieczenia':'Zdrowie',
+  'E-commerce':'Konsumpcja','Handel':'Konsumpcja','Handel detaliczny':'Konsumpcja',
+  'Handel hurtowy':'Konsumpcja','Handel spożywczy':'Konsumpcja','Dobra konsumpcyjne':'Konsumpcja',
+  'FMCG/Consumer':'Konsumpcja','FMCG/Czekolada':'Konsumpcja','FMCG/Higiena':'Konsumpcja',
+  'FMCG/Napoje':'Konsumpcja','FMCG/Żywność':'Konsumpcja','Odzież':'Konsumpcja',
+  'Odzież/Sport':'Konsumpcja','Napoje':'Konsumpcja','Napoje energetyczne':'Konsumpcja',
+  'Napoje/FMCG':'Konsumpcja','Off-price retail':'Konsumpcja','Convenience':'Konsumpcja',
+  'Restauracje':'Konsumpcja','Restauracje/Fast Food':'Konsumpcja','Restauracje/Franchise':'Konsumpcja',
+  'E-commerce/Cloud':'Konsumpcja','E-commerce Latam':'Konsumpcja',
+  'E-commerce China/Cloud':'Konsumpcja','E-commerce China/Global':'Konsumpcja',
+  'Przemysł':'Przemysł','Przemysł/Automatyka':'Przemysł','Przemysł/Lotnictwo':'Przemysł',
+  'Przemysł/Narzędzia':'Przemysł','Przemysł/Software':'Przemysł',
+  'Przemysł dywersyfikowany':'Przemysł','Automatyka przemysłowa':'Przemysł',
+  'Logistyka':'Przemysł','Logistyka/Dostawy':'Przemysł','Transport LTL':'Przemysł',
+  'Kolej towarowa':'Przemysł','Maszyny budowlane':'Przemysł','Agro/Maszyny':'Przemysł',
+  'Budownictwo':'Przemysł','Narzędzia/Przemysł':'Przemysł','Silniki lotnicze':'Przemysł',
+  'Tabor':'Przemysł','Lotnictwo/Obrona':'Przemysł','Ciężarówki':'Przemysł',
+  'Dystrybucja':'Przemysł','Dystrybucja IT':'Przemysł','Dystrybucja przemysłowa':'Przemysł',
+  'Obrona':'Obronność','Obrona/Lotnictwo':'Obronność','Obrona/Stocznie':'Obronność','Obronność':'Obronność',
+  'Kosmonautyka':'Obronność',
+  'Telekomunikacja':'Telekomunikacja','Kablówka/Internet':'Telekomunikacja',
+  'Kablówka/Media':'Telekomunikacja','Media':'Media','Media/Entertainment/Parks':'Media',
+  'Media/Streaming':'Media','Streaming/Media':'Media','Gaming':'Media',
+  'Gaming/Rockstar':'Media','Kasyna/Gaming':'Media','Turystyka':'Media',
+  'Turystyka online':'Media','Turystyka/Sharing':'Media','Hotele':'Media',
+  'Nieruchomości':'Nieruchomości','REIT/Centra handlowe':'Nieruchomości',
+  'REIT/Self-Storage':'Nieruchomości','REIT/Telecom Wieże':'Nieruchomości',
+  'Deweloperzy':'Nieruchomości',
+  'Chemia':'Chemia','Chemia specjalna':'Chemia','Chemia/Farmacja':'Chemia',
+  'Gazy przemysłowe':'Chemia','Metale':'Chemia','Aluminium':'Chemia',
+};
+function getMacroSector(s){ return MACRO_SECTOR[s] || 'Inne'; }
+
+// ── Render Sector Heatmap ────────────────────
+function renderSectorHeatmap(stocks) {
+  const el = document.getElementById('sector-heatmap');
+  if (!el) return;
+
+  // Group by macro-sector, count stages
+  const sectorMap = {};
+  stocks.forEach(s => {
+    const macro = getMacroSector(s.sector);
+    if (!sectorMap[macro]) sectorMap[macro] = {total:0, s2:0, s4:0};
+    sectorMap[macro].total++;
+    if (s.stage === 2) sectorMap[macro].s2++;
+    if (s.stage === 4) sectorMap[macro].s4++;
+  });
+
+  // Sort by % Faza 2 descending
+  const entries = Object.entries(sectorMap)
+    .filter(([,v]) => v.total >= 2)
+    .map(([name, v]) => ({
+      name,
+      total: v.total,
+      pct2: Math.round(v.s2 / v.total * 100),
+      pct4: Math.round(v.s4 / v.total * 100),
+      s2: v.s2, s4: v.s4
+    }))
+    .sort((a, b) => b.pct2 - a.pct2);
+
+  if (!entries.length) { el.innerHTML = '<div class="sh-empty">Brak danych</div>'; return; }
+
+  const rows = entries.map(e => {
+    // Color: green gradient for high F2, red for high F4
+    const greenPct = e.pct2;
+    const redPct   = e.pct4;
+    const neutralPct = 100 - greenPct - redPct;
+    const label = e.pct2 >= 50 ? `F2: ${e.pct2}%` : e.pct4 >= 50 ? `F4: ${e.pct4}%` : `${e.pct2}%↑`;
+    return `
+    <div class="sh-row">
+      <div class="sh-name" title="${e.name} (${e.total} spółek)">${e.name}</div>
+      <div class="sh-bar-wrap">
+        ${greenPct > 0 ? `<div class="sh-bar" style="width:${greenPct}%;background:linear-gradient(90deg,#00c47a,#00e5a0);position:absolute;left:0;top:0;height:100%;border-radius:4px 0 0 4px;align-items:center;display:flex;padding-left:4px;">
+          ${greenPct >= 15 ? `<span class="sh-bar-label">${greenPct}%</span>` : ''}</div>` : ''}
+        ${redPct > 0 ? `<div style="width:${redPct}%;background:linear-gradient(90deg,#c0392b,#ff4d4d);position:absolute;right:0;top:0;height:100%;border-radius:0 4px 4px 0;"></div>` : ''}
+      </div>
+      <div class="sh-pct" style="color:${e.pct2>=50?'#00e5a0':e.pct4>=50?'#ff4d4d':'var(--muted)'}">${e.pct2}%</div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="sector-heatmap">${rows}</div>
+    <div class="sh-legend">
+      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#00e5a0"></div>Faza 2 Wzrost</div>
+      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#ff4d4d"></div>Faza 4 Spadek</div>
+      <div class="sh-leg-item" style="font-size:9px;color:var(--muted)">% = udział F2 w sektorze</div>
+    </div>`;
+}
+
+// ── Render Top 5 Leaders / Laggards ─────────
+function renderTop5(stocks) {
+  const el = document.getElementById('top5-container');
+  if (!el) return;
+
+  // Score = mtt score (0-8) + bonus for stage2
+  const scored = stocks
+    .filter(s => s.chg && s.price)
+    .map(s => {
+      const chgNum = parseFloat(String(s.chg).replace('%','').replace('+',''));
+      const mttSc  = mttScore(s.mtt);
+      return { ...s, chgNum, mttSc };
+    })
+    .filter(s => !isNaN(s.chgNum));
+
+  const leaders  = [...scored].sort((a,b) => b.chgNum - a.chgNum).slice(0, 5);
+  const laggards = [...scored].sort((a,b) => a.chgNum - b.chgNum).slice(0, 5);
+
+  function makeItem(s) {
+    const sign = s.chgNum >= 0 ? '+' : '';
+    const cls  = s.chgNum >= 0 ? 'top5-up' : 'top5-dn';
+    const stageEmoji = ['','⚪','🟢','🟡','🔴'][s.stage] || '⚫';
+    return `<div class="top5-item" onclick="switchTab('${s.idx}');setTimeout(()=>{const el=document.querySelector('.card[data-ticker=\'${s.ticker.toLowerCase()}\']');if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},300)">
+      <div>
+        <div class="top5-ticker">${stageEmoji} ${s.ticker}</div>
+        <div class="top5-name">${s.name}</div>
+      </div>
+      <div class="top5-right">
+        <div class="top5-chg ${cls}">${sign}${s.chgNum.toFixed(2)}%</div>
+        <div class="top5-score">MTT ${s.mttSc}/8</div>
+      </div>
+    </div>`;
+  }
+
+  el.innerHTML = `
+    <div class="top5-grid">
+      <div>
+        <div class="top5-col-title">🚀 Liderzy dnia</div>
+        <div class="top5-list">${leaders.map(makeItem).join('')}</div>
+      </div>
+      <div>
+        <div class="top5-col-title">📉 Maruderzy dnia</div>
+        <div class="top5-list">${laggards.map(makeItem).join('')}</div>
+      </div>
+    </div>`;
+}
+
 function renderMarketView(mkt){
   const stocks = getMarketStocks(mkt);
   if(!stocks.length) return;
@@ -2678,6 +2893,10 @@ function renderMarketView(mkt){
   alertEl.style.display='block';
   alertEl.className='market-alert '+alertMap[regimeClass];
   alertEl.textContent = alertMsg[regimeClass];
+
+  // ── New panels ───────────────────────────
+  renderSectorHeatmap(stocks);
+  renderTop5(stocks);
 }
 
 
