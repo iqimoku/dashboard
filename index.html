@@ -473,9 +473,11 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   background:rgba(0,229,160,.15);color:var(--s2);
   border:1px solid rgba(0,229,160,.25);
   border-radius:2px;padding:0 3px;
-  margin-left:3px;vertical-align:middle;
+  margin-left:5px;vertical-align:middle;
   letter-spacing:.5px;
+  animation:live-pulse 2s ease-in-out infinite;
 }
+@keyframes live-pulse{0%,100%{opacity:1;}50%{opacity:.5;}}
 
 </style>
 </head>
@@ -2459,7 +2461,7 @@ function renderCard(s){
     <span class="card-hint">↗ szczegóły</span>
     <div class="card-header">
       <div class="ch-info">
-        <div class="c-ticker">${s.ticker}</div>
+        <div class="c-ticker">${s.ticker}${liveData[s.ticker]?'<span class="live-badge">LIVE</span>':''}</div>
         <div class="c-name">${s.name}</div>
         <div class="c-sector">${s.sector}</div>
         <span class="c-idx idx-${s.idx}">${idxName[s.idx]}</span>
@@ -3354,12 +3356,13 @@ function updateCardsWithLiveData() {
         : newPrice.toFixed(2);
       priceEl.textContent = fmt;
       priceEl.className = 'cm-v ' + (newPrice > oldPrice ? 'live-up' : newPrice < oldPrice ? 'live-dn' : 'nu');
-      // Add LIVE badge if not already there
-      if (!metrics[0].querySelector('.live-badge')) {
+      // Add LIVE badge to ticker header if not already there
+      const tickerEl = card.querySelector('.c-ticker');
+      if (tickerEl && !tickerEl.querySelector('.live-badge')) {
         const badge = document.createElement('span');
         badge.className = 'live-badge';
         badge.textContent = 'LIVE';
-        metrics[0].querySelector('.cm-l').after(badge);
+        tickerEl.appendChild(badge);
       }
     }
 
