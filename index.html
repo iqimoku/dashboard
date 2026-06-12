@@ -843,10 +843,6 @@ wig20: [
    action:"buy",anote:"Stop-loss: ~195 PLN",signals:[["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"SAN",name:"Santander Bank PL",sector:"Bankowość",idx:"wig20",price:548.60,chg:"+0.07%",stage:2,ma30w:532.00,matrend:"zwalnia →",vol:"Mieszany",rs:"Neutralna",h52:"-8%",
-   analysis:"<strong>Faza 2 — Kontynuacja hossy.</strong> Santander Bank Polska powyżej MA30W (+3%), -8% od szczytu. Sektor bankowy w sile — wysoka stopa procentowa wspiera wyniki.",
-   action:"caution",anote:"Redukuj przy rally",signals:[["caution","OSTROŻNIE"]],
-   mtt:[true,true,true,true,true,true,false,false]},
 
   {ticker:"KGHM",name:"KGHM",sector:"Metale",idx:"wig20",price:283.50,chg:"+0.32%",stage:2,ma30w:248.00,matrend:"rosnąca ↑",vol:"Wysoki",rs:"Silna",h52:"-6%",
    analysis:"<strong>Beneficjent hossy na miedzi — Faza 2.</strong> 14% powyżej MA30W.",
@@ -913,15 +909,20 @@ wig20: [
    action:"watch",anote:"Za wcześnie na ocenę",signals:[["watch","BAZA/IPO"]],
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"OPL",name:"Orange Polska",sector:"Telekomunikacja",idx:"wig20",price:12.90,chg:"-0.62%",stage:4,ma30w:14.80,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"B. słaba",h52:"-25%",
-   analysis:"<strong>Faza 4 — trend spadkowy.</strong> -13% poniżej opadającej MA30W.",
-   action:"avoid",anote:"Żadnych długich pozycji",signals:[["avoid","UNIKAJ S4"]],
-   mtt:[false,false,false,false,false,false,false,false]},
 
   {ticker:"MBK",name:"mBank",sector:"Bankowość",idx:"wig20",price:1026.50,chg:"+6.13%",stage:2,ma30w:920.00,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"Silna",h52:"+1%",
    analysis:"<strong>BREAKOUT! +6.1% z ogromnym wolumenem.</strong> Wyczyścił rezerwy CHF. Klasyczny S2 acceleration.",
    action:"buy",anote:"Buyable breakout. Stop: ~922 PLN",signals:[["buy","BREAKOUT!"],["buy","KUPUJ S2"]],
    mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"ERS",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:600.20,chg:"-1.12%",stage:2,ma30w:540.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Silna",h52:"-5%",
+   analysis:"<strong>Faza 2 — solidny trend wzrostowy.</strong> Erste Group Bank Austria, notowany na GPW. Kurs ~11% powyżej rosnącej MA30W. Beneficjent wysokich stóp procentowych w CEE.",
+   action:"buy",anote:"Stop-loss: ~542 PLN",signals:[["buy","KUPUJ S2"]],
+   mtt:[true,true,true,true,true,true,true,false]},
+  {ticker:"TAU",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.29,chg:"-1.13%",stage:1,ma30w:9.60,matrend:"spłaszcza →",vol:"Niski",rs:"Słaba",h52:"-22%",
+   analysis:"<strong>Faza 1 — konsolidacja przy wieloletnich dołkach.</strong> Kurs poniżej spłaszczonej MA30W. Sektor energetyczny pod presją transformacji. Brak impulsu do wzrostu.",
+   action:"watch",anote:"Czekaj na przebicie MA30W",signals:[["watch","OBSERWUJ"]],
+   mtt:[false,false,false,false,false,false,false,false]},
 ],
 
 mwig40: [
@@ -2740,7 +2741,7 @@ const TV_MAP = {
   'KGHM':'GPW:KGH',  'ALR':'GPW:ALR',   'BDX':'GPW:BDX',   'MDV':'GPW:MDV',
   'CDR':'GPW:CDR',   'KRU':'GPW:KRU',   'GKY':'GPW:KTY',   'LPP':'GPW:LPP',
   'DNP':'GPW:DNP',   'ALE':'GPW:ALE',   'PCO':'GPW:PCO',   'ZAB':'GPW:ZAB',
-  'MBK':'GPW:MBK',   'SAN':'GPW:SAN',  'PGE':'GPW:PGE',
+  'MBK':'GPW:MBK',   'TAU':'GPW:TAU',  'PGE':'GPW:PGE',
   // ── mWIG40 ─────────────────────────────────────────
   'ABE':'GPW:ABPL',   'ACP':'GPW:ASSECOPOL',   'APR':'GPW:AUTOPARTN',   'ASB':'GPW:ASBIS',
   'ASE':'GPW:ASSECOSEE',   'ATT':'GPW:GRUPAAZOTY',   'BFT':'GPW:BENEFIT',   'BHW':'GPW:HANDLOWY',
