@@ -454,18 +454,55 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 
 /* ══ LIVE DATA REFRESH ══ */
 .btn-refresh{
-  background:linear-gradient(135deg,rgba(0,229,160,.15),rgba(0,229,160,.08));
-  border:1px solid rgba(0,229,160,.35);
-  color:var(--s2);
-  padding:6px 16px;
-  border-radius:6px;font-size:11px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,
+    rgba(0,229,160,.22) 0%,
+    rgba(0,200,140,.16) 40%,
+    rgba(0,229,160,.24) 70%,
+    rgba(52,211,153,.16) 100%
+  );
+  border:1px solid rgba(0,229,160,.45);
+  color:#00e5a0;
+  padding:6px 18px;
+  border-radius:7px;
+  font-size:11px;
   font-family:'Space Mono',monospace;
-  cursor:pointer;transition:all .2s;
-  display:flex;align-items:center;gap:6px;
+  font-weight:700;
+  letter-spacing:.5px;
+  cursor:pointer;
+  transition:all .2s;
+  display:flex;align-items:center;gap:7px;
   white-space:nowrap;
+  box-shadow:0 0 14px rgba(0,229,160,.15),inset 0 1px 0 rgba(255,255,255,.07);
+  text-shadow:0 0 10px rgba(0,229,160,.5);
 }
-.btn-refresh:hover{background:rgba(0,229,160,.2);box-shadow:0 0 16px rgba(0,229,160,.2);}
-.btn-refresh:disabled{opacity:.5;cursor:not-allowed;}
+.btn-refresh::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(105deg,
+    transparent 30%,
+    rgba(255,255,255,.07) 50%,
+    transparent 70%
+  );
+  background-size:200% 100%;
+  animation:shimmer 2.5s ease-in-out infinite;
+  pointer-events:none;
+}
+.btn-refresh:hover{
+  background:linear-gradient(135deg,
+    rgba(0,229,160,.35) 0%,
+    rgba(0,200,140,.28) 40%,
+    rgba(0,229,160,.38) 70%,
+    rgba(52,211,153,.28) 100%
+  );
+  border-color:rgba(0,229,160,.7);
+  color:#fff;
+  box-shadow:0 0 22px rgba(0,229,160,.3),inset 0 1px 0 rgba(255,255,255,.1);
+  text-shadow:0 0 14px rgba(0,229,160,.8);
+}
+.btn-refresh:disabled{opacity:.45;cursor:not-allowed;animation:none;}
 .btn-refresh.loading .rf-icon{animation:rf-spin .8s linear infinite;}
 @keyframes rf-spin{to{transform:rotate(360deg);}}
 .rf-icon{font-size:13px;display:inline-block;}
