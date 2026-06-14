@@ -80,7 +80,8 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .h-eyebrow{font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:5px;}
 .h-title{font-size:28px;font-weight:800;line-height:1;background:linear-gradient(135deg,#fff 20%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .h-sub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5;}
-.h-badges{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;}
+.h-badges{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;}
+.rf-status{font-size:10px;font-family:'Space Mono',monospace;color:#00e5a0;white-space:nowrap;}
 .h-badge{padding:6px 14px;border-radius:7px;font-size:11px;font-family:'Space Mono',monospace;font-weight:700;}
 .hb-ws{background:rgba(0,229,160,.12);color:var(--s2);border:1px solid rgba(0,229,160,.25);}
 .hb-mtt{background:rgba(167,139,250,.12);color:var(--accent);border:1px solid rgba(167,139,250,.25);}
@@ -468,7 +469,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .btn-refresh.loading .rf-icon{animation:rf-spin .8s linear infinite;}
 @keyframes rf-spin{to{transform:rotate(360deg);}}
 .rf-icon{font-size:13px;display:inline-block;}
-.rf-status{font-size:9px;color:var(--muted);font-family:'Space Mono',monospace;white-space:nowrap;}
+
 
 /* Live price highlight on card */
 .cm-v.live-up{
@@ -798,7 +799,12 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Czerwiec 2026</div>
   </div>
   <div class="h-badges">
-    <div class="ctrl-update-badge">✓ Aktualizacja: 12 czerwca 2026</div>
+    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 12 czerwca 2026</div>
+    <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()" title="Pobierz aktualne kursy i wskaźniki z TradingView">
+      <span class="rf-icon" id="rfIcon">⟳</span>
+      <span id="rfLabel">Odśwież live</span>
+    </button>
+    <span class="rf-status" id="rfStatus"></span>
     <button class="btn-method" onclick="openMethodology()">📖 Metodologia</button>
   </div>
 </div>
@@ -854,11 +860,6 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
       <span class="search-icon">🔍</span>
       <input type="text" class="search-input" id="search" placeholder="Szukaj spółki..." oninput="onSearch()">
     </div>
-    <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()">
-      <span class="rf-icon" id="rfIcon">⟳</span>
-      <span id="rfLabel">Odśwież live</span>
-    </button>
-    <span class="rf-status" id="rfStatus"></span>
   </div>
 </div>
 
