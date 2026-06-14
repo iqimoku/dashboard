@@ -371,6 +371,121 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .market-view{display:none;padding:20px 24px 40px;}
 .market-view.active{display:block;}
 
+/* ── SPÓŁKA TYGODNIA ── */
+.tab-pick-btn {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(245,166,35,.18) 0%,
+    rgba(251,191,36,.14) 40%,
+    rgba(245,166,35,.20) 70%,
+    rgba(234,179,8,.12) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(245,166,35,.5) !important;
+  color: #fbbf24 !important;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  letter-spacing: .3px;
+}
+.tab-pick-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.06) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+.tab-pick-btn:hover { color: #fde68a !important; }
+.tab-pick-btn.active {
+  background: linear-gradient(135deg,
+    rgba(245,166,35,.35) 0%,
+    rgba(251,191,36,.28) 40%,
+    rgba(245,166,35,.38) 70%,
+    rgba(234,179,8,.25) 100%
+  ) !important;
+  border-bottom-color: #f5a623 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(245,166,35,.7);
+  box-shadow: 0 0 18px rgba(245,166,35,.2), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.pick-view { display:none; padding:24px 36px 48px; max-width:1100px; margin:0 auto; }
+.pick-view.active { display:block; }
+.pick-header { margin-bottom:28px; }
+.pick-eyebrow { font-family:'Space Mono',monospace; font-size:9px; color:#f5a623; letter-spacing:4px; text-transform:uppercase; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
+.pick-eyebrow::after { content:''; flex:1; height:1px; background:rgba(245,166,35,.2); }
+.pick-title { font-size:22px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.pick-subtitle { font-size:13px; color:var(--muted); }
+.pick-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(480px,1fr)); gap:20px; }
+.pick-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  transition:transform .2s, box-shadow .2s;
+}
+.pick-card:hover { transform:translateY(-3px); }
+.pick-card.ph2 { border-top:3px solid var(--s2); }
+.pick-card.ph2:hover { box-shadow:0 8px 32px rgba(0,229,160,.12); }
+.pick-card.ph3 { border-top:3px solid var(--s3); }
+.pick-card.ph3:hover { box-shadow:0 8px 32px rgba(245,166,35,.12); }
+.pick-card.ph4 { border-top:3px solid var(--s4); }
+
+.pick-top { padding:18px 20px 14px; display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.pick-id { flex:1; min-width:0; }
+.pick-ticker { font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:3px; margin-bottom:3px; }
+.pick-name { font-size:18px; font-weight:800; color:var(--text); margin-bottom:2px; }
+.pick-meta { font-size:11px; color:var(--muted); }
+.pick-badges { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.pick-phase-badge { display:flex; align-items:center; gap:6px; }
+.pick-phase-num { width:40px; height:40px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:18px; font-weight:800; }
+.ph2 .pick-phase-num { background:rgba(0,229,160,.15); color:var(--s2); }
+.ph3 .pick-phase-num { background:rgba(245,166,35,.15); color:var(--s3); }
+.ph4 .pick-phase-num { background:rgba(255,77,77,.15); color:var(--s4); }
+.pick-sub-badge { font-family:'Space Mono',monospace; font-size:12px; font-weight:700; padding:4px 10px; border-radius:6px; border:1px solid; }
+.ph2 .pick-sub-badge { background:rgba(0,229,160,.12); color:var(--s2); border-color:rgba(0,229,160,.3); }
+.ph3 .pick-sub-badge { background:rgba(245,166,35,.12); color:var(--s3); border-color:rgba(245,166,35,.3); }
+.ph4 .pick-sub-badge { background:rgba(255,77,77,.12); color:var(--s4); border-color:rgba(255,77,77,.3); }
+
+.pick-price-row { padding:0 20px 14px; display:flex; align-items:baseline; gap:10px; }
+.pick-price { font-family:'Space Mono',monospace; font-size:26px; font-weight:800; }
+.ph2 .pick-price { color:var(--s2); }
+.ph3 .pick-price { color:var(--s3); }
+.ph4 .pick-price { color:var(--s4); }
+.pick-cur { font-size:12px; color:var(--muted); font-family:'Space Mono',monospace; }
+.pick-range { font-size:11px; color:var(--muted); font-family:'Space Mono',monospace; margin-left:auto; }
+
+.pick-thesis { padding:14px 20px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.pick-thesis-label { font-family:'Space Mono',monospace; font-size:8px; color:#f5a623; letter-spacing:3px; text-transform:uppercase; margin-bottom:7px; }
+.pick-thesis-text { font-size:13px; color:#c0cce0; line-height:1.75; }
+
+.pick-levels { padding:14px 20px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px; border-bottom:1px solid var(--border); }
+.pick-level { background:var(--surface2); border-radius:7px; padding:8px 10px; }
+.pick-level-label { font-size:8px; font-family:'Space Mono',monospace; color:var(--muted); letter-spacing:2px; text-transform:uppercase; margin-bottom:4px; }
+.pick-level-val { font-size:14px; font-weight:700; font-family:'Space Mono',monospace; }
+.pick-level.support .pick-level-val { color:var(--s2); }
+.pick-level.resistance .pick-level-val { color:var(--s3); }
+.pick-level.stop .pick-level-val { color:var(--s4); }
+
+.pick-mtt { padding:14px 20px; border-bottom:1px solid var(--border); }
+.pick-mtt-label { font-family:'Space Mono',monospace; font-size:8px; color:var(--accent); letter-spacing:3px; text-transform:uppercase; margin-bottom:8px; }
+.pick-mtt-dots { display:flex; gap:4px; flex-wrap:wrap; }
+.pick-mtt-dot { display:flex; align-items:center; gap:5px; font-size:10px; color:var(--muted); background:var(--surface2); border-radius:4px; padding:3px 7px; }
+.pick-mtt-dot.pass { color:var(--s2); background:rgba(0,229,160,.08); }
+.pick-mtt-dot.fail { color:var(--muted); text-decoration:line-through; opacity:.5; }
+.pick-mtt-dot .dot-icon { font-size:8px; }
+
+.pick-catalyst { padding:14px 20px; }
+.pick-catalyst-label { font-family:'Space Mono',monospace; font-size:8px; color:var(--accent); letter-spacing:3px; text-transform:uppercase; margin-bottom:7px; }
+.pick-catalyst-list { display:flex; flex-direction:column; gap:5px; }
+.pick-catalyst-item { display:flex; gap:8px; align-items:flex-start; font-size:12px; color:#a0b0c8; line-height:1.5; }
+.pick-catalyst-dot { width:5px; height:5px; border-radius:50%; background:#f5a623; flex-shrink:0; margin-top:5px; }
+
+.pick-footer { padding:10px 20px 14px; display:flex; justify-content:space-between; align-items:center; }
+.pick-date { font-size:10px; font-family:'Space Mono',monospace; color:var(--muted); }
+.pick-tv-link { font-size:10px; font-family:'Space Mono',monospace; color:var(--accent); text-decoration:none; border:1px solid rgba(167,139,250,.25); padding:3px 9px; border-radius:4px; }
+.pick-tv-link:hover { background:rgba(167,139,250,.1); }
+
 /* Regime Label */
 .regime-banner{
   border-radius:12px;padding:20px 24px;margin-bottom:24px;
@@ -836,7 +951,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Czerwiec 2026</div>
   </div>
   <div class="h-badges">
-    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 12 czerwca 2026</div>
+    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 14 czerwca 2026</div>
     <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()" title="Pobierz aktualne kursy i wskaźniki z TradingView">
       <span class="rf-icon" id="rfIcon">⟳</span>
       <span id="rfLabel">Odśwież live</span>
@@ -852,6 +967,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
+  <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -933,6 +1049,154 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   </div>
 </div>
 <div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Czerwiec 2026. Kliknij spółkę po szczegóły.</div>
+
+<!-- ══ SPÓŁKA TYGODNIA ══ -->
+<div class="pick-view" id="pick-view">
+  <div class="pick-header">
+    <div class="pick-eyebrow">Analiza tygodnia · 14 czerwca 2026</div>
+    <div class="pick-title">🎯 Spółka Tygodnia</div>
+    <div class="pick-subtitle">Jedna lub dwie spółki pod lupą — faza Weinsteina, kluczowe poziomy i teza inwestycyjna. Aktualizacja co niedzielę.</div>
+  </div>
+  <div class="pick-grid">
+
+    <!-- ── KGHM ── -->
+    <div class="pick-card ph2">
+      <div class="pick-top">
+        <div class="pick-id">
+          <div class="pick-ticker">KGH · WIG20 🇵🇱</div>
+          <div class="pick-name">KGHM Polska Miedź</div>
+          <div class="pick-meta">Miedź · Srebro · Górnictwo · GPW Warszawa</div>
+        </div>
+        <div class="pick-badges">
+          <div class="pick-phase-badge">
+            <div class="pick-phase-num">2</div>
+          </div>
+          <div class="pick-sub-badge">2B</div>
+        </div>
+      </div>
+      <div class="pick-price-row">
+        <div class="pick-price" id="pick-kgh-price">360,85</div>
+        <div class="pick-cur">PLN</div>
+        <div class="pick-range">52T: 115 – 396 PLN</div>
+      </div>
+      <div class="pick-thesis">
+        <div class="pick-thesis-label">Teza inwestycyjna</div>
+        <div class="pick-thesis-text">
+          KGHM po spektakularnym wzroście +225% od wiosny 2025 konsoliduje się w Fazie 2B — trend jest dojrzały, ale MA30W nadal rośnie. Szukam pullbacku do strefy 330–345 PLN (okolice SMA50) jako okazji do dokupienia z ryzykiem pod SMA150. Popyt strukturalny na miedź (centra danych AI, elektromobilność, transformacja energetyczna) pozostaje niezmienny. Spółka to jeden z największych producentów srebra na świecie — dodatkowy argument przy słabym USD.
+        </div>
+      </div>
+      <div class="pick-levels">
+        <div class="pick-level support">
+          <div class="pick-level-label">Wsparcie</div>
+          <div class="pick-level-val">330–345</div>
+        </div>
+        <div class="pick-level resistance">
+          <div class="pick-level-label">Opór / Cel</div>
+          <div class="pick-level-val">396 → 440</div>
+        </div>
+        <div class="pick-level stop">
+          <div class="pick-level-label">Stop-loss</div>
+          <div class="pick-level-val">&lt; 310</div>
+        </div>
+      </div>
+      <div class="pick-mtt">
+        <div class="pick-mtt-label">Minervini Trend Template</div>
+        <div class="pick-mtt-dots">
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA150/200</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA150 &gt; MA200</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA50</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> &lt;25% od szczytu 52T</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
+        </div>
+      </div>
+      <div class="pick-catalyst">
+        <div class="pick-catalyst-label">Katalizatory</div>
+        <div class="pick-catalyst-list">
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Jefferies: silny popyt na miedź z centrów danych i infrastruktury AI w USA — rekomendacja „kupuj"</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Strukturalny deficyt podaży miedzi na rynku globalnym przez 2027+</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Wyniki Q1 2026 powyżej oczekiwań, raport półroczny: 19 sierpnia 2026</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>GPW bije rekordy — sentyment do polskich blue chips pozytywny</div>
+        </div>
+      </div>
+      <div class="pick-footer">
+        <div class="pick-date">Analiza: 14 czerwca 2026</div>
+        <a class="pick-tv-link" href="https://pl.tradingview.com/symbols/GPW-KGH/" target="_blank" rel="noopener">↗ TradingView</a>
+      </div>
+    </div>
+
+    <!-- ── SPOTIFY ── -->
+    <div class="pick-card ph3">
+      <div class="pick-top">
+        <div class="pick-id">
+          <div class="pick-ticker">SPOT · NYSE 🇺🇸</div>
+          <div class="pick-name">Spotify Technology</div>
+          <div class="pick-meta">Streaming · Podcasty · SaaS · Nowy Jork</div>
+        </div>
+        <div class="pick-badges">
+          <div class="pick-phase-badge">
+            <div class="pick-phase-num">3</div>
+          </div>
+          <div class="pick-sub-badge">3B</div>
+        </div>
+      </div>
+      <div class="pick-price-row">
+        <div class="pick-price" id="pick-spot-price">482,00</div>
+        <div class="pick-cur">USD</div>
+        <div class="pick-range">52T: 405 – 785 USD</div>
+      </div>
+      <div class="pick-thesis">
+        <div class="pick-thesis-label">Teza inwestycyjna</div>
+        <div class="pick-thesis-text">
+          Spotify jest w pułapce narracyjnej — przestało być spółką wzrostową (761M MAU, gdzie dalej?), ale rynek jeszcze nie wycenia go w pełni jako spółkę marżową. Wyniki Q2 (29 lipca) mogą powtórzyć schemat z Q1: EPS pobije szacunki, ale przyrost MAU rozczaruje — i akcja dostanie po głowie niezależnie od marży. To klasyczny <strong>beat and drop</strong>. Faza 3B z ceną poniżej MA30W (~560 USD) sugeruje że duże pieniądze już wyszły ze szczytu 785 USD. Nie kupuję przed wynikami — czekam na reakcję rynku i ewentualną Fazę 1 jako bazę do nowego cyklu.
+        </div>
+      </div>
+      <div class="pick-levels">
+        <div class="pick-level support">
+          <div class="pick-level-label">Obserwuj po wynikach</div>
+          <div class="pick-level-val">400–420</div>
+        </div>
+        <div class="pick-level resistance">
+          <div class="pick-level-label">Opór / MA30W</div>
+          <div class="pick-level-val">~560</div>
+        </div>
+        <div class="pick-level stop">
+          <div class="pick-level-label">Scenariusz F4</div>
+          <div class="pick-level-val">&lt; 405</div>
+        </div>
+      </div>
+      <div class="pick-mtt">
+        <div class="pick-mtt-label">Minervini Trend Template</div>
+        <div class="pick-mtt-dots">
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA150/200</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA150 &gt; MA200</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA50 &gt; MA150</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA50</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> &lt;25% od szczytu 52T</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
+        </div>
+      </div>
+      <div class="pick-catalyst">
+        <div class="pick-catalyst-label">Ryzyka i katalizatory</div>
+        <div class="pick-catalyst-list">
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #1 — beat and drop:</strong> Q2 wyniki 29 lipca — EPS może pobić, ale słaby przyrost MAU wystarczy żeby akcja zanurkowała (schemat z Q1 2026: +17% EPS → −10% w premarkecie)</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #2 — insiderzy sprzedawali:</strong> duże transakcje dyrektorów maj–czerwiec 2026, put volume podwyższony</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Szansa:</strong> AI DJ feature (94M userów) + livestreaming koncertów mogą zaskoczyć jako nowy strumień ARPU którego rynek jeszcze nie wycenia</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Strategia:</strong> nie kupuję przed wynikami — czekam na Fazę 1 (baza) po ewentualnym zejściu w Fazę 4 jako punkt wejścia do nowego cyklu</div>
+        </div>
+      </div>
+      <div class="pick-footer">
+        <div class="pick-date">Analiza: 14 czerwca 2026</div>
+        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NYSE-SPOT/" target="_blank" rel="noopener">↗ TradingView</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <!-- ══ STAN RYNKU ══ -->
 <div class="market-view" id="market-view">
@@ -1919,7 +2183,10 @@ dax: [
    mtt:[false,false,false,false,false,false,false,false]},
 
   {ticker:"BAX",name:"Baxter International",sector:"MedTech/Szpitale",idx:"nyse",weight:"0.1%",price:20.645,chg:"+0.76%",stage:3,ma30w:18.77,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"B. słaba",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},]
+   mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"SPOT",name:"Spotify Technology",sector:"Streaming/Podcasty",idx:"nyse",weight:"0.5%",price:482.00,chg:"-3.36%",stage:3,ma30w:560.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Neutralna",h52:"-38%",
+   mtt:[false,false,true,false,false,true,false,false]},]
 
 }; // end STOCKS
 
@@ -2206,8 +2473,8 @@ function switchTab(tab){
   if(document.getElementById('fall')) document.getElementById('fall').classList.add('active');
   if(document.getElementById('fmtt')) document.getElementById('fmtt').classList.remove('active');
   if(document.getElementById('fmtt8')) document.getElementById('fmtt8').classList.remove('active');
-  // Hide market view, show stock grid
   document.getElementById('market-view').classList.remove('active');
+  document.getElementById('pick-view').classList.remove('active');
   document.getElementById('ctrl-bar').style.display='';
   document.getElementById('legend-bar').style.display='';
   document.getElementById('grid').style.display='';
@@ -2216,7 +2483,6 @@ function switchTab(tab){
   document.getElementById('summary').style.display='';
   buildSectorSelect();
   renderGrid();
-  // Apply live badges/prices to newly rendered cards if data already fetched
   if (Object.keys(liveData).length > 0) updateCardsWithLiveData();
 }
 
@@ -2228,15 +2494,37 @@ let currentMarketView = 'wig20';
 function switchTabMarket(){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.getElementById('tab-market').classList.add('active');
-  // Hide stock grid, show market view
   document.getElementById('ctrl-bar').style.display='none';
   document.getElementById('legend-bar').style.display='none';
   document.getElementById('grid').style.display='none';
   document.getElementById('coffee-bar').style.display='none';
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('summary').style.display='none';
+  document.getElementById('pick-view').classList.remove('active');
   document.getElementById('market-view').classList.add('active');
   renderMarketView(currentMarketView);
+}
+
+function switchTabPick(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-pick').classList.add('active');
+  document.getElementById('ctrl-bar').style.display='none';
+  document.getElementById('legend-bar').style.display='none';
+  document.getElementById('grid').style.display='none';
+  document.getElementById('coffee-bar').style.display='none';
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('summary').style.display='none';
+  document.getElementById('market-view').classList.remove('active');
+  document.getElementById('pick-view').classList.add('active');
+  // Update prices from liveData if available
+  if (liveData['KGH'] && liveData['KGH'].price) {
+    const el = document.getElementById('pick-kgh-price');
+    if (el) el.textContent = liveData['KGH'].price.toLocaleString('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2});
+  }
+  if (liveData['SPOT'] && liveData['SPOT'].price) {
+    const el = document.getElementById('pick-spot-price');
+    if (el) el.textContent = liveData['SPOT'].price.toFixed(2);
+  }
 }
 
 function setMarketView(mkt, btn){
@@ -2935,6 +3223,7 @@ const TV_MAP = {
   'KMI':'NYSE:KMI',   'OKE':'NYSE:OKE',        'SRE':'NYSE:SRE',  'FRC2':'NYSE:BEN',
   'SWK':'NYSE:SWK',   'HPQ':'NYSE:HPQ',        'CHTR':'NYSE:CHTR','SAP2':'NYSE:SAP',
   'PFE':'NYSE:PFE',   'WBD2':'NYSE:WBD',       'MSTR':'NYSE:MSTR',
+  'SPOT':'NYSE:SPOT',
 }
 
 // TV Screener columns we want
@@ -3264,7 +3553,7 @@ async function refreshLiveData() {
     setTimeout(() => {
       if (lbl)    lbl.textContent = 'Odśwież live';
       if (icon)   icon.textContent = '⟳';
-      if (badge)  { badge.textContent = '✓ Aktualizacja: 12 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
+      if (badge)  { badge.textContent = '✓ Aktualizacja: 14 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
       if (mktIcon){ mktIcon.textContent = '⟳'; }
       if (mktBtn) { mktBtn.style.color = ''; mktBtn.style.opacity = '1'; }
     }, 3000);
