@@ -2233,11 +2233,6 @@ function renderCard(s){
   const { sub, extraClass: subExtra } = calcSubStage(subData);
 
   // MTT: użyj live danych jeśli dostępne, fallback na s.mtt (startowo all false = szare)
-  // Derive high52 from static h52 field (TV nie zwraca 52W data przez API)
-  if (ld && ld.high52 == null && s.h52) {
-    const _pct = parseFloat(s.h52.replace('%',''));
-    if (!isNaN(_pct)) ld.high52 = (ld.price || s.price) / (1 + _pct / 100);
-  }
   let mttArr = s.mtt;
   if (ld && ld.price != null && ld.sma200 != null && ld.sma150 != null && ld.sma50 != null) {
     const p = ld.price;
@@ -3451,31 +3446,116 @@ let refreshInProgress = false;
 
 
 // ══════════════════════════════════════════════════
-// 52W HIGH/LOW — wyliczane z pola h52 w danych
-// Stooq i Yahoo blokują CORS z github.io
-// h52 = "% poniżej szczytu 52W" np. "-18%"
-// high52 = price / (1 + h52_pct/100)
+// FETCH 52W HIGH/LOW — Stooq (GPW) + Yahoo (US/DE)
 // ══════════════════════════════════════════════════
 
-async function fetchAll52W(tickers) {
-  // Zamiast external API (CORS blocked) — wyliczamy high52 z pola h52
-  let derived = 0;
-  ['wig20','mwig40','dax','ndx','nyse'].forEach(tab => {
-    (STOCKS[tab] || []).forEach(s => {
-      const d = liveData[s.ticker];
-      if (!d) return;
-      if (d.high52 == null && s.h52) {
-        const pct = parseFloat(s.h52.replace('%',''));
-        if (!isNaN(pct)) {
-          d.high52 = (d.price || s.price) / (1 + pct / 100);
-          derived++;
-        }
-      }
+// Mapa ticker → symbol Stooq dla polskich spółek (GPW)
+const STOOQ_MAP = {};
+Object.keys(TV_MAP).forEach(t => {
+  const tv = TV_MAP[t];
+  if (tv && tv.startsWith('GPW:')) {
+    // Stooq używa formatu: ticker.pl (małe litery)
+    const sym = tv.split(':')[1].toLowerCase();
+    STOOQ_MAP[t] = sym + '.pl';
+  }
+});
+
+// Mapa ticker → Yahoo symbol dla US/DE
+const YAHOO_MAP = {};
+Object.keys(TV_MAP).forEach(t => {
+  const tv = TV_MAP[t];
+  if (!tv) return;
+  const [exch, sym] = tv.split(':');
+  if (exch === 'NASDAQ' || exch === 'NYSE') {
+    YAHOO_MAP[t] = sym; // np. AAPL, NVDA
+  } else if (exch === 'XETR') {
+    YAHOO_MAP[t] = sym + '.DE'; // np. SAP.DE
+  }
+});
+
+async function fetch52WStooq(ticker) {
+  // Stooq zwraca CSV z danymi dziennymi — bierzemy max/min z ostatnich 52 tygodni
+  const sym = STOOQ_MAP[ticker];
+  if (!sym) return null;
+  try {
+    // d=d (dzienne), l=365 (ostatnie 365 wierszy)
+    const url = `https://stooq.pl/q/d/l/?s=${sym}&i=d`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const text = await res.text();
+    const lines = text.trim().split('\n').slice(1); // pomijamy nagłówek
+    if (lines.length < 2) return null;
+    // CSV: Date,Open,High,Low,Close,Volume
+    // Bierzemy ostatnie 252 sesje (~1 rok)
+    const recent = lines.slice(-252);
+    let high = -Infinity, low = Infinity;
+    recent.forEach(line => {
+      const parts = line.split(',');
+      if (parts.length < 5) return;
+      const h = parseFloat(parts[2]);
+      const l = parseFloat(parts[3]);
+      if (!isNaN(h)) high = Math.max(high, h);
+      if (!isNaN(l))  low  = Math.min(low, l);
     });
-  });
-  console.log(`📅 52W: ${derived} high52 wyliczonych z h52 (brak CORS dla Stooq/Yahoo)`);
+    if (high === -Infinity || low === Infinity) return null;
+    return { high52: high, low52: low };
+  } catch(e) { return null; }
 }
 
+async function fetch52WYahoo(ticker) {
+  const sym = YAHOO_MAP[ticker];
+  if (!sym) return null;
+  try {
+    // Yahoo Finance v8 — dane roczne
+    const now = Math.floor(Date.now() / 1000);
+    const year_ago = now - 365 * 24 * 3600;
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${sym}?period1=${year_ago}&period2=${now}&interval=1d`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const result = json?.chart?.result?.[0];
+    if (!result) return null;
+    const highs = result.indicators?.quote?.[0]?.high || [];
+    const lows  = result.indicators?.quote?.[0]?.low  || [];
+    const high52 = Math.max(...highs.filter(v => v != null));
+    const low52  = Math.min(...lows.filter(v => v != null));
+    if (!isFinite(high52) || !isFinite(low52)) return null;
+    return { high52, low52 };
+  } catch(e) { return null; }
+}
+
+async function fetchAll52W(tickers) {
+  // Rozdziel na GPW i resztę, pobierz równolegle po 10
+  const gpw   = tickers.filter(t => STOOQ_MAP[t]);
+  const other = tickers.filter(t => YAHOO_MAP[t]);
+
+  console.log(`📅 52W fetch: ${gpw.length} GPW (Stooq) + ${other.length} US/DE (Yahoo)`);
+
+  const CHUNK = 10;
+  async function runChunked(arr, fn) {
+    for (let i = 0; i < arr.length; i += CHUNK) {
+      const chunk = arr.slice(i, i + CHUNK);
+      const results = await Promise.allSettled(chunk.map(t => fn(t)));
+      results.forEach((r, j) => {
+        if (r.status === 'fulfilled' && r.value) {
+          const t = chunk[j];
+          if (!liveData[t]) liveData[t] = {};
+          liveData[t].high52 = r.value.high52;
+          liveData[t].low52  = r.value.low52;
+        }
+      });
+    }
+  }
+
+  await Promise.all([
+    runChunked(gpw,   fetch52WStooq),
+    runChunked(other, fetch52WYahoo),
+  ]);
+
+  // Zlicz ile udało się pobrać
+  const ok = tickers.filter(t => liveData[t]?.high52 != null).length;
+  console.log(`📅 52W fetch done: ${ok}/${tickers.length} spółek`);
+}
 
 async function refreshLiveData() {
   if (refreshInProgress) return;
@@ -3574,6 +3654,15 @@ async function refreshLiveData() {
 
     // Równocześnie aktualizuj to co już mamy (bez 52W)
     syncAllStocksWithLiveData();
+
+    // DEBUG 52W — usuń po teście
+    console.log('=== 52W DEBUG ===');
+    ['NVDA','AAPL','JPM','SAP','RHM','PKN','PKO'].forEach(t => {
+      const d = liveData[t];
+      if (!d) { console.log(t + ': brak'); return; }
+      console.log(t + ': high52=' + d.high52 + ' low52=' + d.low52 + ' price=' + d.price);
+    });
+
     updateCardsWithLiveData();
 
     lastRefresh = new Date();
@@ -3627,11 +3716,6 @@ function syncAllStocksWithLiveData() {
       if (d.chg != null) s.chg = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
       const newStage = calcStage(d);
       if (newStage) s.stage = newStage;
-      // Derive high52 from static h52 field (TV nie zwraca 52W data przez API)
-      if (d.high52 == null && s.h52) {
-        const _pct = parseFloat(s.h52.replace('%',''));
-        if (!isNaN(_pct)) d.high52 = (d.price || s.price) / (1 + _pct / 100);
-      }
       // MTT recalc w s.mtt — renderCard go odczyta przy kolejnym renderGrid()
       if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null) {
         const p = d.price;
