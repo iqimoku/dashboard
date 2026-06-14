@@ -2232,11 +2232,27 @@ function renderCard(s){
   };
   const { sub, extraClass: subExtra } = calcSubStage(subData);
 
-  const score=mttScore(s.mtt);
+  // MTT: użyj live danych jeśli dostępne, fallback na s.mtt (startowo all false = szare)
+  let mttArr = s.mtt;
+  if (ld && ld.price != null && ld.sma200 != null && ld.sma150 != null && ld.sma50 != null && ld.high52 != null && ld.low52 != null) {
+    const p = ld.price;
+    mttArr = [
+      p > ld.sma150 && p > ld.sma200,
+      ld.sma150 > ld.sma200,
+      true,
+      ld.sma50 > ld.sma150 && ld.sma50 > ld.sma200,
+      p > ld.sma50,
+      ld.low52 > 0 && p >= ld.low52 * 1.25,
+      ld.high52 > 0 && p >= ld.high52 * 0.75,
+      ld.rsi != null && ld.rsi >= 70,
+    ];
+    s.mtt = mttArr; // zapisz żeby filtry MTT działały poprawnie
+  }
+  const score=mttScore(mttArr);
   const col=mttColor(score);
   const cls=mttScoreClass(score);
   const pct=mttFillPct(score);
-  const dots=s.mtt.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
+  const dots=mttArr.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
   const cur=currency[s.idx];
   const mttTag=score===8?`<span class="stag tag-mtt">✦ MTT 8/8</span>`:score>=6?`<span class="stag tag-mtt">${score}/8 MTT</span>`:'';
 
@@ -3284,9 +3300,8 @@ async function fetchTVBatch(market, tvTickers) {
   const realMarket = baseMarket(market);
   const tvUrl = `https://scanner.tradingview.com/${realMarket}/scan`;
 
-  // Strategy 1: Direct POST bez Content-Type
-  // TV blokuje Content-Type: application/json w preflight z github.io
-  // Bez headera przeglądarka wysyla "simple request" (text/plain) — TV to akceptuje
+  // Bez Content-Type — przeglądarka wysyła "simple request" bez preflight
+  // Content-Type: application/json triggeruje preflight który TV blokuje z github.io
   try {
     const res = await fetch(tvUrl, {
       method: 'POST',
@@ -3296,14 +3311,10 @@ async function fetchTVBatch(market, tvTickers) {
     if (res.ok) {
       const json = await res.json();
       const data = json.data;
-      if (Array.isArray(data) && data.length > 0) {
-        console.log(`✓ TV direct [${realMarket}]: ${data.length} tickers`);
-        return data;
-      }
+      if (Array.isArray(data) && data.length > 0) return data;
     }
-  } catch(e) { console.log(`✗ TV direct [${realMarket}]:`, e.message); }
+  } catch(e) {}
 
-  // Strategy 2: corsproxy.io bez Content-Type
   try {
     const res = await fetch(`https://corsproxy.io/?url=${encodeURIComponent(tvUrl)}`, {
       method: 'POST',
@@ -3313,16 +3324,12 @@ async function fetchTVBatch(market, tvTickers) {
     if (res.ok) {
       const json = await res.json();
       const data = json.data;
-      if (Array.isArray(data) && data.length > 0) {
-        console.log(`✓ corsproxy [${realMarket}]: ${data.length} tickers`);
-        return data;
-      }
+      if (Array.isArray(data) && data.length > 0) return data;
     }
-  } catch(e) { console.log(`✗ corsproxy [${realMarket}]:`, e.message); }
+  } catch(e) {}
 
-  // Strategy 3: allorigins
   try {
-    const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(tvUrl)}`, {
+    const res = await fetch(`https://thingproxy.freeboard.io/fetch/${tvUrl}`, {
       method: 'POST',
       body,
       signal: AbortSignal.timeout(12000)
@@ -3330,14 +3337,10 @@ async function fetchTVBatch(market, tvTickers) {
     if (res.ok) {
       const json = await res.json();
       const data = json.data;
-      if (Array.isArray(data) && data.length > 0) {
-        console.log(`✓ allorigins [${realMarket}]: ${data.length} tickers`);
-        return data;
-      }
+      if (Array.isArray(data) && data.length > 0) return data;
     }
-  } catch(e) { console.log(`✗ allorigins [${realMarket}]:`, e.message); }
+  } catch(e) {}
 
-  console.warn(`✗ Wszystkie strategie nieudane dla [${realMarket}]`);
   return [];
 }
 
@@ -3580,10 +3583,9 @@ function syncAllStocksWithLiveData() {
       if (d.price)  s.price  = d.price;
       if (d.sma150) s.ma30w  = d.sma150;
       if (d.chg != null) s.chg = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
-      // Recalculate stage
       const newStage = calcStage(d);
       if (newStage) s.stage = newStage;
-      // Recalculate MTT — zapisz w s.mtt żeby renderCard() po tab switch widział live wartości
+      // MTT recalc w s.mtt — renderCard go odczyta przy kolejnym renderGrid()
       if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
         const p = d.price;
         s.mtt = [
