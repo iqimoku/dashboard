@@ -3503,14 +3503,20 @@ async function refreshLiveData() {
           sma50:    d[5]  ?? null,
           rsi:      d[6]  ?? null,
           macd:     d[7]  ?? null,
-          macdSig:  d[8],
-          high52:   d[9],
-          low52:    d[10],
-          perfW:    d[11],
-          perf1M:   d[12],
+          macdSig:  d[8]  ?? null,
+          high52:   d[9]  ?? null,
+          low52:    d[10] ?? null,
+          perfW:    d[11] ?? null,
+          perf1M:   d[12] ?? null,
           sma150_20: d[13] ?? null,
           avgVol:   d[14] ?? null,
         };
+        // DEBUG: log MTT-relevant fields for first few tickers
+        if (totalUpdated < 5) {
+          const ld = liveData[internalTicker];
+          const hasMTT = ld.price!=null && ld.sma200!=null && ld.sma150!=null && ld.sma50!=null && ld.high52!=null && ld.low52!=null;
+          console.log(`📊 ${internalTicker}: price=${ld.price} sma200=${ld.sma200} sma150=${ld.sma150} sma50=${ld.sma50} high52=${ld.high52} low52=${ld.low52} rsi=${ld.rsi} → MTT recalc: ${hasMTT}`);
+        }
         totalUpdated++;
       });
     });
@@ -3578,7 +3584,7 @@ function syncAllStocksWithLiveData() {
       // Recalculate stage
       const newStage = calcStage(d);
       if (newStage) s.stage = newStage;
-      // Recalculate MTT array — persist so renderCard() uses fresh values after tab switch
+      // Recalculate MTT — persist in s.mtt so renderCard() uses fresh values after tab switch
       if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
         const p = d.price;
         s.mtt = [
@@ -3686,7 +3692,7 @@ function updateCardsWithLiveData() {
     }
 
     // Recalculate MTT dynamically from live data
-    if (d.price && d.sma200 && d.sma150 && d.sma50 && d.high52 && d.low52) {
+    if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
       recalcMTT(card, ticker, d);
     }
     // Reklasyfikacja fazy Weinsteina
