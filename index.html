@@ -202,6 +202,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .mtt-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
 .mtt-dot.pass{background:var(--mtt-high);}
 .mtt-dot.fail{background:rgba(255,255,255,.08);}
+.mtt-dot.neutral{background:var(--border);border:1px solid var(--muted);opacity:.6;}
 .mtt-dot.partial{background:var(--mtt-mid);}
 
 /* card metrics */
@@ -1310,18 +1311,18 @@ function mttVerdictText(s){return s===8?'✅ PEŁNY MTT':s>=6?'⬆ WYSOKI':s>=4?
 function mttFillPct(s){return Math.round(s/8*100);}
 
 function mttBarHTML(mtt){
-  const s=mttScore(mtt);
-  const col=mttColor(s);
-  const cls=mttScoreClass(s);
-  const pct=mttFillPct(s);
-  const dots=mtt.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
+  // Inicjalizujemy neutralny stan oczekiwania na dane LIVE
+  let dots = '';
+  for (let i = 0; i < 8; i++) {
+    dots += `<div class="mtt-dot neutral" title="Kryterium ${i+1}: oczekiwanie na dane LIVE"></div>`;
+  }
   return `
   <div class="mtt-bar-wrap">
     <div class="mtt-bar-header">
       <div class="mtt-bar-label"><span class="mtt-logo">MTT</span> Minervini Trend Template</div>
-      <div class="mtt-score-txt ${cls}">${s}/8</div>
+      <div class="mtt-score-txt" style="color:var(--muted);">--/8</div>
     </div>
-    <div class="mtt-track"><div class="mtt-fill" style="width:${pct}%;background:${col}"></div></div>
+    <div class="mtt-track"><div class="mtt-fill" style="width:0%;background:var(--muted);"></div></div>
     <div class="mtt-dots">${dots}</div>
   </div>`;
 }
@@ -3721,35 +3722,66 @@ function updateCardsWithLiveData() {
 }
 
 function recalcMTT(card, ticker, d) {
-  // Minervini Trend Template — 8 criteria
-  const {price, sma200, sma150, sma50, rsi, high52, low52} = d;
-  const mttNew = [
-    price > sma150 && price > sma200,          // 1. Price > SMA150 & SMA200
-    sma150 > sma200,                           // 2. SMA150 > SMA200
-    true,                                      // 3. SMA200 trending up (can't calc from snapshot)
-    sma50 > sma150 && sma50 > sma200,          // 4. SMA50 > SMA150 & SMA200
-    price > sma50,                             // 5. Price > SMA50
-    low52 > 0 && price >= low52 * 1.25,        // 6. Price ≥ 25% above 52W low
-    high52 > 0 && price >= high52 * 0.75,      // 7. Price ≤ 25% below 52W high
-    rsi != null && rsi >= 70,                  // 8. RSI ≥ 70
-  ];
-  const score = mttNew.filter(Boolean).length;
-  const col = score === 8 ? 'var(--mtt-full)' : score >= 6 ? 'var(--mtt-high)' : score >= 4 ? 'var(--mtt-mid)' : 'var(--mtt-low)';
-  const pct = Math.round(score/8*100);
-
-  // Update MTT bar
   const fill = card.querySelector('.mtt-fill');
   const scoreEl = card.querySelector('.mtt-score-txt');
   const dots = card.querySelectorAll('.mtt-dot');
 
-  if (fill) { fill.style.width = pct + '%'; fill.style.background = col; }
-  if (scoreEl) {
-    scoreEl.textContent = score + '/8';
-    scoreEl.style.color = col;
+  // 1. Sprawdzenie kompletności danych z live feed
+  const hasRequiredData = d &&
+                          d.price != null &&
+                          d.sma200 != null &&
+                          d.sma150 != null &&
+                          d.sma50  != null &&
+                          d.high52 != null &&
+                          d.low52  != null;
+
+  if (!hasRequiredData) {
+    // Stan: niekompletne dane — resetujemy do neutralnego
+    if (fill)    { fill.style.width = '0%'; fill.style.background = 'var(--muted)'; }
+    if (scoreEl) { scoreEl.textContent = 'Brak danych LIVE'; scoreEl.style.color = 'var(--muted)'; scoreEl.className = 'mtt-score-txt'; }
+    if (dots.length === 8) {
+      dots.forEach((dot, i) => {
+        dot.className = 'mtt-dot neutral';
+        dot.setAttribute('title', `Kryterium ${i+1}: niekompletne dane feedu`);
+      });
+    }
+    return;
   }
+
+  // 2. Dane kompletne — obliczamy 8 kryteriów MTT
+  const p = d.price;
+  const criteriaLabels = [
+    'Cena > SMA150 i Cena > SMA200',
+    'SMA150 > SMA200',
+    'SMA200 w trendzie wzrostowym',
+    'SMA50 > SMA150 i SMA50 > SMA200',
+    'Cena > SMA50',
+    'Cena ≥ 30% powyżej dołka 52-tyg.',
+    'Cena w granicach 25% od szczytu 52-tyg.',
+    'RSI (14) ≥ 70'
+  ];
+  const mttNew = [
+    p > d.sma150 && p > d.sma200,              // 1
+    d.sma150 > d.sma200,                       // 2
+    d.sma200_trending_up !== false,            // 3 (domyślnie true, jeśli brak pola)
+    d.sma50 > d.sma150 && d.sma50 > d.sma200, // 4
+    p > d.sma50,                               // 5
+    d.low52 > 0 && p >= d.low52 * 1.30,       // 6
+    d.high52 > 0 && p >= d.high52 * 0.75,     // 7
+    d.rsi != null && d.rsi >= 70               // 8
+  ];
+
+  const score = mttNew.filter(Boolean).length;
+  const col = score === 8 ? 'var(--mtt-full)' : score >= 6 ? 'var(--mtt-high)' : score >= 4 ? 'var(--mtt-mid)' : 'var(--mtt-low)';
+  const pct = Math.round(score / 8 * 100);
+
+  // 3. Aktualizacja DOM
+  if (fill)    { fill.style.width = pct + '%'; fill.style.background = col; }
+  if (scoreEl) { scoreEl.textContent = score + '/8'; scoreEl.style.color = col; scoreEl.className = 'mtt-score-txt'; }
   if (dots.length === 8) {
     mttNew.forEach((v, i) => {
       dots[i].className = 'mtt-dot ' + (v ? 'pass' : 'fail');
+      dots[i].setAttribute('title', `${criteriaLabels[i]}: ${v ? 'SPEŁNIONE' : 'NIESPEŁNIONE'}`);
     });
   }
 }
