@@ -3532,6 +3532,16 @@ async function refreshLiveData() {
     }
 
     syncAllStocksWithLiveData();
+
+    // DEBUG — usuń po naprawie
+    console.log('=== LIVE DATA DEBUG ===');
+    ['PKN','PKO','PZU','CDR','PKP'].forEach(t => {
+      const d = liveData[t];
+      if (!d) { console.log(t + ': brak w liveData'); return; }
+      const ok = d.price!=null && d.sma200!=null && d.sma150!=null && d.sma50!=null && d.high52!=null && d.low52!=null;
+      console.log(t + ': price=' + d.price + ' sma200=' + d.sma200 + ' sma150=' + d.sma150 + ' sma50=' + d.sma50 + ' high52=' + d.high52 + ' low52=' + d.low52 + ' → MTT OK: ' + ok);
+    });
+
     updateCardsWithLiveData();
 
     lastRefresh = new Date();
