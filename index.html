@@ -3578,6 +3578,20 @@ function syncAllStocksWithLiveData() {
       // Recalculate stage
       const newStage = calcStage(d);
       if (newStage) s.stage = newStage;
+      // Recalculate MTT array — persist so renderCard() uses fresh values after tab switch
+      if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
+        const p = d.price;
+        s.mtt = [
+          p > d.sma150 && p > d.sma200,
+          d.sma150 > d.sma200,
+          true,
+          d.sma50 > d.sma150 && d.sma50 > d.sma200,
+          p > d.sma50,
+          d.low52 > 0 && p >= d.low52 * 1.25,
+          d.high52 > 0 && p >= d.high52 * 0.75,
+          d.rsi != null && d.rsi >= 70,
+        ];
+      }
     });
   });
 }
