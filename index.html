@@ -804,7 +804,6 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
       <span class="rf-icon" id="rfIcon">⟳</span>
       <span id="rfLabel">Odśwież live</span>
     </button>
-    <span class="rf-status" id="rfStatus"></span>
     <button class="btn-method" onclick="openMethodology()">📖 Metodologia</button>
   </div>
 </div>
@@ -3115,39 +3114,32 @@ async function refreshLiveData() {
   if (refreshInProgress) return;
   refreshInProgress = true;
 
-  // ── Koszyki: btnRefresh ──────────────────────
   const btn    = document.getElementById('btnRefresh');
   const lbl    = document.getElementById('rfLabel');
   const icon   = document.getElementById('rfIcon');
-  const status = document.getElementById('rfStatus');
-
-  // ── Stan Rynku: mkt-refresh ──────────────────
+  const badge  = document.getElementById('updateBadge');
   const mktBtn  = document.getElementById('mkt-refresh');
   const mktIcon = document.getElementById('mkt-rfIcon');
 
-  // Aktywuj spinner na obu przyciskach
   if (btn)    { btn.classList.add('loading'); btn.disabled = true; }
   if (lbl)    { lbl.textContent = 'Pobieranie...'; }
   if (icon)   { icon.textContent = '⟳'; }
-  if (status) { status.textContent = ''; }
+  if (badge)  { badge.textContent = '⟳ Pobieranie danych...'; badge.style.background = 'rgba(167,139,250,.12)'; badge.style.color = 'var(--accent)'; badge.style.borderColor = 'rgba(167,139,250,.3)'; }
   if (mktBtn) { mktBtn.disabled = true; mktBtn.style.opacity = '.6'; }
   if (mktIcon){ mktIcon.textContent = '⟳'; mktIcon.style.animation = 'spin .8s linear infinite'; }
 
   try {
-    // Collect all tickers in current view
     const allTickers = [];
     ['wig20','mwig40','dax','ndx','nyse'].forEach(idx => {
       STOCKS[idx].forEach(s => allTickers.push(s.ticker));
     });
 
-    // Group by exchange
     const groups = groupByExchange(allTickers);
     const markets = Object.keys(groups);
 
     let totalUpdated = 0;
     let totalFailed = 0;
 
-    // Fetch all markets in parallel
     console.log('📊 IQimoku: Fetching TV data for markets:', markets);
     console.log('📊 Tickers per market:', Object.fromEntries(markets.map(m=>[m,groups[m].length])));
     const results = await Promise.allSettled(
@@ -3162,19 +3154,16 @@ async function refreshLiveData() {
       if (res.status !== 'fulfilled') return;
       const rows = res.value;
       rows.forEach(row => {
-        const tvSym = row.s; // e.g. 'WSE:PKO'
+        const tvSym = row.s;
         const d = row.d;
-        if (!d || d.length < 2) return; // need at least close + change
+        if (!d || d.length < 2) return;
 
-        // Find our internal ticker
         const internalTicker = Object.keys(TV_MAP).find(k => TV_MAP[k] === tvSym);
         if (!internalTicker) {
-          // Debug: log unmatched symbols so we can see what TV returns
           if (tvSym.startsWith('GPW:')) console.warn('⚠️ No match for TV symbol:', tvSym);
           return;
         }
 
-        // Log matched symbols for debugging mWIG40
         const matchedTab = Object.keys(STOCKS).find(tab => 
           Array.isArray(STOCKS[tab]) && STOCKS[tab].some(s => s.ticker === internalTicker)
         );
@@ -3201,7 +3190,6 @@ async function refreshLiveData() {
     });
 
     if (totalUpdated === 0) {
-      // Detailed diagnostics
       const failedMarkets = markets.filter((_,i) => 
         results[i].status === 'rejected' || 
         (results[i].status === 'fulfilled' && results[i].value.length === 0)
@@ -3209,31 +3197,21 @@ async function refreshLiveData() {
       throw new Error(`Brak danych (rynki: ${failedMarkets.join(', ')}). Sprawdź konsolę F12.`);
     }
 
-    // Sync ALL STOCKS[] with liveData (all tabs, not just visible)
     syncAllStocksWithLiveData();
-    // Update cards currently in DOM
     updateCardsWithLiveData();
 
     lastRefresh = new Date();
     const t = lastRefresh.toLocaleTimeString('pl-PL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-    if (lbl)    { lbl.textContent = 'Odśwież live'; }
-    if (icon)   { icon.textContent = '✓'; }
-    if (status) { status.textContent = `● ${t} | ${totalUpdated} spółek`; status.style.color = '#00e5a0'; }
+    if (lbl)   { lbl.textContent = 'Odśwież live'; }
+    if (icon)  { icon.textContent = '✓'; }
+    if (badge) { badge.textContent = `✓ Live ${t} · ${totalUpdated} spółek`; badge.style.background = 'rgba(0,229,160,.1)'; badge.style.color = '#00e5a0'; badge.style.borderColor = 'rgba(0,229,160,.25)'; }
 
-    // Stan Rynku: sukces
-    if (mktIcon) {
-      mktIcon.style.animation = '';
-      mktIcon.textContent = '✓';
-    }
-    if (mktBtn) {
-      mktBtn.style.opacity = '1';
-      mktBtn.style.color = '#00e5a0';
-    }
-    // Przerenderuj Stan Rynku jeśli aktywny
+    if (mktIcon) { mktIcon.style.animation = ''; mktIcon.textContent = '✓'; }
+    if (mktBtn)  { mktBtn.style.opacity = '1'; mktBtn.style.color = '#00e5a0'; }
+
     const marketViewActive = document.getElementById('market-view')?.classList.contains('active');
     if (marketViewActive) renderMarketView(currentMarketView);
 
-    // Reset icons after 2s
     setTimeout(() => {
       if (icon)    icon.textContent = '⟳';
       if (mktIcon) { mktIcon.textContent = '⟳'; }
@@ -3241,14 +3219,15 @@ async function refreshLiveData() {
     }, 2000);
 
   } catch(e) {
-    if (lbl)    { lbl.textContent = 'Błąd — spróbuj ponownie'; }
-    if (icon)   { icon.textContent = '✗'; }
-    if (status) { status.textContent = `● Błąd: ${e.message}`; status.style.color = '#ff4d4d'; }
+    if (lbl)   { lbl.textContent = 'Błąd — spróbuj ponownie'; }
+    if (icon)  { icon.textContent = '✗'; }
+    if (badge) { badge.textContent = `✗ Błąd pobierania`; badge.style.background = 'rgba(255,77,77,.1)'; badge.style.color = '#ff4d4d'; badge.style.borderColor = 'rgba(255,77,77,.25)'; }
     if (mktIcon){ mktIcon.style.animation = ''; mktIcon.textContent = '✗'; }
     if (mktBtn) { mktBtn.style.color = '#ff4d4d'; }
     setTimeout(() => {
       if (lbl)    lbl.textContent = 'Odśwież live';
       if (icon)   icon.textContent = '⟳';
+      if (badge)  { badge.textContent = '✓ Aktualizacja: 12 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
       if (mktIcon){ mktIcon.textContent = '⟳'; }
       if (mktBtn) { mktBtn.style.color = ''; mktBtn.style.opacity = '1'; }
     }, 3000);
