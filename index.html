@@ -2234,7 +2234,7 @@ function renderCard(s){
 
   // MTT: użyj live danych jeśli dostępne, fallback na s.mtt (startowo all false = szare)
   let mttArr = s.mtt;
-  if (ld && ld.price != null && ld.sma200 != null && ld.sma150 != null && ld.sma50 != null && ld.high52 != null && ld.low52 != null) {
+  if (ld && ld.price != null && ld.sma200 != null && ld.sma150 != null && ld.sma50 != null) {
     const p = ld.price;
     mttArr = [
       p > ld.sma150 && p > ld.sma200,
@@ -2906,7 +2906,7 @@ function renderMarketView(mkt){
   stocks.forEach(s => {
     const ld = liveData[s.ticker] || {};
     let arr = s.mtt;
-    if(ld.price && ld.sma200 && ld.sma150 && ld.sma50 && ld.high52 && ld.low52){
+    if(ld.price && ld.sma200 && ld.sma150 && ld.sma50){
       const {price:p,sma200,sma150,sma50,rsi,high52,low52}=ld;
       arr=[p>sma150&&p>sma200,sma150>sma200,true,sma50>sma150&&sma50>sma200,p>sma50,low52>0&&p>=low52*1.25,high52>0&&p>=high52*0.75,rsi!=null&&rsi>=70];
     }
@@ -2997,7 +2997,7 @@ function openModal(ticker,idx){
 
   // MTT — live lub statyczne
   let mttArr = s.mtt;
-  if (ld.price && ld.sma200 && ld.sma150 && ld.sma50 && ld.high52 && ld.low52) {
+  if (ld.price && ld.sma200 && ld.sma150 && ld.sma50) {
     const {price:p,sma200,sma150,sma50,rsi,high52,low52} = ld;
     mttArr = [
       p>sma150&&p>sma200, sma150>sma200, true,
@@ -3532,16 +3532,6 @@ async function refreshLiveData() {
     }
 
     syncAllStocksWithLiveData();
-
-    // DEBUG — usuń po naprawie
-    console.log('=== LIVE DATA DEBUG ===');
-    ['PKN','PKO','PZU','CDR','PKP'].forEach(t => {
-      const d = liveData[t];
-      if (!d) { console.log(t + ': brak w liveData'); return; }
-      const ok = d.price!=null && d.sma200!=null && d.sma150!=null && d.sma50!=null && d.high52!=null && d.low52!=null;
-      console.log(t + ': price=' + d.price + ' sma200=' + d.sma200 + ' sma150=' + d.sma150 + ' sma50=' + d.sma50 + ' high52=' + d.high52 + ' low52=' + d.low52 + ' → MTT OK: ' + ok);
-    });
-
     updateCardsWithLiveData();
 
     lastRefresh = new Date();
@@ -3596,7 +3586,7 @@ function syncAllStocksWithLiveData() {
       const newStage = calcStage(d);
       if (newStage) s.stage = newStage;
       // MTT recalc w s.mtt — renderCard go odczyta przy kolejnym renderGrid()
-      if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
+      if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null) {
         const p = d.price;
         s.mtt = [
           p > d.sma150 && p > d.sma200,
@@ -3703,7 +3693,7 @@ function updateCardsWithLiveData() {
     }
 
     // Recalculate MTT dynamically from live data
-    if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null && d.high52 != null && d.low52 != null) {
+    if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null) {
       recalcMTT(card, ticker, d);
     }
     // Reklasyfikacja fazy Weinsteina
