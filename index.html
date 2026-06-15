@@ -796,9 +796,9 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="ib-left">
     <div class="ib-icon">📊</div>
     <div class="ib-text">
-      <strong>Jak działa to narzędzie?</strong> Fazy Weinsteina (1–4) i MTT Minerviniego (8 kryteriów) są obliczane automatycznie z danych live. Kliknij <strong>Odśwież live</strong> aby pobrać aktualne kursy i MA z TradingView.
-      Kliknij <strong>Odśwież live</strong> aby pobrać aktualne kursy, MA i RSI z TradingView — ceny i wskaźniki MTT zaktualizują się natychmiast.
-      Fazy i opisy są aktualizowane <strong>raz w tygodniu (niedziela)</strong> przez analityka — wtedy filtry i klasyfikacje są w pełni aktualne.
+      <strong>Jak działa to narzędzie?</strong> Fazy Weinsteina (1–4) i MTT Minerviniego (8 kryteriów) są obliczane automatycznie z danych live.
+      Kliknij <strong>Odśwież live</strong> aby pobrać aktualne kursy, SMA i RSI z TradingView — ceny i 6 kryteriów MTT zaktualizują się natychmiast.
+      Dane 52W High/Low oraz RS Rank (kryterium 7 i 8) pochodzą z BiznesRadar i Ariva — aktualizowane <strong>raz w tygodniu</strong> wraz z nową wersją pliku.
     </div>
   </div></div>
 
@@ -3264,7 +3264,6 @@ const TV_COLUMNS = [
   'Perf.1M',          // 12 - % change 1 month
   'SMA150[20]',       // 13 - SMA150 sprzed 20 sesji (~4 tyg) → nachylenie MA30W
   'average_volume_10d_calc', // 14 - średni wolumen 10 sesji → potwierdzenie wybicia
-  'Perf.52',          // 15 - % change 52 weeks (Relative Strength vs index)
 ];
 
 // Group tickers by exchange for batch TV requests
@@ -3552,7 +3551,6 @@ async function refreshLiveData() {
           perf1M:   d[12] ?? null,
           sma150_20: d[13] ?? null,
           avgVol:   d[14] ?? null,
-          perf52:   d[15] ?? null,  // % zmiana 52W dla RS
         };
         totalUpdated++;
       });
@@ -3572,14 +3570,6 @@ async function refreshLiveData() {
     fetchAll52W(allLiveTickers).then(() => {
       syncAllStocksWithLiveData();
       updateCardsWithLiveData();
-    });
-
-    // DEBUG Perf.52 — usuń po teście
-    console.log('=== PERF.52 DEBUG ===');
-    ['PKN','PKO','NVDA','SAP','RHM','AAPL'].forEach(t => {
-      const d = liveData[t];
-      if (!d) { console.log(t + ': brak'); return; }
-      console.log(t + ': perf52=' + d.perf52 + '  perf1M=' + d.perf1M + '  perfW=' + d.perfW);
     });
 
     // Równocześnie aktualizuj to co już mamy (bez 52W)
