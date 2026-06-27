@@ -16,11 +16,22 @@
 }
 
 /* ── INFO BANNER ── */
-.info-banner{background:linear-gradient(135deg,rgba(167,139,250,.08) 0%,rgba(0,229,160,.05) 100%);border-bottom:1px solid var(--border);padding:11px 36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.ib-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
-.ib-icon{font-size:20px;flex-shrink:0;}
+.info-banner{background:linear-gradient(135deg,rgba(167,139,250,.06) 0%,rgba(0,229,160,.04) 100%);border-bottom:1px solid var(--border);padding:14px 36px;display:flex;align-items:stretch;gap:0;flex-wrap:wrap;}
+.ib-left{display:flex;align-items:stretch;gap:0;flex:1;min-width:0;}
+.ib-icon{font-size:22px;flex-shrink:0;display:flex;align-items:center;padding-right:16px;}
 .ib-text{font-size:11px;color:#8090a8;line-height:1.6;}
 .ib-text strong{color:var(--text);}
+/* nowy banner */
+.ib-headline{font-size:13px;font-weight:700;color:var(--text);letter-spacing:.01em;margin-bottom:10px;}
+.ib-cols{display:flex;gap:0;flex-wrap:wrap;}
+.ib-col{display:flex;align-items:flex-start;gap:10px;padding:0 20px;border-left:1px solid rgba(255,255,255,.08);flex:1;min-width:220px;}
+.ib-col:first-child{border-left:none;padding-left:0;}
+.ib-col-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+.ib-col-body{}
+.ib-col-title{font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px;display:flex;align-items:center;gap:6px;}
+.ib-col-desc{font-size:11px;color:#7a8aaa;line-height:1.55;}
+.ib-pill-live{font-size:9px;font-family:'Space Mono',monospace;background:rgba(0,229,160,.15);color:#00e5a0;border:1px solid rgba(0,229,160,.3);padding:1px 6px;border-radius:3px;letter-spacing:.05em;}
+.ib-pill-week{font-size:9px;font-family:'Space Mono',monospace;background:rgba(167,139,250,.15);color:#a78bfa;border:1px solid rgba(167,139,250,.3);padding:1px 6px;border-radius:3px;letter-spacing:.05em;}
 .ib-update{font-size:10px;font-family:'Space Mono',monospace;padding:4px 10px;border-radius:5px;background:rgba(245,166,35,.1);color:#f5a623;border:1px solid rgba(245,166,35,.2);flex-shrink:0;}
 .ib-update.fresh{background:rgba(0,229,160,.1);color:#00e5a0;border-color:rgba(0,229,160,.2);}
 .btn-method{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);color:var(--accent);padding:6px 14px;border-radius:6px;font-size:11px;font-family:'Outfit',sans-serif;cursor:pointer;transition:all .2s;font-weight:600;flex-shrink:0;}
@@ -800,6 +811,31 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .card-tv-link:hover { color:#2962ff; border-color:rgba(41,98,255,.4); background:rgba(41,98,255,.07); }
 .card-tv-link svg { width:10px; height:10px; fill:currentColor; flex-shrink:0; }
 .card-signals { display:flex; align-items:center; justify-content:space-between; padding:4px 15px 10px; gap:8px; }
+
+/* ══ SECTOR HEATMAP — klikalna ══════════════════════════════ */
+.sh-row { cursor:pointer; border-radius:6px; transition:background .15s; }
+.sh-row:hover { background:rgba(255,255,255,.04); }
+.sh-row.sh-open { background:rgba(255,255,255,.03); }
+.sh-row-header { display:flex; align-items:center; gap:0; padding:3px 6px 3px 0; }
+.sh-chevron { font-size:9px; color:var(--muted); margin-left:6px; transition:transform .2s; flex-shrink:0; }
+.sh-row.sh-open .sh-chevron { transform:rotate(90deg); }
+.sh-stocks { display:none; padding:6px 6px 8px 12px; flex-wrap:wrap; gap:5px; }
+.sh-row.sh-open .sh-stocks { display:flex; }
+.sh-stock-pill {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:10px; font-family:'Space Mono',monospace;
+  padding:3px 8px; border-radius:4px; cursor:pointer;
+  border:1px solid rgba(255,255,255,.1);
+  transition:background .15s, border-color .15s;
+  white-space:nowrap;
+}
+.sh-stock-pill:hover { border-color:rgba(167,139,250,.5); background:rgba(167,139,250,.08); }
+.sh-stock-pill.sp-s2 { border-color:rgba(0,229,160,.25); color:#00e5a0; background:rgba(0,229,160,.07); }
+.sh-stock-pill.sp-s4 { border-color:rgba(255,77,77,.25); color:#ff4d4d; background:rgba(255,77,77,.07); }
+.sh-stock-pill.sp-s1 { border-color:rgba(255,255,255,.12); color:#8090a8; }
+.sh-stock-pill.sp-s3 { border-color:rgba(245,166,35,.25); color:#f5a623; background:rgba(245,166,35,.06); }
+.sh-pill-stage { font-size:8px; opacity:.7; }
+.sh-name { min-width:110px; }
 </style>
 </head>
 <body>
@@ -810,11 +846,33 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="ib-left">
     <div class="ib-icon">📊</div>
     <div class="ib-text">
-      <strong>Jak działa to narzędzie?</strong> Fazy Weinsteina (1–4) i MTT Minerviniego (8 kryteriów) są obliczane automatycznie z danych live.
-      Kliknij <strong>Odśwież live</strong> aby pobrać aktualne kursy, SMA i RSI z TradingView — ceny i 6 kryteriów MTT zaktualizują się natychmiast.
-      Dane 52W High/Low oraz RS Rank (kryterium 7 i 8) pochodzą z BiznesRadar i Ariva — aktualizowane <strong>raz w tygodniu</strong> wraz z nową wersją pliku.
+      <div class="ib-headline">Jak działa IQimoku Dashboard?</div>
+      <div class="ib-cols">
+        <div class="ib-col">
+          <div class="ib-col-icon">⚡</div>
+          <div class="ib-col-body">
+            <div class="ib-col-title">Dane live <span class="ib-pill-live">LIVE</span></div>
+            <div class="ib-col-desc">Kliknij <strong style="color:var(--text)">Odśwież live</strong> — kursy, SMA i RSI pobierane z TradingView w kilka sekund. Kryteria MTT <strong style="color:var(--text)">K1–K6</strong> przeliczają się natychmiast.</div>
+          </div>
+        </div>
+        <div class="ib-col">
+          <div class="ib-col-icon">📅</div>
+          <div class="ib-col-body">
+            <div class="ib-col-title">Analiza tygodniowa <span class="ib-pill-week">CO NIEDZIELĘ</span></div>
+            <div class="ib-col-desc">Fazy Weinsteina (1–4), 52T High/Low i RS Rank aktualizowane co niedzielę. Kryteria MTT <strong style="color:var(--text)">K7–K8</strong> też odświeżamy wtedy. <strong style="color:var(--text)">Wróć w niedzielę</strong> po pełną klasyfikację.</div>
+          </div>
+        </div>
+        <div class="ib-col">
+          <div class="ib-col-icon">🎯</div>
+          <div class="ib-col-body">
+            <div class="ib-col-title">MTT Minervini · 8 kryteriów</div>
+            <div class="ib-col-desc">Spółka musi spełnić wszystkie 8 warunków trendu (cena, SMA, 52T, RS Rank). Filtruj po MTT ≥ 6 lub 8/8 żeby znaleźć liderów rynku.</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div></div>
+  </div>
+</div>
 
 <!-- ══ METODOLOGIA MODAL ══ -->
 <div class="meth-overlay" id="methOverlay" onclick="closeMethIfBg(event)">
@@ -2583,60 +2641,92 @@ const MACRO_SECTOR = {
 };
 function getMacroSector(s){ return MACRO_SECTOR[s] || 'Inne'; }
 
-// ── Render Sector Heatmap ────────────────────
+// ── Render Sector Heatmap (klikalna) ─────────
 function renderSectorHeatmap(stocks) {
   const el = document.getElementById('sector-heatmap');
   if (!el) return;
 
-  // Group by macro-sector, count stages
+  // Group by macro-sector — zbieramy też listę spółek
   const sectorMap = {};
   stocks.forEach(s => {
     const macro = getMacroSector(s.sector);
-    if (!sectorMap[macro]) sectorMap[macro] = {total:0, s2:0, s4:0};
+    if (!sectorMap[macro]) sectorMap[macro] = {total:0, s2:0, s4:0, stocks:[]};
     sectorMap[macro].total++;
+    sectorMap[macro].stocks.push(s);
     if (s.stage === 2) sectorMap[macro].s2++;
     if (s.stage === 4) sectorMap[macro].s4++;
   });
 
-  // Sort by % Faza 2 descending
   const entries = Object.entries(sectorMap)
     .filter(([,v]) => v.total >= 2)
     .map(([name, v]) => ({
-      name,
-      total: v.total,
-      pct2: Math.round(v.s2 / v.total * 100),
-      pct4: Math.round(v.s4 / v.total * 100),
-      s2: v.s2, s4: v.s4
+      name, total:v.total,
+      pct2: Math.round(v.s2/v.total*100),
+      pct4: Math.round(v.s4/v.total*100),
+      s2:v.s2, s4:v.s4,
+      stocks: v.stocks.sort((a,b) => a.stage - b.stage || b.stage - a.stage)
     }))
-    .sort((a, b) => b.pct2 - a.pct2);
+    .sort((a,b) => b.pct2 - a.pct2);
 
   if (!entries.length) { el.innerHTML = '<div class="sh-empty">Brak danych</div>'; return; }
 
-  const rows = entries.map(e => {
-    // Color: green gradient for high F2, red for high F4
+  const stageClass = ['','sp-s1','sp-s2','sp-s3','sp-s4'];
+  const stageLabel = ['','F1','F2','F3','F4'];
+
+  const rows = entries.map((e, i) => {
     const greenPct = e.pct2;
     const redPct   = e.pct4;
-    const neutralPct = 100 - greenPct - redPct;
-    const label = e.pct2 >= 50 ? `F2: ${e.pct2}%` : e.pct4 >= 50 ? `F4: ${e.pct4}%` : `${e.pct2}%↑`;
+    const pills = e.stocks.map(s => {
+      const sc = stageClass[s.stage] || 'sp-s1';
+      const sl = stageLabel[s.stage] || '?';
+      return `<div class="sh-stock-pill ${sc}" onclick="event.stopPropagation();switchTabAndStock('${s.ticker}','${s.idx}')" title="${s.name} · Faza ${s.stage}">
+        ${s.ticker} <span class="sh-pill-stage">${sl}</span>
+      </div>`;
+    }).join('');
+
     return `
-    <div class="sh-row">
-      <div class="sh-name" title="${e.name} (${e.total} spółek)">${e.name}</div>
-      <div class="sh-bar-wrap">
-        ${greenPct > 0 ? `<div class="sh-bar" style="width:${greenPct}%;background:linear-gradient(90deg,#00c47a,#00e5a0);position:absolute;left:0;top:0;height:100%;border-radius:4px 0 0 4px;align-items:center;display:flex;padding-left:4px;">
-          ${greenPct >= 15 ? `<span class="sh-bar-label">${greenPct}%</span>` : ''}</div>` : ''}
-        ${redPct > 0 ? `<div style="width:${redPct}%;background:linear-gradient(90deg,#c0392b,#ff4d4d);position:absolute;right:0;top:0;height:100%;border-radius:0 4px 4px 0;"></div>` : ''}
+    <div class="sh-row" id="shr-${i}" onclick="toggleShRow(${i})">
+      <div class="sh-row-header">
+        <div class="sh-name">${e.name}</div>
+        <div class="sh-bar-wrap">
+          ${greenPct>0?`<div class="sh-bar" style="width:${greenPct}%;background:linear-gradient(90deg,#00c47a,#00e5a0);position:absolute;left:0;top:0;height:100%;border-radius:4px 0 0 4px;display:flex;align-items:center;padding-left:4px;">${greenPct>=15?`<span class="sh-bar-label">${greenPct}%</span>`:''}</div>`:''}
+          ${redPct>0?`<div style="width:${redPct}%;background:linear-gradient(90deg,#c0392b,#ff4d4d);position:absolute;right:0;top:0;height:100%;border-radius:0 4px 4px 0;"></div>`:''}
+        </div>
+        <div class="sh-pct" style="color:${e.pct2>=50?'#00e5a0':e.pct4>=50?'#ff4d4d':'var(--muted)'}">${e.pct2}%</div>
+        <span class="sh-chevron">▶</span>
       </div>
-      <div class="sh-pct" style="color:${e.pct2>=50?'#00e5a0':e.pct4>=50?'#ff4d4d':'var(--muted)'}">${e.pct2}%</div>
+      <div class="sh-stocks">${pills}</div>
     </div>`;
   }).join('');
 
   el.innerHTML = `
     <div class="sector-heatmap">${rows}</div>
     <div class="sh-legend">
-      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#00e5a0"></div>Faza 2 Wzrost</div>
-      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#ff4d4d"></div>Faza 4 Spadek</div>
-      <div class="sh-leg-item" style="font-size:9px;color:var(--muted)">% = udział F2 w sektorze</div>
+      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#00e5a0"></div>Faza 2</div>
+      <div class="sh-leg-item"><div class="sh-leg-dot" style="background:#ff4d4d"></div>Faza 4</div>
+      <div class="sh-leg-item" style="font-size:9px;color:var(--muted)">Kliknij sektor → spółki</div>
     </div>`;
+}
+
+function toggleShRow(i) {
+  const row = document.getElementById('shr-' + i);
+  if (row) row.classList.toggle('sh-open');
+}
+
+function switchTabAndStock(ticker, idx) {
+  // Przełącz na odpowiednią zakładkę i podświetl spółkę
+  if (idx && typeof switchTab === 'function') switchTab(idx);
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.card');
+    for (const c of cards) {
+      if (c.dataset.ticker === ticker.toLowerCase()) {
+        c.scrollIntoView({behavior:'smooth', block:'center'});
+        c.style.outline = '2px solid #a78bfa';
+        setTimeout(() => c.style.outline = '', 1800);
+        break;
+      }
+    }
+  }, 300);
 }
 
 // ── Render Top 5 Leaders / Laggards ─────────
