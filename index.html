@@ -836,6 +836,37 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .sh-stock-pill.sp-s3 { border-color:rgba(245,166,35,.25); color:#f5a623; background:rgba(245,166,35,.06); }
 .sh-pill-stage { font-size:8px; opacity:.7; }
 .sh-name { min-width:110px; }
+
+/* ══ COFFEE TOAST ════════════════════════════════════════════ */
+#coffee-toast {
+  position:fixed; bottom:24px; right:24px; z-index:9999;
+  background:#1a1b2e; border:1px solid rgba(167,139,250,.3);
+  border-radius:12px; padding:14px 18px; max-width:320px;
+  box-shadow:0 8px 32px rgba(0,0,0,.5);
+  display:flex; flex-direction:column; gap:8px;
+  animation:toast-in .35s cubic-bezier(.34,1.56,.64,1);
+  font-size:13px;
+}
+#coffee-toast.toast-out { animation:toast-out .3s ease forwards; }
+@keyframes toast-in  { from{opacity:0;transform:translateY(16px) scale(.95)} to{opacity:1;transform:none} }
+@keyframes toast-out { to{opacity:0;transform:translateY(16px) scale(.95)} }
+.ct-top { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.ct-msg { color:var(--text); line-height:1.45; font-size:12px; }
+.ct-msg strong { color:#fff; }
+.ct-close { color:var(--muted); cursor:pointer; font-size:16px; line-height:1; flex-shrink:0; margin-top:-1px; }
+.ct-close:hover { color:var(--text); }
+.ct-actions { display:flex; align-items:center; gap:8px; }
+.ct-btn {
+  display:inline-flex; align-items:center; gap:5px;
+  background:linear-gradient(135deg,#f7c35a,#f59e0b);
+  color:#1a1200; font-weight:700; font-size:12px;
+  padding:7px 14px; border-radius:7px; text-decoration:none;
+  transition:opacity .2s; white-space:nowrap;
+}
+.ct-btn:hover { opacity:.9; }
+.ct-skip { font-size:11px; color:var(--muted); cursor:pointer; }
+.ct-skip:hover { color:var(--text); }
+.ct-blik { font-size:10px; color:#a78bfa; background:rgba(167,139,250,.12); border:1px solid rgba(167,139,250,.2); padding:2px 8px; border-radius:4px; font-family:'Space Mono',monospace; }
 </style>
 </head>
 <body>
@@ -1039,7 +1070,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
-  <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia</div>
+  <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia <span style="font-size:10px;opacity:.6;font-weight:400;margin-left:4px;">27.06</span></div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -1131,71 +1162,71 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   </div>
   <div class="pick-grid">
 
-    <!-- ── SNT ── -->
+    <!-- ── DDOG ── -->
     <div class="pick-card ph2">
       <div class="pick-top">
         <div class="pick-id">
-          <div class="pick-ticker">SNT · GPW 🇵🇱</div>
-          <div class="pick-name">Synektik SA</div>
-          <div class="pick-meta">Robotyka medyczna · Systemy PET/CT · GPW Warszawa</div>
+          <div class="pick-ticker">DDOG · NASDAQ 🇺🇸</div>
+          <div class="pick-name">Datadog Inc.</div>
+          <div class="pick-meta">Observability · Cloud Monitoring · SaaS</div>
         </div>
         <div class="pick-badges">
           <div class="pick-phase-badge">
             <div class="pick-phase-num">2</div>
           </div>
-          <div class="pick-sub-badge">2B</div>
+          <div class="pick-sub-badge">2A</div>
         </div>
       </div>
       <div class="pick-price-row">
-        <div class="pick-price">320,60</div>
-        <div class="pick-cur">PLN</div>
-        <div class="pick-range">52T: 160,31 – 309,80 PLN · <strong style="color:#4ade80">NOWE ATH ↑</strong></div>
+        <div class="pick-price">239,77</div>
+        <div class="pick-cur">USD</div>
+        <div class="pick-range">52T: 108,00 – 249,00 USD · <strong style="color:#4ade80">-3,7% od ATH</strong></div>
       </div>
       <div class="pick-thesis">
         <div class="pick-thesis-label">Teza inwestycyjna</div>
         <div class="pick-thesis-text">
-          Senetek w tym tygodniu wybiło nowe szczyty roczne — kurs 320,60 PLN powyżej previous high 309,80 PLN to klasyczny sygnał Minervini: <strong>breakout z bazy do nowych ATH przy rosnącym wolumenie</strong>. MTT 8/8, RS Rank 89 (top 11% mWIG40), MA30W (266 PLN) rośnie 13,3% m/m. Spółka w czystej Fazie 2B — cena powyżej wszystkich średnich, SMA50 &gt; SMA150 &gt; SMA200. PerfW +7,1% przy RSI 68 — momentum silne ale jeszcze nie przegrzane. Kupuję na pullbacku do strefy 290–305 PLN (okolice SMA50).
+          Datadog to lider observability i cloud monitoringu — spółka w fazie odwrócenia trendu (2A). Cena 239,77 USD powyżej SMA150 (152,50) i SMA200 (153,68), SMA50 (197,44) dynamicznie rośnie. PerfW +7,0%, perf1M +8,4% przy RSI 62 — momentum bez przegrzania. <strong>Kluczowy poziom:</strong> SMA50 (~197 USD) jako wsparcie i trailing stop. Wzrost popytu na AI observability (LLM monitoring, GPU clusters) to strukturalny katalizator. Cel: test poprzedniego ATH ~249 USD, następnie nowe szczyty.
         </div>
       </div>
       <div class="pick-levels">
         <div class="pick-level support">
           <div class="pick-level-label">Wsparcie / SMA50</div>
-          <div class="pick-level-val">290–305</div>
+          <div class="pick-level-val">197–210</div>
         </div>
         <div class="pick-level resistance">
-          <div class="pick-level-label">Cel / proj. wzrostu</div>
-          <div class="pick-level-val">360 → 400</div>
+          <div class="pick-level-label">Cel / ATH</div>
+          <div class="pick-level-val">249 → 280</div>
         </div>
         <div class="pick-level stop">
           <div class="pick-level-label">Stop-loss</div>
-          <div class="pick-level-val">&lt; 270</div>
+          <div class="pick-level-val">&lt; 190</div>
         </div>
       </div>
       <div class="pick-mtt">
-        <div class="pick-mtt-label">Minervini Trend Template · 8/8 ✦</div>
+        <div class="pick-mtt-label">Minervini Trend Template · 6/8</div>
         <div class="pick-mtt-dots">
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA150/200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA150 &gt; MA200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA150 &gt; MA200 (odwrócenie — bliskie)</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie (perf1M +8,4%)</div>
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150/200</div>
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA50</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +100% od dołka 52T</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Nowe ATH (breakout)</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> RS Rank 89 ≥ 70</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +122% od dołka 52T</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> -3,7% od szczytu 52T</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RS Rank ≥ 70 (RSI 62)</div>
         </div>
       </div>
       <div class="pick-catalyst">
         <div class="pick-catalyst-label">Katalizatory</div>
         <div class="pick-catalyst-list">
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Breakout ATH:</strong> kurs 320,60 PLN powyżej szczytu 52T (309,80 PLN) — klasyczny sygnał Minervini przy wolumenie 107% średniej</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>RS Rank 89:</strong> bije 89% składowych mWIG40 pod względem stopy zwrotu 12M — lider relatywnej siły indeksu</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Podwojenie od dołka:</strong> +100% od minimum 52T (160,31 PLN) — instytucje budują pozycję od miesięcy</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Momentum:</strong> perfW +7,1% i perf1M +13,3% przy RSI 68 — silny trend bez oznak przegrzania</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>AI Observability:</strong> monitoring LLM-ów i GPU clusters to nowy segment — DDOG jako jedyna platforma z kompleksowym pokryciem AI stack</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Momentum techniczne:</strong> perfW +7,0%, perf1M +8,4%, cena +122% od 52T dołka — instytucje akumulują od miesięcy</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Bliski ATH:</strong> tylko -3,7% od poprzedniego szczytu 249 USD — wybicie w zasięgu przy dobrych wynikach</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Wyniki Q2 2026:</strong> spodziewane w sierpniu — wzrost ARR i ekspansja marż jako kluczowy katalizator</div>
         </div>
       </div>
       <div class="pick-footer">
         <div class="pick-date">Analiza: 27 czerwca 2026</div>
-        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/GPW-SNT/" target="_blank" rel="noopener">↗ TradingView</a>
+        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NASDAQ-DDOG/" target="_blank" rel="noopener">↗ TradingView</a>
       </div>
     </div>
 
@@ -3956,6 +3987,7 @@ async function refreshLiveData() {
       if (mktIcon) { mktIcon.textContent = '⟳'; }
       if (mktBtn)  { mktBtn.style.color = ''; }
     }, 2000);
+    setTimeout(showCoffeeToast, 3500);
 
   } catch(e) {
     if (lbl)   { lbl.textContent = 'Błąd — spróbuj ponownie'; }
@@ -4191,6 +4223,45 @@ document.addEventListener('keydown', e => {
 // init
 buildSectorSelect();
 renderGrid();
+
+// ══ COFFEE TOAST ═════════════════════════════════════════════
+let _coffeeShown = false;
+function showCoffeeToast() {
+  if (_coffeeShown) return;
+  if (sessionStorage.getItem('coffee_skip')) return;
+  _coffeeShown = true;
+
+  const existing = document.getElementById('coffee-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'coffee-toast';
+  toast.innerHTML = `
+    <div class="ct-top">
+      <div class="ct-msg">
+        ☕ <strong>Doceń pracę i bezpłatny dostęp!</strong><br>
+        272 spółki, 5 rynków, analiza co tydzień —<br>
+        wystarczy BLIK!
+      </div>
+      <span class="ct-close" onclick="closeCoffeeToast()">✕</span>
+    </div>
+    <div class="ct-actions">
+      <a class="ct-btn" href="https://buycoffee.to/iqimoku" target="_blank" rel="noopener" onclick="sessionStorage.setItem('coffee_skip','1')">
+        ☕ Postaw kawę — BLIK
+      </a>
+    </div>`;
+
+  document.body.appendChild(toast);
+  setTimeout(() => { if(document.getElementById('coffee-toast')) closeCoffeeToast(); }, 12000);
+}
+function closeCoffeeToast() {
+  const t = document.getElementById('coffee-toast');
+  if (!t) return;
+  t.classList.add('toast-out');
+  setTimeout(() => t.remove(), 300);
+  sessionStorage.setItem('coffee_skip','1');
+}
+
 </script>
 </body>
 </html>
