@@ -3431,19 +3431,27 @@ function calcSubStage(d) {
 
 // ── Automatyczna klasyfikacja fazy Weinsteina ─────────────────────────────
 function calcStage(d) {
-  const { price, sma150, sma200, sma150_20 } = d;
+  // Używa perf1M jako proxy nachylenia SMA150 (TV nie zwraca SMA150[20])
+  // perf1M > +2%  → SMA150 rośnie   → Faza 2 lub 1
+  // perf1M < -2%  → SMA150 spada    → Faza 3 lub 4
+  // między -2%/+2% → SMA150 flat    → zależy od pozycji ceny i perfW
+  const { price, sma150, sma200, perf1M, perfW } = d;
   if (!price || !sma150 || !sma200) return null;
-  const ma_rising  = sma150_20 != null ? sma150 > sma150_20 * 1.001 : sma150 > sma200;
-  const ma_falling = sma150_20 != null ? sma150 < sma150_20 * 0.999 : sma150 < sma200;
-  const above_ma = price > sma150;
-  const ma_above_sma200 = sma150 > sma200;
-  if (above_ma && ma_rising && ma_above_sma200)  return 2;
-  if (above_ma && ma_rising && !ma_above_sma200) return 2;
-  if (!above_ma && ma_falling)                   return 4;
-  if (above_ma && ma_falling)                    return 3;
-  if (!above_ma && ma_rising)                    return 1;
-  if (above_ma)  return ma_above_sma200 ? 2 : 1;
-  return ma_above_sma200 ? 3 : 4;
+  const above        = price > sma150;
+  const s150_gt_s200 = sma150 > sma200;
+  const rising       = (perf1M ?? 0) > 2;
+  const falling      = (perf1M ?? 0) < -2;
+  const flat         = !rising && !falling;
+  const weekUp       = (perfW ?? 0) > 0;
+  if (above && rising  && s150_gt_s200) return 2;
+  if (above && flat    && s150_gt_s200 && weekUp)  return 2;
+  if (above && falling && s150_gt_s200) return 3;
+  if (above && flat    && s150_gt_s200 && !weekUp) return 3;
+  if (!above && falling)                return 4;
+  if (!above && !s150_gt_s200)          return 4;
+  if (!above && flat)                   return 1;
+  if (!above && rising)                 return 1;
+  return 1;
 }
 
 let lastRefresh = null;
@@ -3941,8 +3949,8 @@ function syncAllStocksWithLiveData() {
       if (d.price)  s.price  = d.price;
       if (d.sma150) s.ma30w  = d.sma150;
       if (d.chg != null) s.chg = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
-      const newStage = calcStage(d);
-      if (newStage) s.stage = newStage;
+      // stage NIE jest nadpisywany — ustawiamy go ręcznie co tydzień
+      // calcStage służy tylko do wyświetlania "liveStage" w renderCard
       // Derive high52 from static h52 field (TV nie zwraca 52W data przez API)
       if (d.high52 == null && s.h52) {
         const _pct = parseFloat(s.h52.replace('%',''));
@@ -4059,26 +4067,8 @@ function updateCardsWithLiveData() {
     if (d.price != null && d.sma200 != null && d.sma150 != null && d.sma50 != null) {
       recalcMTT(card, ticker, d);
     }
-    // Reklasyfikacja fazy Weinsteina
-    const newStage = calcStage(d);
-    if (newStage) {
-      const oldStage = parseInt(card.dataset.stage) || 0;
-      if (newStage !== oldStage) {
-        card.classList.remove('stage-1','stage-2','stage-3','stage-4');
-        card.classList.add(`stage-${newStage}`);
-        card.dataset.stage = newStage;
-        const stageNum = card.querySelector('.stage-num');
-        if (stageNum) stageNum.textContent = newStage;
-        const stageLbl = card.querySelector('.stage-lbl');
-        if (stageLbl) stageLbl.textContent = ['','AKUM','WZROST','DYSTR','SPADEK'][newStage];
-        // ── Sync STOCKS in-memory so switchTab/filters stay correct ──
-        const idx = card.dataset.idx;
-        if (idx && STOCKS[idx]) {
-          const s = STOCKS[idx].find(x => x.ticker === ticker);
-          if (s) s.stage = newStage;
-        }
-      }
-    }
+    // Faza Weinsteina — NIE nadpisujemy s.stage (ustawiany ręcznie co tydzień)
+    // calcStage służy tylko do wyświetlania liveStage indicator w renderCard
     // Aktualizuj sub-badge
     const subEl = card.querySelector('[data-sub]');
     if (subEl) {
