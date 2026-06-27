@@ -967,7 +967,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-ndx" onclick="switchTab('ndx')">🇺🇸 Nasdaq 100 <span class="tab-cnt" id="cnt-ndx">99</span></div>
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
-  <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia</div>
+  <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia <span style="font-size:10px;opacity:.6;font-weight:400;margin-left:4px;">27.06</span></div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -1059,144 +1059,75 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   </div>
   <div class="pick-grid">
 
-    <!-- ── KGHM ── -->
-    <div class="pick-card ph2">
+    <!-- ── SLB ── -->
+    <div class="pick-card ph4">
       <div class="pick-top">
         <div class="pick-id">
-          <div class="pick-ticker">KGH · WIG20 🇵🇱</div>
-          <div class="pick-name">KGHM Polska Miedź</div>
-          <div class="pick-meta">Miedź · Srebro · Górnictwo · GPW Warszawa</div>
+          <div class="pick-ticker">SLB · NYSE 🇺🇸</div>
+          <div class="pick-name">Schlumberger Limited</div>
+          <div class="pick-meta">Usługi naftowe · Technologia E&P · Houston</div>
         </div>
         <div class="pick-badges">
           <div class="pick-phase-badge">
-            <div class="pick-phase-num">2</div>
+            <div class="pick-phase-num">4</div>
           </div>
-          <div class="pick-sub-badge">2B</div>
+          <div class="pick-sub-badge">4A</div>
         </div>
       </div>
       <div class="pick-price-row">
-        <div class="pick-price" id="pick-kgh-price">360,85</div>
-        <div class="pick-cur">PLN</div>
-        <div class="pick-range">52T: 115 – 396 PLN</div>
-      </div>
-      <div class="pick-thesis">
-        <div class="pick-thesis-label">Teza inwestycyjna</div>
-        <div class="pick-thesis-text">
-          KGHM po spektakularnym wzroście +225% od wiosny 2025 konsoliduje się w Fazie 2B — trend jest dojrzały, ale MA30W nadal rośnie. Szukam pullbacku do strefy 330–345 PLN (okolice SMA50) jako okazji do dokupienia z ryzykiem pod SMA150. Popyt strukturalny na miedź (centra danych AI, elektromobilność, transformacja energetyczna) pozostaje niezmienny. Spółka to jeden z największych producentów srebra na świecie — dodatkowy argument przy słabym USD.
-        </div>
-      </div>
-      <div class="pick-levels">
-        <div class="pick-level support">
-          <div class="pick-level-label">Wsparcie</div>
-          <div class="pick-level-val">330–345</div>
-        </div>
-        <div class="pick-level resistance">
-          <div class="pick-level-label">Opór / Cel</div>
-          <div class="pick-level-val">396 → 440</div>
-        </div>
-        <div class="pick-level stop">
-          <div class="pick-level-label">Stop-loss</div>
-          <div class="pick-level-val">&lt; 310</div>
-        </div>
-      </div>
-      <div class="pick-mtt">
-        <div class="pick-mtt-label">Minervini Trend Template</div>
-        <div class="pick-mtt-dots">
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA150/200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA150 &gt; MA200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA50</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> &lt;25% od szczytu 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
-        </div>
-      </div>
-      <div class="pick-catalyst">
-        <div class="pick-catalyst-label">Katalizatory</div>
-        <div class="pick-catalyst-list">
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Jefferies: silny popyt na miedź z centrów danych i infrastruktury AI w USA — rekomendacja „kupuj"</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Strukturalny deficyt podaży miedzi na rynku globalnym przez 2027+</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Wyniki Q1 2026 powyżej oczekiwań, raport półroczny: 19 sierpnia 2026</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>GPW bije rekordy — sentyment do polskich blue chips pozytywny</div>
-        </div>
-      </div>
-      <div class="pick-footer">
-        <div class="pick-date">Analiza: 27 czerwca 2026</div>
-        <a class="pick-tv-link" href="https://pl.tradingview.com/symbols/GPW-KGH/" target="_blank" rel="noopener">↗ TradingView</a>
-      </div>
-    </div>
-
-    <!-- ── SPOTIFY ── -->
-    <div class="pick-card ph3">
-      <div class="pick-top">
-        <div class="pick-id">
-          <div class="pick-ticker">SPOT · NYSE 🇺🇸</div>
-          <div class="pick-name">Spotify Technology</div>
-          <div class="pick-meta">Streaming · Podcasty · SaaS · Nowy Jork</div>
-        </div>
-        <div class="pick-badges">
-          <div class="pick-phase-badge">
-            <div class="pick-phase-num">3</div>
-          </div>
-          <div class="pick-sub-badge">3B</div>
-        </div>
-      </div>
-      <div class="pick-price-row">
-        <div class="pick-price" id="pick-spot-price">482,00</div>
+        <div class="pick-price">47,00</div>
         <div class="pick-cur">USD</div>
-        <div class="pick-range">52T: 405 – 785 USD</div>
+        <div class="pick-range">52T: 33,72 – 55,05 USD</div>
       </div>
       <div class="pick-thesis">
         <div class="pick-thesis-label">Teza inwestycyjna</div>
         <div class="pick-thesis-text">
-          Spotify jest w pułapce narracyjnej — przestało być spółką wzrostową (761M MAU, gdzie dalej?), ale rynek jeszcze nie wycenia go w pełni jako spółkę marżową. Wyniki Q2 (29 lipca) mogą powtórzyć schemat z Q1: EPS pobije szacunki, ale przyrost MAU rozczaruje — i akcja dostanie po głowie niezależnie od marży. To klasyczny <strong>beat and drop</strong>. Faza 3B z ceną poniżej MA30W (~560 USD) sugeruje że duże pieniądze już wyszły ze szczytu 785 USD. Nie kupuję przed wynikami — czekam na reakcję rynku i ewentualną Fazę 1 jako bazę do nowego cyklu.
+          SLB (dawny Schlumberger) to globalny lider usług naftowych — i klasyczny przykład Fazy 4A. Cena spadła z 55 USD do 47 USD (-15% od szczytu 52T), przebijając MA30W (~48,55 USD) przy RSI 29 — głęboko wyprzedana. W Weinsteinie niski RSI to sygnał siły trendu, nie kupowania. Obserwuję pod kątem budowania bazy (Faza 1) w okolicy 40–44 USD. <strong>Nie kupuję teraz</strong> — czekam na spłaszczenie MA30W i wyłamanie z bazy z rosnącym wolumenem.
         </div>
       </div>
       <div class="pick-levels">
         <div class="pick-level support">
-          <div class="pick-level-label">Obserwuj po wynikach</div>
-          <div class="pick-level-val">400–420</div>
+          <div class="pick-level-label">Strefa obserwacji (Faza 1)</div>
+          <div class="pick-level-val">40–44</div>
         </div>
         <div class="pick-level resistance">
           <div class="pick-level-label">Opór / MA30W</div>
-          <div class="pick-level-val">~560</div>
+          <div class="pick-level-val">~48–50</div>
         </div>
         <div class="pick-level stop">
-          <div class="pick-level-label">Scenariusz F4</div>
-          <div class="pick-level-val">&lt; 405</div>
+          <div class="pick-level-label">Unikaj poniżej</div>
+          <div class="pick-level-val">&lt; 40</div>
         </div>
       </div>
       <div class="pick-mtt">
-        <div class="pick-mtt-label">Minervini Trend Template</div>
+        <div class="pick-mtt-label">Minervini Trend Template · 4/8</div>
         <div class="pick-mtt-dots">
           <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA150/200</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA150 &gt; MA200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA50 &gt; MA150</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA150 &gt; MA200</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA200 rośnie</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150/200</div>
           <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA50</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> &lt;25% od szczytu 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +30% od dołka 52T</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> &lt;25% od szczytu 52T</div>
+          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RS Rank ≥ 70</div>
         </div>
       </div>
       <div class="pick-catalyst">
-        <div class="pick-catalyst-label">Ryzyka i katalizatory</div>
+        <div class="pick-catalyst-label">Ryzyka i kontekst</div>
         <div class="pick-catalyst-list">
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #1 — beat and drop:</strong> Q2 wyniki 29 lipca — EPS może pobić, ale słaby przyrost MAU wystarczy żeby akcja zanurkowała (schemat z Q1 2026: +17% EPS → −10% w premarkecie)</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #2 — insiderzy sprzedawali:</strong> duże transakcje dyrektorów maj–czerwiec 2026, put volume podwyższony</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Szansa:</strong> AI DJ feature (94M userów) + livestreaming koncertów mogą zaskoczyć jako nowy strumień ARPU którego rynek jeszcze nie wycenia</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Strategia:</strong> nie kupuję przed wynikami — czekam na Fazę 1 (baza) po ewentualnym zejściu w Fazę 4 jako punkt wejścia do nowego cyklu</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #1 — cena ropy:</strong> WTI poniżej 70 USD/bbl ogranicza budżety capex klientów SLB — bezpośrednia presja na przychody z usług wiertniczych</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #2 — OPEC+:</strong> przedłużone cięcia produkcji zmniejszają aktywność wiertniczą na Bliskim Wschodzie — kluczowy rynek SLB</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Szansa długoterminowa:</strong> rosnący popyt na LNG i technologie CCS — SLB jest kluczowym dostawcą technologii dla obu segmentów</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Wyniki Q2 2026:</strong> 18 lipca — test czy marże się utrzymują; SLB: perf1M −17,6%, perfW −6,2%</div>
         </div>
       </div>
       <div class="pick-footer">
         <div class="pick-date">Analiza: 27 czerwca 2026</div>
-        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NYSE-SPOT/" target="_blank" rel="noopener">↗ TradingView</a>
+        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NYSE-SLB/" target="_blank" rel="noopener">↗ TradingView</a>
       </div>
     </div>
 
   </div>
-</div>
 
 <!-- ══ STAN RYNKU ══ -->
 <div class="market-view" id="market-view">
