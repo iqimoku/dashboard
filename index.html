@@ -211,7 +211,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .cm-v{font-size:12px;font-weight:600;font-family:'Space Mono',monospace;}
 .cm-v.up{color:var(--s2);}.cm-v.dn{color:var(--s4);}.cm-v.nu{color:var(--text);}
 
-.card-signals{padding:0 15px 13px;display:flex;gap:4px;flex-wrap:wrap;}
+/* .card-signals — styl w sekcji TV badge */
 .stag{padding:2px 7px;border-radius:3px;font-size:8px;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;}
 .tag-buy{background:rgba(0,229,160,.12);color:var(--s2);border:1px solid rgba(0,229,160,.2);}
 .tag-watch{background:rgba(79,195,247,.12);color:var(--s1);border:1px solid rgba(79,195,247,.2);}
@@ -786,6 +786,20 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 /* Signal tag in table */
 .ct-sig{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700;white-space:nowrap;}
 
+
+/* ── TradingView badge na karcie ─────────────────────────── */
+.card-tv-link {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:9px; font-family:'Space Mono',monospace;
+  color:var(--muted); text-decoration:none;
+  border:1px solid rgba(255,255,255,.08);
+  padding:2px 7px; border-radius:3px;
+  transition:color .2s, border-color .2s, background .2s;
+  white-space:nowrap;
+}
+.card-tv-link:hover { color:#2962ff; border-color:rgba(41,98,255,.4); background:rgba(41,98,255,.07); }
+.card-tv-link svg { width:10px; height:10px; fill:currentColor; flex-shrink:0; }
+.card-signals { display:flex; align-items:center; justify-content:space-between; padding:4px 15px 10px; gap:8px; }
 </style>
 </head>
 <body>
@@ -1059,13 +1073,13 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   </div>
   <div class="pick-grid">
 
-    <!-- ── KGHM ── -->
+    <!-- ── SNT ── -->
     <div class="pick-card ph2">
       <div class="pick-top">
         <div class="pick-id">
-          <div class="pick-ticker">KGH · WIG20 🇵🇱</div>
-          <div class="pick-name">KGHM Polska Miedź</div>
-          <div class="pick-meta">Miedź · Srebro · Górnictwo · GPW Warszawa</div>
+          <div class="pick-ticker">SNT · GPW 🇵🇱</div>
+          <div class="pick-name">Synektik SA</div>
+          <div class="pick-meta">Robotyka medyczna · Systemy PET/CT · GPW Warszawa</div>
         </div>
         <div class="pick-badges">
           <div class="pick-phase-badge">
@@ -1075,123 +1089,55 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
         </div>
       </div>
       <div class="pick-price-row">
-        <div class="pick-price" id="pick-kgh-price">360,85</div>
+        <div class="pick-price">320,60</div>
         <div class="pick-cur">PLN</div>
-        <div class="pick-range">52T: 115 – 396 PLN</div>
+        <div class="pick-range">52T: 160,31 – 309,80 PLN · <strong style="color:#4ade80">NOWE ATH ↑</strong></div>
       </div>
       <div class="pick-thesis">
         <div class="pick-thesis-label">Teza inwestycyjna</div>
         <div class="pick-thesis-text">
-          KGHM po spektakularnym wzroście +225% od wiosny 2025 konsoliduje się w Fazie 2B — trend jest dojrzały, ale MA30W nadal rośnie. Szukam pullbacku do strefy 330–345 PLN (okolice SMA50) jako okazji do dokupienia z ryzykiem pod SMA150. Popyt strukturalny na miedź (centra danych AI, elektromobilność, transformacja energetyczna) pozostaje niezmienny. Spółka to jeden z największych producentów srebra na świecie — dodatkowy argument przy słabym USD.
+          Senetek w tym tygodniu wybiło nowe szczyty roczne — kurs 320,60 PLN powyżej previous high 309,80 PLN to klasyczny sygnał Minervini: <strong>breakout z bazy do nowych ATH przy rosnącym wolumenie</strong>. MTT 8/8, RS Rank 89 (top 11% mWIG40), MA30W (266 PLN) rośnie 13,3% m/m. Spółka w czystej Fazie 2B — cena powyżej wszystkich średnich, SMA50 &gt; SMA150 &gt; SMA200. PerfW +7,1% przy RSI 68 — momentum silne ale jeszcze nie przegrzane. Kupuję na pullbacku do strefy 290–305 PLN (okolice SMA50).
         </div>
       </div>
       <div class="pick-levels">
         <div class="pick-level support">
-          <div class="pick-level-label">Wsparcie</div>
-          <div class="pick-level-val">330–345</div>
+          <div class="pick-level-label">Wsparcie / SMA50</div>
+          <div class="pick-level-val">290–305</div>
         </div>
         <div class="pick-level resistance">
-          <div class="pick-level-label">Opór / Cel</div>
-          <div class="pick-level-val">396 → 440</div>
+          <div class="pick-level-label">Cel / proj. wzrostu</div>
+          <div class="pick-level-val">360 → 400</div>
         </div>
         <div class="pick-level stop">
           <div class="pick-level-label">Stop-loss</div>
-          <div class="pick-level-val">&lt; 310</div>
+          <div class="pick-level-val">&lt; 270</div>
         </div>
       </div>
       <div class="pick-mtt">
-        <div class="pick-mtt-label">Minervini Trend Template</div>
+        <div class="pick-mtt-label">Minervini Trend Template · 8/8 ✦</div>
         <div class="pick-mtt-dots">
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA150/200</div>
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA150 &gt; MA200</div>
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA50 &gt; MA150/200</div>
           <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Cena &gt; MA50</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> &lt;25% od szczytu 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +100% od dołka 52T</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> Nowe ATH (breakout)</div>
+          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> RS Rank 89 ≥ 70</div>
         </div>
       </div>
       <div class="pick-catalyst">
         <div class="pick-catalyst-label">Katalizatory</div>
         <div class="pick-catalyst-list">
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Jefferies: silny popyt na miedź z centrów danych i infrastruktury AI w USA — rekomendacja „kupuj"</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Strukturalny deficyt podaży miedzi na rynku globalnym przez 2027+</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>Wyniki Q1 2026 powyżej oczekiwań, raport półroczny: 19 sierpnia 2026</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div>GPW bije rekordy — sentyment do polskich blue chips pozytywny</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Breakout ATH:</strong> kurs 320,60 PLN powyżej szczytu 52T (309,80 PLN) — klasyczny sygnał Minervini przy wolumenie 107% średniej</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>RS Rank 89:</strong> bije 89% składowych mWIG40 pod względem stopy zwrotu 12M — lider relatywnej siły indeksu</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Podwojenie od dołka:</strong> +100% od minimum 52T (160,31 PLN) — instytucje budują pozycję od miesięcy</div>
+          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Momentum:</strong> perfW +7,1% i perf1M +13,3% przy RSI 68 — silny trend bez oznak przegrzania</div>
         </div>
       </div>
       <div class="pick-footer">
         <div class="pick-date">Analiza: 27 czerwca 2026</div>
-        <a class="pick-tv-link" href="https://pl.tradingview.com/symbols/GPW-KGH/" target="_blank" rel="noopener">↗ TradingView</a>
-      </div>
-    </div>
-
-    <!-- ── SPOTIFY ── -->
-    <div class="pick-card ph3">
-      <div class="pick-top">
-        <div class="pick-id">
-          <div class="pick-ticker">SPOT · NYSE 🇺🇸</div>
-          <div class="pick-name">Spotify Technology</div>
-          <div class="pick-meta">Streaming · Podcasty · SaaS · Nowy Jork</div>
-        </div>
-        <div class="pick-badges">
-          <div class="pick-phase-badge">
-            <div class="pick-phase-num">3</div>
-          </div>
-          <div class="pick-sub-badge">3B</div>
-        </div>
-      </div>
-      <div class="pick-price-row">
-        <div class="pick-price" id="pick-spot-price">482,00</div>
-        <div class="pick-cur">USD</div>
-        <div class="pick-range">52T: 405 – 785 USD</div>
-      </div>
-      <div class="pick-thesis">
-        <div class="pick-thesis-label">Teza inwestycyjna</div>
-        <div class="pick-thesis-text">
-          Spotify jest w pułapce narracyjnej — przestało być spółką wzrostową (761M MAU, gdzie dalej?), ale rynek jeszcze nie wycenia go w pełni jako spółkę marżową. Wyniki Q2 (29 lipca) mogą powtórzyć schemat z Q1: EPS pobije szacunki, ale przyrost MAU rozczaruje — i akcja dostanie po głowie niezależnie od marży. To klasyczny <strong>beat and drop</strong>. Faza 3B z ceną poniżej MA30W (~560 USD) sugeruje że duże pieniądze już wyszły ze szczytu 785 USD. Nie kupuję przed wynikami — czekam na reakcję rynku i ewentualną Fazę 1 jako bazę do nowego cyklu.
-        </div>
-      </div>
-      <div class="pick-levels">
-        <div class="pick-level support">
-          <div class="pick-level-label">Obserwuj po wynikach</div>
-          <div class="pick-level-val">400–420</div>
-        </div>
-        <div class="pick-level resistance">
-          <div class="pick-level-label">Opór / MA30W</div>
-          <div class="pick-level-val">~560</div>
-        </div>
-        <div class="pick-level stop">
-          <div class="pick-level-label">Scenariusz F4</div>
-          <div class="pick-level-val">&lt; 405</div>
-        </div>
-      </div>
-      <div class="pick-mtt">
-        <div class="pick-mtt-label">Minervini Trend Template</div>
-        <div class="pick-mtt-dots">
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA150/200</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA150 &gt; MA200</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> MA200 rośnie</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> MA50 &gt; MA150</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> Cena &gt; MA50</div>
-          <div class="pick-mtt-dot pass"><span class="dot-icon">✓</span> +25% od dołka 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> &lt;25% od szczytu 52T</div>
-          <div class="pick-mtt-dot fail"><span class="dot-icon">✗</span> RSI ≥ 70</div>
-        </div>
-      </div>
-      <div class="pick-catalyst">
-        <div class="pick-catalyst-label">Ryzyka i katalizatory</div>
-        <div class="pick-catalyst-list">
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #1 — beat and drop:</strong> Q2 wyniki 29 lipca — EPS może pobić, ale słaby przyrost MAU wystarczy żeby akcja zanurkowała (schemat z Q1 2026: +17% EPS → −10% w premarkecie)</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Ryzyko #2 — insiderzy sprzedawali:</strong> duże transakcje dyrektorów maj–czerwiec 2026, put volume podwyższony</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Szansa:</strong> AI DJ feature (94M userów) + livestreaming koncertów mogą zaskoczyć jako nowy strumień ARPU którego rynek jeszcze nie wycenia</div>
-          <div class="pick-catalyst-item"><div class="pick-catalyst-dot"></div><strong>Strategia:</strong> nie kupuję przed wynikami — czekam na Fazę 1 (baza) po ewentualnym zejściu w Fazę 4 jako punkt wejścia do nowego cyklu</div>
-        </div>
-      </div>
-      <div class="pick-footer">
-        <div class="pick-date">Analiza: 27 czerwca 2026</div>
-        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NYSE-SPOT/" target="_blank" rel="noopener">↗ TradingView</a>
+        <a class="pick-tv-link" href="https://www.tradingview.com/symbols/GPW-SNT/" target="_blank" rel="noopener">↗ TradingView</a>
       </div>
     </div>
 
@@ -2305,7 +2251,10 @@ function renderCard(s){
       <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu" style="font-size:10px">${s.vol}</div></div>
       <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu" style="font-size:10px">${s.rs}</div></div>
     </div>
-    <div class="card-signals">${mttTag}</div>
+    <div class="card-signals">
+      <div>${mttTag}</div>
+      ${TV_MAP[s.ticker] ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${TV_MAP[s.ticker].replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
+    </div>
   </div>`;
 }
 
