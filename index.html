@@ -951,7 +951,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Czerwiec 2026</div>
   </div>
   <div class="h-badges">
-    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 14 czerwca 2026</div>
+    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 27 czerwca 2026</div>
     <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()" title="Pobierz aktualne kursy i wskaźniki z TradingView">
       <span class="rf-icon" id="rfIcon">⟳</span>
       <span id="rfLabel">Odśwież live</span>
@@ -1053,7 +1053,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 <!-- ══ SPÓŁKA TYGODNIA ══ -->
 <div class="pick-view" id="pick-view">
   <div class="pick-header">
-    <div class="pick-eyebrow">Analiza tygodnia · 14 czerwca 2026</div>
+    <div class="pick-eyebrow">Analiza tygodnia · 27 czerwca 2026</div>
     <div class="pick-title">🎯 Spółka Tygodnia</div>
     <div class="pick-subtitle">Jedna lub dwie spółki pod lupą — faza Weinsteina, kluczowe poziomy i teza inwestycyjna. Aktualizacja co niedzielę.</div>
   </div>
@@ -1122,7 +1122,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
         </div>
       </div>
       <div class="pick-footer">
-        <div class="pick-date">Analiza: 14 czerwca 2026</div>
+        <div class="pick-date">Analiza: 27 czerwca 2026</div>
         <a class="pick-tv-link" href="https://pl.tradingview.com/symbols/GPW-KGH/" target="_blank" rel="noopener">↗ TradingView</a>
       </div>
     </div>
@@ -1190,7 +1190,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
         </div>
       </div>
       <div class="pick-footer">
-        <div class="pick-date">Analiza: 14 czerwca 2026</div>
+        <div class="pick-date">Analiza: 27 czerwca 2026</div>
         <a class="pick-tv-link" href="https://www.tradingview.com/symbols/NYSE-SPOT/" target="_blank" rel="noopener">↗ TradingView</a>
       </div>
     </div>
@@ -3493,7 +3493,7 @@ async function fetchAll52W(tickers) {
 // ── BiznesRadar + Ariva 52W / Perf.52 / RS Rank ─────────────────────────────
 // WIG20+mWIG40: biznesradar.pl/minmax + /stopy-zwrotu
 // DAX: ariva.de/dax-kurs-index/52w_hoch_tief
-// Data: 2026-06-14 — aktualizuj co niedzielę
+// Data: 2026-06-27 — aktualizuj co niedzielę
 const BR_52W = {
   'GKY':{high52:1179.0,low52:754.92},
   'PCO':{high52:33.74,low52:15.97},
@@ -3927,7 +3927,7 @@ async function refreshLiveData() {
     setTimeout(() => {
       if (lbl)    lbl.textContent = 'Odśwież live';
       if (icon)   icon.textContent = '⟳';
-      if (badge)  { badge.textContent = '✓ Aktualizacja: 14 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
+      if (badge)  { badge.textContent = '✓ Aktualizacja: 27 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
       if (mktIcon){ mktIcon.textContent = '⟳'; }
       if (mktBtn) { mktBtn.style.color = ''; mktBtn.style.opacity = '1'; }
     }, 3000);
@@ -4131,7 +4131,7 @@ function recalcMTT(card, ticker, d) {
 // ══════════════════════════════════════════════════
 // METODOLOGIA MODAL
 // ══════════════════════════════════════════════════
-const LAST_UPDATE = '2026-06-12';
+const LAST_UPDATE = '2026-06-27';
 
 function openMethodology() {
   document.getElementById('methOverlay').classList.add('open');
