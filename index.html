@@ -2313,7 +2313,6 @@ function renderCard(s){
         <div class="stage-badge">
           <div class="stage-num">${s.stage}</div>
           <div class="stage-lbl">${['','AKUM.','WZROST','DYST.','SPADEK'][s.stage]}</div>
-          <div class="sub-badge ${subExtra}" data-sub>${sub}</div>
         </div>
       </div>
     </div>
@@ -4140,17 +4139,6 @@ function updateCardsWithLiveData() {
     }
     // Faza Weinsteina — NIE nadpisujemy s.stage (ustawiany ręcznie co tydzień)
     // calcStage służy tylko do wyświetlania liveStage indicator w renderCard
-    // Aktualizuj sub-badge
-    const subEl = card.querySelector('[data-sub]');
-    if (subEl) {
-      const { sub, extraClass } = calcSubStage({
-        price: d.price, sma50: d.sma50, sma150: d.sma150, sma200: d.sma200,
-        sma150_20: d.sma150_20, volume: d.volume, avgVol: d.avgVol,
-        high52: d.high52, low52: d.low52, rsi: d.rsi,
-      });
-      subEl.textContent = sub;
-      subEl.className = 'sub-badge' + (extraClass ? ' ' + extraClass : '');
-    }
     // Also sync price and sma150 into STOCKS for filter/modal consistency
     if (d.price || d.sma150) {
       const idx = card.dataset.idx;
