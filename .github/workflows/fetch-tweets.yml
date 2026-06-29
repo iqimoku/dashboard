@@ -1,4 +1,4 @@
-name: Fetch Tweets @SteveDJacobs
+name: Fetch Tweets SteveDJacobs
 
 on:
   schedule:
@@ -15,76 +15,46 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch tweets via Twitter API v2
+      - name: Fetch tweets
         env:
           BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          echo "=== Sprawdzam Bearer Token ==="
           if [ -z "$BEARER_TOKEN" ]; then
-            echo "ERROR: TWITTER_BEARER_TOKEN secret jest pusty!"
+            echo "BLAD: Secret TWITTER_BEARER_TOKEN jest pusty!"
             exit 1
           fi
-          echo "Token obecny (pierwsze 10 znaków): ${BEARER_TOKEN:0:10}..."
+          echo "Token OK: ${BEARER_TOKEN:0:15}..."
 
-          echo "=== Pobieram ID użytkownika @SteveDJacobs ==="
           USER_RESPONSE=$(curl -s \
             -H "Authorization: Bearer $BEARER_TOKEN" \
             "https://api.twitter.com/2/users/by/username/SteveDJacobs")
-          
-          echo "Odpowiedź API: $USER_RESPONSE"
-
-          # Sprawdź czy jest błąd
-          ERROR=$(echo "$USER_RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('title',''))" 2>/dev/null)
-          if [ -n "$ERROR" ]; then
-            echo "ERROR z API: $ERROR"
-            echo "$USER_RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps(d, indent=2))"
-            exit 1
-          fi
+          echo "User response: $USER_RESPONSE"
 
           USER_ID=$(echo "$USER_RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['data']['id'])")
           echo "User ID: $USER_ID"
 
-          echo "=== Pobieram tweety ==="
-          TWEETS_RESPONSE=$(curl -s \
+          curl -s \
             -H "Authorization: Bearer $BEARER_TOKEN" \
-            "https://api.twitter.com/2/users/${USER_ID}/tweets?max_results=20&tweet.fields=created_at,public_metrics,entities&expansions=author_id&user.fields=name,username,profile_image_url")
+            "https://api.twitter.com/2/users/${USER_ID}/tweets?max_results=20&tweet.fields=created_at,public_metrics,entities&expansions=author_id&user.fields=name,username,profile_image_url" \
+            > tweets_raw.json
 
-          echo "Tweety API odpowiedź (pierwsze 200 znaków): ${TWEETS_RESPONSE:0:200}"
+          echo "Tweets response: $(cat tweets_raw.json | head -c 500)"
 
-          python3 - << 'EOF'
-import json, datetime, sys
-
-response = ''''"'"'$TWEETS_RESPONSE'"'"'''
-
-with open('tweets_raw.json', 'w') as f:
-    f.write(response)
-EOF
-
-          echo "$TWEETS_RESPONSE" > tweets_raw.json
-
-          python3 - << 'PYEOF'
+          python3 -c "
 import json, datetime
-
-with open('tweets_raw.json', 'r') as f:
+with open('tweets_raw.json') as f:
     data = json.load(f)
-
-if 'errors' in data and 'data' not in data:
-    print(f"API Error: {json.dumps(data, indent=2)}")
-    exit(1)
-
 data['_updated'] = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 data['_username'] = 'SteveDJacobs'
-
 with open('tweets.json', 'w') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
+print('Zapisano', len(data.get('data', [])), 'tweetow')
+"
 
-print(f"Zapisano {len(data.get('data', []))} tweetów")
-PYEOF
-
-      - name: Commit & push tweets.json
+      - name: Commit i push
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add tweets.json
-          git diff --staged --quiet || git commit -m "chore: update tweets $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git diff --staged --quiet || git commit -m "update tweets $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
