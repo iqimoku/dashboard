@@ -1,0 +1,58 @@
+name: Fetch Tweets @SteveDJacobs
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # co godzinę
+  workflow_dispatch:        # możliwość ręcznego uruchomienia
+
+jobs:
+  fetch-tweets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch tweets via Twitter API v2
+        env:
+          BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          # Pobierz ID użytkownika @SteveDJacobs
+          USER_ID=$(curl -s \
+            -H "Authorization: Bearer $BEARER_TOKEN" \
+            "https://api.twitter.com/2/users/by/username/SteveDJacobs" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['data']['id'])")
+
+          echo "User ID: $USER_ID"
+
+          # Pobierz 20 ostatnich tweetów z metadanymi
+          curl -s \
+            -H "Authorization: Bearer $BEARER_TOKEN" \
+            "https://api.twitter.com/2/users/${USER_ID}/tweets?max_results=20&tweet.fields=created_at,public_metrics,entities&expansions=author_id&user.fields=name,username,profile_image_url" \
+            > tweets.json
+
+          # Dodaj timestamp aktualizacji
+          python3 - <<'EOF'
+          import json, datetime
+
+          with open('tweets.json', 'r') as f:
+              data = json.load(f)
+
+          data['_updated'] = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+          data['_username'] = 'SteveDJacobs'
+
+          with open('tweets.json', 'w') as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+
+          print(f"Saved {len(data.get('data', []))} tweets")
+          EOF
+
+      - name: Commit & push tweets.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tweets.json
+          git diff --staged --quiet || git commit -m "chore: update tweets $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
