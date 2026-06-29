@@ -785,13 +785,78 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   transition:all .2s;
 }
 .tweets-header-link:hover { background:rgba(29,161,242,.1); }
-.tweets-embed-wrap {
+
+/* Tweet cards */
+.tweet-card {
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:12px;
-  overflow:hidden;
-  min-height:500px;
+  padding:16px 18px;
+  margin-bottom:12px;
+  transition:border-color .2s, box-shadow .2s;
 }
+.tweet-card:hover {
+  border-color:rgba(29,161,242,.35);
+  box-shadow:0 4px 20px rgba(29,161,242,.08);
+}
+.tweet-meta {
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:10px;
+}
+.tweet-avatar {
+  width:38px; height:38px; border-radius:50%;
+  background:rgba(29,161,242,.15);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+  overflow:hidden;
+}
+.tweet-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.tweet-name { font-size:14px; font-weight:700; color:var(--text); }
+.tweet-handle { font-size:12px; color:var(--muted); }
+.tweet-time {
+  margin-left:auto;
+  font-size:11px; font-family:'Space Mono',monospace;
+  color:var(--muted);
+}
+.tweet-text {
+  font-size:14px; line-height:1.65; color:var(--text);
+  word-break:break-word;
+}
+.tweet-text a { color:#1da1f2; text-decoration:none; }
+.tweet-text a:hover { text-decoration:underline; }
+.tweet-stats {
+  display:flex; gap:18px; margin-top:12px;
+  padding-top:10px; border-top:1px solid var(--border);
+}
+.tweet-stat {
+  display:flex; align-items:center; gap:5px;
+  font-size:12px; color:var(--muted);
+  font-family:'Space Mono',monospace;
+}
+.tweet-stat span:first-child { font-size:14px; }
+.tweet-link {
+  display:block; margin-top:10px;
+  font-size:11px; font-family:'Space Mono',monospace;
+  color:rgba(29,161,242,.6); text-decoration:none;
+  text-align:right;
+}
+.tweet-link:hover { color:#1da1f2; }
+.tweets-loading {
+  text-align:center; padding:60px 20px;
+  color:var(--muted); font-size:14px;
+}
+.tweets-loading .tl-spinner {
+  font-size:28px; display:block; margin-bottom:12px;
+  animation:spin 1.2s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.tweets-error {
+  text-align:center; padding:40px 20px;
+  color:var(--muted); font-size:13px;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:12px;
+}
+.tweets-error a { color:#1da1f2; }
 
 
 /* ── Compact / Table mode toggle ────────────── */
@@ -1364,22 +1429,13 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <span class="tweets-header-icon">🐦</span>
     <div>
       <div class="tweets-header-title">Tweety @SteveDJacobs</div>
-      <div class="tweets-header-sub">Najnowsze wpisy na X (Twitter) — analizy rynkowe</div>
+      <div class="tweets-header-sub" id="tweets-updated">Aktualizacja co godzinę via GitHub Actions</div>
     </div>
     <a class="tweets-header-link" href="https://x.com/SteveDJacobs" target="_blank" rel="noopener">
       Otwórz profil ↗
     </a>
   </div>
-  <div class="tweets-embed-wrap">
-    <a class="twitter-timeline"
-       data-theme="dark"
-       data-chrome="noheader nofooter noborders"
-       data-tweet-limit="20"
-       data-lang="pl"
-       href="https://twitter.com/SteveDJacobs">
-      Ładowanie tweetów @SteveDJacobs...
-    </a>
-  </div>
+  <div id="tweets-list"></div>
 </div>
 
 <!-- MODAL -->
@@ -2668,8 +2724,9 @@ function switchTabPick(){
 
 // ══════════════════════════════════════════════════
 // TWEETY — Twitter Timeline @SteveDJacobs
+// (dane z tweets.json generowanego przez GitHub Actions)
 // ══════════════════════════════════════════════════
-let twitterWidgetLoaded = false;
+let tweetsLoaded = false;
 
 function switchTabTweets(){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -2684,17 +2741,108 @@ function switchTabTweets(){
   document.getElementById('pick-view').classList.remove('active');
   document.getElementById('tweets-view').classList.add('active');
 
-  // Load Twitter widget script once
-  if (!twitterWidgetLoaded) {
-    twitterWidgetLoaded = true;
-    const s = document.createElement('script');
-    s.src = 'https://platform.twitter.com/widgets.js';
-    s.async = true;
-    s.charset = 'utf-8';
-    document.body.appendChild(s);
-  } else if (window.twttr && window.twttr.widgets) {
-    window.twttr.widgets.load(document.getElementById('tweets-view'));
+  if (!tweetsLoaded) {
+    tweetsLoaded = true;
+    loadTweets();
   }
+}
+
+function loadTweets(){
+  const list = document.getElementById('tweets-list');
+  list.innerHTML = '<div class="tweets-loading"><span class="tl-spinner">⟳</span>Ładowanie tweetów...</div>';
+
+  fetch('tweets.json?t=' + Date.now())
+    .then(r => {
+      if (!r.ok) throw new Error('Brak pliku tweets.json');
+      return r.json();
+    })
+    .then(data => renderTweets(data))
+    .catch(err => {
+      list.innerHTML = `
+        <div class="tweets-error">
+          <div style="font-size:32px;margin-bottom:12px;">🐦</div>
+          <div style="margin-bottom:8px;color:var(--text);font-weight:600;">Tweety niedostępne</div>
+          <div style="margin-bottom:16px;">${err.message}</div>
+          <div>Upewnij się, że GitHub Actions uruchomił się przynajmniej raz<br>
+          i plik <code>tweets.json</code> istnieje w repozytorium.</div>
+          <div style="margin-top:16px;">
+            <a href="https://x.com/SteveDJacobs" target="_blank" rel="noopener">
+              → Otwórz profil @SteveDJacobs na X ←
+            </a>
+          </div>
+        </div>`;
+    });
+}
+
+function renderTweets(data){
+  const list = document.getElementById('tweets-list');
+  const tweets = data.data || [];
+  const users = (data.includes && data.includes.users) || [];
+  const author = users.find(u => u.username === 'SteveDJacobs') || {};
+
+  // Update timestamp
+  if (data._updated) {
+    const d = new Date(data._updated);
+    document.getElementById('tweets-updated').textContent =
+      'Ostatnia aktualizacja: ' + d.toLocaleString('pl-PL');
+  }
+
+  if (!tweets.length) {
+    list.innerHTML = '<div class="tweets-error">Brak tweetów do wyświetlenia.</div>';
+    return;
+  }
+
+  const avatarHtml = author.profile_image_url
+    ? `<img src="${author.profile_image_url.replace('_normal','_bigger')}" alt="avatar">`
+    : '🐦';
+
+  list.innerHTML = tweets.map(t => {
+    const date = new Date(t.created_at);
+    const timeStr = date.toLocaleString('pl-PL', {
+      day:'2-digit', month:'short', year:'numeric',
+      hour:'2-digit', minute:'2-digit'
+    });
+
+    // Linkify URLs, hashtags, mentions
+    let text = t.text || '';
+    // Ukryj t.co linki z entities jeśli są
+    const urls = (t.entities && t.entities.urls) || [];
+    urls.forEach(u => {
+      if (u.display_url && u.display_url.startsWith('pic.twitter')) {
+        text = text.replace(u.url, '');
+      } else {
+        const link = `<a href="${u.expanded_url || u.url}" target="_blank" rel="noopener">${u.display_url || u.url}</a>`;
+        text = text.replace(u.url, link);
+      }
+    });
+    // Hashtagi
+    text = text.replace(/#(\w+)/g, '<a href="https://x.com/hashtag/$1" target="_blank" rel="noopener">#$1</a>');
+    // Wzmianki
+    text = text.replace(/@(\w+)/g, '<a href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>');
+
+    const m = t.public_metrics || {};
+    const tweetUrl = `https://x.com/SteveDJacobs/status/${t.id}`;
+
+    return `
+      <div class="tweet-card">
+        <div class="tweet-meta">
+          <div class="tweet-avatar">${avatarHtml}</div>
+          <div>
+            <div class="tweet-name">${author.name || 'Steve D. Jacobs'}</div>
+            <div class="tweet-handle">@${author.username || 'SteveDJacobs'}</div>
+          </div>
+          <span class="tweet-time">${timeStr}</span>
+        </div>
+        <div class="tweet-text">${text}</div>
+        <div class="tweet-stats">
+          <span class="tweet-stat"><span>♥</span> ${(m.like_count||0).toLocaleString('pl-PL')}</span>
+          <span class="tweet-stat"><span>🔁</span> ${(m.retweet_count||0).toLocaleString('pl-PL')}</span>
+          <span class="tweet-stat"><span>💬</span> ${(m.reply_count||0).toLocaleString('pl-PL')}</span>
+          <span class="tweet-stat"><span>📊</span> ${(m.impression_count||0).toLocaleString('pl-PL')}</span>
+        </div>
+        <a class="tweet-link" href="${tweetUrl}" target="_blank" rel="noopener">Otwórz na X ↗</a>
+      </div>`;
+  }).join('');
 }
 
 function setMarketView(mkt, btn){
