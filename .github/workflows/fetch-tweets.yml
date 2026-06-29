@@ -38,18 +38,9 @@ jobs:
             "https://api.twitter.com/2/users/${USER_ID}/tweets?max_results=20&tweet.fields=created_at,public_metrics,entities&expansions=author_id&user.fields=name,username,profile_image_url" \
             > tweets_raw.json
 
-          echo "Tweets response: $(cat tweets_raw.json | head -c 500)"
+          echo "Tweets: $(head -c 300 tweets_raw.json)"
 
-          python3 -c "
-import json, datetime
-with open('tweets_raw.json') as f:
-    data = json.load(f)
-data['_updated'] = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-data['_username'] = 'SteveDJacobs'
-with open('tweets.json', 'w') as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-print('Zapisano', len(data.get('data', [])), 'tweetow')
-"
+          python3 process_tweets.py
 
       - name: Commit i push
         run: |
