@@ -740,6 +740,59 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   box-shadow: 0 0 18px rgba(139,92,246,.25), inset 0 1px 0 rgba(255,255,255,.08);
 }
 
+/* ── Tweety tab ──────────────────────────── */
+.tab-tweets-btn {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(29,161,242,.15) 0%,
+    rgba(29,161,242,.08) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(29,161,242,.4) !important;
+  color: #1da1f2 !important;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+.tab-tweets-btn:hover { color: #4db8ff !important; background: rgba(29,161,242,.22) !important; }
+.tab-tweets-btn.active {
+  background: linear-gradient(135deg,
+    rgba(29,161,242,.30) 0%,
+    rgba(29,161,242,.22) 100%
+  ) !important;
+  border-bottom-color: #1da1f2 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(29,161,242,.6);
+  box-shadow: 0 0 16px rgba(29,161,242,.2), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ── Tweets view ─────────────────────────── */
+.tweets-view { display:none; padding:24px 36px 48px; max-width:700px; margin:0 auto; }
+.tweets-view.active { display:block; }
+.tweets-header {
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:20px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+.tweets-header-icon { font-size:28px; }
+.tweets-header-title { font-size:20px; font-weight:800; color:var(--text); }
+.tweets-header-sub { font-size:12px; color:var(--muted); margin-top:3px; }
+.tweets-header-link {
+  margin-left:auto;
+  font-size:11px; font-family:'Space Mono',monospace;
+  color:#1da1f2; text-decoration:none;
+  border:1px solid rgba(29,161,242,.3);
+  padding:5px 12px; border-radius:6px;
+  transition:all .2s;
+}
+.tweets-header-link:hover { background:rgba(29,161,242,.1); }
+.tweets-embed-wrap {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  min-height:500px;
+}
+
 
 /* ── Compact / Table mode toggle ────────────── */
 .view-toggle{display:flex;gap:2px;background:var(--surface3,rgba(255,255,255,.05));border-radius:6px;padding:2px;}
@@ -1071,6 +1124,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
   <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia <span style="font-size:10px;opacity:.6;font-weight:400;margin-left:4px;">27.06</span></div>
+  <div class="tab tab-tweets-btn" id="tab-tweets" onclick="switchTabTweets()">🐦 Tweety @SteveDJacobs</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -1302,6 +1356,30 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
       <div id="top5-container"></div>
     </div>
   <div id="market-alert" class="market-alert" style="display:none;"></div>
+</div>
+
+<!-- TWEETS VIEW -->
+<div class="tweets-view" id="tweets-view">
+  <div class="tweets-header">
+    <span class="tweets-header-icon">🐦</span>
+    <div>
+      <div class="tweets-header-title">Tweety @SteveDJacobs</div>
+      <div class="tweets-header-sub">Najnowsze wpisy na X (Twitter) — analizy rynkowe</div>
+    </div>
+    <a class="tweets-header-link" href="https://x.com/SteveDJacobs" target="_blank" rel="noopener">
+      Otwórz profil ↗
+    </a>
+  </div>
+  <div class="tweets-embed-wrap">
+    <a class="twitter-timeline"
+       data-theme="dark"
+       data-chrome="noheader nofooter noborders"
+       data-tweet-limit="20"
+       data-lang="pl"
+       href="https://twitter.com/SteveDJacobs">
+      Ładowanie tweetów @SteveDJacobs...
+    </a>
+  </div>
 </div>
 
 <!-- MODAL -->
@@ -2533,6 +2611,7 @@ function switchTab(tab){
   if(document.getElementById('fmtt8')) document.getElementById('fmtt8').classList.remove('active');
   document.getElementById('market-view').classList.remove('active');
   document.getElementById('pick-view').classList.remove('active');
+  document.getElementById('tweets-view').classList.remove('active');
   document.getElementById('ctrl-bar').style.display='';
   document.getElementById('legend-bar').style.display='';
   document.getElementById('grid').style.display='';
@@ -2559,6 +2638,7 @@ function switchTabMarket(){
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('summary').style.display='none';
   document.getElementById('pick-view').classList.remove('active');
+  document.getElementById('tweets-view').classList.remove('active');
   document.getElementById('market-view').classList.add('active');
   renderMarketView(currentMarketView);
 }
@@ -2573,6 +2653,7 @@ function switchTabPick(){
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('summary').style.display='none';
   document.getElementById('market-view').classList.remove('active');
+  document.getElementById('tweets-view').classList.remove('active');
   document.getElementById('pick-view').classList.add('active');
   // Update prices from liveData if available
   if (liveData['KGH'] && liveData['KGH'].price) {
@@ -2582,6 +2663,37 @@ function switchTabPick(){
   if (liveData['SPOT'] && liveData['SPOT'].price) {
     const el = document.getElementById('pick-spot-price');
     if (el) el.textContent = liveData['SPOT'].price.toFixed(2);
+  }
+}
+
+// ══════════════════════════════════════════════════
+// TWEETY — Twitter Timeline @SteveDJacobs
+// ══════════════════════════════════════════════════
+let twitterWidgetLoaded = false;
+
+function switchTabTweets(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-tweets').classList.add('active');
+  document.getElementById('ctrl-bar').style.display='none';
+  document.getElementById('legend-bar').style.display='none';
+  document.getElementById('grid').style.display='none';
+  document.getElementById('coffee-bar').style.display='none';
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('summary').style.display='none';
+  document.getElementById('market-view').classList.remove('active');
+  document.getElementById('pick-view').classList.remove('active');
+  document.getElementById('tweets-view').classList.add('active');
+
+  // Load Twitter widget script once
+  if (!twitterWidgetLoaded) {
+    twitterWidgetLoaded = true;
+    const s = document.createElement('script');
+    s.src = 'https://platform.twitter.com/widgets.js';
+    s.async = true;
+    s.charset = 'utf-8';
+    document.body.appendChild(s);
+  } else if (window.twttr && window.twttr.widgets) {
+    window.twttr.widgets.load(document.getElementById('tweets-view'));
   }
 }
 
