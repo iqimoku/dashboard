@@ -82,13 +82,13 @@ for entry in feed.entries[:20]:
 
 # Dane autora z RSS
 feed_info = feed.feed
-author_name = feed_info.get('title', 'Yahoo Finance').replace(' / Nitter', '').strip()
+author_name = feed_info.get('title', 'Steve D. Jacobs').replace(' / Nitter', '').strip()
 
 data = {
     "data": tweets,
     "includes": {
         "users": [{
-            "id": "yahoofinance",
+            "id": "stevedjacobs",
             "name": author_name,
             "username": USERNAME,
             "profile_image_url": ""
