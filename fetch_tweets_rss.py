@@ -11,7 +11,7 @@ NITTER_INSTANCES = [
     "https://nitter.lucabased.xyz",
 ]
 
-USERNAME = "SteveDJacobs"
+USERNAME = "YahooFinance"
 
 def try_fetch(instance):
     url = f"{instance}/{USERNAME}/rss"
@@ -82,13 +82,13 @@ for entry in feed.entries[:20]:
 
 # Dane autora z RSS
 feed_info = feed.feed
-author_name = feed_info.get('title', 'Steve D. Jacobs').replace(' / Nitter', '').strip()
+author_name = feed_info.get('title', 'Yahoo Finance').replace(' / Nitter', '').strip()
 
 data = {
     "data": tweets,
     "includes": {
         "users": [{
-            "id": "stevedjacobs",
+            "id": "yahoofinance",
             "name": author_name,
             "username": USERNAME,
             "profile_image_url": ""
