@@ -25,24 +25,16 @@ jobs:
           fi
           echo "Token OK"
 
-          curl -s -w "\nHTTP_STATUS:%{http_code}" \
+          curl -s \
             -H "Authorization: Bearer $BEARER_TOKEN" \
             "https://api.twitter.com/2/users/by/username/SteveDJacobs" \
-            > user_response.txt
+            > user_response.json
 
-          echo "===== PELNA ODPOWIEDZ API ====="
-          cat user_response.txt
+          echo "=== ODPOWIEDZ API ==="
+          cat user_response.json
           echo ""
-          echo "================================"
 
-          USER_ID=$(python3 -c "
-import json
-with open('user_response.txt') as f:
-    content = f.read()
-body = content.split('HTTP_STATUS:')[0]
-data = json.loads(body)
-print(data['data']['id'])
-")
+          USER_ID=$(python3 get_user_id.py)
           echo "User ID: $USER_ID"
 
           curl -s \
