@@ -1189,7 +1189,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
   <div class="tab tab-pick-btn" id="tab-pick" onclick="switchTabPick()">🎯 Spółka Tygodnia <span style="font-size:10px;opacity:.6;font-weight:400;margin-left:4px;">27.06</span></div>
-  <div class="tab tab-tweets-btn" id="tab-tweets" onclick="switchTabTweets()">🐦 Tweety @SteveDJacobs</div>
+  <div class="tab tab-tweets-btn" id="tab-tweets" onclick="switchTabTweets()">🐦 Tweety @YahooFinance</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -1428,10 +1428,10 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tweets-header">
     <span class="tweets-header-icon">🐦</span>
     <div>
-      <div class="tweets-header-title">Tweety @SteveDJacobs</div>
+      <div class="tweets-header-title">Tweety @YahooFinance</div>
       <div class="tweets-header-sub" id="tweets-updated">Aktualizacja co godzinę via GitHub Actions</div>
     </div>
-    <a class="tweets-header-link" href="https://x.com/SteveDJacobs" target="_blank" rel="noopener">
+    <a class="tweets-header-link" href="https://x.com/YahooFinance" target="_blank" rel="noopener">
       Otwórz profil ↗
     </a>
   </div>
@@ -2723,7 +2723,7 @@ function switchTabPick(){
 }
 
 // ══════════════════════════════════════════════════
-// TWEETY — Twitter Timeline @SteveDJacobs
+// TWEETY — Twitter Timeline @YahooFinance
 // (dane z tweets.json generowanego przez GitHub Actions)
 // ══════════════════════════════════════════════════
 let tweetsLoaded = false;
@@ -2766,8 +2766,8 @@ function loadTweets(){
           <div>Upewnij się, że GitHub Actions uruchomił się przynajmniej raz<br>
           i plik <code>tweets.json</code> istnieje w repozytorium.</div>
           <div style="margin-top:16px;">
-            <a href="https://x.com/SteveDJacobs" target="_blank" rel="noopener">
-              → Otwórz profil @SteveDJacobs na X ←
+            <a href="https://x.com/YahooFinance" target="_blank" rel="noopener">
+              → Otwórz profil @YahooFinance na X ←
             </a>
           </div>
         </div>`;
@@ -2778,7 +2778,7 @@ function renderTweets(data){
   const list = document.getElementById('tweets-list');
   const tweets = data.data || [];
   const users = (data.includes && data.includes.users) || [];
-  const author = users.find(u => u.username === 'SteveDJacobs') || {};
+  const author = users.find(u => u.username === 'YahooFinance') || {};
 
   // Update timestamp
   if (data._updated) {
@@ -2821,15 +2821,15 @@ function renderTweets(data){
     text = text.replace(/@(\w+)/g, '<a href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>');
 
     const m = t.public_metrics || {};
-    const tweetUrl = `https://x.com/SteveDJacobs/status/${t.id}`;
+    const tweetUrl = `https://x.com/YahooFinance/status/${t.id}`;
 
     return `
       <div class="tweet-card">
         <div class="tweet-meta">
           <div class="tweet-avatar">${avatarHtml}</div>
           <div>
-            <div class="tweet-name">${author.name || 'Steve D. Jacobs'}</div>
-            <div class="tweet-handle">@${author.username || 'SteveDJacobs'}</div>
+            <div class="tweet-name">${author.name || 'Yahoo Finance'}</div>
+            <div class="tweet-handle">@${author.username || 'YahooFinance'}</div>
           </div>
           <span class="tweet-time">${timeStr}</span>
         </div>
