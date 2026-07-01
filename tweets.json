@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2072343259418919304",
+      "text": "Say you had $10,000 to invest on Jan. 2. Had you invested that sum in a variety of major assets, here's where those investments would've landed halfway through 2026. yhoo.it/4vJ2Dch",
+      "created_at": "2026-07-01T15:35:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072333812571226378",
+      "text": "Fed Chairman Kevin Warsh thinks the AI boom and massive capital expenditure in the U.S. is a good problem to have.\n\n\"This is as exciting a time and also as a consequential a time to be a central banker,\" Warsh told the ECB Forum.\n\nVideo",
+      "created_at": "2026-07-01T14:57:37Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072328392427343874",
+      "text": "Lime begins trading today, raising $167 million in its IPO.\n\nCEO @wayneting on why now is the right time to go public:\n\nVideo",
+      "created_at": "2026-07-01T14:36:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072318635163447361",
+      "text": "\"I've been out of this business for 15 years, but I still have the scars from the global financial crisis,\" says Fed Chairman Kevin Warsh.\n\nVideo",
+      "created_at": "2026-07-01T13:57:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072318529542529510",
+      "text": "Anthropic said it would begin restoring access to the models on Wednesday, July 1. yhoo.it/4y0AleH",
+      "created_at": "2026-07-01T13:56:53Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072302746791776762",
       "text": "The biggest overhaul to the federal student loan system in decades starts today, July 1. Here are some key changes borrowers should know. yhoo.it/3SCuFHS",
       "created_at": "2026-07-01T12:54:11Z",
@@ -164,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2071680142624133322",
-      "text": "In a 6-3 ruling, the Supreme Court expanded President Trump's firing power, granting power for the president to fire heads of certain independent agencies for \"whatever reason, or for no reason at all,\" Yahoo Finance's @benwerschkul explains.\n\nVideo",
-      "created_at": "2026-06-29T19:40:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2071675995170476243",
-      "text": "$RKLB jumps after acquiring Iridium Communications for $8 billion in a bid to compete with SpaceX in satellite connectivity services.\n\nKeep up with the stock in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-06-29T19:23:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-01T13:29:07Z",
+  "_updated": "2026-07-01T16:12:58Z",
   "_username": "YahooFinance"
 }
