@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2072302746791776762",
+      "text": "The biggest overhaul to the federal student loan system in decades starts today, July 1. Here are some key changes borrowers should know. yhoo.it/3SCuFHS",
+      "created_at": "2026-07-01T12:54:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072070230898073808",
       "text": "$MSFT stock is on track for its worst month since the 2000s, while Alphabet’s $GOOG and $NVDA remain the winners of the Mag 7. 🏆\n\nTake a look at the group’s returns YTD. 👀",
       "created_at": "2026-06-30T21:30:14Z",
@@ -175,17 +186,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2071663687996264688",
-      "text": "Despite the Supreme Court’s 5-4 ruling allowing Lisa Cook to remain at the Fed, director of US Federal Housing Bill Pulte dug in, insisting he still expects her to face indictment. yhoo.it/4xWkdLa",
-      "created_at": "2026-06-29T18:34:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +198,6 @@
       }
     ]
   },
-  "_updated": "2026-07-01T10:41:22Z",
+  "_updated": "2026-07-01T13:29:07Z",
   "_username": "YahooFinance"
 }
