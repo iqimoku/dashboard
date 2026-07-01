@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2072456741527179477",
+      "text": "Gas prices said “land of the fee.”",
+      "created_at": "2026-07-01T23:06:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072439317515886932",
       "text": "Trump was the highest US crypto earner in 2025, but did that come at the expense of everyone else?\n\n@scottmelker breaks it down:\n\nVideo",
       "created_at": "2026-07-01T21:56:52Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072350242154991815",
-      "text": "Fed Chairman Kevin Warsh responds to the market thinking he's hawkish following his first news conference.\n\n\"We've been an independent Central Bank for a very long time. You're going to see no changes on that,\" Warsh says, no matter what the president wants.\n\nVideo",
-      "created_at": "2026-07-01T16:02:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-01T22:10:00Z",
+  "_updated": "2026-07-01T23:59:24Z",
   "_username": "YahooFinance"
 }
