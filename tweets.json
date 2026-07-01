@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2072413424793821476",
+      "text": "🗣️ Have a feature you want to see in AlphaSpace? Let us know here: alphaspace.finance.yahoo.com…",
+      "created_at": "2026-07-01T20:13:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072413422709342228",
+      "text": "See how a company's fundamentals align with its price. ⚖️\n\nNow, you can add revenue, cash flow, operating income, and more to a chart.\n\nVideo",
+      "created_at": "2026-07-01T20:13:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072413421140590870",
+      "text": "Yahoo Scout can now read your AlphaSpace Charts. 🧠\n\nGet AI-powered analysis and ask questions tied to the chart in front of you.\n\nVideo",
+      "created_at": "2026-07-01T20:13:57Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072411194447548678",
+      "text": "Fourth of July plans: grill, chill, financially recover.",
+      "created_at": "2026-07-01T20:05:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072399898188657150",
+      "text": "In an interview with CNBC, Palantir CEO Alex Karp acknowledged the historic run of Anthropic's Dario Amodei.",
+      "created_at": "2026-07-01T19:20:13Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072393332513243255",
+      "text": "AOL owner $BSP jumped over 35% after its initial public offering of $29 per share.\n\nKeep up with Bending Spoons in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-01T18:54:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072383680815788145",
       "text": "Fed Chairman Kevin Warsh is not a pessimist or doomer on jobs.\n\n\"I think the jobs will be greater, prosperity will be stronger.\" 💪 \n\"We are in the first or second inning of this revolution.\"\n\nVideo",
       "created_at": "2026-07-01T18:15:47Z",
@@ -153,72 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072067931605712986",
-      "text": "The $GSPC has made a stunning recovery from its March 30 lows, rallying roughly 14% over the past three months.\n\nCreate your own custom, AI-powered investing workspace at yhoo.it/4wns2YY",
-      "created_at": "2026-06-30T21:21:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072062147912212807",
-      "text": "The tech sector just had its best start to a year since 2023, thanks to the AI trade. But investors have been more enthusiastic about companies that make critical AI components than about the big spenders. yhoo.it/3SCeI4h",
-      "created_at": "2026-06-30T20:58:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072058114409365557",
-      "text": "Tech just logged its strongest first half in three years, thanks to the AI infrastructure boom. yhoo.it/3SCeI4h",
-      "created_at": "2026-06-30T20:42:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072057679942480126",
-      "text": ".@GasBuddyGuy breaks down why gas refinery constraints could interfere with President Trump's demands to bring gas prices down.\n\nVideo",
-      "created_at": "2026-06-30T20:40:22Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072040345743810570",
-      "text": "President Trump is demanding that gasoline retailers “get their prices down immediately.”\n\n@GasBuddyGuy explains why refinery constraints could complicate that push.\n\nVideo",
-      "created_at": "2026-06-30T19:31:29Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072025077898473922",
-      "text": "\"It was a blockbuster quarter for markets,\" despite Mag 7 stocks lagging behind. @BrianSozzi  breaks down all the highs and lows.\n\nVideo",
-      "created_at": "2026-06-30T18:30:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-01T18:52:36Z",
+  "_updated": "2026-07-01T20:31:12Z",
   "_username": "YahooFinance"
 }
