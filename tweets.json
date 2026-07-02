@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2072786371618456035",
+      "text": "From SpaceX to sandwiches, 2026 has been a wild year for IPOs as Jersey Mike's files to go public.\n\nVideo",
+      "created_at": "2026-07-02T20:55:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072783769770008757",
       "text": "First the Knicks, now a potential Taylor Swift wedding?? MSG is on a tear — and so is the stock. 📈\n\n\"MSG is on the greatest run ever.\" Business Insider's Dan DeFrancesco says.\n\nVideo",
       "created_at": "2026-07-02T20:45:35Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072426450305618338",
-      "text": "Amazon MGM sells Sam Altman biopic film \"Artificial\" to Neon. 🎥\n\nThis follows Amazon's $50 billion investment in OpenAI, @BrookeDiPalma explains.\n\nThe company reportedly said, \"They didn't want to upset Sam Altman,\" @Pras_S says.\n\nVideo",
-      "created_at": "2026-07-01T21:05:44Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-02T20:48:33Z",
+  "_updated": "2026-07-02T21:55:18Z",
   "_username": "YahooFinance"
 }
