@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2072726016665981142",
+      "text": "Axon CEO Rick Smith started his company in his garage in 1993. Today his company is a $40 billion empire specializing in tasers, AI, and drones. Smith tells Brian Sozzi his company's single mission: to make the bullet obsolete. yhoo.it/4y2DpHa",
+      "created_at": "2026-07-02T16:56:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072725770493968825",
+      "text": "New reports show that President Trump's investment accounts made more than 21,000 trades last year.\n\nThe Daily Wolf's @scottmelker: \"It would be amazing to see a law passed by Congress and the government that prevented people in public office from trading at all.\"\n\nVideo",
+      "created_at": "2026-07-02T16:55:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072717189866500572",
+      "text": "Jensen Huang's signature leather jacket could be auctioned at Sotheby's for between 40k and 60k.",
+      "created_at": "2026-07-02T16:21:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072689678168342737",
       "text": "$MSTR jumps as the price of bitcoin rises above $61,000 per coin.\n\nKeep up with Strategy in AlphaSpace: finance.yahoo.com/about/prom…",
       "created_at": "2026-07-02T14:31:42Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072413421140590870",
-      "text": "Yahoo Scout can now read your AlphaSpace Charts. 🧠\n\nGet AI-powered analysis and ask questions tied to the chart in front of you.\n\nVideo",
-      "created_at": "2026-07-01T20:13:57Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072411194447548678",
-      "text": "Fourth of July plans: grill, chill, financially recover.",
-      "created_at": "2026-07-01T20:05:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072399898188657150",
-      "text": "In an interview with CNBC, Palantir CEO Alex Karp acknowledged the historic run of Anthropic's Dario Amodei.",
-      "created_at": "2026-07-01T19:20:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-02T15:01:46Z",
+  "_updated": "2026-07-02T17:22:32Z",
   "_username": "YahooFinance"
 }
