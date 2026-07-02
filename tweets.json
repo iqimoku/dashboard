@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2072751660292604351",
+      "text": "Jensen Huang's signature leather jacket could be auctioned at Sotheby's for between $40k and $60k .",
+      "created_at": "2026-07-02T18:38:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072749843865333928",
+      "text": "Meet the company that's on a mission to make bullets obsolete with tasers, AI, and drones.\n\nAxon CEO &amp; co-founder Rick Smith started his company in his garage in 1993. Today his company is worth $40 billion.\n\nRead more on Axon here: finance.yahoo.com/markets/ar…\n\nVideo",
+      "created_at": "2026-07-02T18:30:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072747422158057571",
+      "text": "Jersey Mike’s is taking its subs to Wall Street.",
+      "created_at": "2026-07-02T18:21:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072737142036369632",
+      "text": "Would you pay $40,000 for Jensen Huang's signature jacket?",
+      "created_at": "2026-07-02T17:40:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072736088758665550",
+      "text": "Rick Smith co-founded the company now known as Axon with his brother in 1993 after two of their high school teammates were shot and killed in a road-rage incident. Their goal was to find for a way to stop a threat without taking a life. Watch the full Power Players episode here: yhoo.it/4oZSCEZ",
+      "created_at": "2026-07-02T17:36:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072726016665981142",
       "text": "Axon CEO Rick Smith started his company in his garage in 1993. Today his company is a $40 billion empire specializing in tasers, AI, and drones. Smith tells Brian Sozzi his company's single mission: to make the bullet obsolete. yhoo.it/4y2DpHa",
       "created_at": "2026-07-02T16:56:06Z",
@@ -15,17 +70,6 @@
       "id": "2072725770493968825",
       "text": "New reports show that President Trump's investment accounts made more than 21,000 trades last year.\n\nThe Daily Wolf's @scottmelker: \"It would be amazing to see a law passed by Congress and the government that prevented people in public office from trading at all.\"\n\nVideo",
       "created_at": "2026-07-02T16:55:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072717189866500572",
-      "text": "Jensen Huang's signature leather jacket could be auctioned at Sotheby's for between 40k and 60k.",
-      "created_at": "2026-07-02T16:21:01Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072421886227525694",
-      "text": "Nissan's CEO says the company has been using AI to identify what its customer base wants, and that data led them to bringing back its Xterra SUV.\n\nVideo",
-      "created_at": "2026-07-01T20:47:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072419862572306573",
-      "text": "Nissan CEO Ivan Espinosa says \"there's a lot of good things happening at Nissan,\" including progress on trimming production costs.\n\n\"We used to spend 54 months creating a new car from concept to start of production. Now we can do that in 30 months,\" he added.\n\nVideo",
-      "created_at": "2026-07-01T20:39:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072413424793821476",
-      "text": "🗣️ Have a feature you want to see in AlphaSpace? Let us know here: alphaspace.finance.yahoo.com…",
-      "created_at": "2026-07-01T20:13:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072413422709342228",
-      "text": "See how a company's fundamentals align with its price. ⚖️\n\nNow, you can add revenue, cash flow, operating income, and more to a chart.\n\nVideo",
-      "created_at": "2026-07-01T20:13:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-02T17:22:32Z",
+  "_updated": "2026-07-02T19:03:44Z",
   "_username": "YahooFinance"
 }
