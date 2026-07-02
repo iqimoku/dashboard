@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2072783769770008757",
+      "text": "First the Knicks, now a potential Taylor Swift wedding?? MSG is on a tear — and so is the stock. 📈\n\n\"MSG is on the greatest run ever.\" Business Insider's Dan DeFrancesco says.\n\nVideo",
+      "created_at": "2026-07-02T20:45:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072781871394549917",
+      "text": "Just 24 hours until Taylor Swift and Travis Kelce tie the knot, and Madison Square Garden's stock is already celebrating with a 46% jump YTD. 👰‍♀️🤵‍♂️🎉",
+      "created_at": "2026-07-02T20:38:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072751660292604351",
       "text": "Jensen Huang's signature leather jacket could be auctioned at Sotheby's for between $40k and $60k .",
       "created_at": "2026-07-02T18:38:00Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072425724699398481",
-      "text": "Trump's financial disclosures reveal that he was the highest US crypto earner in 2025.",
-      "created_at": "2026-07-01T21:02:51Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072424869044634099",
-      "text": "Nissan CEO Ivan Espinosa says the company needs to \"double down on its efforts\" in making their entry vehicles more cost competitive.\n\n\"I see the opportunity coming that, you know, with the affordability pressure, maybe some customers in the US might go down to these products.\"\n\nVideo",
-      "created_at": "2026-07-01T20:59:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-02T19:03:44Z",
+  "_updated": "2026-07-02T20:48:33Z",
   "_username": "YahooFinance"
 }
