@@ -1,6 +1,83 @@
 {
   "data": [
     {
+      "id": "2072689678168342737",
+      "text": "$MSTR jumps as the price of bitcoin rises above $61,000 per coin.\n\nKeep up with Strategy in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-02T14:31:42Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072679774061842596",
+      "text": "Traders pull back on their confidence in a rate hike. \n\nKeep up with more news that's moving the markets: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq futures waver ahead of jobs report\n\nUS stock futures slipped as investors braced for Thursday&apos;s release of the June jobs report.\nfinance.yahoo.com",
+      "created_at": "2026-07-02T13:52:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072679772274950640",
+      "text": "Stocks rise after the June jobs report falls short 📈",
+      "created_at": "2026-07-02T13:52:20Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072665850545426859",
+      "text": "👷 June job gains and losses by sector\n\nProfessional &amp; business services: +36K\nSocial assistance: +25K\nHealth care: +22K\nConstruction: +11K\nInformation services: -9K\nLeisure &amp; hospitality: -61K",
+      "created_at": "2026-07-02T12:57:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072661104585584977",
+      "text": "Economists were expecting 113,000 jobs — nearly double the amount reported. yhoo.it/3QYp8dU",
+      "created_at": "2026-07-02T12:38:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072660896778793127",
+      "text": "“This is a fantastic report, this is exactly what the Fed could have hoped for. Gives enough to take out some of the quirks that were coming through the labor market over the past 2-3 months,” Morgan Stanley’s Vishal Khanduja says.\n\nVideo",
+      "created_at": "2026-07-02T12:37:20Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2072659241681195188",
+      "text": "🚨 Breaking: June jobs report misses expectations \n➡️ Nonfarm payrolls: +57K vs +113K expected\n➡️ Unemployment rate: 4.2% vs 4.3% expected",
+      "created_at": "2026-07-02T12:30:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072456741527179477",
       "text": "Gas prices said “land of the fee.”",
       "created_at": "2026-07-01T23:06:06Z",
@@ -142,83 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072393332513243255",
-      "text": "AOL owner $BSP jumped over 35% after its initial public offering of $29 per share.\n\nKeep up with Bending Spoons in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-01T18:54:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072383680815788145",
-      "text": "Fed Chairman Kevin Warsh is not a pessimist or doomer on jobs.\n\n\"I think the jobs will be greater, prosperity will be stronger.\" 💪 \n\"We are in the first or second inning of this revolution.\"\n\nVideo",
-      "created_at": "2026-07-01T18:15:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072371579053367597",
-      "text": "Electric scooter and e-bike company $LIME has slightly risen from its initial public offering of $25 per share.\n\nKeep up with Lime in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-01T17:27:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072370175274287513",
-      "text": "$NKE stock hasn't been this low since 2014.\n\nExplore more premium news and analysis on Nike in AlphaSpace: yhoo.it/4wns2YY",
-      "created_at": "2026-07-01T17:22:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072365228822540374",
-      "text": "It's been a rough year for the athletic titan. yhoo.it/4vGv9uT",
-      "created_at": "2026-07-01T17:02:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072353333814202490",
-      "text": "Has Trump been a net positive or a net negative on the crypto industry? @scottmelker breaks down his perspective on today's episode of The Daily Wolf.\n\nVideo",
-      "created_at": "2026-07-01T16:15:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072350555708522731",
-      "text": "LIVE NOW: Join @scottmelker's The Daily Wolf for all the latest on crypto.  nitter.net/i/broadcasts/1dGYljXMY…\n\nLink\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1dGYljXMYwMKX",
-      "created_at": "2026-07-01T16:04:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-02T12:01:06Z",
+  "_updated": "2026-07-02T15:01:46Z",
   "_username": "YahooFinance"
 }
