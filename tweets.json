@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2073080350603985087",
+      "text": "From tech titans to retail moguls, we mapped out the definitive corporate leader for all 12 zodiac signs. Who built your corner office? 🧑‍💻",
+      "created_at": "2026-07-03T16:24:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2072786371618456035",
       "text": "From SpaceX to sandwiches, 2026 has been a wild year for IPOs as Jersey Mike's files to go public.\n\nVideo",
       "created_at": "2026-07-02T20:55:56Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072433590743232989",
-      "text": "Palantir CEO Alex Karp laid out why the future of enterprise AI isn’t about bowing down to a single corporation. It's about choice.",
-      "created_at": "2026-07-01T21:34:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-03T15:46:00Z",
+  "_updated": "2026-07-03T17:07:45Z",
   "_username": "YahooFinance"
 }
