@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2073494831955894489",
+      "text": "This strategist says Amazon could cross $1 trillion in revenue by 2028. yhoo.it/442F5D5",
+      "created_at": "2026-07-04T19:51:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073438214447149356",
       "text": "Nissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back finance.yahoo.com/markets/st…\n\nLink\n\n\n\nNissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back\n\nNissan confirmed in April that the Xterra is returning - the boxy, go-anywhere SUV that a generation of off-roaders loved for its simplicity in the 1990s and 2000s. Now CEO Ivan Espinosa is explain...\nfinance.yahoo.com",
       "created_at": "2026-07-04T16:06:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072660896778793127",
-      "text": "“This is a fantastic report, this is exactly what the Fed could have hoped for. Gives enough to take out some of the quirks that were coming through the labor market over the past 2-3 months,” Morgan Stanley’s Vishal Khanduja says.\n\nVideo",
-      "created_at": "2026-07-02T12:37:20Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-04T18:47:57Z",
+  "_updated": "2026-07-04T20:01:37Z",
   "_username": "YahooFinance"
 }
