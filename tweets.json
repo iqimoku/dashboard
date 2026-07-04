@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2073392916324647256",
+      "text": "College graduates could be AI's first workforce test: Chart of the Day finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nCollege graduates could be AI&apos;s first workforce test: Chart of the Day\n\nGoldman Sachs research suggests young college graduates could face greater AI-related disruption in the near term, but the long-term outlook appears more optimistic.\nfinance.yahoo.com",
+      "created_at": "2026-07-04T13:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073377816461090982",
       "text": "Why the 'follow your passion' mantra can derail your career — and what to do differently finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nWhy the &apos;follow your passion&apos; mantra can derail your career — and what to do differently\n\nCareer expert Tom Rath says skip the passion and focus on purpose to find long-term success.\nfinance.yahoo.com",
       "created_at": "2026-07-04T12:06:07Z",
@@ -197,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072659241681195188",
-      "text": "🚨 Breaking: June jobs report misses expectations \n➡️ Nonfarm payrolls: +57K vs +113K expected\n➡️ Unemployment rate: 4.2% vs 4.3% expected",
-      "created_at": "2026-07-02T12:30:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072456741527179477",
-      "text": "Gas prices said “land of the fee.”",
-      "created_at": "2026-07-01T23:06:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-04T13:18:30Z",
+  "_updated": "2026-07-04T14:55:20Z",
   "_username": "YahooFinance"
 }
