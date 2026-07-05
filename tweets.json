@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2073906299222327360",
+      "text": "Stock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week\n\nThe major gauges advanced with gains concentrated in tech stocks leading to K-shaped fears\nfinance.yahoo.com",
+      "created_at": "2026-07-05T23:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073816702194708511",
       "text": "In some cities, you can save a down payment in 4 years. In NYC? Try 65. Here are the US metros where saving for your first home takes the longest. yhoo.it/4ffv6Ao",
       "created_at": "2026-07-05T17:10:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072726016665981142",
-      "text": "Axon CEO Rick Smith started his company in his garage in 1993. Today his company is a $40 billion empire specializing in tasers, AI, and drones. Smith tells Brian Sozzi his company's single mission: to make the bullet obsolete. yhoo.it/4y2DpHa",
-      "created_at": "2026-07-02T16:56:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-05T22:44:46Z",
+  "_updated": "2026-07-05T23:51:36Z",
   "_username": "YahooFinance"
 }
