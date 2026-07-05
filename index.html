@@ -166,6 +166,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .mtt-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
 .mtt-dot.pass{background:var(--mtt-high);}
 .mtt-dot.fail{background:rgba(255,255,255,.08);}
+.mtt-dot.unknown{background:rgba(255,255,255,.10);border:1px dashed rgba(255,255,255,.18);}
 .mtt-dot.partial{background:var(--mtt-mid);}
 
 /* card metrics */
@@ -604,6 +605,69 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   box-shadow: 0 0 16px rgba(245,166,35,.22), inset 0 1px 0 rgba(255,255,255,.08);
 }
 
+/* ── Zmiany Faz tab ──────────────────────────── */
+.tab-changelog-btn {
+  position: relative;
+  background: linear-gradient(135deg,
+    rgba(59,130,246,.18) 0%,
+    rgba(96,165,250,.14) 50%,
+    rgba(59,130,246,.10) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(59,130,246,.45) !important;
+  color: #60a5fa !important;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+.tab-changelog-btn:hover { color: #93c5fd !important; background: rgba(59,130,246,.26) !important; }
+.tab-changelog-btn.active {
+  background: linear-gradient(135deg,
+    rgba(59,130,246,.35) 0%,
+    rgba(96,165,250,.28) 50%,
+    rgba(59,130,246,.22) 100%
+  ) !important;
+  border-bottom-color: #3b82f6 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(59,130,246,.6);
+  box-shadow: 0 0 16px rgba(59,130,246,.22), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.changelog-view{display:none;padding:24px 36px 48px;max-width:1000px;margin:0 auto;}
+.changelog-view.active{display:block;}
+.cl-header{margin-bottom:20px;}
+.cl-title{font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;}
+.cl-subtitle{font-size:13px;color:var(--muted);}
+.cl-update-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'Space Mono',monospace;font-size:11px;font-weight:700;
+  letter-spacing:.3px;padding:6px 16px;border-radius:20px;margin-top:12px;
+  color:#fff;
+  background:linear-gradient(90deg,#3b82f6,#60a5fa,#a78bfa,#60a5fa,#3b82f6);
+  background-size:300% 100%;
+  animation:cl-badge-shine 4s linear infinite;
+  box-shadow:0 0 14px rgba(59,130,246,.25);
+}
+.cl-update-badge .cl-dot{width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 6px #fff;animation:cl-dot-pulse 1.6s ease-in-out infinite;}
+@keyframes cl-badge-shine{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
+@keyframes cl-dot-pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+.cl-filters{display:flex;gap:8px;margin:18px 0 22px;flex-wrap:wrap;}
+.cl-filter-btn{font-family:'Space Mono',monospace;font-size:11px;padding:6px 14px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all .15s;}
+.cl-filter-btn:hover{color:var(--text);}
+.cl-filter-btn.active{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.4);color:#60a5fa;}
+.cl-day{margin-bottom:28px;}
+.cl-day-label{font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cl-day-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.cl-entry{display:flex;gap:14px;align-items:flex-start;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:9px;margin-bottom:8px;}
+.cl-entry.up{border-left:3px solid var(--s2);}
+.cl-entry.down{border-left:3px solid var(--s4);}
+.cl-badge{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);background:var(--surface2);border-radius:5px;padding:3px 8px;flex-shrink:0;margin-top:2px;white-space:nowrap;}
+.cl-body{flex:1;min-width:0;}
+.cl-line1{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.cl-ticker{font-family:'Space Mono',monospace;color:var(--accent);}
+.cl-phase-arrow{font-family:'Space Mono',monospace;font-size:12px;margin:0 4px;}
+.cl-phase-old{color:var(--muted);}
+.cl-phase-new.s1{color:var(--s1);} .cl-phase-new.s2{color:var(--s2);} .cl-phase-new.s3{color:var(--s3);} .cl-phase-new.s4{color:var(--s4);}
+.cl-reason{font-size:12px;color:#8090a8;line-height:1.5;}
+.cl-empty{text-align:center;padding:60px 20px;color:var(--muted);font-size:13px;}
+
 /* ── Metodologia (zakładka) ─────────────────────────── */
 .method-view { display:none; padding:24px 36px 48px; max-width:900px; margin:0 auto; }
 .method-view.active { display:block; }
@@ -814,10 +878,10 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div>
     <div class="h-eyebrow">Analiza Techniczna • GPW Warszawa + Frankfurt + NYSE/Nasdaq</div>
     <div class="h-title">Stage Analysis + Minervini Trend Template</div>
-    <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Czerwiec 2026</div>
+    <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Lipiec 2026</div>
   </div>
   <div class="h-badges">
-    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 27 czerwca 2026</div>
+    <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 5 lipca 2026</div>
     <button class="btn-refresh" id="btnRefresh" onclick="refreshLiveData()" title="Pobierz aktualne kursy i wskaźniki z TradingView">
       <span class="rf-icon" id="rfIcon">⟳</span>
       <span id="rfLabel">Odśwież live</span>
@@ -833,6 +897,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab" id="tab-nyse" onclick="switchTab('nyse')">🏛 NYSE 100 <span class="tab-cnt" id="cnt-nyse">100</span></div>
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
   <div class="tab tab-method-btn" id="tab-methodology" onclick="switchTabMethodology()">📖 Metodologia</div>
+  <div class="tab tab-changelog-btn" id="tab-changelog" onclick="switchTabChangelog()">📋 Zmiany Faz</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -913,7 +978,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="coffee-stat"><div class="coffee-stat-v">S1-S4</div><div class="coffee-stat-l">Weinstein</div></div>
   </div>
 </div>
-<div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Czerwiec 2026. Kliknij spółkę po szczegóły.</div>
+<div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Lipiec 2026. Kliknij spółkę po szczegóły.</div>
 
 <!-- ══ STAN RYNKU ══ -->
 <div class="market-view" id="market-view">
@@ -1125,6 +1190,24 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   </div>
 </div>
 
+<!-- ══ ZMIANY FAZ VIEW (zakładka) ══ -->
+<div class="changelog-view" id="changelog-view">
+  <div class="cl-header">
+    <div class="cl-title">📋 Zmiany Faz Weinsteina</div>
+    <div class="cl-subtitle">Historia przejść między fazami (1↔2↔3↔4) dla WIG20, mWIG40, DAX, NDX i NYSE — aktualizowane co niedzielę przy każdym cotygodniowym odświeżeniu danych.</div>
+    <div class="cl-update-badge" id="cl-update-badge"><span class="cl-dot"></span> Ostatnia aktualizacja: <span id="cl-update-date"></span></div>
+  </div>
+  <div class="cl-filters" id="cl-filters">
+    <div class="cl-filter-btn active" data-mk="all" onclick="setChangelogFilter('all',this)">Wszystkie</div>
+    <div class="cl-filter-btn" data-mk="wig20" onclick="setChangelogFilter('wig20',this)">WIG20</div>
+    <div class="cl-filter-btn" data-mk="mwig40" onclick="setChangelogFilter('mwig40',this)">mWIG40</div>
+    <div class="cl-filter-btn" data-mk="dax" onclick="setChangelogFilter('dax',this)">DAX</div>
+    <div class="cl-filter-btn" data-mk="ndx" onclick="setChangelogFilter('ndx',this)">Nasdaq 100</div>
+    <div class="cl-filter-btn" data-mk="nyse" onclick="setChangelogFilter('nyse',this)">NYSE 100</div>
+  </div>
+  <div id="changelog-list"></div>
+</div>
+
 <!-- MODAL -->
 <div class="overlay" id="overlay" onclick="closeModal(event)">
   <div class="modal" id="modal" onclick="event.stopPropagation()">
@@ -1134,6 +1217,79 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 </div>
 
 <script>
+// ══════════════════════════════════════════════════
+// CHANGELOG FAZ — historia przejść między fazami Weinsteina
+// Wypełniane automatycznie przy każdej cotygodniowej aktualizacji
+// (porównanie starej i nowej wartości `stage` dla każdego tickera).
+// Struktura wpisu: {date:'RRRR-MM-DD', mk:'wig20', ticker:'PKO', name:'PKO Bank Polski',
+//                    from:2, to:3, reason:'...'}
+// ══════════════════════════════════════════════════
+const CHANGELOG = [
+  {date:"2026-07-05",mk:"wig20",ticker:"PKO",name:"PKO Bank Polski",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.8%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"wig20",ticker:"PZU",name:"PZU",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 7.5%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"wig20",ticker:"PEKAO",name:"Pekao",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.6%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"wig20",ticker:"TPE",name:"Tauron PE",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"MIL",name:"Bank Millennium",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.9%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"ABE",name:"ABPL",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -5.5%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"ATT",name:"Grupa Azoty",from:1,to:3,reason:"Nietypowe przejście z akumulacji w dystrybucję bez pełnej fazy wzrostowej."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"BHW",name:"Bank Handlowy",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 0.0%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"DOM",name:"Dom Development",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"DVL",name:"Develia",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.5%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"RBW",name:"Rainbow Tours",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -0.8%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"WPL",name:"Wirtualna Polska",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"XTB",name:"XTB",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 14.6%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"APR",name:"Auto Partner",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"VRC",name:"VERCOM",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"DIA",name:"Diagnostyka",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"dax",ticker:"ENR",name:"Siemens Energy",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 9.0%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"SIE",name:"Siemens AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.6%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"RWE",name:"RWE AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.0%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"DB1",name:"Deutsche Börse",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"EOAN",name:"E.ON SE",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 7.7%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"SY1",name:"Symrise AG",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 18.2%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"dax",ticker:"BNR",name:"Brenntag AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -0.6%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"DTG",name:"Daimler Truck Holding",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.6%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"AAPL",name:"Apple Inc.",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 0.4%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"AMZN",name:"Amazon",from:4,to:3,reason:"Wypłaszczenie spadku, cena zbliża się do SMA150 od dołu."},
+  {date:"2026-07-05",mk:"ndx",ticker:"GOOGL",name:"Alphabet (A)",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.8%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"GOOG",name:"Alphabet (C)",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.9%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"MU",name:"Micron Technology",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -7.1%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"ndx",ticker:"MRVL",name:"Marvell Technology",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -3.2%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"ndx",ticker:"SNDK",name:"Sandisk Corporation",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -0.3%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"ndx",ticker:"ARM",name:"Arm Holdings",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -21.4%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"ndx",ticker:"APP",name:"AppLovin",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"AXON",name:"Axon Enterprise",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"WMT",name:"Walmart",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"COST",name:"Costco",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"GILD",name:"Gilead Sciences",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"BKNG",name:"Booking Holdings",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"WBD",name:"Warner Bros. Discovery",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
+  {date:"2026-07-05",mk:"ndx",ticker:"PEPCO",name:"PepsiCo",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"ndx",ticker:"HON",name:"Honeywell",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -7.0%)."},
+  {date:"2026-07-05",mk:"ndx",ticker:"FAST",name:"Fastenal",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 9.9%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"ndx",ticker:"DASH",name:"DoorDash",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"MA",name:"Mastercard",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"GS",name:"Goldman Sachs",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -2.7%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"nyse",ticker:"MS",name:"Morgan Stanley",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M 1.7%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"nyse",ticker:"WFC",name:"Wells Fargo",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 11.3%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"nyse",ticker:"AIG",name:"AIG",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"EOG",name:"EOG Resources",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -4.1%) — sygnał ostrzegawczy, możliwa dystrybucja."},
+  {date:"2026-07-05",mk:"nyse",ticker:"RTX",name:"RTX Corp (Raytheon)",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 14.6%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"nyse",ticker:"LMT",name:"Lockheed Martin",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"GD",name:"General Dynamics",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 11.0%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"nyse",ticker:"BA",name:"Boeing",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 1.8%) — początek nowego trendu wzrostowego."},
+  {date:"2026-07-05",mk:"nyse",ticker:"HON",name:"Honeywell",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -7.0%)."},
+  {date:"2026-07-05",mk:"nyse",ticker:"EMR",name:"Emerson Electric",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -2.1%)."},
+  {date:"2026-07-05",mk:"nyse",ticker:"MCD",name:"McDonald's",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"LOW",name:"Lowe's Companies",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
+  {date:"2026-07-05",mk:"nyse",ticker:"NEE",name:"NextEra Energy",from:2,to:1,reason:"Utrata dynamiki wzrostu, powrót do konsolidacji poniżej SMA150."},
+  {date:"2026-07-05",mk:"nyse",ticker:"VZ",name:"Verizon",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -10.9%)."},
+  {date:"2026-07-05",mk:"nyse",ticker:"ZBH",name:"Zimmer Biomet",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
+  {date:"2026-07-05",mk:"nyse",ticker:"BDX",name:"Becton Dickinson",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 11.8%) mimo wcześniejszej dystrybucji."},
+  // (pusto — pierwsza aktualizacja po wdrożeniu tej funkcji nie miała
+  // zapisanego stanu "przed", więc historia zacznie się od kolejnej niedzieli)
+];
+
 // ══════════════════════════════════════════════════
 // MTT helpers
 // ══════════════════════════════════════════════════
@@ -1189,862 +1345,910 @@ function mttBarHTML(mtt){
 const STOCKS = {
 
 wig20: [
-  {ticker:"PKO",name:"PKO Bank Polski",sector:"Bankowość",idx:"wig20",price:103.62,chg:"-0.56%",stage:3,ma30w:91.31,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 54",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PKO",name:"PKO Bank Polski",sector:"Bankowość",idx:"wig20",price:105.24,chg:"+0.40%",stage:2,ma30w:92.3,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 59",h52:"+3%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"PKN",name:"PKN Orlen",sector:"Energia",idx:"wig20",price:123.46,chg:"-1.97%",stage:3,ma30w:118.74,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 36",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PKN",name:"PKN Orlen",sector:"Energia",idx:"wig20",price:132.92,chg:"+0.12%",stage:3,ma30w:119.66,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 50",h52:"-8%",
+   mtt:[true,true,true,true,false,true,true,true]},
 
-  {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:65.44,chg:"-0.67%",stage:1,ma30w:66.02,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 49",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:68.26,chg:"+0.89%",stage:2,ma30w:66.23,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 64",h52:"-6%",
+   mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"PEKAO",name:"Pekao",sector:"Bankowość",idx:"wig20",price:228.8,chg:"-0.52%",stage:3,ma30w:221.67,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 43",h52:"-7%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PEKAO",name:"Pekao",sector:"Bankowość",idx:"wig20",price:233.2,chg:"-0.04%",stage:2,ma30w:222.98,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 51",h52:"-8%",
+   mtt:[true,true,true,true,false,true,true,true]},
 
+  {ticker:"KGHM",name:"KGHM",sector:"Metale",idx:"wig20",price:335,chg:"+0.89%",stage:3,ma30w:306.22,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 47",h52:"-15%",
+   mtt:[true,true,true,true,false,true,true,true]},
 
-  {ticker:"KGHM",name:"KGHM",sector:"Metale",idx:"wig20",price:327.75,chg:"-0.53%",stage:3,ma30w:301.65,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 43",h52:"-16%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PGE",name:"PGE",sector:"Energetyka",idx:"wig20",price:9.63,chg:"+0.86%",stage:4,ma30w:9.94,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 44",h52:"-25%",
+   mtt:[false,false,true,true,false,false,true,false]},
 
-  {ticker:"PGE",name:"PGE",sector:"Energetyka",idx:"wig20",price:9.6,chg:"-1.82%",stage:4,ma30w:9.96,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 42",h52:"-13%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ALR",name:"Alior Bank",sector:"Bankowość",idx:"wig20",price:133.9,chg:"+0.00%",stage:2,ma30w:118.76,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 56",h52:"+3%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ALR",name:"Alior Bank",sector:"Bankowość",idx:"wig20",price:132.55,chg:"-0.97%",stage:2,ma30w:117.72,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 54",h52:"-2%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BDX",name:"Budimex",sector:"Budownictwo",idx:"wig20",price:741,chg:"-0.19%",stage:2,ma30w:690.21,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 61",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BDX",name:"Budimex",sector:"Budownictwo",idx:"wig20",price:721.8,chg:"-0.14%",stage:2,ma30w:685.01,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 59",h52:"-14%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MDV",name:"CCC (MODIVO)",sector:"Handel",idx:"wig20",price:97,chg:"+0.19%",stage:4,ma30w:103.14,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 64",h52:"-60%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"MDV",name:"CCC (MODIVO)",sector:"Handel",idx:"wig20",price:92.54,chg:"-3.60%",stage:4,ma30w:104.68,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 59",h52:"-67%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CDR",name:"CD Projekt",sector:"Gaming",idx:"wig20",price:233.4,chg:"+0.39%",stage:4,ma30w:248,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 54",h52:"-21%",
+   mtt:[false,false,true,false,false,false,true,false]},
 
-  {ticker:"CDR",name:"CD Projekt",sector:"Gaming",idx:"wig20",price:217.4,chg:"-2.69%",stage:4,ma30w:248.07,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 31",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"KRU",name:"Kruk",sector:"Windykacja",idx:"wig20",price:421.8,chg:"-0.14%",stage:4,ma30w:456.34,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 61",h52:"-17%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"KRU",name:"Kruk",sector:"Windykacja",idx:"wig20",price:403.4,chg:"+0.03%",stage:4,ma30w:457.56,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 43",h52:"-14%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GKY",name:"Grupa Kęty",sector:"Aluminium",idx:"wig20",price:1228,chg:"+0.66%",stage:2,ma30w:1063.3,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 56",h52:"+4%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"GKY",name:"Grupa Kęty",sector:"Aluminium",idx:"wig20",price:1228,chg:"+3.45%",stage:2,ma30w:1053.44,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 56",h52:"-1%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LPP",name:"LPP",sector:"Odzież",idx:"wig20",price:18550,chg:"+0.05%",stage:4,ma30w:20436.23,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 36",h52:"-23%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  {ticker:"LPP",name:"LPP",sector:"Odzież",idx:"wig20",price:18310,chg:"-0.76%",stage:4,ma30w:20356.2,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 31",h52:"-7%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DNP",name:"Dino Polska",sector:"Handel spożywczy",idx:"wig20",price:27.7,chg:"-3.45%",stage:4,ma30w:36.2,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 32",h52:"-51%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DNP",name:"Dino Polska",sector:"Handel spożywczy",idx:"wig20",price:28.98,chg:"-1.09%",stage:4,ma30w:36.63,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 37",h52:"-42%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ALE",name:"Allegro",sector:"E-commerce",idx:"wig20",price:38.44,chg:"-0.75%",stage:1,ma30w:30.87,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"-1%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"ALE",name:"Allegro",sector:"E-commerce",idx:"wig20",price:37.2,chg:"-1.01%",stage:1,ma30w:30.67,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 60",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PCO",name:"Pepco Group",sector:"Handel",idx:"wig20",price:37.06,chg:"+0.57%",stage:2,ma30w:30.08,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 68",h52:"+10%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"PCO",name:"Pepco Group",sector:"Handel",idx:"wig20",price:37.25,chg:"-1.09%",stage:2,ma30w:29.75,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 74",h52:"-2%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ZAB",name:"Żabka Group",sector:"Convenience",idx:"wig20",price:27.85,chg:"-1.31%",stage:2,ma30w:23.19,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 73",h52:"+8%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ZAB",name:"Żabka Group",sector:"Convenience",idx:"wig20",price:26.94,chg:"+2.04%",stage:2,ma30w:23.06,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 74",h52:"-8%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MBK",name:"mBank",sector:"Bankowość",idx:"wig20",price:1404,chg:"+1.08%",stage:2,ma30w:1130.8,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 63",h52:"+9%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
+  {ticker:"EBP",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:657,chg:"+0.31%",stage:2,ma30w:584.59,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 63",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"MBK",name:"mBank",sector:"Bankowość",idx:"wig20",price:1372.5,chg:"-0.69%",stage:2,ma30w:1119.33,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 58",h52:"-7%",
-   mtt:[false,false,false,false,false,false,false,false]},
-
-  {ticker:"EBP",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:647.6,chg:"+0.19%",stage:2,ma30w:579.42,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"TPE",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.22,chg:"-1.03%",stage:4,ma30w:9.79,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 47",h52:"-18%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TPE",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.41,chg:"+1.88%",stage:1,ma30w:9.77,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 52",h52:"-21%",
+   mtt:[false,true,true,false,true,true,true,true]}
 ],
 
 mwig40: [
-  {ticker:"PXM",name:"Polimex-Mostostal",sector:"Budownictwo",idx:"mwig40",price:7.61,chg:"-0.07%",stage:4,ma30w:8.02,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 45",h52:"-26%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ACP",name:"Asseco Poland",sector:"IT",idx:"mwig40",price:167.75,chg:"-1.21%",stage:4,ma30w:192.95,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 31",h52:"-22%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MIL",name:"Bank Millennium",sector:"Bankowość",idx:"mwig40",price:19.52,chg:"-0.64%",stage:3,ma30w:17.46,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 49",h52:"-2%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ENA",name:"Enea",sector:"Energetyka",idx:"mwig40",price:19.25,chg:"-0.77%",stage:4,ma30w:21.49,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 40",h52:"-26%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"EUR",name:"Eurocash",sector:"Dystrybucja",idx:"mwig40",price:5.16,chg:"-0.48%",stage:4,ma30w:6.15,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 44",h52:"-42%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ABE",name:"ABPL",sector:"Dystrybucja IT",idx:"mwig40",price:136.8,chg:"-1.44%",stage:2,ma30w:121.77,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 52",h52:"-11%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ASB",name:"ASBIS",sector:"Dystrybucja IT",idx:"mwig40",price:94.5,chg:"-0.73%",stage:2,ma30w:49.7,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 66",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.4,chg:"-1.52%",stage:1,ma30w:18.72,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 41",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:4860,chg:"+1.08%",stage:2,ma30w:3870.95,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 68",h52:"0%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BHW",name:"Bank Handlowy",sector:"Bankowość",idx:"mwig40",price:123,chg:"+0.66%",stage:3,ma30w:114.41,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 45",h52:"0%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:810,chg:"+0.00%",stage:2,ma30w:667.12,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 58",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:243,chg:"-1.22%",stage:4,ma30w:256.14,matrend:"opadająca ↓",vol:"Malejący",rs:"RSI 45",h52:"-14%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:11.3,chg:"-1.74%",stage:4,ma30w:12.23,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 60",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"GPW",name:"GPW",sector:"Finanse",idx:"mwig40",price:87.5,chg:"+0.75%",stage:2,ma30w:74.52,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"0%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ING",name:"ING Bank Śląski",sector:"Bankowość",idx:"mwig40",price:445.6,chg:"-0.04%",stage:2,ma30w:395.53,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 53",h52:"0%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"JSW",name:"JSW",sector:"Górnictwo",idx:"mwig40",price:24.2,chg:"-3.62%",stage:4,ma30w:27.05,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-29%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"LBW",name:"Lubawa",sector:"Obronność",idx:"mwig40",price:12.66,chg:"-0.32%",stage:1,ma30w:9.37,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 55",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DVL",name:"Develia",sector:"Deweloperzy",idx:"mwig40",price:10.4,chg:"+0.58%",stage:3,ma30w:9.45,matrend:"opadająca ↓",vol:"Malejący",rs:"RSI 47",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MBR",name:"Mo-Bruk",sector:"Odpady",idx:"mwig40",price:368.5,chg:"+0.00%",stage:2,ma30w:346.05,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 57",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"NEU",name:"Neuca",sector:"Farmacja",idx:"mwig40",price:718,chg:"+0.14%",stage:4,ma30w:756.9,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-16%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"PEP",name:"Polenergia",sector:"OZE",idx:"mwig40",price:61.6,chg:"+0.65%",stage:1,ma30w:53.53,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 74",h52:"-17%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"RBW",name:"Rainbow Tours",sector:"Turystyka",idx:"mwig40",price:148.5,chg:"+0.00%",stage:2,ma30w:143.7,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 59",h52:"-12%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"VOX",name:"VOXEL",sector:"Medycyna",idx:"mwig40",price:113.2,chg:"+1.98%",stage:4,ma30w:120.97,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 52",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"SNT",name:"Synektik",sector:"Medtech",idx:"mwig40",price:320.6,chg:"+2.43%",stage:2,ma30w:266.63,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 68",h52:"-6%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"TXT",name:"Text (LiveChat)",sector:"SaaS",idx:"mwig40",price:41.24,chg:"-1.10%",stage:1,ma30w:40.03,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 51",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"NWG",name:"Newag",sector:"Tabor",idx:"mwig40",price:90.4,chg:"-2.69%",stage:4,ma30w:107.44,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 29",h52:"-29%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:57.5,chg:"+0.35%",stage:4,ma30w:58.33,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 41",h52:"-29%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"XTB",name:"XTB",sector:"Fintech",idx:"mwig40",price:104.12,chg:"-3.23%",stage:3,ma30w:90.69,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 42",h52:"0%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"APR",name:"Auto Partner",sector:"Motoryzacja",idx:"mwig40",price:25.3,chg:"-0.59%",stage:3,ma30w:19.8,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 53",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BNP",name:"BNP Paribas PL",sector:"Bankowość",idx:"mwig40",price:147.4,chg:"+0.14%",stage:2,ma30w:141.86,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 47",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CBF",name:"CYBERFLKS",sector:"Cloud/Hosting",idx:"mwig40",price:189.8,chg:"+0.05%",stage:3,ma30w:189.3,matrend:"opadająca ↓",vol:"Malejący",rs:"RSI 49",h52:"-17%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"TEN",name:"TSGAMES",sector:"Gaming",idx:"mwig40",price:91.6,chg:"-0.54%",stage:1,ma30w:99.31,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 43",h52:"-9%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"VRC",name:"VERCOM",sector:"SaaS",idx:"mwig40",price:121.6,chg:"+2.19%",stage:4,ma30w:126.18,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 52",h52:"-23%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CRI",name:"CREOTECH",sector:"Kosmonautyka",idx:"mwig40",price:723,chg:"-0.55%",stage:3,ma30w:545.32,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 41",h52:"-19%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"GPP",name:"GRUPRACUJ",sector:"HR",idx:"mwig40",price:44,chg:"+0.00%",stage:4,ma30w:45.98,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 41",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DIA",name:"Diagnostyka",sector:"Diagnostyka",idx:"mwig40",price:172,chg:"-0.23%",stage:4,ma30w:173.53,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 53",h52:"-17%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"OPL",name:"ORANGEPL",sector:"Telekomunikacja",idx:"mwig40",price:14.62,chg:"+0.72%",stage:3,ma30w:12.91,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CPS",name:"Cyfrowy Polsat",sector:"Media",idx:"mwig40",price:14.89,chg:"-0.30%",stage:1,ma30w:13.19,matrend:"opadająca ↓↓",vol:"Malejący",rs:"RSI 44",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ASE",name:"ASSECOSEE",sector:"IT",idx:"mwig40",price:60.7,chg:"+1.34%",stage:4,ma30w:64.45,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 44",h52:"-24%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PXM",name:"Polimex-Mostostal",sector:"Budownictwo",idx:"mwig40",price:7.41,chg:"-2.37%",stage:4,ma30w:8.08,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 43",h52:"-26%",
+   mtt:[false,true,true,false,false,true,false,true]},
+
+  {ticker:"ACP",name:"Asseco Poland",sector:"IT",idx:"mwig40",price:179.45,chg:"+0.79%",stage:4,ma30w:192.47,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 50",h52:"-24%",
+   mtt:[false,false,true,false,false,false,true,false]},
+
+  {ticker:"MIL",name:"Bank Millennium",sector:"Bankowość",idx:"mwig40",price:19.84,chg:"+0.30%",stage:2,ma30w:17.58,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 54",h52:"-3%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"ENA",name:"Enea",sector:"Energetyka",idx:"mwig40",price:19.92,chg:"+1.89%",stage:4,ma30w:21.45,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 51",h52:"-24%",
+   mtt:[false,true,true,false,false,false,true,true]},
+
+  {ticker:"EUR",name:"Eurocash",sector:"Dystrybucja",idx:"mwig40",price:5.11,chg:"-0.10%",stage:4,ma30w:6.06,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 42",h52:"-41%",
+   mtt:[false,false,true,false,false,false,false,false]},
+
+  {ticker:"ABE",name:"ABPL",sector:"Dystrybucja IT",idx:"mwig40",price:134.6,chg:"+1.51%",stage:3,ma30w:123.02,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 50",h52:"-12%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"ASB",name:"ASBIS",sector:"Dystrybucja IT",idx:"mwig40",price:106.5,chg:"+7.36%",stage:2,ma30w:52.11,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 77",h52:"+17%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.71,chg:"-0.20%",stage:3,ma30w:18.76,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 45",h52:"-21%",
+   mtt:[true,true,true,true,false,true,true,false]},
+
+  {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:4996,chg:"+1.05%",stage:2,ma30w:3930.15,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"+5%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BHW",name:"Bank Handlowy",sector:"Bankowość",idx:"mwig40",price:122.2,chg:"-0.65%",stage:2,ma30w:115.09,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 44",h52:"-5%",
+   mtt:[true,true,true,true,true,false,true,false]},
+
+  {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:825,chg:"+0.98%",stage:2,ma30w:676.2,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 63",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:249,chg:"+1.63%",stage:1,ma30w:255.48,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 52",h52:"-12%",
+   mtt:[false,true,true,false,false,false,true,false]},
+
+  {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:10.8,chg:"-1.82%",stage:4,ma30w:12.17,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 47",h52:"-32%",
+   mtt:[false,false,true,false,true,false,false,false]},
+
+  {ticker:"GPW",name:"GPW",sector:"Finanse",idx:"mwig40",price:95.75,chg:"+0.47%",stage:2,ma30w:75.5,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 80",h52:"+10%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"ING",name:"ING Bank Śląski",sector:"Bankowość",idx:"mwig40",price:453.8,chg:"+0.62%",stage:2,ma30w:399.31,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 59",h52:"-4%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"JSW",name:"JSW",sector:"Górnictwo",idx:"mwig40",price:25.6,chg:"+0.87%",stage:4,ma30w:27.09,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 47",h52:"-29%",
+   mtt:[false,true,true,true,false,true,false,false]},
+
+  {ticker:"LBW",name:"Lubawa",sector:"Obronność",idx:"mwig40",price:12.63,chg:"-1.86%",stage:1,ma30w:9.47,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 54",h52:"-17%",
+   mtt:[true,false,true,true,true,true,true,false]},
+
+  {ticker:"DVL",name:"Develia",sector:"Deweloperzy",idx:"mwig40",price:10.8,chg:"+0.00%",stage:2,ma30w:9.53,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 57",h52:"-4%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"MBR",name:"Mo-Bruk",sector:"Odpady",idx:"mwig40",price:377,chg:"+2.45%",stage:2,ma30w:348.78,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 63",h52:"+2335%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"NEU",name:"Neuca",sector:"Farmacja",idx:"mwig40",price:710,chg:"+0.28%",stage:4,ma30w:753.86,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-17%",
+   mtt:[false,true,true,false,false,false,true,false]},
+
+  {ticker:"PEP",name:"Polenergia",sector:"OZE",idx:"mwig40",price:60.6,chg:"-0.49%",stage:1,ma30w:53.6,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 67",h52:"-11%",
+   mtt:[true,false,true,false,true,true,true,false]},
+
+  {ticker:"RBW",name:"Rainbow Tours",sector:"Turystyka",idx:"mwig40",price:145.1,chg:"-1.56%",stage:3,ma30w:144.42,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-13%",
+   mtt:[true,true,true,false,true,true,true,false]},
+
+  {ticker:"VOX",name:"VOXEL",sector:"Medycyna",idx:"mwig40",price:115,chg:"+0.00%",stage:4,ma30w:119.81,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 55",h52:"-37%",
+   mtt:[false,false,true,false,true,false,false,false]},
+
+  {ticker:"SNT",name:"Synektik",sector:"Medtech",idx:"mwig40",price:361.4,chg:"+3.55%",stage:2,ma30w:270.54,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 78",h52:"+17%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"TXT",name:"Text (LiveChat)",sector:"SaaS",idx:"mwig40",price:45.2,chg:"-0.44%",stage:1,ma30w:39.99,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 71",h52:"-21%",
+   mtt:[true,false,true,false,true,true,true,false]},
+
+  {ticker:"NWG",name:"Newag",sector:"Tabor",idx:"mwig40",price:97,chg:"+2.21%",stage:4,ma30w:107.29,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-26%",
+   mtt:[false,true,true,false,false,true,false,true]},
+
+  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.4,chg:"-1.02%",stage:1,ma30w:58.46,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-30%",
+   mtt:[false,true,true,false,false,true,false,false]},
+
+  {ticker:"XTB",name:"XTB",sector:"Fintech",idx:"mwig40",price:118.4,chg:"+1.25%",stage:2,ma30w:92.1,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 70",h52:"+7%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"APR",name:"Auto Partner",sector:"Motoryzacja",idx:"mwig40",price:26.45,chg:"+1.73%",stage:2,ma30w:20.11,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 65",h52:"+1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BNP",name:"BNP Paribas PL",sector:"Bankowość",idx:"mwig40",price:149.2,chg:"+0.13%",stage:2,ma30w:142.99,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 50",h52:"-5%",
+   mtt:[true,true,true,true,true,true,true,true]},
+
+  {ticker:"CBF",name:"CYBERFLKS",sector:"Cloud/Hosting",idx:"mwig40",price:193.9,chg:"+0.62%",stage:3,ma30w:189.75,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 54",h52:"-13%",
+   mtt:[true,true,true,false,true,true,true,false]},
+
+  {ticker:"TEN",name:"TSGAMES",sector:"Gaming",idx:"mwig40",price:93,chg:"-0.53%",stage:1,ma30w:99.39,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 48",h52:"-12%",
+   mtt:[false,true,true,false,false,true,true,false]},
+
+  {ticker:"VRC",name:"VERCOM",sector:"SaaS",idx:"mwig40",price:127.6,chg:"+0.47%",stage:2,ma30w:126.37,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 62",h52:"-16%",
+   mtt:[true,true,true,false,true,false,true,false]},
+
+  {ticker:"CRI",name:"CREOTECH",sector:"Kosmonautyka",idx:"mwig40",price:807,chg:"+2.15%",stage:3,ma30w:561.48,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 53",h52:"-26%",
+   mtt:[true,true,true,true,true,true,false,true]},
+
+  {ticker:"GPP",name:"GRUPRACUJ",sector:"HR",idx:"mwig40",price:45.55,chg:"-0.76%",stage:4,ma30w:45.72,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-37%",
+   mtt:[false,false,true,false,true,false,false,false]},
+
+  {ticker:"DIA",name:"Diagnostyka",sector:"Diagnostyka",idx:"mwig40",price:181.5,chg:"+1.11%",stage:1,ma30w:173.48,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 68",h52:"-15%",
+   mtt:[true,false,true,false,true,true,true,false]},
+
+  {ticker:"OPL",name:"ORANGEPL",sector:"Telekomunikacja",idx:"mwig40",price:14.37,chg:"+0.28%",stage:3,ma30w:13.09,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 36",h52:"-13%",
+   mtt:[true,true,true,true,false,true,true,true]},
+
+  {ticker:"CPS",name:"Cyfrowy Polsat",sector:"Media",idx:"mwig40",price:16.44,chg:"+6.06%",stage:1,ma30w:13.3,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 62",h52:"-9%",
+   mtt:[true,false,true,true,true,true,true,false]},
+
+  {ticker:"ASE",name:"ASSECOSEE",sector:"IT",idx:"mwig40",price:60.5,chg:"-0.33%",stage:4,ma30w:64.26,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 45",h52:"-27%",
+   mtt:[false,false,true,false,false,false,false,false]}
 ],
 
 dax: [
-  {ticker:"SAP",name:"SAP SE",sector:"Technologia",idx:"dax",price:135.14,chg:"+2.16%",stage:4,ma30w:170.44,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 40",h52:"-48%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"RHM",name:"Rheinmetall AG",sector:"Obrona",idx:"dax",price:946.6,chg:"-0.02%",stage:4,ma30w:1496.95,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 24",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ENR",name:"Siemens Energy",sector:"Energia",idx:"dax",price:153.92,chg:"-5.84%",stage:3,ma30w:149.93,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 43",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ALV",name:"Allianz",sector:"Finanse",idx:"dax",price:407.9,chg:"+0.20%",stage:2,ma30w:376.85,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 70",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MUV2",name:"Munich Re",sector:"Finanse",idx:"dax",price:477.7,chg:"-0.58%",stage:4,ma30w:519.87,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 55",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"SIE",name:"Siemens AG",sector:"Przemysł",idx:"dax",price:267.5,chg:"-1.80%",stage:3,ma30w:245.44,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 49",h52:"-6%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"HNR1",name:"Hannover Rück",sector:"Finanse",idx:"dax",price:238.4,chg:"+0.17%",stage:4,ma30w:250.94,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 55",h52:"-19%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"RWE",name:"RWE AG",sector:"Energia",idx:"dax",price:54.06,chg:"-2.56%",stage:3,ma30w:53.05,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 41",h52:"-7%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DTE",name:"Deutsche Telekom",sector:"Telekomunikacja",idx:"dax",price:26.25,chg:"+0.15%",stage:4,ma30w:29.1,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 35",h52:"-18%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DB1",name:"Deutsche Börse",sector:"Finanse",idx:"dax",price:238.3,chg:"-0.92%",stage:3,ma30w:234.64,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 36",h52:"-11%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"DBK",name:"Deutsche Bank",sector:"Finanse",idx:"dax",price:29.63,chg:"-2.79%",stage:1,ma30w:29.48,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 54",h52:"-16%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CBK",name:"Commerzbank",sector:"Finanse",idx:"dax",price:37.83,chg:"+0.53%",stage:2,ma30w:34.68,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 57",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MTX",name:"MTU Aero Engines",sector:"Przemysł/Lotnictwo",idx:"dax",price:358.4,chg:"-1.21%",stage:1,ma30w:340.56,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 70",h52:"-23%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"AIR",name:"Airbus Group",sector:"Przemysł/Lotnictwo",idx:"dax",price:191.92,chg:"-1.66%",stage:1,ma30w:185.32,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 63",h52:"-19%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"EOAN",name:"E.ON SE",sector:"Energia",idx:"dax",price:18.02,chg:"+0.14%",stage:3,ma30w:17.84,matrend:"opadająca ↓",vol:"Malejący",rs:"RSI 47",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"SHL",name:"Siemens Healthineers",sector:"Ochrona zdrowia",idx:"dax",price:34.22,chg:"-0.52%",stage:4,ma30w:39.35,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 45",h52:"-31%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"FRE",name:"Fresenius SE",sector:"Ochrona zdrowia",idx:"dax",price:39.82,chg:"-0.72%",stage:4,ma30w:44.94,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 58",h52:"-29%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"FME",name:"Fresenius Medical Care",sector:"Ochrona zdrowia",idx:"dax",price:40.86,chg:"-0.07%",stage:1,ma30w:39.18,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 59",h52:"-21%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"G24",name:"Scout24 AG",sector:"Technologia",idx:"dax",price:72.45,chg:"+1.12%",stage:4,ma30w:75.84,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 46",h52:"-39%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"HEN3",name:"Henkel",sector:"Dobra konsumpcyjne",idx:"dax",price:73.8,chg:"+1.62%",stage:1,ma30w:70.26,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 76",h52:"-18%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BAS",name:"BASF",sector:"Chemia",idx:"dax",price:47.76,chg:"-1.07%",stage:4,ma30w:48.54,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 35",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BAYN",name:"Bayer",sector:"Chemia/Farmacja",idx:"dax",price:47.0,chg:"+0.00%",stage:2,ma30w:38.93,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 82",h52:"-27%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"IFX",name:"Infineon",sector:"Technologia",idx:"dax",price:78.3,chg:"-4.52%",stage:3,ma30w:49.96,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 52",h52:"-9%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"VNA",name:"Vonovia",sector:"Nieruchomości",idx:"dax",price:21.56,chg:"+0.70%",stage:4,ma30w:23.7,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 57",h52:"-34%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ZAL",name:"Zalando SE",sector:"E-commerce",idx:"dax",price:24.92,chg:"-6.32%",stage:1,ma30w:22.66,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 56",h52:"-16%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"ADS",name:"Adidas",sector:"Dobra konsumpcyjne",idx:"dax",price:181.7,chg:"+2.14%",stage:1,ma30w:153.7,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-18%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MRK",name:"Merck KGaA",sector:"Farmacja",idx:"dax",price:128.66,chg:"+2.56%",stage:2,ma30w:113.22,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 70",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"SY1",name:"Symrise AG",sector:"Chemia specjalna",idx:"dax",price:88.16,chg:"-0.32%",stage:1,ma30w:74.07,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 72",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BEI",name:"Beiersdorf",sector:"Dobra konsumpcyjne",idx:"dax",price:75.52,chg:"+2.14%",stage:4,ma30w:84.56,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 66",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"CON",name:"Continental AG",sector:"Motoryzacja",idx:"dax",price:72.52,chg:"-1.81%",stage:2,ma30w:67.15,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 56",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"MBG",name:"Mercedes-Benz",sector:"Motoryzacja",idx:"dax",price:43.34,chg:"-2.91%",stage:4,ma30w:54.59,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 29",h52:"-23%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BMW",name:"BMW",sector:"Motoryzacja",idx:"dax",price:59.06,chg:"-2.83%",stage:4,ma30w:82.45,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 22",h52:"-32%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"VOW3",name:"Volkswagen",sector:"Motoryzacja",idx:"dax",price:74.28,chg:"-3.91%",stage:4,ma30w:94.42,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 25",h52:"-19%",
-   mtt:[false,false,false,false,false,false,false,false]},
-  {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:54.18,chg:"-0.51%",stage:3,ma30w:53.8,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 39",h52:"-12%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SAP",name:"SAP SE",sector:"Technologia",idx:"dax",price:139.64,chg:"-1.47%",stage:4,ma30w:168.2,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 47",h52:"-48%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DHL",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:52.36,chg:"-1.21%",stage:2,ma30w:47.86,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 58",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"RHM",name:"Rheinmetall AG",sector:"Obrona",idx:"dax",price:1093.4,chg:"-1.94%",stage:4,ma30w:1480.67,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 46",h52:"-46%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DTG",name:"Daimler Truck Holding",sector:"Motoryzacja",idx:"dax",price:41.21,chg:"-1.29%",stage:3,ma30w:40.87,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 48",h52:"-7%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ENR",name:"Siemens Energy",sector:"Energia",idx:"dax",price:168.12,chg:"+1.39%",stage:2,ma30w:151.83,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 55",h52:"-12%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"G1A",name:"GEA Group",sector:"Przemysł",idx:"dax",price:59.55,chg:"-1.08%",stage:1,ma30w:59.49,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 61",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ALV",name:"Allianz",sector:"Finanse",idx:"dax",price:419.8,chg:"+0.33%",stage:2,ma30w:378.58,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 78",h52:"+6%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"HEI",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:184.4,chg:"-1.28%",stage:4,ma30w:198.22,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 52",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MUV2",name:"Munich Re",sector:"Finanse",idx:"dax",price:496.4,chg:"-0.46%",stage:4,ma30w:518.48,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 66",h52:"-19%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"PAH3",name:"Porsche Automobil Holding",sector:"Motoryzacja",idx:"dax",price:27.83,chg:"-6.49%",stage:4,ma30w:34.41,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 25",h52:"-26%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SIE",name:"Siemens AG",sector:"Przemysł",idx:"dax",price:284.1,chg:"+2.60%",stage:2,ma30w:247.28,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 61",h52:"+1%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"QIA",name:"QIAGEN NV",sector:"Biotechnologia",idx:"dax",price:34.31,chg:"-0.59%",stage:4,ma30w:37.25,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 70",h52:"-33%",
-   mtt:[false,false,false,false,false,false,false,false]},
-]
-
-// ══════════════════════════════════════════════════
-// NASDAQ 100 DATA
-// ══════════════════════════════════════════════════
-,ndx: [
-  // ── Mega-cap Tech / AI leaders ──
-  {ticker:"NVDA",name:"Nvidia",sector:"Półprzewodniki/AI",idx:"ndx",weight:"12.96%",price:192.53,chg:"-1.64%",stage:3,ma30w:192.12,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 37",h52:"-22%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HNR1",name:"Hannover Rück",sector:"Finanse",idx:"dax",price:244.2,chg:"-0.97%",stage:4,ma30w:250.55,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 62",h52:"-13%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"AAPL",name:"Apple Inc.",sector:"Technologia/Consumer",idx:"ndx",weight:"11.37%",price:283.78,chg:"+3.14%",stage:3,ma30w:273.55,matrend:"opadająca ↓",vol:"B. wysoki!",rs:"RSI 41",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"RWE",name:"RWE AG",sector:"Energia",idx:"dax",price:57.82,chg:"+1.69%",stage:2,ma30w:53.47,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 58",h52:"-7%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"MSFT",name:"Microsoft",sector:"Technologia/Cloud",idx:"ndx",weight:"7.89%",price:372.97,chg:"+5.71%",stage:4,ma30w:425.87,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 40",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DTE",name:"Deutsche Telekom",sector:"Telekomunikacja",idx:"dax",price:25.14,chg:"+0.16%",stage:4,ma30w:29.01,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 37",h52:"-27%",
+   mtt:[false,true,true,false,false,false,false,false]},
 
-  {ticker:"AMZN",name:"Amazon",sector:"E-commerce/Cloud",idx:"ndx",weight:"6.78%",price:232.69,chg:"+2.50%",stage:4,ma30w:234.25,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 39",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DB1",name:"Deutsche Börse",sector:"Finanse",idx:"dax",price:249.8,chg:"+1.17%",stage:2,ma30w:235.56,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 58",h52:"-10%",
+   mtt:[true,true,true,true,true,false,true,false]},
 
-  {ticker:"GOOGL",name:"Alphabet (A)",sector:"Technologia/Reklama",idx:"ndx",weight:"5.94%",price:337.39,chg:"-1.84%",stage:3,ma30w:332.09,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 33",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DBK",name:"Deutsche Bank",sector:"Finanse",idx:"dax",price:31.83,chg:"+1.61%",stage:1,ma30w:29.5,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 67",h52:"-7%",
+   mtt:[true,false,true,false,true,true,true,true]},
 
-  {ticker:"GOOG",name:"Alphabet (C)",sector:"Technologia/Reklama",idx:"ndx",weight:"5.53%",price:334.69,chg:"-2.19%",stage:3,ma30w:331.2,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 33",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CBK",name:"Commerzbank",sector:"Finanse",idx:"dax",price:37.72,chg:"-0.45%",stage:2,ma30w:34.86,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 55",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"AVGO",name:"Broadcom",sector:"Półprzewodniki/Networking",idx:"ndx",weight:"4.69%",price:365.02,chg:"-3.67%",stage:4,ma30w:365.39,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 40",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MTX",name:"MTU Aero Engines",sector:"Przemysł/Lotnictwo",idx:"dax",price:378.6,chg:"+1.28%",stage:1,ma30w:341.19,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 77",h52:"-6%",
+   mtt:[true,false,true,false,true,true,true,false]},
 
-  {ticker:"META",name:"Meta Platforms",sector:"Social Media/AI",idx:"ndx",weight:"3.87%",price:550.25,chg:"+1.36%",stage:4,ma30w:630.91,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 37",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AIR",name:"Airbus Group",sector:"Przemysł/Lotnictwo",idx:"dax",price:206.15,chg:"+1.05%",stage:1,ma30w:185.2,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 75",h52:"-7%",
+   mtt:[true,false,true,false,true,true,true,false]},
 
-  {ticker:"TSLA",name:"Tesla",sector:"EV/Energia/AI",idx:"ndx",weight:"3.81%",price:379.71,chg:"+1.22%",stage:4,ma30w:413.29,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 41",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"EOAN",name:"E.ON SE",sector:"Energia",idx:"dax",price:19.18,chg:"+4.38%",stage:2,ma30w:17.94,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 65",h52:"-6%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  // ── Semiconductors ──
-  {ticker:"MU",name:"Micron Technology",sector:"Półprzewodniki/Pamięć",idx:"ndx",weight:"2.67%",price:1132.33,chg:"-6.69%",stage:2,ma30w:501.9,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 59",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SHL",name:"Siemens Healthineers",sector:"Ochrona zdrowia",idx:"dax",price:34.97,chg:"+0.03%",stage:4,ma30w:39.11,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 55",h52:"-30%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"AMD",name:"Advanced Micro Devices",sector:"Półprzewodniki/AI",idx:"ndx",weight:"1.95%",price:521.58,chg:"-2.06%",stage:2,ma30w:290.18,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 56",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FRE",name:"Fresenius SE",sector:"Ochrona zdrowia",idx:"dax",price:42.43,chg:"+0.74%",stage:4,ma30w:44.73,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 72",h52:"-20%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"ASML",name:"ASML Holding",sector:"Półprzewodniki/EUV",idx:"ndx",weight:"1.78%",price:1794.62,chg:"-2.53%",stage:2,ma30w:1395.49,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FME",name:"Fresenius Medical Care",sector:"Ochrona zdrowia",idx:"dax",price:41.1,chg:"-0.12%",stage:1,ma30w:39.17,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 59",h52:"-18%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"LRCX",name:"Lam Research",sector:"Półprzewodniki/Sprzęt",idx:"ndx",weight:"1.07%",price:379.09,chg:"-5.66%",stage:2,ma30w:242.14,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 58",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"G24",name:"Scout24 AG",sector:"Technologia",idx:"dax",price:73,chg:"-2.01%",stage:4,ma30w:75.37,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-41%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"AMAT",name:"Applied Materials",sector:"Półprzewodniki/Sprzęt",idx:"ndx",weight:"1.05%",price:626.84,chg:"-6.16%",stage:2,ma30w:367.52,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 64",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HEN3",name:"Henkel",sector:"Dobra konsumpcyjne",idx:"dax",price:75.34,chg:"-0.11%",stage:1,ma30w:70.42,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 76",h52:"-11%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"KLAC",name:"KLA Corporation",sector:"Półprzewodniki/Inspekcja",idx:"ndx",weight:"0.74%",price:248.64,chg:"-3.93%",stage:2,ma30w:161.01,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 59",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BAS",name:"BASF",sector:"Chemia",idx:"dax",price:47.78,chg:"+0.29%",stage:4,ma30w:48.65,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 40",h52:"-13%",
+   mtt:[false,true,true,true,false,false,true,true]},
 
-  {ticker:"MRVL",name:"Marvell Technology",sector:"Półprzewodniki/AI",idx:"ndx",weight:"0.59%",price:266.77,chg:"-5.15%",stage:2,ma30w:130.06,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 53",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BAYN",name:"Bayer",sector:"Chemia/Farmacja",idx:"dax",price:53.36,chg:"+0.00%",stage:2,ma30w:39.64,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 85",h52:"+7%",
+   mtt:[true,true,true,false,true,true,true,true]},
 
-  {ticker:"NXPI",name:"NXP Semiconductors",sector:"Półprzewodniki/Auto",idx:"ndx",weight:"0.19%",price:277.02,chg:"-7.24%",stage:3,ma30w:242.1,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 42",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"IFX",name:"Infineon",sector:"Technologia",idx:"dax",price:77.38,chg:"+1.35%",stage:3,ma30w:51.48,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 50",h52:"-13%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"MPWR",name:"Monolithic Power Systems",sector:"Półprzewodniki/Power",idx:"ndx",weight:"0.19%",price:1313.32,chg:"-8.69%",stage:3,ma30w:1227.6,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 38",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"VNA",name:"Vonovia",sector:"Nieruchomości",idx:"dax",price:22.4,chg:"-0.97%",stage:4,ma30w:23.56,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 61",h52:"-27%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"MCHP",name:"Microchip Technology",sector:"Półprzewodniki/MCU",idx:"ndx",weight:"0.13%",price:87.93,chg:"-6.58%",stage:3,ma30w:76.8,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 43",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ZAL",name:"Zalando SE",sector:"E-commerce",idx:"dax",price:27.03,chg:"+1.08%",stage:1,ma30w:22.78,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 68",h52:"-7%",
+   mtt:[true,false,true,false,true,true,true,false]},
 
-  {ticker:"TXN",name:"Texas Instruments",sector:"Półprzewodniki/Analog",idx:"ndx",weight:"0.68%",price:285.43,chg:"-8.46%",stage:3,ma30w:226.68,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 45",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ADS",name:"Adidas",sector:"Dobra konsumpcyjne",idx:"dax",price:185.3,chg:"+0.87%",stage:1,ma30w:154.68,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 71",h52:"-14%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"ADI",name:"Analog Devices",sector:"Półprzewodniki/Analog",idx:"ndx",weight:"0.51%",price:386.91,chg:"-7.42%",stage:3,ma30w:339.65,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 43",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MRK",name:"Merck KGaA",sector:"Farmacja",idx:"dax",price:129.56,chg:"+3.34%",stage:2,ma30w:114.06,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 66",h52:"-8%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"QCOM",name:"Qualcomm",sector:"Półprzewodniki/Mobile",idx:"ndx",weight:"0.53%",price:189.39,chg:"-7.57%",stage:1,ma30w:167.5,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 43",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SY1",name:"Symrise AG",sector:"Chemia specjalna",idx:"dax",price:91.36,chg:"+0.62%",stage:2,ma30w:74.71,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 76",h52:"-11%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"SNDK",name:"Sandisk Corporation",sector:"Pamięci/Storage",idx:"ndx",weight:"0.64%",price:2090.71,chg:"-10.46%",stage:2,ma30w:834.18,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 58",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BEI",name:"Beiersdorf",sector:"Dobra konsumpcyjne",idx:"dax",price:76.52,chg:"-0.21%",stage:4,ma30w:84.1,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 68",h52:"-35%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"INTC",name:"Intel",sector:"Półprzewodniki/Legacy",idx:"ndx",weight:"1.40%",price:128.32,chg:"-3.42%",stage:2,ma30w:65.96,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 57",h52:"+10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CON",name:"Continental AG",sector:"Motoryzacja",idx:"dax",price:75.98,chg:"+1.55%",stage:2,ma30w:67.49,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 65",h52:"+1%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  // ── Software / Cloud ──
-  {ticker:"ARM",name:"Arm Holdings",sector:"Półprzewodniki/CPU IP",idx:"ndx",weight:"0.87%",price:334.27,chg:"-3.87%",stage:2,ma30w:179.16,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 48",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MBG",name:"Mercedes-Benz",sector:"Motoryzacja",idx:"dax",price:45.24,chg:"+0.93%",stage:4,ma30w:54.16,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 43",h52:"-27%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"PANW",name:"Palo Alto Networks",sector:"Cyberbezpieczeństwo",idx:"ndx",weight:"0.57%",price:304.2,chg:"+3.79%",stage:1,ma30w:195.01,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 70",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BMW",name:"BMW",sector:"Motoryzacja",idx:"dax",price:60.56,chg:"+0.60%",stage:4,ma30w:81.54,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 36",h52:"-38%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"CRWD",name:"CrowdStrike",sector:"Cyberbezpieczeństwo",idx:"ndx",weight:"0.44%",price:701.09,chg:"+3.31%",stage:1,ma30w:493.44,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 61",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"VOW3",name:"Volkswagen",sector:"Motoryzacja",idx:"dax",price:74.66,chg:"+1.86%",stage:4,ma30w:93.64,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 36",h52:"-32%",
+   mtt:[false,true,true,false,false,false,false,false]},
 
-  {ticker:"DDOG",name:"Datadog",sector:"Obserwability/Cloud",idx:"ndx",weight:"0.22%",price:239.77,chg:"+8.52%",stage:1,ma30w:152.5,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 62",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:56.2,chg:"+0.83%",stage:2,ma30w:53.99,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 55",h52:"-12%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"PLTR",name:"Palantir",sector:"AI/Analytics",idx:"ndx",weight:"0.84%",price:112.93,chg:"+5.28%",stage:4,ma30w:151.5,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 35",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DHL",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:56,chg:"+0.39%",stage:2,ma30w:48.23,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 72",h52:"+5%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"NFLX",name:"Netflix",sector:"Streaming/Media",idx:"ndx",weight:"0.92%",price:73.81,chg:"+4.10%",stage:4,ma30w:90.43,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 32",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DTG",name:"Daimler Truck Holding",sector:"Motoryzacja",idx:"dax",price:44.01,chg:"+2.18%",stage:2,ma30w:41.09,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 64",h52:"-3%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"CSCO",name:"Cisco Systems",sector:"Sieć/Bezpieczeństwo",idx:"ndx",weight:"1.24%",price:113.77,chg:"-4.37%",stage:3,ma30w:88.49,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 45",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"G1A",name:"GEA Group",sector:"Przemysł",idx:"dax",price:63.3,chg:"+2.34%",stage:1,ma30w:59.61,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 73",h52:"-5%",
+   mtt:[true,false,true,false,true,false,true,true]},
 
-  {ticker:"ADBE",name:"Adobe",sector:"Software/Creative",idx:"ndx",weight:"0.25%",price:202.73,chg:"+4.82%",stage:4,ma30w:273.49,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 37",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HEI",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:175.85,chg:"+1.97%",stage:4,ma30w:196.78,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-27%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"INTU",name:"Intuit",sector:"Fintech/Tax",idx:"ndx",weight:"0.20%",price:267.72,chg:"+4.96%",stage:4,ma30w:461.91,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 37",h52:"-50%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PAH3",name:"Porsche Automobil Holding",sector:"Motoryzacja",idx:"dax",price:28.3,chg:"+1.98%",stage:4,ma30w:34.13,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 38",h52:"-32%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"WDAY",name:"Workday",sector:"HR/Cloud ERP",idx:"ndx",weight:"0.09%",price:124.21,chg:"+9.18%",stage:4,ma30w:157.63,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 47",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"QIA",name:"QIAGEN NV",sector:"Biotechnologia",idx:"dax",price:34.63,chg:"-1.01%",stage:4,ma30w:36.99,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 65",h52:"-27%",
+   mtt:[false,false,true,false,true,true,false,false]}
+],
 
-  {ticker:"SNPS",name:"Synopsys",sector:"EDA/Software",idx:"ndx",weight:"0.23%",price:454.34,chg:"-0.15%",stage:4,ma30w:459.19,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 42",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+ndx: [
+  {ticker:"NVDA",name:"Nvidia",sector:"Półprzewodniki/AI",idx:"ndx",price:194.83,chg:"-1.39%",stage:3,ma30w:192.52,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-18%",
+   mtt:[true,true,true,true,false,false,true,false]},
 
-  {ticker:"CDNS",name:"Cadence Design",sector:"EDA/Software",idx:"ndx",weight:"0.28%",price:377.27,chg:"+2.46%",stage:1,ma30w:322.79,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 50",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AAPL",name:"Apple Inc.",sector:"Technologia/Consumer",idx:"ndx",price:308.63,chg:"+4.84%",stage:2,ma30w:274.16,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 60",h52:"-3%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ADSK",name:"Autodesk",sector:"CAD/Software",idx:"ndx",weight:"0.12%",price:196.26,chg:"+3.44%",stage:4,ma30w:251.81,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 37",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MSFT",name:"Microsoft",sector:"Technologia/Cloud",idx:"ndx",price:390.49,chg:"+1.62%",stage:4,ma30w:423.23,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 50",h52:"-30%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"FTNT",name:"Fortinet",sector:"Cyberbezpieczeństwo",idx:"ndx",weight:"0.27%",price:151.35,chg:"+0.95%",stage:2,ma30w:94.29,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 68",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AMZN",name:"Amazon",sector:"E-commerce/Cloud",idx:"ndx",price:242.67,chg:"+0.40%",stage:3,ma30w:234.76,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-13%",
+   mtt:[true,true,true,true,false,false,true,false]},
 
-  {ticker:"PYPL",name:"PayPal",sector:"Fintech/Płatności",idx:"ndx",weight:"0.10%",price:44.29,chg:"+4.51%",stage:4,ma30w:49.58,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 56",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GOOGL",name:"Alphabet (A)",sector:"Technologia/Reklama",idx:"ndx",price:359.91,chg:"-0.36%",stage:2,ma30w:333.63,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"SHOP",name:"Shopify",sector:"E-commerce/SaaS",idx:"ndx",weight:"0.38%",price:116.86,chg:"+4.69%",stage:4,ma30w:130.2,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 57",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GOOG",name:"Alphabet (C)",sector:"Technologia/Reklama",idx:"ndx",price:356.18,chg:"-0.48%",stage:2,ma30w:332.65,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"APP",name:"AppLovin",sector:"Adtech/AI",idx:"ndx",weight:"0.44%",price:477.08,chg:"+6.99%",stage:4,ma30w:516.53,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 45",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AVGO",name:"Broadcom",sector:"Półprzewodniki/Networking",idx:"ndx",price:360.45,chg:"-2.41%",stage:4,ma30w:365.79,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 40",h52:"-27%",
+   mtt:[false,true,true,true,false,true,false,false]},
 
-  {ticker:"AXON",name:"Axon Enterprise",sector:"Bezpieczeństwo publiczne",idx:"ndx",weight:"0.10%",price:464.83,chg:"+4.52%",stage:4,ma30w:484.68,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 58",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"META",name:"Meta Platforms",sector:"Social Media/AI",idx:"ndx",price:582.9,chg:"-4.90%",stage:4,ma30w:630.47,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 50",h52:"-27%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"ZS",name:"Zscaler",sector:"Cyberbezpieczeństwo/SASE",idx:"ndx",weight:"0.05%",price:132.26,chg:"+6.83%",stage:4,ma30w:175.21,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TSLA",name:"Tesla",sector:"EV/Energia/AI",idx:"ndx",price:393.45,chg:"-7.49%",stage:4,ma30w:413.57,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 47",h52:"-21%",
+   mtt:[false,false,true,false,false,true,true,false]},
 
-  // ── Consumer / Retail ──
-  {ticker:"WMT",name:"Walmart",sector:"Handel detaliczny",idx:"ndx",weight:"2.52%",price:115.69,chg:"-0.08%",stage:4,ma30w:121.36,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 37",h52:"-2%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MU",name:"Micron Technology",sector:"Półprzewodniki/Pamięć",idx:"ndx",price:975.56,chg:"-5.49%",stage:3,ma30w:524.9,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 48",h52:"-22%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"COST",name:"Costco",sector:"Handel hurtowy",idx:"ndx",weight:"1.15%",price:952.54,chg:"+1.09%",stage:4,ma30w:966.21,matrend:"opadająca ↓",vol:"B. wysoki!",rs:"RSI 41",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AMD",name:"Advanced Micro Devices",sector:"Półprzewodniki/AI",idx:"ndx",price:517.82,chg:"-4.26%",stage:2,ma30w:299.05,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 52",h52:"-11%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"AMGN",name:"Amgen",sector:"Biotechnology",idx:"ndx",weight:"0.49%",price:358.33,chg:"+1.56%",stage:2,ma30w:345.67,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 62",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ASML",name:"ASML Holding",sector:"Półprzewodniki/EUV",idx:"ndx",price:1769.32,chg:"-4.00%",stage:2,ma30w:1418.89,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 50",h52:"-12%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"GILD",name:"Gilead Sciences",sector:"Biotechnology/HIV",idx:"ndx",weight:"0.40%",price:127.88,chg:"+3.26%",stage:4,ma30w:133.62,matrend:"opadająca ↓",vol:"B. wysoki!",rs:"RSI 50",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LRCX",name:"Lam Research",sector:"Półprzewodniki/Sprzęt",idx:"ndx",price:351.41,chg:"-10.19%",stage:2,ma30w:248.84,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 48",h52:"-20%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"VRTX",name:"Vertex Pharmaceuticals",sector:"Farmacja/Genetyka",idx:"ndx",weight:"0.29%",price:437.17,chg:"-1.93%",stage:2,ma30w:490.00,matrend:"lekko ↓",vol:"Stabilny",rs:"Neutralna",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AMAT",name:"Applied Materials",sector:"Półprzewodniki/Sprzęt",idx:"ndx",price:603.04,chg:"-7.35%",stage:2,ma30w:379.26,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 54",h52:"-18%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ISRG",name:"Intuitive Surgical",sector:"Medtech/Robotyka",idx:"ndx",weight:"0.39%",price:404.7,chg:"+1.25%",stage:4,ma30w:490.46,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 41",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"KLAC",name:"KLA Corporation",sector:"Półprzewodniki/Inspekcja",idx:"ndx",price:235.55,chg:"-11.51%",stage:2,ma30w:165.22,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 50",h52:"-23%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"REGN",name:"Regeneron",sector:"Biotechnology",idx:"ndx",weight:"0.17%",price:607.72,chg:"-1.37%",stage:3,ma30w:850.00,matrend:"opadająca ↓",vol:"Malejący",rs:"Słaba",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MRVL",name:"Marvell Technology",sector:"Półprzewodniki/AI",idx:"ndx",price:245.29,chg:"-9.84%",stage:3,ma30w:135.22,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-26%",
+   mtt:[true,true,true,true,true,true,false,false]},
 
-  {ticker:"ALNY",name:"Alnylam Pharma",sector:"Biotechnology/RNA",idx:"ndx",weight:"0.10%",price:293.45,chg:"-1.42%",stage:2,ma30w:225.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"NXPI",name:"NXP Semiconductors",sector:"Półprzewodniki/Auto",idx:"ndx",price:273.36,chg:"-2.08%",stage:3,ma30w:244.46,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-20%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"DXCM",name:"DexCom",sector:"Medtech/CGM",idx:"ndx",weight:"0.08%",price:75.75,chg:"-3.12%",stage:4,ma30w:118.00,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MPWR",name:"Monolithic Power Systems",sector:"Półprzewodniki/Power",idx:"ndx",price:1288.16,chg:"-3.27%",stage:3,ma30w:1239.65,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 38",h52:"-25%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"IDXX",name:"IDEXX Laboratories",sector:"Diagnostyka weterynaryjna",idx:"ndx",weight:"0.12%",price:565.46,chg:"-2.32%",stage:3,ma30w:550.00,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MCHP",name:"Microchip Technology",sector:"Półprzewodniki/MCU",idx:"ndx",price:84.64,chg:"-4.57%",stage:3,ma30w:77.81,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-20%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"GEHC",name:"GE HealthCare",sector:"Medtech/Imaging",idx:"ndx",weight:"0.08%",price:64.78,chg:"-1.87%",stage:2,ma30w:78.00,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TXN",name:"Texas Instruments",sector:"Półprzewodniki/Analog",idx:"ndx",price:293.08,chg:"-1.79%",stage:3,ma30w:230.31,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-12%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  // ── Travel / Hospitality ──
-  {ticker:"BKNG",name:"Booking Holdings",sector:"Turystyka online",idx:"ndx",weight:"0.33%",price:181.46,chg:"+2.49%",stage:4,ma30w:182.97,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 62",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ADI",name:"Analog Devices",sector:"Półprzewodniki/Analog",idx:"ndx",price:377.16,chg:"-3.04%",stage:3,ma30w:343.83,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-15%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"ABNB",name:"Airbnb",sector:"Turystyka/Sharing",idx:"ndx",weight:"0.20%",price:145.56,chg:"+2.59%",stage:2,ma30w:131.76,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 63",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"QCOM",name:"Qualcomm",sector:"Półprzewodniki/Mobile",idx:"ndx",price:176.25,chg:"-3.12%",stage:1,ma30w:168.01,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 38",h52:"-32%",
+   mtt:[true,false,true,true,false,true,false,false]},
 
-  {ticker:"MAR",name:"Marriott International",sector:"Hotele",idx:"ndx",weight:"0.27%",price:377.31,chg:"-0.42%",stage:3,ma30w:339.67,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 46",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SNDK",name:"Sandisk Corporation",sector:"Pamięci/Storage",idx:"ndx",price:1745,chg:"-14.13%",stage:3,ma30w:882.39,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 47",h52:"-26%",
+   mtt:[true,true,true,true,true,true,false,false]},
 
-  {ticker:"SBUX",name:"Starbucks",sector:"Gastronomia",idx:"ndx",weight:"0.30%",price:104.6,chg:"+1.40%",stage:2,ma30w:95.19,matrend:"rosnąca ↑",vol:"B. wysoki!",rs:"RSI 61",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"INTC",name:"Intel",sector:"Półprzewodniki/Legacy",idx:"ndx",price:120.35,chg:"-5.25%",stage:2,ma30w:68.5,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 49",h52:"-15%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  // ── Telecom / Media ──
-  {ticker:"TMUS",name:"T-Mobile US",sector:"Telekomunikacja",idx:"ndx",weight:"0.53%",price:182.68,chg:"+0.61%",stage:4,ma30w:198.78,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 46",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ARM",name:"Arm Holdings",sector:"Półprzewodniki/CPU IP",idx:"ndx",price:315.28,chg:"-6.58%",stage:3,ma30w:184.59,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 45",h52:"-30%",
+   mtt:[true,true,true,true,true,true,false,false]},
 
-  {ticker:"CMCSA",name:"Comcast",sector:"Kablówka/Media",idx:"ndx",weight:"0.23%",price:23.17,chg:"+2.12%",stage:4,ma30w:27.59,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PANW",name:"Palo Alto Networks",sector:"Cyberbezpieczeństwo",idx:"ndx",price:348.06,chg:"-1.13%",stage:1,ma30w:199.15,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 78",h52:"-3%",
+   mtt:[true,false,true,true,true,true,true,true]},
 
-  {ticker:"WBD",name:"Warner Bros. Discovery",sector:"Media/Streaming",idx:"ndx",weight:"0.18%",price:26.74,chg:"-0.89%",stage:1,ma30w:27.38,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 48",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CRWD",name:"CrowdStrike",sector:"Cyberbezpieczeństwo",idx:"ndx",price:193.98,chg:"+0.41%",stage:1,ma30w:125.09,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 72",h52:"-3%",
+   mtt:[true,false,true,true,true,true,true,true]},
 
-  {ticker:"CHTR",name:"Charter Communications",sector:"Kablówka/Internet",idx:"ndx",weight:"0.05%",price:139.20,chg:"+2.83%",stage:2,ma30w:355.00,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-55%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DDOG",name:"Datadog",sector:"Obserwability/Cloud",idx:"ndx",price:260.36,chg:"-1.56%",stage:1,ma30w:155.05,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 68",h52:"-7%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  // ── Consumer Staples / Food ──
-  {ticker:"PEPCO",name:"PepsiCo",sector:"FMCG/Napoje",idx:"ndx",weight:"0.52%",price:141.39,chg:"+1.34%",stage:4,ma30w:151.78,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 42",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PLTR",name:"Palantir",sector:"AI/Analytics",idx:"ndx",price:129.3,chg:"+2.84%",stage:4,ma30w:150.5,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 52",h52:"-38%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"MDLZ",name:"Mondelez International",sector:"FMCG/Czekolada",idx:"ndx",weight:"0.22%",price:63.91,chg:"+1.56%",stage:2,ma30w:65.00,matrend:"spłaszcza →",vol:"Stabilny",rs:"Neutralna",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"NFLX",name:"Netflix",sector:"Streaming/Media",idx:"ndx",price:77.65,chg:"+4.66%",stage:4,ma30w:89.56,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 47",h52:"-40%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"MNST",name:"Monster Beverage",sector:"Napoje energetyczne",idx:"ndx",weight:"0.24%",price:96.38,chg:"+0.57%",stage:2,ma30w:79.99,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 75",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CSCO",name:"Cisco Systems",sector:"Sieć/Bezpieczeństwo",idx:"ndx",price:112.69,chg:"-3.69%",stage:3,ma30w:89.55,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 43",h52:"-14%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"KDP",name:"Keurig Dr Pepper",sector:"Napoje",idx:"ndx",weight:"0.12%",price:33.4,chg:"+2.71%",stage:2,ma30w:28.46,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 74",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ADBE",name:"Adobe",sector:"Software/Creative",idx:"ndx",price:219.72,chg:"+4.14%",stage:4,ma30w:270.61,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 51",h52:"-43%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"KHC",name:"Kraft Heinz",sector:"FMCG/Żywność",idx:"ndx",weight:"0.08%",price:24.05,chg:"+2.65%",stage:4,ma30w:33.00,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"INTU",name:"Intuit",sector:"Fintech/Tax",idx:"ndx",price:275.35,chg:"+3.10%",stage:4,ma30w:451.68,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 43",h52:"-66%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"CCEP",name:"Coca-Cola Europacific",sector:"Napoje/FMCG",idx:"ndx",weight:"0.12%",price:101.59,chg:"+2.00%",stage:2,ma30w:94.73,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 69",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"WDAY",name:"Workday",sector:"HR/Cloud ERP",idx:"ndx",price:135.4,chg:"+3.94%",stage:4,ma30w:155.1,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 57",h52:"-46%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  // ── Industrials ──
-  {ticker:"HON",name:"Honeywell",sector:"Przemysł/Automatyka",idx:"ndx",weight:"0.35%",price:232.21,chg:"+0.42%",stage:3,ma30w:219.6,matrend:"spłaszcza →",vol:"B. wysoki!",rs:"RSI 58",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SNPS",name:"Synopsys",sector:"EDA/Software",idx:"ndx",price:437.16,chg:"-3.82%",stage:4,ma30w:460.66,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-33%",
+   mtt:[false,true,true,true,false,false,false,false]},
 
-  {ticker:"CSX",name:"CSX Corporation",sector:"Kolej towarowa",idx:"ndx",weight:"0.23%",price:46.84,chg:"-0.94%",stage:2,ma30w:35.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CDNS",name:"Cadence Design",sector:"EDA/Software",idx:"ndx",price:373.14,chg:"-1.22%",stage:1,ma30w:324.69,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 48",h52:"-10%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"ODFL",name:"Old Dominion Freight",sector:"Transport LTL",idx:"ndx",weight:"0.13%",price:218.79,chg:"-0.60%",stage:3,ma30w:191.12,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 45",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ADSK",name:"Autodesk",sector:"CAD/Software",idx:"ndx",price:207.48,chg:"+3.86%",stage:4,ma30w:249.39,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-37%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"PCAR",name:"PACCAR",sector:"Ciężarówki",idx:"ndx",weight:"0.16%",price:120.68,chg:"-0.82%",stage:2,ma30w:117.33,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 56",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FTNT",name:"Fortinet",sector:"Cyberbezpieczeństwo",idx:"ndx",price:156.25,chg:"-1.72%",stage:2,ma30w:96.34,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 67",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"FAST",name:"Fastenal",sector:"Dystrybucja przemysłowa",idx:"ndx",weight:"0.14%",price:47.1,chg:"+0.38%",stage:1,ma30w:44.31,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 60",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PYPL",name:"PayPal",sector:"Fintech/Płatności",idx:"ndx",price:45.47,chg:"+3.18%",stage:4,ma30w:49.16,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 60",h52:"-43%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"CTAS",name:"Cintas",sector:"Mundury/Usługi biznesowe",idx:"ndx",weight:"0.19%",price:171.9,chg:"+1.66%",stage:4,ma30w:183.29,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 48",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SHOP",name:"Shopify",sector:"E-commerce/SaaS",idx:"ndx",price:119.46,chg:"-1.78%",stage:4,ma30w:129.37,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 58",h52:"-34%",
+   mtt:[false,false,true,false,true,true,false,false]},
 
-  {ticker:"ROP",name:"Roper Technologies",sector:"Przemysł/Software",idx:"ndx",weight:"0.09%",price:338.31,chg:"+1.77%",stage:4,ma30w:372.74,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 55",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"APP",name:"AppLovin",sector:"Adtech/AI",idx:"ndx",price:527.06,chg:"-6.65%",stage:1,ma30w:516.37,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 54",h52:"-29%",
+   mtt:[false,false,true,false,true,true,false,false]},
 
-  {ticker:"FER",name:"Ferrovial",sector:"Infrastruktura/Lotniska",idx:"ndx",weight:"0.12%",price:64.57,chg:"-1.88%",stage:2,ma30w:46.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AXON",name:"Axon Enterprise",sector:"Bezpieczeństwo publiczne",idx:"ndx",price:597.04,chg:"+0.52%",stage:1,ma30w:485.78,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 77",h52:"-33%",
+   mtt:[true,false,true,false,true,true,false,true]},
 
-  // ── Energy / Utilities ──
-  {ticker:"CEG",name:"Constellation Energy",sector:"Energia jądrowa",idx:"ndx",weight:"0.23%",price:264.02,chg:"-1.74%",stage:4,ma30w:305.84,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 45",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ZS",name:"Zscaler",sector:"Cyberbezpieczeństwo/SASE",idx:"ndx",price:147.33,chg:"+0.60%",stage:4,ma30w:171.52,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 59",h52:"-56%",
+   mtt:[false,false,true,false,true,true,false,false]},
 
-  {ticker:"AEP",name:"American Electric Power",sector:"Energia/Sieć",idx:"ndx",weight:"0.19%",price:138.69,chg:"+1.23%",stage:2,ma30w:126.19,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 70",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"WMT",name:"Walmart",sector:"Handel detaliczny",idx:"ndx",price:111.84,chg:"+2.78%",stage:1,ma30w:121.57,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 36",h52:"-17%",
+   mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"XEL",name:"Xcel Energy",sector:"Energia/OZE",idx:"ndx",weight:"0.13%",price:82.23,chg:"+0.59%",stage:1,ma30w:78.6,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 63",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"COST",name:"Costco",sector:"Handel hurtowy",idx:"ndx",price:951.67,chg:"+2.92%",stage:1,ma30w:967.47,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 45",h52:"-13%",
+   mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"EXC",name:"Exelon",sector:"Energia/Jądrowa",idx:"ndx",weight:"0.12%",price:47.4,chg:"+1.39%",stage:2,ma30w:45.99,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 62",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AMGN",name:"Amgen",sector:"Biotechnology",idx:"ndx",price:374.15,chg:"+3.55%",stage:2,ma30w:346.39,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"-4%",
+   mtt:[true,true,true,false,true,true,true,true]},
 
-  {ticker:"BKR",name:"Baker Hughes",sector:"Energia/Oilfield",idx:"ndx",weight:"0.17%",price:63.54,chg:"-0.01%",stage:2,ma30w:42.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GILD",name:"Gilead Sciences",sector:"Biotechnology/HIV",idx:"ndx",price:131.27,chg:"+4.21%",stage:1,ma30w:133.65,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 58",h52:"-17%",
+   mtt:[false,true,true,false,true,false,true,false]},
 
-  {ticker:"FANG",name:"Diamondback Energy",sector:"Ropa/Shale",idx:"ndx",weight:"0.15%",price:199.96,chg:"+2.94%",stage:2,ma30w:165.00,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
+  {ticker:"VRTX",name:"Vertex Pharmaceuticals",sector:"Farmacja/Genetyka",idx:"ndx",price:437.17,chg:"-1.93%",stage:2,ma30w:490,matrend:"lekko ↓",vol:"Stabilny",rs:"Neutralna",h52:"-25%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  // ── Financials / Professional Services ──
-  {ticker:"ADP",name:"ADP",sector:"HR/Payroll",idx:"ndx",weight:"0.25%",price:231.90,chg:"+0.31%",stage:2,ma30w:275.00,matrend:"lekko ↓",vol:"Niski",rs:"Neutralna",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ISRG",name:"Intuitive Surgical",sector:"Medtech/Robotyka",idx:"ndx",price:426.01,chg:"+5.87%",stage:4,ma30w:486.36,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 57",h52:"-29%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"PAYX",name:"Paychex",sector:"HR/Payroll SMB",idx:"ndx",weight:"0.10%",price:99.9,chg:"+3.29%",stage:1,ma30w:99.85,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 56",h52:"-20%",
+  {ticker:"REGN",name:"Regeneron",sector:"Biotechnology",idx:"ndx",price:607.72,chg:"-1.37%",stage:3,ma30w:850,matrend:"opadająca ↓",vol:"Malejący",rs:"Słaba",h52:"-35%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"VRSK",name:"Verisk Analytics",sector:"Analytics/Insurance",idx:"ndx",weight:"0.06%",price:184.67,chg:"+1.16%",stage:2,ma30w:272.00,matrend:"rosnąca ↑↑",vol:"Niski",rs:"Silna",h52:"-5%",
+  {ticker:"ALNY",name:"Alnylam Pharma",sector:"Biotechnology/RNA",idx:"ndx",price:293.45,chg:"-1.42%",stage:2,ma30w:225,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-15%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"TRI",name:"Thomson Reuters",sector:"Media/Analytics",idx:"ndx",weight:"0.10%",price:83.09,chg:"+0.94%",stage:2,ma30w:72.00,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
+  {ticker:"DXCM",name:"DexCom",sector:"Medtech/CGM",idx:"ndx",price:75.75,chg:"-3.12%",stage:4,ma30w:118,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-40%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"MELI",name:"MercadoLibre",sector:"E-commerce Latam",idx:"ndx",weight:"0.21%",price:1675.1,chg:"+3.45%",stage:4,ma30w:1858.44,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 53",h52:"-20%",
+  {ticker:"IDXX",name:"IDEXX Laboratories",sector:"Diagnostyka weterynaryjna",idx:"ndx",price:565.46,chg:"-2.32%",stage:3,ma30w:550,matrend:"spłaszcza →",vol:"Niski",rs:"Neutralna",h52:"-15%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"PDD",name:"PDD Holdings (Temu)",sector:"E-commerce China/Global",idx:"ndx",weight:"0.31%",price:76.55,chg:"+4.43%",stage:4,ma30w:101.91,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 34",h52:"-55%",
+  {ticker:"GEHC",name:"GE HealthCare",sector:"Medtech/Imaging",idx:"ndx",price:64.78,chg:"-1.87%",stage:2,ma30w:78,matrend:"lekko ↓",vol:"Niski",rs:"Słaba",h52:"-30%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"EA",name:"Electronic Arts",sector:"Gaming",idx:"ndx",weight:"0.13%",price:205.25,chg:"+0.25%",stage:2,ma30w:202.37,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 70",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BKNG",name:"Booking Holdings",sector:"Turystyka online",idx:"ndx",price:184.56,chg:"+1.05%",stage:1,ma30w:182.78,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 63",h52:"-21%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"TTWO",name:"Take-Two Interactive",sector:"Gaming/Rockstar",idx:"ndx",weight:"0.10%",price:238.53,chg:"-0.08%",stage:1,ma30w:223.95,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 62",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ABNB",name:"Airbnb",sector:"Turystyka/Sharing",idx:"ndx",price:148.93,chg:"+1.10%",stage:2,ma30w:132.64,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ORLY",name:"O'Reilly Automotive",sector:"Motoryzacja/Retail",idx:"ndx",weight:"0.20%",price:90.75,chg:"+1.40%",stage:2,ma30w:124.00,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MAR",name:"Marriott International",sector:"Hotele",idx:"ndx",price:372.95,chg:"+1.26%",stage:3,ma30w:341.85,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 44",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"ROST",name:"Ross Stores",sector:"Off-price retail",idx:"ndx",weight:"0.20%",price:213.26,chg:"-0.87%",stage:3,ma30w:205.68,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 35",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SBUX",name:"Starbucks",sector:"Gastronomia",idx:"ndx",price:104.27,chg:"+0.85%",stage:2,ma30w:95.71,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 58",h52:"-4%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"CPRT",name:"Copart",sector:"Aukcje samochodowe",idx:"ndx",weight:"0.08%",price:30.55,chg:"+1.66%",stage:4,ma30w:35.83,matrend:"opadająca ↓↓",vol:"B. wysoki!",rs:"RSI 45",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TMUS",name:"T-Mobile US",sector:"Telekomunikacja",idx:"ndx",price:177.52,chg:"+2.58%",stage:4,ma30w:197.8,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 45",h52:"-32%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DASH",name:"DoorDash",sector:"Food Delivery",idx:"ndx",weight:"0.18%",price:183.09,chg:"+3.49%",stage:4,ma30w:183.25,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 65",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CMCSA",name:"Comcast",sector:"Kablówka/Media",idx:"ndx",price:23.79,chg:"+0.25%",stage:4,ma30w:27.56,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-30%",
+   mtt:[false,true,true,false,false,false,false,false]},
 
-  {ticker:"LITE",name:"Lumentum Holdings",sector:"Fotonika/AI",idx:"ndx",weight:"0.18%",price:816.98,chg:"-5.22%",stage:3,ma30w:645.3,matrend:"opadająca ↓↓",vol:"Wysoki",rs:"RSI 44",h52:"+15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"WBD",name:"Warner Bros. Discovery",sector:"Media/Streaming",idx:"ndx",price:26.48,chg:"-1.23%",stage:4,ma30w:27.48,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 45",h52:"-12%",
+   mtt:[false,true,true,false,false,true,true,false]},
 
-  {ticker:"MSTR",name:"Strategy Inc (MicroStrategy)",sector:"Bitcoin/Software",idx:"ndx",weight:"0.11%",price:117.57,chg:"+0.47%",stage:2,ma30w:390.00,matrend:"opadająca ↓",vol:"B. wysoki",rs:"Neutralna",h52:"-65%",
+  {ticker:"CHTR",name:"Charter Communications",sector:"Kablówka/Internet",idx:"ndx",price:139.2,chg:"+2.83%",stage:2,ma30w:355,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-55%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"INSM",name:"Insmed",sector:"Farmacja rzadkie choroby",idx:"ndx",weight:"0.05%",price:103.38,chg:"-1.04%",stage:4,ma30w:148.54,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PEPCO",name:"PepsiCo",sector:"FMCG/Napoje",idx:"ndx",price:144.22,chg:"+2.17%",stage:1,ma30w:151.61,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 52",h52:"-16%",
+   mtt:[false,true,true,false,false,false,true,false]},
 
-  {ticker:"LIN",name:"Linde plc",sector:"Gazy przemysłowe",idx:"ndx",weight:"0.63%",price:519.62,chg:"-0.51%",stage:2,ma30w:474.16,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 56",h52:"-5%",
+  {ticker:"MDLZ",name:"Mondelez International",sector:"FMCG/Czekolada",idx:"ndx",price:63.91,chg:"+1.56%",stage:2,ma30w:65,matrend:"spłaszcza →",vol:"Stabilny",rs:"Neutralna",h52:"-15%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"CTSH",name:"Cognizant",sector:"IT Services",idx:"ndx",weight:"0.07%",price:40.03,chg:"+2.25%",stage:4,ma30w:66.01,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 25",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
-]
-,nyse: [
-  // ── Financials ──
-  {ticker:"JPM",name:"JPMorgan Chase",sector:"Bankowość",idx:"nyse",weight:"4.2%",price:329.05,chg:"-1.81%",stage:2,ma30w:308.06,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 60",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MNST",name:"Monster Beverage",sector:"Napoje energetyczne",idx:"ndx",price:97.6,chg:"+0.26%",stage:2,ma30w:80.65,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 72",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"BRK.B",name:"Berkshire Hathaway B",sector:"Konglomerat/Ubezpieczenia",idx:"nyse",weight:"3.8%",price:498.66,chg:"+2.22%",stage:1,ma30w:488.79,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 62",h52:"-3%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"KDP",name:"Keurig Dr Pepper",sector:"Napoje",idx:"ndx",price:33.3,chg:"-0.21%",stage:2,ma30w:28.61,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-7%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"V",name:"Visa Inc.",sector:"Płatności/Fintech",idx:"nyse",weight:"3.5%",price:336.23,chg:"+1.73%",stage:1,ma30w:324.46,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 61",h52:"-5%",
+  {ticker:"KHC",name:"Kraft Heinz",sector:"FMCG/Żywność",idx:"ndx",price:24.05,chg:"+2.65%",stage:4,ma30w:33,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-30%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"MA",name:"Mastercard",sector:"Płatności/Fintech",idx:"nyse",weight:"2.8%",price:499.02,chg:"+2.07%",stage:4,ma30w:521.04,matrend:"spłaszcza →",vol:"B. wysoki!",rs:"RSI 54",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CCEP",name:"Coca-Cola Europacific",sector:"Napoje/FMCG",idx:"ndx",price:106.61,chg:"+0.48%",stage:2,ma30w:95.09,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 74",h52:"-4%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"GS",name:"Goldman Sachs",sector:"Investment Banking",idx:"nyse",weight:"1.8%",price:1019.61,chg:"-4.27%",stage:2,ma30w:917.83,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 46",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HON",name:"Honeywell",sector:"Przemysł/Automatyka",idx:"ndx",price:229.86,chg:"+3.66%",stage:4,ma30w:230.92,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 47",h52:"-12%",
+   mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"MS",name:"Morgan Stanley",sector:"Investment Banking",idx:"nyse",weight:"1.4%",price:212.03,chg:"-4.08%",stage:2,ma30w:183.05,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 50",h52:"-5%",
+  {ticker:"CSX",name:"CSX Corporation",sector:"Kolej towarowa",idx:"ndx",price:46.84,chg:"-0.94%",stage:2,ma30w:35,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"BAC",name:"Bank of America",sector:"Bankowość",idx:"nyse",weight:"1.6%",price:57.88,chg:"-0.53%",stage:2,ma30w:52.66,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 71",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ODFL",name:"Old Dominion Freight",sector:"Transport LTL",idx:"ndx",price:217.65,chg:"-0.14%",stage:3,ma30w:193.46,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 45",h52:"-14%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"C",name:"Citigroup",sector:"Bankowość/Global",idx:"nyse",weight:"1.0%",price:141.76,chg:"-2.22%",stage:2,ma30w:119.43,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 61",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PCAR",name:"PACCAR",sector:"Ciężarówki",idx:"ndx",price:119.5,chg:"-1.44%",stage:2,ma30w:117.87,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 53",h52:"-9%",
+   mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"WFC",name:"Wells Fargo",sector:"Bankowość detaliczna",idx:"nyse",weight:"1.0%",price:83.86,chg:"-1.04%",stage:1,ma30w:84.44,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 59",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FAST",name:"Fastenal",sector:"Dystrybucja przemysłowa",idx:"ndx",price:48.6,chg:"+1.78%",stage:2,ma30w:44.53,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-4%",
+   mtt:[true,true,true,true,true,false,true,false]},
 
-  {ticker:"USB",name:"U.S. Bancorp",sector:"Bankowość regionalna",idx:"nyse",weight:"0.6%",price:60.91,chg:"-0.49%",stage:2,ma30w:54.71,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 68",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CTAS",name:"Cintas",sector:"Mundury/Usługi biznesowe",idx:"ndx",price:181.37,chg:"+4.10%",stage:4,ma30w:183.02,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 61",h52:"-20%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"PNC",name:"PNC Financial",sector:"Bankowość regionalna",idx:"nyse",weight:"0.6%",price:244.99,chg:"-0.12%",stage:2,ma30w:216.87,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 70",h52:"-8%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ROP",name:"Roper Technologies",sector:"Przemysł/Software",idx:"ndx",price:364.2,chg:"+2.68%",stage:4,ma30w:370.23,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 71",h52:"-37%",
+   mtt:[false,false,true,false,true,false,false,true]},
 
-  {ticker:"MET",name:"MetLife",sector:"Ubezpieczenia",idx:"nyse",weight:"0.5%",price:85.95,chg:"+1.56%",stage:1,ma30w:77.89,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 55",h52:"-5%",
+  {ticker:"FER",name:"Ferrovial",sector:"Infrastruktura/Lotniska",idx:"ndx",price:64.57,chg:"-1.88%",stage:2,ma30w:46,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"AIG",name:"AIG",sector:"Ubezpieczenia",idx:"nyse",weight:"0.4%",price:75.57,chg:"+0.96%",stage:4,ma30w:77.19,matrend:"opadająca ↓",vol:"B. wysoki!",rs:"RSI 51",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CEG",name:"Constellation Energy",sector:"Energia jądrowa",idx:"ndx",price:239.25,chg:"+1.16%",stage:4,ma30w:303.09,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 34",h52:"-42%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"PRU",name:"Prudential Financial",sector:"Ubezpieczenia/Emerytury",idx:"nyse",weight:"0.4%",price:108.25,chg:"+1.14%",stage:2,ma30w:104.33,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 60",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AEP",name:"American Electric Power",sector:"Energia/Sieć",idx:"ndx",price:138.51,chg:"+2.56%",stage:2,ma30w:126.61,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 65",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"TRV",name:"Travelers Companies",sector:"P&C Ubezpieczenia",idx:"nyse",weight:"0.5%",price:327.37,chg:"+2.85%",stage:2,ma30w:295.79,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 73",h52:"-4%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"XEL",name:"Xcel Energy",sector:"Energia/OZE",idx:"ndx",price:81.96,chg:"+2.84%",stage:1,ma30w:78.63,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 59",h52:"-3%",
+   mtt:[true,false,true,true,true,false,true,false]},
 
-  {ticker:"BK",name:"Bank of New York Mellon",sector:"Custody Banking",idx:"nyse",weight:"0.4%",price:131.99,chg:"+1.13%",stage:2,ma30w:105.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"EXC",name:"Exelon",sector:"Energia/Jądrowa",idx:"ndx",price:47.88,chg:"+3.50%",stage:2,ma30w:46.03,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 62",h52:"-5%",
+   mtt:[true,true,true,false,true,false,true,false]},
 
-  {ticker:"FRC2",name:"Franklin Resources",sector:"Asset Management",idx:"nyse",weight:"0.2%",price:33.21,chg:"+1.72%",stage:2,ma30w:26.88,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 60",h52:"-30%",
+  {ticker:"BKR",name:"Baker Hughes",sector:"Energia/Oilfield",idx:"ndx",price:63.54,chg:"-0.01%",stage:2,ma30w:42,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  // ── Healthcare / Pharma ──
-  {ticker:"LLY",name:"Eli Lilly",sector:"Farmacja/Otyłość",idx:"nyse",weight:"3.2%",price:1208.12,chg:"+7.13%",stage:2,ma30w:1021.79,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 72",h52:"-15%",
+  {ticker:"FANG",name:"Diamondback Energy",sector:"Ropa/Shale",idx:"ndx",price:199.96,chg:"+2.94%",stage:2,ma30w:165,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"Dobra",h52:"-10%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"JNJ",name:"Johnson & Johnson",sector:"Farmacja/MedTech",idx:"nyse",weight:"2.1%",price:254.66,chg:"+3.99%",stage:2,ma30w:227.54,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 72",h52:"-5%",
+  {ticker:"ADP",name:"ADP",sector:"HR/Payroll",idx:"ndx",price:231.9,chg:"+0.31%",stage:2,ma30w:275,matrend:"lekko ↓",vol:"Niski",rs:"Neutralna",h52:"-15%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"UNH",name:"UnitedHealth Group",sector:"Healthcare/Ubezpieczenia",idx:"nyse",weight:"2.0%",price:427.89,chg:"+2.98%",stage:1,ma30w:332.17,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 72",h52:"-50%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PAYX",name:"Paychex",sector:"HR/Payroll SMB",idx:"ndx",price:106.35,chg:"+3.54%",stage:1,ma30w:99.63,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 66",h52:"-28%",
+   mtt:[true,false,true,false,true,false,false,false]},
 
-  {ticker:"ABT",name:"Abbott Laboratories",sector:"MedTech/Diagnostyka",idx:"nyse",weight:"1.2%",price:94.12,chg:"+0.94%",stage:4,ma30w:106.71,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 63",h52:"-20%",
+  {ticker:"VRSK",name:"Verisk Analytics",sector:"Analytics/Insurance",idx:"ndx",price:184.67,chg:"+1.16%",stage:2,ma30w:272,matrend:"rosnąca ↑↑",vol:"Niski",rs:"Silna",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"PFE",name:"Pfizer",sector:"Farmacja",idx:"nyse",weight:"0.8%",price:24.29,chg:"+2.62%",stage:4,ma30w:26.22,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 36",h52:"-25%",
+  {ticker:"TRI",name:"Thomson Reuters",sector:"Media/Analytics",idx:"ndx",price:83.09,chg:"+0.94%",stage:2,ma30w:72,matrend:"rosnąca ↑",vol:"Niski",rs:"Dobra",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"MRK",name:"Merck & Co.",sector:"Farmacja/Onkologia",idx:"nyse",weight:"1.3%",price:117.78,chg:"-1.82%",stage:2,ma30w:96.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MELI",name:"MercadoLibre",sector:"E-commerce Latam",idx:"ndx",price:1763.36,chg:"+1.22%",stage:4,ma30w:1851.43,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 62",h52:"-31%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"BMY",name:"Bristol-Myers Squibb",sector:"Farmacja/Onkologia",idx:"nyse",weight:"0.6%",price:57.52,chg:"+3.85%",stage:2,ma30w:56.62,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 56",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PDD",name:"PDD Holdings (Temu)",sector:"E-commerce China/Global",idx:"ndx",price:82.39,chg:"-0.16%",stage:4,ma30w:100.98,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-41%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DHR",name:"Danaher",sector:"Life Sciences/MedTech",idx:"nyse",weight:"0.8%",price:196.19,chg:"+1.54%",stage:4,ma30w:203.03,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 69",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"EA",name:"Electronic Arts",sector:"Gaming",idx:"ndx",price:205.21,chg:"-0.12%",stage:2,ma30w:202.48,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 67",h52:"0%",
+   mtt:[true,true,true,false,true,true,true,false]},
 
-  // ── Energy ──
-  {ticker:"XOM",name:"Exxon Mobil",sector:"Ropa/Gaz",idx:"nyse",weight:"2.0%",price:136.54,chg:"-0.73%",stage:4,ma30w:142.12,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 34",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TTWO",name:"Take-Two Interactive",sector:"Gaming/Rockstar",idx:"ndx",price:254.99,chg:"+1.87%",stage:1,ma30w:224.3,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 73",h52:"-4%",
+   mtt:[true,false,true,false,true,true,true,true]},
 
-  {ticker:"CVX",name:"Chevron",sector:"Ropa/Gaz",idx:"nyse",weight:"1.4%",price:171.06,chg:"-0.69%",stage:4,ma30w:177.89,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 33",h52:"-10%",
+  {ticker:"ORLY",name:"O'Reilly Automotive",sector:"Motoryzacja/Retail",idx:"ndx",price:90.75,chg:"+1.40%",stage:2,ma30w:124,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"Silna",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"OXY",name:"Occidental Petroleum",sector:"Ropa/Shale",idx:"nyse",weight:"0.3%",price:49.99,chg:"-2.38%",stage:4,ma30w:51.21,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 30",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ROST",name:"Ross Stores",sector:"Off-price retail",idx:"ndx",price:213.43,chg:"+0.72%",stage:3,ma30w:206.86,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 39",h52:"-12%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"SLB",name:"SLB (Schlumberger)",sector:"Oilfield Services",idx:"nyse",weight:"0.4%",price:47.0,chg:"-0.89%",stage:4,ma30w:48.55,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 29",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CPRT",name:"Copart",sector:"Aukcje samochodowe",idx:"ndx",price:30.01,chg:"+4.24%",stage:4,ma30w:35.52,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 47",h52:"-40%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"HAL",name:"Halliburton",sector:"Oilfield Services",idx:"nyse",weight:"0.3%",price:34.21,chg:"-1.33%",stage:4,ma30w:35.09,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 31",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DASH",name:"DoorDash",sector:"Food Delivery",idx:"ndx",price:192.01,chg:"+1.66%",stage:1,ma30w:183.13,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 70",h52:"-33%",
+   mtt:[false,false,true,false,true,true,false,false]},
 
-  {ticker:"EOG",name:"EOG Resources",sector:"Ropa/Shale",idx:"nyse",weight:"0.4%",price:132.6,chg:"-0.74%",stage:2,ma30w:124.56,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 45",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LITE",name:"Lumentum Holdings",sector:"Fotonika/AI",idx:"ndx",price:728.32,chg:"-9.09%",stage:3,ma30w:659.84,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 38",h52:"-33%",
+   mtt:[true,true,true,true,false,true,false,false]},
 
-  {ticker:"DVN",name:"Devon Energy",sector:"Ropa/Shale",idx:"nyse",weight:"0.2%",price:42.21,chg:"-0.92%",stage:4,ma30w:43.12,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 39",h52:"-15%",
+  {ticker:"MSTR",name:"Strategy Inc (MicroStrategy)",sector:"Bitcoin/Software",idx:"ndx",price:117.57,chg:"+0.47%",stage:2,ma30w:390,matrend:"opadająca ↓",vol:"B. wysoki",rs:"Neutralna",h52:"-65%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  // ── Technology / Industrial ──
-  {ticker:"IBM",name:"IBM",sector:"IT/AI Hybrid Cloud",idx:"nyse",weight:"1.2%",price:271.63,chg:"+5.17%",stage:1,ma30w:269.19,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 54",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"INSM",name:"Insmed",sector:"Farmacja rzadkie choroby",idx:"ndx",price:111.6,chg:"+4.30%",stage:4,ma30w:146.01,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 59",h52:"-48%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"ORCL",name:"Oracle",sector:"Cloud ERP/Bazy danych",idx:"nyse",weight:"1.4%",price:148.53,chg:"-2.58%",stage:4,ma30w:177.95,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 30",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LIN",name:"Linde plc",sector:"Gazy przemysłowe",idx:"ndx",price:546.64,chg:"+2.45%",stage:2,ma30w:477.28,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 68",h52:"0%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"CRM",name:"Salesforce",sector:"CRM/AI Cloud",idx:"nyse",weight:"0.8%",price:158.37,chg:"+5.45%",stage:4,ma30w:203.28,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CTSH",name:"Cognizant",sector:"IT Services",idx:"ndx",price:41.99,chg:"+2.24%",stage:4,ma30w:65.11,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-52%",
+   mtt:[false,false,true,false,false,false,false,false]}
+],
 
-  {ticker:"ACN",name:"Accenture",sector:"IT Consulting",idx:"nyse",weight:"0.9%",price:128.98,chg:"+2.51%",stage:4,ma30w:215.89,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 27",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+nyse: [
+  {ticker:"JPM",name:"JPMorgan Chase",sector:"Bankowość",idx:"nyse",price:334.47,chg:"+0.12%",stage:2,ma30w:308.91,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"-3%",
+   mtt:[true,true,true,true,true,false,true,false]},
 
-  {ticker:"HPQ",name:"HP Inc.",sector:"PC/Druk",idx:"nyse",weight:"0.2%",price:22.88,chg:"-0.17%",stage:1,ma30w:21.42,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 44",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BRK.B",name:"Berkshire Hathaway B",sector:"Konglomerat/Ubezpieczenia",idx:"nyse",price:507.78,chg:"+1.61%",stage:1,ma30w:488.73,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-2%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  // ── Industrials / Defense ──
-  {ticker:"GE",name:"GE Aerospace",sector:"Silniki lotnicze",idx:"nyse",weight:"1.5%",price:369.0,chg:"-0.64%",stage:2,ma30w:309.85,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 73",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"V",name:"Visa Inc.",sector:"Płatności/Fintech",idx:"nyse",price:362.13,chg:"+3.15%",stage:1,ma30w:325.08,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 77",h52:"0%",
+   mtt:[true,false,true,false,true,false,true,true]},
 
-  {ticker:"RTX",name:"RTX Corp (Raytheon)",sector:"Obrona/Lotnictwo",idx:"nyse",weight:"1.0%",price:187.99,chg:"+0.75%",stage:1,ma30w:188.32,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 57",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MA",name:"Mastercard",sector:"Płatności/Fintech",idx:"nyse",price:539.39,chg:"+3.24%",stage:1,ma30w:520.7,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"-10%",
+   mtt:[true,false,true,false,true,false,true,true]},
 
-  {ticker:"LMT",name:"Lockheed Martin",sector:"Obrona/Lotnictwo",idx:"nyse",weight:"1.1%",price:507.4,chg:"+0.47%",stage:4,ma30w:557.72,matrend:"opadająca ↓",vol:"B. wysoki!",rs:"RSI 44",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GS",name:"Goldman Sachs",sector:"Investment Banking",idx:"nyse",price:1021,chg:"+0.14%",stage:3,ma30w:924.15,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"GD",name:"General Dynamics",sector:"Obrona/Stocznie",idx:"nyse",weight:"0.7%",price:346.71,chg:"+0.58%",stage:1,ma30w:346.77,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 50",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MS",name:"Morgan Stanley",sector:"Investment Banking",idx:"nyse",price:213.93,chg:"+0.98%",stage:3,ma30w:184.42,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 52",h52:"-7%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BA",name:"Boeing",sector:"Lotnictwo/Obrona",idx:"nyse",weight:"0.8%",price:217.25,chg:"-0.40%",stage:1,ma30w:220.71,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 46",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BAC",name:"Bank of America",sector:"Bankowość",idx:"nyse",price:58.73,chg:"+0.63%",stage:2,ma30w:52.83,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 70",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"CAT",name:"Caterpillar",sector:"Maszyny budowlane",idx:"nyse",weight:"1.2%",price:997.47,chg:"-5.63%",stage:2,ma30w:743.06,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 59",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"C",name:"Citigroup",sector:"Bankowość/Global",idx:"nyse",price:139.97,chg:"-0.11%",stage:2,ma30w:120.55,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 56",h52:"-5%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"DE",name:"Deere & Company",sector:"Agro/Maszyny",idx:"nyse",weight:"0.9%",price:613.24,chg:"-2.78%",stage:2,ma30w:552.24,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 61",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"WFC",name:"Wells Fargo",sector:"Bankowość detaliczna",idx:"nyse",price:85.51,chg:"-0.50%",stage:2,ma30w:84.46,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 62",h52:"-13%",
+   mtt:[true,true,true,false,true,false,true,false]},
 
-  {ticker:"HON",name:"Honeywell",sector:"Przemysł/Automatyka",idx:"nyse",weight:"0.7%",price:230.84,chg:"-1.03%",stage:3,ma30w:230.00,matrend:"spłaszcza →",vol:"Malejący",rs:"Neutralna",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"USB",name:"U.S. Bancorp",sector:"Bankowość regionalna",idx:"nyse",price:61.73,chg:"-0.37%",stage:2,ma30w:55.09,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 67",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"MMM",name:"3M",sector:"Przemysł dywersyfikowany",idx:"nyse",weight:"0.5%",price:150.54,chg:"-1.32%",stage:2,ma30w:108.00,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PNC",name:"PNC Financial",sector:"Bankowość regionalna",idx:"nyse",price:249.49,chg:"-0.85%",stage:2,ma30w:218.55,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 71",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"ITW",name:"Illinois Tool Works",sector:"Przemysł/Narzędzia",idx:"nyse",weight:"0.6%",price:267.71,chg:"-1.07%",stage:2,ma30w:262.62,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 61",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MET",name:"MetLife",sector:"Ubezpieczenia",idx:"nyse",price:90.06,chg:"+3.28%",stage:1,ma30w:78.22,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 65",h52:"0%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"EMR",name:"Emerson Electric",sector:"Automatyka przemysłowa",idx:"nyse",weight:"0.5%",price:143.49,chg:"-1.27%",stage:3,ma30w:140.58,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 51",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"AIG",name:"AIG",sector:"Ubezpieczenia",idx:"nyse",price:79.39,chg:"+3.66%",stage:1,ma30w:77.21,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 64",h52:"-9%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"UPS",name:"United Parcel Service",sector:"Logistyka/Dostawy",idx:"nyse",weight:"0.5%",price:108.14,chg:"-1.07%",stage:2,ma30w:104.05,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 55",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PRU",name:"Prudential Financial",sector:"Ubezpieczenia/Emerytury",idx:"nyse",price:112.95,chg:"+1.69%",stage:2,ma30w:104.46,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-6%",
+   mtt:[true,true,true,false,true,false,true,false]},
 
-  {ticker:"FDX",name:"FedEx",sector:"Logistyka/Dostawy",idx:"nyse",weight:"0.5%",price:318.53,chg:"-3.31%",stage:3,ma30w:282.94,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 47",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TRV",name:"Travelers Companies",sector:"P&C Ubezpieczenia",idx:"nyse",price:342.31,chg:"+2.30%",stage:2,ma30w:297.02,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 79",h52:"0%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"UNP",name:"Union Pacific",sector:"Kolej towarowa",idx:"nyse",weight:"0.7%",price:268.35,chg:"+0.23%",stage:2,ma30w:249.5,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 54",h52:"-5%",
+  {ticker:"BK",name:"Bank of New York Mellon",sector:"Custody Banking",idx:"nyse",price:131.99,chg:"+1.13%",stage:2,ma30w:105,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-5%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  // ── Consumer ──
-  {ticker:"PG",name:"Procter & Gamble",sector:"FMCG/Consumer",idx:"nyse",weight:"1.4%",price:149.02,chg:"+0.35%",stage:1,ma30w:147.87,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 53",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FRC2",name:"Franklin Resources",sector:"Asset Management",idx:"nyse",price:34.11,chg:"+0.15%",stage:2,ma30w:27.21,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 65",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"KO",name:"Coca-Cola",sector:"Napoje/FMCG",idx:"nyse",weight:"1.2%",price:82.63,chg:"+2.75%",stage:2,ma30w:75.98,matrend:"spłaszcza →",vol:"B. wysoki!",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LLY",name:"Eli Lilly",sector:"Farmacja/Otyłość",idx:"nyse",price:1213.91,chg:"+1.86%",stage:2,ma30w:1025.87,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"MCD",name:"McDonald's",sector:"Restauracje/Fast Food",idx:"nyse",weight:"0.8%",price:269.76,chg:"+1.97%",stage:4,ma30w:304.53,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 40",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"JNJ",name:"Johnson & Johnson",sector:"Farmacja/MedTech",idx:"nyse",price:263.04,chg:"+3.57%",stage:2,ma30w:228.97,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 73",h52:"0%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"HD",name:"Home Depot",sector:"Home Improvement",idx:"nyse",weight:"1.0%",price:348.86,chg:"+1.12%",stage:1,ma30w:345.58,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 66",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"UNH",name:"UnitedHealth Group",sector:"Healthcare/Ubezpieczenia",idx:"nyse",price:425.36,chg:"-0.28%",stage:1,ma30w:335.02,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 65",h52:"-1%",
+   mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"TGT",name:"Target",sector:"Handel detaliczny",idx:"nyse",weight:"0.3%",price:140.39,chg:"+0.59%",stage:2,ma30w:114.67,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 65",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ABT",name:"Abbott Laboratories",sector:"MedTech/Diagnostyka",idx:"nyse",price:95.4,chg:"+3.49%",stage:4,ma30w:105.81,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 63",h52:"-31%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"LOW",name:"Lowe's Companies",sector:"Home Improvement",idx:"nyse",weight:"0.6%",price:222.48,chg:"+0.25%",stage:4,ma30w:243.89,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 54",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PFE",name:"Pfizer",sector:"Farmacja",idx:"nyse",price:24.32,chg:"+1.84%",stage:4,ma30w:26.2,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 40",h52:"-15%",
+   mtt:[false,true,true,false,false,false,true,false]},
 
-  {ticker:"NKE",name:"Nike",sector:"Odzież/Sport",idx:"nyse",weight:"0.3%",price:40.75,chg:"-0.37%",stage:4,ma30w:54.58,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 35",h52:"-50%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MRK",name:"Merck & Co.",sector:"Farmacja/Onkologia",idx:"nyse",price:129.56,chg:"+3.34%",stage:2,ma30w:114.06,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 66",h52:"-8%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"GM",name:"General Motors",sector:"Motoryzacja/EV",idx:"nyse",weight:"0.4%",price:78.1,chg:"-0.55%",stage:4,ma30w:78.78,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 44",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BMY",name:"Bristol-Myers Squibb",sector:"Farmacja/Onkologia",idx:"nyse",price:58.13,chg:"+2.99%",stage:2,ma30w:56.92,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 56",h52:"-8%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"F",name:"Ford Motor",sector:"Motoryzacja/EV",idx:"nyse",weight:"0.2%",price:14.13,chg:"+0.14%",stage:3,ma30w:13.3,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 48",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DHR",name:"Danaher",sector:"Life Sciences/MedTech",idx:"nyse",price:197.93,chg:"+2.17%",stage:4,ma30w:202.2,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-18%",
+   mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"DIS",name:"Walt Disney",sector:"Media/Entertainment/Parks",idx:"nyse",weight:"0.7%",price:98.79,chg:"+0.76%",stage:4,ma30w:104.83,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 43",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"XOM",name:"Exxon Mobil",sector:"Ropa/Gaz",idx:"nyse",price:137.09,chg:"+0.59%",stage:4,ma30w:142.64,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-22%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  {ticker:"LVS",name:"Las Vegas Sands",sector:"Kasyna/Gaming",idx:"nyse",weight:"0.3%",price:47.12,chg:"+1.81%",stage:4,ma30w:56.81,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 36",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CVX",name:"Chevron",sector:"Ropa/Gaz",idx:"nyse",price:169.2,chg:"+2.12%",stage:4,ma30w:178.34,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 35",h52:"-21%",
+   mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"YUM",name:"Yum! Brands",sector:"Restauracje/Franchise",idx:"nyse",weight:"0.3%",price:156.41,chg:"+3.49%",stage:2,ma30w:155.42,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 57",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"OXY",name:"Occidental Petroleum",sector:"Ropa/Shale",idx:"nyse",price:48.91,chg:"+2.02%",stage:4,ma30w:51.41,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 31",h52:"-27%",
+   mtt:[false,true,true,true,false,true,false,false]},
 
-  // ── Utilities ──
-  {ticker:"NEE",name:"NextEra Energy",sector:"OZE/Wiatr/Solar",idx:"nyse",weight:"1.2%",price:88.56,chg:"+0.98%",stage:2,ma30w:88.26,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 55",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"SLB",name:"SLB (Schlumberger)",sector:"Oilfield Services",idx:"nyse",price:45.13,chg:"+0.09%",stage:4,ma30w:48.82,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 26",h52:"-23%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  {ticker:"DUK",name:"Duke Energy",sector:"Energia/Sieć",idx:"nyse",weight:"0.6%",price:128.4,chg:"+1.01%",stage:1,ma30w:124.14,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 62",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HAL",name:"Halliburton",sector:"Oilfield Services",idx:"nyse",price:32.96,chg:"-0.15%",stage:4,ma30w:35.29,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 27",h52:"-24%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  {ticker:"SO",name:"Southern Company",sector:"Energia/Jądrowa",idx:"nyse",weight:"0.5%",price:97.16,chg:"+1.30%",stage:1,ma30w:92.12,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 64",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"EOG",name:"EOG Resources",sector:"Ropa/Shale",idx:"nyse",price:130.78,chg:"+1.70%",stage:3,ma30w:125.19,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 43",h52:"-14%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"D",name:"Dominion Energy",sector:"Energia/OZE",idx:"nyse",weight:"0.3%",price:69.39,chg:"-0.17%",stage:2,ma30w:62.63,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 64",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DVN",name:"Devon Energy",sector:"Ropa/Shale",idx:"nyse",price:40.47,chg:"+0.55%",stage:4,ma30w:43.26,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 33",h52:"-23%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  // ── Materials / Mining ──
-  {ticker:"NEM",name:"Newmont",sector:"Złoto/Górnictwo",idx:"nyse",weight:"0.4%",price:96.13,chg:"+0.82%",stage:4,ma30w:109.01,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 40",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"IBM",name:"IBM",sector:"IT/AI Hybrid Cloud",idx:"nyse",price:289.52,chg:"+1.14%",stage:1,ma30w:268.89,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 62",h52:"-13%",
+   mtt:[true,false,true,false,true,true,true,false]},
 
-  {ticker:"FCX",name:"Freeport-McMoRan",sector:"Miedź/Złoto",idx:"nyse",weight:"0.3%",price:62.45,chg:"-0.56%",stage:3,ma30w:59.25,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 44",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ORCL",name:"Oracle",sector:"Cloud ERP/Bazy danych",idx:"nyse",price:140.27,chg:"-1.56%",stage:4,ma30w:176.23,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 27",h52:"-59%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"DD",name:"DuPont De Nemours",sector:"Chemia specjalna",idx:"nyse",weight:"0.3%",price:137.22,chg:"-0.42%",stage:3,ma30w:136.26,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 41",h52:"-30%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CRM",name:"Salesforce",sector:"CRM/AI Cloud",idx:"nyse",price:166.11,chg:"+1.76%",stage:4,ma30w:201.52,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 50",h52:"-40%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"SCCO",name:"Southern Copper",sector:"Miedź/Peru/Mexico",idx:"nyse",weight:"0.3%",price:171.26,chg:"-1.99%",stage:4,ma30w:173.69,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 42",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ACN",name:"Accenture",sector:"IT Consulting",idx:"nyse",price:137.35,chg:"+4.74%",stage:4,ma30w:212.83,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 39",h52:"-55%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  // ── Telecom ──
-  {ticker:"T",name:"AT&T",sector:"Telekomunikacja",idx:"nyse",weight:"0.5%",price:22.72,chg:"+1.34%",stage:4,ma30w:25.66,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 42",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HPQ",name:"HP Inc.",sector:"PC/Druk",idx:"nyse",price:21.93,chg:"-0.41%",stage:1,ma30w:21.39,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 38",h52:"-26%",
+   mtt:[false,false,true,true,false,false,false,false]},
 
-  {ticker:"VZ",name:"Verizon",sector:"Telekomunikacja",idx:"nyse",weight:"0.5%",price:46.54,chg:"+1.02%",stage:3,ma30w:45.52,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 49",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GE",name:"GE Aerospace",sector:"Silniki lotnicze",idx:"nyse",price:377.52,chg:"+0.69%",stage:2,ma30w:312.03,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 76",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,true]},
 
-  // ── Retail / Consumer Staples ──
-  {ticker:"CL",name:"Colgate-Palmolive",sector:"FMCG/Higiena",idx:"nyse",weight:"0.4%",price:92.07,chg:"+1.11%",stage:2,ma30w:86.44,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 59",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"RTX",name:"RTX Corp (Raytheon)",sector:"Obrona/Lotnictwo",idx:"nyse",price:199.25,chg:"+3.90%",stage:2,ma30w:188.84,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 68",h52:"-7%",
+   mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"GIS",name:"General Mills",sector:"Żywność packaged",idx:"nyse",weight:"0.2%",price:36.01,chg:"+1.72%",stage:4,ma30w:40.53,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 66",h52:"-40%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LMT",name:"Lockheed Martin",sector:"Obrona/Lotnictwo",idx:"nyse",price:545.91,chg:"+4.62%",stage:1,ma30w:559.25,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 60",h52:"-21%",
+   mtt:[false,true,true,false,true,true,true,false]},
 
-  {ticker:"KMB",name:"Kimberly-Clark",sector:"FMCG/Higiena",idx:"nyse",weight:"0.3%",price:96.65,chg:"-0.53%",stage:3,ma30w:130.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GD",name:"General Dynamics",sector:"Obrona/Stocznie",idx:"nyse",price:373.54,chg:"+2.94%",stage:2,ma30w:347.29,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"0%",
+   mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"MO",name:"Altria Group",sector:"Tytoń",idx:"nyse",weight:"0.3%",price:73.79,chg:"+0.79%",stage:2,ma30w:65.34,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"BA",name:"Boeing",sector:"Lotnictwo/Obrona",idx:"nyse",price:226.49,chg:"+3.62%",stage:2,ma30w:221.73,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 56",h52:"-11%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"PM",name:"Philip Morris International",sector:"Tytoń/Smoke-free",idx:"nyse",weight:"0.8%",price:180.77,chg:"+1.03%",stage:2,ma30w:170.06,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 53",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"CAT",name:"Caterpillar",sector:"Maszyny budowlane",idx:"nyse",price:963.53,chg:"-2.81%",stage:2,ma30w:755.35,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 51",h52:"-10%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  // ── Tech / Internet specific to NYSE ──
-  {ticker:"TSM",name:"TSMC ADR",sector:"Półprzewodniki/Foundry",idx:"nyse",weight:"3.7%",price:432.35,chg:"-0.61%",stage:3,ma30w:358.0,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 52",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DE",name:"Deere & Company",sector:"Agro/Maszyny",idx:"nyse",price:621.27,chg:"-1.01%",stage:2,ma30w:556.13,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 61",h52:"-8%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BABA",name:"Alibaba Group ADR",sector:"E-commerce China/Cloud",idx:"nyse",weight:"1.7%",price:94.81,chg:"-0.27%",stage:4,ma30w:141.45,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 17",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HON",name:"Honeywell",sector:"Przemysł/Automatyka",idx:"nyse",price:229.86,chg:"+3.66%",stage:4,ma30w:230.92,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 47",h52:"-12%",
+   mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"SAP2",name:"SAP SE ADR",sector:"Cloud ERP",idx:"nyse",weight:"1.3%",price:155.09,chg:"+4.75%",stage:4,ma30w:199.34,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 40",h52:"-4%",
+  {ticker:"MMM",name:"3M",sector:"Przemysł dywersyfikowany",idx:"nyse",price:150.54,chg:"-1.32%",stage:2,ma30w:108,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"NOV",name:"NOV Inc.",sector:"Oilfield Equipment",idx:"nyse",weight:"0.1%",price:18.85,chg:"-1.31%",stage:4,ma30w:22.00,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-20%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"ITW",name:"Illinois Tool Works",sector:"Przemysł/Narzędzia",idx:"nyse",price:272.76,chg:"+1.41%",stage:2,ma30w:263.34,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 65",h52:"-10%",
+   mtt:[true,true,true,false,true,false,true,false]},
 
-  {ticker:"SWK",name:"Stanley Black & Decker",sector:"Narzędzia/Przemysł",idx:"nyse",weight:"0.2%",price:91.98,chg:"-0.36%",stage:2,ma30w:77.75,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-35%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"EMR",name:"Emerson Electric",sector:"Automatyka przemysłowa",idx:"nyse",price:139.05,chg:"-0.34%",stage:4,ma30w:140.96,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 44",h52:"-16%",
+   mtt:[false,true,true,false,false,false,true,false]},
 
-  {ticker:"SPG",name:"Simon Property Group",sector:"REIT/Centra handlowe",idx:"nyse",weight:"0.4%",price:226.89,chg:"+0.62%",stage:2,ma30w:195.17,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 72",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"UPS",name:"United Parcel Service",sector:"Logistyka/Dostawy",idx:"nyse",price:110.66,chg:"+1.02%",stage:2,ma30w:104.48,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 60",h52:"-10%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"GLW",name:"Corning",sector:"Szkło specjalne/Fiber",idx:"nyse",weight:"0.3%",price:221.05,chg:"-3.05%",stage:2,ma30w:137.56,matrend:"rosnąca ↑↑",vol:"B. wysoki!",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"FDX",name:"FedEx",sector:"Logistyka/Dostawy",idx:"nyse",price:313,chg:"-0.28%",stage:3,ma30w:285.67,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 44",h52:"-9%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"BX",name:"Blackstone",sector:"Private Equity/RE",idx:"nyse",weight:"0.8%",price:115.4,chg:"+1.07%",stage:4,ma30w:130.09,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 44",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"UNP",name:"Union Pacific",sector:"Kolej towarowa",idx:"nyse",price:282.25,chg:"+1.63%",stage:2,ma30w:250.91,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 66",h52:"0%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"KMI",name:"Kinder Morgan",sector:"Rurociągi/Gaz ziemny",idx:"nyse",weight:"0.3%",price:33.19,chg:"+0.55%",stage:2,ma30w:30.82,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 62",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"PG",name:"Procter & Gamble",sector:"FMCG/Consumer",idx:"nyse",price:151.41,chg:"+2.70%",stage:1,ma30w:147.87,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 58",h52:"-9%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"OKE",name:"ONEOK",sector:"Rurociągi/NGL",idx:"nyse",weight:"0.3%",price:89.22,chg:"-0.34%",stage:2,ma30w:82.81,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 53",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"KO",name:"Coca-Cola",sector:"Napoje/FMCG",idx:"nyse",price:84.14,chg:"+3.51%",stage:2,ma30w:76.26,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"0%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"SRE",name:"Sempra Energy",sector:"Energia/LNG",idx:"nyse",weight:"0.3%",price:94.27,chg:"+0.90%",stage:2,ma30w:91.77,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"MCD",name:"McDonald's",sector:"Restauracje/Fast Food",idx:"nyse",price:280.63,chg:"+4.16%",stage:1,ma30w:303.64,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-18%",
+   mtt:[false,true,true,false,false,false,true,false]},
 
-  {ticker:"WM",name:"Waste Management",sector:"Odpady/Recycling",idx:"nyse",weight:"0.5%",price:225.53,chg:"+1.10%",stage:2,ma30w:224.27,matrend:"rosnąca ↑",vol:"B. wysoki!",rs:"RSI 59",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"HD",name:"Home Depot",sector:"Home Improvement",idx:"nyse",price:357.9,chg:"+2.01%",stage:1,ma30w:346.02,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 69",h52:"-16%",
+   mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"PSA",name:"Public Storage",sector:"REIT/Self-Storage",idx:"nyse",weight:"0.4%",price:324.39,chg:"+1.14%",stage:2,ma30w:290.54,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 61",h52:"-5%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"TGT",name:"Target",sector:"Handel detaliczny",idx:"nyse",price:130.21,chg:"-0.06%",stage:2,ma30w:115.89,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 49",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"AMT",name:"American Tower",sector:"REIT/Telecom Wieże",idx:"nyse",weight:"0.5%",price:175.59,chg:"+4.07%",stage:4,ma30w:179.78,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 43",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"LOW",name:"Lowe's Companies",sector:"Home Improvement",idx:"nyse",price:227.5,chg:"+2.51%",stage:1,ma30w:243.68,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 59",h52:"-22%",
+   mtt:[false,true,true,false,true,false,true,false]},
 
-  {ticker:"ZBH",name:"Zimmer Biomet",sector:"Ortopedia/Implanty",idx:"nyse",weight:"0.2%",price:93.1,chg:"+2.35%",stage:1,ma30w:90.2,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"-15%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"NKE",name:"Nike",sector:"Odzież/Sport",idx:"nyse",price:44.09,chg:"+2.39%",stage:4,ma30w:54.05,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 53",h52:"-45%",
+   mtt:[false,false,true,false,true,false,false,false]},
 
-  {ticker:"MDT",name:"Medtronic",sector:"MedTech/Urządzenia",idx:"nyse",weight:"0.6%",price:80.98,chg:"+0.57%",stage:4,ma30w:90.58,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 55",h52:"-10%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"GM",name:"General Motors",sector:"Motoryzacja/EV",idx:"nyse",price:76,chg:"+0.64%",stage:4,ma30w:78.97,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 39",h52:"-13%",
+   mtt:[false,true,true,false,false,true,true,false]},
 
-  {ticker:"RTX2",name:"Becton Dickinson",sector:"MedTech/Diagnostyka",idx:"nyse",weight:"0.3%",price:88.45,chg:"+0.60%",stage:3,ma30w:236.00,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"Słaba",h52:"-55%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"F",name:"Ford Motor",sector:"Motoryzacja/EV",idx:"nyse",price:13.36,chg:"-2.05%",stage:3,ma30w:13.33,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 39",h52:"-25%",
+   mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"CI",name:"Cigna Group",sector:"Healthcare/PBM",idx:"nyse",weight:"0.5%",price:282.79,chg:"+0.33%",stage:1,ma30w:278.35,matrend:"spłaszcza →",vol:"Wysoki",rs:"RSI 48",h52:"-25%",
-   mtt:[false,false,false,false,false,false,false,false]},
+  {ticker:"DIS",name:"Walt Disney",sector:"Media/Entertainment/Parks",idx:"nyse",price:99.5,chg:"+3.96%",stage:4,ma30w:104.67,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-20%",
+   mtt:[false,false,true,false,false,false,true,false]},
+
+  {ticker:"LVS",name:"Las Vegas Sands",sector:"Kasyna/Gaming",idx:"nyse",price:46.99,chg:"+1.60%",stage:4,ma30w:56.33,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 39",h52:"-33%",
+   mtt:[false,false,true,false,false,false,false,false]},
+
+  {ticker:"YUM",name:"Yum! Brands",sector:"Restauracje/Franchise",idx:"nyse",price:164.73,chg:"+1.94%",stage:2,ma30w:155.71,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 68",h52:"-3%",
+   mtt:[true,true,true,false,true,false,true,false]},
+
+  {ticker:"NEE",name:"NextEra Energy",sector:"OZE/Wiatr/Solar",idx:"nyse",price:88.34,chg:"+2.28%",stage:1,ma30w:88.36,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 53",h52:"-11%",
+   mtt:[false,true,true,true,false,true,true,false]},
 
-  {ticker:"CVS",name:"CVS Health",sector:"Farmacja/Healthcare",idx:"nyse",weight:"0.3%",price:104.34,chg:"-0.31%",stage:2,ma30w:81.98,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"-30%",
+  {ticker:"DUK",name:"Duke Energy",sector:"Energia/Sieć",idx:"nyse",price:129.6,chg:"+3.05%",stage:1,ma30w:124.28,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 62",h52:"-4%",
+   mtt:[true,false,true,true,true,false,true,false]},
+
+  {ticker:"SO",name:"Southern Company",sector:"Energia/Jądrowa",idx:"nyse",price:97.98,chg:"+3.01%",stage:1,ma30w:92.32,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 63",h52:"-3%",
+   mtt:[true,false,true,true,true,false,true,false]},
+
+  {ticker:"D",name:"Dominion Energy",sector:"Energia/OZE",idx:"nyse",price:69.75,chg:"+2.89%",stage:2,ma30w:62.83,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 62",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"NEM",name:"Newmont",sector:"Złoto/Górnictwo",idx:"nyse",price:97.04,chg:"+4.01%",stage:4,ma30w:109.27,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 44",h52:"-28%",
+   mtt:[false,true,true,false,false,true,false,false]},
+
+  {ticker:"FCX",name:"Freeport-McMoRan",sector:"Miedź/Złoto",idx:"nyse",price:60.97,chg:"+0.73%",stage:3,ma30w:59.81,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 42",h52:"-16%",
+   mtt:[true,true,true,true,false,true,true,false]},
+
+  {ticker:"DD",name:"DuPont De Nemours",sector:"Chemia specjalna",idx:"nyse",price:139.91,chg:"+1.04%",stage:3,ma30w:136.88,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 48",h52:"-11%",
+   mtt:[true,true,true,true,false,true,true,false]},
+
+  {ticker:"SCCO",name:"Southern Copper",sector:"Miedź/Peru/Mexico",idx:"nyse",price:172.01,chg:"+1.90%",stage:4,ma30w:175,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 44",h52:"-22%",
+   mtt:[false,true,true,true,false,true,true,false]},
+
+  {ticker:"T",name:"AT&T",sector:"Telekomunikacja",idx:"nyse",price:20.58,chg:"+0.49%",stage:4,ma30w:25.54,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 29",h52:"-31%",
+   mtt:[false,false,true,false,false,false,false,false]},
+
+  {ticker:"VZ",name:"Verizon",sector:"Telekomunikacja",idx:"nyse",price:42.56,chg:"+1.36%",stage:4,ma30w:45.57,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 34",h52:"-18%",
+   mtt:[false,true,true,true,false,false,true,false]},
+
+  {ticker:"CL",name:"Colgate-Palmolive",sector:"FMCG/Higiena",idx:"nyse",price:95.13,chg:"+2.55%",stage:2,ma30w:86.8,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 66",h52:"-4%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"GIS",name:"General Mills",sector:"Żywność packaged",idx:"nyse",price:37.57,chg:"-0.53%",stage:4,ma30w:40.24,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 66",h52:"-29%",
+   mtt:[false,false,true,false,true,false,false,false]},
+
+  {ticker:"KMB",name:"Kimberly-Clark",sector:"FMCG/Higiena",idx:"nyse",price:96.65,chg:"-0.53%",stage:3,ma30w:130,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-25%",
    mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"MO",name:"Altria Group",sector:"Tytoń",idx:"nyse",price:72.71,chg:"+1.64%",stage:2,ma30w:65.72,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 55",h52:"-2%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"PM",name:"Philip Morris International",sector:"Tytoń/Smoke-free",idx:"nyse",price:182.27,chg:"+2.58%",stage:2,ma30w:170.76,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 54",h52:"-6%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"TSM",name:"TSMC ADR",sector:"Półprzewodniki/Foundry",idx:"nyse",price:434.16,chg:"-2.27%",stage:3,ma30w:362.61,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 50",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BABA",name:"Alibaba Group ADR",sector:"E-commerce China/Cloud",idx:"nyse",price:96.14,chg:"-1.89%",stage:4,ma30w:139.85,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 24",h52:"-50%",
+   mtt:[false,false,true,false,false,false,false,false]},
+
+  {ticker:"SAP2",name:"SAP SE ADR",sector:"Cloud ERP",idx:"nyse",price:162.59,chg:"+2.16%",stage:4,ma30w:197.23,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-48%",
+   mtt:[false,false,true,false,false,false,false,false]},
 
-  {ticker:"BDX",name:"Becton Dickinson",sector:"Medtech/Igły",idx:"nyse",weight:"0.3%",price:186.45,chg:"-0.30%",stage:3,ma30w:218.00,matrend:"opadająca ↓",vol:"Niski",rs:"Słaba",h52:"-14%",
+  {ticker:"NOV",name:"NOV Inc.",sector:"Oilfield Equipment",idx:"nyse",price:18.85,chg:"-1.31%",stage:4,ma30w:22,matrend:"opadająca ↓",vol:"Stabilny",rs:"Słaba",h52:"-20%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"BAX",name:"Baxter International",sector:"MedTech/Szpitale",idx:"nyse",weight:"0.1%",price:22.04,chg:"+2.27%",stage:1,ma30w:18.91,matrend:"rosnąca ↑↑",vol:"Wysoki",rs:"RSI 70",h52:"-40%",
+  {ticker:"SWK",name:"Stanley Black & Decker",sector:"Narzędzia/Przemysł",idx:"nyse",price:91.9,chg:"+0.61%",stage:2,ma30w:78.5,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 65",h52:"-3%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"SPG",name:"Simon Property Group",sector:"REIT/Centra handlowe",idx:"nyse",price:226.06,chg:"+1.37%",stage:2,ma30w:196.33,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 66",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"GLW",name:"Corning",sector:"Szkło specjalne/Fiber",idx:"nyse",price:196.79,chg:"-10.81%",stage:2,ma30w:141.61,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 49",h52:"-28%",
+   mtt:[true,true,true,true,true,true,false,false]},
+
+  {ticker:"BX",name:"Blackstone",sector:"Private Equity/RE",idx:"nyse",price:122.78,chg:"+2.70%",stage:4,ma30w:129.52,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 56",h52:"-35%",
+   mtt:[false,false,true,false,true,false,false,false]},
+
+  {ticker:"KMI",name:"Kinder Morgan",sector:"Rurociągi/Gaz ziemny",idx:"nyse",price:32.06,chg:"+1.07%",stage:2,ma30w:30.96,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 49",h52:"-8%",
+   mtt:[true,true,true,true,false,true,true,false]},
+
+  {ticker:"OKE",name:"ONEOK",sector:"Rurociągi/NGL",idx:"nyse",price:87.83,chg:"+2.45%",stage:2,ma30w:83.27,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 50",h52:"-9%",
+   mtt:[true,true,true,true,false,true,true,false]},
+
+  {ticker:"SRE",name:"Sempra Energy",sector:"Energia/LNG",idx:"nyse",price:93.06,chg:"+1.85%",stage:2,ma30w:91.79,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 54",h52:"-8%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"WM",name:"Waste Management",sector:"Odpady/Recycling",idx:"nyse",price:230.4,chg:"+2.82%",stage:2,ma30w:224.54,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"-7%",
+   mtt:[true,true,true,false,true,false,true,false]},
+
+  {ticker:"PSA",name:"Public Storage",sector:"REIT/Self-Storage",idx:"nyse",price:329.64,chg:"+2.04%",stage:2,ma30w:292.04,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 63",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"AMT",name:"American Tower",sector:"REIT/Telecom Wieże",idx:"nyse",price:166.03,chg:"-0.03%",stage:4,ma30w:179.42,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 36",h52:"-29%",
+   mtt:[false,false,true,false,false,false,false,false]},
+
+  {ticker:"ZBH",name:"Zimmer Biomet",sector:"Ortopedia/Implanty",idx:"nyse",price:87.47,chg:"+3.92%",stage:4,ma30w:90.1,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 50",h52:"-19%",
+   mtt:[false,false,true,false,true,false,true,false]},
+
+  {ticker:"MDT",name:"Medtronic",sector:"MedTech/Urządzenia",idx:"nyse",price:83.19,chg:"+5.04%",stage:4,ma30w:90.03,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 60",h52:"-22%",
+   mtt:[false,false,true,false,true,false,true,false]},
+
+  {ticker:"RTX2",name:"Becton Dickinson",sector:"MedTech/Diagnostyka",idx:"nyse",price:88.45,chg:"+0.60%",stage:3,ma30w:236,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"Słaba",h52:"-55%",
    mtt:[false,false,false,false,false,false,false,false]},
+
+  {ticker:"CI",name:"Cigna Group",sector:"Healthcare/PBM",idx:"nyse",price:287.77,chg:"+3.86%",stage:1,ma30w:278.54,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 54",h52:"-10%",
+   mtt:[true,false,true,true,true,false,true,false]},
+
+  {ticker:"CVS",name:"CVS Health",sector:"Farmacja/Healthcare",idx:"nyse",price:104.72,chg:"-0.09%",stage:2,ma30w:82.7,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 70",h52:"-1%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BDX",name:"Becton Dickinson",sector:"Medtech/Igły",idx:"nyse",price:741,chg:"-0.19%",stage:2,ma30w:690.21,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 61",h52:"-9%",
+   mtt:[true,true,true,true,true,true,true,false]},
+
+  {ticker:"BAX",name:"Baxter International",sector:"MedTech/Szpitale",idx:"nyse",price:22.65,chg:"+4.43%",stage:1,ma30w:19.02,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-27%",
+   mtt:[true,false,true,false,true,true,false,false]},
 
-  {ticker:"SPOT",name:"Spotify Technology",sector:"Streaming/Podcasty",idx:"nyse",weight:"0.5%",price:460.02,chg:"+4.26%",stage:4,ma30w:507.63,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 45",h52:"-38%",
-   mtt:[false,false,false,false,false,false,false,false]},]
+  {ticker:"SPOT",name:"Spotify Technology",sector:"Streaming/Podcasty",idx:"nyse",price:485.97,chg:"+2.86%",stage:4,ma30w:504.32,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 56",h52:"-35%",
+   mtt:[false,false,true,false,true,false,false,false]}
+],
 
-}; // end STOCKS
+};; // end STOCKS
 
 // ══════════════════════════════════════════════════
 // APP
@@ -2113,9 +2317,14 @@ function renderCard(s){
   const col=mttColor(score);
   const cls=mttScoreClass(score);
   const pct=mttFillPct(score);
-  const dots=mttArr.map((v,i)=>`<div class="mtt-dot ${v?'pass':'fail'}" title="${MTT_LABELS[i].short}"></div>`).join('');
+  const hasLive = !!(ld && ld.price != null);
+  const dots=mttArr.map((v,i)=>`<div class="mtt-dot ${hasLive ? (v?'pass':'fail') : 'unknown'}" title="${MTT_LABELS[i].short}"></div>`).join('');
   const cur=currency[s.idx];
-  const mttTag=score===8?`<span class="stag tag-mtt">✦ MTT 8/8</span>`:score>=6?`<span class="stag tag-mtt">${score}/8 MTT</span>`:'';
+  const mttTag=(hasLive && score===8)?`<span class="stag tag-mtt">✦ MTT 8/8</span>`:(hasLive && score>=6)?`<span class="stag tag-mtt">${score}/8 MTT</span>`:'';
+  const mttScoreTxt = hasLive ? (score+'/8') : '–/8';
+  const mttScoreCls = hasLive ? cls : '';
+  const mttFillPctVal = hasLive ? pct : 0;
+  const mttFillCol = hasLive ? col : 'rgba(255,255,255,.10)';
 
   return `<div class="card stage-${s.stage}"
     data-stage="${s.stage}" data-mtt="${score}" data-sector="${s.sector}"
@@ -2147,9 +2356,9 @@ function renderCard(s){
     <div class="mtt-bar-wrap">
       <div class="mtt-bar-header">
         <div class="mtt-bar-label"><span class="mtt-logo">MTT</span> Minervini Trend Template</div>
-        <div class="mtt-score-txt ${cls}">${score}/8</div>
+        <div class="mtt-score-txt ${mttScoreCls}">${mttScoreTxt}</div>
       </div>
-      <div class="mtt-track"><div class="mtt-fill" style="width:${pct}%;background:${col}"></div></div>
+      <div class="mtt-track"><div class="mtt-fill" style="width:${mttFillPctVal}%;background:${mttFillCol}"></div></div>
       <div class="mtt-dots">${dots}</div>
     </div>
     <div class="card-metrics">
@@ -2354,6 +2563,7 @@ function switchTab(tab){
   if(document.getElementById('fmtt8')) document.getElementById('fmtt8').classList.remove('active');
   document.getElementById('market-view').classList.remove('active');
   document.getElementById('method-view').classList.remove('active');
+  document.getElementById('changelog-view').classList.remove('active');
   document.getElementById('ctrl-bar').style.display='';
   document.getElementById('legend-bar').style.display='';
   document.getElementById('grid').style.display='';
@@ -2380,6 +2590,7 @@ function switchTabMarket(){
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('summary').style.display='none';
   document.getElementById('method-view').classList.remove('active');
+  document.getElementById('changelog-view').classList.remove('active');
   document.getElementById('market-view').classList.add('active');
   renderMarketView(currentMarketView);
 }
@@ -2397,8 +2608,75 @@ function switchTabMethodology(){
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('summary').style.display='none';
   document.getElementById('market-view').classList.remove('active');
+  document.getElementById('changelog-view').classList.remove('active');
   document.getElementById('method-view').classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ══════════════════════════════════════════════════
+// ZMIANY FAZ — changelog przejść między fazami Weinsteina
+// ══════════════════════════════════════════════════
+let changelogFilter = 'all';
+
+function switchTabChangelog(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-changelog').classList.add('active');
+  document.getElementById('ctrl-bar').style.display='none';
+  document.getElementById('legend-bar').style.display='none';
+  document.getElementById('grid').style.display='none';
+  document.getElementById('coffee-bar').style.display='none';
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('summary').style.display='none';
+  document.getElementById('market-view').classList.remove('active');
+  document.getElementById('method-view').classList.remove('active');
+  document.getElementById('changelog-view').classList.add('active');
+  renderChangelog();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function setChangelogFilter(mk, btn){
+  changelogFilter = mk;
+  document.querySelectorAll('.cl-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderChangelog();
+}
+
+const CL_MARKET_LABEL = {wig20:'WIG20', mwig40:'mWIG40', dax:'DAX', ndx:'Nasdaq 100', nyse:'NYSE 100'};
+
+function renderChangelog(){
+  const dateEl = document.getElementById('cl-update-date');
+  if (dateEl && typeof LAST_UPDATE !== 'undefined') {
+    const [y,m,d] = LAST_UPDATE.split('-');
+    dateEl.textContent = `${d}.${m}.${y}`;
+  }
+  const list = document.getElementById('changelog-list');
+  const items = CHANGELOG.filter(e => changelogFilter==='all' || e.mk===changelogFilter);
+  if (!items.length){
+    list.innerHTML = '<div class="cl-empty">Brak zarejestrowanych zmian faz'+(changelogFilter==='all'?'':' dla '+CL_MARKET_LABEL[changelogFilter])+'. Historia buduje się od kolejnej cotygodniowej aktualizacji.</div>';
+    return;
+  }
+  // grupowanie po dacie, najnowsze na górze
+  const byDate = {};
+  items.forEach(e => { (byDate[e.date] = byDate[e.date] || []).push(e); });
+  const dates = Object.keys(byDate).sort((a,b)=> b.localeCompare(a));
+  list.innerHTML = dates.map(date => {
+    const entries = byDate[date].map(e => {
+      const up = e.to < e.from; // niższy numer fazy = "lepsza" faza w kierunku 2 (uproszczenie wizualne)
+      const dir = (e.to === 2 && e.from !== 2) ? 'up' : ((e.from === 2 && e.to !== 2) ? 'down' : (e.to > e.from ? 'down' : 'up'));
+      return `
+        <div class="cl-entry ${dir}">
+          <div class="cl-badge">${CL_MARKET_LABEL[e.mk] || e.mk}</div>
+          <div class="cl-body">
+            <div class="cl-line1">
+              <span class="cl-ticker">${e.ticker}</span> — ${e.name}
+              <span class="cl-phase-arrow">Faza ${e.from} → </span><span class="cl-phase-new s${e.to}">Faza ${e.to}</span>
+            </div>
+            <div class="cl-reason">${e.reason}</div>
+          </div>
+        </div>`;
+    }).join('');
+    return `<div class="cl-day"><div class="cl-day-label">${date}</div>${entries}</div>`;
+  }).join('');
 }
 
 function setMarketView(mkt, btn){
@@ -3813,7 +4091,7 @@ async function refreshLiveData() {
     setTimeout(() => {
       if (lbl)    lbl.textContent = 'Odśwież live';
       if (icon)   icon.textContent = '⟳';
-      if (badge)  { badge.textContent = '✓ Aktualizacja: 27 czerwca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
+      if (badge)  { badge.textContent = '✓ Aktualizacja: 5 lipca 2026'; badge.style.background = ''; badge.style.color = ''; badge.style.borderColor = ''; }
       if (mktIcon){ mktIcon.textContent = '⟳'; }
       if (mktBtn) { mktBtn.style.color = ''; mktBtn.style.opacity = '1'; }
     }, 3000);
@@ -4003,7 +4281,7 @@ function recalcMTT(card, ticker, d) {
   }
 }
 
-const LAST_UPDATE = '2026-06-27';
+const LAST_UPDATE = '2026-07-05';
 
 
 // init
