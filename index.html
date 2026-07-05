@@ -123,19 +123,6 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .stage-1 .stage-lbl{color:var(--s1);}.stage-2 .stage-lbl{color:var(--s2);}
 .stage-3 .stage-lbl{color:var(--s3);}.stage-4 .stage-lbl{color:var(--s4);}
 
-/* ── SUB-PHASE BADGE ── */
-.sub-badge{display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;padding:3px 8px;border-radius:5px;border:1px solid;letter-spacing:1px;margin-top:3px;min-width:36px;}
-.stage-1 .sub-badge{background:rgba(79,195,247,.12);color:var(--s1);border-color:rgba(79,195,247,.3);}
-.stage-2 .sub-badge{background:rgba(0,229,160,.12);color:var(--s2);border-color:rgba(0,229,160,.3);}
-.stage-3 .sub-badge{background:rgba(245,166,35,.12);color:var(--s3);border-color:rgba(245,166,35,.3);}
-.stage-4 .sub-badge{background:rgba(255,77,77,.12);color:var(--s4);border-color:rgba(255,77,77,.3);}
-/* Special: 1B+ unconfirmed breakout — muted */
-.stage-1 .sub-badge.unconfirmed{background:rgba(79,195,247,.06);color:#6a8090;border-color:rgba(79,195,247,.15);font-size:9px;}
-/* 2C near highs — brighter */
-.stage-2 .sub-badge.near-high{background:rgba(0,229,160,.22);border-color:rgba(0,229,160,.5);}
-/* 4B steep decline — more intense red */
-.stage-4 .sub-badge.steep{background:rgba(255,77,77,.22);border-color:rgba(255,77,77,.5);}
-
 /* ── WEINSTEIN MINI CYCLE ── */
 .mini-chart{padding:2px 15px 7px;position:relative;height:38px;}
 .mini-bar-bg{height:3px;background:var(--border);border-radius:2px;position:absolute;bottom:15px;left:15px;right:15px;}
@@ -1167,7 +1154,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
           <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>RSI 14</strong> — aktualny wskaźnik siły relatywnej</span></div>
           <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Szczyty/dołki 52T</strong> — aktualne poziomy roczne</span></div>
           <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>MTT (8 kryteriów)</strong> — przeliczany automatycznie na podstawie powyższych danych</span></div>
-          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Faza Weinsteina + sub-faza</strong> — automatycznie przeliczana z nachylenia MA30W, pozycji w rocznym zakresie i wolumenu</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span><strong>Faza Weinsteina</strong> — automatycznie przeliczana z relacji cena/SMA150/SMA200 i momentum (perf.1M/perf.tydz.)</span></div>
         </div>
       </div>
 
@@ -2270,27 +2257,7 @@ function fmt(p,tab){
 function renderCard(s){
   const ch=s.chg.startsWith('+')?'up':'dn';
   const mas=s.price>s.ma30w?'up':'dn';
-
-  // Sub-faza: używamy liveData jeśli dostępne, fallback na dane statyczne
   const ld = liveData[s.ticker];
-  const subData = ld ? {
-    price: ld.price || s.price,
-    sma50: ld.sma50,
-    sma150: ld.sma150 || s.ma30w,
-    sma200: ld.sma200,
-    sma150_20: ld.sma150_20,
-    volume: ld.volume,
-    avgVol: ld.avgVol,
-    high52: ld.high52,
-    low52: ld.low52,
-    rsi: ld.rsi,
-  } : {
-    price: s.price,
-    sma150: s.ma30w,
-    sma200: null,
-    sma150_20: null,
-  };
-  const { sub, extraClass: subExtra } = calcSubStage(subData);
 
   // MTT: użyj live danych jeśli dostępne, fallback na s.mtt (startowo all false = szare)
   // Derive high52 from static h52 field (TV nie zwraca 52W data przez API)
@@ -3513,84 +3480,6 @@ async function fetchTVBatch(market, tvTickers) {
 }
 
 let liveData = {};
-// ── Sub-faza Weinsteina (pełna logika z danych TV snapshot) ──────────────
-// Dane wejściowe: { price, sma50, sma150, sma200, sma150_20, volume, avgVol,
-//                   high52, low52, rsi }
-// Zwraca: { sub: '2A', extraClass: '' }
-function calcSubStage(d) {
-  const { price, sma50, sma150, sma200, sma150_20, volume, avgVol, high52, low52 } = d;
-  if (!price || !sma150 || !sma200) return { sub: '?', extraClass: '' };
-
-  const stage = calcStage(d);
-  if (!stage) return { sub: '?', extraClass: '' };
-
-  // Pomocnicze
-  const slope = (sma150 && sma150_20 && sma150_20 > 0)
-    ? (sma150 - sma150_20) / sma150_20   // dodatni = rośnie, ujemny = spada
-    : null;
-  const slopeAbs = slope !== null ? Math.abs(slope) : null;
-
-  // Pozycja ceny w rocznym zakresie (0–1)
-  const range52 = (high52 && low52 && high52 > low52) ? high52 - low52 : null;
-  const pos52   = range52 ? (price - low52) / range52 : null;  // 0=dno, 1=szczyt
-
-  // Dystans price/sma150 w %
-  const distMA  = sma150 > 0 ? (price - sma150) / sma150 : null;
-
-  // Wolumen relative (ratio vs avg)
-  const volRatio = (volume && avgVol && avgVol > 0) ? volume / avgVol : null;
-
-  // ─── FAZA 1 ───────────────────────────────────────────────────────────────
-  if (stage === 1) {
-    // 1B+: cena blisko SMA150 od góry lub próba wybicia bez potwierdzenia wolumenem
-    const nearMA = distMA !== null && distMA > -0.03 && distMA < 0.05;
-    const volLow = volRatio !== null && volRatio < 2.0;
-    if (nearMA && volLow) return { sub: '1B+', extraClass: 'unconfirmed' };
-
-    // 1B: konsolidacja przy SMA150, średnia zaczyna się wypłaszczać
-    const maFlat = slopeAbs !== null && slopeAbs < 0.005;
-    if (maFlat) return { sub: '1B', extraClass: '' };
-
-    // 1A: głęboka bessa, SMA150 wyraźnie spada, cena daleko od 52w high
-    return { sub: '1A', extraClass: '' };
-  }
-
-  // ─── FAZA 2 ───────────────────────────────────────────────────────────────
-  if (stage === 2) {
-    // 2C: cena blisko 52w high (>80% rocznego zakresu), trend w pełni rozwinięty
-    if (pos52 !== null && pos52 >= 0.80) {
-      return { sub: '2C', extraClass: 'near-high' };
-    }
-    // 2A: early — SMA150 świeżo przekroczyła SMA200 lub wciąż blisko niej
-    const smaSpread = sma200 > 0 ? (sma150 - sma200) / sma200 : null;
-    const earlyTrend = smaSpread !== null && smaSpread < 0.05;  // SMA150 < 5% powyżej SMA200
-    const modestRise = slope !== null && slope > 0 && slope < 0.02;
-    if (earlyTrend || modestRise) return { sub: '2A', extraClass: '' };
-
-    // 2B: trend w pełni potwierdzony, SMA150 wyraźnie powyżej SMA200
-    return { sub: '2B', extraClass: '' };
-  }
-
-  // ─── FAZA 3 ───────────────────────────────────────────────────────────────
-  if (stage === 3) {
-    // 3A: wypłaszczenie — cena jeszcze powyżej SMA150, ale MA już płaska
-    if (distMA !== null && distMA >= 0) return { sub: '3A', extraClass: '' };
-    // 3B: cena spada pod SMA150, dystrybucja w późnej fazie
-    return { sub: '3B', extraClass: '' };
-  }
-
-  // ─── FAZA 4 ───────────────────────────────────────────────────────────────
-  if (stage === 4) {
-    // 4B: stromy spadek — SMA150 opada gwałtownie, cena blisko 52w low
-    const steepDown = slope !== null && slope < -0.02;
-    const nearLow   = pos52 !== null && pos52 < 0.25;
-    if (steepDown || nearLow) return { sub: '4B', extraClass: 'steep' };
-    // 4A: wczesny spadek — SMA150 świeżo zawróciła w dół
-    return { sub: '4A', extraClass: '' };
-  }
-
-  return { sub: '?', extraClass: '' };
-}
 
 // ── Automatyczna klasyfikacja fazy Weinsteina ─────────────────────────────
 function calcStage(d) {
