@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2073770403449704841",
+      "text": "'It's a bull market': Wall Street sees more upside in stocks for the second half of 2026 finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;It&apos;s a bull market&apos;: Wall Street sees more upside in stocks for the second half of 2026\n\nStocks closed out the quarter with a bang, and Wall Street sees more gains ahead.\nfinance.yahoo.com",
+      "created_at": "2026-07-05T14:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2073755304051769412",
+      "text": "AI bubble fears, the endless K-shaped economy, and insane hyperscaler capex spending finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAI bubble fears, the endless K-shaped economy, and insane hyperscaler capex spending\n\nA little bit of everything for investors this holiday weekend!\nfinance.yahoo.com",
+      "created_at": "2026-07-05T13:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073494831955894489",
       "text": "This strategist says Amazon could cross $1 trillion in revenue by 2028. yhoo.it/442F5D5",
       "created_at": "2026-07-04T19:51:06Z",
@@ -177,17 +199,6 @@
       }
     },
     {
-      "id": "2072679772274950640",
-      "text": "Stocks rise after the June jobs report falls short 📈",
-      "created_at": "2026-07-02T13:52:20Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
       "id": "2072679774061842596",
       "text": "Traders pull back on their confidence in a rate hike. \n\nKeep up with more news that's moving the markets: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq futures waver ahead of jobs report\n\nUS stock futures slipped as investors braced for Thursday&apos;s release of the June jobs report.\nfinance.yahoo.com",
       "created_at": "2026-07-02T13:52:21Z",
@@ -199,20 +210,9 @@
       }
     },
     {
-      "id": "2072665850545426859",
-      "text": "👷 June job gains and losses by sector\n\nProfessional &amp; business services: +36K\nSocial assistance: +25K\nHealth care: +22K\nConstruction: +11K\nInformation services: -9K\nLeisure &amp; hospitality: -61K",
-      "created_at": "2026-07-02T12:57:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072661104585584977",
-      "text": "Economists were expecting 113,000 jobs — nearly double the amount reported. yhoo.it/3QYp8dU",
-      "created_at": "2026-07-02T12:38:10Z",
+      "id": "2072679772274950640",
+      "text": "Stocks rise after the June jobs report falls short 📈",
+      "created_at": "2026-07-02T13:52:20Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-05T12:06:59Z",
+  "_updated": "2026-07-05T14:22:23Z",
   "_username": "YahooFinance"
 }
