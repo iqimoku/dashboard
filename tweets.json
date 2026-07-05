@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2073816702194708511",
+      "text": "In some cities, you can save a down payment in 4 years. In NYC? Try 65. Here are the US metros where saving for your first home takes the longest. yhoo.it/4ffv6Ao",
+      "created_at": "2026-07-05T17:10:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2073815702247444568",
+      "text": "Rate hike readjustment and AI hardware momentum: What to watch this week finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nRate hike readjustment and AI hardware momentum: What to watch this week\n\nA quiet calendar ahead gives the market plenty of space to go off the beaten path this week as investors gear up for the beginning of earnings season.\nfinance.yahoo.com",
+      "created_at": "2026-07-05T17:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073788515712737666",
       "text": "House hunting? These are the metros where first-time buyers can fast-track their down payment savings in 5 years or less. yhoo.it/4ffv6Ao",
       "created_at": "2026-07-05T15:18:05Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072725770493968825",
-      "text": "New reports show that President Trump's investment accounts made more than 21,000 trades last year.\n\nThe Daily Wolf's @scottmelker: \"It would be amazing to see a law passed by Congress and the government that prevented people in public office from trading at all.\"\n\nVideo",
-      "created_at": "2026-07-02T16:55:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072689678168342737",
-      "text": "$MSTR jumps as the price of bitcoin rises above $61,000 per coin.\n\nKeep up with Strategy in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-02T14:31:42Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-05T17:00:00Z",
+  "_updated": "2026-07-05T18:02:46Z",
   "_username": "YahooFinance"
 }
