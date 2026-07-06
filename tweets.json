@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074195659175997905",
+      "text": "\"42 years ago I started a company in my dorm room with $1,000. And today, every newborn American child will start their life with $1,000, invested in America's greatest companies, compounding for the future,\" Michael Dell says.\n\nVideo",
+      "created_at": "2026-07-06T18:15:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074189861892898976",
+      "text": "Trump sends $DELL rising after an endorsement at the Trump Account launch event.\n\nVideo",
+      "created_at": "2026-07-06T17:52:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074172965562814905",
       "text": "President Trump says \"$800 million in new capital will be invested in the stock market\" this week, for the newly launched Trump Accounts.\n\nVideo",
       "created_at": "2026-07-06T16:45:45Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2073438214447149356",
-      "text": "Nissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back finance.yahoo.com/markets/st…\n\nLink\n\n\n\nNissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back\n\nNissan confirmed in April that the Xterra is returning - the boxy, go-anywhere SUV that a generation of off-roaders loved for its simplicity in the 1990s and 2000s. Now CEO Ivan Espinosa is explain...\nfinance.yahoo.com",
-      "created_at": "2026-07-04T16:06:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2073392916324647256",
-      "text": "College graduates could be AI's first workforce test: Chart of the Day finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nCollege graduates could be AI&apos;s first workforce test: Chart of the Day\n\nGoldman Sachs research suggests young college graduates could face greater AI-related disruption in the near term, but the long-term outlook appears more optimistic.\nfinance.yahoo.com",
-      "created_at": "2026-07-04T13:06:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-06T17:31:33Z",
+  "_updated": "2026-07-06T19:26:00Z",
   "_username": "YahooFinance"
 }
