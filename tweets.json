@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2074254335307812916",
+      "text": "Rather than relying on political catchphrases, Mark Cuban argues that addressing economic inequality requires practical, real-world solutions. yhoo.it/44j02ts",
+      "created_at": "2026-07-06T22:09:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074240097415725259",
       "text": "Robinhood CEO Vlad Tenev breaks down why Trump accounts are in alignment with the company's core mission.\n\nVideo",
       "created_at": "2026-07-06T21:12:31Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2073906299222327360",
-      "text": "Stock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week\n\nThe major gauges advanced with gains concentrated in tech stocks leading to K-shaped fears\nfinance.yahoo.com",
-      "created_at": "2026-07-05T23:06:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-06T21:16:52Z",
+  "_updated": "2026-07-06T22:56:40Z",
   "_username": "YahooFinance"
 }
