@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2074138069687492887",
+      "text": "$TRUMP was trading at $1.69 over the weekend, down nearly 98% from its high. yhoo.it/3QYiNiE",
+      "created_at": "2026-07-06T14:27:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074128378454573324",
+      "text": "$MSTR falls after announcing its largest-ever sale of bitcoin.\n\nKeep up with Strategy in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-06T13:48:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074126930320773354",
+      "text": "“I think this is training the next generation of babies; from the time they come out of the womb, they’re going to be stockholders, and that’s a good thing,” EMJ Capital @ericjackson says on Trump accounts.\n\nVideo",
+      "created_at": "2026-07-06T13:42:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074122642001371558",
+      "text": "The South Korean chipmaker is looking to capitalize on surging investor demand for the high-flying memory-chip sector. yhoo.it/4wmRzRR",
+      "created_at": "2026-07-06T13:25:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2073906299222327360",
       "text": "Stock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: S&amp;P 500, Nasdaq, Dow futures climb after record-setting week\n\nThe major gauges advanced with gains concentrated in tech stocks leading to K-shaped fears\nfinance.yahoo.com",
       "created_at": "2026-07-05T23:06:07Z",
@@ -90,7 +134,7 @@
     },
     {
       "id": "2073438214447149356",
-      "text": "Nissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back finance.yahoo.com/markets/st…\n\nLink\n\nNissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back\n\nNissan confirmed in April that the Xterra is returning - the boxy, go-anywhere SUV that a generation of off-roaders loved for its simplicity in the 1990s and 2000s. Now CEO Ivan Espinosa is explain...\nfinance.yahoo.com",
+      "text": "Nissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back finance.yahoo.com/markets/st…\n\nLink\n\n\n\nNissan CEO on reviving the rugged Xterra SUV — and the AI that helped bring it back\n\nNissan confirmed in April that the Xterra is returning - the boxy, go-anywhere SUV that a generation of off-roaders loved for its simplicity in the 1990s and 2000s. Now CEO Ivan Espinosa is explain...\nfinance.yahoo.com",
       "created_at": "2026-07-04T16:06:07Z",
       "public_metrics": {
         "like_count": 0,
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2072749843865333928",
-      "text": "Meet the company that's on a mission to make bullets obsolete with tasers, AI, and drones.\n\nAxon CEO &amp; co-founder Rick Smith started his company in his garage in 1993. Today his company is worth $40 billion.\n\nRead more on Axon here: finance.yahoo.com/markets/ar…\n\nVideo",
-      "created_at": "2026-07-02T18:30:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072747422158057571",
-      "text": "Jersey Mike’s is taking its subs to Wall Street.",
-      "created_at": "2026-07-02T18:21:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072737142036369632",
-      "text": "Would you pay $40,000 for Jensen Huang's signature jacket?",
-      "created_at": "2026-07-02T17:40:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2072736088758665550",
-      "text": "Rick Smith co-founded the company now known as Axon with his brother in 1993 after two of their high school teammates were shot and killed in a road-rage incident. Their goal was to find for a way to stop a threat without taking a life. Watch the full Power Players episode here: yhoo.it/4oZSCEZ",
-      "created_at": "2026-07-02T17:36:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-06T11:18:27Z",
+  "_updated": "2026-07-06T14:48:13Z",
   "_username": "YahooFinance"
 }
