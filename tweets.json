@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074593286610649501",
+      "text": "$SPCX closed under $150 for the first time since making its IPO debut.\n\nKeep up with SpaceX in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-07T20:35:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074585556277960902",
+      "text": "Bitcoin just had it's best week since March. Here's why @scottmelker isn't celebrating just yet.\"\n\nVideo",
+      "created_at": "2026-07-07T20:05:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074564378527969405",
       "text": "The USPS is raising stamp prices, raising the cost of a book of 20 stamps by 80 cents.",
       "created_at": "2026-07-07T18:41:06Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074172965562814905",
-      "text": "President Trump says \"$800 million in new capital will be invested in the stock market\" this week, for the newly launched Trump Accounts.\n\nVideo",
-      "created_at": "2026-07-06T16:45:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074170430022139935",
-      "text": "$DELL rises after President Trump says to \"go out and buy a Dell\" during the launch of Trump Accounts.\n\nKeep up with Dell in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-06T16:35:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-07T18:52:38Z",
+  "_updated": "2026-07-07T20:42:30Z",
   "_username": "YahooFinance"
 }
