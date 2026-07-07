@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2074511304761413697",
+      "text": "American businesses are spending heavily on AI, whose buildup is heavily reliant on imports. yhoo.it/4bsibJ6",
+      "created_at": "2026-07-07T15:10:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074500460866683012",
+      "text": "Amazon is selling the debt in as many as eight tranches, ranging from three to 40 years.",
+      "created_at": "2026-07-07T14:27:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074497138046750827",
+      "text": "Investors are bullish on SpaceX joining the Nasdaq 100, @briansozzi explains. \n\nJPMorgan has a $225 price target on $SPCX, while Morgan Stanley has a $300 price target.\n\nVideo",
+      "created_at": "2026-07-07T14:13:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074495180606976382",
+      "text": "Despite a massive 19-fold jump in quarterly profit that beat market expectations, Samsung shares fell as much as 10% as investors locked in profits following this year's AI-fueled rally. yhoo.it/4prkh21",
+      "created_at": "2026-07-07T14:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074493465350574273",
+      "text": "Pringles gave the classic hot dog a glow-up nobody requested.",
+      "created_at": "2026-07-07T13:59:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074491881837269375",
+      "text": "Nasdaq just rewrote the playbook for $SPCX. yhoo.it/4vLd0MF",
+      "created_at": "2026-07-07T13:53:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074254335307812916",
       "text": "Rather than relying on political catchphrases, Mark Cuban argues that addressing economic inequality requires practical, real-world solutions. yhoo.it/44j02ts",
       "created_at": "2026-07-06T22:09:05Z",
@@ -142,72 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074153961603371298",
-      "text": "According to Xbox CEO Asha Sharma, the first round of cuts includes 1,600 employees today, July 6. yhoo.it/4aDjPaE",
-      "created_at": "2026-07-06T15:30:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074149910287360467",
-      "text": "Nearly 1 million people have lost a total of $3.8 billion after buying President Donald Trump's $TRUMP memecoin, according to cryptocurrency analytics firm Nansen. yhoo.it/3QYiNiE",
-      "created_at": "2026-07-06T15:14:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074138069687492887",
-      "text": "$TRUMP was trading at $1.69 over the weekend, down nearly 98% from its high. yhoo.it/3QYiNiE",
-      "created_at": "2026-07-06T14:27:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074128378454573324",
-      "text": "$MSTR falls after announcing its largest-ever sale of bitcoin.\n\nKeep up with Strategy in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-06T13:48:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074126930320773354",
-      "text": "“I think this is training the next generation of babies; from the time they come out of the womb, they’re going to be stockholders, and that’s a good thing,” EMJ Capital @ericjackson says on Trump accounts.\n\nVideo",
-      "created_at": "2026-07-06T13:42:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074122642001371558",
-      "text": "The South Korean chipmaker is looking to capitalize on surging investor demand for the high-flying memory-chip sector. yhoo.it/4wmRzRR",
-      "created_at": "2026-07-06T13:25:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-07T13:09:10Z",
+  "_updated": "2026-07-07T16:14:40Z",
   "_username": "YahooFinance"
 }
