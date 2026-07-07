@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074564378527969405",
+      "text": "The USPS is raising stamp prices, raising the cost of a book of 20 stamps by 80 cents.",
+      "created_at": "2026-07-07T18:41:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074539467826684003",
+      "text": "The USPS is raising stamp prices on July 12 from 78 cents to 82 cents.",
+      "created_at": "2026-07-07T17:02:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074511304761413697",
       "text": "American businesses are spending heavily on AI, whose buildup is heavily reliant on imports. yhoo.it/4bsibJ6",
       "created_at": "2026-07-07T15:10:12Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074165394315587601",
-      "text": "Michael Saylor’s Strategy sold 3,588 bitcoin to fund its digital credit dividends.\n\n@scottmelker breaks it down:\n\nVideo",
-      "created_at": "2026-07-06T16:15:40Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074161350490648886",
-      "text": "LIVE NOW: Join @scottmelker's The Daily Wolf for all the latest on crypto. nitter.net/i/broadcasts/1pJdRRBnj…\n\nLink\n\n\n\nYahoo Finance\n\nLIVE: The Daily Wolf with Scott Melker\nhttps://nitter.net/i/broadcasts/1pJdRRBnjnLKW",
-      "created_at": "2026-07-06T15:59:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-07T16:14:40Z",
+  "_updated": "2026-07-07T18:52:38Z",
   "_username": "YahooFinance"
 }
