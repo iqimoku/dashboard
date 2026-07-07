@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2074614510803963934",
+      "text": "US stocks fell Tuesday as DeepSeek's AI chip announcement triggered a fresh selloff in semiconductor shares. yhoo.it/4eYt3iV",
+      "created_at": "2026-07-07T22:00:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074607229517410675",
       "text": "SpaceX dips -6% despite Morgan Stanley, JPMorgan, and other investors being bullish on the stock. 📉\n\nHere's why SpaceX joining the Nasdaq 100 \"is a headwind\" for indexes going forward.\n\nExplore more premium news and analysis on SpaceX in AlphaSpace: alphaspace.finance.yahoo.com…\n\nVideo",
       "created_at": "2026-07-07T21:31:22Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074218600232067413",
-      "text": "Billionaire Mark Cuban's push for a $20 minimum wage was sparked by the realization that  employees at a company he invested in relied on government assistance. yhoo.it/44j02ts",
-      "created_at": "2026-07-06T19:47:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-07T22:02:39Z",
+  "_updated": "2026-07-07T23:42:25Z",
   "_username": "YahooFinance"
 }
