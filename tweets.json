@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074607229517410675",
+      "text": "SpaceX dips -6% despite Morgan Stanley, JPMorgan, and other investors being bullish on the stock. 📉\n\nHere's why SpaceX joining the Nasdaq 100 \"is a headwind\" for indexes going forward.\n\nExplore more premium news and analysis on SpaceX in AlphaSpace: alphaspace.finance.yahoo.com…\n\nVideo",
+      "created_at": "2026-07-07T21:31:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074600871510290897",
+      "text": "$MU, $AMD, and $INTC led a semiconductor selloff after reports revealed DeepSeek is building its own AI chip and despite Samsung's 19-fold increase in profit. yhoo.it/4eYt3iV",
+      "created_at": "2026-07-07T21:06:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074593286610649501",
       "text": "$SPCX closed under $150 for the first time since making its IPO debut.\n\nKeep up with SpaceX in AlphaSpace: finance.yahoo.com/about/prom…",
       "created_at": "2026-07-07T20:35:58Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074195659175997905",
-      "text": "\"42 years ago I started a company in my dorm room with $1,000. And today, every newborn American child will start their life with $1,000, invested in America's greatest companies, compounding for the future,\" Michael Dell says.\n\nVideo",
-      "created_at": "2026-07-06T18:15:56Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074189861892898976",
-      "text": "Trump sends $DELL rising after an endorsement at the Trump Account launch event.\n\nVideo",
-      "created_at": "2026-07-06T17:52:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-07T20:42:30Z",
+  "_updated": "2026-07-07T22:02:39Z",
   "_username": "YahooFinance"
 }
