@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2074999507352236178",
+      "text": "Mark Cuban gives his advice to entrepreneurs getting started in business on the Bio Eats World podcast.",
+      "created_at": "2026-07-08T23:30:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074975599538425938",
       "text": "$SPCX shares hit an all-time low of $145.20 in midday trade Wednesday and closed below its $150 market debut price. yhoo.it/4yb2cJ9",
       "created_at": "2026-07-08T21:55:08Z",
@@ -123,7 +134,7 @@
     },
     {
       "id": "2074887289914961969",
-      "text": "LIVE NOW: Join @scottmelker's The Daily Wolf for all the latest on crypto. nitter.net/i/broadcasts/1qKVmQpMX…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1qKVmQpMXPWxB",
+      "text": "LIVE NOW: Join @scottmelker's The Daily Wolf for all the latest on crypto. nitter.net/i/broadcasts/1qKVmQpMX…\n\nLink\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1qKVmQpMXPWxB",
       "created_at": "2026-07-08T16:04:14Z",
       "public_metrics": {
         "like_count": 0,
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074857246723391698",
-      "text": "Trump says the US may reimpose a blockade on the Strait of Hormuz just on Iran. \n\n\"Anybody else can have whatever they want,\" he added.\n\nVideo",
-      "created_at": "2026-07-08T14:04:51Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-08T22:51:49Z",
+  "_updated": "2026-07-08T23:56:23Z",
   "_username": "YahooFinance"
 }
