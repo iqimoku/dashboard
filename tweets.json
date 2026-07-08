@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074964019815780619",
+      "text": "$SPCX stock hit an all-time low and dipped below its market debut price just as rival Blue Origin shores up its capital position. yhoo.it/4yb2cJ9",
+      "created_at": "2026-07-08T21:09:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074952780024787414",
+      "text": "The biggest issue with LLMs and AI chatbots is that they were never developed to support mental health, Talkspace CEO says.\n\nTalkspace developed an AI chatbot \"Tee\" to address these issues with HIPAA protection.\n\nVideo",
+      "created_at": "2026-07-08T20:24:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074945395491312094",
       "text": "Mark Cuban reveals advice he'd share to his younger self on the Bio Eats World podcast.\n\n\"Don't screw it up.\"",
       "created_at": "2026-07-08T19:55:07Z",
@@ -186,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074850582171402482",
-      "text": "Follow today's market action: finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq fall as oil surges, Trump declares ceasefire &apos;over&apos;\n\nThe major gauges dropped after strikes in Iran resumed, ending a brief period of stability.\nfinance.yahoo.com",
-      "created_at": "2026-07-08T13:38:22Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074848993125789769",
-      "text": "President Trump said the US-Iran memorandum of understanding is \"over\" and launched a renewed wave of attacks on Iran.",
-      "created_at": "2026-07-08T13:32:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074614510803963934",
-      "text": "US stocks fell Tuesday as DeepSeek's AI chip announcement triggered a fresh selloff in semiconductor shares. yhoo.it/4eYt3iV",
-      "created_at": "2026-07-07T22:00:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-08T20:20:43Z",
+  "_updated": "2026-07-08T21:55:02Z",
   "_username": "YahooFinance"
 }
