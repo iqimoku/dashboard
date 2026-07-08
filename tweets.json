@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2074929121528877184",
+      "text": "The relative price of $NVDA stock has dropped to levels the company hasn't seen since at least 2019 — well before it became an AI darling. yhoo.it/44lIInH",
+      "created_at": "2026-07-08T18:50:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074902300158501370",
+      "text": "🚨 Chip stocks have wiped out roughly $2 trillion since their late-June peak.\n\nNow the SOX is testing the line between a pullback and a breakdown.\n\nFor bulls, the job is simple: hold the floor or risk an elevator ride lower.\n\nfinance.yahoo.com/markets/ar…",
+      "created_at": "2026-07-08T17:03:52Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074901523851510029",
       "text": "Bitcoin’s price falls under $62,000 per coin after President Trump says that the ceasefire with Iran is over.\n\n@scottmelker breaks it down:\n\nVideo",
       "created_at": "2026-07-08T17:00:47Z",
@@ -122,9 +144,9 @@
       }
     },
     {
-      "id": "2074850582171402482",
-      "text": "Follow today's market action: finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq fall as oil surges, Trump declares ceasefire &apos;over&apos;\n\nThe major gauges dropped after strikes in Iran resumed, ending a brief period of stability.\nfinance.yahoo.com",
-      "created_at": "2026-07-08T13:38:22Z",
+      "id": "2074848993125789769",
+      "text": "President Trump said the US-Iran memorandum of understanding is \"over\" and launched a renewed wave of attacks on Iran.",
+      "created_at": "2026-07-08T13:32:03Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -133,9 +155,9 @@
       }
     },
     {
-      "id": "2074848993125789769",
-      "text": "President Trump said the US-Iran memorandum of understanding is \"over\" and launched a renewed wave of attacks on Iran.",
-      "created_at": "2026-07-08T13:32:03Z",
+      "id": "2074850582171402482",
+      "text": "Follow today's market action: finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq fall as oil surges, Trump declares ceasefire &apos;over&apos;\n\nThe major gauges dropped after strikes in Iran resumed, ending a brief period of stability.\nfinance.yahoo.com",
+      "created_at": "2026-07-08T13:38:22Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074564378527969405",
-      "text": "The USPS is raising stamp prices, raising the cost of a book of 20 stamps by 80 cents.",
-      "created_at": "2026-07-07T18:41:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074539467826684003",
-      "text": "The USPS is raising stamp prices on July 12 from 78 cents to 82 cents.",
-      "created_at": "2026-07-07T17:02:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-08T17:14:26Z",
+  "_updated": "2026-07-08T19:00:11Z",
   "_username": "YahooFinance"
 }
