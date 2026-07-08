@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2074867127899640220",
+      "text": "Apple just announced it has entered into a chip deal with Broadcom valued at more than $30 billion. yhoo.it/44T1Vx8",
+      "created_at": "2026-07-08T14:44:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074860584261075282",
+      "text": "Broadcom has finalized a multiyear agreement to develop custom chips for Apple through 2031, according to paperwork filed with the SEC. yhoo.it/44T1Vx8",
+      "created_at": "2026-07-08T14:18:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074857246723391698",
+      "text": "Trump says the US may reimpose a blockade on the Strait of Hormuz just on Iran. \n\n\"Anybody else can have whatever they want,\" he added.\n\nVideo",
+      "created_at": "2026-07-08T14:04:51Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074853961979281610",
+      "text": "US stocks open in the red as tensions in the Middle East reemerge.",
+      "created_at": "2026-07-08T13:51:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074850582171402482",
+      "text": "Follow today's market action: finance.yahoo.com/markets/st…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq fall as oil surges, Trump declares ceasefire &apos;over&apos;\n\nThe major gauges dropped after strikes in Iran resumed, ending a brief period of stability.\nfinance.yahoo.com",
+      "created_at": "2026-07-08T13:38:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2074848993125789769",
+      "text": "President Trump said the US-Iran memorandum of understanding is \"over\" and launched a renewed wave of attacks on Iran.",
+      "created_at": "2026-07-08T13:32:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074614510803963934",
       "text": "US stocks fell Tuesday as DeepSeek's AI chip announcement triggered a fresh selloff in semiconductor shares. yhoo.it/4eYt3iV",
       "created_at": "2026-07-07T22:00:18Z",
@@ -153,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074240097415725259",
-      "text": "Robinhood CEO Vlad Tenev breaks down why Trump accounts are in alignment with the company's core mission.\n\nVideo",
-      "created_at": "2026-07-06T21:12:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074237372263268427",
-      "text": "Treasury Secretary Bessent says one of the SpaceX founders contributed 2 million shares to Trump Accounts.\n\nVideo",
-      "created_at": "2026-07-06T21:01:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074230428949532739",
-      "text": "With 38% of American families completely cut off from stock market gains, Treasury Secretary Scott Bessent says Trump Accounts will help in changing that. yhoo.it/4eP1gmq",
-      "created_at": "2026-07-06T20:34:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074224163410051425",
-      "text": "Michael Saylor's Strategy sold off 3,588 bitcoin in the company's largest ever sale. @scottmelker explains the change in approach.\n\nVideo",
-      "created_at": "2026-07-06T20:09:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074220196890353700",
-      "text": "Treasury Secretary Bessent says one of the SpaceX founders contributed nearly 2 million shares to Trump Accounts. \n\n\"We're going to keep it pretty vanilla with this,\" but philanthropists can contribute large single stock blocks \"at a certain level,\" Bessent tells @Jenniferisms.\n\nVideo",
-      "created_at": "2026-07-06T19:53:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-08T12:10:22Z",
+  "_updated": "2026-07-08T15:04:37Z",
   "_username": "YahooFinance"
 }
