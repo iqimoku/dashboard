@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2075241348106539169",
+      "text": "Investors are already hunting for the next scarce part of the server rack. yhoo.it/3R1qnt4",
+      "created_at": "2026-07-09T15:31:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075235812354986082",
+      "text": "PepsiCo's Q2 earnings report revealed that inflation is causing consumers to spend less on its core products such as snacks and soda.",
+      "created_at": "2026-07-09T15:09:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075224733730168990",
+      "text": "PepsiCo CEO Ramon Laguarta said that inflation is causing consumers to spend less on snacks and soda during the company's Q2 earnings report.",
+      "created_at": "2026-07-09T14:25:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075219722967077226",
+      "text": "$PEP falls after Q2 earnings miss investor estimates.\n\nKeep up with Pepsi in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-09T14:05:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075195803337908398",
+      "text": "Mark Cuban wishes someone had told him to be nicer earlier in his career, Cuban tells the Bio Eats World podcast.",
+      "created_at": "2026-07-09T12:30:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2074999507352236178",
       "text": "Mark Cuban gives his advice to entrepreneurs getting started in business on the Bio Eats World podcast.",
       "created_at": "2026-07-08T23:30:08Z",
@@ -153,61 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074874886082760772",
-      "text": "“The speed with which AI pays off for the rest of the economy is actually really important for asset prices and for stock prices today, especially for the Magnificent 7,” Apollo chief economist Torsten Slock says.\n\nVideo",
-      "created_at": "2026-07-08T15:14:56Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074820490078699709",
-      "text": "14 of the Philadelphia Semiconductor Index's members have fallen by at least 20% (into a bear market) since the SOX hit a record on June 22. \n\nThe index is still up 74% YTD.",
-      "created_at": "2026-07-08T11:38:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074831966726234583",
-      "text": "💪 Memory stocks are in a bear market. But the Magnificent Seven are leading again.\n\n🧠 Since the late-June turn, $MAGS is up 9%, while the S&amp;P 500 minus the Mag 7 is basically flat and $SOXX is down 13%.\n\nfinance.yahoo.com/markets/ar…",
-      "created_at": "2026-07-08T12:24:24Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074867127899640220",
-      "text": "Apple just announced it has entered into a chip deal with Broadcom valued at more than $30 billion. yhoo.it/44T1Vx8",
-      "created_at": "2026-07-08T14:44:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074860584261075282",
-      "text": "Broadcom has finalized a multiyear agreement to develop custom chips for Apple through 2031, according to paperwork filed with the SEC. yhoo.it/44T1Vx8",
-      "created_at": "2026-07-08T14:18:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-09T12:28:40Z",
+  "_updated": "2026-07-09T15:49:52Z",
   "_username": "YahooFinance"
 }
