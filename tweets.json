@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2075280262695383193",
+      "text": "Your Lyft driver might just be the CEO.\n\nVideo",
+      "created_at": "2026-07-09T18:05:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075271315234181568",
       "text": "Micron is planning to boost domestic semiconductor production, announcing a $250 billion investment in the US supply chain through 2035, according to Reuters.",
       "created_at": "2026-07-09T17:30:12Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074929121528877184",
-      "text": "The relative price of $NVDA stock has dropped to levels the company hasn't seen since at least 2019 — well before it became an AI darling. yhoo.it/44lIInH",
-      "created_at": "2026-07-08T18:50:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-09T17:44:26Z",
+  "_updated": "2026-07-09T19:15:32Z",
   "_username": "YahooFinance"
 }
