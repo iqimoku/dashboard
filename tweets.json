@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2075694159285944427",
+      "text": "SK Hynix's stock pops 13% in its US market debut, closing at $168.01. 📈\n\nVideo",
+      "created_at": "2026-07-10T21:30:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075691781765685268",
+      "text": "Apple is suing OpenAI over allegations of trade secret theft and breach of contract.",
+      "created_at": "2026-07-10T21:20:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075686780452376753",
+      "text": "History made. $SKHYV closed out its first day on the US market up nearly 13%, climbing to $168 from its $149 offer price. 🎉 yhoo.it/4h82wCp",
+      "created_at": "2026-07-10T21:01:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075674498628546717",
+      "text": "$META rises +5.97% after revealing new revenue streams to offset increased AI spending, turning the stock positive year to date.\n\nKeep up with Meta in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-10T20:12:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075671666865111410",
+      "text": "SK Hynix almost went bankrupt 25 years ago. Now, it’s the biggest first-time listing by a foreign company in the US. 🤯  finance.yahoo.com/technology…\n\nVideo",
+      "created_at": "2026-07-10T20:01:04Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075666141469405387",
       "text": "Volkswagen is getting ready to cut its global vehicle lineup in half. The automaker is currently battling a tough mix of rising costs, slow-moving EV sales, and a shrinking foothold in China's ultra-competitive market. yhoo.it/44jrQxV",
       "created_at": "2026-07-10T19:39:06Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075280262695383193",
-      "text": "Your Lyft driver might just be the CEO.\n\nVideo",
-      "created_at": "2026-07-09T18:05:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075271315234181568",
-      "text": "Micron is planning to boost domestic semiconductor production, announcing a $250 billion investment in the US supply chain through 2035, according to Reuters.",
-      "created_at": "2026-07-09T17:30:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075265237641515193",
-      "text": "The SEC will propose a new crypto regulation to ease fundraising rules for crypto startups.\n\n@scottmelker breaks it down:\n\nVideo",
-      "created_at": "2026-07-09T17:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075258718715797633",
-      "text": "Across the United States, communities are blocking billions in new AI data centers due to concerns over rising electricity bills and massive water consumption. yhoo.it/4wy0f84",
-      "created_at": "2026-07-09T16:40:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075256210857562411",
-      "text": "Mark Cuban says \"Raising money is not an accomplishment, it's an obligation,\" for entrepreneurs, Cuban said on the Big Eats World podcast.",
-      "created_at": "2026-07-09T16:30:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T20:10:03Z",
+  "_updated": "2026-07-10T21:46:50Z",
   "_username": "YahooFinance"
 }
