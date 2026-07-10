@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2075638522497622479",
+      "text": "SK Hynix rings the opening bell at the Nasdaq. 🔔\n\nVideo",
+      "created_at": "2026-07-10T17:49:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075616062578528432",
+      "text": "Is $1 trillion by 2028 a locked-in milestone or an over-bullish bet? 🤔 yhoo.it/442F5D5",
+      "created_at": "2026-07-10T16:20:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075608225211171117",
       "text": "South Korean chip giant $SKHYV just made its debut on the US stock market, claiming its place as the biggest IPO by a foreign company in the country. yhoo.it/4vHBSEp",
       "created_at": "2026-07-10T15:48:58Z",
@@ -15,17 +37,6 @@
       "id": "2075603379246502292",
       "text": "Wall Street is lining up bullish calls for where they think $SPCX should be priced.",
       "created_at": "2026-07-10T15:29:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075596133477331007",
-      "text": "SK Hynix rings the opening bell at the Nasdaq. 🔔\n\nVideo",
-      "created_at": "2026-07-10T15:00:55Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075219722967077226",
-      "text": "$PEP falls after Q2 earnings miss investor estimates.\n\nKeep up with Pepsi in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-09T14:05:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T16:10:22Z",
+  "_updated": "2026-07-10T18:14:25Z",
   "_username": "YahooFinance"
 }
