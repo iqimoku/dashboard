@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2075608225211171117",
+      "text": "South Korean chip giant $SKHYV just made its debut on the US stock market, claiming its place as the biggest IPO by a foreign company in the country. yhoo.it/4vHBSEp",
+      "created_at": "2026-07-10T15:48:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075603379246502292",
+      "text": "Wall Street is lining up bullish calls for where they think $SPCX should be priced.",
+      "created_at": "2026-07-10T15:29:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075596133477331007",
+      "text": "SK Hynix rings the opening bell at the Nasdaq. 🔔\n\nVideo",
+      "created_at": "2026-07-10T15:00:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075594788376609016",
+      "text": "Read the latest on Delta earnings:\nfinance.yahoo.com/markets/st…\n\nLink\n\n\n\nDelta Q2 earnings top estimates, reinstates full-year guidance as fuel prices bite\n\nDelta Air Lines reported results Friday morning.\nfinance.yahoo.com",
+      "created_at": "2026-07-10T14:55:34Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075592409203753018",
+      "text": "$CRLC stock jumped on Friday morning after the company said it received regulatory approval to establish its own national trust bank, reducing its reliance on outside banks. The new entity, Circle National Trust, will operate under direct federal banking oversight.\n\nyhoo.it/44mNRvQ",
+      "created_at": "2026-07-10T14:46:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075581868276174928",
+      "text": "High jet fuel costs didn't slow Delta's Q2 earnings down as its premium business carried them past investor expectations.",
+      "created_at": "2026-07-10T14:04:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075373214914515083",
       "text": "SK Hynix is hoping to raise $28 billion via the share sale, the largest such foreign listing in history.\n\nDemand for the US sale is running at seven times the available shares, per reports from Reuters, underscoring the huge interest in a share sale seen as the largest first-share sale ever.",
       "created_at": "2026-07-10T00:15:07Z",
@@ -153,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075195803337908398",
-      "text": "Mark Cuban wishes someone had told him to be nicer earlier in his career, Cuban tells the Bio Eats World podcast.",
-      "created_at": "2026-07-09T12:30:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074999507352236178",
-      "text": "Mark Cuban gives his advice to entrepreneurs getting started in business on the Bio Eats World podcast.",
-      "created_at": "2026-07-08T23:30:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074975599538425938",
-      "text": "$SPCX shares hit an all-time low of $145.20 in midday trade Wednesday and closed below its $150 market debut price. yhoo.it/4yb2cJ9",
-      "created_at": "2026-07-08T21:55:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074964019815780619",
-      "text": "$SPCX stock hit an all-time low and dipped below its market debut price just as rival Blue Origin shores up its capital position. yhoo.it/4yb2cJ9",
-      "created_at": "2026-07-08T21:09:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2074952780024787414",
-      "text": "The biggest issue with LLMs and AI chatbots is that they were never developed to support mental health, Talkspace CEO says.\n\nTalkspace developed an AI chatbot \"Tee\" to address these issues with HIPAA protection.\n\nVideo",
-      "created_at": "2026-07-08T20:24:28Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T13:47:35Z",
+  "_updated": "2026-07-10T16:10:22Z",
   "_username": "YahooFinance"
 }
