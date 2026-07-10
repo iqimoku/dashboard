@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2075373214914515083",
+      "text": "SK Hynix is hoping to raise $28 billion via the share sale, the largest such foreign listing in history.\n\nDemand for the US sale is running at seven times the available shares, per reports from Reuters, underscoring the huge interest in a share sale seen as the largest first-share sale ever.",
+      "created_at": "2026-07-10T00:15:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075346870985974128",
       "text": "Users are opting out of Meta's new Muse Image AI feature on Instagram, a default setting that allows people to use their photos to generate images with AI.\n\nSAG-AFTRA and Hollywood are speaking out about the new AI development.\n\nVideo",
       "created_at": "2026-07-09T22:30:26Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2074945395491312094",
-      "text": "Mark Cuban reveals advice he'd share to his younger self on the Bio Eats World podcast.\n\n\"Don't screw it up.\"",
-      "created_at": "2026-07-08T19:55:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T00:04:15Z",
+  "_updated": "2026-07-10T04:41:07Z",
   "_username": "YahooFinance"
 }
