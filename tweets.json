@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2075666141469405387",
+      "text": "Volkswagen is getting ready to cut its global vehicle lineup in half. The automaker is currently battling a tough mix of rising costs, slow-moving EV sales, and a shrinking foothold in China's ultra-competitive market. yhoo.it/44jrQxV",
+      "created_at": "2026-07-10T19:39:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075652190803202299",
+      "text": "$DAL CEO Ed Bastian said the company just experienced the highest fuel prices in its history.",
+      "created_at": "2026-07-10T18:43:40Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075648974917083284",
+      "text": "SK Hynix CEO Kwak Noh-Jung says, \"The US is the epicenter of Al.\" 🌎 🤖\n\nVideo",
+      "created_at": "2026-07-10T18:30:53Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2075648419368984744",
+      "text": "$CRCL has received regulatory approval to establish its own national trust bank, reducing its reliance on outside banks.\n\n@scottmelker breaks it down:\n\nVideo",
+      "created_at": "2026-07-10T18:28:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075638522497622479",
       "text": "SK Hynix rings the opening bell at the Nasdaq. 🔔\n\nVideo",
       "created_at": "2026-07-10T17:49:21Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075249145548333403",
-      "text": "The AI trade is getting its first real stress test since Wall Street discovered the bottleneck playbook, and the market is already looking for the next part of an AI server that cannot be scaled fast enough.\n\nThe latest answer is the part of the AI trade that is smaller than a grain of rice. A Goldman Sachs thesis put capacitors forward as the next potential AI squeeze after memory. \n\nCreate your own custom, AI-powered investing workspace at yhoo.it/4wns2YY",
-      "created_at": "2026-07-09T16:02:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075241348106539169",
-      "text": "Investors are already hunting for the next scarce part of the server rack. yhoo.it/3R1qnt4",
-      "created_at": "2026-07-09T15:31:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075235812354986082",
-      "text": "PepsiCo's Q2 earnings report revealed that inflation is causing consumers to spend less on its core products such as snacks and soda.",
-      "created_at": "2026-07-09T15:09:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075224733730168990",
-      "text": "PepsiCo CEO Ramon Laguarta said that inflation is causing consumers to spend less on snacks and soda during the company's Q2 earnings report.",
-      "created_at": "2026-07-09T14:25:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T18:14:25Z",
+  "_updated": "2026-07-10T20:10:03Z",
   "_username": "YahooFinance"
 }
