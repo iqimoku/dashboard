@@ -144,6 +144,17 @@
       }
     },
     {
+      "id": "2075581868276174928",
+      "text": "High jet fuel costs didn't slow Delta's Q2 earnings down as its premium business carried them past investor expectations.",
+      "created_at": "2026-07-10T14:04:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075594788376609016",
       "text": "Read the latest on Delta earnings:\nfinance.yahoo.com/markets/st…\n\nLink\n\n\n\nDelta Q2 earnings top estimates, reinstates full-year guidance as fuel prices bite\n\nDelta Air Lines reported results Friday morning.\nfinance.yahoo.com",
       "created_at": "2026-07-10T14:55:34Z",
@@ -158,17 +169,6 @@
       "id": "2075592409203753018",
       "text": "$CRLC stock jumped on Friday morning after the company said it received regulatory approval to establish its own national trust bank, reducing its reliance on outside banks. The new entity, Circle National Trust, will operate under direct federal banking oversight.\n\nyhoo.it/44mNRvQ",
       "created_at": "2026-07-10T14:46:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075581868276174928",
-      "text": "High jet fuel costs didn't slow Delta's Q2 earnings down as its premium business carried them past investor expectations.",
-      "created_at": "2026-07-10T14:04:14Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-10T21:46:50Z",
+  "_updated": "2026-07-10T22:45:37Z",
   "_username": "YahooFinance"
 }
