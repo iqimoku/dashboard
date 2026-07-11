@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2075914541162987553",
+      "text": "Big Tech is paying for the AI boom, and chipmakers are cashing in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBig Tech is paying for the AI boom, and chipmakers are cashing in: Chart of the Day\n\nWall Street knows Big Tech can spend on AI — the harder question is how fast that spending turns back into cash.\nfinance.yahoo.com",
+      "created_at": "2026-07-11T12:06:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075733347297321315",
       "text": "Apple is suing OpenAI over alleged trade secret theft finance.yahoo.com/technology…\n\nLink\n\n\n\nApple is suing OpenAI over alleged trade secret theft\n\nApple is suing OpenAI, alleging trade secret theft.\nfinance.yahoo.com",
       "created_at": "2026-07-11T00:06:09Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075343019830571498",
-      "text": "SK Hynix will make its US market debut on Friday. \n\nThe IPO consists of 177.9 million ADS, also called American depositary receipts, priced at $149 each. Each represents one-tenth of a share of the company's common stock, or 17.79 million shares, that will trade under the ticker symbol $SKHY.",
-      "created_at": "2026-07-09T22:15:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-11T11:40:15Z",
+  "_updated": "2026-07-11T12:43:34Z",
   "_username": "YahooFinance"
 }
