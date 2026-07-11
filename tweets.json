@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2075944741242347632",
+      "text": "Big bank profit engines expected to roar into earnings as Main Street keeps spending finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBig bank profit engines expected to roar into earnings as Main Street keeps spending\n\nFew examples better capture the resurgence of big banks than Jamie Dimon&apos;s special retention award, which has climbed in value from roughly $53 million five years ago to $280 million today.\nfinance.yahoo.com",
+      "created_at": "2026-07-11T14:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2075929640678420905",
       "text": "'Market is becoming more discerning': Wall Street weighs next catalyst for AI trade finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;Market is becoming more discerning&apos;: Wall Street weighs next catalyst for AI trade\n\nWall Street is looking toward earnings for a follow-through of the AI trade.\nfinance.yahoo.com",
       "created_at": "2026-07-11T13:06:09Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075373214914515083",
-      "text": "SK Hynix is hoping to raise $28 billion via the share sale, the largest such foreign listing in history.\n\nDemand for the US sale is running at seven times the available shares, per reports from Reuters, underscoring the huge interest in a share sale seen as the largest first-share sale ever.",
-      "created_at": "2026-07-10T00:15:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-11T14:15:03Z",
+  "_updated": "2026-07-11T15:41:07Z",
   "_username": "YahooFinance"
 }
