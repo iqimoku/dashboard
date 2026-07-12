@@ -2512,7 +2512,7 @@ function renderCard(s){
       <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}">${extTxt}</div></div>
     </div>
     <div class="card-signals">
-      <div>${mttTag}${crossTag}</div>
+      <div class="cs-tags">${mttTag}${crossTag}</div>
       ${TV_MAP[s.ticker] ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${TV_MAP[s.ticker].replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
     </div>
   </div>`;
@@ -4362,7 +4362,7 @@ function updateCardsWithLiveData() {
 
 function recalcMTT(card, ticker, d) {
   // Minervini Trend Template — 8 criteria
-  const {price, sma200, sma150, sma50, rsi, high52, low52} = d;
+  const {price, sma200, sma150, sma50, rsi, high52, low52, rsRank} = d;
   const mttNew = [
     price > sma150 && price > sma200,          // 1. Price > SMA150 & SMA200
     sma150 > sma200,                           // 2. SMA150 > SMA200
@@ -4371,7 +4371,7 @@ function recalcMTT(card, ticker, d) {
     price > sma50,                             // 5. Price > SMA50
     low52 > 0 && price >= low52 * 1.25,        // 6. Price ≥ 25% above 52W low
     high52 > 0 && price >= high52 * 0.75,      // 7. Price ≤ 25% below 52W high
-    rsi != null && rsi >= 70,                  // 8. RSI ≥ 70
+    rsRank != null ? rsRank >= 70 : (rsi != null && rsi >= 70), // 8. RS Rank/RSI ≥ 70
   ];
   const score = mttNew.filter(Boolean).length;
   const col = score === 8 ? 'var(--mtt-full)' : score >= 6 ? 'var(--mtt-high)' : score >= 4 ? 'var(--mtt-mid)' : 'var(--mtt-low)';
@@ -4391,6 +4391,28 @@ function recalcMTT(card, ticker, d) {
     mttNew.forEach((v, i) => {
       dots[i].className = 'mtt-dot ' + (v ? 'pass' : 'fail');
     });
+  }
+
+  // Odznaka MTT w lewym dolnym rogu karty (.tag-mtt) — bez tej synchronizacji
+  // pokazywała starą wartość z pierwszego renderu, niezgodną z paskiem/kropkami
+  // powyżej po kolejnym doładowaniu danych live (np. 52W high/low, RS Rank).
+  const tagsWrap = card.querySelector('.cs-tags');
+  if (tagsWrap) {
+    const oldTag = tagsWrap.querySelector('.tag-mtt');
+    if (oldTag) oldTag.remove();
+    if (score === 8) {
+      tagsWrap.insertAdjacentHTML('afterbegin', `<span class="stag tag-mtt">✦ MTT 8/8</span>`);
+    } else if (score >= 6) {
+      tagsWrap.insertAdjacentHTML('afterbegin', `<span class="stag tag-mtt">${score}/8 MTT</span>`);
+    }
+  }
+
+  // Zsynchronizuj dane bazowe, żeby filtry MTT i data-mtt też się zgadzały
+  card.dataset.mtt = score;
+  const idx = card.dataset.idx;
+  if (idx && STOCKS[idx]) {
+    const s = STOCKS[idx].find(x => x.ticker === ticker);
+    if (s) s.mtt = mttNew;
   }
 }
 
