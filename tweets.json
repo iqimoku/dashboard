@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2076337327245328723",
+      "text": "Retirees have questions for financial advisers. Here's what they want to know. finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nRetirees have questions for financial advisers. Here&apos;s what they want to know.\n\nIncreasingly, retirees are turning to financial advisers for the first time to help. Here&apos;s what they are asking.\nfinance.yahoo.com",
+      "created_at": "2026-07-12T16:06:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076329257769320807",
       "text": "The economy in 2026 looks very different depending on where you're standing. \n\nWhile the AI trade is bumpy, it continues sending stocks to record highs, and Wall Street is reaping the rewards. But everyday Americans aren't seeing the same returns when checking their balances or walking store aisles.\n\nHere are 8 moments from this year that pinpoint how split the US economy is.",
       "created_at": "2026-07-12T15:34:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075648419368984744",
-      "text": "$CRCL has received regulatory approval to establish its own national trust bank, reducing its reliance on outside banks.\n\n@scottmelker breaks it down:\n\nVideo",
-      "created_at": "2026-07-10T18:28:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-12T15:45:10Z",
+  "_updated": "2026-07-12T16:40:39Z",
   "_username": "YahooFinance"
 }
