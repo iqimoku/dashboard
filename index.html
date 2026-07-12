@@ -1265,6 +1265,85 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
       </div>
 
       <div class="meth-section">
+        <div class="meth-section-title">ATR Matrix — Wskaźnik Rozciągnięcia (EXT)</div>
+        <div class="meth-h2">Czym jest EXT (ATR) i jak go czytać?</div>
+        <div class="meth-p">
+          Sama Faza 2 mówi tylko „trend wzrostowy trwa" — nie mówi, czy to jeszcze dobry moment na wejście, czy cena już „uciekła" od punktu, w którym warto kupować. Do tego służy <strong>EXT (ATR)</strong>: mierzy, o ile jednostek zmienności (ATR14) cena jest oddalona od swojej 50-sesyjnej średniej.
+        </div>
+        <div class="meth-p" style="text-align:center;font-family:'Space Mono',monospace;font-size:15px;color:var(--text);background:var(--surface2);border-radius:8px;padding:12px;">
+          EXT = ( Cena − SMA50 ) / ATR14
+        </div>
+        <div class="meth-p">
+          ATR (Average True Range) to średnia dzienna zmienność spółki w ostatnich 14 sesjach. Dzieląc przez ATR zamiast liczyć zwykły procent, wynik jest <strong>porównywalny między spółkami</strong> — 5% ruchu to co innego dla spokojnej spółki dywidendowej (niski ATR) niż dla spółki technologicznej (wysoki ATR). EXT mówi więc: „o ile <em>typowych dziennych wahań</em> ta konkretna spółka oddaliła się od swojej średniej".
+        </div>
+        <div class="meth-phases">
+          <div class="meth-phase s1">
+            <div class="meth-phase-title">EXT ujemny (w Fazie 2)</div>
+            <p>Pullback do SMA50 w trwającym trendzie wzrostowym. Klasyczny „kup na dołku" — najlepszy stosunek ryzyka do zysku. Uwaga: ten sam ujemny EXT w Fazie 3/4 to już nie okazja, tylko ostrzeżenie.</p>
+          </div>
+          <div class="meth-phase s2">
+            <div class="meth-phase-title">EXT ≤ 1,0x — blisko wejścia</div>
+            <p>Cena tuż nad SMA50. Niskie ryzyko wejścia — jeszcze nie „pogoń za kursem". To zakres, którego szuka sortowanie „Najmniej rozciągnięte".</p>
+          </div>
+          <div class="meth-phase s3">
+            <div class="meth-phase-title">EXT 1,0x – 2,5x — umiarkowane</div>
+            <p>Trend już trwa, cena zdążyła odjechać od średniej. Wejście wciąż możliwe, ale margines bezpieczeństwa mniejszy — stop-loss musi być ciaśniejszy.</p>
+          </div>
+          <div class="meth-phase s4">
+            <div class="meth-phase-title">EXT &gt; 2,5x — przegrzane</div>
+            <p>Cena mocno oddalona od SMA50 — klasyczna „pogoń za kursem". Wysokie ryzyko szybkiej korekty powrotnej do średniej. Unikaj nowych wejść, chyba że akceptujesz duże ryzyko.</p>
+          </div>
+        </div>
+
+        <div class="meth-h2" style="margin-top:22px;">Przykłady interpretacji</div>
+        <div class="meth-criteria">
+          <div class="meth-crit">
+            <div class="meth-crit-num" style="background:rgba(0,229,160,.15);color:var(--s2)">A</div>
+            <div class="meth-crit-body">
+              <div class="meth-crit-title">Faza 2, cena 45,20, SMA50 44,60, ATR14 1,10 → EXT = <span style="color:var(--s2)">+0,5x</span></div>
+              <div class="meth-crit-desc">Cena ledwie oderwała się od SMA50. <strong>Bardzo dobry punkt wejścia</strong> — trend potwierdzony (Faza 2), a ryzyko pogoni za ceną minimalne. Stop-loss można ustawić ciasno, tuż pod SMA50.</div>
+            </div>
+          </div>
+          <div class="meth-crit">
+            <div class="meth-crit-num" style="background:rgba(79,195,247,.15);color:var(--s1)">B</div>
+            <div class="meth-crit-body">
+              <div class="meth-crit-title">Faza 2, cena 98,00, SMA50 99,50, ATR14 2,00 → EXT = <span style="color:var(--s1)">−0,75x</span></div>
+              <div class="meth-crit-desc">Cena chwilowo <em>poniżej</em> SMA50, ale trend (Faza 2) wciąż aktywny. To pullback — jeden z najbardziej lubianych układów wejścia u Minerviniego i Weinsteina, o ile pullback nie łamie struktury trendu (sprawdź MTT i MA30W w karcie).</div>
+            </div>
+          </div>
+          <div class="meth-crit">
+            <div class="meth-crit-num" style="background:rgba(245,166,35,.15);color:var(--s3)">C</div>
+            <div class="meth-crit-body">
+              <div class="meth-crit-title">Faza 2, cena 210,00, SMA50 198,00, ATR14 6,50 → EXT = <span style="color:var(--s3)">+1,8x</span></div>
+              <div class="meth-crit-desc">Umiarkowane rozciągnięcie. Wejście wciąż uzasadnione, jeśli reszta kryteriów (MTT, wolumen) jest mocna — ale nie „dokupuj w każdej cenie". Rozważ mniejszą pozycję lub czekaj na kolejny pullback.</div>
+            </div>
+          </div>
+          <div class="meth-crit">
+            <div class="meth-crit-num" style="background:rgba(255,77,77,.15);color:var(--s4)">D</div>
+            <div class="meth-crit-body">
+              <div class="meth-crit-title">Faza 2, cena 340,00, SMA50 295,00, ATR14 4,50 → EXT = <span style="color:var(--s4)">+10,0x</span></div>
+              <div class="meth-crit-desc">Bardzo mocno przegrzane — cena „uciekła" 10 typowych dziennych wahań od średniej. Nawet w silnym trendzie to sygnał, żeby <strong>poczekać na korektę/konsolidację</strong>, a nie kupować na tym poziomie. Wysokie ryzyko szybkiego cofnięcia.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meth-h2" style="margin-top:22px;">Filtr „📐 Najmniej rozciągnięte (ATR)" — jak z niego korzystać</div>
+        <div class="meth-p">
+          To rozwijana lista w pasku filtrów nad siatką spółek. Po wybraniu dashboard robi dwie rzeczy naraz:
+        </div>
+        <div class="meth-live-box">
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span>Automatycznie ustawia filtr <strong>Faza 2</strong> (jeśli nie był aktywny) — bo EXT ma sens tylko w kontekście potwierdzonego trendu wzrostowego, nie jako samodzielny wskaźnik.</span></div>
+          <div class="meth-live-row"><div class="meth-live-dot"></div><span>Sortuje listę <strong>rosnąco po EXT</strong> — spółki najbliżej SMA50 (najmniej „przegrzane") lądują na górze.</span></div>
+        </div>
+        <div class="meth-p">
+          Praktyczne zastosowanie: zamiast przeglądać wszystkie spółki w Fazie 2 i zgadywać, które są jeszcze „w zasięgu", a które już „uciekły" — ten filtr od razu pokazuje Ci kandydatów z <strong>najlepszym stosunkiem ryzyka do zysku</strong> na wejście. To odpowiednik podejścia znanego z niektórych narzędzi typu cross-screener: „pokaż mi tylko to, co spełnia kilka kryteriów jakości jednocześnie", tylko że tutaj kryteria to Faza 2 + niskie rozciągnięcie.
+        </div>
+        <div class="meth-p">
+          Powiązany z tym jest też tag <span class="stag tag-cross" style="display:inline-flex;vertical-align:middle;">🎯 Blisko przebicia</span> pojawiający się bezpośrednio na kartach — oznacza spółki, które dodatkowo mają <strong>wolumen powyżej średniej</strong> (Faza 2 + EXT ≤ 1,0x + wolumen). To najwęższy, najbardziej selektywny filtr w narzędziu — jeśli szukasz szybkiego skrótu do „gorących kandydatów", zacznij właśnie od niego.
+        </div>
+      </div>
+
+      <div class="meth-section">
         <div class="meth-section-title">Jak korzystać z narzędzia</div>
         <div class="meth-live-box">
           <div class="meth-live-title">⟳ Przycisk „Odśwież live" — co aktualizuje?</div>
