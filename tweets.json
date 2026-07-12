@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2076329257769320807",
+      "text": "The economy in 2026 looks very different depending on where you're standing. \n\nWhile the AI trade is bumpy, it continues sending stocks to record highs, and Wall Street is reaping the rewards. But everyday Americans aren't seeing the same returns when checking their balances or walking store aisles.\n\nHere are 8 moments from this year that pinpoint how split the US economy is.",
+      "created_at": "2026-07-12T15:34:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2076322227604140222",
+      "text": "Is it easier to become a stock picker in a stock picker's market? finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nIs it easier to become a stock picker in a stock picker&apos;s market?\n\nThinking about the challenge of trading individual stocks to generate above-average returns.\nfinance.yahoo.com",
+      "created_at": "2026-07-12T15:06:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076307128193560735",
       "text": "Nissan CEO on why building in America is 'the strategy that's working' finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nNissan CEO on why building in America is &apos;the strategy that&apos;s working&apos;\n\nNissan&apos;s push to amplify its build in America efforts comes as rival Toyota made big news this week. \nfinance.yahoo.com",
       "created_at": "2026-07-12T14:06:09Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075638522497622479",
-      "text": "SK Hynix rings the opening bell at the Nasdaq. 🔔\n\nVideo",
-      "created_at": "2026-07-10T17:49:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075616062578528432",
-      "text": "Is $1 trillion by 2028 a locked-in milestone or an over-bullish bet? 🤔 yhoo.it/442F5D5",
-      "created_at": "2026-07-10T16:20:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-12T14:19:59Z",
+  "_updated": "2026-07-12T15:45:10Z",
   "_username": "YahooFinance"
 }
