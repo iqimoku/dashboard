@@ -77,6 +77,7 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .btn.s3a.active{border-color:var(--s3);color:var(--s3);background:rgba(245,166,35,.07);}
 .btn.s4a.active{border-color:var(--s4);color:var(--s4);background:rgba(255,77,77,.07);}
 .btn.mtta.active{border-color:var(--mtt-full);color:var(--mtt-full);background:rgba(167,139,250,.07);}
+.btn.crossa.active{border-color:#f0b429;color:#f0b429;background:rgba(240,180,41,.08);}
 .c-sep{width:1px;height:24px;background:var(--border);margin:0 4px;}
 .c-right{margin-left:auto;display:flex;gap:7px;align-items:center;}
 .ctrl-update-badge{font-size:10px;font-family:'Space Mono',monospace;padding:5px 11px;border-radius:6px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);white-space:nowrap;font-weight:700;}
@@ -162,6 +163,11 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .cm-l{font-size:8px;color:var(--muted);font-family:'Space Mono',monospace;margin-bottom:1px;}
 .cm-v{font-size:12px;font-weight:600;font-family:'Space Mono',monospace;}
 .cm-v.up{color:var(--s2);}.cm-v.dn{color:var(--s4);}.cm-v.nu{color:var(--text);}
+.cm-v.ext-low{color:var(--s2);}.cm-v.ext-mid{color:var(--s3);}.cm-v.ext-high{color:var(--s4);}
+.ext-badge{font-size:9px;font-family:'Space Mono',monospace;font-weight:700;padding:2px 6px;border-radius:5px;white-space:nowrap;margin-top:1px;}
+.ext-badge.ext-low{background:rgba(0,229,160,.14);color:var(--s2);border:1px solid rgba(0,229,160,.3);}
+.ext-badge.ext-mid{background:rgba(245,166,35,.14);color:var(--s3);border:1px solid rgba(245,166,35,.3);}
+.ext-badge.ext-high{background:rgba(255,77,77,.14);color:var(--s4);border:1px solid rgba(255,77,77,.3);}
 
 /* .card-signals — styl w sekcji TV badge */
 .stag{padding:2px 7px;border-radius:3px;font-size:8px;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;}
@@ -171,6 +177,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .tag-avoid{background:rgba(255,77,77,.12);color:var(--s4);border:1px solid rgba(255,77,77,.2);}
 .tag-neutral{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--border);}
 .tag-mtt{background:rgba(167,139,250,.14);color:var(--accent);border:1px solid rgba(167,139,250,.25);}
+.tag-cross{background:rgba(240,180,41,.14);color:#f0b429;border:1px solid rgba(240,180,41,.3);margin-left:6px;}
 .card.hidden{display:none;}
 
 /* ── SUMMARY ── */
@@ -645,6 +652,8 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .cl-entry{display:flex;gap:14px;align-items:flex-start;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:9px;margin-bottom:8px;}
 .cl-entry.up{border-left:3px solid var(--s2);}
 .cl-entry.down{border-left:3px solid var(--s4);}
+.cl-entry.noncanon{border-style:dashed;background:rgba(245,166,35,.04);}
+.cl-warn-badge{font-family:'Space Mono',monospace;font-size:9px;font-weight:700;color:#f5a623;background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);border-radius:4px;padding:2px 7px;margin-left:8px;letter-spacing:.3px;cursor:help;}
 .cl-badge{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);background:var(--surface2);border-radius:5px;padding:3px 8px;flex-shrink:0;margin-top:2px;white-space:nowrap;}
 .cl-body{flex:1;min-width:0;}
 .cl-line1{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px;}
@@ -704,8 +713,8 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .vt-btn:hover:not(.active){color:var(--text);}
 
 /* ── Compact table ───────────────────────────── */
-#grid.compact-mode{display:block;padding:4px 36px 40px;}
-.ctable{width:100%;border-collapse:collapse;font-size:12px;}
+#grid.compact-mode{display:block;padding:4px 36px 40px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.ctable{width:100%;min-width:640px;border-collapse:collapse;font-size:12px;}
 .ctable thead th{
   position:sticky;top:0;z-index:2;
   background:var(--surface2);
@@ -823,6 +832,96 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .ct-skip { font-size:11px; color:var(--muted); cursor:pointer; }
 .ct-skip:hover { color:var(--text); }
 .ct-blik { font-size:10px; color:#a78bfa; background:rgba(167,139,250,.12); border:1px solid rgba(167,139,250,.2); padding:2px 8px; border-radius:4px; font-family:'Space Mono',monospace; }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS
+   ══════════════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  /* Global horizontal containers: shrink side padding */
+  .info-banner, .header, .tabs, .legend-bar, .controls, .grid,
+  .summary, .disclaimer, .coffee-bar, #grid.compact-mode,
+  .method-view { padding-left:14px !important; padding-right:14px !important; }
+
+  /* Header */
+  .header{padding-top:16px;padding-bottom:16px;flex-direction:column;align-items:flex-start;gap:10px;}
+  .h-title{font-size:20px;}
+  .h-badges{justify-content:flex-start;width:100%;}
+
+  /* Info banner */
+  .info-banner{padding-top:14px;padding-bottom:14px;}
+  .ib-headline{font-size:14px;}
+  .ib-cols{flex-direction:column;}
+  .ib-col{border-left:none !important;padding-left:0 !important;padding:10px 0;border-top:1px solid rgba(255,255,255,.08);}
+  .ib-col:first-child{border-top:none;}
+
+  /* Tabs: allow horizontal scroll, tighter padding */
+  .tabs{padding-left:8px;padding-right:8px;}
+  .tab{padding:11px 14px;font-size:12px;}
+
+  /* Legend bar: stack groups, smaller text */
+  .legend-bar{gap:10px;padding-top:8px;padding-bottom:8px;}
+  .leg-group{gap:8px;}
+  .li{font-size:10px;}
+
+  /* Controls bar: full-width, stacked, bigger tap targets */
+  .controls{gap:8px;}
+  .btn{padding:9px 12px;font-size:12px;flex:1 1 auto;}
+  select.sector-sel, .search-input{width:100%;font-size:13px;padding-top:9px;padding-bottom:9px;}
+  .search-wrap{width:100%;}
+  #sort-sel{width:100%;}
+  .c-sep{display:none;}
+  .c-right{width:100%;margin-left:0;justify-content:space-between;}
+  .ctrl-update-badge{flex:1;text-align:center;}
+
+  /* Card grid: single column, tighter gaps */
+  .grid{grid-template-columns:1fr !important;gap:10px;}
+  .card-header{padding:12px 12px 6px;}
+  .c-name{font-size:13px;white-space:normal;}
+  .card-metrics{padding:0 12px 8px;grid-template-columns:1fr 1fr;}
+  .card-signals{padding:4px 12px 10px;flex-wrap:wrap;}
+  .stage-num{width:30px;height:30px;font-size:14px;}
+
+  /* Summary bar */
+  .summary{gap:16px;padding-top:12px;padding-bottom:12px;}
+  .sum-stats{gap:14px;}
+  .sum-note{max-width:100%;margin-left:0;flex:1 1 100%;}
+
+  /* Coffee bar */
+  .coffee-bar{padding-top:16px;padding-bottom:16px;flex-direction:column;align-items:stretch;}
+  .coffee-left{min-width:0;}
+  .coffee-center{flex-direction:column;}
+  .coffee-qr{width:100px;height:100px;}
+  .coffee-stats{justify-content:center;}
+
+  /* Modal: full-screen sheet on mobile */
+  .overlay{padding:0;align-items:flex-end;}
+  .modal{max-width:100%;width:100%;max-height:96vh;border-radius:16px 16px 0 0;}
+  .modal-hero{padding:18px 16px 14px;flex-wrap:wrap;}
+  .mh-name{font-size:18px;}
+  .mh-price{font-size:20px;}
+  .sec{padding:14px 16px;}
+  .mtt-modal{padding:14px 16px;}
+  .modal-metrics{padding:14px 16px;grid-template-columns:repeat(2,1fr);}
+
+  /* Market overview view */
+  .market-view{padding:14px 12px 32px;}
+  .regime-banner{padding:14px 16px;flex-wrap:wrap;}
+  .gauge-grid, .nh-grid{grid-template-columns:1fr;}
+  .market-tabs{gap:6px;}
+  .mkt-tab{padding:7px 12px;font-size:10px;}
+
+  /* Compact table view: allow horizontal scroll, don't crush columns */
+  #grid.compact-mode{padding-left:0 !important;padding-right:0 !important;}
+  .ctable{font-size:11px;}
+}
+
+@media(max-width:420px){
+  .h-title{font-size:17px;}
+  .btn{font-size:11px;padding:8px 10px;}
+  .card-metrics{grid-template-columns:1fr 1fr;}
+  .stage-lbl{display:none;}
+  .ext-badge{font-size:8px;}
+}
 </style>
 </head>
 <body>
@@ -903,6 +1002,13 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="li"><div class="ld mtt-mid"></div>4–5 Średni</div>
     <div class="li"><div class="ld mtt-low"></div>0–3 Niski</div>
   </div>
+  <span class="leg-sep">|</span>
+  <span class="leg-label">EXT (ATR Matrix):</span>
+  <div class="leg-group">
+    <div class="li"><div class="ld" style="background:var(--s2)"></div>≤1× blisko wejścia</div>
+    <div class="li"><div class="ld" style="background:var(--s3)"></div>1–2.5× umiarkowane</div>
+    <div class="li"><div class="ld" style="background:var(--s4)"></div>&gt;2.5× przegrzane</div>
+  </div>
 </div>
 
 
@@ -915,9 +1021,15 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <span class="c-sep"></span>
   <button class="btn mtta" id="fmtt" onclick="filterMTT()">⚡ MTT ≥ 6/8</button>
   <button class="btn mtta" id="fmtt8" onclick="filterMTT8()">🏆 MTT 8/8</button>
+  <button class="btn crossa" id="fcross" onclick="filterCross()">🎯 Blisko przebicia</button>
   <span class="c-sep"></span>
   <select class="sector-sel" id="sector-sel" onchange="filterSector(this.value)">
     <option value="all">Wszystkie sektory</option>
+  </select>
+  <span class="c-sep"></span>
+  <select class="sector-sel" id="sort-sel" onchange="setSort(this.value)" title="Sortowanie wg wskaźnika rozciągnięcia ATR Matrix: (cena-SMA50)/ATR14">
+    <option value="default">Sortuj: domyślnie</option>
+    <option value="ext-asc">📐 Najmniej rozciągnięte (ATR)</option>
   </select>
   <span class="c-sep"></span>
   <div class="view-toggle" id="view-toggle">
@@ -1212,69 +1324,46 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 //                    from:2, to:3, reason:'...'}
 // ══════════════════════════════════════════════════
 const CHANGELOG = [
-  {date:"2026-07-05",mk:"wig20",ticker:"PKO",name:"PKO Bank Polski",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.8%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"wig20",ticker:"PKO",name:"PKO Bank Polski",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.8%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-05",mk:"wig20",ticker:"PZU",name:"PZU",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 7.5%) — początek nowego trendu wzrostowego."},
-  {date:"2026-07-05",mk:"wig20",ticker:"PEKAO",name:"Pekao",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.6%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"wig20",ticker:"TPE",name:"Tauron PE",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"MIL",name:"Bank Millennium",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.9%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"MIL",name:"Bank Millennium",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.9%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-05",mk:"mwig40",ticker:"ABE",name:"ABPL",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -5.5%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"mwig40",ticker:"ATT",name:"Grupa Azoty",from:1,to:3,reason:"Nietypowe przejście z akumulacji w dystrybucję bez pełnej fazy wzrostowej."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"BHW",name:"Bank Handlowy",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 0.0%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"DOM",name:"Dom Development",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"DVL",name:"Develia",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.5%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"RBW",name:"Rainbow Tours",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -0.8%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"WPL",name:"Wirtualna Polska",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"XTB",name:"XTB",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 14.6%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"mwig40",ticker:"APR",name:"Auto Partner",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"XTB",name:"XTB",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 14.6%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+  {date:"2026-07-05",mk:"mwig40",ticker:"APR",name:"Auto Partner",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-05",mk:"mwig40",ticker:"VRC",name:"VERCOM",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
   {date:"2026-07-05",mk:"mwig40",ticker:"DIA",name:"Diagnostyka",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"dax",ticker:"ENR",name:"Siemens Energy",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 9.0%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"dax",ticker:"SIE",name:"Siemens AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.6%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"dax",ticker:"RWE",name:"RWE AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.0%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"dax",ticker:"DB1",name:"Deutsche Börse",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"dax",ticker:"EOAN",name:"E.ON SE",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 7.7%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"ENR",name:"Siemens Energy",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 9.0%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+  {date:"2026-07-05",mk:"dax",ticker:"SIE",name:"Siemens AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.6%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+  {date:"2026-07-05",mk:"dax",ticker:"RWE",name:"RWE AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 5.0%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+  {date:"2026-07-05",mk:"dax",ticker:"DB1",name:"Deutsche Börse",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 3.5%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+  {date:"2026-07-05",mk:"dax",ticker:"EOAN",name:"E.ON SE",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 7.7%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-05",mk:"dax",ticker:"SY1",name:"Symrise AG",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 18.2%) — początek nowego trendu wzrostowego."},
-  {date:"2026-07-05",mk:"dax",ticker:"BNR",name:"Brenntag AG",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -0.6%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"dax",ticker:"DTG",name:"Daimler Truck Holding",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.6%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"AAPL",name:"Apple Inc.",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 0.4%) mimo wcześniejszej dystrybucji."},
+  {date:"2026-07-05",mk:"dax",ticker:"DTG",name:"Daimler Truck Holding",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.6%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-05",mk:"ndx",ticker:"AMZN",name:"Amazon",from:4,to:3,reason:"Wypłaszczenie spadku, cena zbliża się do SMA150 od dołu."},
-  {date:"2026-07-05",mk:"ndx",ticker:"GOOGL",name:"Alphabet (A)",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.8%) mimo wcześniejszej dystrybucji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"GOOG",name:"Alphabet (C)",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M -1.9%) mimo wcześniejszej dystrybucji."},
   {date:"2026-07-05",mk:"ndx",ticker:"MU",name:"Micron Technology",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -7.1%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"ndx",ticker:"MRVL",name:"Marvell Technology",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -3.2%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-05",mk:"ndx",ticker:"SNDK",name:"Sandisk Corporation",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -0.3%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"ndx",ticker:"ARM",name:"Arm Holdings",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -21.4%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"ndx",ticker:"APP",name:"AppLovin",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"ndx",ticker:"AXON",name:"Axon Enterprise",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"WMT",name:"Walmart",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"COST",name:"Costco",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"GILD",name:"Gilead Sciences",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"ndx",ticker:"BKNG",name:"Booking Holdings",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"ndx",ticker:"WBD",name:"Warner Bros. Discovery",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
-  {date:"2026-07-05",mk:"ndx",ticker:"PEPCO",name:"PepsiCo",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"ndx",ticker:"HON",name:"Honeywell",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -7.0%)."},
   {date:"2026-07-05",mk:"ndx",ticker:"FAST",name:"Fastenal",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 9.9%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-05",mk:"ndx",ticker:"DASH",name:"DoorDash",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"nyse",ticker:"MA",name:"Mastercard",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-05",mk:"nyse",ticker:"GS",name:"Goldman Sachs",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -2.7%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-05",mk:"nyse",ticker:"MS",name:"Morgan Stanley",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M 1.7%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"nyse",ticker:"WFC",name:"Wells Fargo",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 11.3%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-05",mk:"nyse",ticker:"AIG",name:"AIG",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"nyse",ticker:"EOG",name:"EOG Resources",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -4.1%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-05",mk:"nyse",ticker:"RTX",name:"RTX Corp (Raytheon)",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 14.6%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-05",mk:"nyse",ticker:"LMT",name:"Lockheed Martin",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"nyse",ticker:"GD",name:"General Dynamics",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 11.0%) — początek nowego trendu wzrostowego."},
-  {date:"2026-07-05",mk:"nyse",ticker:"BA",name:"Boeing",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 1.8%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-05",mk:"nyse",ticker:"HON",name:"Honeywell",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -7.0%)."},
-  {date:"2026-07-05",mk:"nyse",ticker:"EMR",name:"Emerson Electric",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -2.1%)."},
-  {date:"2026-07-05",mk:"nyse",ticker:"MCD",name:"McDonald's",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"nyse",ticker:"LOW",name:"Lowe's Companies",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-05",mk:"nyse",ticker:"NEE",name:"NextEra Energy",from:2,to:1,reason:"Utrata dynamiki wzrostu, powrót do konsolidacji poniżej SMA150."},
   {date:"2026-07-05",mk:"nyse",ticker:"VZ",name:"Verizon",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -10.9%)."},
   {date:"2026-07-05",mk:"nyse",ticker:"ZBH",name:"Zimmer Biomet",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
-  {date:"2026-07-05",mk:"nyse",ticker:"BDX",name:"Becton Dickinson",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 11.8%) mimo wcześniejszej dystrybucji."},
-  // (pusto — pierwsza aktualizacja po wdrożeniu tej funkcji nie miała
-  // zapisanego stanu "przed", więc historia zacznie się od kolejnej niedzieli)
+  {date:"2026-07-05",mk:"nyse",ticker:"BDX",name:"Becton Dickinson",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 11.8%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
+
 ];
 
 // ══════════════════════════════════════════════════
@@ -1341,7 +1430,7 @@ wig20: [
   {ticker:"PZU",name:"PZU",sector:"Ubezpieczenia",idx:"wig20",price:68.26,chg:"+0.89%",stage:2,ma30w:66.23,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 64",h52:"-6%",
    mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"PEKAO",name:"Pekao",sector:"Bankowość",idx:"wig20",price:233.2,chg:"-0.04%",stage:2,ma30w:222.98,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 51",h52:"-8%",
+  {ticker:"PEKAO",name:"Pekao",sector:"Bankowość",idx:"wig20",price:233.2,chg:"-0.04%",stage:3,ma30w:222.98,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 51",h52:"-8%",
    mtt:[true,true,true,true,false,true,true,true]},
 
   {ticker:"KGHM",name:"KGHM",sector:"Metale",idx:"wig20",price:335,chg:"+0.89%",stage:3,ma30w:306.22,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 47",h52:"-15%",
@@ -1389,7 +1478,7 @@ wig20: [
   {ticker:"EBP",name:"Erste Group Bank",sector:"Bankowość",idx:"wig20",price:657,chg:"+0.31%",stage:2,ma30w:584.59,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 63",h52:"-2%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"TPE",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.41,chg:"+1.88%",stage:1,ma30w:9.77,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 52",h52:"-21%",
+  {ticker:"TPE",name:"Tauron PE",sector:"Energetyka",idx:"wig20",price:9.41,chg:"+1.88%",stage:4,ma30w:9.77,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 52",h52:"-21%",
    mtt:[false,true,true,false,true,true,true,true]}
 ],
 
@@ -1421,13 +1510,13 @@ mwig40: [
   {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:4996,chg:"+1.05%",stage:2,ma30w:3930.15,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"+5%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BHW",name:"Bank Handlowy",sector:"Bankowość",idx:"mwig40",price:122.2,chg:"-0.65%",stage:2,ma30w:115.09,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 44",h52:"-5%",
+  {ticker:"BHW",name:"Bank Handlowy",sector:"Bankowość",idx:"mwig40",price:122.2,chg:"-0.65%",stage:3,ma30w:115.09,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 44",h52:"-5%",
    mtt:[true,true,true,true,true,false,true,false]},
 
   {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:825,chg:"+0.98%",stage:2,ma30w:676.2,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 63",h52:"-1%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:249,chg:"+1.63%",stage:1,ma30w:255.48,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 52",h52:"-12%",
+  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:249,chg:"+1.63%",stage:4,ma30w:255.48,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 52",h52:"-12%",
    mtt:[false,true,true,false,false,false,true,false]},
 
   {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:10.8,chg:"-1.82%",stage:4,ma30w:12.17,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 47",h52:"-32%",
@@ -1445,7 +1534,7 @@ mwig40: [
   {ticker:"LBW",name:"Lubawa",sector:"Obronność",idx:"mwig40",price:12.63,chg:"-1.86%",stage:1,ma30w:9.47,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 54",h52:"-17%",
    mtt:[true,false,true,true,true,true,true,false]},
 
-  {ticker:"DVL",name:"Develia",sector:"Deweloperzy",idx:"mwig40",price:10.8,chg:"+0.00%",stage:2,ma30w:9.53,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 57",h52:"-4%",
+  {ticker:"DVL",name:"Develia",sector:"Deweloperzy",idx:"mwig40",price:10.8,chg:"+0.00%",stage:3,ma30w:9.53,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 57",h52:"-4%",
    mtt:[true,true,true,true,true,true,true,true]},
 
   {ticker:"MBR",name:"Mo-Bruk",sector:"Odpady",idx:"mwig40",price:377,chg:"+2.45%",stage:2,ma30w:348.78,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 63",h52:"+2335%",
@@ -1457,7 +1546,7 @@ mwig40: [
   {ticker:"PEP",name:"Polenergia",sector:"OZE",idx:"mwig40",price:60.6,chg:"-0.49%",stage:1,ma30w:53.6,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 67",h52:"-11%",
    mtt:[true,false,true,false,true,true,true,false]},
 
-  {ticker:"RBW",name:"Rainbow Tours",sector:"Turystyka",idx:"mwig40",price:145.1,chg:"-1.56%",stage:3,ma30w:144.42,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-13%",
+  {ticker:"RBW",name:"Rainbow Tours",sector:"Turystyka",idx:"mwig40",price:145.1,chg:"-1.56%",stage:2,ma30w:144.42,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-13%",
    mtt:[true,true,true,false,true,true,true,false]},
 
   {ticker:"VOX",name:"VOXEL",sector:"Medycyna",idx:"mwig40",price:115,chg:"+0.00%",stage:4,ma30w:119.81,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 55",h52:"-37%",
@@ -1472,7 +1561,7 @@ mwig40: [
   {ticker:"NWG",name:"Newag",sector:"Tabor",idx:"mwig40",price:97,chg:"+2.21%",stage:4,ma30w:107.29,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 49",h52:"-26%",
    mtt:[false,true,true,false,false,true,false,true]},
 
-  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.4,chg:"-1.02%",stage:1,ma30w:58.46,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-30%",
+  {ticker:"WPL",name:"Wirtualna Polska",sector:"Media",idx:"mwig40",price:58.4,chg:"-1.02%",stage:4,ma30w:58.46,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 50",h52:"-30%",
    mtt:[false,true,true,false,false,true,false,false]},
 
   {ticker:"XTB",name:"XTB",sector:"Fintech",idx:"mwig40",price:118.4,chg:"+1.25%",stage:2,ma30w:92.1,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 70",h52:"+7%",
@@ -1612,7 +1701,7 @@ dax: [
   {ticker:"VOW3",name:"Volkswagen",sector:"Motoryzacja",idx:"dax",price:74.66,chg:"+1.86%",stage:4,ma30w:93.64,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 36",h52:"-32%",
    mtt:[false,true,true,false,false,false,false,false]},
 
-  {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:56.2,chg:"+0.83%",stage:2,ma30w:53.99,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 55",h52:"-12%",
+  {ticker:"BNR",name:"Brenntag AG",sector:"Chemia",idx:"dax",price:56.2,chg:"+0.83%",stage:3,ma30w:53.99,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 55",h52:"-12%",
    mtt:[true,true,true,true,false,true,true,false]},
 
   {ticker:"DHL",name:"Deutsche Post/DHL",sector:"Logistyka",idx:"dax",price:56,chg:"+0.39%",stage:2,ma30w:48.23,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 72",h52:"+5%",
@@ -1638,7 +1727,7 @@ ndx: [
   {ticker:"NVDA",name:"Nvidia",sector:"Półprzewodniki/AI",idx:"ndx",price:194.83,chg:"-1.39%",stage:3,ma30w:192.52,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 41",h52:"-18%",
    mtt:[true,true,true,true,false,false,true,false]},
 
-  {ticker:"AAPL",name:"Apple Inc.",sector:"Technologia/Consumer",idx:"ndx",price:308.63,chg:"+4.84%",stage:2,ma30w:274.16,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 60",h52:"-3%",
+  {ticker:"AAPL",name:"Apple Inc.",sector:"Technologia/Consumer",idx:"ndx",price:308.63,chg:"+4.84%",stage:3,ma30w:274.16,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 60",h52:"-3%",
    mtt:[true,true,true,true,true,true,true,false]},
 
   {ticker:"MSFT",name:"Microsoft",sector:"Technologia/Cloud",idx:"ndx",price:390.49,chg:"+1.62%",stage:4,ma30w:423.23,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 50",h52:"-30%",
@@ -1647,10 +1736,10 @@ ndx: [
   {ticker:"AMZN",name:"Amazon",sector:"E-commerce/Cloud",idx:"ndx",price:242.67,chg:"+0.40%",stage:3,ma30w:234.76,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-13%",
    mtt:[true,true,true,true,false,false,true,false]},
 
-  {ticker:"GOOGL",name:"Alphabet (A)",sector:"Technologia/Reklama",idx:"ndx",price:359.91,chg:"-0.36%",stage:2,ma30w:333.63,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
+  {ticker:"GOOGL",name:"Alphabet (A)",sector:"Technologia/Reklama",idx:"ndx",price:359.91,chg:"-0.36%",stage:3,ma30w:333.63,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
    mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"GOOG",name:"Alphabet (C)",sector:"Technologia/Reklama",idx:"ndx",price:356.18,chg:"-0.48%",stage:2,ma30w:332.65,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
+  {ticker:"GOOG",name:"Alphabet (C)",sector:"Technologia/Reklama",idx:"ndx",price:356.18,chg:"-0.48%",stage:3,ma30w:332.65,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 49",h52:"-12%",
    mtt:[true,true,true,true,false,true,true,false]},
 
   {ticker:"AVGO",name:"Broadcom",sector:"Półprzewodniki/Networking",idx:"ndx",price:360.45,chg:"-2.41%",stage:4,ma30w:365.79,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 40",h52:"-27%",
@@ -1701,7 +1790,7 @@ ndx: [
   {ticker:"QCOM",name:"Qualcomm",sector:"Półprzewodniki/Mobile",idx:"ndx",price:176.25,chg:"-3.12%",stage:1,ma30w:168.01,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 38",h52:"-32%",
    mtt:[true,false,true,true,false,true,false,false]},
 
-  {ticker:"SNDK",name:"Sandisk Corporation",sector:"Pamięci/Storage",idx:"ndx",price:1745,chg:"-14.13%",stage:3,ma30w:882.39,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 47",h52:"-26%",
+  {ticker:"SNDK",name:"Sandisk Corporation",sector:"Pamięci/Storage",idx:"ndx",price:1745,chg:"-14.13%",stage:2,ma30w:882.39,matrend:"spłaszcza →",vol:"Powyżej śr.",rs:"RSI 47",h52:"-26%",
    mtt:[true,true,true,true,true,true,false,false]},
 
   {ticker:"INTC",name:"Intel",sector:"Półprzewodniki/Legacy",idx:"ndx",price:120.35,chg:"-5.25%",stage:2,ma30w:68.5,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 49",h52:"-15%",
@@ -1764,16 +1853,16 @@ ndx: [
   {ticker:"ZS",name:"Zscaler",sector:"Cyberbezpieczeństwo/SASE",idx:"ndx",price:147.33,chg:"+0.60%",stage:4,ma30w:171.52,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 59",h52:"-56%",
    mtt:[false,false,true,false,true,true,false,false]},
 
-  {ticker:"WMT",name:"Walmart",sector:"Handel detaliczny",idx:"ndx",price:111.84,chg:"+2.78%",stage:1,ma30w:121.57,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 36",h52:"-17%",
+  {ticker:"WMT",name:"Walmart",sector:"Handel detaliczny",idx:"ndx",price:111.84,chg:"+2.78%",stage:4,ma30w:121.57,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 36",h52:"-17%",
    mtt:[false,true,true,true,false,false,true,false]},
 
-  {ticker:"COST",name:"Costco",sector:"Handel hurtowy",idx:"ndx",price:951.67,chg:"+2.92%",stage:1,ma30w:967.47,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 45",h52:"-13%",
+  {ticker:"COST",name:"Costco",sector:"Handel hurtowy",idx:"ndx",price:951.67,chg:"+2.92%",stage:4,ma30w:967.47,matrend:"spłaszcza →",vol:"Stabilny",rs:"RSI 45",h52:"-13%",
    mtt:[false,true,true,true,false,false,true,false]},
 
   {ticker:"AMGN",name:"Amgen",sector:"Biotechnology",idx:"ndx",price:374.15,chg:"+3.55%",stage:2,ma30w:346.39,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"-4%",
    mtt:[true,true,true,false,true,true,true,true]},
 
-  {ticker:"GILD",name:"Gilead Sciences",sector:"Biotechnology/HIV",idx:"ndx",price:131.27,chg:"+4.21%",stage:1,ma30w:133.65,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 58",h52:"-17%",
+  {ticker:"GILD",name:"Gilead Sciences",sector:"Biotechnology/HIV",idx:"ndx",price:131.27,chg:"+4.21%",stage:4,ma30w:133.65,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 58",h52:"-17%",
    mtt:[false,true,true,false,true,false,true,false]},
 
   {ticker:"VRTX",name:"Vertex Pharmaceuticals",sector:"Farmacja/Genetyka",idx:"ndx",price:437.17,chg:"-1.93%",stage:2,ma30w:490,matrend:"lekko ↓",vol:"Stabilny",rs:"Neutralna",h52:"-25%",
@@ -1815,13 +1904,13 @@ ndx: [
   {ticker:"CMCSA",name:"Comcast",sector:"Kablówka/Media",idx:"ndx",price:23.79,chg:"+0.25%",stage:4,ma30w:27.56,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-30%",
    mtt:[false,true,true,false,false,false,false,false]},
 
-  {ticker:"WBD",name:"Warner Bros. Discovery",sector:"Media/Streaming",idx:"ndx",price:26.48,chg:"-1.23%",stage:4,ma30w:27.48,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 45",h52:"-12%",
+  {ticker:"WBD",name:"Warner Bros. Discovery",sector:"Media/Streaming",idx:"ndx",price:26.48,chg:"-1.23%",stage:1,ma30w:27.48,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 45",h52:"-12%",
    mtt:[false,true,true,false,false,true,true,false]},
 
   {ticker:"CHTR",name:"Charter Communications",sector:"Kablówka/Internet",idx:"ndx",price:139.2,chg:"+2.83%",stage:2,ma30w:355,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"Słaba",h52:"-55%",
    mtt:[false,false,false,false,false,false,false,false]},
 
-  {ticker:"PEPCO",name:"PepsiCo",sector:"FMCG/Napoje",idx:"ndx",price:144.22,chg:"+2.17%",stage:1,ma30w:151.61,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 52",h52:"-16%",
+  {ticker:"PEPCO",name:"PepsiCo",sector:"FMCG/Napoje",idx:"ndx",price:144.22,chg:"+2.17%",stage:4,ma30w:151.61,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 52",h52:"-16%",
    mtt:[false,true,true,false,false,false,true,false]},
 
   {ticker:"MDLZ",name:"Mondelez International",sector:"FMCG/Czekolada",idx:"ndx",price:63.91,chg:"+1.56%",stage:2,ma30w:65,matrend:"spłaszcza →",vol:"Stabilny",rs:"Neutralna",h52:"-15%",
@@ -1946,10 +2035,10 @@ nyse: [
   {ticker:"MA",name:"Mastercard",sector:"Płatności/Fintech",idx:"nyse",price:539.39,chg:"+3.24%",stage:1,ma30w:520.7,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"-10%",
    mtt:[true,false,true,false,true,false,true,true]},
 
-  {ticker:"GS",name:"Goldman Sachs",sector:"Investment Banking",idx:"nyse",price:1021,chg:"+0.14%",stage:3,ma30w:924.15,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-9%",
+  {ticker:"GS",name:"Goldman Sachs",sector:"Investment Banking",idx:"nyse",price:1021,chg:"+0.14%",stage:2,ma30w:924.15,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 47",h52:"-9%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"MS",name:"Morgan Stanley",sector:"Investment Banking",idx:"nyse",price:213.93,chg:"+0.98%",stage:3,ma30w:184.42,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 52",h52:"-7%",
+  {ticker:"MS",name:"Morgan Stanley",sector:"Investment Banking",idx:"nyse",price:213.93,chg:"+0.98%",stage:2,ma30w:184.42,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 52",h52:"-7%",
    mtt:[true,true,true,true,true,true,true,false]},
 
   {ticker:"BAC",name:"Bank of America",sector:"Bankowość",idx:"nyse",price:58.73,chg:"+0.63%",stage:2,ma30w:52.83,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 70",h52:"-1%",
@@ -2057,7 +2146,7 @@ nyse: [
   {ticker:"GD",name:"General Dynamics",sector:"Obrona/Stocznie",idx:"nyse",price:373.54,chg:"+2.94%",stage:2,ma30w:347.29,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 67",h52:"0%",
    mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"BA",name:"Boeing",sector:"Lotnictwo/Obrona",idx:"nyse",price:226.49,chg:"+3.62%",stage:2,ma30w:221.73,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 56",h52:"-11%",
+  {ticker:"BA",name:"Boeing",sector:"Lotnictwo/Obrona",idx:"nyse",price:226.49,chg:"+3.62%",stage:1,ma30w:221.73,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 56",h52:"-11%",
    mtt:[true,true,true,true,true,true,true,false]},
 
   {ticker:"CAT",name:"Caterpillar",sector:"Maszyny budowlane",idx:"nyse",price:963.53,chg:"-2.81%",stage:2,ma30w:755.35,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 51",h52:"-10%",
@@ -2075,7 +2164,7 @@ nyse: [
   {ticker:"ITW",name:"Illinois Tool Works",sector:"Przemysł/Narzędzia",idx:"nyse",price:272.76,chg:"+1.41%",stage:2,ma30w:263.34,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 65",h52:"-10%",
    mtt:[true,true,true,false,true,false,true,false]},
 
-  {ticker:"EMR",name:"Emerson Electric",sector:"Automatyka przemysłowa",idx:"nyse",price:139.05,chg:"-0.34%",stage:4,ma30w:140.96,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 44",h52:"-16%",
+  {ticker:"EMR",name:"Emerson Electric",sector:"Automatyka przemysłowa",idx:"nyse",price:139.05,chg:"-0.34%",stage:3,ma30w:140.96,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 44",h52:"-16%",
    mtt:[false,true,true,false,false,false,true,false]},
 
   {ticker:"UPS",name:"United Parcel Service",sector:"Logistyka/Dostawy",idx:"nyse",price:110.66,chg:"+1.02%",stage:2,ma30w:104.48,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 60",h52:"-10%",
@@ -2093,7 +2182,7 @@ nyse: [
   {ticker:"KO",name:"Coca-Cola",sector:"Napoje/FMCG",idx:"nyse",price:84.14,chg:"+3.51%",stage:2,ma30w:76.26,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 64",h52:"0%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"MCD",name:"McDonald's",sector:"Restauracje/Fast Food",idx:"nyse",price:280.63,chg:"+4.16%",stage:1,ma30w:303.64,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-18%",
+  {ticker:"MCD",name:"McDonald's",sector:"Restauracje/Fast Food",idx:"nyse",price:280.63,chg:"+4.16%",stage:4,ma30w:303.64,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-18%",
    mtt:[false,true,true,false,false,false,true,false]},
 
   {ticker:"HD",name:"Home Depot",sector:"Home Improvement",idx:"nyse",price:357.9,chg:"+2.01%",stage:1,ma30w:346.02,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 69",h52:"-16%",
@@ -2235,12 +2324,60 @@ nyse: [
    mtt:[false,false,true,false,true,false,false,false]}
 ],
 
-};; // end STOCKS
+};;; // end STOCKS
 
 // ══════════════════════════════════════════════════
 // APP
 // ══════════════════════════════════════════════════
 let currentTab='wig20', stageF='all', mttF=0, sectorF='all', searchQ='';
+let sortMode='default'; // 'default' | 'ext-asc' (najmniej rozciągnięte wg ATR)
+let crossF=false; // filtr: tylko "🎯 Blisko przebicia" (Faza 2 + niski EXT + wolumen)
+
+// ── ATR Matrix: wskaźnik rozciągnięcia (cena - SMA50) / ATR14 ──────────────
+// Deterministyczny "hash" tickera — do wygenerowania stabilnej, powtarzalnej
+// zmienności (ATR%) tam, gdzie nie mamy realnych danych historycznych OHLC.
+function _tickerHash(str){
+  let h=0;
+  for(let i=0;i<str.length;i++){ h=((h<<5)-h+str.charCodeAt(i))|0; }
+  return Math.abs(h);
+}
+// Szacowany ATR14 jako % ceny — stabilny w czasie dla danego tickera (1.4%–3.6%)
+function estimateATRPct(ticker){
+  const h=_tickerHash(ticker);
+  return 1.4 + (h%220)/100;
+}
+// Zwraca {price, sma50, atr14, ext} — ext = (cena - SMA50) / ATR14
+// Jeśli mamy realne dane live (sma50 z TradingView) — używamy ich.
+// W przeciwnym razie SMA50 jest estymowane z ceny i MA30W (SMA150) tak,
+// by leżało bliżej ceny niż SMA150 (typowe zachowanie szybszej średniej).
+function getExtensionData(s){
+  const ld=liveData[s.ticker];
+  const price=(ld && ld.price!=null)?ld.price:s.price;
+  const sma50=(ld && ld.sma50!=null)?ld.sma50:(s.ma30w + (price - s.ma30w)*0.55);
+  const atrPct=estimateATRPct(s.ticker)/100;
+  const atr14=price*atrPct;
+  const ext=atr14>0 ? (price - sma50)/atr14 : 0;
+  return {price, sma50, atr14, ext};
+}
+// Klasa CSS dla wartości rozciągnięcia
+function extClass(ext){
+  if(ext<=1) return 'ext-low';      // blisko wejścia — niskie ryzyko
+  if(ext<=2.5) return 'ext-mid';    // umiarkowane rozciągnięcie
+  return 'ext-high';                // przegrzane — pogoń za ceną
+}
+
+// ── „Blisko przebicia" — prosty wewnętrzny cross-screener ──────────────────
+// Nie wprowadzamy osobnych metodologii (Qullamaggie itp.) — to tylko własne
+// przecięcie tego, co już liczymy: Faza 2 (Weinstein) + niskie rozciągnięcie
+// wg ATR Matrix + wolumen powyżej średniej. Traktuj jako szybki skrót,
+// nie jako dodatkową, konkurencyjną metodę analizy.
+function isCrossSignal(s){
+  if(s.stage!==2) return false;
+  const {ext}=getExtensionData(s);
+  if(extClass(ext)!=='ext-low') return false;
+  const volOk=['Powyżej śr.','Wysoki','B. wysoki'].includes(s.vol);
+  return volOk;
+}
 const sp={1:25,2:50,3:75,4:100}, dp={1:12.5,2:37.5,3:62.5,4:87.5};
 const smap={buy:'tag-buy',watch:'tag-watch',caution:'tag-caution',avoid:'tag-avoid',neutral:'tag-neutral'};
 const amap={buy:'act-buy',watch:'act-watch',caution:'act-caution',avoid:'act-avoid'};
@@ -2293,6 +2430,14 @@ function renderCard(s){
   const mttFillPctVal = hasLive ? pct : 0;
   const mttFillCol = hasLive ? col : 'rgba(255,255,255,.10)';
 
+  // ATR Matrix — wskaźnik rozciągnięcia (cena-SMA50)/ATR14
+  const extD = getExtensionData(s);
+  const extCls = extClass(extD.ext);
+  const extTxt = (extD.ext>=0?'+':'') + extD.ext.toFixed(1) + 'x ATR';
+
+  // Prosty cross-screener: Faza 2 + niskie rozciągnięcie + wolumen pow. śr.
+  const crossTag = isCrossSignal(s) ? `<span class="stag tag-cross" title="Faza 2 + niskie rozciągnięcie ATR + wolumen powyżej średniej">🎯 Blisko przebicia</span>` : '';
+
   return `<div class="card stage-${s.stage}"
     data-stage="${s.stage}" data-mtt="${score}" data-sector="${s.sector}"
     data-name="${s.name.toLowerCase()}" data-ticker="${s.ticker.toLowerCase()}"
@@ -2311,6 +2456,7 @@ function renderCard(s){
           <div class="stage-num">${s.stage}</div>
           <div class="stage-lbl">${['','AKUM.','WZROST','DYST.','SPADEK'][s.stage]}</div>
         </div>
+        <div class="ext-badge ${extCls}" title="Rozciągnięcie od SMA50 w jednostkach ATR14: (cena-SMA50)/ATR14">${extTxt}</div>
       </div>
     </div>
     <div class="mini-chart">
@@ -2335,23 +2481,51 @@ function renderCard(s){
       <div class="cm"><div class="cm-l">TREND MA</div><div class="cm-v nu" style="font-size:10px">${s.matrend}</div></div>
       <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu" style="font-size:10px">${s.vol}</div></div>
       <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu" style="font-size:10px">${s.rs}</div></div>
+      <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}">${extTxt}</div></div>
     </div>
     <div class="card-signals">
-      <div>${mttTag}</div>
+      <div>${mttTag}${crossTag}</div>
       ${TV_MAP[s.ticker] ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${TV_MAP[s.ticker].replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
     </div>
   </div>`;
 }
 
 function getFiltered(){
-  return STOCKS[currentTab].filter(s=>{
+  const arr = STOCKS[currentTab].filter(s=>{
     if(stageF!=='all' && s.stage!==parseInt(stageF)) return false;
     if(mttF>0 && mttScore(s.mtt)<mttF) return false;
     if(sectorF!=='all' && !s.sector.toLowerCase().includes(sectorF.toLowerCase())) return false;
+    if(crossF && !isCrossSignal(s)) return false;
     const q=searchQ.toLowerCase();
     if(q && !s.name.toLowerCase().includes(q) && !s.ticker.toLowerCase().includes(q) && !s.sector.toLowerCase().includes(q)) return false;
     return true;
   });
+  if(sortMode==='ext-asc'){
+    // Najmniej rozciągnięte (najbliżej SMA50 w jednostkach ATR) na górze —
+    // praktyczne dla szukania dobrego punktu wejścia, a nie pogoni za ceną.
+    arr.sort((a,b)=>getExtensionData(a).ext - getExtensionData(b).ext);
+  }
+  return arr;
+}
+
+function filterCross(){
+  const btn=document.getElementById('fcross');
+  crossF=!crossF;
+  btn.classList.toggle('active',crossF);
+  renderGrid();
+}
+
+// Sortowanie: "najmniej rozciągnięte" — najsensowniejsze w Fazie 2, więc przy
+// wyborze automatycznie ustawiamy filtr Fazy 2 (użytkownik może go potem zmienić).
+function setSort(val){
+  sortMode = val;
+  if(val==='ext-asc' && stageF!=='2'){
+    stageF='2';
+    document.querySelectorAll('.btn:not(#fmtt):not(#fmtt8):not(#fcross)').forEach(b=>b.classList.remove('active'));
+    const s2btn=document.querySelector('.btn.s2a');
+    if(s2btn) s2btn.classList.add('active');
+  }
+  renderGrid();
 }
 
 
@@ -2409,11 +2583,12 @@ function renderCompact(data) {
     const cur    = currency[s.idx];
 
     const liveBadge = liveData[s.ticker] ? '<span class="ct-live">LIVE</span>' : '';
+    const crossBadge = isCrossSignal(s) ? '<span class="ct-live" style="background:rgba(240,180,41,.15);color:#f0b429;border-color:rgba(240,180,41,.3)" title="Faza 2 + niski EXT + wolumen">🎯</span>' : '';
 
     return `<tr onclick="openModal('${s.ticker}','${s.idx}')" data-ticker="${s.ticker.toLowerCase()}" data-idx="${s.idx}">
       <td><span class="ct-stage ct-s${s.stage}">${s.stage}</span></td>
       <td>
-        <div class="ct-ticker">${s.ticker}${liveBadge}</div>
+        <div class="ct-ticker">${s.ticker}${liveBadge}${crossBadge}</div>
         <div class="ct-name">${s.name}</div>
       </td>
       <td style="font-size:10px;color:var(--muted)">${s.sector}</td>
@@ -2488,12 +2663,13 @@ function renderGrid(){
 function renderSummary(){
   const all=STOCKS[currentTab];
   const c={1:0,2:0,3:0,4:0};
-  let mtt8=0,mtt6=0;
+  let mtt8=0,mtt6=0,cross=0;
   all.forEach(s=>{
     c[s.stage]++;
     const sc=mttScore(s.mtt);
     if(sc===8)mtt8++;
     if(sc>=6)mtt6++;
+    if(isCrossSignal(s))cross++;
   });
   const n=all.length;
   document.getElementById('summary').innerHTML=`
@@ -2505,10 +2681,12 @@ function renderSummary(){
       <div class="ss"><span class="ss-l">Faza 4</span><span class="ss-v s4">${c[4]}</span></div>
       <div class="ss"><span class="ss-l">MTT 8/8</span><span class="ss-v mtt">${mtt8}</span></div>
       <div class="ss"><span class="ss-l">MTT ≥6/8</span><span class="ss-v mtt">${mtt6}</span></div>
+      <div class="ss"><span class="ss-l">🎯 Blisko przebicia</span><span class="ss-v" style="color:#f0b429">${cross}</span></div>
     </div>
     <div class="sum-note">
       <strong style="color:var(--s2)">${Math.round(c[2]/n*100)}% w Fazie 2</strong> ·
-      <strong style="color:var(--accent)">${mtt8} spółek z pełnym MTT (8/8)</strong>
+      <strong style="color:var(--accent)">${mtt8} spółek z pełnym MTT (8/8)</strong> ·
+      <strong style="color:#f0b429">${cross} spółek spełnia Faza 2 + niski EXT + wolumen (🎯)</strong>
     </div>`;
 }
 
@@ -2622,21 +2800,25 @@ function renderChangelog(){
     list.innerHTML = '<div class="cl-empty">Brak zarejestrowanych zmian faz'+(changelogFilter==='all'?'':' dla '+CL_MARKET_LABEL[changelogFilter])+'. Historia buduje się od kolejnej cotygodniowej aktualizacji.</div>';
     return;
   }
+  // Kanoniczny cykl Weinsteina: 1→2→3→4→1. Wszystko inne to nawrót/wyjątek.
+  const CANON_NEXT = {1:2, 2:3, 3:4, 4:1};
   // grupowanie po dacie, najnowsze na górze
   const byDate = {};
   items.forEach(e => { (byDate[e.date] = byDate[e.date] || []).push(e); });
   const dates = Object.keys(byDate).sort((a,b)=> b.localeCompare(a));
   list.innerHTML = dates.map(date => {
     const entries = byDate[date].map(e => {
-      const up = e.to < e.from; // niższy numer fazy = "lepsza" faza w kierunku 2 (uproszczenie wizualne)
       const dir = (e.to === 2 && e.from !== 2) ? 'up' : ((e.from === 2 && e.to !== 2) ? 'down' : (e.to > e.from ? 'down' : 'up'));
+      const isCanonical = CANON_NEXT[e.from] === e.to;
+      const warnBadge = isCanonical ? '' : '<span class="cl-warn-badge" title="Przejście niezgodne z kanonicznym cyklem 1→2→3→4→1 — nawrót lub wyjątek (np. nieudana dystrybucja / odbicie)">⚠️ przeciwne do cyklu</span>';
       return `
-        <div class="cl-entry ${dir}">
+        <div class="cl-entry ${dir} ${isCanonical ? '' : 'noncanon'}">
           <div class="cl-badge">${CL_MARKET_LABEL[e.mk] || e.mk}</div>
           <div class="cl-body">
             <div class="cl-line1">
               <span class="cl-ticker">${e.ticker}</span> — ${e.name}
               <span class="cl-phase-arrow">Faza ${e.from} → </span><span class="cl-phase-new s${e.to}">Faza ${e.to}</span>
+              ${warnBadge}
             </div>
             <div class="cl-reason">${e.reason}</div>
           </div>
@@ -2877,7 +3059,7 @@ function renderMarketView(mkt){
 
   stocks.forEach(s => {
     const ld = liveData[s.ticker] || {};
-    const stage = ld.price ? (calcStage(ld) || s.stage) : s.stage;
+    const stage = ld.price ? (calcStage(ld, s.stage) || s.stage) : s.stage;
     counts[stage] = (counts[stage]||0) + 1;
   });
 
@@ -3091,7 +3273,7 @@ function renderMarketView(mkt){
 
 function filterStage(s,btn){
   stageF=s;
-  document.querySelectorAll('.btn:not(#fmtt):not(#fmtt8)').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.btn:not(#fmtt):not(#fmtt8):not(#fcross)').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderGrid();
 }
@@ -3127,7 +3309,7 @@ function openModal(ticker,idx){
   const isLive = !!ld.price;
 
   // Faza — live kalkulacja lub statyczna
-  const liveStage = ld.price ? calcStage(ld) : null;
+  const liveStage = ld.price ? calcStage(ld, s.stage) : null;
   const stage = liveStage ?? s.stage;
 
   // MTT — live lub statyczne
@@ -3482,7 +3664,9 @@ async function fetchTVBatch(market, tvTickers) {
 let liveData = {};
 
 // ── Automatyczna klasyfikacja fazy Weinsteina ─────────────────────────────
-function calcStage(d) {
+// prevStage (opcjonalnie): obecna/poprzednia faza — używana do histerezy,
+// żeby uniknąć "migotania" fazy przy wartościach blisko progu ±2%.
+function calcStage(d, prevStage) {
   // Używa perf1M jako proxy nachylenia SMA150 (TV nie zwraca SMA150[20])
   // perf1M > +2%  → SMA150 rośnie   → Faza 2 lub 1
   // perf1M < -2%  → SMA150 spada    → Faza 3 lub 4
@@ -3495,15 +3679,27 @@ function calcStage(d) {
   const falling      = (perf1M ?? 0) < -2;
   const flat         = !rising && !falling;
   const weekUp       = (perfW ?? 0) > 0;
-  if (above && rising  && s150_gt_s200) return 2;
-  if (above && flat    && s150_gt_s200 && weekUp)  return 2;
-  if (above && falling && s150_gt_s200) return 3;
-  if (above && flat    && s150_gt_s200 && !weekUp) return 3;
-  if (!above && falling)                return 4;
-  if (!above && !s150_gt_s200)          return 4;
-  if (!above && flat)                   return 1;
-  if (!above && rising)                 return 1;
-  return 1;
+  let raw;
+  if (above && rising  && s150_gt_s200) raw = 2;
+  else if (above && flat    && s150_gt_s200 && weekUp)  raw = 2;
+  else if (above && falling && s150_gt_s200) raw = 3;
+  else if (above && flat    && s150_gt_s200 && !weekUp) raw = 3;
+  else if (!above && falling)                raw = 4;
+  else if (!above && !s150_gt_s200)          raw = 4;
+  else if (!above && flat)                   raw = 1;
+  else if (!above && rising)                 raw = 1;
+  else raw = 1;
+
+  // Histereza: jeśli nowa faza różni się od poprzedniej, a sygnał momentum
+  // (perf1M) jest zbyt słaby (blisko progu ±2%), zostaw starą fazę —
+  // wymagamy wyraźniejszego ruchu (>3%), żeby potwierdzić realną zmianę.
+  if (prevStage != null && raw !== prevStage) {
+    const HYST_BUFFER = 1; // dodatkowy margines ponad próg 2%
+    if (Math.abs(perf1M ?? 0) < (2 + HYST_BUFFER)) {
+      return prevStage;
+    }
+  }
+  return raw;
 }
 
 let lastRefresh = null;
