@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2076307128193560735",
+      "text": "Nissan CEO on why building in America is 'the strategy that's working' finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nNissan CEO on why building in America is &apos;the strategy that&apos;s working&apos;\n\nNissan&apos;s push to amplify its build in America efforts comes as rival Toyota made big news this week. \nfinance.yahoo.com",
+      "created_at": "2026-07-12T14:06:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2076292029336650239",
+      "text": "Coinbase, Lyft, and Axon prove there's more going on in markets than the 'Magnificent 7' finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nCoinbase, Lyft, and Axon prove there&apos;s more going on in markets than the &apos;Magnificent 7&apos;\n\nThere&apos;s more happening in the investor world than Micron, Nvidia, and earnings season.\nfinance.yahoo.com",
+      "created_at": "2026-07-12T13:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076276928844046685",
       "text": "Retail investing is booming — but the trade is getting pickier: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nRetail investing is booming — but the trade is getting pickier: Chart of the Day\n\nRetail investors are still crowding into the market — just not in the old buy-everything way.\nfinance.yahoo.com",
       "created_at": "2026-07-12T12:06:09Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075608225211171117",
-      "text": "South Korean chip giant $SKHYV just made its debut on the US stock market, claiming its place as the biggest IPO by a foreign company in the country. yhoo.it/4vHBSEp",
-      "created_at": "2026-07-10T15:48:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075603379246502292",
-      "text": "Wall Street is lining up bullish calls for where they think $SPCX should be priced.",
-      "created_at": "2026-07-10T15:29:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-12T12:44:49Z",
+  "_updated": "2026-07-12T14:19:59Z",
   "_username": "YahooFinance"
 }
