@@ -163,11 +163,12 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 .cm-l{font-size:8px;color:var(--muted);font-family:'Space Mono',monospace;margin-bottom:1px;}
 .cm-v{font-size:12px;font-weight:600;font-family:'Space Mono',monospace;}
 .cm-v.up{color:var(--s2);}.cm-v.dn{color:var(--s4);}.cm-v.nu{color:var(--text);}
-.cm-v.ext-low{color:var(--s2);}.cm-v.ext-mid{color:var(--s3);}.cm-v.ext-high{color:var(--s4);}
+.cm-v.ext-low{color:var(--s2);}.cm-v.ext-mid{color:var(--s3);}.cm-v.ext-high{color:var(--s4);}.cm-v.ext-stale{color:#7a839c;}
 .ext-badge{font-size:9px;font-family:'Space Mono',monospace;font-weight:700;padding:2px 6px;border-radius:5px;white-space:nowrap;margin-top:1px;}
 .ext-badge.ext-low{background:rgba(0,229,160,.14);color:var(--s2);border:1px solid rgba(0,229,160,.3);}
 .ext-badge.ext-mid{background:rgba(245,166,35,.14);color:var(--s3);border:1px solid rgba(245,166,35,.3);}
 .ext-badge.ext-high{background:rgba(255,77,77,.14);color:var(--s4);border:1px solid rgba(255,77,77,.3);}
+.ext-badge.ext-stale{background:rgba(122,131,156,.14);color:#9aa3ba;border:1px solid rgba(122,131,156,.3);font-size:8px;}
 
 /* .card-signals — styl w sekcji TV badge */
 .stag{padding:2px 7px;border-radius:3px;font-size:8px;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;}
@@ -2261,9 +2262,6 @@ nyse: [
   {ticker:"DE",name:"Deere & Company",sector:"Agro/Maszyny",idx:"nyse",price:586.86,chg:"-1.02%",stage:2,ma30w:560.44,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 46",h52:"-13%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"HON",name:"Honeywell",sector:"Przemysł/Automatyka",idx:"nyse",price:226.42,chg:"+1.34%",stage:4,ma30w:231.74,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 46",h52:"-13%",
-   mtt:[false,true,true,false,false,false,true,false]},
-
   {ticker:"MMM",name:"3M",sector:"Przemysł dywersyfikowany",idx:"nyse",price:150.54,chg:"-1.32%",stage:2,ma30w:108,matrend:"rosnąca ↑",vol:"Stabilny",rs:"Dobra",h52:"-10%",
    mtt:[false,false,false,false,false,false,false,false]},
 
@@ -2411,17 +2409,14 @@ nyse: [
   {ticker:"MDT",name:"Medtronic",sector:"MedTech/Urządzenia",idx:"nyse",price:83.87,chg:"+1.80%",stage:4,ma30w:89.33,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 60",h52:"-21%",
    mtt:[false,false,true,false,true,false,true,false]},
 
-  {ticker:"RTX2",name:"Becton Dickinson",sector:"MedTech/Diagnostyka",idx:"nyse",price:88.45,chg:"+0.60%",stage:3,ma30w:236,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"Słaba",h52:"-55%",
-   mtt:[false,false,false,false,false,false,false,false]},
-
   {ticker:"CI",name:"Cigna Group",sector:"Healthcare/PBM",idx:"nyse",price:293.46,chg:"+0.57%",stage:1,ma30w:278.95,matrend:"spłaszcza →",vol:"Malejący",rs:"RSI 58",h52:"-7%",
    mtt:[true,false,true,true,true,false,true,false]},
 
   {ticker:"CVS",name:"CVS Health",sector:"Farmacja/Healthcare",idx:"nyse",price:104.15,chg:"+1.30%",stage:2,ma30w:83.52,matrend:"rosnąca ↑",vol:"Wysoki",rs:"RSI 62",h52:"-2%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"BDX",name:"Becton Dickinson",sector:"Medtech/Igły",idx:"nyse",price:729.8,chg:"+2.73%",stage:2,ma30w:693.44,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 56",h52:"-10%",
-   mtt:[true,true,true,false,true,true,true,false]},
+  {ticker:"BDX",name:"Becton Dickinson",sector:"MedTech/Diagnostyka",idx:"nyse",price:88.45,chg:"+0.60%",stage:3,ma30w:236,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"Słaba",h52:"-55%",
+   mtt:[false,false,false,false,false,false,false,false]},
 
   {ticker:"BAX",name:"Baxter International",sector:"MedTech/Szpitale",idx:"nyse",price:22.62,chg:"+0.71%",stage:1,ma30w:19.14,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 64",h52:"-23%",
    mtt:[true,false,true,false,true,true,true,false]},
@@ -2453,18 +2448,34 @@ function estimateATRPct(ticker){
   const h=_tickerHash(ticker);
   return 1.4 + (h%220)/100;
 }
-// Zwraca {price, sma50, atr14, ext} — ext = (cena - SMA50) / ATR14
+// Zwraca {price, sma50, atr14, ext, stale} — ext = (cena - SMA50) / ATR14
 // Jeśli mamy realne dane live (sma50 z TradingView) — używamy ich.
 // W przeciwnym razie SMA50 jest estymowane z ceny i MA30W (SMA150) tak,
 // by leżało bliżej ceny niż SMA150 (typowe zachowanie szybszej średniej).
+//
+// stale=true oznacza, że cena i MA30W są tak rozjechane (np. spółka nie
+// dostała świeżych danych przy ostatnich cotygodniowych aktualizacjach —
+// stary ticker zniknął ze skanera), że wyliczony EXT byłby matematycznie
+// "poprawny", ale kompletnie niewiarygodny (np. -37x ATR). W takim wypadku
+// karta pokazuje ostrzeżenie zamiast liczby, a spółka jest pomijana w
+// sortowaniu "najmniej rozciągnięte" i w cross-screenerze 🎯.
 function getExtensionData(s){
-  const ld=liveData[s.ticker];
+  const ld=liveData[liveKey(s.idx, s.ticker)];
   const price=(ld && ld.price!=null)?ld.price:s.price;
   const sma50=(ld && ld.sma50!=null)?ld.sma50:(s.ma30w + (price - s.ma30w)*0.55);
   const atrPct=estimateATRPct(s.ticker)/100;
   const atr14=price*atrPct;
   const ext=atr14>0 ? (price - sma50)/atr14 : 0;
-  return {price, sma50, atr14, ext};
+  const ratio = s.ma30w>0 ? price/s.ma30w : 1;
+  // Zawężone kryterium "stale" — twardy próg, niezależny od fazy. Cena poniżej
+  // 45% wartości MA30W to w praktyce zawsze rozjazd danych (spółka nie dostała
+  // świeżych danych przy ostatnich cotygodniowych aktualizacjach), a nie
+  // realny, choć ekstremalny ruch rynkowy. Świadomie NIE łączymy tego z fazą
+  // (np. "Faza 1 + cena nad MA30W") — to może być zwykłe opóźnienie w ręcznej
+  // reklasyfikacji fazy, a nie zepsute dane, i nie chcemy tego mylnie oznaczać
+  // jako "dane nieaktualne".
+  const stale = !s.ma30w || ratio < 0.45;
+  return {price, sma50, atr14, ext, stale};
 }
 // Klasa CSS dla wartości rozciągnięcia
 function extClass(ext){
@@ -2480,7 +2491,8 @@ function extClass(ext){
 // nie jako dodatkową, konkurencyjną metodę analizy.
 function isCrossSignal(s){
   if(s.stage!==2) return false;
-  const {ext}=getExtensionData(s);
+  const {ext,stale}=getExtensionData(s);
+  if(stale) return false; // niewiarygodne dane — nie kwalifikujemy
   if(extClass(ext)!=='ext-low') return false;
   const volOk=['Powyżej śr.','Wysoki','B. wysoki'].includes(s.vol);
   return volOk;
@@ -2501,7 +2513,7 @@ function fmt(p,tab){
 function renderCard(s){
   const ch=s.chg.startsWith('+')?'up':'dn';
   const mas=s.price>s.ma30w?'up':'dn';
-  const ld = liveData[s.ticker];
+  const ld = liveData[liveKey(s.idx, s.ticker)];
 
   // MTT: użyj live danych jeśli dostępne, fallback na s.mtt (startowo all false = szare)
   // Derive high52 from static h52 field (TV nie zwraca 52W data przez API)
@@ -2539,8 +2551,13 @@ function renderCard(s){
 
   // ATR Matrix — wskaźnik rozciągnięcia (cena-SMA50)/ATR14
   const extD = getExtensionData(s);
-  const extCls = extClass(extD.ext);
-  const extTxt = (extD.ext>=0?'+':'') + extD.ext.toFixed(1) + 'x ATR';
+  const extCls = extD.stale ? 'ext-stale' : extClass(extD.ext);
+  const extTxt = extD.stale
+    ? '⚠️ dane nieaktualne'
+    : (extD.ext>=0?'+':'') + extD.ext.toFixed(1) + 'x ATR';
+  const extTitle = extD.stale
+    ? 'Cena i MA30W są zbyt rozjechane, żeby wiarygodnie policzyć rozciągnięcie — spółka nie dostała świeżych danych przy ostatnich aktualizacjach.'
+    : 'Rozciągnięcie od SMA50 w jednostkach ATR14: (cena-SMA50)/ATR14';
 
   // Prosty cross-screener: Faza 2 + niskie rozciągnięcie + wolumen pow. śr.
   const crossTag = isCrossSignal(s) ? `<span class="stag tag-cross" title="Faza 2 + niskie rozciągnięcie ATR + wolumen powyżej średniej">🎯 Blisko przebicia</span>` : '';
@@ -2553,7 +2570,7 @@ function renderCard(s){
     <span class="card-hint">↗ szczegóły</span>
     <div class="card-header">
       <div class="ch-info">
-        <div class="c-ticker">${s.ticker}${liveData[s.ticker]?'<span class="live-badge">LIVE</span>':''}</div>
+        <div class="c-ticker">${s.ticker}${liveData[liveKey(s.idx, s.ticker)]?'<span class="live-badge">LIVE</span>':''}</div>
         <div class="c-name">${s.name}</div>
         <div class="c-sector">${s.sector}</div>
         <span class="c-idx idx-${s.idx}">${idxName[s.idx]}</span>
@@ -2563,7 +2580,7 @@ function renderCard(s){
           <div class="stage-num">${s.stage}</div>
           <div class="stage-lbl">${['','AKUM.','WZROST','DYST.','SPADEK'][s.stage]}</div>
         </div>
-        <div class="ext-badge ${extCls}" title="Rozciągnięcie od SMA50 w jednostkach ATR14: (cena-SMA50)/ATR14">${extTxt}</div>
+        <div class="ext-badge ${extCls}" title="${extTitle}">${extTxt}</div>
       </div>
     </div>
     <div class="mini-chart">
@@ -2588,11 +2605,11 @@ function renderCard(s){
       <div class="cm"><div class="cm-l">TREND MA</div><div class="cm-v nu" style="font-size:10px">${s.matrend}</div></div>
       <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu" style="font-size:10px">${s.vol}</div></div>
       <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu" style="font-size:10px">${s.rs}</div></div>
-      <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}">${extTxt}</div></div>
+      <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}" style="font-size:${extD.stale?'9.5px':'12px'}">${extTxt}</div></div>
     </div>
     <div class="card-signals">
       <div class="cs-tags">${mttTag}${crossTag}</div>
-      ${TV_MAP[s.ticker] ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${TV_MAP[s.ticker].replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
+      ${getTVSymbol(s.idx, s.ticker) ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${getTVSymbol(s.idx, s.ticker).replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
     </div>
   </div>`;
 }
@@ -2610,7 +2627,15 @@ function getFiltered(){
   if(sortMode==='ext-asc'){
     // Najmniej rozciągnięte (najbliżej SMA50 w jednostkach ATR) na górze —
     // praktyczne dla szukania dobrego punktu wejścia, a nie pogoni za ceną.
-    arr.sort((a,b)=>getExtensionData(a).ext - getExtensionData(b).ext);
+    // Spółki z niewiarygodnymi danymi (stale) lądują zawsze na końcu listy,
+    // niezależnie od tego jak ekstremalna (i myląca) byłaby ich surowa wartość EXT.
+    arr.sort((a,b)=>{
+      const da=getExtensionData(a), db=getExtensionData(b);
+      if(da.stale && !db.stale) return 1;
+      if(!da.stale && db.stale) return -1;
+      if(da.stale && db.stale) return 0;
+      return da.ext - db.ext;
+    });
   }
   return arr;
 }
@@ -2689,7 +2714,7 @@ function renderCompact(data) {
     const cls    = mttScoreClass(score);
     const cur    = currency[s.idx];
 
-    const liveBadge = liveData[s.ticker] ? '<span class="ct-live">LIVE</span>' : '';
+    const liveBadge = liveData[liveKey(s.idx, s.ticker)] ? '<span class="ct-live">LIVE</span>' : '';
     const crossBadge = isCrossSignal(s) ? '<span class="ct-live" style="background:rgba(240,180,41,.15);color:#f0b429;border-color:rgba(240,180,41,.3)" title="Faza 2 + niski EXT + wolumen">🎯</span>' : '';
 
     return `<tr onclick="openModal('${s.ticker}','${s.idx}')" data-ticker="${s.ticker.toLowerCase()}" data-idx="${s.idx}">
@@ -2749,7 +2774,8 @@ function renderGrid(){
     if (Object.keys(liveData).length > 0) {
       g.querySelectorAll('tr[data-ticker]').forEach(row => {
         const ticker = row.dataset.ticker?.toUpperCase();
-        const d = liveData[ticker];
+        const idx = row.dataset.idx;
+        const d = liveData[liveKey(idx, ticker)];
         if (!d) return;
         const tickerEl = row.querySelector('.ct-ticker');
         if (tickerEl && !tickerEl.querySelector('.ct-live')) {
@@ -3165,7 +3191,7 @@ function renderMarketView(mkt){
   const total = stocks.length;
 
   stocks.forEach(s => {
-    const ld = liveData[s.ticker] || {};
+    const ld = liveData[liveKey(s.idx, s.ticker)] || {};
     const stage = ld.price ? (calcStage(ld, s.stage) || s.stage) : s.stage;
     counts[stage] = (counts[stage]||0) + 1;
   });
@@ -3224,7 +3250,7 @@ function renderMarketView(mkt){
   // 4. MA gauges
   let aboveSma200=0, aboveSma50=0, validSma=0;
   stocks.forEach(s => {
-    const ld = liveData[s.ticker] || {};
+    const ld = liveData[liveKey(s.idx, s.ticker)] || {};
     if(ld.price && ld.sma200 && ld.sma50){
       validSma++;
       if(ld.price > ld.sma200) aboveSma200++;
@@ -3279,7 +3305,7 @@ function renderMarketView(mkt){
   // 5. New Highs / Lows
   let nearHigh=0, nearLow=0, validHL=0;
   stocks.forEach(s => {
-    const ld = liveData[s.ticker] || {};
+    const ld = liveData[liveKey(s.idx, s.ticker)] || {};
     if(ld.price && ld.high52 && ld.low52){
       validHL++;
       if(ld.price >= ld.high52 * 0.95) nearHigh++;
@@ -3328,7 +3354,7 @@ function renderMarketView(mkt){
   // 6. MTT stats
   let mtt8=0, mtt6=0, mtt4=0, mtt0=0;
   stocks.forEach(s => {
-    const ld = liveData[s.ticker] || {};
+    const ld = liveData[liveKey(s.idx, s.ticker)] || {};
     let arr = s.mtt;
     if(ld.price && ld.sma200 && ld.sma150 && ld.sma50){
       const {price:p,sma200,sma150,sma50,rsi,high52,low52}=ld;
@@ -3408,7 +3434,7 @@ function openModal(ticker,idx){
   if(!s)return;
 
   // Live data override
-  const ld = liveData[ticker] || {};
+  const ld = liveData[liveKey(idx, ticker)] || {};
   const price  = ld.price  ?? s.price;
   const ma30w  = ld.sma150 ?? s.ma30w;
   const chgNum = ld.chg    ?? null;
@@ -3598,7 +3624,7 @@ const TV_MAP = {
   'BAS':'XETR:BAS',  'BAYN':'XETR:BAYN','ALV':'XETR:ALV',  'ADS':'XETR:ADS',
   'SIE':'XETR:SIE',  'DBK':'XETR:DBK',  'CON':'XETR:CON',  'MBG':'XETR:MBG',
   'P911':'XETR:P911','HEN3':'XETR:HEN3','CBK':'XETR:CBK',  'DB1':'XETR:DB1',
-  'BMW':'XETR:BMW',  'FME':'XETR:FME',  'DTE':'XETR:DTE',  'MRK':'XETR:MRK',
+  'BMW':'XETR:BMW',  'FME':'XETR:FME',  'DTE':'XETR:DTE',  // 'MRK' (Merck KGaA) — patrz TV_MAP_OVERRIDE niżej, koliduje z NYSE:MRK
   'IFX':'XETR:IFX',  'MUV2':'XETR:MUV2','SAP':'XETR:SAP',  'RHM':'XETR:RHM',
   'BEI':'XETR:BEI',  'FRE':'XETR:FRE',  'GEA':'XETR:GEA',  'HNR1':'XETR:HNR1',
   'RWE':'XETR:RWE',  'MTX':'XETR:MTX',  'SY1':'XETR:SY1',  'EOAN':'XETR:EOAN','BNR':'XETR:BNR',  'VOW3':'XETR:VOW3','VNA':'XETR:VNA',
@@ -3634,6 +3660,7 @@ const TV_MAP = {
   'CMCSA':'NASDAQ:CMCSA','CTSH':'NASDAQ:CTSH',   'HON':'NASDAQ:HON',
   'ODFL':'NASDAQ:ODFL',  'PCAR':'NASDAQ:PCAR',   'FAST':'NASDAQ:FAST',
   'CTAS':'NASDAQ:CTAS',  'ROP':'NASDAQ:ROP',
+  'FER':'NASDAQ:FER',    'VRSK':'NASDAQ:VRSK',   'ORLY':'NASDAQ:ORLY',
   // ── NYSE ───────────────────────────────────────────
   'JPM':'NYSE:JPM',    'BRK.B':'NYSE:BRK.B',  'V':'NYSE:V',      'MA':'NYSE:MA',
   'GS':'NYSE:GS',      'MS':'NYSE:MS',         'BAC':'NYSE:BAC',  'C':'NYSE:C',
@@ -3650,20 +3677,52 @@ const TV_MAP = {
   'T':'NYSE:T',        'VZ':'NYSE:VZ',          'PM':'NYSE:PM',    'MO':'NYSE:MO',
   'SPG':'NYSE:SPG',   'PSA':'NYSE:PSA',        'AMT':'NYSE:AMT',  'BX':'NYSE:BX',
   'WM':'NYSE:WM',     'GLW':'NYSE:GLW',        'SLB':'NYSE:SLB',  'HAL':'NYSE:HAL',
-  'EOG':'NYSE:EOG',   'DVN':'NYSE:DVN',        'FANG':'NYSE:FANG','BKR':'NYSE:BKR',
-  'ADP':'NYSE:ADP',   'TRV':'NYSE:TRV',        'BK':'NYSE:BK',    'MET':'NYSE:MET',
+  'EOG':'NYSE:EOG',   'DVN':'NYSE:DVN',        'FANG':'NASDAQ:FANG','BKR':'NASDAQ:BKR',
+  'ADP':'NASDAQ:ADP', 'TRV':'NYSE:TRV',        'BK':'NYSE:BK',    'MET':'NYSE:MET',
   'AIG':'NYSE:AIG',   'PRU':'NYSE:PRU',        'USB':'NYSE:USB',  'PNC':'NYSE:PNC',
   'ABT':'NYSE:ABT',   'BMY':'NYSE:BMY',        'DHR':'NYSE:DHR',  'MDT':'NYSE:MDT',
-  'CI':'NYSE:CI',     'CVS':'NYSE:CVS',        'DXCM':'NYSE:DXCM','IDXX':'NYSE:IDXX',
-  'GEHC':'NYSE:GEHC', 'ALNY':'NYSE:ALNY',      'REGN':'NYSE:REGN','VRTX':'NYSE:VRTX',
+  'CI':'NYSE:CI',     'CVS':'NYSE:CVS',        'DXCM':'NASDAQ:DXCM','IDXX':'NASDAQ:IDXX',
+  'GEHC':'NASDAQ:GEHC', 'ALNY':'NASDAQ:ALNY',  'REGN':'NASDAQ:REGN','VRTX':'NASDAQ:VRTX',
   'ZBH':'NYSE:ZBH',   'BAX':'NYSE:BAX',        'F':'NYSE:F',      'LOW':'NYSE:LOW',
-  'TGT':'NYSE:TGT',   'KHC':'NYSE:KHC',        'GIS':'NYSE:GIS',  'KMB':'NYSE:KMB',
-  'CL':'NYSE:CL',     'YUM':'NYSE:YUM',        'MDLZ':'NYSE:MDLZ','MMM2':'NYSE:MMM',
-  'ITW':'NYSE:ITW',   'EMR':'NYSE:EMR',        'CSX':'NYSE:CSX',  'HON2':'NYSE:HON',
+  'TGT':'NYSE:TGT',   'KHC':'NASDAQ:KHC',      'GIS':'NYSE:GIS',  'KMB':'NYSE:KMB',
+  'CL':'NYSE:CL',     'YUM':'NYSE:YUM',        'MDLZ':'NASDAQ:MDLZ','MMM':'NYSE:MMM',
+  'ITW':'NYSE:ITW',   'EMR':'NYSE:EMR',        'CSX':'NASDAQ:CSX',
   'KMI':'NYSE:KMI',   'OKE':'NYSE:OKE',        'SRE':'NYSE:SRE',  'FRC2':'NYSE:BEN',
-  'SWK':'NYSE:SWK',   'HPQ':'NYSE:HPQ',        'CHTR':'NYSE:CHTR','SAP2':'NYSE:SAP',
-  'PFE':'NYSE:PFE',   'WBD2':'NYSE:WBD',       'MSTR':'NYSE:MSTR',
+  'SWK':'NYSE:SWK',   'HPQ':'NYSE:HPQ',        'SAP2':'NYSE:SAP',
+  'PFE':'NYSE:PFE',
   'SPOT':'NYSE:SPOT',
+  'TRI':'NYSE:TRI',   'NOV':'NYSE:NOV',        'MSTR':'NASDAQ:MSTR','CHTR':'NASDAQ:CHTR',
+}
+
+// ── Kolizje tickerów między rynkami ─────────────────────────────────────
+// TV_MAP jest płaskim obiektem kluczowanym samym tickerem, więc gdy dwie
+// RÓŻNE spółki na różnych giełdach mają identyczny symbol (np. BDX =
+// Budimex na GPW ORAZ Becton Dickinson na NYSE; MRK = Merck KGaA na XETR
+// ORAZ Merck & Co. na NYSE), zwykły TV_MAP['TICKER'] jest niejednoznaczny —
+// druga definicja w obiekcie po prostu nadpisuje pierwszą, więc jedna ze
+// spółek nigdy nie dostaje własnych, poprawnych danych (a czasem dostaje
+// PODMIENIONE dane tej drugiej spółki, co jest gorsze niż brak danych).
+//
+// Rozwiązanie: dla tych konkretnych par (mk:ticker) trzymamy osobne,
+// jednoznaczne mapowanie tutaj, a getTVSymbol()/liveKey() poniżej używają
+// go zamiast płaskiego TV_MAP, gdziekolwiek mamy dostępny kontekst rynku (idx).
+const TV_MAP_OVERRIDE = {
+  'dax:MRK':  'XETR:MRK',  // Merck KGaA — koliduje z nyse:MRK (Merck & Co.)
+  'nyse:BDX': 'NYSE:BDX',  // Becton Dickinson — koliduje z wig20:BDX (Budimex)
+};
+
+// Zwraca poprawny symbol TradingView dla danej spółki, uwzględniając
+// kolizje z TV_MAP_OVERRIDE. Zawsze wywołuj z idx, jeśli jest dostępny —
+// sam ticker bez kontekstu rynku jest niejednoznaczny dla kolidujących par.
+function getTVSymbol(idx, ticker) {
+  return TV_MAP_OVERRIDE[`${idx}:${ticker}`] || TV_MAP[ticker];
+}
+
+// Klucz do liveData — kwalifikowany rynkiem, żeby dwie różne spółki o tym
+// samym tickerze (BDX, MRK) nigdy nie nadpisywały sobie nawzajem danych
+// w tym samym slocie liveData['BDX'] itd.
+function liveKey(idx, ticker) {
+  return `${idx}:${ticker}`;
 }
 
 // TV Screener columns we want
@@ -3687,10 +3746,9 @@ const TV_COLUMNS = [
 
 // Group tickers by exchange for batch TV requests
 const TV_BATCH_SIZE = 100;
-function groupByExchange(tickers) {
+function groupByExchange(tvSymbols) {
   const raw = {};
-  tickers.forEach(t => {
-    const tv = TV_MAP[t];
+  tvSymbols.forEach(tv => {
     if (!tv) return;
     const [exch] = tv.split(':');
     const exchMap = {
@@ -3822,12 +3880,17 @@ let refreshInProgress = false;
 
 async function fetchAll52W(tickers) {
   let fromBR=0, fromH52=0, rsSet=0;
+  // BiznesRadar/Ariva pokrywają tylko WIG20+mWIG40+DAX — nigdy NDX/NYSE.
+  // Ograniczenie to jest ważne, bo statyczne tabele BR_52W/BR_PERF52/BR_RS_RANK
+  // są kluczowane samym tickerem — bez tego ograniczenia spółka nyse:BDX
+  // (Becton Dickinson) dostałaby dane wig20:BDX (Budimex) z tych tabel.
+  const BR_MARKETS = ['wig20','mwig40','dax'];
   ['wig20','mwig40','dax','ndx','nyse'].forEach(tab => {
     (STOCKS[tab]||[]).forEach(s => {
-      const d = liveData[s.ticker];
+      const d = liveData[liveKey(tab, s.ticker)];
       if (!d) return;
-      // 52W high/low — BR/Ariva lub fallback z h52
-      if (BR_52W[s.ticker]) {
+      // 52W high/low — BR/Ariva (tylko PL+DE) lub fallback z h52
+      if (BR_MARKETS.includes(tab) && BR_52W[s.ticker]) {
         d.high52 = BR_52W[s.ticker].high52;
         d.low52  = BR_52W[s.ticker].low52;
         fromBR++;
@@ -3837,8 +3900,8 @@ async function fetchAll52W(tickers) {
         fromH52++;
       }
       // Perf.52 i RS Rank
-      if (BR_PERF52[s.ticker] != null) d.perf52  = BR_PERF52[s.ticker];
-      if (BR_RS_RANK[s.ticker] != null){ d.rsRank = BR_RS_RANK[s.ticker]; rsSet++; }
+      if (BR_MARKETS.includes(tab) && BR_PERF52[s.ticker] != null) d.perf52  = BR_PERF52[s.ticker];
+      if (BR_MARKETS.includes(tab) && BR_RS_RANK[s.ticker] != null){ d.rsRank = BR_RS_RANK[s.ticker]; rsSet++; }
     });
   });
   console.log(`📅 52W: ${fromBR} z BR/Ariva + ${fromH52} z h52 | RS Rank: ${rsSet} spółek`);
@@ -4175,12 +4238,22 @@ async function refreshLiveData() {
   if (mktIcon){ mktIcon.textContent = '⟳'; mktIcon.style.animation = 'spin .8s linear infinite'; }
 
   try {
-    const allTickers = [];
+    // Budujemy listę symboli TV per (rynek, ticker) — getTVSymbol() uwzględnia
+    // TV_MAP_OVERRIDE dla kolidujących par (BDX, MRK), więc każda spółka
+    // dostaje właściwy, jednoznaczny symbol niezależnie od tego, czy jej
+    // ticker occurs też na innym rynku.
+    const allTvSymbols = [];
+    const tvToKey = new Map(); // symbol TV -> {idx, ticker} — jednoznaczne mapowanie zwrotne
     ['wig20','mwig40','dax','ndx','nyse'].forEach(idx => {
-      STOCKS[idx].forEach(s => allTickers.push(s.ticker));
+      STOCKS[idx].forEach(s => {
+        const tv = getTVSymbol(idx, s.ticker);
+        if (!tv) return;
+        allTvSymbols.push(tv);
+        tvToKey.set(tv, {idx, ticker: s.ticker});
+      });
     });
 
-    const groups = groupByExchange(allTickers);
+    const groups = groupByExchange(allTvSymbols);
     const markets = Object.keys(groups);
 
     let totalUpdated = 0;
@@ -4204,17 +4277,14 @@ async function refreshLiveData() {
         const d = row.d;
         if (!d || d.length < 2) return;
 
-        const internalTicker = Object.keys(TV_MAP).find(k => TV_MAP[k] === tvSym);
-        if (!internalTicker) {
+        const match = tvToKey.get(tvSym);
+        if (!match) {
           if (tvSym.startsWith('GPW:')) console.warn('⚠️ No match for TV symbol:', tvSym);
           return;
         }
-
-        const matchedTab = Object.keys(STOCKS).find(tab => 
-          Array.isArray(STOCKS[tab]) && STOCKS[tab].some(s => s.ticker === internalTicker)
-        );
+        const { idx: matchedTab, ticker: internalTicker } = match;
         if (matchedTab === 'mwig40') console.log('✅ mWIG40 match:', internalTicker, '←', tvSym);
-        liveData[internalTicker] = {
+        liveData[liveKey(matchedTab, internalTicker)] = {
           price:    d[0]  ?? null,
           chg:      d[1]  ?? null,
           volume:   d[2]  ?? null,
@@ -4300,7 +4370,7 @@ function syncAllStocksWithLiveData() {
     const arr = STOCKS[tabKey];
     if (!arr) return;
     arr.forEach(s => {
-      const d = liveData[s.ticker];
+      const d = liveData[liveKey(tabKey, s.ticker)];
       if (!d) return;
       if (d.price)  s.price  = d.price;
       if (d.sma150) s.ma30w  = d.sma150;
@@ -4335,7 +4405,8 @@ function updateCardsWithLiveData() {
   if (viewMode === 'compact') {
     document.querySelectorAll('#ctable tr[data-ticker]').forEach(row => {
       const ticker = row.dataset.ticker?.toUpperCase();
-      const d = liveData[ticker];
+      const idx = row.dataset.idx;
+      const d = liveData[liveKey(idx, ticker)];
       if (!d) return;
       // Price cell (td index 3)
       const tds = row.querySelectorAll('td');
@@ -4366,7 +4437,8 @@ function updateCardsWithLiveData() {
   cards.forEach(card => {
     const ticker = card.dataset.ticker?.toUpperCase();
     if (!ticker) return;
-    const d = liveData[ticker];
+    const idx = card.dataset.idx;
+    const d = liveData[liveKey(idx, ticker)];
     if (!d) return;
 
     // ── Price cell ──
