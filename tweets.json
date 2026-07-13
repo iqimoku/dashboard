@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2076808922011152539",
+      "text": "The US government paid out nearly double the amount of tariff refunds to businesses than it actually collected in June. yhoo.it/4vUCszk",
+      "created_at": "2026-07-13T23:20:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076776705750958331",
       "text": "The US sent out nearly $50 billion in tariff refunds in June as the checks to businesses accelerated in the second full month of payouts. yhoo.it/4vUCszk",
       "created_at": "2026-07-13T21:12:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2076292029336650239",
-      "text": "Coinbase, Lyft, and Axon prove there's more going on in markets than the 'Magnificent 7' finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nCoinbase, Lyft, and Axon prove there&apos;s more going on in markets than the &apos;Magnificent 7&apos;\n\nThere&apos;s more happening in the investor world than Micron, Nvidia, and earnings season.\nfinance.yahoo.com",
-      "created_at": "2026-07-12T13:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-13T22:41:05Z",
+  "_updated": "2026-07-13T23:39:12Z",
   "_username": "YahooFinance"
 }
