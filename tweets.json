@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2076690388610343082",
+      "text": "The world's largest contract chipmaker just reported second-quarter revenue that rose 36% from ‌a year earlier. yhoo.it/3SNCxX7",
+      "created_at": "2026-07-13T15:29:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2076688215268893026",
+      "text": "Oil prices raced upward on Monday as President Trump said the US would \"take over\" the Strait of Hormuz.",
+      "created_at": "2026-07-13T15:20:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2076684369003950283",
+      "text": "There is absolutely no love lost between Tesla CEO Elon Musk and OpenAI CEO Sam Altman.",
+      "created_at": "2026-07-13T15:05:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2076672270248869923",
+      "text": "The 21st Century ROAD to Housing Act is officially law. The new legislation slaps major restrictions on large corporations buying up single-family homes, protecting everyday buyers from being outbid by big money. yhoo.it/4gFNsMp",
+      "created_at": "2026-07-13T14:17:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076662817818619986",
       "text": "The first major piece of housing affordability legislation in three decades is now law, concluding an extended saga that included months of congressional negotiations and a last-minute decision by President Trump not to sign the bill. yhoo.it/4gFNsMp\n\nVideo",
       "created_at": "2026-07-13T13:39:32Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2075686780452376753",
-      "text": "History made. $SKHYV closed out its first day on the US market up nearly 13%, climbing to $168 from its $149 offer price. 🎉 yhoo.it/4h82wCp",
-      "created_at": "2026-07-10T21:01:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075674498628546717",
-      "text": "$META rises +5.97% after revealing new revenue streams to offset increased AI spending, turning the stock positive year to date.\n\nKeep up with Meta in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-10T20:12:19Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075671666865111410",
-      "text": "SK Hynix almost went bankrupt 25 years ago. Now, it’s the biggest first-time listing by a foreign company in the US. 🤯  finance.yahoo.com/technology…\n\nVideo",
-      "created_at": "2026-07-10T20:01:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2075666141469405387",
-      "text": "Volkswagen is getting ready to cut its global vehicle lineup in half. The automaker is currently battling a tough mix of rising costs, slow-moving EV sales, and a shrinking foothold in China's ultra-competitive market. yhoo.it/44jrQxV",
-      "created_at": "2026-07-10T19:39:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-13T13:52:50Z",
+  "_updated": "2026-07-13T16:16:46Z",
   "_username": "YahooFinance"
 }
