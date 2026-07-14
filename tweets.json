@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2077121361588142190",
+      "text": "President Trump says \"Iraq has tremendous potential\" due to its oil markets. 🛢️📈 \n\n\"We're going to be doing a lot of deals. We're going to create a lot of jobs for both countries,\" Trump said in a press conference with Iraq's Prime Minister Ali Al-Zaidi on Tuesday. \n\nBrent Crude oil is up nearly +14% today, while Crude Oil is up nearly +12%. \n\nExplore more premium news and analysis on Crude Oil in AlphaSpace: finance.yahoo.com/about/prom…\n\nVideo",
+      "created_at": "2026-07-14T20:01:38Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077113601815457936",
+      "text": "\"My commitment to you is to take sticky prices and to unstick them,\" Warsh says in a testimony to Congress on Tuesday.\n\nVideo",
+      "created_at": "2026-07-14T19:30:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077100261680517134",
       "text": "Lucid $LCID statement to @YahooFinance regarding rumors or going private or filing for bankruptcy:",
       "created_at": "2026-07-14T18:37:47Z",
@@ -175,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077029237442195812",
-      "text": "Follow more of today's market action here: finance.yahoo.com/markets/li…\n\nPlus, get premium analysis and news on the stock in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-14T13:55:34Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077029235726655571",
-      "text": "$IBM plummets after surprise earnings warning",
-      "created_at": "2026-07-14T13:55:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-14T18:55:48Z",
+  "_updated": "2026-07-14T20:03:37Z",
   "_username": "YahooFinance"
 }
