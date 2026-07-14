@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2077141185781440919",
+      "text": "No matter how bad your day was, $IBM's was worse.\n\nVideo",
+      "created_at": "2026-07-14T21:20:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077134576934072406",
+      "text": "$IBM closed the day down more than 25%. 😯 yhoo.it/4wIyVEi",
+      "created_at": "2026-07-14T20:54:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077128368265302323",
+      "text": "$IBM ended trading Tuesday down more than 25% after the company preannounced earnings that fell well below Wall Street's expectations, notching the company's worst single day in history.\n\nExplore more premium news and analysis on IBM in AlphaSpace: yhoo.it/4wzYPdo",
+      "created_at": "2026-07-14T20:29:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077121361588142190",
       "text": "President Trump says \"Iraq has tremendous potential\" due to its oil markets. 🛢️📈 \n\n\"We're going to be doing a lot of deals. We're going to create a lot of jobs for both countries,\" Trump said in a press conference with Iraq's Prime Minister Ali Al-Zaidi on Tuesday. \n\nBrent Crude oil is up nearly +14% today, while Crude Oil is up nearly +12%. \n\nExplore more premium news and analysis on Crude Oil in AlphaSpace: finance.yahoo.com/about/prom…\n\nVideo",
       "created_at": "2026-07-14T20:01:38Z",
@@ -175,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077039944107692042",
-      "text": "JPMorgan CEO Jamie Dimon was feeling pretty good about the bank's massive profits on its quarterly earnings call on Tuesday. yhoo.it/44ZVgBl",
-      "created_at": "2026-07-14T14:38:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077030883379339714",
-      "text": "Growth in consumer prices cooled more than expected in June — albeit from an already high level — as drivers saw some relief at the pump. yhoo.it/4w1msvk",
-      "created_at": "2026-07-14T14:02:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-14T20:03:37Z",
+  "_updated": "2026-07-14T21:43:20Z",
   "_username": "YahooFinance"
 }
