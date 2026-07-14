@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2077100261680517134",
+      "text": "Lucid $LCID statement to @YahooFinance regarding rumors or going private or filing for bankruptcy:",
+      "created_at": "2026-07-14T18:37:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077097319485337711",
+      "text": "Warren Buffett has set a firm timeline for the complete distribution of his remaining wealth, and he's relying on his children to carry out his plan. yhoo.it/4wIWm0d",
+      "created_at": "2026-07-14T18:26:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077091863081750700",
+      "text": "Track the latest moves and news on the stock in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-14T18:04:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077091861139783684",
+      "text": "$LCID plummets on reports it is weighing going private or Chapter 11.",
+      "created_at": "2026-07-14T18:04:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077091281809879206",
+      "text": "SoftBank CEO Masayoshi Son dismissed AI bubble fears, comparing skeptics to early critics of cars and airplanes. He estimates it will take nearly $5 trillion in global investments annually to build out the necessary data centers, chips, and energy infrastructure for AI.\n\nGet the latest news on all things AI: yhoo.it/44pHtUy",
+      "created_at": "2026-07-14T18:02:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077083375391703288",
       "text": ".@mcuban says, \"We're hearing more and more, particularly for larger companies, being afraid of how much they're spending on tokens and how much they're spending on AI. There's always a way that you can use it.\"\n\nThe billionaire sat down with the Lovable CEO & co-founder at the 2026 Raise Summit.\n\nVideo",
       "created_at": "2026-07-14T17:30:41Z",
@@ -142,50 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077021572573847992",
-      "text": "On a core basis, stripping out volatile categories like energy and food, prices were 2.6% higher than a year ago, and unchanged from May. yhoo.it/4w1msvk",
-      "created_at": "2026-07-14T13:25:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077014038190457311",
-      "text": "Fresh data showed inflation declined 0.4% on a monthly basis in June, the largest single-month decline in more than six years. yhoo.it/4w1msvk",
-      "created_at": "2026-07-14T12:55:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077011630756372892",
-      "text": "🍽️ Where food prices increased and decreased in June compared to last year: \n\nFood at home +2.7%\nCoffee +12.9%\nGround beef +12.4%\nFresh veggies +9.9%\nBread +3.9%\nFresh fruits +2%\nChicken -2.3%\nButter -8.7%\nEggs -27.9%",
-      "created_at": "2026-07-14T12:45:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077007706041258268",
-      "text": "I asked JP Morgan CEO Jamie Dimon if an interest rate hike from the Fed would cause some of the risks he laid out in the earnings release today to collide. He laughed briefly and said:\n\n“I wish I knew the answer to that question. We don't know. We're just isolating that there are issues out there. They're pretty important and substantial. You know, they can easily go away. They can easily collide in a way that will surprise you. And it won't just be the Fed and inflation. It might be a whole bunch of the geopolitical stuff, so just something to keep an eye on. Of course, we're always preparing for various types of risks.”",
-      "created_at": "2026-07-14T12:30:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-14T17:54:08Z",
+  "_updated": "2026-07-14T18:55:48Z",
   "_username": "YahooFinance"
 }
