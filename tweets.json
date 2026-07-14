@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2077011630756372892",
+      "text": "🍽️ Where food prices increased and decreased in June compared to last year: \n\nFood at home +2.7%\nCoffee +12.9%\nGround beef +12.4%\nFresh veggies +9.9%\nBread +3.9%\nFresh fruits +2%\nChicken -2.3%\nButter -8.7%\nEggs -27.9%",
+      "created_at": "2026-07-14T12:45:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077007706041258268",
+      "text": "I asked JP Morgan CEO Jamie Dimon if an interest rate hike from the Fed would cause some of the risks he laid out in the earnings release today to collide. He laughed briefly and said:\n\n“I wish I knew the answer to that question. We don't know. We're just isolating that there are issues out there. They're pretty important and substantial. You know, they can easily go away. They can easily collide in a way that will surprise you. And it won't just be the Fed and inflation. It might be a whole bunch of the geopolitical stuff, so just something to keep an eye on. Of course, we're always preparing for various types of risks.”",
+      "created_at": "2026-07-14T12:30:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077008140193661380",
+      "text": "🚨 Breaking: June's inflation print\nCPI YoY: +3.5% vs +3.8% expected\nCore CPI YoY: +2.6% vs +2.8% expected\nCPI MoM: -0.4% vs -0.1% expected\nCore CPI MoM: 0% vs +0.2%",
+      "created_at": "2026-07-14T12:31:44Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077007250598551593",
+      "text": "The country's largest bank just raked in more quarterly profit than any US bank ever.\n\nJPMorgan Chase said profits jumped 41% to $21.2 billion in its second quarter.",
+      "created_at": "2026-07-14T12:28:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2076808922011152539",
       "text": "The US government paid out nearly double the amount of tariff refunds to businesses than it actually collected in June. yhoo.it/4vUCszk",
       "created_at": "2026-07-13T23:20:06Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2076337327245328723",
-      "text": "Retirees have questions for financial advisers. Here's what they want to know. finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nRetirees have questions for financial advisers. Here&apos;s what they want to know.\n\nIncreasingly, retirees are turning to financial advisers for the first time to help. Here&apos;s what they are asking.\nfinance.yahoo.com",
-      "created_at": "2026-07-12T16:06:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2076329257769320807",
-      "text": "The economy in 2026 looks very different depending on where you're standing. \n\nWhile the AI trade is bumpy, it continues sending stocks to record highs, and Wall Street is reaping the rewards. But everyday Americans aren't seeing the same returns when checking their balances or walking store aisles.\n\nHere are 8 moments from this year that pinpoint how split the US economy is.",
-      "created_at": "2026-07-12T15:34:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2076322227604140222",
-      "text": "Is it easier to become a stock picker in a stock picker's market? finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nIs it easier to become a stock picker in a stock picker&apos;s market?\n\nThinking about the challenge of trading individual stocks to generate above-average returns.\nfinance.yahoo.com",
-      "created_at": "2026-07-12T15:06:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2076307128193560735",
-      "text": "Nissan CEO on why building in America is 'the strategy that's working' finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nNissan CEO on why building in America is &apos;the strategy that&apos;s working&apos;\n\nNissan&apos;s push to amplify its build in America efforts comes as rival Toyota made big news this week. \nfinance.yahoo.com",
-      "created_at": "2026-07-12T14:06:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-14T11:14:12Z",
+  "_updated": "2026-07-14T12:57:47Z",
   "_username": "YahooFinance"
 }
