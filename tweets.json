@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2077493674481471608",
+      "text": "Meet @Particle6P Founder &amp; CEO @ElineHQ, the creator of @TillyNorwoodX, the AI actor.\n\nVideo",
+      "created_at": "2026-07-15T20:41:04Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077484747836608800",
+      "text": "Just Salad founder and CEO Nick Kenner details how the fast-casual chain is handling food prep amid the ongoing cyclospora outbreak.\n\n\"We are crazy about quality control,\" Kenner tells Yahoo Finance.\n\nVideo",
+      "created_at": "2026-07-15T20:05:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077483233348854102",
+      "text": "Knicks MVP @jalenbrunson1 just announced a long-term partnership with the fast-casual chain Just Salad. Founder and CEO Nick Kenner breaks down the partnership, and teases Brunson's go-to order, which will soon be on the restaurant's menu.\n\nVideo",
+      "created_at": "2026-07-15T19:59:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077470794955866380",
       "text": "United Airlines really looked at the most hated seat in the sky and said, \"What if we charged you more to keep it empty?\" yhoo.it/4w83Km0",
       "created_at": "2026-07-15T19:10:09Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077097319485337711",
-      "text": "Warren Buffett has set a firm timeline for the complete distribution of his remaining wealth, and he's relying on his children to carry out his plan. yhoo.it/4wIWm0d",
-      "created_at": "2026-07-14T18:26:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077091863081750700",
-      "text": "Track the latest moves and news on the stock in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-14T18:04:25Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077091861139783684",
-      "text": "$LCID plummets on reports it is weighing going private or Chapter 11.",
-      "created_at": "2026-07-14T18:04:24Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T19:58:36Z",
+  "_updated": "2026-07-15T20:56:43Z",
   "_username": "YahooFinance"
 }
