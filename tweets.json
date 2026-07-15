@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077406227701682199",
+      "text": "Payments company Stripe and private equity firm Advent International have reportedly made an offer worth more than $53 billion to acquire PayPal, according to a Reuters report, sending $PYPL shares surging on Wednesday. \n\nExplore more premium news and analysis on PayPal in AlphaSpace: yhoo.it/4wzYPdo",
+      "created_at": "2026-07-15T14:53:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077151355089646019",
       "text": "SK Hynix's ADR premium stock $SKHY rebounds +21% since its debut, while its Korean shares dipped -14% on Tuesday.\n\nExplore more premium news and analysis on SK Hynix in AlphaSpace: finance.yahoo.com/about/prom…\n\nVideo",
       "created_at": "2026-07-14T22:00:49Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077047830045212937",
-      "text": "Fed Chairman Kevin Warsh doubled down on his pledge to squelch inflation during his Congressional testimony.\n\nVideo",
-      "created_at": "2026-07-14T15:09:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T13:01:20Z",
+  "_updated": "2026-07-15T15:14:41Z",
   "_username": "YahooFinance"
 }
