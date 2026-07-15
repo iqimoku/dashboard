@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2077435462352851448",
+      "text": "Keep tabs on SpaceX through custom charting, premium news, and AI-powered analysis in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-15T16:49:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077435461039956130",
+      "text": "$SPCX falls below its IPO price. 📉",
+      "created_at": "2026-07-15T16:49:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077427506538254631",
+      "text": "Warren Buffett told CNBC that while he was the driving force behind Berkshire Hathaway's recent Alphabet investment, he and current CEO Greg Abel speak everyday.",
+      "created_at": "2026-07-15T16:18:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077416688140648532",
+      "text": "Warren Buffett just took credit for Berkshire Hathaway's big Alphabet investment in an interview with CNBC, adding that he and CEO Greg Abel talk every day.",
+      "created_at": "2026-07-15T15:35:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077406227701682199",
       "text": "Payments company Stripe and private equity firm Advent International have reportedly made an offer worth more than $53 billion to acquire PayPal, according to a Reuters report, sending $PYPL shares surging on Wednesday. \n\nExplore more premium news and analysis on PayPal in AlphaSpace: yhoo.it/4wzYPdo",
       "created_at": "2026-07-15T14:53:35Z",
@@ -175,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077050703638303154",
-      "text": "On $JPM's earnings call, CEO Jamie Dimon said that competitive markets force companies to pass tech efficiencies down to the consumer, rather than just inflating corporate margins. yhoo.it/44ZVgBl",
-      "created_at": "2026-07-14T15:20:52Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077050095153844474",
-      "text": "Fed Chairman Kevin Warsh said AI \"is the most significant change in our economy in my adult lifetime,\" in a testimony before Congress on Tuesday.\n\n\"It's a huge opportunity, but it also comes with risks and challenges,\" Warsh added.\n\nVideo",
-      "created_at": "2026-07-14T15:18:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077050010705744005",
-      "text": "Buybacks aren't just \"returning capital\" — they are an active investment decision, Jamie Dimon said on JPMorgan's Q2 earnings call Tuesday.\n\nDimon also added that companies need to stop hiding behind M&amp;A and, instead, focus on organic growth. yhoo.it/44ZVgBl",
-      "created_at": "2026-07-14T15:18:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T15:14:41Z",
+  "_updated": "2026-07-15T17:00:32Z",
   "_username": "YahooFinance"
 }
