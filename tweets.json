@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2077462225313268125",
+      "text": "Despite Apple being Berkshire Hathaway's largest stock holding, Warren Buffett told CNBC that the tech titan isn't among his favorite businesses right now.",
+      "created_at": "2026-07-15T18:36:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077449859397824739",
+      "text": "Meet the Chinese Chipmaker CXMT, which is offering pre-IPO bets on the crypto market. \n\n\"ChangXin Memory Technologies is China's largest DRAM maker and the world's fourth largest memory manufacturer. They raised $8.5 billion at a $85.5 billion valuation,\" @scottmelker says.\n\nVideo",
+      "created_at": "2026-07-15T17:46:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077443371237327161",
+      "text": "Warren Buffett has addressed his decision to exclude the Gates Foundation from his major annual charitable donations.\n\nIn an interview with CNBC, the Berkshire Hathaway chairman referred to Gates' past association with Jeffrey Epstein as \"distasteful,\" but put the situation into perspective.",
+      "created_at": "2026-07-15T17:21:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077441112898228376",
+      "text": "Stripe, Advent International make $53 billion offer to take over PayPal.  \n\n@scottmelker explains everything you need to know.\n\nVideo",
+      "created_at": "2026-07-15T17:12:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077436987812778368",
+      "text": "Jensen Huang reflects on how SEGA saved Nvidia back in 1995 as the companies celebrate their 30-year partnership anniversary.\n\n\"At one point, I had to fly to Japan and explain to SEGA's CEO that the technology they contracted us to build would not work. Asked to be released from a contract we could not complete, and then asked that they still pay us ... It was embarrassing and one of the hardest things I have ever done,\" Jensen Huang said.\n\nVideo",
+      "created_at": "2026-07-15T16:55:49Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077435462352851448",
       "text": "Keep tabs on SpaceX through custom charting, premium news, and AI-powered analysis in AlphaSpace: finance.yahoo.com/about/prom…",
       "created_at": "2026-07-15T16:49:45Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077083375391703288",
-      "text": ".@mcuban says, \"We're hearing more and more, particularly for larger companies, being afraid of how much they're spending on tokens and how much they're spending on AI. There's always a way that you can use it.\"\n\nThe billionaire sat down with the Lovable CEO & co-founder at the 2026 Raise Summit.\n\nVideo",
-      "created_at": "2026-07-14T17:30:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077068328015659055",
-      "text": "Fed Chairman Kevin Warsh says AI spending had an \"impressive growth rate\" of nearly 25% in the first quarter.\n\nVideo",
-      "created_at": "2026-07-14T16:30:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077068149870993450",
-      "text": "Jamie Dimon confirms his timeline to step down at JPMorgan remains a \"few years\" out. Recent management shakeups are just part of the long-term plan, not an exit strategy. yhoo.it/44ZVgBl",
-      "created_at": "2026-07-14T16:30:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077059852581433681",
-      "text": "Fed Chairman Kevin Warsh says \"America will be richer,\" and more productive from this AI cycle if it repeats prior positive technology trends.\n\nVideo",
-      "created_at": "2026-07-14T15:57:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077056252073447826",
-      "text": "Kevin Warsh doesn't want the Fed to be in the \"bailout business,\" and that includes crypto.\n\nVideo",
-      "created_at": "2026-07-14T15:42:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T17:00:32Z",
+  "_updated": "2026-07-15T18:49:24Z",
   "_username": "YahooFinance"
 }
