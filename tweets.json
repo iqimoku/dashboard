@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077470794955866380",
+      "text": "United Airlines really looked at the most hated seat in the sky and said, \"What if we charged you more to keep it empty?\" yhoo.it/4w83Km0",
+      "created_at": "2026-07-15T19:10:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077462225313268125",
       "text": "Despite Apple being Berkshire Hathaway's largest stock holding, Warren Buffett told CNBC that the tech titan isn't among his favorite businesses right now.",
       "created_at": "2026-07-15T18:36:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077091281809879206",
-      "text": "SoftBank CEO Masayoshi Son dismissed AI bubble fears, comparing skeptics to early critics of cars and airplanes. He estimates it will take nearly $5 trillion in global investments annually to build out the necessary data centers, chips, and energy infrastructure for AI.\n\nGet the latest news on all things AI: yhoo.it/44pHtUy",
-      "created_at": "2026-07-14T18:02:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T18:49:24Z",
+  "_updated": "2026-07-15T19:58:36Z",
   "_username": "YahooFinance"
 }
