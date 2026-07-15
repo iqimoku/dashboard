@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077501102019228113",
+      "text": "Gen Z electricians are making $240,000 to $280,000. \n\"People don't believe it,\" 'Dirty Jobs' host @mikeroweworks tells @BrianSozzi.\n\nVideo",
+      "created_at": "2026-07-15T21:10:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077493674481471608",
       "text": "Meet @Particle6P Founder &amp; CEO @ElineHQ, the creator of @TillyNorwoodX, the AI actor.\n\nVideo",
       "created_at": "2026-07-15T20:41:04Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077100261680517134",
-      "text": "Lucid $LCID statement to @YahooFinance regarding rumors or going private or filing for bankruptcy:",
-      "created_at": "2026-07-14T18:37:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-15T20:56:43Z",
+  "_updated": "2026-07-15T21:49:18Z",
   "_username": "YahooFinance"
 }
