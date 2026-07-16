@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077799284448080341",
+      "text": "Kalshi will begin offering contracts allowing users to predict if flights will take off on time.",
+      "created_at": "2026-07-16T16:55:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077767490508145147",
       "text": "Brazil is getting a fresh 25% tariff from the U.S. on most goods, with exemptions for products like beef and orange juice.",
       "created_at": "2026-07-16T14:49:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077151355089646019",
-      "text": "SK Hynix's ADR premium stock $SKHY rebounds +21% since its debut, while its Korean shares dipped -14% on Tuesday.\n\nExplore more premium news and analysis on SK Hynix in AlphaSpace: finance.yahoo.com/about/prom…\n\nVideo",
-      "created_at": "2026-07-14T22:00:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T15:22:35Z",
+  "_updated": "2026-07-16T16:58:26Z",
   "_username": "YahooFinance"
 }
