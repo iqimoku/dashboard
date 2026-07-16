@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077736350040674635",
+      "text": "📊 The S&amp;P 500 and Nasdaq have been trapped in trading ranges since early May. Underneath them, $3.2 trillion has rotated between two of the market’s biggest trades.\n\n💰 The Magnificent Seven added about $1.5 trillion in July, while chip stocks outside Nvidia lost roughly $1.7 trillion.\n\n⚖️ Those moves have largely canceled each other out at the index level. Big Tech earnings could finally break the stalemate.",
+      "created_at": "2026-07-16T12:45:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077501102019228113",
       "text": "Gen Z electricians are making $240,000 to $280,000. \n\"People don't believe it,\" 'Dirty Jobs' host @mikeroweworks tells @BrianSozzi.\n\nVideo",
       "created_at": "2026-07-15T21:10:35Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077113601815457936",
-      "text": "\"My commitment to you is to take sticky prices and to unstick them,\" Warsh says in a testimony to Congress on Tuesday.\n\nVideo",
-      "created_at": "2026-07-14T19:30:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T11:23:28Z",
+  "_updated": "2026-07-16T13:09:22Z",
   "_username": "YahooFinance"
 }
