@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2077767490508145147",
+      "text": "Brazil is getting a fresh 25% tariff from the U.S. on most goods, with exemptions for products like beef and orange juice.",
+      "created_at": "2026-07-16T14:49:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077759001731678451",
+      "text": "Eli Lilly is expanding heavily into neuroscience with a deal valued at $2.8 billion upfront to acquire AtaiBeckley. The deal could reach up to $3.8 billion if milestones are met. yhoo.it/4fibVon",
+      "created_at": "2026-07-16T14:15:23Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077758979942576268",
+      "text": "\"It’s hard to say 4th industrial revolution without SpaceX,” @DivesTech says on why investors should look past the volatility of $SPCX.\n\nVideo",
+      "created_at": "2026-07-16T14:15:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077736350040674635",
       "text": "📊 The S&amp;P 500 and Nasdaq have been trapped in trading ranges since early May. Underneath them, $3.2 trillion has rotated between two of the market’s biggest trades.\n\n💰 The Magnificent Seven added about $1.5 trillion in July, while chip stocks outside Nvidia lost roughly $1.7 trillion.\n\n⚖️ Those moves have largely canceled each other out at the index level. Big Tech earnings could finally break the stalemate.",
       "created_at": "2026-07-16T12:45:22Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077134576934072406",
-      "text": "$IBM closed the day down more than 25%. 😯 yhoo.it/4wIyVEi",
-      "created_at": "2026-07-14T20:54:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077128368265302323",
-      "text": "$IBM ended trading Tuesday down more than 25% after the company preannounced earnings that fell well below Wall Street's expectations, notching the company's worst single day in history.\n\nExplore more premium news and analysis on IBM in AlphaSpace: yhoo.it/4wzYPdo",
-      "created_at": "2026-07-14T20:29:28Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077121361588142190",
-      "text": "President Trump says \"Iraq has tremendous potential\" due to its oil markets. 🛢️📈 \n\n\"We're going to be doing a lot of deals. We're going to create a lot of jobs for both countries,\" Trump said in a press conference with Iraq's Prime Minister Ali Al-Zaidi on Tuesday. \n\nBrent Crude oil is up nearly +14% today, while Crude Oil is up nearly +12%. \n\nExplore more premium news and analysis on Crude Oil in AlphaSpace: finance.yahoo.com/about/prom…\n\nVideo",
-      "created_at": "2026-07-14T20:01:38Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T13:09:22Z",
+  "_updated": "2026-07-16T15:22:35Z",
   "_username": "YahooFinance"
 }
