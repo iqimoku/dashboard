@@ -1,9 +1,20 @@
 {
   "data": [
     {
-      "id": "2077861277766979710",
-      "text": "Meet @tillynorwoodhq the AI actor.\n\nVideo",
-      "created_at": "2026-07-16T21:01:48Z",
+      "id": "2077878865943261298",
+      "text": "Meet @TillyNorwoodX the AI actor.\n\nVideo",
+      "created_at": "2026-07-16T22:11:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077877567537795166",
+      "text": "Generative AI has been used in about 300 Netflix titles, co-CEO Ted Sarandos said in the company's latest earnings call, mostly in post-production. \n\n\"Keep in mind that in many of the cases, productions would have left out those key shots because they just wouldn't have been able to afford them,\" he said.\n\nVideo",
+      "created_at": "2026-07-16T22:06:31Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077449859397824739",
-      "text": "Meet the Chinese Chipmaker CXMT, which is offering pre-IPO bets on the crypto market. \n\n\"ChangXin Memory Technologies is China's largest DRAM maker and the world's fourth largest memory manufacturer. They raised $8.5 billion at a $85.5 billion valuation,\" @scottmelker says.\n\nVideo",
-      "created_at": "2026-07-15T17:46:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T21:51:51Z",
+  "_updated": "2026-07-16T22:43:55Z",
   "_username": "YahooFinance"
 }
