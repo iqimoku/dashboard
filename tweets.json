@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2077851142155825357",
+      "text": "Keep up with every AlphaSpace update, plus share your feedback here: alphaspace.finance.yahoo.com…",
+      "created_at": "2026-07-16T20:21:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077851140499140925",
+      "text": "Extended-hours pricing is now live across AlphaSpace. \n\n🕣 Charts, watchlists, and portfolios update in real time, at any hour of the day.\n\nVideo",
+      "created_at": "2026-07-16T20:21:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077851138854998524",
+      "text": "Need to relive the latest price action? Pick a starting point, hit play, and watch the move unfold. 🔁\n\nVideo",
+      "created_at": "2026-07-16T20:21:30Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077851137483362608",
+      "text": "🚨 New in AlphaSpace: Chart sharing just got fast and flexible.\n\nPick your format to fit your needs, write a headline to add your take, hit download, and share.\n\nVideo",
+      "created_at": "2026-07-16T20:21:30Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2077844938855711016",
+      "text": "Trump Media Group is launching \"Truth API\", a product that charges for fast access to Trump's Truth Social posts.",
+      "created_at": "2026-07-16T19:56:52Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077818699495489585",
       "text": "Olive Garden’s Never-Ending Pasta Pass is coming back, lasting for 13 weeks at the cost of $100.",
       "created_at": "2026-07-16T18:12:36Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077441112898228376",
-      "text": "Stripe, Advent International make $53 billion offer to take over PayPal.  \n\n@scottmelker explains everything you need to know.\n\nVideo",
-      "created_at": "2026-07-15T17:12:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077436987812778368",
-      "text": "Jensen Huang reflects on how SEGA saved Nvidia back in 1995 as the companies celebrate their 30-year partnership anniversary.\n\n\"At one point, I had to fly to Japan and explain to SEGA's CEO that the technology they contracted us to build would not work. Asked to be released from a contract we could not complete, and then asked that they still pay us ... It was embarrassing and one of the hardest things I have ever done,\" Jensen Huang said.\n\nVideo",
-      "created_at": "2026-07-15T16:55:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077435462352851448",
-      "text": "Keep tabs on SpaceX through custom charting, premium news, and AI-powered analysis in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-15T16:49:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077435461039956130",
-      "text": "$SPCX falls below its IPO price. 📉",
-      "created_at": "2026-07-15T16:49:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077427506538254631",
-      "text": "Warren Buffett told CNBC that while he was the driving force behind Berkshire Hathaway's recent Alphabet investment, he and current CEO Greg Abel speak everyday.",
-      "created_at": "2026-07-15T16:18:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T19:52:42Z",
+  "_updated": "2026-07-16T20:40:56Z",
   "_username": "YahooFinance"
 }
