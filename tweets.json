@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2077813539427791155",
+      "text": "Olive Garden’s Never-Ending Pasta Pass is coming back, lasting for 13 weeks at the cost of $100.",
+      "created_at": "2026-07-16T17:52:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077799284448080341",
       "text": "Kalshi will begin offering contracts allowing users to predict if flights will take off on time.",
       "created_at": "2026-07-16T16:55:27Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077406227701682199",
-      "text": "Payments company Stripe and private equity firm Advent International have reportedly made an offer worth more than $53 billion to acquire PayPal, according to a Reuters report, sending $PYPL shares surging on Wednesday. \n\nExplore more premium news and analysis on PayPal in AlphaSpace: yhoo.it/4wzYPdo",
-      "created_at": "2026-07-15T14:53:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-16T16:58:26Z",
+  "_updated": "2026-07-16T18:03:04Z",
   "_username": "YahooFinance"
 }
