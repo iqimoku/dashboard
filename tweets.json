@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2078127372432237040",
+      "text": "Check out @YahooFinance 's original autos and mobility reporting here, as well as our partners:\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change yahooinc.com/press/yahoo-fin…\n\nLink\n\n\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change |...\n\nYahoo Finance teams up with InsideEVs, WardsAuto, Just Auto, and The Drive to launch a destination dedicated to reporting on the auto and electric vehicle industry\nyahooinc.com",
+      "created_at": "2026-07-17T14:39:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078121821774262534",
+      "text": "Taco Bell lettuce supplied by Taylor Farms was identified as the potential source of a cyclosporiasis parasitic outbreak with 4,300 reported cases.",
+      "created_at": "2026-07-17T14:17:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078118534240952321",
       "text": "Explore more premium news and analysis on Yum! Brands in AlphaSpace: finance.yahoo.com/about/prom…",
       "created_at": "2026-07-17T14:04:02Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077758979942576268",
-      "text": "\"It’s hard to say 4th industrial revolution without SpaceX,” @DivesTech says on why investors should look past the volatility of $SPCX.\n\nVideo",
-      "created_at": "2026-07-16T14:15:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077736350040674635",
-      "text": "📊 The S&amp;P 500 and Nasdaq have been trapped in trading ranges since early May. Underneath them, $3.2 trillion has rotated between two of the market’s biggest trades.\n\n💰 The Magnificent Seven added about $1.5 trillion in July, while chip stocks outside Nvidia lost roughly $1.7 trillion.\n\n⚖️ Those moves have largely canceled each other out at the index level. Big Tech earnings could finally break the stalemate.",
-      "created_at": "2026-07-16T12:45:22Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T14:22:07Z",
+  "_updated": "2026-07-17T16:05:17Z",
   "_username": "YahooFinance"
 }
