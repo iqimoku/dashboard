@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2078118534240952321",
+      "text": "Explore more premium news and analysis on Yum! Brands in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-17T14:04:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078118281148260475",
+      "text": "$YUM is down over 6% this past week after Taco Bell supplier Taylor Farms was identified as a potential source of a cyclosporiasis parasitic outbreak.",
+      "created_at": "2026-07-17T14:03:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078114194214244463",
+      "text": "$AAPL just overtook $NVDA as the world's most valuable company.",
+      "created_at": "2026-07-17T13:46:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078112120277737514",
+      "text": "Explore more premium news and analysis on Oracle in AlphaSpace: finance.yahoo.com/about/prom…\n\nLink\n\n\n\nAlphaSpace by Yahoo Finance | Customizable stock platform with pro-level investing tools\n\nMake smarter decisions faster with AlphaSpace by Yahoo Finance, a new professional-grade financial platform featuring advanced charts, real-time news, deep market insights, and AI assistance.\nfinance.yahoo.com",
+      "created_at": "2026-07-17T13:38:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078112008822485087",
+      "text": "$ORCL just hit a new 52-week low after shedding almost $600 billion in market cap.",
+      "created_at": "2026-07-17T13:38:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078048845234147653",
       "text": "Micron having a week to forget:",
       "created_at": "2026-07-17T09:27:07Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077501102019228113",
-      "text": "Gen Z electricians are making $240,000 to $280,000. \n\"People don't believe it,\" 'Dirty Jobs' host @mikeroweworks tells @BrianSozzi.\n\nVideo",
-      "created_at": "2026-07-15T21:10:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077493674481471608",
-      "text": "Meet @Particle6P Founder &amp; CEO @ElineHQ, the creator of @TillyNorwoodX, the AI actor.\n\nVideo",
-      "created_at": "2026-07-15T20:41:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077484747836608800",
-      "text": "Just Salad founder and CEO Nick Kenner details how the fast-casual chain is handling food prep amid the ongoing cyclospora outbreak.\n\n\"We are crazy about quality control,\" Kenner tells Yahoo Finance.\n\nVideo",
-      "created_at": "2026-07-15T20:05:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077483233348854102",
-      "text": "Knicks MVP @jalenbrunson1 just announced a long-term partnership with the fast-casual chain Just Salad. Founder and CEO Nick Kenner breaks down the partnership, and teases Brunson's go-to order, which will soon be on the restaurant's menu.\n\nVideo",
-      "created_at": "2026-07-15T19:59:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077470794955866380",
-      "text": "United Airlines really looked at the most hated seat in the sky and said, \"What if we charged you more to keep it empty?\" yhoo.it/4w83Km0",
-      "created_at": "2026-07-15T19:10:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T12:54:05Z",
+  "_updated": "2026-07-17T14:22:07Z",
   "_username": "YahooFinance"
 }
