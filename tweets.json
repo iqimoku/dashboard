@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2078157881258463636",
+      "text": ".@scottmelker on why bitcoin beats gold: \"Bitcoin has every monetary property that made gold the winner for 5,000 years. And in the properties where it matters most for the modern world ... [bitcoin] wins so decisively that the only remaining argument for gold is tradition.\"\n\nVideo",
+      "created_at": "2026-07-17T16:40:23Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078153872233689293",
+      "text": "Create and share your own custom charts in AlphaSpace: •  •  • finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-17T16:24:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078149544928301166",
+      "text": "Moonshot's latest launch underscores how quickly China's open AI ‌ecosystem is narrowing the gap with the most advanced US systems. yhoo.it/3TmEn1a",
+      "created_at": "2026-07-17T16:07:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078127372432237040",
       "text": "Check out @YahooFinance 's original autos and mobility reporting here, as well as our partners:\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change yahooinc.com/press/yahoo-fin…\n\nLink\n\n\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change |...\n\nYahoo Finance teams up with InsideEVs, WardsAuto, Just Auto, and The Drive to launch a destination dedicated to reporting on the auto and electric vehicle industry\nyahooinc.com",
       "created_at": "2026-07-17T14:39:09Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077799284448080341",
-      "text": "Kalshi will begin offering contracts allowing users to predict if flights will take off on time.",
-      "created_at": "2026-07-16T16:55:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077767490508145147",
-      "text": "Brazil is getting a fresh 25% tariff from the U.S. on most goods, with exemptions for products like beef and orange juice.",
-      "created_at": "2026-07-16T14:49:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077759001731678451",
-      "text": "Eli Lilly is expanding heavily into neuroscience with a deal valued at $2.8 billion upfront to acquire AtaiBeckley. The deal could reach up to $3.8 billion if milestones are met. yhoo.it/4fibVon",
-      "created_at": "2026-07-16T14:15:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T16:05:17Z",
+  "_updated": "2026-07-17T17:54:00Z",
   "_username": "YahooFinance"
 }
