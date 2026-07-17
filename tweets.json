@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078207477103890781",
+      "text": "Jensen Huang's jacket just auctioned for nearly $1 million at Sotheby's.\n\nVideo",
+      "created_at": "2026-07-17T19:57:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078195671434166706",
       "text": "The new CEO uniform is going to cost you. Jensen Huang's Tom Ford leather jacket just sold for nearly $1 million on Sotheby's.",
       "created_at": "2026-07-17T19:10:33Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077851138854998524",
-      "text": "Need to relive the latest price action? Pick a starting point, hit play, and watch the move unfold. 🔁\n\nVideo",
-      "created_at": "2026-07-16T20:21:30Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T19:54:33Z",
+  "_updated": "2026-07-17T20:39:44Z",
   "_username": "YahooFinance"
 }
