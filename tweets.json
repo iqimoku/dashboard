@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2078229281512083680",
+      "text": "$NFLX stock plunged Friday after a lackluster earnings report and a weak revenue outlook failed to ease concerns over slowing growth. \n\nWith the stock already down more than 43% over the past year, Wall Street’s patience is officially wearing thin. yhoo.it/4yKZUkD",
+      "created_at": "2026-07-17T21:24:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078222483908403602",
+      "text": "AI job disruption is happening, and businesses can't ignore it. According to Jamie Dimon, the real test of leadership right now isn't just adopting the tech — it's actively working to retrain the workforce. yhoo.it/4prTxye",
+      "created_at": "2026-07-17T20:57:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078218270604149223",
+      "text": "“People don’t just want the home; they want the entire block.”\n\n@DannyHertzberg explains the new trend of landmaxxing, where wealthy buyers are snapping up homes to build private compounds.\n\nVideo",
+      "created_at": "2026-07-17T20:40:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078207477103890781",
       "text": "Jensen Huang's jacket just auctioned for nearly $1 million at Sotheby's.\n\nVideo",
       "created_at": "2026-07-17T19:57:28Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077853643307466943",
-      "text": "$SPCX has lost more than a little altitude, falling for a fifth straight session.\n\nExplore more premium news and analysis on SpaceX in AlphaSpace: yhoo.it/4wzYPdo",
-      "created_at": "2026-07-16T20:31:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077851142155825357",
-      "text": "Keep up with every AlphaSpace update, plus share your feedback here: alphaspace.finance.yahoo.com…",
-      "created_at": "2026-07-16T20:21:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077851140499140925",
-      "text": "Extended-hours pricing is now live across AlphaSpace. \n\n🕣 Charts, watchlists, and portfolios update in real time, at any hour of the day.\n\nVideo",
-      "created_at": "2026-07-16T20:21:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T20:39:44Z",
+  "_updated": "2026-07-17T21:38:23Z",
   "_username": "YahooFinance"
 }
