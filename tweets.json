@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078048845234147653",
+      "text": "Micron having a week to forget:",
+      "created_at": "2026-07-17T09:27:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2077878865943261298",
       "text": "Meet @TillyNorwoodX the AI actor.\n\nVideo",
       "created_at": "2026-07-16T22:11:41Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077462225313268125",
-      "text": "Despite Apple being Berkshire Hathaway's largest stock holding, Warren Buffett told CNBC that the tech titan isn't among his favorite businesses right now.",
-      "created_at": "2026-07-15T18:36:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T11:11:13Z",
+  "_updated": "2026-07-17T12:54:05Z",
   "_username": "YahooFinance"
 }
