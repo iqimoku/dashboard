@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2078195671434166706",
+      "text": "The new CEO uniform is going to cost you. Jensen Huang's Tom Ford leather jacket just sold for nearly $1 million on Sotheby's.",
+      "created_at": "2026-07-17T19:10:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078194191209832620",
+      "text": "Nvidia CEO Jensen Huang’s iconic Tom Ford leather jacket sells for $960,000 at Sotheby’s.\n\nDoes not come with 1,000 Nvidia shares.",
+      "created_at": "2026-07-17T19:04:40Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078187473675469130",
+      "text": "Semiconductor stocks trim their losses on Friday, with Micron Technology, SanDisk, and Western Digital climbing into green territory.\n\n$SKHY +5.52%\n$WDC +3.86\n$MU +2.50%\n$SNDK +1.65%",
+      "created_at": "2026-07-17T18:37:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078157881258463636",
       "text": ".@scottmelker on why bitcoin beats gold: \"Bitcoin has every monetary property that made gold the winner for 5,000 years. And in the properties where it matters most for the modern world ... [bitcoin] wins so decisively that the only remaining argument for gold is tradition.\"\n\nVideo",
       "created_at": "2026-07-17T16:40:23Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2077851137483362608",
-      "text": "🚨 New in AlphaSpace: Chart sharing just got fast and flexible.\n\nPick your format to fit your needs, write a headline to add your take, hit download, and share.\n\nVideo",
-      "created_at": "2026-07-16T20:21:30Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077844938855711016",
-      "text": "Trump Media Group is launching \"Truth API\", a product that charges for fast access to Trump's Truth Social posts.",
-      "created_at": "2026-07-16T19:56:52Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2077818699495489585",
-      "text": "Olive Garden’s Never-Ending Pasta Pass is coming back, lasting for 13 weeks at the cost of $100.",
-      "created_at": "2026-07-16T18:12:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-17T18:46:44Z",
+  "_updated": "2026-07-17T19:54:33Z",
   "_username": "YahooFinance"
 }
