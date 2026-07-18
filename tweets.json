@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078541856594432461",
+      "text": "Foreclosures hit highest level since 2019, sparking interest from bargain hunters finance.yahoo.com/real-estat…\n\nLink\n\n\n\nForeclosures hit highest level since 2019, sparking interest from bargain hunters\n\nForeclosure sales can mean hefty discounts for buyers willing to brave complex closing process and potential renovations.\nfinance.yahoo.com",
+      "created_at": "2026-07-18T18:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078511656284397892",
       "text": "For Gen Z, saving for vacation tops retirement: JPM study finance.yahoo.com/news/for-g…\n\nLink\n\n\n\nFor Gen Z, saving for vacation tops retirement: JPM study\n\nA majority of workers aren&apos;t kicking in as much as they should to their employer-provided retirement plans, according to a new report from JPMorgan Asset Management. \nfinance.yahoo.com",
       "created_at": "2026-07-18T16:06:10Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078127372432237040",
-      "text": "Check out @YahooFinance 's original autos and mobility reporting here, as well as our partners:\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change yahooinc.com/press/yahoo-fin…\n\nLink\n\n\n\nYahoo Finance Launches Hub for Automotive and EV Industry News Amid Sweeping Industry Change |...\n\nYahoo Finance teams up with InsideEVs, WardsAuto, Just Auto, and The Drive to launch a destination dedicated to reporting on the auto and electric vehicle industry\nyahooinc.com",
-      "created_at": "2026-07-17T14:39:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-18T17:43:45Z",
+  "_updated": "2026-07-18T18:40:38Z",
   "_username": "YahooFinance"
 }
