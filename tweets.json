@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2078501319568941359",
+      "text": "Warren Buffett dropped some major truth bombs about the current state of the market and the psychology of investing in an interview with CNBC.",
+      "created_at": "2026-07-18T15:25:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078496557238780356",
+      "text": "CEO: SpaceX's record IPO was the space economy's opening act. Here's what comes next. finance.yahoo.com/technology…\n\nLink\n\n\n\nCEO: SpaceX&apos;s record IPO was the space economy&apos;s opening act. Here&apos;s what comes next.\n\nThe space economy is already having its strongest year on record, and there are still two quarters to go.\nfinance.yahoo.com",
+      "created_at": "2026-07-18T15:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078481458084134972",
       "text": "This week's AI winners and losers finance.yahoo.com/news/this-…\n\nLink\n\n\n\nThis week&apos;s AI winners and losers\n\nYahoo Finance&apos;s AI winners and losers include TSMC, Moonshot AI, IBM, and the chip industry.\nfinance.yahoo.com",
       "created_at": "2026-07-18T14:06:10Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078118534240952321",
-      "text": "Explore more premium news and analysis on Yum! Brands in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-17T14:04:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078118281148260475",
-      "text": "$YUM is down over 6% this past week after Taco Bell supplier Taylor Farms was identified as a potential source of a cyclosporiasis parasitic outbreak.",
-      "created_at": "2026-07-17T14:03:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-18T14:12:09Z",
+  "_updated": "2026-07-18T15:41:13Z",
   "_username": "YahooFinance"
 }
