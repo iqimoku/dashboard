@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078606008960606579",
+      "text": "The weight-loss boom has created massive market opportunities — and punishing failures. In this space, a single clinical trial result can send a stock soaring or instantly wipe out years of gains. \n\nTake $VKTX and $SKYE as your case study. yhoo.it/4fh0D3W",
+      "created_at": "2026-07-18T22:21:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078591412996628533",
       "text": "Jamie Dimon was brutally honest on why so many Americans are frustrated with the economy right now in a new interview with Axios. yhoo.it/4prTxye",
       "created_at": "2026-07-18T21:23:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078157881258463636",
-      "text": ".@scottmelker on why bitcoin beats gold: \"Bitcoin has every monetary property that made gold the winner for 5,000 years. And in the properties where it matters most for the modern world ... [bitcoin] wins so decisively that the only remaining argument for gold is tradition.\"\n\nVideo",
-      "created_at": "2026-07-17T16:40:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-18T21:37:07Z",
+  "_updated": "2026-07-18T22:34:41Z",
   "_username": "YahooFinance"
 }
