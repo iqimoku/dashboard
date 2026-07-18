@@ -4598,17 +4598,21 @@ function recalcMTT(card, ticker, d) {
   // Update MTT bar
   const fill = card.querySelector('.mtt-fill');
   const scoreEl = card.querySelector('.mtt-score-txt');
-  const dots = card.querySelectorAll('.mtt-dot');
+  const dotsWrap = card.querySelector('.mtt-dots');
 
   if (fill) { fill.style.width = pct + '%'; fill.style.background = col; }
   if (scoreEl) {
     scoreEl.textContent = score + '/8';
     scoreEl.style.color = col;
   }
-  if (dots.length === 8) {
-    mttNew.forEach((v, i) => {
-      dots[i].className = 'mtt-dot ' + (v ? 'pass' : 'fail');
-    });
+  // Przebudowujemy CAŁY kontener kropek od zera zamiast aktualizować pojedyncze
+  // elementy po indeksie — odporne na sytuacje, gdy z jakiegoś powodu w DOM-ie
+  // nie ma dokładnie 8 kropek (poprzednia wersja wtedy po cichu nie aktualizowała
+  // kropek wcale, mimo że pasek/tekst/odznaka już pokazywały nową wartość).
+  if (dotsWrap) {
+    dotsWrap.innerHTML = mttNew.map((v, i) =>
+      `<div class="mtt-dot ${v ? 'pass' : 'fail'}" title="${MTT_LABELS[i]?.short || ''}"></div>`
+    ).join('');
   }
 
   // Odznaka MTT w lewym dolnym rogu karty (.tag-mtt) — bez tej synchronizacji
