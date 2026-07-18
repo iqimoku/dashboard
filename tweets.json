@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078511656284397892",
+      "text": "For Gen Z, saving for vacation tops retirement: JPM study finance.yahoo.com/news/for-g…\n\nLink\n\n\n\nFor Gen Z, saving for vacation tops retirement: JPM study\n\nA majority of workers aren&apos;t kicking in as much as they should to their employer-provided retirement plans, according to a new report from JPMorgan Asset Management. \nfinance.yahoo.com",
+      "created_at": "2026-07-18T16:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078501319568941359",
       "text": "Warren Buffett dropped some major truth bombs about the current state of the market and the psychology of investing in an interview with CNBC.",
       "created_at": "2026-07-18T15:25:05Z",
@@ -13,7 +24,7 @@
     },
     {
       "id": "2078496557238780356",
-      "text": "CEO: SpaceX's record IPO was the space economy's opening act. Here's what comes next. finance.yahoo.com/technology…\n\nLink\n\n\n\nCEO: SpaceX&apos;s record IPO was the space economy&apos;s opening act. Here&apos;s what comes next.\n\nThe space economy is already having its strongest year on record, and there are still two quarters to go.\nfinance.yahoo.com",
+      "text": "CEO: SpaceX's record IPO was the space economy's opening act. Here's what comes next. finance.yahoo.com/technology…\n\nLink\n\nCEO: SpaceX&apos;s record IPO was the space economy&apos;s opening act. Here&apos;s what comes next.\n\nThe space economy is already having its strongest year on record, and there are still two quarters to go.\nfinance.yahoo.com",
       "created_at": "2026-07-18T15:06:10Z",
       "public_metrics": {
         "like_count": 0,
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078121821774262534",
-      "text": "Taco Bell lettuce supplied by Taylor Farms was identified as the potential source of a cyclosporiasis parasitic outbreak with 4,300 reported cases.",
-      "created_at": "2026-07-17T14:17:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-18T15:41:13Z",
+  "_updated": "2026-07-18T16:40:14Z",
   "_username": "YahooFinance"
 }
