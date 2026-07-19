@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2078863708478951720",
+      "text": "Warren Buffett shared a critical observation about the financial industry in an interview CNBC this week. 👀",
+      "created_at": "2026-07-19T15:25:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078858945079230582",
+      "text": "'Earnings need to be strong': Wall Street assesses next catalyst for AI trade finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;Earnings need to be strong&apos;: Wall Street assesses next catalyst for AI trade\n\nWall Street is looking to earnings season for evidence that the AI trade is tact.\nfinance.yahoo.com",
+      "created_at": "2026-07-19T15:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078844330324684978",
       "text": "Social Security payments are adjusted each January to reflect rising consumer costs. The average COLA increase over the past 10 years has been 3.1%. yhoo.it/4yKJZTp",
       "created_at": "2026-07-19T14:08:06Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078218270604149223",
-      "text": "“People don’t just want the home; they want the entire block.”\n\n@DannyHertzberg explains the new trend of landmaxxing, where wealthy buyers are snapping up homes to build private compounds.\n\nVideo",
-      "created_at": "2026-07-17T20:40:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078207477103890781",
-      "text": "Jensen Huang's jacket just auctioned for nearly $1 million at Sotheby's.\n\nVideo",
-      "created_at": "2026-07-17T19:57:28Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-19T14:16:48Z",
+  "_updated": "2026-07-19T15:42:32Z",
   "_username": "YahooFinance"
 }
