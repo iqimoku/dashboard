@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2078890383140934077",
+      "text": "To fix the \"fraying\" American dream, Jamie Dimon told Axios we must acknowledge the system is flawed for lower-paid workers. yhoo.it/4prTxye",
+      "created_at": "2026-07-19T17:11:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078889143946330302",
+      "text": "Netflix's growth slowdown exposes a classic shareholder trap: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\nNetflix&apos;s growth slowdown exposes a classic shareholder trap: Chart of the Day\n\nNetflix is still growing. Investors just stopped paying a tech price for it.\nfinance.yahoo.com",
+      "created_at": "2026-07-19T17:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078874044212867300",
       "text": "Can the Australian model rescue the US retirement system? Trump seems to think so. finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nCan the Australian model rescue the US retirement system? Trump seems to think so.\n\nPresident Trump says Australia&apos;s retirement system could serve as a model for the US. Is that possible?\nfinance.yahoo.com",
       "created_at": "2026-07-19T16:06:10Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078240355779068050",
-      "text": "Michael Burry weighed in on Netflix's post-earnings drop, posing the question, \"Does Netflix produce content that is long-lasting, watchable on repeat, across generations?\" \n\nBased on this analogy, it's safe to assume he doesn't think so.",
-      "created_at": "2026-07-17T22:08:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078229281512083680",
-      "text": "$NFLX stock plunged Friday after a lackluster earnings report and a weak revenue outlook failed to ease concerns over slowing growth. \n\nWith the stock already down more than 43% over the past year, Wall Street’s patience is officially wearing thin. yhoo.it/4yKZUkD",
-      "created_at": "2026-07-17T21:24:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-19T16:40:08Z",
+  "_updated": "2026-07-19T17:44:55Z",
   "_username": "YahooFinance"
 }
