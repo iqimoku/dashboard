@@ -627,6 +627,33 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 }
 .changelog-view{display:none;padding:24px 36px 48px;max-width:1000px;margin:0 auto;position:relative;}
 .changelog-view.active{display:block;}
+.rotation-view{display:none;padding:24px 36px 48px;max-width:1100px;margin:0 auto;position:relative;}
+.rotation-view.active{display:block;}
+.rot-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0 28px;}
+.rot-col-title{font-size:13px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.rot-col-title.gain{color:var(--s2);}
+.rot-col-title.lose{color:var(--s4);}
+.rot-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;cursor:pointer;transition:border-color .15s;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.rot-card:hover{border-color:var(--accent);}
+.rot-card-name{font-size:13px;font-weight:700;color:var(--text);}
+.rot-card-sub{font-size:10px;color:var(--muted);margin-top:2px;}
+.rot-card-net{font-family:'Space Mono',monospace;font-weight:800;font-size:15px;flex-shrink:0;}
+.rot-card-net.gain{color:var(--s2);}
+.rot-card-net.lose{color:var(--s4);}
+.rot-empty{font-size:12px;color:var(--muted);padding:14px;text-align:center;background:var(--surface);border-radius:10px;border:1px dashed var(--border);}
+.rot-table-wrap{overflow-x:auto;margin-top:8px;}
+.rot-table{width:100%;border-collapse:collapse;font-size:12px;}
+.rot-table th{text-align:left;padding:9px 10px;color:var(--muted);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;}
+.rot-table th:hover{color:var(--text);}
+.rot-table td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.04);white-space:nowrap;}
+.rot-table tr.rot-row{cursor:pointer;transition:background .1s;}
+.rot-table tr.rot-row:hover{background:rgba(255,255,255,.03);}
+.rot-net-pos{color:var(--s2);font-weight:700;}
+.rot-net-neg{color:var(--s4);font-weight:700;}
+.rot-net-zero{color:var(--muted);}
+.rot-pct-bar-wrap{width:70px;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:6px;}
+.rot-pct-bar{height:100%;background:var(--s2);}
+.rot-toggle{font-size:11px;color:var(--accent);cursor:pointer;margin:10px 0;display:inline-block;text-decoration:underline;text-underline-offset:2px;}
 .cl-header{margin-bottom:20px;}
 .cl-title{font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;}
 .cl-subtitle{font-size:13px;color:var(--muted);}
@@ -918,9 +945,9 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   .tab-update-corner{position:static;display:inline-flex;margin-bottom:10px;font-size:10px;}
   .changelog-view .cl-header{margin-top:0;}
 
-  /* Compact table view: allow horizontal scroll, don't crush columns */
-  #grid.compact-mode{padding-left:0 !important;padding-right:0 !important;}
-  .ctable{font-size:11px;}
+  /* Rotacja Kapitału */
+  .rot-cols{grid-template-columns:1fr;gap:12px;}
+  .rotation-view{padding:14px 12px 32px;}
 }
 
 @media(max-width:420px){
@@ -992,6 +1019,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div class="tab tab-market-btn" id="tab-market" onclick="switchTabMarket()">✦ Stan Rynku</div>
   <div class="tab tab-method-btn" id="tab-methodology" onclick="switchTabMethodology()">📖 Metodologia</div>
   <div class="tab tab-changelog-btn" id="tab-changelog" onclick="switchTabChangelog()">📋 Zmiany Faz</div>
+  <div class="tab tab-rotation-btn" id="tab-rotation" onclick="switchTabRotation()">🌊 Rotacja Kapitału</div>
 </div>
 
 <div class="legend-bar" id="legend-bar">
@@ -1395,6 +1423,16 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div id="changelog-list"></div>
 </div>
 
+<!-- ══ ROTACJA KAPITAŁU VIEW (zakładka) ══ -->
+<div class="rotation-view" id="rotation-view">
+  <div class="tab-update-corner" id="rotUpdateCorner"></div>
+  <div class="cl-header">
+    <div class="cl-title">🌊 Rotacja Kapitału</div>
+    <div class="cl-subtitle">Które sektory zyskują, a które tracą Fazę 2 (trend wzrostowy) — zagregowane z bieżącego stanu spółek i cotygodniowych zmian faz. Kliknij sektor, żeby zobaczyć jego spółki.</div>
+  </div>
+  <div id="rotation-content"></div>
+</div>
+
 <!-- MODAL -->
 <div class="overlay" id="overlay" onclick="closeModal(event)">
   <div class="modal" id="modal" onclick="event.stopPropagation()">
@@ -1537,6 +1575,7 @@ const CHANGELOG = [
   {date:"2026-07-18",mk:"nyse",ticker:"GLW",name:"Corning",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -13.6%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-18",mk:"nyse",ticker:"BDX",name:"Becton Dickinson",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 9.5%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
 
+  {date:"2026-07-18",mk:"mwig40",ticker:"ATT",name:"Grupa Azoty",from:3,to:2,reason:"Korekta ręczna: pierwotne przejście 1→3 (05.07) było fałszywym alarmem algorytmu — SMA150/SMA200 dopiero co skrzyżowały się w górę, a ujemny perf.1M (-3,7%) maskował już wyraźnie dodatni perf.tygodniowy (+4,4%). Zweryfikowane na wykresie miesięcznym: wieloletnia baza akumulacyjna z rosnącym wolumenem, nie dystrybucja. Dodano zabezpieczenie w calcStage() przeciw powtórce tego wzorca."},
 ];
 
 // ══════════════════════════════════════════════════
@@ -1677,7 +1716,7 @@ mwig40: [
   {ticker:"ASB",name:"ASBIS",sector:"Dystrybucja IT",idx:"mwig40",price:105.3,chg:"-3.66%",stage:2,ma30w:57.59,matrend:"rosnąca ↑↑",vol:"B. wysoki",rs:"RSI 56",h52:"+16%",
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.66,chg:"+1.08%",stage:3,ma30w:18.82,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 48",h52:"-21%",
+  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.66,chg:"+1.08%",stage:2,ma30w:18.82,matrend:"opadająca ↓",vol:"Powyżej śr.",rs:"RSI 48",h52:"-21%",
    mtt:[true,true,true,true,false,false,true,false]},
 
   {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:5255,chg:"+0.29%",stage:2,ma30w:4039.9,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 79",h52:"+10%",
@@ -2909,6 +2948,7 @@ function switchTab(tab){
   document.getElementById('market-view').classList.remove('active');
   document.getElementById('method-view').classList.remove('active');
   document.getElementById('changelog-view').classList.remove('active');
+  document.getElementById('rotation-view').classList.remove('active');
   document.getElementById('ctrl-bar').style.display='';
   document.getElementById('legend-bar').style.display='';
   document.getElementById('grid').style.display='';
@@ -2936,6 +2976,7 @@ function switchTabMarket(){
   document.getElementById('summary').style.display='none';
   document.getElementById('method-view').classList.remove('active');
   document.getElementById('changelog-view').classList.remove('active');
+  document.getElementById('rotation-view').classList.remove('active');
   document.getElementById('market-view').classList.add('active');
   renderMarketView(currentMarketView);
 }
@@ -2954,6 +2995,7 @@ function switchTabMethodology(){
   document.getElementById('summary').style.display='none';
   document.getElementById('market-view').classList.remove('active');
   document.getElementById('changelog-view').classList.remove('active');
+  document.getElementById('rotation-view').classList.remove('active');
   document.getElementById('method-view').classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -2974,6 +3016,7 @@ function switchTabChangelog(){
   document.getElementById('summary').style.display='none';
   document.getElementById('market-view').classList.remove('active');
   document.getElementById('method-view').classList.remove('active');
+  document.getElementById('rotation-view').classList.remove('active');
   document.getElementById('changelog-view').classList.add('active');
   renderChangelog();
   window.scrollTo({top:0,behavior:'smooth'});
@@ -2984,6 +3027,167 @@ function setChangelogFilter(mk, btn){
   document.querySelectorAll('.cl-filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderChangelog();
+}
+
+// ══════════════════════════════════════════════════
+// ROTACJA KAPITAŁU — agregacja Fazy 2 i zmian tygodniowych per sektor
+// ══════════════════════════════════════════════════
+let rotShowAll = false;
+let rotSortKey = 'net';
+let rotSortDir = 'desc';
+
+function switchTabRotation(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-rotation').classList.add('active');
+  document.getElementById('ctrl-bar').style.display='none';
+  document.getElementById('legend-bar').style.display='none';
+  document.getElementById('grid').style.display='none';
+  document.getElementById('coffee-bar').style.display='none';
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('summary').style.display='none';
+  document.getElementById('market-view').classList.remove('active');
+  document.getElementById('method-view').classList.remove('active');
+  document.getElementById('changelog-view').classList.remove('active');
+  document.getElementById('rotation-view').classList.add('active');
+  renderRotationView();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function computeSectorRotation(){
+  // Zbierz wszystkie spółki ze wszystkich rynków w jedną listę z rynkiem
+  const all = [];
+  Object.keys(STOCKS).forEach(mk => STOCKS[mk].forEach(s => all.push({...s, mk})));
+
+  const bySector = {};
+  all.forEach(s => {
+    const sec = s.sector || 'Inne';
+    if (!bySector[sec]) bySector[sec] = { sector: sec, total: 0, inStage2: 0, entries: 0, exits: 0, stocks: [] };
+    bySector[sec].total++;
+    if (s.stage === 2) bySector[sec].inStage2++;
+    bySector[sec].stocks.push(s);
+  });
+
+  // Wejścia/wyjścia z Fazy 2 w bieżącej (najnowszej) aktualizacji
+  const thisWeek = CHANGELOG.filter(c => c.date === LAST_UPDATE);
+  thisWeek.forEach(c => {
+    const stock = all.find(s => s.mk === c.mk && s.ticker === c.ticker);
+    const sec = stock ? (stock.sector || 'Inne') : null;
+    if (!sec || !bySector[sec]) return;
+    if (c.to === 2) bySector[sec].entries++;
+    else if (c.from === 2 && c.to !== 2) bySector[sec].exits++;
+  });
+
+  return Object.values(bySector).map(b => ({
+    ...b,
+    net: b.entries - b.exits,
+    pct: b.total > 0 ? Math.round(b.inStage2 / b.total * 100) : 0,
+  }));
+}
+
+function openSectorInGrid(sector, mkListStr){
+  // Wybierz rynek z największą liczbą spółek tego sektora i przełącz tam z wyszukiwaniem
+  const mkList = mkListStr.split('|');
+  const byMk = {};
+  mkList.forEach(mk => { byMk[mk] = (byMk[mk]||0) + 1; });
+  const bestMk = Object.keys(byMk).sort((a,b) => byMk[b]-byMk[a])[0];
+  if (!bestMk) return;
+  switchTab(bestMk);
+  searchQ = sector;
+  document.getElementById('search').value = sector;
+  renderGrid();
+}
+
+function jsAttrEscape(str){
+  return String(str).replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+}
+
+function setRotSort(key){
+  if (rotSortKey === key) rotSortDir = (rotSortDir === 'desc' ? 'asc' : 'desc');
+  else { rotSortKey = key; rotSortDir = 'desc'; }
+  renderRotationView();
+}
+
+function toggleRotShowAll(){
+  rotShowAll = !rotShowAll;
+  renderRotationView();
+}
+
+function renderRotationView(){
+  const data = computeSectorRotation();
+  // Filtrujemy do sektorów z ≥3 spółkami — jednostkowe etykiety sektorowe (np. jedna
+  // spółka w "Półprzewodniki/EUV") tylko rozmywają prawdziwy sygnał rotacji sektorowej.
+  const meaningful = data.filter(d => d.total >= 3);
+  const gainers = meaningful.filter(d => d.net > 0).sort((a,b) => b.net - a.net).slice(0, 8);
+  const losers  = meaningful.filter(d => d.net < 0).sort((a,b) => a.net - b.net).slice(0, 8);
+
+  const cardHtml = (d, kind) => `
+    <div class="rot-card" onclick="openSectorInGrid('${jsAttrEscape(d.sector)}', '${d.stocks.map(s=>s.mk).join('|')}')">
+      <div>
+        <div class="rot-card-name">${d.sector}</div>
+        <div class="rot-card-sub">${d.inStage2}/${d.total} spółek w Fazie 2 (${d.pct}%) · ${d.entries} weszło, ${d.exits} wypadło</div>
+      </div>
+      <div class="rot-card-net ${kind}">${d.net > 0 ? '+' : ''}${d.net}</div>
+    </div>`;
+
+  const gainersHtml = gainers.length
+    ? gainers.map(d => cardHtml(d, 'gain')).join('')
+    : `<div class="rot-empty">Brak sektorów z dodatnim bilansem w tym tygodniu.</div>`;
+  const losersHtml = losers.length
+    ? losers.map(d => cardHtml(d, 'lose')).join('')
+    : `<div class="rot-empty">Brak sektorów z ujemnym bilansem w tym tygodniu.</div>`;
+
+  // Pełna tabela — domyślnie tylko sektory z ≥3 spółkami, żeby nie zaśmiecać drobnymi kategoriami
+  let tableRows = rotShowAll ? data : data.filter(d => d.total >= 3);
+  const dir = rotSortDir === 'desc' ? -1 : 1;
+  tableRows = [...tableRows].sort((a,b) => {
+    if (rotSortKey === 'sector') return a.sector.localeCompare(b.sector) * dir;
+    return (a[rotSortKey] - b[rotSortKey]) * dir;
+  });
+
+  const arrow = (key) => rotSortKey === key ? (rotSortDir === 'desc' ? ' ▼' : ' ▲') : '';
+  const tableHtml = `
+    <div class="rot-table-wrap">
+      <table class="rot-table">
+        <thead>
+          <tr>
+            <th onclick="setRotSort('sector')">Sektor${arrow('sector')}</th>
+            <th onclick="setRotSort('total')">Spółek${arrow('total')}</th>
+            <th onclick="setRotSort('pct')">W Fazie 2${arrow('pct')}</th>
+            <th onclick="setRotSort('entries')">Weszło${arrow('entries')}</th>
+            <th onclick="setRotSort('exits')">Wypadło${arrow('exits')}</th>
+            <th onclick="setRotSort('net')">Netto${arrow('net')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${tableRows.map(d => `
+            <tr class="rot-row" onclick="openSectorInGrid('${jsAttrEscape(d.sector)}', '${d.stocks.map(s=>s.mk).join('|')}')">
+              <td>${d.sector}</td>
+              <td>${d.total}</td>
+              <td>${d.inStage2}/${d.total} <span class="rot-pct-bar-wrap"><span class="rot-pct-bar" style="width:${d.pct}%"></span></span></td>
+              <td>${d.entries > 0 ? d.entries : '–'}</td>
+              <td>${d.exits > 0 ? d.exits : '–'}</td>
+              <td class="${d.net > 0 ? 'rot-net-pos' : d.net < 0 ? 'rot-net-neg' : 'rot-net-zero'}">${d.net > 0 ? '+' : ''}${d.net}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div class="rot-toggle" onclick="toggleRotShowAll()">${rotShowAll ? '← Pokaż tylko sektory z ≥3 spółkami' : `Pokaż wszystkie sektory (w tym mniejsze niż 3 spółki) →`}</div>
+  `;
+
+  document.getElementById('rotation-content').innerHTML = `
+    <div class="rot-cols">
+      <div>
+        <div class="rot-col-title gain">🟢 Zyskujące sektory (tydzień: ${LAST_UPDATE})</div>
+        ${gainersHtml}
+      </div>
+      <div>
+        <div class="rot-col-title lose">🔴 Tracące sektory (tydzień: ${LAST_UPDATE})</div>
+        ${losersHtml}
+      </div>
+    </div>
+    <div class="cl-title" style="font-size:16px;margin-top:8px;">Wszystkie sektory — stan obecny</div>
+    ${tableHtml}
+  `;
 }
 
 const CL_MARKET_LABEL = {wig20:'WIG20', mwig40:'mWIG40', dax:'DAX', ndx:'Nasdaq 100', nyse:'NYSE 100'};
@@ -3922,6 +4126,17 @@ function calcStage(d, prevStage) {
   else if (!above && rising)                 raw = 1;
   else raw = 1;
 
+  // Zawężone zabezpieczenie: skok bezpośrednio z Fazy 1 (akumulacja) do Fazy 3
+  // (dystrybucja) jest niekanoniczny — Faza 3 z definicji następuje PO dojrzałym
+  // trendzie wzrostowym, nie bezpośrednio z akumulacji. Gdy `perf1M` jeszcze
+  // "pamięta" wcześniejszy spadek, ale `perfW` już wyraźnie odwraca (typowy obraz
+  // przy świeżym przecięciu SMA150/SMA200 w górę), traktujemy to jako wybicie
+  // (Faza 2), nie dystrybucję. Dotyczy WYŁĄCZNIE przejścia z Fazy 1 — nie zmienia
+  // logiki dla już ustalonych przejść 2↔3/3↔4/4↔1.
+  if (prevStage === 1 && raw === 3 && weekUp) {
+    raw = 2;
+  }
+
   // Histereza: jeśli nowa faza różni się od poprzedniej, a sygnał momentum
   // (perf1M) jest zbyt słaby (blisko progu ±2%), zostaw starą fazę —
   // wymagamy wyraźniejszego ruchu (>3%), żeby potwierdzić realną zmianę.
@@ -4664,6 +4879,8 @@ renderGrid();
   if (marketCorner) marketCorner.textContent = shortLabel;
   const clCorner = document.getElementById('clUpdateCorner');
   if (clCorner) clCorner.textContent = shortLabel;
+  const rotCorner = document.getElementById('rotUpdateCorner');
+  if (rotCorner) rotCorner.textContent = shortLabel;
 })();
 
 
