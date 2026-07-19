@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2078844330324684978",
+      "text": "Social Security payments are adjusted each January to reflect rising consumer costs. The average COLA increase over the past 10 years has been 3.1%. yhoo.it/4yKJZTp",
+      "created_at": "2026-07-19T14:08:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078843845316366782",
+      "text": "Big Tech earnings test tech's big rotation: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBig Tech earnings test tech&apos;s big rotation: What to watch this week\n\nEarnings results from Alphabet and Tesla headline a busy week, amid a chip sell-off and a conflict in Iran that keeps geopolitics simmering and oil prices rising.\nfinance.yahoo.com",
+      "created_at": "2026-07-19T14:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2078828746241458466",
+      "text": "What IBM, Micron, and Sandisk all have in common finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nWhat IBM, Micron, and Sandisk all have in common\n\nA week of tech stock crashes!\nfinance.yahoo.com",
+      "created_at": "2026-07-19T13:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078606008960606579",
       "text": "The weight-loss boom has created massive market opportunities — and punishing failures. In this space, a single clinical trial result can send a stock soaring or instantly wipe out years of gains. \n\nTake $VKTX and $SKYE as your case study. yhoo.it/4fh0D3W",
       "created_at": "2026-07-18T22:21:05Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078195671434166706",
-      "text": "The new CEO uniform is going to cost you. Jensen Huang's Tom Ford leather jacket just sold for nearly $1 million on Sotheby's.",
-      "created_at": "2026-07-17T19:10:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078194191209832620",
-      "text": "Nvidia CEO Jensen Huang’s iconic Tom Ford leather jacket sells for $960,000 at Sotheby’s.\n\nDoes not come with 1,000 Nvidia shares.",
-      "created_at": "2026-07-17T19:04:40Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078187473675469130",
-      "text": "Semiconductor stocks trim their losses on Friday, with Micron Technology, SanDisk, and Western Digital climbing into green territory.\n\n$SKHY +5.52%\n$WDC +3.86\n$MU +2.50%\n$SNDK +1.65%",
-      "created_at": "2026-07-17T18:37:59Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-19T12:42:54Z",
+  "_updated": "2026-07-19T14:16:48Z",
   "_username": "YahooFinance"
 }
