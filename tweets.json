@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2078874044212867300",
+      "text": "Can the Australian model rescue the US retirement system? Trump seems to think so. finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nCan the Australian model rescue the US retirement system? Trump seems to think so.\n\nPresident Trump says Australia&apos;s retirement system could serve as a model for the US. Is that possible?\nfinance.yahoo.com",
+      "created_at": "2026-07-19T16:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078863708478951720",
       "text": "Warren Buffett shared a critical observation about the financial industry in an interview CNBC this week. 👀",
       "created_at": "2026-07-19T15:25:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078222483908403602",
-      "text": "AI job disruption is happening, and businesses can't ignore it. According to Jamie Dimon, the real test of leadership right now isn't just adopting the tech — it's actively working to retrain the workforce. yhoo.it/4prTxye",
-      "created_at": "2026-07-17T20:57:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-19T15:42:32Z",
+  "_updated": "2026-07-19T16:40:08Z",
   "_username": "YahooFinance"
 }
