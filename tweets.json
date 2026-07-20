@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2079213811064528969",
+      "text": "AMC's Q2 earnings have sent the stock skyrocketing after revealing a dramatic rise in revenue.",
+      "created_at": "2026-07-20T14:36:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079212990268588048",
+      "text": "Explore more premium news and analysis on AMC in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-20T14:33:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079212813323583525",
+      "text": "$AMC surges after Q2 earnings reveal a 14% rise in revenue from the same period in 2025.",
+      "created_at": "2026-07-20T14:32:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079211268334821510",
+      "text": "Billionaire investor Bill Ackman is sounding the alarm on an escalating tech race with China. yhoo.it/4aYJNpd",
+      "created_at": "2026-07-20T14:26:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2078947280833433854",
       "text": "Can the Australian model rescue the US retirement system? Trump seems to think so. #retirement  @YahooFinance  finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nCan the Australian model rescue the US retirement system? Trump seems to think so.\n\nPresident Trump says Australia&apos;s retirement system could serve as a model for the US. Is that possible?\nfinance.yahoo.com",
       "created_at": "2026-07-19T20:57:11Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078511656284397892",
-      "text": "For Gen Z, saving for vacation tops retirement: JPM study finance.yahoo.com/news/for-g…\n\nLink\n\n\n\nFor Gen Z, saving for vacation tops retirement: JPM study\n\nA majority of workers aren&apos;t kicking in as much as they should to their employer-provided retirement plans, according to a new report from JPMorgan Asset Management. \nfinance.yahoo.com",
-      "created_at": "2026-07-18T16:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078501319568941359",
-      "text": "Warren Buffett dropped some major truth bombs about the current state of the market and the psychology of investing in an interview with CNBC.",
-      "created_at": "2026-07-18T15:25:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078496557238780356",
-      "text": "CEO: SpaceX's record IPO was the space economy's opening act. Here's what comes next. finance.yahoo.com/technology…\n\nLink\n\n\n\nCEO: SpaceX&apos;s record IPO was the space economy&apos;s opening act. Here&apos;s what comes next.\n\nThe space economy is already having its strongest year on record, and there are still two quarters to go.\nfinance.yahoo.com",
-      "created_at": "2026-07-18T15:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2078481458084134972",
-      "text": "This week's AI winners and losers finance.yahoo.com/news/this-…\n\nLink\n\n\n\nThis week&apos;s AI winners and losers\n\nYahoo Finance&apos;s AI winners and losers include TSMC, Moonshot AI, IBM, and the chip industry.\nfinance.yahoo.com",
-      "created_at": "2026-07-18T14:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-20T13:40:13Z",
+  "_updated": "2026-07-20T15:41:28Z",
   "_username": "YahooFinance"
 }
