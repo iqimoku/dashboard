@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2079298356833079512",
+      "text": "AEW CEO @TonyKhan thinks Paramount's merger with Warner Bros. Discovery will boost both companies.\n\nVideo",
+      "created_at": "2026-07-20T20:12:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079260372733731182",
       "text": "A California-led coalition of states successfully paused Paramount's $110 billion acquisition of Warner Bros. Discovery on Monday, arguing the mega-merger would irreparably harm competition. yhoo.it/3TeIPz0",
       "created_at": "2026-07-20T17:41:18Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078843845316366782",
-      "text": "Big Tech earnings test tech's big rotation: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\nBig Tech earnings test tech&apos;s big rotation: What to watch this week\n\nEarnings results from Alphabet and Tesla headline a busy week, amid a chip sell-off and a conflict in Iran that keeps geopolitics simmering and oil prices rising.\nfinance.yahoo.com",
-      "created_at": "2026-07-19T14:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-20T19:19:22Z",
+  "_updated": "2026-07-20T20:56:32Z",
   "_username": "YahooFinance"
 }
