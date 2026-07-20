@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2079245549736259743",
+      "text": ".@scottmelker: How Trump Media's $100K-a-month Truth Social feed could negatively impact the Clarity Act's chances of passing\n\nVideo",
+      "created_at": "2026-07-20T16:42:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079213811064528969",
       "text": "AMC's Q2 earnings have sent the stock skyrocketing after revealing a dramatic rise in revenue.",
       "created_at": "2026-07-20T14:36:17Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2078541856594432461",
-      "text": "Foreclosures hit highest level since 2019, sparking interest from bargain hunters finance.yahoo.com/real-estat…\n\nLink\n\n\n\nForeclosures hit highest level since 2019, sparking interest from bargain hunters\n\nForeclosure sales can mean hefty discounts for buyers willing to brave complex closing process and potential renovations.\nfinance.yahoo.com",
-      "created_at": "2026-07-18T18:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-20T15:41:28Z",
+  "_updated": "2026-07-20T17:12:45Z",
   "_username": "YahooFinance"
 }
