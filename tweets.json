@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2079677181807005873",
+      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-21T21:17:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079677024008802390",
+      "text": "$SMCI says it's Q4 orders have topped $60 billion.",
+      "created_at": "2026-07-21T21:16:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079660351952482622",
+      "text": "Jamie Dimon is skeptical the massive AI boom will pay off as quickly as expected. Still, he isn't ruling out wild solutions, saying SpaceX’s data centers in space could actually work. yhoo.it/3TxEc3b",
+      "created_at": "2026-07-21T20:10:40Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079630200870928721",
       "text": "$META is recovering from its April lows ahead of the company's next earnings report, in part because of potential profit upside from massive cost cuts. yhoo.it/4yxAI0x",
       "created_at": "2026-07-21T18:10:52Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079260372733731182",
-      "text": "A California-led coalition of states successfully paused Paramount's $110 billion acquisition of Warner Bros. Discovery on Monday, arguing the mega-merger would irreparably harm competition. yhoo.it/3TeIPz0",
-      "created_at": "2026-07-20T17:41:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079254035400405195",
-      "text": "Foreclosures are rising after years of record lows, offering a rare entry point for buyers in a pricey market. yhoo.it/4frZKpp",
-      "created_at": "2026-07-20T17:16:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079253538006339899",
-      "text": "Explore more premium news and analysis on bitcoin in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-20T17:14:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-21T20:09:05Z",
+  "_updated": "2026-07-21T21:49:57Z",
   "_username": "YahooFinance"
 }
