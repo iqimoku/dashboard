@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2079958457159979472",
+      "text": "OpenAI CEO Sam Altman is focusing on key lessons after the company's AI hacked another AI company on its own.",
+      "created_at": "2026-07-22T15:55:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079915349395296327",
+      "text": "🛡️ Tesla has spent nearly a year going sideways. Wednesday’s earnings could finally help break the stalemate.\n\n📉 One July 24 $375 put can insure 100 $TSLA shares against a deeper drop — but the protection recently cost about $1,025.\n\n💸 That is roughly 2.7% of the stock position for insurance lasting only through Friday.\n\n⚡ Earnings will decide whether that floor was valuable protection — or an expensive precaution.",
+      "created_at": "2026-07-22T13:03:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079949016142365082",
+      "text": "OpenAI reported that its AI hacked another AI company on its own in what the company called an \"unprecedented cyber incident.\"",
+      "created_at": "2026-07-22T15:17:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079937746890563838",
       "text": "The US plans to impose a 100% tariff on generic drugs imported to the US beginning in August 2028. That levy would then double a year later to 200% in August 2029. yhoo.it/4gMvJTt",
       "created_at": "2026-07-22T14:32:56Z",
@@ -164,39 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079590005299692017",
-      "text": "Netflix is making a massive bet on AI, dropping $587 million to acquire Ben Affleck’s film tech company, InterPositive. yhoo.it/4vCUlSf",
-      "created_at": "2026-07-21T15:31:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079584346676101310",
-      "text": "Oil prices surged back above $90 a barrel on Tuesday as Houthi threats in the Red Sea escalated and the US launched its tenth consecutive day of airstrikes on Iran.",
-      "created_at": "2026-07-21T15:08:39Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079584440322273443",
-      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T15:09:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T14:50:51Z",
+  "_updated": "2026-07-22T16:10:44Z",
   "_username": "YahooFinance"
 }
