@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2080006865048551676",
+      "text": "Mark Cuban says that if AI still needs constant human guidance just to finish simple work, it isn't taking over white-collar jobs anytime soon.",
+      "created_at": "2026-07-22T19:07:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079999987535032769",
+      "text": "New on @YahooFinance: the addition of Options data within AlphaSpace. \nOptions activity is an important signal for traders and investors... but data is either expensive or delayed for most people. In partnership with @unusual_whales, AlphaSpace users now get real-time options data: \n- Explore a live options chain for any ticker\n- Click into any contract to dive into potential gains or losses\n- Use the options flow screener to monitor for noteworthy trades",
+      "created_at": "2026-07-22T18:40:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079988344130261350",
+      "text": "Honored to partner with Yahoo Finance to power their options data.\n\nAre you an enterprise that needs options data?\n\nContact: enterprise@unusualwhales.com\n\n\nYahoo Finance (@YahooFinance)\n\nWall Street is expecting Tesla’s earnings to reverse its recent slide. In case it doesn’t, @SPYJared explains how investors could use options as an insurance policy. \n\nReal-time options data, powered by @unusual_whales,  is live in AlphaSpace. You can explore a live options chain for any ticker or use the options flow screener to monitor for noteworthy trades.\n\nVideo\n  \n\n\n\n\n\n— https://nitter.net/YahooFinance/status/2079919930451919135#m",
+      "created_at": "2026-07-22T17:54:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079991065981919692",
+      "text": "The expectation was that AI would seamlessly take over enterprise tasks overnight. \n\nIn reality, current models break easily and still need human supervision to work, Mark Cuban explained in a recent podcast interview.",
+      "created_at": "2026-07-22T18:04:49Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079974963533017426",
       "text": "Mark Cuban thinks there’s a massive disconnect in the C-suite right now. \n\nWhile executives push for top-down AI strategies, few actually understand the underlying technical realities or execution requirements.",
       "created_at": "2026-07-22T17:00:50Z",
@@ -153,50 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079660351952482622",
-      "text": "Jamie Dimon is skeptical the massive AI boom will pay off as quickly as expected. Still, he isn't ruling out wild solutions, saying SpaceX’s data centers in space could actually work. yhoo.it/3TxEc3b",
-      "created_at": "2026-07-21T20:10:40Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079630200870928721",
-      "text": "$META is recovering from its April lows ahead of the company's next earnings report, in part because of potential profit upside from massive cost cuts. yhoo.it/4yxAI0x",
-      "created_at": "2026-07-21T18:10:52Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079630117400088937",
-      "text": "Canada has agreed to \"intensify\" trade negotiations with the U.S., says Canadian Prime Minister Mark Carney. \n\nFollowing Trump's new 50% tariffs on Canadian autos, dairy, and alcohol, Carney says Canada is looking for a more \"comprehensive deal.\"\n\nVideo",
-      "created_at": "2026-07-21T18:10:32Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079562542116983112",
-      "text": "🇨🇳 China internet stocks are back on top. $KWEB has jumped nearly 13% in July, while the Nasdaq has fallen about 2%.\n\n🍎 $BABA is leading the rally after its $AAPL AI tie-up cleared a major regulatory hurdle in China.\n\n📈 KWEB has outrun Apple and every Magnificent Seven stock except Meta this month.\n\n⚠️ The ETF is still down more than 73% from its 2021 record. A break above $31 would open the door to a larger recovery.",
-      "created_at": "2026-07-21T13:42:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T17:58:48Z",
+  "_updated": "2026-07-22T19:10:16Z",
   "_username": "YahooFinance"
 }
