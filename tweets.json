@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2080040394943807652",
+      "text": "The House has passed a bill placing some limits on congressional stock trading.",
+      "created_at": "2026-07-22T21:20:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080037749210403109",
+      "text": "Daily Gemini app users have tripled over the last year, $GOOGL CEO Sundar Pichai said in the company's latest earnings call.\n\nVideo",
+      "created_at": "2026-07-22T21:10:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080033931349401779",
+      "text": "$GOOGL beat Wall Street expectations in Q2, driven by a massive 82% surge in cloud revenue. \n\nCEO Sundar Pichai hailed the results, calling it an \"amazing quarter.\" yhoo.it/4b8YaY3",
+      "created_at": "2026-07-22T20:55:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080031715926442104",
+      "text": "1.7 billion people watched World Cup videos on YouTube, says $GOOGL CEO Sundar Pichai.\n\nVideo",
+      "created_at": "2026-07-22T20:46:20Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080026952920866985",
       "text": "$TSLA falls after Q2 earnings reveal an EPS miss.",
       "created_at": "2026-07-22T20:27:25Z",
@@ -164,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079917890908946541",
-      "text": "If your first instinct after earnings is opening the options chain… this one’s for you.\n\n\nYahoo Finance (@YahooFinance)\n\nReal-time options data, powered by @unusual_whales, is live in AlphaSpace.\n\n⛓️ Explore a live options chain for any ticker.\n🔎 Click into any contract to dive into potential gains or losses.\n🌊 Use the options flow screener to monitor for noteworthy trades.\n\nTry it today: finance.yahoo.com/about/prom…\n\n\n\n\n\n— https://nitter.net/YahooFinance/status/2079917221514514537#m",
-      "created_at": "2026-07-22T13:14:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079917221514514537",
-      "text": "Real-time options data, powered by @unusual_whales, is live in AlphaSpace.\n\n⛓️ Explore a live options chain for any ticker.\n🔎 Click into any contract to dive into potential gains or losses.\n🌊 Use the options flow screener to monitor for noteworthy trades.\n\nTry it today: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-22T13:11:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079686882074521827",
-      "text": "Could data centers in space actually work? Jamie Dimon thinks so. 🧑‍🚀 yhoo.it/3TxEc3b",
-      "created_at": "2026-07-21T21:56:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T20:50:36Z",
+  "_updated": "2026-07-22T21:53:39Z",
   "_username": "YahooFinance"
 }
