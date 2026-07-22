@@ -12,9 +12,9 @@
       }
     },
     {
-      "id": "2079677181807005873",
-      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T21:17:33Z",
+      "id": "2079677024008802390",
+      "text": "$SMCI says it's Q4 orders have topped $60 billion.",
+      "created_at": "2026-07-21T21:16:55Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -23,9 +23,9 @@
       }
     },
     {
-      "id": "2079677024008802390",
-      "text": "$SMCI says it's Q4 orders have topped $60 billion.",
-      "created_at": "2026-07-21T21:16:55Z",
+      "id": "2079677181807005873",
+      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-21T21:17:33Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -100,17 +100,6 @@
       }
     },
     {
-      "id": "2079584440322273443",
-      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T15:09:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
       "id": "2079584346676101310",
       "text": "Oil prices surged back above $90 a barrel on Tuesday as Houthi threats in the Red Sea escalated and the US launched its tenth consecutive day of airstrikes on Iran.",
       "created_at": "2026-07-21T15:08:39Z",
@@ -122,9 +111,9 @@
       }
     },
     {
-      "id": "2079584064994939053",
-      "text": "Keep up with all of today's market action: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Nasdaq leads Dow, S&amp;P 500 futures higher as chip stocks revive\n\nMarkets weighed new tariffs imposed on Canadian goods, the latest US-Iran escalation, and fresh earnings from General Motors and other companies.\nfinance.yahoo.com",
-      "created_at": "2026-07-21T15:07:32Z",
+      "id": "2079584440322273443",
+      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-21T15:09:02Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -144,9 +133,9 @@
       }
     },
     {
-      "id": "2079564291355681222",
-      "text": "Explore more premium news and analysis on TSMC in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T13:48:58Z",
+      "id": "2079584064994939053",
+      "text": "Keep up with all of today's market action: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Nasdaq leads Dow, S&amp;P 500 futures higher as chip stocks revive\n\nMarkets weighed new tariffs imposed on Canadian goods, the latest US-Iran escalation, and fresh earnings from General Motors and other companies.\nfinance.yahoo.com",
+      "created_at": "2026-07-21T15:07:32Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -166,9 +155,9 @@
       }
     },
     {
-      "id": "2079562605434208626",
-      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T13:42:16Z",
+      "id": "2079564291355681222",
+      "text": "Explore more premium news and analysis on TSMC in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-21T13:48:58Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -180,6 +169,17 @@
       "id": "2079562603173413248",
       "text": "$MMM soars after its latest earnings show the company's turnaround is gaining traction. 📈\n\nThe Post-It and Scotch Tape maker is repositioning itself in the AI era.",
       "created_at": "2026-07-21T13:42:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079562605434208626",
+      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-21T13:42:16Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-21T23:44:31Z",
+  "_updated": "2026-07-22T01:13:41Z",
   "_username": "YahooFinance"
 }
