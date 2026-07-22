@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2080026952920866985",
+      "text": "$TSLA falls after Q2 earnings reveal an EPS miss.",
+      "created_at": "2026-07-22T20:27:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080026497650196928",
+      "text": "Google parent Alphabet reported its second quarter earnings after the bell on Wednesday beating Wall Street's expectations on the top and bottom lines. yhoo.it/4b8YaY3",
+      "created_at": "2026-07-22T20:25:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080006865048551676",
       "text": "Mark Cuban says that if AI still needs constant human guidance just to finish simple work, it isn't taking over white-collar jobs anytime soon.",
       "created_at": "2026-07-22T19:07:35Z",
@@ -175,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079677024008802390",
-      "text": "$SMCI says it's Q4 orders have topped $60 billion.",
-      "created_at": "2026-07-21T21:16:55Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079677181807005873",
-      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-21T21:17:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T19:10:16Z",
+  "_updated": "2026-07-22T20:50:36Z",
   "_username": "YahooFinance"
 }
