@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2079974963533017426",
+      "text": "Mark Cuban thinks there’s a massive disconnect in the C-suite right now. \n\nWhile executives push for top-down AI strategies, few actually understand the underlying technical realities or execution requirements.",
+      "created_at": "2026-07-22T17:00:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2079958457159979472",
       "text": "OpenAI CEO Sam Altman is focusing on key lessons after the company's AI hacked another AI company on its own.",
       "created_at": "2026-07-22T15:55:14Z",
@@ -186,17 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079600138108932200",
-      "text": "Robinhood SVP and GM of international and crypto @JohannKerbrat breaks down some of the biggest changes to the trading platform with @scottmelker on today's episode of The Daily Wolf.\n\nVideo",
-      "created_at": "2026-07-21T16:11:24Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T16:10:44Z",
+  "_updated": "2026-07-22T17:58:48Z",
   "_username": "YahooFinance"
 }
