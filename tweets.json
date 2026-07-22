@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080061268640035307",
+      "text": "Elon Musk was just asked about a Tesla-SpaceX merger on the company's latest earnings call. \n\nHere's what he said:\n\nVideo",
+      "created_at": "2026-07-22T22:43:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080053802174959782",
       "text": "Following a recent parasite outbreak linked to shredded lettuce, Taco Bell is launching a discount campaign and embracing its loyal fans to rebuild trust — no greens attached. yhoo.it/4fl7GZe",
       "created_at": "2026-07-22T22:14:06Z",
@@ -186,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079924208461603195",
-      "text": "$SMCI continues to soar after the company said it expects gross margins to nearly double as it works through a record order backlog in the coming quarters.",
-      "created_at": "2026-07-22T13:39:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079924315877675357",
-      "text": "Create your own custom, AI-powered investing workspace at finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-22T13:39:34Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T22:47:22Z",
+  "_updated": "2026-07-22T23:49:52Z",
   "_username": "YahooFinance"
 }
