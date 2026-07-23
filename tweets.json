@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2080368878614376736",
+      "text": "LeBron James points to the importance of Nike having people on the ground, listening to younger generations, and understanding what they actually want.",
+      "created_at": "2026-07-23T19:06:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080360119393517990",
+      "text": "Last year, AMD CEO Lisa Su expected the AI accelerator market to reach $500 billion by 2028. \n\nOne year later, she calls that estimate conservative, and suggests it will reach $1.4 trillion by the end of the decade.\n\nVideo",
+      "created_at": "2026-07-23T18:31:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080295558078468332",
+      "text": "The four largest hyperscalers will collectively spend more than $1 trillion on capex next year: Evercore's Mark Mahaney. (Including $300B each by Google &amp; Amazon)",
+      "created_at": "2026-07-23T14:14:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080353275216286035",
       "text": "LeBron James sees his responsibility as a Nike athlete extending beyond Nike itself.",
       "created_at": "2026-07-23T18:04:06Z",
@@ -175,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080307989299261868",
-      "text": "A Glassdoor survey of more than 1,700 professionals found that 57% of respondents felt pressured to accept lower pay after losing a position.",
-      "created_at": "2026-07-23T15:04:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080296218618404997",
-      "text": "📉 Stocks sell off as markets grapple with AI spending and oil pressures.",
-      "created_at": "2026-07-23T14:17:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080296220359037039",
-      "text": "Keep up with today's trading: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Nasdaq drops over 2%, Dow and S&amp;P 500 tumble as Big Tech gets crushed, oil...\n\nInvestors mostly kept their focus on AI spending growth and Big Tech earnings as surging oil prices exerted pressure on markets.\nfinance.yahoo.com",
-      "created_at": "2026-07-23T14:17:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-23T18:04:18Z",
+  "_updated": "2026-07-23T20:04:31Z",
   "_username": "YahooFinance"
 }
