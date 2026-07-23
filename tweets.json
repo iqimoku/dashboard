@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2080083998395474163",
+      "text": "Predictions of mass job elimination miss a fundamental point, Mark Cuban said on the All-In podcast: AI still lacks real-world context and human judgment. \n\nInstead of replacing half the workforce, these tools are simply creating a need for people who know how to manage and direct them.",
+      "created_at": "2026-07-23T00:14:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080083769449398437",
+      "text": "Elon Musk details the difficulties in building Optimus robots.\n\nVideo",
+      "created_at": "2026-07-23T00:13:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080075118475178145",
+      "text": "There's a time and place to talk about a $TSLA and $SPCX merger. \n\nAnd according to Elon Musk, that's not an earnings call.\n\nVideo",
+      "created_at": "2026-07-22T23:38:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080065711779496077",
+      "text": "Google will probably spend well over $250 billion on capex in 2027 after spending likely over $205 billion in 2026.\n\nAlmost $500 billion in two years.\n\nLet that sink in.",
+      "created_at": "2026-07-22T23:01:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080061268640035307",
       "text": "Elon Musk was just asked about a Tesla-SpaceX merger on the company's latest earnings call. \n\nHere's what he said:\n\nVideo",
       "created_at": "2026-07-22T22:43:46Z",
@@ -175,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2079949016142365082",
-      "text": "OpenAI reported that its AI hacked another AI company on its own in what the company called an \"unprecedented cyber incident.\"",
-      "created_at": "2026-07-22T15:17:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2079937746890563838",
-      "text": "The US plans to impose a 100% tariff on generic drugs imported to the US beginning in August 2028. That levy would then double a year later to 200% in August 2029. yhoo.it/4gMvJTt",
-      "created_at": "2026-07-22T14:32:56Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-22T23:49:52Z",
+  "_updated": "2026-07-23T01:21:07Z",
   "_username": "YahooFinance"
 }
