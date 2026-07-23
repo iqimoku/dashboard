@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080426291510071599",
+      "text": "The Trump administration announced new global tariffs of 10% to 12.5% on many top trading partners, replacing rates set to expire at midnight.\n\nTrump's trade office said in a fact sheet that this order will apply to 60 of the top US trade partners and cover 99.4% of US imports.",
+      "created_at": "2026-07-23T22:54:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080421999667478620",
       "text": "Intel CEO Lip-Bu Tan stands to benefit from the \"most severe\" chip and memory supply constraints in history, thanks to three of the company's strategically important assets.\n\nVideo",
       "created_at": "2026-07-23T22:37:11Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080339440833122708",
-      "text": "LeBron James believes that Nike's path forward starts with returning to the foundation that helped make the company what it is.",
-      "created_at": "2026-07-23T17:09:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-23T22:43:07Z",
+  "_updated": "2026-07-23T23:45:00Z",
   "_username": "YahooFinance"
 }
