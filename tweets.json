@@ -1,6 +1,236 @@
 {
-  "_updated": "2026-07-23T04:59:44Z",
-  "_username": "YahooFinance",
-  "_error": "Nie można pobrać tweetów — wszystkie instancje Nitter niedostępne",
-  "data": []
+  "data": [
+    {
+      "id": "2080083998395474163",
+      "text": "Predictions of mass job elimination miss a fundamental point, Mark Cuban said on the All-In podcast: AI still lacks real-world context and human judgment. \n\nInstead of replacing half the workforce, these tools are simply creating a need for people who know how to manage and direct them.",
+      "created_at": "2026-07-23T00:14:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080083769449398437",
+      "text": "Elon Musk details the difficulties in building Optimus robots.\n\nVideo",
+      "created_at": "2026-07-23T00:13:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080075118475178145",
+      "text": "There's a time and place to talk about a $TSLA and $SPCX merger. \n\nAnd according to Elon Musk, that's not an earnings call.\n\nVideo",
+      "created_at": "2026-07-22T23:38:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080065711779496077",
+      "text": "Google will probably spend well over $250 billion on capex in 2027 after spending likely over $205 billion in 2026.\n\nAlmost $500 billion in two years.\n\nLet that sink in.",
+      "created_at": "2026-07-22T23:01:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080061268640035307",
+      "text": "Elon Musk was just asked about a Tesla-SpaceX merger on the company's latest earnings call. \n\nHere's what he said:\n\nVideo",
+      "created_at": "2026-07-22T22:43:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080053802174959782",
+      "text": "Following a recent parasite outbreak linked to shredded lettuce, Taco Bell is launching a discount campaign and embracing its loyal fans to rebuild trust — no greens attached. yhoo.it/4fl7GZe",
+      "created_at": "2026-07-22T22:14:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080049800368586944",
+      "text": "$TSLA CEO Elon Musk says the company's Robotaxi goals are \"ambitious\" but that they will move cautiously to avoid accidents.\n\nVideo",
+      "created_at": "2026-07-22T21:58:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080040394943807652",
+      "text": "The House has passed a bill placing some limits on congressional stock trading.",
+      "created_at": "2026-07-22T21:20:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080037749210403109",
+      "text": "Daily Gemini app users have tripled over the last year, $GOOGL CEO Sundar Pichai said in the company's latest earnings call.\n\nVideo",
+      "created_at": "2026-07-22T21:10:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080033931349401779",
+      "text": "$GOOGL beat Wall Street expectations in Q2, driven by a massive 82% surge in cloud revenue. \n\nCEO Sundar Pichai hailed the results, calling it an \"amazing quarter.\" yhoo.it/4b8YaY3",
+      "created_at": "2026-07-22T20:55:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080031715926442104",
+      "text": "1.7 billion people watched World Cup videos on YouTube, says $GOOGL CEO Sundar Pichai.\n\nVideo",
+      "created_at": "2026-07-22T20:46:20Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080026952920866985",
+      "text": "$TSLA falls after Q2 earnings reveal an EPS miss.",
+      "created_at": "2026-07-22T20:27:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080026497650196928",
+      "text": "Google parent Alphabet reported its second quarter earnings after the bell on Wednesday beating Wall Street's expectations on the top and bottom lines. yhoo.it/4b8YaY3",
+      "created_at": "2026-07-22T20:25:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080006865048551676",
+      "text": "Mark Cuban says that if AI still needs constant human guidance just to finish simple work, it isn't taking over white-collar jobs anytime soon.",
+      "created_at": "2026-07-22T19:07:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079999987535032769",
+      "text": "New on @YahooFinance: the addition of Options data within AlphaSpace. \nOptions activity is an important signal for traders and investors... but data is either expensive or delayed for most people. In partnership with @unusual_whales, AlphaSpace users now get real-time options data: \n- Explore a live options chain for any ticker\n- Click into any contract to dive into potential gains or losses\n- Use the options flow screener to monitor for noteworthy trades",
+      "created_at": "2026-07-22T18:40:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079988344130261350",
+      "text": "Honored to partner with Yahoo Finance to power their options data.\n\nAre you an enterprise that needs options data?\n\nContact: enterprise@unusualwhales.com\n\n\nYahoo Finance (@YahooFinance)\n\nWall Street is expecting Tesla’s earnings to reverse its recent slide. In case it doesn’t, @SPYJared explains how investors could use options as an insurance policy. \n\nReal-time options data, powered by @unusual_whales,  is live in AlphaSpace. You can explore a live options chain for any ticker or use the options flow screener to monitor for noteworthy trades.\n\nVideo\n  \n\n\n\n\n\n— https://nitter.net/YahooFinance/status/2079919930451919135#m",
+      "created_at": "2026-07-22T17:54:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079991065981919692",
+      "text": "The expectation was that AI would seamlessly take over enterprise tasks overnight. \n\nIn reality, current models break easily and still need human supervision to work, Mark Cuban explained in a recent podcast interview.",
+      "created_at": "2026-07-22T18:04:49Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079974963533017426",
+      "text": "Mark Cuban thinks there’s a massive disconnect in the C-suite right now. \n\nWhile executives push for top-down AI strategies, few actually understand the underlying technical realities or execution requirements.",
+      "created_at": "2026-07-22T17:00:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079958457159979472",
+      "text": "OpenAI CEO Sam Altman is focusing on key lessons after the company's AI hacked another AI company on its own.",
+      "created_at": "2026-07-22T15:55:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2079915349395296327",
+      "text": "🛡️ Tesla has spent nearly a year going sideways. Wednesday’s earnings could finally help break the stalemate.\n\n📉 One July 24 $375 put can insure 100 $TSLA shares against a deeper drop — but the protection recently cost about $1,025.\n\n💸 That is roughly 2.7% of the stock position for insurance lasting only through Friday.\n\n⚡ Earnings will decide whether that floor was valuable protection — or an expensive precaution.",
+      "created_at": "2026-07-22T13:03:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "id": "stevedjacobs",
+        "name": "Yahoo Finance / @YahooFinance",
+        "username": "YahooFinance",
+        "profile_image_url": ""
+      }
+    ]
+  },
+  "_updated": "2026-07-23T07:32:03Z",
+  "_username": "YahooFinance"
 }
