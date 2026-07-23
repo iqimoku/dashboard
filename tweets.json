@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2080421999667478620",
+      "text": "Intel CEO Lip-Bu Tan stands to benefit from the \"most severe\" chip and memory supply constraints in history, thanks to three of the company's strategically important assets.\n\nVideo",
+      "created_at": "2026-07-23T22:37:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080416315978702977",
+      "text": "AMD just called out its competitors, saying its next-gen EPYC Venice is the new leader in AI.\n\nVideo",
+      "created_at": "2026-07-23T22:14:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080412937450049577",
+      "text": "Intel is raising its capex spending plans for 2026 to more than $20 billion — far more than they estimated going into the year, CFO David Zinsner said on the company's Q2 earnings call. \n\nThe company also expects for 2027's capex spend to be \"significantly above\" its 2026 levels.\n\nVideo",
+      "created_at": "2026-07-23T22:01:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080405816998232550",
       "text": "Intel CFO Dave Zinsner says the company is upping its 2026 capex spend, and estimates 2027 spend will be even higher.\n\n\"We're raising our outlook for 2026 and now expect our CapEx to be more than $20 billion, which is up significantly versus our expectations entering the year.\"\n\nVideo",
       "created_at": "2026-07-23T21:32:53Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080337195420754329",
-      "text": "$AMD CEO Lisa Su says that in 2026, for the first time, the world is using more AI compute to run models than to train them.\n\nVideo",
-      "created_at": "2026-07-23T17:00:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080336133792133263",
-      "text": "AMD is launching its Helios AI rack, calling it the \"most powerful rackscale AI infrastructure.\" CEO Lisa Su says its in production already, and shipments will begin soon.\n\nVideo",
-      "created_at": "2026-07-23T16:55:59Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080334006097211596",
-      "text": "AMD CEO Lisa Su is working on some wild chip tech:",
-      "created_at": "2026-07-23T16:47:32Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-23T21:52:29Z",
+  "_updated": "2026-07-23T22:43:07Z",
   "_username": "YahooFinance"
 }
