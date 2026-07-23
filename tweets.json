@@ -1,6 +1,138 @@
 {
   "data": [
     {
+      "id": "2080353275216286035",
+      "text": "LeBron James sees his responsibility as a Nike athlete extending beyond Nike itself.",
+      "created_at": "2026-07-23T18:04:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080351437893111997",
+      "text": "Lisa Su says AMD's EPYC Venice delivers 20% higher performance over Nvidia's Vera, and has a clear lead over Arm-based chips.\n\nVideo",
+      "created_at": "2026-07-23T17:56:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080350788623139041",
+      "text": "$IXIC drops over 2% as relentless AI spending rattles investors. ⬇️",
+      "created_at": "2026-07-23T17:54:13Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080350790745530753",
+      "text": "Keep up with the market action through charts, analysis, and premium news, all in one view in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-23T17:54:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080349144258941138",
+      "text": "Watch out Vanna White, Lisa Su might come for your job. 😂\n\nVideo",
+      "created_at": "2026-07-23T17:47:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080339440833122708",
+      "text": "LeBron James believes that Nike's path forward starts with returning to the foundation that helped make the company what it is.",
+      "created_at": "2026-07-23T17:09:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080337195420754329",
+      "text": "$AMD CEO Lisa Su says that in 2026, for the first time, the world is using more AI compute to run models than to train them.\n\nVideo",
+      "created_at": "2026-07-23T17:00:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080336133792133263",
+      "text": "AMD is launching its Helios AI rack, calling it the \"most powerful rackscale AI infrastructure.\" CEO Lisa Su says its in production already, and shipments will begin soon.\n\nVideo",
+      "created_at": "2026-07-23T16:55:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080334006097211596",
+      "text": "AMD CEO Lisa Su is working on some wild chip tech:",
+      "created_at": "2026-07-23T16:47:32Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080334906073260423",
+      "text": "The massive fine against Google is the biggest in total against one company under the European Union's competition law known as the Digital Markets Act. yhoo.it/4pERffh",
+      "created_at": "2026-07-23T16:51:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080333310362886546",
+      "text": "AMD CEO  Lisa Su says the AI accelerator market will hit $1.4 trillion by 2030.\n\n\"By the end of the decade, the AI accelerator market is going to approach the size of the entire semiconductor market today,\" Su said, adding that GPUs will make up the vast majority of that market.\n\nVideo",
+      "created_at": "2026-07-23T16:44:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080327745028980868",
+      "text": "Franklin Templeton's head of digital assets and innovation Sandy Kaul said whether the Clarity Act passes or not, it won't impact what her organization is building out — but she does expect a massive institutional capital unlock if it does pass.\n\nVideo",
+      "created_at": "2026-07-23T16:22:39Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080316030803497231",
       "text": "Elon Musk came the closest he has yet to addressing long-running speculation that he intends to combine Tesla and SpaceX on Tesla's earnings call, but stopped short of confirming anything. yhoo.it/3TgQIUL",
       "created_at": "2026-07-23T15:36:06Z",
@@ -68,140 +200,8 @@
     },
     {
       "id": "2080296220359037039",
-      "text": "Keep up with today's trading: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq sell off as rising oil prices, bond yields, and AI capex...\n\nInvestors mostly kept their focus on AI spending growth and Big Tech earnings as surging oil prices exerted pressure on markets.\nfinance.yahoo.com",
+      "text": "Keep up with today's trading: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Nasdaq drops over 2%, Dow and S&amp;P 500 tumble as Big Tech gets crushed, oil...\n\nInvestors mostly kept their focus on AI spending growth and Big Tech earnings as surging oil prices exerted pressure on markets.\nfinance.yahoo.com",
       "created_at": "2026-07-23T14:17:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080296149722792152",
-      "text": "$GOOG had been the best-performing Magnificent Seven stock of the year, but that dynamic may be poised to change.\n\nThe stock fell at open on Thursday as investors were spooked by Alphabet's capex spending trends. yhoo.it/4yCFc6g",
-      "created_at": "2026-07-23T14:17:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080291219498766486",
-      "text": "Initial applications for US unemployment benefits fell to the lowest level since 1969, a signal that layoffs remain low in the labor market.",
-      "created_at": "2026-07-23T13:57:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080286876225708166",
-      "text": "$TSLA fell early Thursday after the EV pioneer reported mixed second quarter results that missed Wall Street expectations. yhoo.it/4vLFCEC",
-      "created_at": "2026-07-23T13:40:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080083998395474163",
-      "text": "Predictions of mass job elimination miss a fundamental point, Mark Cuban said on the All-In podcast: AI still lacks real-world context and human judgment. \n\nInstead of replacing half the workforce, these tools are simply creating a need for people who know how to manage and direct them.",
-      "created_at": "2026-07-23T00:14:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080083769449398437",
-      "text": "Elon Musk details the difficulties in building Optimus robots.\n\nVideo",
-      "created_at": "2026-07-23T00:13:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080075118475178145",
-      "text": "There's a time and place to talk about a $TSLA and $SPCX merger. \n\nAnd according to Elon Musk, that's not an earnings call.\n\nVideo",
-      "created_at": "2026-07-22T23:38:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080065711779496077",
-      "text": "Google will probably spend well over $250 billion on capex in 2027 after spending likely over $205 billion in 2026.\n\nAlmost $500 billion in two years.\n\nLet that sink in.",
-      "created_at": "2026-07-22T23:01:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080061268640035307",
-      "text": "Elon Musk was just asked about a Tesla-SpaceX merger on the company's latest earnings call. \n\nHere's what he said:\n\nVideo",
-      "created_at": "2026-07-22T22:43:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080053802174959782",
-      "text": "Following a recent parasite outbreak linked to shredded lettuce, Taco Bell is launching a discount campaign and embracing its loyal fans to rebuild trust — no greens attached. yhoo.it/4fl7GZe",
-      "created_at": "2026-07-22T22:14:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080049800368586944",
-      "text": "$TSLA CEO Elon Musk says the company's Robotaxi goals are \"ambitious\" but that they will move cautiously to avoid accidents.\n\nVideo",
-      "created_at": "2026-07-22T21:58:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080040394943807652",
-      "text": "The House has passed a bill placing some limits on congressional stock trading.",
-      "created_at": "2026-07-22T21:20:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080037749210403109",
-      "text": "Daily Gemini app users have tripled over the last year, $GOOGL CEO Sundar Pichai said in the company's latest earnings call.\n\nVideo",
-      "created_at": "2026-07-22T21:10:19Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-23T16:21:23Z",
+  "_updated": "2026-07-23T18:04:18Z",
   "_username": "YahooFinance"
 }
