@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2080654762777665834",
+      "text": "“AI is at an inflection point where more and more people are doing useful work, doing meaningful work,” AMD CEO @LisaSu says on the AI ecosystem.\n\nVideo",
+      "created_at": "2026-07-24T14:02:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080653112327483778",
+      "text": "Welcome to the club, @JensenHuang.",
+      "created_at": "2026-07-24T13:55:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080587693939978547",
+      "text": "Been a ride for Intel...",
+      "created_at": "2026-07-24T09:35:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080458969118548033",
       "text": "Trump's newest round of global tariffs backs up his administration's committed belief that trade is a national emergency. \n\nThe latest duties will be imposed under Section 301 of the Trade Act of 1974 and are coming into force at the end of a months-long investigation focused on the issue of forced labor.",
       "created_at": "2026-07-24T01:04:05Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080353275216286035",
-      "text": "LeBron James sees his responsibility as a Nike athlete extending beyond Nike itself.",
-      "created_at": "2026-07-23T18:04:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080351437893111997",
-      "text": "Lisa Su says AMD's EPYC Venice delivers 20% higher performance over Nvidia's Vera, and has a clear lead over Arm-based chips.\n\nVideo",
-      "created_at": "2026-07-23T17:56:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080350788623139041",
-      "text": "$IXIC drops over 2% as relentless AI spending rattles investors. ⬇️",
-      "created_at": "2026-07-23T17:54:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-24T12:09:33Z",
+  "_updated": "2026-07-24T14:30:23Z",
   "_username": "YahooFinance"
 }
