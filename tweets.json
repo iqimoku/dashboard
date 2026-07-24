@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080799714073563583",
+      "text": "We’ve officially moved from the era of passive scrapers to active digital citizens.\n\nWeb traffic from autonomous AI agents taking active steps — like clicking, filling out forms, and submitting data — grew by a staggering 7,851% in a single year, according to HUMAN Security. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T23:38:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080772292020232638",
       "text": "According to cybersecurity giant Thales, bots actually took over back in 2023. \n\nBy 2026, the group estimates non-human traffic has hit 53%. yhoo.it/4bL8823",
       "created_at": "2026-07-24T21:49:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080416315978702977",
-      "text": "AMD just called out its competitors, saying its next-gen EPYC Venice is the new leader in AI.\n\nVideo",
-      "created_at": "2026-07-23T22:14:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-24T22:47:41Z",
+  "_updated": "2026-07-24T23:50:46Z",
   "_username": "YahooFinance"
 }
