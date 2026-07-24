@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080458969118548033",
+      "text": "Trump's newest round of global tariffs backs up his administration's committed belief that trade is a national emergency. \n\nThe latest duties will be imposed under Section 301 of the Trade Act of 1974 and are coming into force at the end of a months-long investigation focused on the issue of forced labor.",
+      "created_at": "2026-07-24T01:04:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080442611798564904",
       "text": "$INTC popped after the company reported a blowout earnings win on Thursday after the bell. \n\nCEO Lip-Bu Tan declared \"Q2 was another quarter of solid execution\" on the company's earnings call. yhoo.it/4vODoV9",
       "created_at": "2026-07-23T23:59:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080350790745530753",
-      "text": "Keep up with the market action through charts, analysis, and premium news, all in one view in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-23T17:54:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-24T01:17:02Z",
+  "_updated": "2026-07-24T04:55:56Z",
   "_username": "YahooFinance"
 }
