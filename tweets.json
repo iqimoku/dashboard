@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2080772292020232638",
+      "text": "According to cybersecurity giant Thales, bots actually took over back in 2023. \n\nBy 2026, the group estimates non-human traffic has hit 53%. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T21:49:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080759437036310856",
+      "text": "Trisha Addicks is a sorority rush coach, helping clients get through rush for $5,000 per client.\n\nShe tells @BrookeDiPalma “You quantify success if they find their people, and each client pays $5,000 for unlimited support in the months leading up to rush and during rush.”\n\nVideo",
+      "created_at": "2026-07-24T20:58:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080758418885775856",
+      "text": "The Stop Insider Trading Act, a bill that would attempt to ban members of Congress from buying new equities, just passed in the House.\n\nThe bill comes heavily criticized and brings into question whether it will be effective.\n\nVideo",
+      "created_at": "2026-07-24T20:54:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080748748091670593",
+      "text": "Paramount has agreed to delay its merger with Warner Bros. Discovery. \n\nThe company agreed to a freeze until June 2027 or until a ruling on the lawsuit from state attorneys general who sued to block the deal.",
+      "created_at": "2026-07-24T20:15:34Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080739741381640477",
       "text": "Elon Musk, the world's first (former) trillionaire. 😅\n\nVideo",
       "created_at": "2026-07-24T19:39:47Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080412937450049577",
-      "text": "Intel is raising its capex spending plans for 2026 to more than $20 billion — far more than they estimated going into the year, CFO David Zinsner said on the company's Q2 earnings call. \n\nThe company also expects for 2027's capex spend to be \"significantly above\" its 2026 levels.\n\nVideo",
-      "created_at": "2026-07-23T22:01:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080405816998232550",
-      "text": "Intel CFO Dave Zinsner says the company is upping its 2026 capex spend, and estimates 2027 spend will be even higher.\n\n\"We're raising our outlook for 2026 and now expect our CapEx to be more than $20 billion, which is up significantly versus our expectations entering the year.\"\n\nVideo",
-      "created_at": "2026-07-23T21:32:53Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080400162128601597",
-      "text": "Intel CEO Lip-Bu Tan calls Q2 \"another quarter of solid execution.\" \n\n\"Today we are seeing the strongest revenue growth in more than 15 years,\" he added, noting that the company has embraced an AI-first mentality.\n\nVideo",
-      "created_at": "2026-07-23T21:10:25Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080395562671608152",
-      "text": "The Magnificent 7 wiped out roughly $797 billion in market valuation today on AI spending fears.",
-      "created_at": "2026-07-23T20:52:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-24T20:07:25Z",
+  "_updated": "2026-07-24T21:51:08Z",
   "_username": "YahooFinance"
 }
