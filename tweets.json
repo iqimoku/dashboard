@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080442611798564904",
+      "text": "$INTC popped after the company reported a blowout earnings win on Thursday after the bell. \n\nCEO Lip-Bu Tan declared \"Q2 was another quarter of solid execution\" on the company's earnings call. yhoo.it/4vODoV9",
+      "created_at": "2026-07-23T23:59:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080426291510071599",
       "text": "The Trump administration announced new global tariffs of 10% to 12.5% on many top trading partners, replacing rates set to expire at midnight.\n\nTrump's trade office said in a fact sheet that this order will apply to 60 of the top US trade partners and cover 99.4% of US imports.",
       "created_at": "2026-07-23T22:54:15Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080349144258941138",
-      "text": "Watch out Vanna White, Lisa Su might come for your job. 😂\n\nVideo",
-      "created_at": "2026-07-23T17:47:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-23T23:45:00Z",
+  "_updated": "2026-07-24T01:17:02Z",
   "_username": "YahooFinance"
 }
