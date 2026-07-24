@@ -1,6 +1,236 @@
 {
-  "_updated": "2026-07-24T18:08:02Z",
-  "_username": "YahooFinance",
-  "_error": "Nie można pobrać tweetów — wszystkie instancje Nitter niedostępne",
-  "data": []
+  "data": [
+    {
+      "id": "2080739741381640477",
+      "text": "Elon Musk, the world's first (former) trillionaire. 😅\n\nVideo",
+      "created_at": "2026-07-24T19:39:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080720699417608359",
+      "text": "IBM hit a bump in its second quarter, but CEO Arvind Krishna insists the company's AI strategy is still on track. yhoo.it/4wsys9K",
+      "created_at": "2026-07-24T18:24:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080709873071718483",
+      "text": "Humans are officially the minority on the internet, according to CloudFlare. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T17:41:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080699896907108596",
+      "text": "Claude's latest model, Opus 5, has been released by Anthropic.",
+      "created_at": "2026-07-24T17:01:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080696350098809120",
+      "text": "Miami is officially a more expensive city to live in than NYC, according to federal data.\n\nVideo",
+      "created_at": "2026-07-24T16:47:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080690797666595042",
+      "text": "Will agentic AI take over managing investment portfolios in the near future?\n\nThat depends on the client's preferences, Morgan Stanley's Amy Oldenburg tells @scottmelker.\n\nVideo",
+      "created_at": "2026-07-24T16:25:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080683301816156492",
+      "text": "Christopher Nolan requested custom-built IMAX cameras for filming 'The Odyssey', according to IMAX CEO Richard Gelfond.\n\nVideo",
+      "created_at": "2026-07-24T15:55:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080674669242294720",
+      "text": "Miami has officially become more expensive to live in than New York City.\n\nFederal data now shows that Miami is the second-most expensive city in the country, behind San Francisco.",
+      "created_at": "2026-07-24T15:21:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080654762777665834",
+      "text": "“AI is at an inflection point where more and more people are doing useful work, doing meaningful work,” AMD CEO @LisaSu says on the AI ecosystem.\n\nVideo",
+      "created_at": "2026-07-24T14:02:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080653112327483778",
+      "text": "Welcome to the club, @JensenHuang.",
+      "created_at": "2026-07-24T13:55:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080587693939978547",
+      "text": "Been a ride for Intel...",
+      "created_at": "2026-07-24T09:35:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080458969118548033",
+      "text": "Trump's newest round of global tariffs backs up his administration's committed belief that trade is a national emergency. \n\nThe latest duties will be imposed under Section 301 of the Trade Act of 1974 and are coming into force at the end of a months-long investigation focused on the issue of forced labor.",
+      "created_at": "2026-07-24T01:04:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080442611798564904",
+      "text": "$INTC popped after the company reported a blowout earnings win on Thursday after the bell. \n\nCEO Lip-Bu Tan declared \"Q2 was another quarter of solid execution\" on the company's earnings call. yhoo.it/4vODoV9",
+      "created_at": "2026-07-23T23:59:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080426291510071599",
+      "text": "The Trump administration announced new global tariffs of 10% to 12.5% on many top trading partners, replacing rates set to expire at midnight.\n\nTrump's trade office said in a fact sheet that this order will apply to 60 of the top US trade partners and cover 99.4% of US imports.",
+      "created_at": "2026-07-23T22:54:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080421999667478620",
+      "text": "Intel CEO Lip-Bu Tan stands to benefit from the \"most severe\" chip and memory supply constraints in history, thanks to three of the company's strategically important assets.\n\nVideo",
+      "created_at": "2026-07-23T22:37:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080416315978702977",
+      "text": "AMD just called out its competitors, saying its next-gen EPYC Venice is the new leader in AI.\n\nVideo",
+      "created_at": "2026-07-23T22:14:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080412937450049577",
+      "text": "Intel is raising its capex spending plans for 2026 to more than $20 billion — far more than they estimated going into the year, CFO David Zinsner said on the company's Q2 earnings call. \n\nThe company also expects for 2027's capex spend to be \"significantly above\" its 2026 levels.\n\nVideo",
+      "created_at": "2026-07-23T22:01:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080405816998232550",
+      "text": "Intel CFO Dave Zinsner says the company is upping its 2026 capex spend, and estimates 2027 spend will be even higher.\n\n\"We're raising our outlook for 2026 and now expect our CapEx to be more than $20 billion, which is up significantly versus our expectations entering the year.\"\n\nVideo",
+      "created_at": "2026-07-23T21:32:53Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080400162128601597",
+      "text": "Intel CEO Lip-Bu Tan calls Q2 \"another quarter of solid execution.\" \n\n\"Today we are seeing the strongest revenue growth in more than 15 years,\" he added, noting that the company has embraced an AI-first mentality.\n\nVideo",
+      "created_at": "2026-07-23T21:10:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080395562671608152",
+      "text": "The Magnificent 7 wiped out roughly $797 billion in market valuation today on AI spending fears.",
+      "created_at": "2026-07-23T20:52:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "id": "stevedjacobs",
+        "name": "Yahoo Finance / @YahooFinance",
+        "username": "YahooFinance",
+        "profile_image_url": ""
+      }
+    ]
+  },
+  "_updated": "2026-07-24T20:07:25Z",
+  "_username": "YahooFinance"
 }
