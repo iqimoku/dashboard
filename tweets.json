@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081061690641158165",
+      "text": "The AI boom needs data centers, but most Americans don't want them anywhere near home. yhoo.it/4gRwHhj",
+      "created_at": "2026-07-25T16:59:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081048357456212425",
       "text": "AEW's Tony Khan on the business lessons he learned from his billionaire father Shad Khan finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAEW&apos;s Tony Khan on the business lessons he learned from his billionaire father Shad Khan\n\nThe All Elite Wrestling CEO said his father&apos;s journey to becoming a billionaire embodies the American dream.\nfinance.yahoo.com",
       "created_at": "2026-07-25T16:06:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080654762777665834",
-      "text": "“AI is at an inflection point where more and more people are doing useful work, doing meaningful work,” AMD CEO @LisaSu says on the AI ecosystem.\n\nVideo",
-      "created_at": "2026-07-24T14:02:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-25T16:40:40Z",
+  "_updated": "2026-07-25T17:44:59Z",
   "_username": "YahooFinance"
 }
