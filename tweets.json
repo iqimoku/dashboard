@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081018158903648343",
+      "text": "Google and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGoogle and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the...\n\nWall Street spent months buying the AI buildout — this week it started asking who actually pays for it.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T14:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081003058952036619",
       "text": "Alphabet flops, Intel shocks, and Tesla tanks: AlphaSpace weekly recap finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAlphabet flops, Intel shocks, and Tesla tanks: AlphaSpace weekly recap\n\nSome markets observations, compliments of Yahoo Finance AlphaSpace.\nfinance.yahoo.com",
       "created_at": "2026-07-25T13:06:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080458969118548033",
-      "text": "Trump's newest round of global tariffs backs up his administration's committed belief that trade is a national emergency. \n\nThe latest duties will be imposed under Section 301 of the Trade Act of 1974 and are coming into force at the end of a months-long investigation focused on the issue of forced labor.",
-      "created_at": "2026-07-24T01:04:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-25T13:22:17Z",
+  "_updated": "2026-07-25T14:52:51Z",
   "_username": "YahooFinance"
 }
