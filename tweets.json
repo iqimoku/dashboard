@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080806766544126110",
+      "text": "Trump's flurry of tariff moves still leaves rates below pre-Supreme Court peaks finance.yahoo.com/economy/po…\n\nLink\n\n\n\nTrump&apos;s flurry of tariff moves still leaves rates below pre-Supreme Court peaks\n\nPresident Trump and his team have offered a dizzying array of tariff moves in recent days, but the total tariff burden on the US economy remains well below where things stood earlier this year.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T00:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080799714073563583",
       "text": "We’ve officially moved from the era of passive scrapers to active digital citizens.\n\nWeb traffic from autonomous AI agents taking active steps — like clicking, filling out forms, and submitting data — grew by a staggering 7,851% in a single year, according to HUMAN Security. yhoo.it/4bL8823",
       "created_at": "2026-07-24T23:38:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080421999667478620",
-      "text": "Intel CEO Lip-Bu Tan stands to benefit from the \"most severe\" chip and memory supply constraints in history, thanks to three of the company's strategically important assets.\n\nVideo",
-      "created_at": "2026-07-23T22:37:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-24T23:50:46Z",
+  "_updated": "2026-07-25T01:18:08Z",
   "_username": "YahooFinance"
 }
