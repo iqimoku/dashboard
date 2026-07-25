@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081033257932501326",
+      "text": "Workers remain confident in their skills despite economic jitters: Study finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nWorkers remain confident in their skills despite economic jitters: Study\n\nAI, economic uncertainty? Workers aay they&apos;re ready, according to a new global workplace report.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T15:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081018158903648343",
       "text": "Google and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGoogle and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the...\n\nWall Street spent months buying the AI buildout — this week it started asking who actually pays for it.\nfinance.yahoo.com",
       "created_at": "2026-07-25T14:06:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080587693939978547",
-      "text": "Been a ride for Intel...",
-      "created_at": "2026-07-24T09:35:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-25T14:52:51Z",
+  "_updated": "2026-07-25T15:52:51Z",
   "_username": "YahooFinance"
 }
