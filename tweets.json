@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2080957760041078918",
+      "text": "Why aren't oil prices higher? Staggering drop in energy demand leaves strategists puzzled. finance.yahoo.com/energy/art…\n\nLink\n\n\n\nWhy aren&apos;t oil prices higher? Staggering drop in energy demand leaves strategists puzzled.\n\nOil markets are tighter than ever, so why are prices rangebound? The market has rebalanced, JPMorgan says.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T10:06:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2080806766544126110",
       "text": "Trump's flurry of tariff moves still leaves rates below pre-Supreme Court peaks finance.yahoo.com/economy/po…\n\nLink\n\n\n\nTrump&apos;s flurry of tariff moves still leaves rates below pre-Supreme Court peaks\n\nPresident Trump and his team have offered a dizzying array of tariff moves in recent days, but the total tariff burden on the US economy remains well below where things stood earlier this year.\nfinance.yahoo.com",
       "created_at": "2026-07-25T00:06:07Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080426291510071599",
-      "text": "The Trump administration announced new global tariffs of 10% to 12.5% on many top trading partners, replacing rates set to expire at midnight.\n\nTrump's trade office said in a fact sheet that this order will apply to 60 of the top US trade partners and cover 99.4% of US imports.",
-      "created_at": "2026-07-23T22:54:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-25T09:23:00Z",
+  "_updated": "2026-07-25T10:58:23Z",
   "_username": "YahooFinance"
 }
