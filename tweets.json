@@ -1,6 +1,236 @@
 {
-  "_updated": "2026-07-26T12:49:21Z",
-  "_username": "YahooFinance",
-  "_error": "Nie można pobrać tweetów — wszystkie instancje Nitter niedostępne",
-  "data": []
+  "data": [
+    {
+      "id": "2081379082764239051",
+      "text": "Jamie Dimon is avoiding long-dated government bonds. yhoo.it/4x17KEX",
+      "created_at": "2026-07-26T14:00:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081365446888964585",
+      "text": "'The AI trade is still on': Wall Street sees Big Tech's spending as positive for semiconductor stocks finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;The AI trade is still on&apos;: Wall Street sees Big Tech&apos;s spending as positive for semiconductor...\n\nAlphabet&apos;s increased capex forecast for 2026 this week was the latest tailwind for AI infrastructure stocks.\nfinance.yahoo.com",
+      "created_at": "2026-07-26T13:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081320148833534053",
+      "text": "4 Big Tech earnings reports, a Fed meeting, and $100 oil: It's the busiest week of the quarter finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n4 Big Tech earnings reports, a Fed meeting, and $100 oil: It&apos;s the busiest week of the quarter\n\nInvestors step into the busiest week of the quarter with hyperscaler earnings, the June Fed meeting, and escalations in the Middle East all in focus.\nfinance.yahoo.com",
+      "created_at": "2026-07-26T10:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081111770991563177",
+      "text": "Nearly 1 in 4 US workers feel trapped in their jobs, wanting to leave but afraid to lose their health insurance.",
+      "created_at": "2026-07-25T20:18:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081061690641158165",
+      "text": "The AI boom needs data centers, but most Americans don't want them anywhere near home. yhoo.it/4gRwHhj",
+      "created_at": "2026-07-25T16:59:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081048357456212425",
+      "text": "AEW's Tony Khan on the business lessons he learned from his billionaire father Shad Khan finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAEW&apos;s Tony Khan on the business lessons he learned from his billionaire father Shad Khan\n\nThe All Elite Wrestling CEO said his father&apos;s journey to becoming a billionaire embodies the American dream.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T16:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081033257932501326",
+      "text": "Workers remain confident in their skills despite economic jitters: Study finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nWorkers remain confident in their skills despite economic jitters: Study\n\nAI, economic uncertainty? Workers aay they&apos;re ready, according to a new global workplace report.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T15:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081018158903648343",
+      "text": "Google and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGoogle and Tesla lost half a trillion dollars this week as their suppliers cashed in: Chart of the...\n\nWall Street spent months buying the AI buildout — this week it started asking who actually pays for it.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T14:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081003058952036619",
+      "text": "Alphabet flops, Intel shocks, and Tesla tanks: AlphaSpace weekly recap finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAlphabet flops, Intel shocks, and Tesla tanks: AlphaSpace weekly recap\n\nSome markets observations, compliments of Yahoo Finance AlphaSpace.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T13:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080957760041078918",
+      "text": "Why aren't oil prices higher? Staggering drop in energy demand leaves strategists puzzled. finance.yahoo.com/energy/art…\n\nLink\n\n\n\nWhy aren&apos;t oil prices higher? Staggering drop in energy demand leaves strategists puzzled.\n\nOil markets are tighter than ever, so why are prices rangebound? The market has rebalanced, JPMorgan says.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T10:06:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080806766544126110",
+      "text": "Trump's flurry of tariff moves still leaves rates below pre-Supreme Court peaks finance.yahoo.com/economy/po…\n\nLink\n\n\n\nTrump&apos;s flurry of tariff moves still leaves rates below pre-Supreme Court peaks\n\nPresident Trump and his team have offered a dizzying array of tariff moves in recent days, but the total tariff burden on the US economy remains well below where things stood earlier this year.\nfinance.yahoo.com",
+      "created_at": "2026-07-25T00:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080799714073563583",
+      "text": "We’ve officially moved from the era of passive scrapers to active digital citizens.\n\nWeb traffic from autonomous AI agents taking active steps — like clicking, filling out forms, and submitting data — grew by a staggering 7,851% in a single year, according to HUMAN Security. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T23:38:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080772292020232638",
+      "text": "According to cybersecurity giant Thales, bots actually took over back in 2023. \n\nBy 2026, the group estimates non-human traffic has hit 53%. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T21:49:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080759437036310856",
+      "text": "Trisha Addicks is a sorority rush coach, helping clients get through rush for $5,000 per client.\n\nShe tells @BrookeDiPalma “You quantify success if they find their people, and each client pays $5,000 for unlimited support in the months leading up to rush and during rush.”\n\nVideo",
+      "created_at": "2026-07-24T20:58:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080758418885775856",
+      "text": "The Stop Insider Trading Act, a bill that would attempt to ban members of Congress from buying new equities, just passed in the House.\n\nThe bill comes heavily criticized and brings into question whether it will be effective.\n\nVideo",
+      "created_at": "2026-07-24T20:54:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080748748091670593",
+      "text": "Paramount has agreed to delay its merger with Warner Bros. Discovery. \n\nThe company agreed to a freeze until June 2027 or until a ruling on the lawsuit from state attorneys general who sued to block the deal.",
+      "created_at": "2026-07-24T20:15:34Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080739741381640477",
+      "text": "Elon Musk, the world's first (former) trillionaire. 😅\n\nVideo",
+      "created_at": "2026-07-24T19:39:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080720699417608359",
+      "text": "IBM hit a bump in its second quarter, but CEO Arvind Krishna insists the company's AI strategy is still on track. yhoo.it/4wsys9K",
+      "created_at": "2026-07-24T18:24:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080709873071718483",
+      "text": "Humans are officially the minority on the internet, according to CloudFlare. yhoo.it/4bL8823",
+      "created_at": "2026-07-24T17:41:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2080699896907108596",
+      "text": "Claude's latest model, Opus 5, has been released by Anthropic.",
+      "created_at": "2026-07-24T17:01:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "id": "stevedjacobs",
+        "name": "Yahoo Finance / @YahooFinance",
+        "username": "YahooFinance",
+        "profile_image_url": ""
+      }
+    ]
+  },
+  "_updated": "2026-07-26T14:20:24Z",
+  "_username": "YahooFinance"
 }
