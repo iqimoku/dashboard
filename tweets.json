@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081320148833534053",
+      "text": "4 Big Tech earnings reports, a Fed meeting, and $100 oil: It's the busiest week of the quarter finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n4 Big Tech earnings reports, a Fed meeting, and $100 oil: It&apos;s the busiest week of the quarter\n\nInvestors step into the busiest week of the quarter with hyperscaler earnings, the June Fed meeting, and escalations in the Middle East all in focus.\nfinance.yahoo.com",
+      "created_at": "2026-07-26T10:06:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081111770991563177",
       "text": "Nearly 1 in 4 US workers feel trapped in their jobs, wanting to leave but afraid to lose their health insurance.",
       "created_at": "2026-07-25T20:18:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080683301816156492",
-      "text": "Christopher Nolan requested custom-built IMAX cameras for filming 'The Odyssey', according to IMAX CEO Richard Gelfond.\n\nVideo",
-      "created_at": "2026-07-24T15:55:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-26T08:00:11Z",
+  "_updated": "2026-07-26T10:26:13Z",
   "_username": "YahooFinance"
 }
