@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2081396395399905342",
+      "text": "Corporate America is the most optimistic it's been in 15 years — but the market's still stuck: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nCorporate America is the most optimistic it&apos;s been in 15 years — but the market&apos;s still stuck:...\n\nMore S&amp;P 500 companies are raising their profit outlooks than cutting them — a setup that would normally lead to a stock market rally that hasn&apos;t come.\nfinance.yahoo.com",
+      "created_at": "2026-07-26T15:09:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081393879421534538",
+      "text": "Less than half of Americans say they can consistently afford healthcare. yhoo.it/4gVhsE7",
+      "created_at": "2026-07-26T14:59:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2081381602035118090",
+      "text": "Why are investors freaking out about Big Tech's booming AI capex? finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nWhy are investors freaking out about Big Tech&apos;s booming AI capex?\n\nWhy so worried about AI spending?\nfinance.yahoo.com",
+      "created_at": "2026-07-26T14:10:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081379082764239051",
       "text": "Jamie Dimon is avoiding long-dated government bonds. yhoo.it/4x17KEX",
       "created_at": "2026-07-26T14:00:18Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2080720699417608359",
-      "text": "IBM hit a bump in its second quarter, but CEO Arvind Krishna insists the company's AI strategy is still on track. yhoo.it/4wsys9K",
-      "created_at": "2026-07-24T18:24:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080709873071718483",
-      "text": "Humans are officially the minority on the internet, according to CloudFlare. yhoo.it/4bL8823",
-      "created_at": "2026-07-24T17:41:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2080699896907108596",
-      "text": "Claude's latest model, Opus 5, has been released by Anthropic.",
-      "created_at": "2026-07-24T17:01:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-26T14:20:24Z",
+  "_updated": "2026-07-26T15:51:15Z",
   "_username": "YahooFinance"
 }
