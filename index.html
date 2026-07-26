@@ -1577,21 +1577,15 @@ const CHANGELOG = [
 
   {date:"2026-07-18",mk:"mwig40",ticker:"ATT",name:"Grupa Azoty",from:3,to:2,reason:"Korekta ręczna: pierwotne przejście 1→3 (05.07) było fałszywym alarmem algorytmu — SMA150/SMA200 dopiero co skrzyżowały się w górę, a ujemny perf.1M (-3,7%) maskował już wyraźnie dodatni perf.tygodniowy (+4,4%). Zweryfikowane na wykresie miesięcznym: wieloletnia baza akumulacyjna z rosnącym wolumenem, nie dystrybucja. Dodano zabezpieczenie w calcStage() przeciw powtórce tego wzorca."},
   {date:"2026-07-26",mk:"wig20",ticker:"PGE",name:"PGE",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
-  {date:"2026-07-26",mk:"mwig40",ticker:"ATT",name:"Grupa Azoty",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -4.6%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-26",mk:"mwig40",ticker:"DOM",name:"Dom Development",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"mwig40",ticker:"VOX",name:"VOXEL",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"mwig40",ticker:"GPP",name:"GRUPRACUJ",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"mwig40",ticker:"ASE",name:"ASSECOSEE",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"dax",ticker:"CBK",name:"Commerzbank",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -3.1%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-26",mk:"dax",ticker:"CON",name:"Continental AG",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -4.0%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-26",mk:"dax",ticker:"G1A",name:"GEA Group",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 7.9%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-26",mk:"ndx",ticker:"GOOGL",name:"Alphabet (A)",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -8.4%)."},
   {date:"2026-07-26",mk:"ndx",ticker:"GOOG",name:"Alphabet (C)",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -8.5%)."},
   {date:"2026-07-26",mk:"ndx",ticker:"META",name:"Meta Platforms",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
   {date:"2026-07-26",mk:"ndx",ticker:"MCHP",name:"Microchip Technology",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -15.1%)."},
-  {date:"2026-07-26",mk:"ndx",ticker:"QCOM",name:"Qualcomm",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
-  {date:"2026-07-26",mk:"ndx",ticker:"DDOG",name:"Datadog",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 13.1%) — początek nowego trendu wzrostowego."},
-  {date:"2026-07-26",mk:"ndx",ticker:"CDNS",name:"Cadence Design",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
   {date:"2026-07-26",mk:"ndx",ticker:"GEHC",name:"GE HealthCare",from:2,to:4,reason:"Gwałtowne załamanie z trendu wzrostowego bezpośrednio w trend spadkowy — pominięcie fazy dystrybucji."},
   {date:"2026-07-26",mk:"ndx",ticker:"BKNG",name:"Booking Holdings",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
   {date:"2026-07-26",mk:"ndx",ticker:"WBD",name:"Warner Bros. Discovery",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
@@ -1601,7 +1595,6 @@ const CHANGELOG = [
   {date:"2026-07-26",mk:"ndx",ticker:"ROP",name:"Roper Technologies",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"ndx",ticker:"ROST",name:"Ross Stores",from:3,to:2,reason:"Odzyskanie momentum wzrostowego (perf.1M 4.8%) mimo wcześniejszej dystrybucji — nieudana dystrybucja (\"failed breakdown\")."},
   {date:"2026-07-26",mk:"nyse",ticker:"MS",name:"Morgan Stanley",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -4.5%) — sygnał ostrzegawczy, możliwa dystrybucja."},
-  {date:"2026-07-26",mk:"nyse",ticker:"PRU",name:"Prudential Financial",from:2,to:1,reason:"Utrata dynamiki wzrostu, powrót do konsolidacji poniżej SMA150."},
   {date:"2026-07-26",mk:"nyse",ticker:"FRC2",name:"Franklin Resources",from:2,to:3,reason:"Cena traci momentum względem SMA150 (perf.1M -3.8%) — sygnał ostrzegawczy, możliwa dystrybucja."},
   {date:"2026-07-26",mk:"nyse",ticker:"ABT",name:"Abbott Laboratories",from:4,to:1,reason:"Ustabilizowanie spadku, początek fazy akumulacji."},
   {date:"2026-07-26",mk:"nyse",ticker:"DHR",name:"Danaher",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
@@ -1611,10 +1604,8 @@ const CHANGELOG = [
   {date:"2026-07-26",mk:"nyse",ticker:"LMT",name:"Lockheed Martin",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
   {date:"2026-07-26",mk:"nyse",ticker:"MMM",name:"3M",from:2,to:1,reason:"Utrata dynamiki wzrostu, powrót do konsolidacji poniżej SMA150."},
   {date:"2026-07-26",mk:"nyse",ticker:"EMR",name:"Emerson Electric",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
-  {date:"2026-07-26",mk:"nyse",ticker:"PG",name:"Procter & Gamble",from:1,to:4,reason:"Gwałtowne załamanie z fazy akumulacji bezpośrednio w trend spadkowy."},
   {date:"2026-07-26",mk:"nyse",ticker:"GM",name:"General Motors",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
   {date:"2026-07-26",mk:"nyse",ticker:"NEE",name:"NextEra Energy",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 3.5%) — początek nowego trendu wzrostowego."},
-  {date:"2026-07-26",mk:"nyse",ticker:"DUK",name:"Duke Energy",from:1,to:2,reason:"Wybicie ponad SMA150 z rosnącym trendem (perf.1M 3.7%) — początek nowego trendu wzrostowego."},
   {date:"2026-07-26",mk:"nyse",ticker:"SCCO",name:"Southern Copper",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
   {date:"2026-07-26",mk:"nyse",ticker:"NOV",name:"NOV Inc.",from:4,to:2,reason:"Silne odbicie — bezpośrednie przejście z trendu spadkowego w nowy trend wzrostowy."},
   {date:"2026-07-26",mk:"nyse",ticker:"GLW",name:"Corning",from:3,to:4,reason:"Przełamanie SMA150 w dół, trend spadkowy przyspiesza (perf.1M -24.6%)."},
@@ -1762,7 +1753,7 @@ mwig40: [
   {ticker:"ASB",name:"ASBIS",sector:"Dystrybucja IT",idx:"mwig40",price:112,chg:"+0.18%",stage:2,ma30w:60.19,matrend:"rosnąca ↑↑",vol:"Malejący",rs:"RSI 64",h52:"+23%",
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.3,chg:"-0.16%",stage:3,ma30w:18.9,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 46",h52:"-23%",
+  {ticker:"ATT",name:"Grupa Azoty",sector:"Chemia",idx:"mwig40",price:19.3,chg:"-0.16%",stage:2,ma30w:18.9,matrend:"opadająca ↓",vol:"Niski",rs:"RSI 46",h52:"-23%",
    mtt:[true,true,true,true,false,false,true,false]},
 
   {ticker:"BFT",name:"Benefit Systems",sector:"HR",idx:"mwig40",price:5145,chg:"-0.58%",stage:2,ma30w:4102.13,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 61",h52:"+8%",
@@ -1774,7 +1765,7 @@ mwig40: [
   {ticker:"CAR",name:"Inter Cars",sector:"Motoryzacja",idx:"mwig40",price:917,chg:"+0.22%",stage:2,ma30w:707.22,matrend:"rosnąca ↑↑",vol:"B. wysoki",rs:"RSI 77",h52:"+10%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:255.5,chg:"+0.20%",stage:1,ma30w:254.24,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-10%",
+  {ticker:"DOM",name:"Dom Development",sector:"Deweloperzy",idx:"mwig40",price:255.5,chg:"+0.20%",stage:4,ma30w:254.24,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 54",h52:"-10%",
    mtt:[true,false,true,false,true,false,true,false]},
 
   {ticker:"EAT",name:"AmRest",sector:"Restauracje",idx:"mwig40",price:10.5,chg:"+3.75%",stage:4,ma30w:11.82,matrend:"opadająca ↓",vol:"Wysoki",rs:"RSI 47",h52:"-34%",
@@ -1968,7 +1959,7 @@ dax: [
   {ticker:"DTG",name:"Daimler Truck Holding",sector:"Motoryzacja",idx:"dax",price:45.99,chg:"+0.48%",stage:2,ma30w:41.71,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 71",h52:"+2%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"G1A",name:"GEA Group",sector:"Przemysł",idx:"dax",price:63.55,chg:"+0.39%",stage:2,ma30w:59.99,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 66",h52:"-5%",
+  {ticker:"G1A",name:"GEA Group",sector:"Przemysł",idx:"dax",price:63.55,chg:"+0.39%",stage:1,ma30w:59.99,matrend:"rosnąca ↑",vol:"Stabilny",rs:"RSI 66",h52:"-5%",
    mtt:[true,true,true,false,true,false,true,false]},
 
   {ticker:"HEI",name:"Heidelberg Materials",sector:"Budownictwo",idx:"dax",price:168.3,chg:"+1.02%",stage:4,ma30w:191.78,matrend:"opadająca ↓↓",vol:"Malejący",rs:"RSI 43",h52:"-30%",
@@ -2045,7 +2036,7 @@ ndx: [
   {ticker:"ADI",name:"Analog Devices",sector:"Półprzewodniki/Analog",idx:"ndx",price:371.86,chg:"-2.19%",stage:3,ma30w:354.84,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 41",h52:"-17%",
    mtt:[true,true,true,true,false,true,true,false]},
 
-  {ticker:"QCOM",name:"Qualcomm",sector:"Półprzewodniki/Mobile",idx:"ndx",price:166.97,chg:"-2.42%",stage:4,ma30w:168.47,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-36%",
+  {ticker:"QCOM",name:"Qualcomm",sector:"Półprzewodniki/Mobile",idx:"ndx",price:166.97,chg:"-2.42%",stage:1,ma30w:168.47,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 37",h52:"-36%",
    mtt:[false,false,true,true,false,true,false,false]},
 
   {ticker:"SNDK",name:"Sandisk Corporation",sector:"Pamięci/Storage",idx:"ndx",price:1436.56,chg:"-10.79%",stage:3,ma30w:1022.76,matrend:"opadająca ↓↓",vol:"Stabilny",rs:"RSI 42",h52:"-39%",
@@ -2063,7 +2054,7 @@ ndx: [
   {ticker:"CRWD",name:"CrowdStrike",sector:"Cyberbezpieczeństwo",idx:"ndx",price:183.28,chg:"-0.08%",stage:2,ma30w:131.86,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 47",h52:"-16%",
    mtt:[true,true,true,true,true,true,true,false]},
 
-  {ticker:"DDOG",name:"Datadog",sector:"Obserwability/Cloud",idx:"ndx",price:246.86,chg:"+1.01%",stage:2,ma30w:165.6,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 49",h52:"-11%",
+  {ticker:"DDOG",name:"Datadog",sector:"Obserwability/Cloud",idx:"ndx",price:246.86,chg:"+1.01%",stage:1,ma30w:165.6,matrend:"rosnąca ↑↑",vol:"Niski",rs:"RSI 49",h52:"-11%",
    mtt:[true,true,true,true,true,true,true,false]},
 
   {ticker:"PLTR",name:"Palantir",sector:"AI/Analytics",idx:"ndx",price:122.92,chg:"-0.36%",stage:4,ma30w:145.78,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 42",h52:"-41%",
@@ -2087,7 +2078,7 @@ ndx: [
   {ticker:"SNPS",name:"Synopsys",sector:"EDA/Software",idx:"ndx",price:373.47,chg:"-0.01%",stage:4,ma30w:456.73,matrend:"opadająca ↓↓",vol:"Niski",rs:"RSI 26",h52:"-43%",
    mtt:[false,true,true,true,false,false,false,false]},
 
-  {ticker:"CDNS",name:"Cadence Design",sector:"EDA/Software",idx:"ndx",price:326.24,chg:"-1.28%",stage:4,ma30w:328.1,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 32",h52:"-22%",
+  {ticker:"CDNS",name:"Cadence Design",sector:"EDA/Software",idx:"ndx",price:326.24,chg:"-1.28%",stage:1,ma30w:328.1,matrend:"opadająca ↓↓",vol:"Powyżej śr.",rs:"RSI 32",h52:"-22%",
    mtt:[false,true,true,true,false,false,true,false]},
 
   {ticker:"ADSK",name:"Autodesk",sector:"CAD/Software",idx:"ndx",price:209.75,chg:"+2.19%",stage:4,ma30w:240.26,matrend:"rosnąca ↑↑",vol:"Powyżej śr.",rs:"RSI 50",h52:"-36%",
@@ -2320,7 +2311,7 @@ nyse: [
   {ticker:"AIG",name:"AIG",sector:"Ubezpieczenia",idx:"nyse",price:79.06,chg:"+1.15%",stage:1,ma30w:77.24,matrend:"rosnąca ↑",vol:"Malejący",rs:"RSI 54",h52:"-9%",
    mtt:[true,false,true,false,true,false,true,false]},
 
-  {ticker:"PRU",name:"Prudential Financial",sector:"Ubezpieczenia/Emerytury",idx:"nyse",price:119.96,chg:"+1.80%",stage:1,ma30w:104.93,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-1%",
+  {ticker:"PRU",name:"Prudential Financial",sector:"Ubezpieczenia/Emerytury",idx:"nyse",price:119.96,chg:"+1.80%",stage:2,ma30w:104.93,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 69",h52:"-1%",
    mtt:[true,false,true,true,true,true,true,false]},
 
   {ticker:"TRV",name:"Travelers Companies",sector:"P&C Ubezpieczenia",idx:"nyse",price:387.26,chg:"+2.89%",stage:2,ma30w:303.63,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 81",h52:"+0%",
@@ -2431,7 +2422,7 @@ nyse: [
   {ticker:"UNP",name:"Union Pacific",sector:"Kolej towarowa",idx:"nyse",price:307.32,chg:"+0.98%",stage:2,ma30w:256.65,matrend:"rosnąca ↑↑",vol:"Stabilny",rs:"RSI 73",h52:"-3%",
    mtt:[true,true,true,true,true,true,true,true]},
 
-  {ticker:"PG",name:"Procter & Gamble",sector:"FMCG/Consumer",idx:"nyse",price:147.41,chg:"+0.30%",stage:4,ma30w:148.3,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-12%",
+  {ticker:"PG",name:"Procter & Gamble",sector:"FMCG/Consumer",idx:"nyse",price:147.41,chg:"+0.30%",stage:1,ma30w:148.3,matrend:"opadająca ↓",vol:"Stabilny",rs:"RSI 48",h52:"-12%",
    mtt:[false,true,true,false,true,false,true,false]},
 
   {ticker:"KO",name:"Coca-Cola",sector:"Napoje/FMCG",idx:"nyse",price:82.25,chg:"+1.33%",stage:2,ma30w:77.45,matrend:"spłaszcza →",vol:"Niski",rs:"RSI 51",h52:"-4%",
@@ -2470,7 +2461,7 @@ nyse: [
   {ticker:"NEE",name:"NextEra Energy",sector:"OZE/Wiatr/Solar",idx:"nyse",price:89.78,chg:"-0.01%",stage:2,ma30w:88.91,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 58",h52:"-9%",
    mtt:[true,true,true,false,true,true,true,false]},
 
-  {ticker:"DUK",name:"Duke Energy",sector:"Energia/Sieć",idx:"nyse",price:130.52,chg:"+0.97%",stage:2,ma30w:125.15,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 62",h52:"-3%",
+  {ticker:"DUK",name:"Duke Energy",sector:"Energia/Sieć",idx:"nyse",price:130.52,chg:"+0.97%",stage:1,ma30w:125.15,matrend:"rosnąca ↑",vol:"Niski",rs:"RSI 62",h52:"-3%",
    mtt:[true,true,true,false,true,false,true,false]},
 
   {ticker:"SO",name:"Southern Company",sector:"Energia/Jądrowa",idx:"nyse",price:97.25,chg:"+0.67%",stage:1,ma30w:93.19,matrend:"rosnąca ↑",vol:"Powyżej śr.",rs:"RSI 57",h52:"-4%",
@@ -2577,6 +2568,7 @@ nyse: [
 ],
 
 };;; // end STOCKS
+
 
 
 
@@ -4187,9 +4179,21 @@ function calcStage(d, prevStage) {
   // Histereza: jeśli nowa faza różni się od poprzedniej, a sygnał momentum
   // (perf1M) jest zbyt słaby (blisko progu ±2%), zostaw starą fazę —
   // wymagamy wyraźniejszego ruchu (>3%), żeby potwierdzić realną zmianę.
+  //
+  // Drugi, niezależny warunek: rozjazd SMA150 vs SMA200 poniżej 0,75% to
+  // praktycznie szum pomiarowy, nie realny sygnał trendu długoterminowego.
+  // Bez tego warunku spółka z SMA150≈SMA200 (typowe dla spółki wciąż
+  // w wieloletniej bazie/akumulacji, patrz np. ATT) potrafi przeskakiwać
+  // Faza 2 ↔ Faza 3 z tygodnia na tydzień przy promilowych wahaniach ceny —
+  // mimo że wg samej metody Weinsteina "dystrybucja" (Faza 3) wymaga
+  // WCZEŚNIEJ dojrzałego, potwierdzonego trendu wzrostowego, którego przy
+  // tak minimalnym rozjeździe MA po prostu jeszcze nie było.
   if (prevStage != null && raw !== prevStage) {
     const HYST_BUFFER = 1; // dodatkowy margines ponad próg 2%
-    if (Math.abs(perf1M ?? 0) < (2 + HYST_BUFFER)) {
+    const perfTooSmall = Math.abs(perf1M ?? 0) < (2 + HYST_BUFFER);
+    const smaGapPct = sma200 ? Math.abs(sma150 - sma200) / sma200 * 100 : 100;
+    const smaGapTooSmall = smaGapPct < 0.75;
+    if (perfTooSmall || smaGapTooSmall) {
       return prevStage;
     }
   }
