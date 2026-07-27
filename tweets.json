@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081882097354973323",
+      "text": "Taco Bell isn't giving up on winning you back with $1 deals. 🌮 👀",
+      "created_at": "2026-07-27T23:19:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081865966355612116",
       "text": "AMD expects the server CPU market to surpass $200 billion by 2030.\n\nVideo",
       "created_at": "2026-07-27T22:15:00Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2081739325952188491",
-      "text": "Oil prices tumbled over 5% on Monday amid renewed optimism about a path to end the war with Iran, with Brent crude futures trading near $91 a barrel. yhoo.it/4pJmUw4",
-      "created_at": "2026-07-27T13:51:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-27T22:57:33Z",
+  "_updated": "2026-07-27T23:56:50Z",
   "_username": "YahooFinance"
 }
