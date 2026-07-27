@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2081855925267186014",
+      "text": "Tesla and SpaceX have lost over $1.2 trillion in market value this July, driving the bulk of a $1.5 trillion wipeout among mega-cap tech giants.\n\nMeanwhile, Apple is quietly bucking the trend, heading toward its best month in four years. yhoo.it/4beEAcW",
+      "created_at": "2026-07-27T21:35:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081844794691645529",
       "text": "$SKHY dipped below its IPO price for the first time on Monday.",
       "created_at": "2026-07-27T20:50:52Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2081735090187485318",
-      "text": "Follow today's trading here: finance.yahoo.com/markets/li…\n\nLink\n\n\n\nStock market today: Dow, S&amp;P 500, Nasdaq rise as oil tumbles, investors brace for busy week\n\nMarkets are entering the busiest week of the quarter, with more Big Tech earnings and a Fed decision on deck.\nfinance.yahoo.com",
-      "created_at": "2026-07-27T13:34:56Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-27T20:57:28Z",
+  "_updated": "2026-07-27T21:58:54Z",
   "_username": "YahooFinance"
 }
