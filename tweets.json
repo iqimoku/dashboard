@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082225864826130452",
+      "text": "Mark Zuckerberg doesn't believe that AI will eliminate most jobs, according to an op-ed he wrote in the Wall Street Journal.",
+      "created_at": "2026-07-28T22:05:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082213581982982399",
       "text": "Mark Zuckerberg wrote an opinion piece about the future of AI in the Wall Street Journal.\n\nVideo",
       "created_at": "2026-07-28T21:16:18Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082102344699789571",
-      "text": "$SPCX continues its slide after the opening bell Tuesday morning. yhoo.it/4vPqPZB",
-      "created_at": "2026-07-28T13:54:17Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-28T21:52:36Z",
+  "_updated": "2026-07-28T22:46:17Z",
   "_username": "YahooFinance"
 }
