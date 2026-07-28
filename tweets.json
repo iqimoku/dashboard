@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082156470783586780",
+      "text": "Apple CEO Tim Cook speaks with his successor John Ternus, on the red carpet for the premiere of the next season of Ted Lasso on Apple TV.\n\nVideo",
+      "created_at": "2026-07-28T17:29:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082144048639259086",
       "text": "The rate and pace of AI adoption \"is faster than any of us thought,\" says AMD CEO Lisa Su.\n\nVideo",
       "created_at": "2026-07-28T16:40:00Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2081865966355612116",
-      "text": "AMD expects the server CPU market to surpass $200 billion by 2030.\n\nVideo",
-      "created_at": "2026-07-27T22:15:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-28T17:14:33Z",
+  "_updated": "2026-07-28T19:00:31Z",
   "_username": "YahooFinance"
 }
