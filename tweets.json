@@ -1,9 +1,9 @@
 {
   "data": [
     {
-      "id": "2082205594266558502",
-      "text": "Mark Zuckerberg believes that determining who has access to superintelligence is a defining question of our time, according to an op-ed he wrote in the Wall Street Journal.",
-      "created_at": "2026-07-28T20:44:33Z",
+      "id": "2082213581982982399",
+      "text": "Mark Zuckerberg wrote an opinion piece about the future of AI in the Wall Street Journal.\n\nVideo",
+      "created_at": "2026-07-28T21:16:18Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -12,9 +12,42 @@
       }
     },
     {
-      "id": "2082197608672411893",
-      "text": "$F just delivered a Q2 earnings beat, and upped its 2026 guidance thanks to strong profit growth.\n\nFord's expected revenue is now $10 billion to $11 billion, up from $8.5 billion to $10.5 billion.",
-      "created_at": "2026-07-28T20:12:49Z",
+      "id": "2082158694708678903",
+      "text": "🔴 Chip stocks are falling out of bed. The $SOX briefly broke below 11,000 Tuesday and is down over 25% from its June high.\n\n💾 $SKHY hit a US all-time low, $MU has lost over $450 billion in market value since its June record high, and $SNDK has been cut by more than half.\n\n🟢 But the S&amp;P 500 equal-weight index hit a record high Tuesday, nearly three-quarters of S&amp;P 500 stocks are up in July, and the advance-decline line also set a record.\n\n⚠️ As long as those broader breakouts hold, the chip crash remains a sector problem. A reversal would show the damage is spreading.",
+      "created_at": "2026-07-28T17:38:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082210549580935291",
+      "text": "$F just delivered a Q2 earnings beat, and upped its 2026 guidance thanks to strong profit growth.\n\nFord's full-year adjusted EBIT is now $10 billion to $11 billion, up from $8.5 billion to $10.5 billion.",
+      "created_at": "2026-07-28T21:04:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082162423096541351",
+      "text": "Watches and jewelery outperformed other divisions, with organic growth reaching 9% for the half and 11% in the second quarter, lifting revenue to €5.22bn and profit 9% higher to €831m. \n\n\"LVMH revenue dips 3% in H1 2026, but organic growth returns\"\n\nfinance.yahoo.com/markets/st…\n\nLink\n\n\n\nLVMH revenue dips 3% in H1 2026, but organic growth returns\n\nGrowth accelerated to 3% organically in the second quarter, or 4% excluding the impact of the Middle East conflict.\nfinance.yahoo.com",
+      "created_at": "2026-07-28T17:53:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082205594266558502",
+      "text": "Mark Zuckerberg believes that determining who has access to superintelligence is a defining question of our time, according to an op-ed he wrote in the Wall Street Journal.",
+      "created_at": "2026-07-28T20:44:33Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -175,50 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082099617538158944",
-      "text": "Apple's market cap just broke through the $5 trillion glass ceiling for the first time ever.",
-      "created_at": "2026-07-28T13:43:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082098324367192400",
-      "text": "$AAPL's market cap crosses $5 trillion for the first time. 🚀",
-      "created_at": "2026-07-28T13:38:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082099071880179716",
-      "text": "Explore AlphaSpace for charts, analysis, and premium news on $AAPL here: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-28T13:41:16Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082083399628456230",
-      "text": "\"AI is at an inflection point where more and more people are doing useful work, meaningful work,\" AMD CEO Lisa Su says.\n\nVideo",
-      "created_at": "2026-07-28T12:39:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-28T20:54:30Z",
+  "_updated": "2026-07-28T21:52:36Z",
   "_username": "YahooFinance"
 }
