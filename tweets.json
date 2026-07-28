@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082052193449054557",
+      "text": "Meta's Santosh Janardhan shares how AI demand is reshaping the entire data center.\n\nVideo",
+      "created_at": "2026-07-28T10:35:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2081913026283012241",
       "text": "OpenAI's Sachin Katti says, \"the more compute we scale and throw at training, the more capabilities emerge\" in AI models.\n\nVideo",
       "created_at": "2026-07-28T01:22:00Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2081749727289147628",
-      "text": "Nvidia is in talks to provide $250 billion in financing guarantees for OpenAI as part of a massive data center project, according to the ‌Wall Street Journal.",
-      "created_at": "2026-07-27T14:33:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-28T10:17:26Z",
+  "_updated": "2026-07-28T12:27:43Z",
   "_username": "YahooFinance"
 }
