@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2082243226170175932",
+      "text": "Elon Musk's SpaceX has garnered investment interest on Capitol Hill.\n\nHalf a dozen lawmakers have taken stakes in the company, according to recently disclosed transactions.",
+      "created_at": "2026-07-28T23:14:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082241465095209026",
+      "text": "Mark Zuckerberg believes that a superintelligence would be incapable of being benevolent to all, according to an op-ed he wrote in the Wall Street Journal.",
+      "created_at": "2026-07-28T23:07:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082225864826130452",
       "text": "Mark Zuckerberg doesn't believe that AI will eliminate most jobs, according to an op-ed he wrote in the Wall Street Journal.",
       "created_at": "2026-07-28T22:05:06Z",
@@ -197,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082104836749754763",
-      "text": "Semiconductor stocks are extending their losses as the chip sell-off deepens. yhoo.it/45rbSSN",
-      "created_at": "2026-07-28T14:04:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-28T22:46:17Z",
+  "_updated": "2026-07-28T23:45:52Z",
   "_username": "YahooFinance"
 }
