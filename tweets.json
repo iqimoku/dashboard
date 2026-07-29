@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2082604925150744843",
+      "text": "\"Whoever wins AI is going to win. That's how big it is.\"\n\nDonald Trump breaks down why the race for AI supremacy is bigger than the internet itself, while Nvidia CEO Jensen Huang is all smiles.\n\nVideo",
+      "created_at": "2026-07-29T23:11:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082599321904538012",
+      "text": "It was a record year for $MSFT's cloud business.",
+      "created_at": "2026-07-29T22:49:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082592625245270386",
       "text": "Chipotle CEO: \"we're bringing back mystery shoppers to provide more frequent feedback to our teams. These insights will help us identify opportunities for improvement and raise the bar across the enterprise.\"",
       "created_at": "2026-07-29T22:22:29Z",
@@ -164,17 +186,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082555686861357211",
-      "text": "Fed Chair Kevin Warsh says the AI capex boom is driving manufacturing momentum, but predicting its ultimate impact on the economy isn't so simple.\n\nVideo",
-      "created_at": "2026-07-29T19:55:42Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -187,6 +198,6 @@
       }
     ]
   },
-  "_updated": "2026-07-29T22:43:59Z",
+  "_updated": "2026-07-29T23:48:47Z",
   "_username": "YahooFinance"
 }
