@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2082504384794009608",
+      "text": "Wall Street giants such as BlackRock, Fidelity, and Goldman Sachs have all publicly endorsed the CLARITY Act, but will this lead to it passing?\n\n@scottmelker breaks it down:\n\nVideo",
+      "created_at": "2026-07-29T16:31:51Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082499637449994509",
+      "text": "CFO at Tide Pod maker P&amp;G on US shoppers:\n\n\"One end of the consumer spectrum is doing very well. I think they see their wealth increasing. They see the stock market playing to their advantage. We do see lower income consumers struggling paycheck to paycheck. They are not struggling to the point where we see significant trade down into private label or we see them exiting categories or reducing consumption significantly. But yeah, we see a bifurcation of the consumer, at least in our categories.\"\n\n(V/@YahooFinance)\n\nVideo",
+      "created_at": "2026-07-29T16:12:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082496307625656662",
+      "text": "Catch up on the latest crypto news with The Daily Wolf with @scottmelker. nitter.net/i/broadcasts/1XxygmZER…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1XxygmZERvnGM",
+      "created_at": "2026-07-29T15:59:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082493662840131640",
+      "text": "More than 1,100 AI workers have signed a petition to the US government to “deliberately pace” AI development.",
+      "created_at": "2026-07-29T15:49:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082481550768083278",
+      "text": "$META has now declined for nine straight days, the stock's longest losing streak in its history. yhoo.it/3RyTDaT",
+      "created_at": "2026-07-29T15:01:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082470773197836290",
       "text": "Would you order your lunch via drone? 🍔",
       "created_at": "2026-07-29T14:18:17Z",
@@ -153,61 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082188211783135329",
-      "text": "President Trump visits a GM factory alongside CEO Mary Barra, crediting tariffs for the automaker's recent success: \"It’s amazing what tariffs will do for General Motors.\"\n\nVideo",
-      "created_at": "2026-07-28T19:35:29Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082156470783586780",
-      "text": "Apple CEO Tim Cook speaks with his successor John Ternus, on the red carpet for the premiere of the next season of Ted Lasso on Apple TV.\n\nVideo",
-      "created_at": "2026-07-28T17:29:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082144048639259086",
-      "text": "The rate and pace of AI adoption \"is faster than any of us thought,\" says AMD CEO Lisa Su.\n\nVideo",
-      "created_at": "2026-07-28T16:40:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082139723816894679",
-      "text": "The CLARITY Act, a long-awaited crypto bill that would see clearer rules on crypto regulation, only has one more week to pass in the Senate.\n\n@scottmelker breaks it down:\n\nVideo",
-      "created_at": "2026-07-28T16:22:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082136130061820196",
-      "text": "Catch up on the latest crypto news with The Daily Wolf with @scottmelker. nitter.net/i/broadcasts/1qKDzPVLe…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1qKDzPVLenVJV",
-      "created_at": "2026-07-28T16:08:32Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-29T15:01:00Z",
+  "_updated": "2026-07-29T17:00:08Z",
   "_username": "YahooFinance"
 }
