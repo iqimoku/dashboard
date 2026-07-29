@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2082592625245270386",
+      "text": "Chipotle CEO: \"we're bringing back mystery shoppers to provide more frequent feedback to our teams. These insights will help us identify opportunities for improvement and raise the bar across the enterprise.\"",
+      "created_at": "2026-07-29T22:22:29Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082591932526547259",
+      "text": "$MSFT continues to soar after its latest earnings report.",
+      "created_at": "2026-07-29T22:19:44Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082589049777209361",
+      "text": "$MSFT added 31 data centers in a single quarter, bringing the yearly total to 88.\n\nVideo",
+      "created_at": "2026-07-29T22:08:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082585738109956308",
+      "text": "AI spending concerns are at the center of many earnings season conversations, but Mark Zuckerberg says Meta's dollars spent are paying off. yhoo.it/4pMQXCX",
+      "created_at": "2026-07-29T21:55:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082583538147230006",
+      "text": "Satya Nadella just said, \"We now have over 30 million paid Microsoft 365 Copilot seats.\"\n\nHe said new seats doubled quarter over quarter.",
+      "created_at": "2026-07-29T21:46:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082579602526859413",
       "text": "As Mark Zuckerberg dives deeper into Meta's AI investments, the stock keeps sinking.\n\n$META has closed in the red for 10 days in a row, continuing it's longest streak ever. yhoo.it/4pMQXCX",
       "created_at": "2026-07-29T21:30:44Z",
@@ -120,72 +175,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082551446453600733",
-      "text": "Post-Warsh comments: The bond curve is steepening hard, the 30-year just crossed 5.2 for the first time since June 2007.\n\nMarket may be deciding to handle inflation itself, forget the Fed.",
-      "created_at": "2026-07-29T19:38:51Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082550335487226005",
-      "text": "Fed meetings under Kevin Warsh are a good family fight.\n\nVideo",
-      "created_at": "2026-07-29T19:34:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082546714968269041",
-      "text": "Top takeaway from press conference two for Fed chair Kevin Warsh: my steak won’t be any cheaper this summer.",
-      "created_at": "2026-07-29T19:20:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082546977414275078",
-      "text": "Fed Chairmain Kevin Warsh weighed in on the \"remarkable\" growth in AI tech spending and why it’s keeping the Fed on its toes. yhoo.it/4yOomRR",
-      "created_at": "2026-07-29T19:21:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082546505475342499",
-      "text": "Kevin Warsh commits to press conferences for the rest of 2026.\n\nVideo",
-      "created_at": "2026-07-29T19:19:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082544917012677011",
-      "text": "\"We're in the performance business,\" says Fed Chairman Kevin Warsh. \n\nAdding: \"We've got no magic wand, this isn't something that we're going to be able to carry out in days or weeks, but we're going to deliver on the responsibility that Congress gave us.\"\n\nVideo",
-      "created_at": "2026-07-29T19:12:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +187,6 @@
       }
     ]
   },
-  "_updated": "2026-07-29T21:43:08Z",
+  "_updated": "2026-07-29T22:43:59Z",
   "_username": "YahooFinance"
 }
