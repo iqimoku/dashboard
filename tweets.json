@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2082470773197836290",
+      "text": "Would you order your lunch via drone? 🍔",
+      "created_at": "2026-07-29T14:18:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082468463570715009",
+      "text": "As semiconductor stocks shed value, comparing two ETFs provides a valuable lesson on leverage.\n\nWhile the iShares Semiconductor ETF $SOXX is down 25% from its peak, the 3x leveraged $SOXL has plunged nearly two-thirds. 📉 yhoo.it/4vRHNqf",
+      "created_at": "2026-07-29T14:09:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082460729815310632",
+      "text": "🇰🇷 South Korea’s chip rout triggered another circuit breaker overnight, with the Kospi plunging before buyers cut the loss.\n\n📉 The same leverage lesson is playing out in the US. $SOXX is down roughly 25% from its June peak, while its 3x counterpart $SOXL has lost nearly two-thirds.\n\n🧮 A 25% loss needs a 33% rebound to recover. A 63% loss needs roughly 170%.\n\n🚨 Leverage makes the fall faster. It also makes the climb back much steeper.",
+      "created_at": "2026-07-29T13:38:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082463140256641119",
+      "text": "Semiconductor stocks are flashing red. But under the market's hood, the rally is still running green. yhoo.it/4vTBrqo",
+      "created_at": "2026-07-29T13:47:57Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082462829974536439",
+      "text": "The CLARITY Act is now up against its \"most dangerous opponent\" yet: congressional vacation.⁣\n⁣\n@scottmelker says the legislation is quickly losing its runway.\n\nVideo",
+      "created_at": "2026-07-29T13:46:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082402276849701282",
+      "text": "Sandisk has been torched:\n\n❌-28% in five-days.\n❌-55% from the June highs.",
+      "created_at": "2026-07-29T09:46:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082243226170175932",
       "text": "Elon Musk's SpaceX has garnered investment interest on Capitol Hill.\n\nHalf a dozen lawmakers have taken stakes in the company, according to recently disclosed transactions.",
       "created_at": "2026-07-28T23:14:05Z",
@@ -142,83 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082136000780751257",
-      "text": "Will quantum computing break bitcoin? D-Wave CEO @Alan_Baratz seems to think so.\n\nVideo",
-      "created_at": "2026-07-28T16:08:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082129731378381227",
-      "text": "Meta and BlackRock are teaming up on a massive $14 billion data center campus in Texas. yhoo.it/4yFtt77",
-      "created_at": "2026-07-28T15:43:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082121656525312437",
-      "text": "$KO is having its best day since 2009 after its Q2 earnings report blew past investor expectations.\n\nCoca-Cola Zero Sugar drove sales, with volume up 16% in the quarter. Right behind it were Diet Coke and Coca-Cola Light, up 7%.",
-      "created_at": "2026-07-28T15:11:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082121839032021451",
-      "text": "Explore more premium news and analysis on $KO in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-28T15:11:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082121381689401664",
-      "text": "\"At some point, quantum computing will break the bitcoin proof-of-work protocol; that's clear,\" D-Wave CEO @Alan_Baratz says on the future of bitcoin and quantum computing.\n\nVideo",
-      "created_at": "2026-07-28T15:09:55Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082107099836768552",
-      "text": "$V has cut 7% of its workforce, around 2,600 jobs, according to Bloomberg.",
-      "created_at": "2026-07-28T14:13:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082107477424807994",
-      "text": "Explore more premium news and analysis on Visa in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-28T14:14:40Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-29T12:52:27Z",
+  "_updated": "2026-07-29T15:01:00Z",
   "_username": "YahooFinance"
 }
