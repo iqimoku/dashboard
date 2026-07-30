@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082964531379126378",
+      "text": "Tim Cook says \"exponential increases\" in memory prices forced Apple to raise prices.",
+      "created_at": "2026-07-30T23:00:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082951457767039019",
       "text": "\"Next week, we're excited that Ted Lasso is back for its 4th season,\" Apple CEO Tim Cook says.",
       "created_at": "2026-07-30T22:08:21Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082851989298315588",
-      "text": "Get Más for less.  🌮 🔔 \n\nTaco Bell turned a rough patch into a massive win by dropping $1 app deals for its loyal fans, which set some new company records. yhoo.it/4fIPFEu",
-      "created_at": "2026-07-30T15:33:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T22:52:45Z",
+  "_updated": "2026-07-30T23:49:07Z",
   "_username": "YahooFinance"
 }
