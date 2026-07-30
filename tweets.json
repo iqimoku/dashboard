@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2082851989298315588",
+      "text": "Get Más for less.  🌮 🔔 \n\nTaco Bell turned a rough patch into a massive win by dropping $1 app deals for its loyal fans, which set some new company records. yhoo.it/4fIPFEu",
+      "created_at": "2026-07-30T15:33:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082847888191713498",
+      "text": "$MSFT is having its best day in 6,501 days — since October 13, 2008. 😯 yhoo.it/4pMec01",
+      "created_at": "2026-07-30T15:16:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082841418049954076",
+      "text": "Chipotle is bringing back secret shoppers to make sure your burritos stay top tier. 🤐 🌯 yhoo.it/4vWSNmc",
+      "created_at": "2026-07-30T14:51:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082815172045869186",
       "text": "In honor of @jerseymikes going public today, I think it's really important everyone knows what exactly is \"Mike's Way.\" \n\n'Mike's Way' is a signature topping combination of onions, lettuce, tomatoes, red wine vinegar, olive oil, oregano, and salt.\n\n(p.s. get Rosemary parm bread).",
       "created_at": "2026-07-30T13:06:48Z",
@@ -175,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082567866251964773",
-      "text": "Despite Meta missing its Q2 earnings per share estimates, CEO Mark Zuckerberg remains focused on the big picture. yhoo.it/4pMQXCX",
-      "created_at": "2026-07-29T20:44:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082564679121957356",
-      "text": "$META versus $MSFT post earnings",
-      "created_at": "2026-07-29T20:31:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082563803745509543",
-      "text": "$MSFT Q4 earnings beat investor expectations, driven by an increase in Azure revenue.",
-      "created_at": "2026-07-29T20:27:57Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T14:57:32Z",
+  "_updated": "2026-07-30T16:21:19Z",
   "_username": "YahooFinance"
 }
