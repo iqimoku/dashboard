@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082919849823519120",
+      "text": "$AMZN earnings \n💵 Revenue: $200.6B vs $197.01B expected\n💲 EPS: $5.75\n➡️ Q3 revenue forecast: $197B to $202B vs $203.9B expected",
+      "created_at": "2026-07-30T20:02:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082885968042791190",
       "text": "That's a scary number — and it's likely to go higher. 😬 \n\nMortgage rates just hit their highest level in a year. yhoo.it/4vYLYkk",
       "created_at": "2026-07-30T17:48:07Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082583538147230006",
-      "text": "Satya Nadella just said, \"We now have over 30 million paid Microsoft 365 Copilot seats.\"\n\nHe said new seats doubled quarter over quarter.",
-      "created_at": "2026-07-29T21:46:22Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T18:06:49Z",
+  "_updated": "2026-07-30T20:09:12Z",
   "_username": "YahooFinance"
 }
