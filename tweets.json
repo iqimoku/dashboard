@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2082951457767039019",
+      "text": "\"Next week, we're excited that Ted Lasso is back for its 4th season,\" Apple CEO Tim Cook says.",
+      "created_at": "2026-07-30T22:08:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082950814914564290",
+      "text": "Crying over the final earnings call sign-off from Tim Cook. 😭\n\nVideo",
+      "created_at": "2026-07-30T22:05:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082946950639272382",
+      "text": "Are investors just going to miss hearing Tim Cook on $AAPL calls or ... ?",
+      "created_at": "2026-07-30T21:50:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082943484978151913",
       "text": "When you realize it's Tim Cook's last earnings call as CEO 😭\n\nVideo",
       "created_at": "2026-07-30T21:36:40Z",
@@ -175,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082847888191713498",
-      "text": "$MSFT is having its best day in 6,501 days — since October 13, 2008. 😯 yhoo.it/4pMec01",
-      "created_at": "2026-07-30T15:16:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082841418049954076",
-      "text": "Chipotle is bringing back secret shoppers to make sure your burritos stay top tier. 🤐 🌯 yhoo.it/4vWSNmc",
-      "created_at": "2026-07-30T14:51:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082815172045869186",
-      "text": "In honor of @jerseymikes going public today, I think it's really important everyone knows what exactly is \"Mike's Way.\" \n\n'Mike's Way' is a signature topping combination of onions, lettuce, tomatoes, red wine vinegar, olive oil, oregano, and salt.\n\n(p.s. get Rosemary parm bread).",
-      "created_at": "2026-07-30T13:06:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T21:54:45Z",
+  "_updated": "2026-07-30T22:52:45Z",
   "_username": "YahooFinance"
 }
