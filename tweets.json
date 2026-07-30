@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2082815172045869186",
+      "text": "In honor of @jerseymikes going public today, I think it's really important everyone knows what exactly is \"Mike's Way.\" \n\n'Mike's Way' is a signature topping combination of onions, lettuce, tomatoes, red wine vinegar, olive oil, oregano, and salt.\n\n(p.s. get Rosemary parm bread).",
+      "created_at": "2026-07-30T13:06:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082813793730466051",
+      "text": "Not so good morning for $META. 🌧️",
+      "created_at": "2026-07-30T13:01:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082814072148357518",
+      "text": "Explore AlphaSpace for charts, analysis, and premium news on Meta here: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-30T13:02:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082807537091375449",
+      "text": "It's a good morning for $MSFT. ☀️",
+      "created_at": "2026-07-30T12:36:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082807734760579337",
+      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-30T12:37:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082604925150744843",
       "text": "\"Whoever wins AI is going to win. That's how big it is.\"\n\nDonald Trump breaks down why the race for AI supremacy is bigger than the internet itself, while Nvidia CEO Jensen Huang is all smiles.\n\nVideo",
       "created_at": "2026-07-29T23:11:21Z",
@@ -153,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082562973076189617",
-      "text": "$META missed earnings expectations but beat on revenue in Q2 while narrowing its 2026 capital expenditure outlook. \n\nShares fell nearly 8% in after-hours trading. yhoo.it/4pMQXCX",
-      "created_at": "2026-07-29T20:24:39Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082561897128157505",
-      "text": "$MSFT earnings\n💵 Revenue: $90.01B vs $87.7B expected\n💲 EPS: $4.74 vs $4.25",
-      "created_at": "2026-07-29T20:20:23Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082560454103060910",
-      "text": "$META Q2 earnings \n💵 Revenue: $60.8B vs $60.24B expected\n💸 Full-year capex: $130B to $145B vs $125B to $145B previously",
-      "created_at": "2026-07-29T20:14:39Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T12:19:43Z",
+  "_updated": "2026-07-30T14:57:32Z",
   "_username": "YahooFinance"
 }
