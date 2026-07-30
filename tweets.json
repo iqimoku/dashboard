@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2082885968042791190",
+      "text": "That's a scary number — and it's likely to go higher. 😬 \n\nMortgage rates just hit their highest level in a year. yhoo.it/4vYLYkk",
+      "created_at": "2026-07-30T17:48:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082882117134889418",
+      "text": "$JMKE is live.\n\nThe chain's official debut price rang in at $2 less than its IPO price. yhoo.it/4pWkLxi",
+      "created_at": "2026-07-30T17:32:49Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082873124580687916",
+      "text": "Robinhood’s earnings reveal that predictions market revenue has officially overtaken its crypto revenue.\n\n@scottmelker breaks it down:\n\nVideo",
+      "created_at": "2026-07-30T16:57:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082868585043488867",
+      "text": "$SBUX CEO Brian Niccol is excited about Starbucks adding new drinks, but wants to ensure that the menu doesn't get too complicated.\n\n\"When a drink or a new food innovation doesn't perform consistently, you have to have the plan to remove it.\"\n\nVideo",
+      "created_at": "2026-07-30T16:39:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082851989298315588",
       "text": "Get Más for less.  🌮 🔔 \n\nTaco Bell turned a rough patch into a massive win by dropping $1 app deals for its loyal fans, which set some new company records. yhoo.it/4fIPFEu",
       "created_at": "2026-07-30T15:33:06Z",
@@ -164,50 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082579602526859413",
-      "text": "As Mark Zuckerberg dives deeper into Meta's AI investments, the stock keeps sinking.\n\n$META has closed in the red for 10 days in a row, continuing it's longest streak ever. yhoo.it/4pMQXCX",
-      "created_at": "2026-07-29T21:30:44Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082576290930933796",
-      "text": "When Mark Zuckerberg is asked if we're nearing an AI breakthrough on Meta's earnings call, he says plenty has already broken through — but new capabilities are always coming as cycles accelerate.\n\nVideo",
-      "created_at": "2026-07-29T21:17:34Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082575367219314809",
-      "text": "Mark Zuckerberg says Meta is \"investing aggressively\" in AI infrastructure, highlighting its massive data center deal with BlackRock in El Paso, Texas.\n\nVideo",
-      "created_at": "2026-07-29T21:13:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082569088115654796",
-      "text": "Mark Zuckerberg breaks down Meta's AI roadmap on the company's Q2 earnings call.\n\n\"Overall, we expect that a significant portion of our compute is going to go towards training our models, growing our core business and delivering personal agents and new products,\" Zuckerberg adds.\n\nVideo",
-      "created_at": "2026-07-29T20:48:57Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T16:21:19Z",
+  "_updated": "2026-07-30T18:06:49Z",
   "_username": "YahooFinance"
 }
