@@ -1,6 +1,236 @@
 {
-  "_updated": "2026-07-31T15:51:24Z",
-  "_username": "YahooFinance",
-  "_error": "Nie można pobrać tweetów — wszystkie instancje Nitter niedostępne",
-  "data": []
+  "data": [
+    {
+      "id": "2083229121966948793",
+      "text": "Former OpenAI researcher Leopold Aschenbrenner’s hedge fund, Situational Awareness, sold most of its public stock portfolio to Citadel following steep losses. \n\nThe sale is a hard-learned lesson on the dangers of leverage.\n\nVideo",
+      "created_at": "2026-07-31T16:31:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083221763383550131",
+      "text": "$RDDT plunges on concerns that changes to Google's search could impact its user traffic.",
+      "created_at": "2026-07-31T16:02:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083221954065027542",
+      "text": "Explore AlphaSpace for charts, analysis, and premium news on Reddit here: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-31T16:03:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083219457975984375",
+      "text": "$AMZN soars after its latest results showed a booming cloud business. ☁️ 📈",
+      "created_at": "2026-07-31T15:53:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083219697646887222",
+      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-31T15:54:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083206329783439414",
+      "text": "Anthropic disclosed that its Claude AI models hacked into three companies' systems during cybersecurity tests, just days after OpenAI revealed a similar rogue attack by one of its own AI agents. yhoo.it/45Eca8R",
+      "created_at": "2026-07-31T15:01:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083194414168420649",
+      "text": "$COIN is down over 8% after reporting a net loss of $359 million.",
+      "created_at": "2026-07-31T14:13:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083194679927902534",
+      "text": "Explore AlphaSpace for charts, analysis, and premium news on Coinbase here: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-31T14:14:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083193471691550810",
+      "text": "Crypto winter has come for Coinbase stock. ❄️",
+      "created_at": "2026-07-31T14:10:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082989141487165562",
+      "text": "Tim Cook says Apple was \"reluctant\" to raise prices recently.",
+      "created_at": "2026-07-31T00:38:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082964531379126378",
+      "text": "Tim Cook says \"exponential increases\" in memory prices forced Apple to raise prices.",
+      "created_at": "2026-07-30T23:00:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082951457767039019",
+      "text": "\"Next week, we're excited that Ted Lasso is back for its 4th season,\" Apple CEO Tim Cook says.",
+      "created_at": "2026-07-30T22:08:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082950814914564290",
+      "text": "Crying over the final earnings call sign-off from Tim Cook. 😭\n\nVideo",
+      "created_at": "2026-07-30T22:05:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082946950639272382",
+      "text": "Are investors just going to miss hearing Tim Cook on $AAPL calls or ... ?",
+      "created_at": "2026-07-30T21:50:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082943484978151913",
+      "text": "When you realize it's Tim Cook's last earnings call as CEO 😭\n\nVideo",
+      "created_at": "2026-07-30T21:36:40Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082942880969040289",
+      "text": "Tim Cook has left a lasting legacy at Apple, from his first earnings call as CEO in 2011 to his last one in 2026.\n\nVideo",
+      "created_at": "2026-07-30T21:34:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082941490892882187",
+      "text": "Amazon raises its 2026 capex to $220 billion due to higher memory costs.\n\n\"Even at that amount, we will still not have enough capacity to meet all the demand we have in 2026. And I believe this dynamic will also be true in 2027, too.\"\n\nVideo",
+      "created_at": "2026-07-30T21:28:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082937476033782120",
+      "text": "Andy Jassy in $AMZN Q2 earnings call: \n\n\"AWS is now a $169 billion annualized revenue run rate business, which for perspective would place it 24th on the Fortune 500 list if it was a standalone company.\"",
+      "created_at": "2026-07-30T21:12:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082934141201334615",
+      "text": "$MSFT just made history. 🎉 \n\nThe company just set a new record for the largest single-day-market-value increase in history. yhoo.it/4x6Qeiw",
+      "created_at": "2026-07-30T20:59:32Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2082929455043940600",
+      "text": "$AAPL delivered an earnings beat, thanks to strong iPhone sales.\n\nCEO Tim Cook said it was the company's strongest June quarter ever. yhoo.it/45yGG40",
+      "created_at": "2026-07-30T20:40:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "id": "stevedjacobs",
+        "name": "Yahoo Finance / @YahooFinance",
+        "username": "YahooFinance",
+        "profile_image_url": ""
+      }
+    ]
+  },
+  "_updated": "2026-07-31T17:15:12Z",
+  "_username": "YahooFinance"
 }
