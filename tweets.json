@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2082989141487165562",
+      "text": "Tim Cook says Apple was \"reluctant\" to raise prices recently.",
+      "created_at": "2026-07-31T00:38:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2082964531379126378",
       "text": "Tim Cook says \"exponential increases\" in memory prices forced Apple to raise prices.",
       "created_at": "2026-07-30T23:00:18Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082868585043488867",
-      "text": "$SBUX CEO Brian Niccol is excited about Starbucks adding new drinks, but wants to ensure that the menu doesn't get too complicated.\n\n\"When a drink or a new food innovation doesn't perform consistently, you have to have the plan to remove it.\"\n\nVideo",
-      "created_at": "2026-07-30T16:39:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-07-30T23:49:07Z",
+  "_updated": "2026-07-31T01:20:54Z",
   "_username": "YahooFinance"
 }
