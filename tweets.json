@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083309002226602219",
+      "text": "Elon Musk lays out his timeline for AI outpacing human capabilities at virtually every task, leaving us with just one remaining advantage. yhoo.it/3TAewD6",
+      "created_at": "2026-07-31T21:49:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083294545651843262",
       "text": "Fed Chairman Kevin Warsh is considering reducing the number of yearly Fed policy meetings, according to the New York Times.",
       "created_at": "2026-07-31T20:51:40Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083194414168420649",
-      "text": "$COIN is down over 8% after reporting a net loss of $359 million.",
-      "created_at": "2026-07-31T14:13:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-31T21:53:20Z",
+  "_updated": "2026-07-31T22:46:03Z",
   "_username": "YahooFinance"
 }
