@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2083289678610874665",
+      "text": "Bradley Tusk weighs in on Mamdani's pied-a-terre tax: \"He screwed over the people of New York City because it helps him politically.\"\n\nVideo",
+      "created_at": "2026-07-31T20:32:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083289060471091393",
+      "text": "July returns for big tech stocks:\n\n🟢 $MSFT +24.58% \n\n🟢 $AMZN +13.95% \n\n🟢 $AAPL +6.76%\n\n🟢 $GOOG +0.94%\n \n🟢 $NVDA +0.33%\n\n🔴 $META -1.17%\n\n🔴 $TSLA -26.01%",
+      "created_at": "2026-07-31T20:29:52Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083286368784876024",
+      "text": "🟢 Earnings winners: $MSFT &amp; $AMZN\n\n🔴 Earnings losers: $AAPL &amp; $META",
+      "created_at": "2026-07-31T20:19:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083286621894390067",
+      "text": "Explore AlphaSpace for charts, analysis, and premium news here: finance.yahoo.com/about/prom…",
+      "created_at": "2026-07-31T20:20:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083259373871116369",
       "text": "\"Big Short\" investor Steve Eisman spoke on CNBC about having doubts about the AI trade after selling his Google stock.",
       "created_at": "2026-07-31T18:31:54Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2082989141487165562",
-      "text": "Tim Cook says Apple was \"reluctant\" to raise prices recently.",
-      "created_at": "2026-07-31T00:38:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082964531379126378",
-      "text": "Tim Cook says \"exponential increases\" in memory prices forced Apple to raise prices.",
-      "created_at": "2026-07-30T23:00:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082951457767039019",
-      "text": "\"Next week, we're excited that Ted Lasso is back for its 4th season,\" Apple CEO Tim Cook says.",
-      "created_at": "2026-07-30T22:08:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2082950814914564290",
-      "text": "Crying over the final earnings call sign-off from Tim Cook. 😭\n\nVideo",
-      "created_at": "2026-07-30T22:05:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-31T19:01:11Z",
+  "_updated": "2026-07-31T20:48:47Z",
   "_username": "YahooFinance"
 }
