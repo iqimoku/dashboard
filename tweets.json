@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083337941665894868",
+      "text": "Coming from the world’s only former trillionaire: \"Money won’t matter in 2036.\" yhoo.it/3TAewD6",
+      "created_at": "2026-07-31T23:44:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083309002226602219",
       "text": "Elon Musk lays out his timeline for AI outpacing human capabilities at virtually every task, leaving us with just one remaining advantage. yhoo.it/3TAewD6",
       "created_at": "2026-07-31T21:49:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083206329783439414",
-      "text": "Anthropic disclosed that its Claude AI models hacked into three companies' systems during cybersecurity tests, just days after OpenAI revealed a similar rogue attack by one of its own AI agents. yhoo.it/45Eca8R",
-      "created_at": "2026-07-31T15:01:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-31T22:46:03Z",
+  "_updated": "2026-07-31T23:48:49Z",
   "_username": "YahooFinance"
 }
