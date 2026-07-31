@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2083294545651843262",
+      "text": "Fed Chairman Kevin Warsh is considering reducing the number of yearly Fed policy meetings, according to the New York Times.",
+      "created_at": "2026-07-31T20:51:40Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083294484473803072",
+      "text": "$SPCX lost some momentum in July after its stock price slumped almost 37%. 📉",
+      "created_at": "2026-07-31T20:51:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083289678610874665",
       "text": "Bradley Tusk weighs in on Mamdani's pied-a-terre tax: \"He screwed over the people of New York City because it helps him politically.\"\n\nVideo",
       "created_at": "2026-07-31T20:32:19Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083194679927902534",
-      "text": "Explore AlphaSpace for charts, analysis, and premium news on Coinbase here: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-31T14:14:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083193471691550810",
-      "text": "Crypto winter has come for Coinbase stock. ❄️",
-      "created_at": "2026-07-31T14:10:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-31T20:48:47Z",
+  "_updated": "2026-07-31T21:53:20Z",
   "_username": "YahooFinance"
 }
