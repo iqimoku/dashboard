@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083686233885024265",
+      "text": "Elon Musk offers the US Treasury a simple fix to hedge against his prediction of impending deflation. yhoo.it/3TAewD6",
+      "created_at": "2026-08-01T22:48:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083659809874727042",
       "text": "Using inflation-adjusted dollars, monthly rent increased 63% over 50 years. Costs rose steeply, but stayed lower than the massive surge in home purchase prices. yhoo.it/4pNVFRb",
       "created_at": "2026-08-01T21:03:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083241794779713837",
-      "text": "$AAPL is on track for its worst day in over a year 📉",
-      "created_at": "2026-07-31T17:22:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-01T22:41:19Z",
+  "_updated": "2026-08-01T23:44:27Z",
   "_username": "YahooFinance"
 }
