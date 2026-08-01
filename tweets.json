@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2083659809874727042",
+      "text": "Using inflation-adjusted dollars, monthly rent increased 63% over 50 years. Costs rose steeply, but stayed lower than the massive surge in home purchase prices. yhoo.it/4pNVFRb",
+      "created_at": "2026-08-01T21:03:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083643453812990076",
+      "text": "Even after adjusting for inflation, home prices nearly doubled from 1974 to 2024, pushing the median first-time buyer age to 40. yhoo.it/4pNVFRb",
+      "created_at": "2026-08-01T19:58:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083630354972221804",
       "text": "GM leans into electrification with the Grand Sport X: Review finance.yahoo.com/markets/st…\n\nLink\n\n\n\nGM leans into electrification with the Grand Sport X: Review\n\nEarlier this year, Chevy announced the Grand Sport would return to the Corvette lineup, and that&apos;s another good piece of news for General Motors&apos; (GM) halo car that&apos;s doing well at the moment, with...\nfinance.yahoo.com",
       "created_at": "2026-08-01T19:06:03Z",
@@ -24,7 +46,7 @@
     },
     {
       "id": "2083539758299418699",
-      "text": "Bond vigilantes are doing the Fed’s dirty work: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\nBond vigilantes are doing the Fed’s dirty work: Chart of the Day\n\nFed Chairman Kevin Warsh left interest rates unchanged on Wednesday. Bond investors tightened the screws anyway.\nfinance.yahoo.com",
+      "text": "Bond vigilantes are doing the Fed’s dirty work: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBond vigilantes are doing the Fed’s dirty work: Chart of the Day\n\nFed Chairman Kevin Warsh left interest rates unchanged on Wednesday. Bond investors tightened the screws anyway.\nfinance.yahoo.com",
       "created_at": "2026-08-01T13:06:03Z",
       "public_metrics": {
         "like_count": 0,
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083241930033381781",
-      "text": "Explore AlphaSpace for charts, analysis, and premium news on Apple here: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-31T17:22:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083240751266222314",
-      "text": "$RBLX earnings missed Wall Street's expectations, leading to the worst day ever for the stock.",
-      "created_at": "2026-07-31T17:17:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-01T20:01:56Z",
+  "_updated": "2026-08-01T21:40:53Z",
   "_username": "YahooFinance"
 }
