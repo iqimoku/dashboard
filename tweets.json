@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083524658385588658",
+      "text": "Tech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the country — but it’s still ultra-pricey finance.yahoo.com/real-estat…\n\nLink\n\n\n\nTech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the...\n\nHome prices in Seattle are falling as a weakening labor market collides with higher supply.\nfinance.yahoo.com",
+      "created_at": "2026-08-01T12:06:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083358564794486979",
       "text": "As traffic in Strait of Hormuz drops, Trump says he doesn't know when US can loosen Iran's grip finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAs traffic in Strait of Hormuz drops, Trump says he doesn&apos;t know when US can loosen Iran&apos;s grip\n\nTraffic in the Strait of Hormuz reached new lows on Friday as President Trump suggested that the path to ending the war and reopening the all-but-closed waterway could be weeks away.\nfinance.yahoo.com",
       "created_at": "2026-08-01T01:06:03Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083221763383550131",
-      "text": "$RDDT plunges on concerns that changes to Google's search could impact its user traffic.",
-      "created_at": "2026-07-31T16:02:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-01T11:07:54Z",
+  "_updated": "2026-08-01T12:46:48Z",
   "_username": "YahooFinance"
 }
