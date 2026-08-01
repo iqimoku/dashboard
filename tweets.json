@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2083358564794486979",
+      "text": "As traffic in Strait of Hormuz drops, Trump says he doesn't know when US can loosen Iran's grip finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAs traffic in Strait of Hormuz drops, Trump says he doesn&apos;t know when US can loosen Iran&apos;s grip\n\nTraffic in the Strait of Hormuz reached new lows on Friday as President Trump suggested that the path to ending the war and reopening the all-but-closed waterway could be weeks away.\nfinance.yahoo.com",
+      "created_at": "2026-08-01T01:06:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083349767111807400",
+      "text": "$IBM suffered an historic collapse in July. Maybe August will better. 🤞",
+      "created_at": "2026-08-01T00:31:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2083343464926769322",
+      "text": "Did Apple just signal a bottom in momentum-driven memory chip stocks? finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nDid Apple just signal a bottom in momentum-driven memory chip stocks?\n\nLPL Financial strategist Adam Turnquist noted investors could argue that Apple&apos;s comments on memory chip prices mean the chip stock sell-off is overdone.\nfinance.yahoo.com",
+      "created_at": "2026-08-01T00:06:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083337941665894868",
       "text": "Coming from the world’s only former trillionaire: \"Money won’t matter in 2036.\" yhoo.it/3TAewD6",
       "created_at": "2026-07-31T23:44:06Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083221954065027542",
-      "text": "Explore AlphaSpace for charts, analysis, and premium news on Reddit here: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-31T16:03:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083219457975984375",
-      "text": "$AMZN soars after its latest results showed a booming cloud business. ☁️ 📈",
-      "created_at": "2026-07-31T15:53:17Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083219697646887222",
-      "text": "Track your own custom portfolios and create shareable charts in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-07-31T15:54:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-07-31T23:48:49Z",
+  "_updated": "2026-08-01T01:22:24Z",
   "_username": "YahooFinance"
 }
