@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083539758299418699",
+      "text": "Bond vigilantes are doing the Fed’s dirty work: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBond vigilantes are doing the Fed’s dirty work: Chart of the Day\n\nFed Chairman Kevin Warsh left interest rates unchanged on Wednesday. Bond investors tightened the screws anyway.\nfinance.yahoo.com",
+      "created_at": "2026-08-01T13:06:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083524658385588658",
       "text": "Tech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the country — but it’s still ultra-pricey finance.yahoo.com/real-estat…\n\nLink\n\n\n\nTech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the...\n\nHome prices in Seattle are falling as a weakening labor market collides with higher supply.\nfinance.yahoo.com",
       "created_at": "2026-08-01T12:06:03Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083229121966948793",
-      "text": "Former OpenAI researcher Leopold Aschenbrenner’s hedge fund, Situational Awareness, sold most of its public stock portfolio to Citadel following steep losses. \n\nThe sale is a hard-learned lesson on the dangers of leverage.\n\nVideo",
-      "created_at": "2026-07-31T16:31:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-01T12:46:48Z",
+  "_updated": "2026-08-01T14:17:59Z",
   "_username": "YahooFinance"
 }
