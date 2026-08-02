@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083871947155210480",
+      "text": "The July jobs report, SpaceX earnings, and AI struggles: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe July jobs report, SpaceX earnings, and AI struggles: What to watch this week\n\nInvestors step into another busy week, with the July jobs report and SpaceX earnings in focus.\nfinance.yahoo.com",
+      "created_at": "2026-08-02T11:06:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083686233885024265",
       "text": "Elon Musk offers the US Treasury a simple fix to hedge against his prediction of impending deflation. yhoo.it/3TAewD6",
       "created_at": "2026-08-01T22:48:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083253383322878404",
-      "text": "Exxon raked in $14.5 billion in profit during the second quarter, more than doubling its year-earlier earnings. yhoo.it/4fIY1Mf",
-      "created_at": "2026-07-31T18:08:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-02T11:08:39Z",
+  "_updated": "2026-08-02T12:47:35Z",
   "_username": "YahooFinance"
 }
