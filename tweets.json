@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2083959535350227233",
+      "text": "Inflation-adjusted tuition at public 4-year universities has more than tripled over the last 50 years. yhoo.it/4pNVFRb",
+      "created_at": "2026-08-02T16:54:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2083932858461094185",
       "text": "Gen-Alpha’s Warren Buffett, Leopold Aschenbrenner, just learned Wall Street’s oldest lesson: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGen-Alpha’s Warren Buffett, Leopold Aschenbrenner, just learned Wall Street’s oldest lesson: Chart...\n\nThe chip wipeout reached a climax this week. One of the AI boom&apos;s most prescient young investors was caught at the center of it.\nfinance.yahoo.com",
       "created_at": "2026-08-02T15:08:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083294484473803072",
-      "text": "$SPCX lost some momentum in July after its stock price slumped almost 37%. 📉",
-      "created_at": "2026-07-31T20:51:25Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-02T16:41:45Z",
+  "_updated": "2026-08-02T17:48:16Z",
   "_username": "YahooFinance"
 }
