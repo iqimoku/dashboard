@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2084381922193498313",
+      "text": "\"Palantir is the best technology company. It might be the best company that's publicly traded,\" D.A. Davidson's @gilluria says on $PLTR earnings.\n\nVideo",
+      "created_at": "2026-08-03T20:52:30Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084375625544999118",
       "text": "$PLTR blew past Wall Street's expectations with its Q2 earnings.",
       "created_at": "2026-08-03T20:27:29Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083930342621057141",
-      "text": "Forget inflation. 💸 \n\nElon Musk predicts deflation is the real threat ahead in an interview with The Economist, and offers a straightforward solution for the US Treasury. yhoo.it/3TAewD6",
-      "created_at": "2026-08-02T14:58:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T20:49:28Z",
+  "_updated": "2026-08-03T21:54:27Z",
   "_username": "YahooFinance"
 }
