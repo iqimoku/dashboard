@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2084402720044159446",
+      "text": "Alex Karp says $PLTR's last quarter was \"otherwordly.\"",
+      "created_at": "2026-08-03T22:15:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084381922193498313",
       "text": "\"Palantir is the best technology company. It might be the best company that's publicly traded,\" D.A. Davidson's @gilluria says on $PLTR earnings.\n\nVideo",
       "created_at": "2026-08-03T20:52:30Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083932858461094185",
-      "text": "Gen-Alpha’s Warren Buffett, Leopold Aschenbrenner, just learned Wall Street’s oldest lesson: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGen-Alpha’s Warren Buffett, Leopold Aschenbrenner, just learned Wall Street’s oldest lesson: Chart...\n\nThe chip wipeout reached a climax this week. One of the AI boom&apos;s most prescient young investors was caught at the center of it.\nfinance.yahoo.com",
-      "created_at": "2026-08-02T15:08:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T21:54:27Z",
+  "_updated": "2026-08-03T22:45:44Z",
   "_username": "YahooFinance"
 }
