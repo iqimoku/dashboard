@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2084375625544999118",
+      "text": "$PLTR blew past Wall Street's expectations with its Q2 earnings.",
+      "created_at": "2026-08-03T20:27:29Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084374036591579229",
+      "text": "Big Tech boosted US stocks on the first trading day in August, driving the $DJI to a new record high. yhoo.it/4pUAgFH",
+      "created_at": "2026-08-03T20:21:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084369076520984931",
+      "text": "Big Tech hyperscalers are all up big to start the week.",
+      "created_at": "2026-08-03T20:01:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084369284025680038",
+      "text": "Explore more premium news and analysis in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-03T20:02:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084365162232840590",
+      "text": "North Korea is using AI to create fake profiles and steal American jobs, according to CrowdStrike's Adam Meyers.\n\nVideo",
+      "created_at": "2026-08-03T19:45:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084347259852906875",
       "text": "💰 Wall Street's $3 trillion market cap squad:\n\nNvidia: $5.026 trillion\nAlphabet: $4.583 trillion\nApple: $4.508 trillion\nMicrosoft: $3.264 trillion\nAmazon: $3.057 trillion",
       "created_at": "2026-08-03T18:34:46Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083917762821312534",
-      "text": "Out-of-pocket medical expenses have steadily outpaced income growth, shrinking healthcare buying power by 17%. yhoo.it/4pNVFRb",
-      "created_at": "2026-08-02T14:08:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083917246477279502",
-      "text": "3 brilliant quotes on the challenge of valuing companies finance.yahoo.com/economy/ar…\n\nLink\n\n\n\n3 brilliant quotes on the challenge of valuing companies\n\nSome great quotes that spoke to the challenges of valuing any company.\nfinance.yahoo.com",
-      "created_at": "2026-08-02T14:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083902146207007193",
-      "text": "The tech stock dumpster fire should remind you of this important investing lesson finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe tech stock dumpster fire should remind you of this important investing lesson\n\nNothing wrong with a comeback story.\nfinance.yahoo.com",
-      "created_at": "2026-08-02T13:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083871947155210480",
-      "text": "The July jobs report, SpaceX earnings, and AI struggles: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe July jobs report, SpaceX earnings, and AI struggles: What to watch this week\n\nInvestors step into another busy week, with the July jobs report and SpaceX earnings in focus.\nfinance.yahoo.com",
-      "created_at": "2026-08-02T11:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083686233885024265",
-      "text": "Elon Musk offers the US Treasury a simple fix to hedge against his prediction of impending deflation. yhoo.it/3TAewD6",
-      "created_at": "2026-08-01T22:48:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T19:13:09Z",
+  "_updated": "2026-08-03T20:49:28Z",
   "_username": "YahooFinance"
 }
