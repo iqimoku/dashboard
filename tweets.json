@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2084323160137085113",
+      "text": "Ted Benna helped create the 401(k) system. Now, he says it's broken. yhoo.it/4xj0bcN",
+      "created_at": "2026-08-03T16:59:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084306089659519298",
+      "text": "Apple's Q3 earnings beat Wall Street expectations last week, but the win came with help from a $2.2 billion tariff refund. yhoo.it/4w5ehxk",
+      "created_at": "2026-08-03T15:51:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084300634379948039",
       "text": "Big Tech hyperscalers are on the rise. 📈\n\n🟢 $META +6.20%\n🟢 $AMZN +4.83%\n🟢 $GOOG +4.22%\n🟢 $MSFT +3.97%",
       "created_at": "2026-08-03T15:29:30Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083572988847243680",
-      "text": "Humans only have a few more years until AI takes the lead, according to Elon Musk. yhoo.it/3TAewD6",
-      "created_at": "2026-08-01T15:18:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083539758299418699",
-      "text": "Bond vigilantes are doing the Fed’s dirty work: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nBond vigilantes are doing the Fed’s dirty work: Chart of the Day\n\nFed Chairman Kevin Warsh left interest rates unchanged on Wednesday. Bond investors tightened the screws anyway.\nfinance.yahoo.com",
-      "created_at": "2026-08-01T13:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T15:33:45Z",
+  "_updated": "2026-08-03T17:31:27Z",
   "_username": "YahooFinance"
 }
