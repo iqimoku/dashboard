@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2084300634379948039",
+      "text": "Big Tech hyperscalers are on the rise. 📈\n\n🟢 $META +6.20%\n🟢 $AMZN +4.83%\n🟢 $GOOG +4.22%\n🟢 $MSFT +3.97%",
+      "created_at": "2026-08-03T15:29:30Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084293135044121039",
+      "text": "Tom and Zendaya understood the box office assignment.\n\nVideo",
+      "created_at": "2026-08-03T14:59:42Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084281661382959228",
+      "text": "With great box office power comes $355 million in opening-weekend revenue. 🕷️💰",
+      "created_at": "2026-08-03T14:14:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084280486868770893",
+      "text": "$MSFT starts the week on a high note. 🧗",
+      "created_at": "2026-08-03T14:09:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084274698775306474",
+      "text": "$AMZN's market value just surpassed the $3 trillion mark for the first time.",
+      "created_at": "2026-08-03T13:46:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084274841893363982",
+      "text": "Explore more premium news and analysis on Amazon in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-03T13:47:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084042833728582128",
       "text": "Elon Musk warns that global dominance in the AI race could shift away from the United States. yhoo.it/3TAewD6",
       "created_at": "2026-08-02T22:25:05Z",
@@ -153,72 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083524658385588658",
-      "text": "Tech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the country — but it’s still ultra-pricey finance.yahoo.com/real-estat…\n\nLink\n\n\n\nTech layoffs and rising inventory have made Seattle’s housing market one of the weakest in the...\n\nHome prices in Seattle are falling as a weakening labor market collides with higher supply.\nfinance.yahoo.com",
-      "created_at": "2026-08-01T12:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083358564794486979",
-      "text": "As traffic in Strait of Hormuz drops, Trump says he doesn't know when US can loosen Iran's grip finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nAs traffic in Strait of Hormuz drops, Trump says he doesn&apos;t know when US can loosen Iran&apos;s grip\n\nTraffic in the Strait of Hormuz reached new lows on Friday as President Trump suggested that the path to ending the war and reopening the all-but-closed waterway could be weeks away.\nfinance.yahoo.com",
-      "created_at": "2026-08-01T01:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083349767111807400",
-      "text": "$IBM suffered an historic collapse in July. Maybe August will better. 🤞",
-      "created_at": "2026-08-01T00:31:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083343464926769322",
-      "text": "Did Apple just signal a bottom in momentum-driven memory chip stocks? finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nDid Apple just signal a bottom in momentum-driven memory chip stocks?\n\nLPL Financial strategist Adam Turnquist noted investors could argue that Apple&apos;s comments on memory chip prices mean the chip stock sell-off is overdone.\nfinance.yahoo.com",
-      "created_at": "2026-08-01T00:06:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083337941665894868",
-      "text": "Coming from the world’s only former trillionaire: \"Money won’t matter in 2036.\" yhoo.it/3TAewD6",
-      "created_at": "2026-07-31T23:44:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2083309002226602219",
-      "text": "Elon Musk lays out his timeline for AI outpacing human capabilities at virtually every task, leaving us with just one remaining advantage. yhoo.it/3TAewD6",
-      "created_at": "2026-07-31T21:49:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T12:08:14Z",
+  "_updated": "2026-08-03T15:33:45Z",
   "_username": "YahooFinance"
 }
