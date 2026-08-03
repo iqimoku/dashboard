@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2084413863542288468",
+      "text": "Oil titans reported major earnings this quarter, driven by the spike in global oil prices. President Trump said he isn't happy about it.\n\nVideo",
+      "created_at": "2026-08-03T22:59:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084402720044159446",
       "text": "Alex Karp says $PLTR's last quarter was \"otherwordly.\"",
       "created_at": "2026-08-03T22:15:09Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2083959535350227233",
-      "text": "Inflation-adjusted tuition at public 4-year universities has more than tripled over the last 50 years. yhoo.it/4pNVFRb",
-      "created_at": "2026-08-02T16:54:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-03T22:45:44Z",
+  "_updated": "2026-08-03T23:56:01Z",
   "_username": "YahooFinance"
 }
