@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2084635945572131273",
+      "text": "$PLTR skyrockets following what CEO Alex Karp deemed an \"otherworldly\" quarter.",
+      "created_at": "2026-08-04T13:41:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084636068494606759",
+      "text": "Explore more premium news and analysis on Palantir in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-04T13:42:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084634357793251487",
+      "text": "Manufacturing leader $CAT rises after Q2 earnings beat Wall Street's expectations.",
+      "created_at": "2026-08-04T13:35:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084634531160559827",
+      "text": "Explore more premium news and analysis on Caterpillar in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-04T13:36:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084431906465005661",
       "text": "$PLTR's US government revenue grew 90% year over year.",
       "created_at": "2026-08-04T00:11:08Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084281661382959228",
-      "text": "With great box office power comes $355 million in opening-weekend revenue. 🕷️💰",
-      "created_at": "2026-08-03T14:14:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084280486868770893",
-      "text": "$MSFT starts the week on a high note. 🧗",
-      "created_at": "2026-08-03T14:09:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084274698775306474",
-      "text": "$AMZN's market value just surpassed the $3 trillion mark for the first time.",
-      "created_at": "2026-08-03T13:46:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084274841893363982",
-      "text": "Explore more premium news and analysis on Amazon in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-03T13:47:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-04T12:50:21Z",
+  "_updated": "2026-08-04T15:12:53Z",
   "_username": "YahooFinance"
 }
