@@ -1,6 +1,72 @@
 {
   "data": [
     {
+      "id": "2084714989630247150",
+      "text": "Chipotle pulled jalapeños from multiple stores in Minnesota after learning they may be linked to a salmonella outbreak.",
+      "created_at": "2026-08-04T18:56:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084715168445923684",
+      "text": "Read more from @business: finance.yahoo.com/healthcare…",
+      "created_at": "2026-08-04T18:56:42Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084714036390719489",
+      "text": "OpenAI released messages from developer Chang Liu countering Apple's allegations that he accessed Apple's confidential information.",
+      "created_at": "2026-08-04T18:52:13Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084700996370936184",
+      "text": "Jeff Bezos is selling $4 billion in Amazon stock, nearly 15 million shares, an SEC filing revealed.\n\nBezos originally acquired the shares in 1994  as \"Founder Stock.\"",
+      "created_at": "2026-08-04T18:00:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084703543882039549",
+      "text": "The move to sell follows Amazon's recent spike, soaring nearly 20% over the last 5 trading days.\n\nExplore more premium news and analysis on Amazon in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-04T18:10:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084692365772476477",
+      "text": "$MCD CEO Chris Kempczinski said on an investor earnings call that the company \"didn't execute\" the way it needed to this quarter.",
+      "created_at": "2026-08-04T17:26:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084674787482227180",
       "text": "$MCD US traffic fell after price hikes, which CEO Chris Kempczinski attributes to franchisees not following price recommendations.",
       "created_at": "2026-08-04T16:16:15Z",
@@ -153,72 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084365162232840590",
-      "text": "North Korea is using AI to create fake profiles and steal American jobs, according to CrowdStrike's Adam Meyers.\n\nVideo",
-      "created_at": "2026-08-03T19:45:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084347259852906875",
-      "text": "💰 Wall Street's $3 trillion market cap squad:\n\nNvidia: $5.026 trillion\nAlphabet: $4.583 trillion\nApple: $4.508 trillion\nMicrosoft: $3.264 trillion\nAmazon: $3.057 trillion",
-      "created_at": "2026-08-03T18:34:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084337782940451153",
-      "text": "The National Insurance Crime Bureau compiles an annual list of the most stolen vehicles in America. In 2025, those vehicles and the number of thefts reported were:",
-      "created_at": "2026-08-03T17:57:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084331643897016826",
-      "text": "The Hyundai Elantra came in as the most stolen vehicle in America in 2025 with a reported 21,732 theft incidents.",
-      "created_at": "2026-08-03T17:32:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084323160137085113",
-      "text": "Ted Benna helped create the 401(k) system. Now, he says it's broken. yhoo.it/4xj0bcN",
-      "created_at": "2026-08-03T16:59:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084306089659519298",
-      "text": "Apple's Q3 earnings beat Wall Street expectations last week, but the win came with help from a $2.2 billion tariff refund. yhoo.it/4w5ehxk",
-      "created_at": "2026-08-03T15:51:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-04T17:25:36Z",
+  "_updated": "2026-08-04T19:14:00Z",
   "_username": "YahooFinance"
 }
