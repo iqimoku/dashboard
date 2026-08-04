@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2084761069738713508",
+      "text": "Robots on the moon and data centers in space may sound like sci-fi, but it's all going to happen according to Elon Musk on SpaceX's first earnings call.",
+      "created_at": "2026-08-04T21:59:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084755067727474798",
+      "text": "Elon Musk revealed on the SpaceX earnings call that it's now in an exclusive relationship with Nvidia.\n\nVideo",
+      "created_at": "2026-08-04T21:35:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084750599107584434",
+      "text": "$SPCX is partnering with $NVDA on satellites. 🛰️",
+      "created_at": "2026-08-04T21:17:30Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084743105656283541",
+      "text": "“Going forward, we’ve decided to build exclusively on Nvidia because we think the Vera Rubin architecture is the best architecture; we think it’s the best AI computer,” Elon Musk said on the $SPCX earnings call.\n\nVideo",
+      "created_at": "2026-08-04T20:47:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084742459049857243",
       "text": "“It’s not out of the question that at some point Starlink will deliver the majority of the world’s internet,” Elon Musk said on the $SPCX earnings call.\n\nVideo",
       "created_at": "2026-08-04T20:45:09Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084692365772476477",
-      "text": "$MCD CEO Chris Kempczinski said on an investor earnings call that the company \"didn't execute\" the way it needed to this quarter.",
-      "created_at": "2026-08-04T17:26:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084674787482227180",
-      "text": "$MCD US traffic fell after price hikes, which CEO Chris Kempczinski attributes to franchisees not following price recommendations.",
-      "created_at": "2026-08-04T16:16:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084667156411633780",
-      "text": "Former OpenAI employee Leopold Aschenbrenner \"did pile on a lot of leverage,\" WSJ's Gregory Zuckerman says.\n\n\"But it wasn't just leverage ... You could pile on a leverage if the underlying investments aren't volatile. But if you're going to long, short AI-related stocks, it's sort of inevitable that at some point you're going to have some setbacks that's gonna to lead to a margin call, that's going to lead to panic,\" @GZuckerman explains.\n\nVideo",
-      "created_at": "2026-08-04T15:45:55Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084635945572131273",
-      "text": "$PLTR skyrockets following what CEO Alex Karp deemed an \"otherworldly\" quarter.",
-      "created_at": "2026-08-04T13:41:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-04T20:58:40Z",
+  "_updated": "2026-08-04T22:07:51Z",
   "_username": "YahooFinance"
 }
