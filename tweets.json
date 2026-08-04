@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2084772393709359500",
+      "text": "Elon Musk says launching rockets is leagues harder than building data centers on the ground.\n\nVideo",
+      "created_at": "2026-08-04T22:44:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084761069738713508",
       "text": "Robots on the moon and data centers in space may sound like sci-fi, but it's all going to happen according to Elon Musk on SpaceX's first earnings call.",
       "created_at": "2026-08-04T21:59:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084703543882039549",
-      "text": "The move to sell follows Amazon's recent spike, soaring nearly 20% over the last 5 trading days.\n\nExplore more premium news and analysis on Amazon in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-04T18:10:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-04T22:07:51Z",
+  "_updated": "2026-08-04T23:49:53Z",
   "_username": "YahooFinance"
 }
