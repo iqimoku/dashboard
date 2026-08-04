@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2084674787482227180",
+      "text": "$MCD US traffic fell after price hikes, which CEO Chris Kempczinski attributes to franchisees not following price recommendations.",
+      "created_at": "2026-08-04T16:16:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084667156411633780",
+      "text": "Former OpenAI employee Leopold Aschenbrenner \"did pile on a lot of leverage,\" WSJ's Gregory Zuckerman says.\n\n\"But it wasn't just leverage ... You could pile on a leverage if the underlying investments aren't volatile. But if you're going to long, short AI-related stocks, it's sort of inevitable that at some point you're going to have some setbacks that's gonna to lead to a margin call, that's going to lead to panic,\" @GZuckerman explains.\n\nVideo",
+      "created_at": "2026-08-04T15:45:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084635945572131273",
       "text": "$PLTR skyrockets following what CEO Alex Karp deemed an \"otherworldly\" quarter.",
       "created_at": "2026-08-04T13:41:54Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084300634379948039",
-      "text": "Big Tech hyperscalers are on the rise. 📈\n\n🟢 $META +6.20%\n🟢 $AMZN +4.83%\n🟢 $GOOG +4.22%\n🟢 $MSFT +3.97%",
-      "created_at": "2026-08-03T15:29:30Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084293135044121039",
-      "text": "Tom and Zendaya understood the box office assignment.\n\nVideo",
-      "created_at": "2026-08-03T14:59:42Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-04T15:12:53Z",
+  "_updated": "2026-08-04T17:25:36Z",
   "_username": "YahooFinance"
 }
