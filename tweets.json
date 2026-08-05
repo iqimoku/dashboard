@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2085123869992509539",
+      "text": "📈 $NVDA and $GOOGL fell at different ends of the Mag 7 today. 📉\n\nNow in AlphaSpace, adding your take on the action just got more shareable.",
+      "created_at": "2026-08-05T22:00:44Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085123875386392758",
+      "text": "👀 Or zoom out to analyze the trend in the latest earnings beat.",
+      "created_at": "2026-08-05T22:00:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085123877613543913",
+      "text": "📝 Keep up with all the latest AlphaSpace developments and share your feedback with us here: alphaspace.finance.yahoo.com…",
+      "created_at": "2026-08-05T22:00:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085102822660399212",
       "text": "Alphabet CEO Sundar Pichai says the company is at a \"dynamic moment\" after news of major AI leadership changes.",
       "created_at": "2026-08-05T20:37:06Z",
@@ -153,61 +186,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085011770754613498",
-      "text": "Circle CEO: \"We've been building towards this moment for about 10 years.\"\n\nVideo",
-      "created_at": "2026-08-05T14:35:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085001531913343117",
-      "text": ".@ZachBDell isn’t just Michael Dell’s son; he’s also the CEO of Base Power, which just raised $1 billion in funding.\n\n“In my opinion, the best home battery on the market by far, but I’m pretty biased.”\n\nVideo",
-      "created_at": "2026-08-05T13:54:37Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084987593054167261",
-      "text": "$SPCX erased Tuesday's gains overnight. 📉",
-      "created_at": "2026-08-05T12:59:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084936785012867409",
-      "text": "JP Morgan on SpaceX🚀:\n\n\"We now project capex of nearly $200 billion in both 2027 & 2028, which further pressures free cash flow in 2027, a trend we see across the hyperscalers. We recognize the upcoming lock-up expiration on Thursday, August 6 of 911.5M shares, potentially increasing the current float of 639M shares by 143%, but we also believe there has already been significant pre-positioning ahead of this first expiration, the largest of many over the next several months.\"",
-      "created_at": "2026-08-05T09:37:20Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084974902776332588",
-      "text": "Morgan Stanley on SpaceX:\n\n\"On Aug 6, investors will see an unlock of around $100 billion worth of incremental  , which we see as an opportunity to gain exposure to a potential generational compounder that converts energy into a networked/swarming intelligence at scale. SPCX has the pieces to build an industry-leading intelligence per watt, per dollar, per second.\"",
-      "created_at": "2026-08-05T12:08:48Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +198,6 @@
       }
     ]
   },
-  "_updated": "2026-08-05T22:01:36Z",
+  "_updated": "2026-08-05T23:43:44Z",
   "_username": "YahooFinance"
 }
