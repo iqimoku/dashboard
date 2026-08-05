@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2085102822660399212",
+      "text": "Alphabet CEO Sundar Pichai says the company is at a \"dynamic moment\" after news of major AI leadership changes.",
+      "created_at": "2026-08-05T20:37:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085096266648678406",
+      "text": "Today:  $SPCX -13.61%\n\nTomorrow: $101 billion of $SPCX unlocks",
+      "created_at": "2026-08-05T20:11:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085096403911561635",
+      "text": "Track the results, market reaction, and analysis of SpaceX in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-05T20:11:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085089788755857753",
+      "text": "The economy isn't K-shaped, it's P-shaped, Man Group Chief Marketing Strategist Kristin Hooper explains. \n\nCatch up on the latest episodes of Trader Talk: finance.yahoo.com/videos/ser…\n\nVideo",
+      "created_at": "2026-08-05T19:45:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085087229500625246",
+      "text": "Google DeepMind CEO Demis Hassabis announced that he is transitioning to a new role as chair of DeepMind and chief scientist for all of Alphabet.",
+      "created_at": "2026-08-05T19:35:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085071111541133446",
       "text": "Google DeepMind CEO Demis Hassabis is transitioning to a new role, and Google chief scientist Jeff Dean, along with Google senior fellow Sanjay Ghemawat are leaving the company.",
       "created_at": "2026-08-05T18:31:06Z",
@@ -153,61 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084772393709359500",
-      "text": "Elon Musk says launching rockets is leagues harder than building data centers on the ground.\n\nVideo",
-      "created_at": "2026-08-04T22:44:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084761069738713508",
-      "text": "Robots on the moon and data centers in space may sound like sci-fi, but it's all going to happen according to Elon Musk on SpaceX's first earnings call.",
-      "created_at": "2026-08-04T21:59:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084755067727474798",
-      "text": "Elon Musk revealed on the SpaceX earnings call that it's now in an exclusive relationship with Nvidia.\n\nVideo",
-      "created_at": "2026-08-04T21:35:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084750599107584434",
-      "text": "$SPCX is partnering with $NVDA on satellites. 🛰️",
-      "created_at": "2026-08-04T21:17:30Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084743105656283541",
-      "text": "“Going forward, we’ve decided to build exclusively on Nvidia because we think the Vera Rubin architecture is the best architecture; we think it’s the best AI computer,” Elon Musk said on the $SPCX earnings call.\n\nVideo",
-      "created_at": "2026-08-04T20:47:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-05T19:07:20Z",
+  "_updated": "2026-08-05T20:52:15Z",
   "_username": "YahooFinance"
 }
