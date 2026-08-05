@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2085071111541133446",
+      "text": "Google DeepMind CEO Demis Hassabis is transitioning to a new role, and Google chief scientist Jeff Dean, along with Google senior fellow Sanjay Ghemawat are leaving the company.",
+      "created_at": "2026-08-05T18:31:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085067967859945632",
+      "text": "$GOOG dips after news of major AI leadership changes.",
+      "created_at": "2026-08-05T18:18:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085068189709304116",
+      "text": "Track the results, market reaction, and analysis of Google in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-05T18:19:29Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085038721942901164",
       "text": "Bidding has opened for the MTA's MetroCard Vending Machines. 🚊\n\nThe auction ends Wednesday, August 19. Heads up, if you're the lucky winner you're on your own to load and transport the machine.",
       "created_at": "2026-08-05T16:22:24Z",
@@ -175,50 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084742459049857243",
-      "text": "“It’s not out of the question that at some point Starlink will deliver the majority of the world’s internet,” Elon Musk said on the $SPCX earnings call.\n\nVideo",
-      "created_at": "2026-08-04T20:45:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084739822535467290",
-      "text": "AMD beat top and bottom line predictions in its Q2 earnings. \n\nBut, it wasn't enough for investors. The stock dropped over 6% after hours.",
-      "created_at": "2026-08-04T20:34:40Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084737474970976404",
-      "text": "$PLTR had a great day. 📈",
-      "created_at": "2026-08-04T20:25:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084737667871224213",
-      "text": "Track the results, market reaction, and analysis of SpaceX all in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-04T20:26:07Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-05T17:14:54Z",
+  "_updated": "2026-08-05T19:07:20Z",
   "_username": "YahooFinance"
 }
