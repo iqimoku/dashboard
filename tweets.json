@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2085011770754613498",
+      "text": "Circle CEO: \"We've been building towards this moment for about 10 years.\"\n\nVideo",
+      "created_at": "2026-08-05T14:35:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085001531913343117",
+      "text": ".@ZachBDell isn’t just Michael Dell’s son; he’s also the CEO of Base Power, which just raised $1 billion in funding.\n\n“In my opinion, the best home battery on the market by far, but I’m pretty biased.”\n\nVideo",
+      "created_at": "2026-08-05T13:54:37Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084987593054167261",
+      "text": "$SPCX erased Tuesday's gains overnight. 📉",
+      "created_at": "2026-08-05T12:59:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084936785012867409",
+      "text": "JP Morgan on SpaceX🚀:\n\n\"We now project capex of nearly $200 billion in both 2027 & 2028, which further pressures free cash flow in 2027, a trend we see across the hyperscalers. We recognize the upcoming lock-up expiration on Thursday, August 6 of 911.5M shares, potentially increasing the current float of 639M shares by 143%, but we also believe there has already been significant pre-positioning ahead of this first expiration, the largest of many over the next several months.\"",
+      "created_at": "2026-08-05T09:37:20Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2084974902776332588",
+      "text": "Morgan Stanley on SpaceX:\n\n\"On Aug 6, investors will see an unlock of around $100 billion worth of incremental  , which we see as an opportunity to gain exposure to a potential generational compounder that converts energy into a networked/swarming intelligence at scale. SPCX has the pieces to build an industry-leading intelligence per watt, per dollar, per second.\"",
+      "created_at": "2026-08-05T12:08:48Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2084772393709359500",
       "text": "Elon Musk says launching rockets is leagues harder than building data centers on the ground.\n\nVideo",
       "created_at": "2026-08-04T22:44:06Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2084716941361500291",
-      "text": "Track the results, market reaction, and analysis all in AlphaSpace. finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-04T19:03:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084714989630247150",
-      "text": "Chipotle pulled jalapeños from multiple stores in Minnesota after learning they may be linked to a salmonella outbreak.",
-      "created_at": "2026-08-04T18:56:00Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084715168445923684",
-      "text": "Read more from @business: finance.yahoo.com/healthcare…",
-      "created_at": "2026-08-04T18:56:42Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084714036390719489",
-      "text": "OpenAI released messages from developer Chang Liu countering Apple's allegations that he accessed Apple's confidential information.",
-      "created_at": "2026-08-04T18:52:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2084700996370936184",
-      "text": "Jeff Bezos is selling $4 billion in Amazon stock, nearly 15 million shares, an SEC filing revealed.\n\nBezos originally acquired the shares in 1994  as \"Founder Stock.\"",
-      "created_at": "2026-08-04T18:00:24Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-05T12:29:31Z",
+  "_updated": "2026-08-05T15:04:39Z",
   "_username": "YahooFinance"
 }
