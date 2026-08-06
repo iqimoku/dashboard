@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2085369316715663396",
+      "text": "One of Meta's AI models was able to access the internet because of a “misconfiguration” in a hacking test conducted by a third-party AI testing company, according to the Wall Street Journal.\n\nIt was the same kind of test that led to earlier hacks from models controlled by Anthropic and OpenAI. 😰",
+      "created_at": "2026-08-06T14:16:04Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085363003910652337",
+      "text": "$DDOG's 36% year-over-year revenue growth wasn't enough to impress investors.",
+      "created_at": "2026-08-06T13:50:58Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085363171951276105",
+      "text": "Dig deeper in Alphaspace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-06T13:51:39Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085330347630219462",
+      "text": "SpaceX $SPCX so far on lockup expiration day:",
+      "created_at": "2026-08-06T11:41:13Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085123869992509539",
       "text": "📈 $NVDA and $GOOGL fell at different ends of the Mag 7 today. 📉\n\nNow in AlphaSpace, adding your take on the action just got more shareable.",
       "created_at": "2026-08-05T22:00:44Z",
@@ -164,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085017773403410929",
-      "text": "$CMG bounces back after Minnesota health officials confirmed they have no ongoing concerns with the chain",
-      "created_at": "2026-08-05T14:59:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085017941083312604",
-      "text": "Track the results, market reaction, and analysis of Chipotle in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-05T14:59:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -198,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-06T12:47:18Z",
+  "_updated": "2026-08-06T15:02:55Z",
   "_username": "YahooFinance"
 }
