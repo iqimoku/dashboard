@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2085718966933012536",
+      "text": "Before and after the SpaceX rocket crashed into the moon. 🌙\n\nCan you spot the difference?\n\nSource: NASA, Korea Aerospace Research Institute via AP",
+      "created_at": "2026-08-07T13:25:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085710737838584053",
+      "text": "The economy shed 23,000 jobs in July. Economists had expected a gain of 80,000. \n\nMeanwhile, the unemployment rate slid to 4.1%.",
+      "created_at": "2026-08-07T12:52:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085707946814529940",
+      "text": "🇺🇸 Where the US economy gained and lost jobs in July \n\nGovernment -53K\nLeisure &amp; hospitality -40K\nRetail trade -19K\nFinancial services -14K\nHealthcare +22K\nConstruction +22K",
+      "created_at": "2026-08-07T12:41:39Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085705417951179106",
+      "text": "🚨 Breaking: US economy unexpectedly posts negative job growth in July\n\nJobs added: -23K vs +80K expected\nUnemployment rate: 4.1% vs 4.2% expected",
+      "created_at": "2026-08-07T12:31:36Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085354412092928003",
       "text": "🚀 SpaceX stock got cut in half. Retail investors kept buying.\n\n📉 $SPCX has yet to record a single day of net retail selling since its IPO, according to @vandaresearch .\n\n💰 After earnings, buyers poured in again — just as nearly 1 billion insider shares became eligible for sale.\n\n🧵 What happens when relentless dip-buying meets a major wave of potential supply?",
       "created_at": "2026-08-06T13:16:50Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085363171951276105",
-      "text": "Dig deeper in Alphaspace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-06T13:51:39Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085330347630219462",
-      "text": "SpaceX $SPCX so far on lockup expiration day:",
-      "created_at": "2026-08-06T11:41:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085123869992509539",
-      "text": "📈 $NVDA and $GOOGL fell at different ends of the Mag 7 today. 📉\n\nNow in AlphaSpace, adding your take on the action just got more shareable.",
-      "created_at": "2026-08-05T22:00:44Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085123875386392758",
-      "text": "👀 Or zoom out to analyze the trend in the latest earnings beat.",
-      "created_at": "2026-08-05T22:00:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T12:32:52Z",
+  "_updated": "2026-08-07T14:02:32Z",
   "_username": "YahooFinance"
 }
