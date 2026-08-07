@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2085834525372801377",
+      "text": "The Trump administration is investing $100 million in the next generation of miners. ⛏️\n\nVideo",
+      "created_at": "2026-08-07T21:04:38Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085824343116771445",
+      "text": "Trump is considering removing Fed governor Lisa Cook from the central bank, according to a copy of a letter from the White House.",
+      "created_at": "2026-08-07T20:24:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085810767597580462",
       "text": "Cathie Wood's Ark sold $17 million of $PLTR stock.  \n\nThat's a total of nearly 109,492 shares, according to Ark's daily trading information on August 4 and 5.",
       "created_at": "2026-08-07T19:30:14Z",
@@ -175,39 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085486145480131044",
-      "text": "Michael Burry argues that massive off-balance-sheet obligations for companies like Oracle and Nebius have made them vulnerable.",
-      "created_at": "2026-08-06T22:00:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085471046103183625",
-      "text": "Michael Burry is shorting Oracle and Nebius. The famed investor believes the market is overlooking major risks hiding beneath their growth stories.",
-      "created_at": "2026-08-06T21:00:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085456046177345888",
-      "text": "\"Rhode has had exceptional performance ... Hailey is amazing,\" e.l.f beauty CFO says.\n\nVideo",
-      "created_at": "2026-08-06T20:00:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T20:25:11Z",
+  "_updated": "2026-08-07T21:25:24Z",
   "_username": "YahooFinance"
 }
