@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2085736606405644357",
+      "text": "🤖 Big Tech’s AI boom is becoming a borrowing boom.\n\n💵 $GOOGL, $AMZN, $META and $ORCL have issued about $194B of bonds this year — nearly twice their combined 2025 total.\n\n📈 Alphabet’s latest deal drew about $115B of orders for as much as $25B of debt.\n\n🔎 For shareholders, watch whether AI starts generating enough cash to slow the rise in debt, interest expense and share counts.",
+      "created_at": "2026-08-07T14:35:32Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085724161893171305",
+      "text": "Great line from Brian Jacobsen at Annex Wealth Management:\n\nThe Fed needs to be a thermostat, not a thermometer.",
+      "created_at": "2026-08-07T13:46:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085730414014959909",
+      "text": "Berkshire investors seem to be warming up to Greg Abel's leadership. 👀\n\nThe stock is trading at its highest price since Warren Buffett announced his retirement in May 2025.",
+      "created_at": "2026-08-07T14:10:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085718966933012536",
       "text": "Before and after the SpaceX rocket crashed into the moon. 🌙\n\nCan you spot the difference?\n\nSource: NASA, Korea Aerospace Research Institute via AP",
       "created_at": "2026-08-07T13:25:27Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085389254843052543",
-      "text": "SpaceX investor on the 900 million unlocked shares: \"You've got natural sellers meeting long-term buyers,\" Chad Anderson says. \n\n\"There is a lot of demand for this stock, and a company that is one of the most valuable private companies in the world with sort of startup growth prospects,\" Anderson added.\n\nVideo",
-      "created_at": "2026-08-06T15:35:17Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085369316715663396",
-      "text": "One of Meta's AI models was able to access the internet because of a “misconfiguration” in a hacking test conducted by a third-party AI testing company, according to the Wall Street Journal.\n\nIt was the same kind of test that led to earlier hacks from models controlled by Anthropic and OpenAI. 😰",
-      "created_at": "2026-08-06T14:16:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085363003910652337",
-      "text": "$DDOG's 36% year-over-year revenue growth wasn't enough to impress investors.",
-      "created_at": "2026-08-06T13:50:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T14:02:32Z",
+  "_updated": "2026-08-07T15:40:19Z",
   "_username": "YahooFinance"
 }
