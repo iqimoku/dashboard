@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2085836767937151051",
+      "text": "$SPCX closes out a pivotal week solidly in the green. 🚀",
+      "created_at": "2026-08-07T21:13:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085847779088179598",
+      "text": "The rest of the Mag 7 left $AAPL behind this week.",
+      "created_at": "2026-08-07T21:57:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085834525372801377",
       "text": "The Trump administration is investing $100 million in the next generation of miners. ⛏️\n\nVideo",
       "created_at": "2026-08-07T21:04:38Z",
@@ -175,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085705417951179106",
-      "text": "🚨 Breaking: US economy unexpectedly posts negative job growth in July\n\nJobs added: -23K vs +80K expected\nUnemployment rate: 4.1% vs 4.2% expected",
-      "created_at": "2026-08-07T12:31:36Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085354412092928003",
-      "text": "🚀 SpaceX stock got cut in half. Retail investors kept buying.\n\n📉 $SPCX has yet to record a single day of net retail selling since its IPO, according to @vandaresearch .\n\n💰 After earnings, buyers poured in again — just as nearly 1 billion insider shares became eligible for sale.\n\n🧵 What happens when relentless dip-buying meets a major wave of potential supply?",
-      "created_at": "2026-08-06T13:16:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T21:25:24Z",
+  "_updated": "2026-08-07T22:22:05Z",
   "_username": "YahooFinance"
 }
