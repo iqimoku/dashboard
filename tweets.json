@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2085777740691554732",
+      "text": "$SPCX powers through earnings pressure and the first share unlock 🚀",
+      "created_at": "2026-08-07T17:18:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085694679488545105",
       "text": "Wendy's has totally fallen apart:",
       "created_at": "2026-08-07T11:48:56Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085405997422506033",
-      "text": "Track the results, market reaction, and analysis of Celsius in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-06T16:41:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T16:37:28Z",
+  "_updated": "2026-08-07T17:37:36Z",
   "_username": "YahooFinance"
 }
