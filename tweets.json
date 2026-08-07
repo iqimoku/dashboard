@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2085795937448845640",
+      "text": "$GOOG's largest and most valuable holding in Q2 was $SPCX. 📊\n\nAlphabet held 551,189,500 shares of SpaceX, currently valued at around $71 billion, according to the company's 13F filing.\n\nHere's its full portfolio by total market cap. ⬇️",
+      "created_at": "2026-08-07T18:31:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085796181637046492",
+      "text": "Track Alphabet's portfolio or your own in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-07T18:32:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085790030279184766",
+      "text": "The White House has sent a letter to Federal Reserve Governor Lisa Cook providing notice that President Trump is considering removing her from the central bank, according to a copy of the letter obtained by Yahoo Finance. Cook has until Aug 26 (3 weeks from 8/5) to respond",
+      "created_at": "2026-08-07T18:07:49Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085777740691554732",
       "text": "$SPCX powers through earnings pressure and the first share unlock 🚀",
       "created_at": "2026-08-07T17:18:59Z",
@@ -175,50 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085444703915278558",
-      "text": "Valvetronic's custom exhausts for Porsches and Ferraris will run you $5,000 to $10,000, Founder Austin Huffman says.\n\nVideo",
-      "created_at": "2026-08-06T19:15:37Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085441029562319154",
-      "text": "Uncle Sam's investment portfolio keeps growing. 🇺🇸 💰\n\nLast week, the Trump administration added 6 chipmakers to its stock portfolio brining the grand total to 30 companies, according to a tally by the Cato Institute. \n\nRead more from @benwerschkul: finance.yahoo.com/markets/ar…",
-      "created_at": "2026-08-06T19:01:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085428777669038265",
-      "text": "You need to earn nearly $110,000 to afford a home in America. 🫢",
-      "created_at": "2026-08-06T18:12:20Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085405620115587279",
-      "text": "$CELH tumbles after the energy-drinks group's second-quarter numbers missed Wall Street expectations.",
-      "created_at": "2026-08-06T16:40:19Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T18:34:31Z",
+  "_updated": "2026-08-07T19:41:02Z",
   "_username": "YahooFinance"
 }
