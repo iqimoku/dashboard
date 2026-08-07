@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2085354412092928003",
+      "text": "🚀 SpaceX stock got cut in half. Retail investors kept buying.\n\n📉 $SPCX has yet to record a single day of net retail selling since its IPO, according to @vandaresearch .\n\n💰 After earnings, buyers poured in again — just as nearly 1 billion insider shares became eligible for sale.\n\n🧵 What happens when relentless dip-buying meets a major wave of potential supply?",
+      "created_at": "2026-08-06T13:16:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085486145480131044",
       "text": "Michael Burry argues that massive off-balance-sheet obligations for companies like Oracle and Nebius have made them vulnerable.",
       "created_at": "2026-08-06T22:00:18Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085123877613543913",
-      "text": "📝 Keep up with all the latest AlphaSpace developments and share your feedback with us here: alphaspace.finance.yahoo.com…",
-      "created_at": "2026-08-05T22:00:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-06T22:40:35Z",
+  "_updated": "2026-08-07T01:38:51Z",
   "_username": "YahooFinance"
 }
