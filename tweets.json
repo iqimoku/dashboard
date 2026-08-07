@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2085694679488545105",
+      "text": "Wendy's has totally fallen apart:",
+      "created_at": "2026-08-07T11:48:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085756873257447458",
+      "text": "If you think you're having a good week, take a look at $PLTR. ⬇️",
+      "created_at": "2026-08-07T15:56:04Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085736606405644357",
       "text": "🤖 Big Tech’s AI boom is becoming a borrowing boom.\n\n💵 $GOOGL, $AMZN, $META and $ORCL have issued about $194B of bonds this year — nearly twice their combined 2025 total.\n\n📈 Alphabet’s latest deal drew about $115B of orders for as much as $25B of debt.\n\n🔎 For shareholders, watch whether AI starts generating enough cash to slow the rise in debt, interest expense and share counts.",
       "created_at": "2026-08-07T14:35:32Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085399305494360085",
-      "text": "Scott Bessant said that we are not in a K-shaped economy, but rather a C-shaped economy, in an interview with CNBC.",
-      "created_at": "2026-08-06T16:15:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085395599642272222",
-      "text": "Scott Bessent says the K-shaped economy is \"definitively\" over in an interview with CNBC.",
-      "created_at": "2026-08-06T16:00:30Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T15:40:19Z",
+  "_updated": "2026-08-07T16:37:28Z",
   "_username": "YahooFinance"
 }
