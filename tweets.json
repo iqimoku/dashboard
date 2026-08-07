@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2085810767597580462",
+      "text": "Cathie Wood's Ark sold $17 million of $PLTR stock.  \n\nThat's a total of nearly 109,492 shares, according to Ark's daily trading information on August 4 and 5.",
+      "created_at": "2026-08-07T19:30:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085812309046296971",
+      "text": "Explore more premium news and analysis on Palantir in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-07T19:36:21Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085795937448845640",
       "text": "$GOOG's largest and most valuable holding in Q2 was $SPCX. 📊\n\nAlphabet held 551,189,500 shares of SpaceX, currently valued at around $71 billion, according to the company's 13F filing.\n\nHere's its full portfolio by total market cap. ⬇️",
       "created_at": "2026-08-07T18:31:18Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085455952669495728",
-      "text": "Michael Burry is shorting Oracle and Nebius because he believes companies loaded with off-balance-sheet liabilities have become “very fat, very large, easy to shoot” fish.",
-      "created_at": "2026-08-06T20:00:19Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085452571607441470",
-      "text": "Individual investors bought a net $22.7 million of $SPCX during the first hour of trading Wednesday, according to Vanda Research.",
-      "created_at": "2026-08-06T19:46:53Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T19:41:02Z",
+  "_updated": "2026-08-07T20:25:11Z",
   "_username": "YahooFinance"
 }
