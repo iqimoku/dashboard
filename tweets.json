@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2086112963237118331",
+      "text": "Is the future of security AI robots? 🤖\n\nVideo",
+      "created_at": "2026-08-08T15:31:03Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086106700453482878",
+      "text": "Rivian's make-or-break R2 midsize EV delivers: Road test finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nRivian&apos;s make-or-break R2 midsize EV delivers: Road test\n\nThe Rivian R2 is, frankly, the most important vehicle Rivian has ever built. It&apos;s the car that&apos;s supposed to push Rivian over the edge on cost, scale, and profits.\nfinance.yahoo.com",
+      "created_at": "2026-08-08T15:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086076501980557343",
       "text": "The AI boom ripples into regional banks as lending picks up finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe AI boom ripples into regional banks as lending picks up\n\nRegional banks are getting a boost as the AI gold rush spills out beyond Wall Street.\nfinance.yahoo.com",
       "created_at": "2026-08-08T13:06:10Z",
@@ -175,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085756873257447458",
-      "text": "If you think you're having a good week, take a look at $PLTR. ⬇️",
-      "created_at": "2026-08-07T15:56:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085736606405644357",
-      "text": "🤖 Big Tech’s AI boom is becoming a borrowing boom.\n\n💵 $GOOGL, $AMZN, $META and $ORCL have issued about $194B of bonds this year — nearly twice their combined 2025 total.\n\n📈 Alphabet’s latest deal drew about $115B of orders for as much as $25B of debt.\n\n🔎 For shareholders, watch whether AI starts generating enough cash to slow the rise in debt, interest expense and share counts.",
-      "created_at": "2026-08-07T14:35:32Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-08T15:15:32Z",
+  "_updated": "2026-08-08T16:15:39Z",
   "_username": "YahooFinance"
 }
