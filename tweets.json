@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2085910387619160132",
+      "text": "Nvidia ends week up more than 10% as AI chip fears ease finance.yahoo.com/technology…\n\nLink\n\n\n\nNvidia ends week up more than 10% as AI chip fears ease\n\nNvidia closed out the week on a hot streak thanks to big news from SpaceX and an easing of fears around the AI trade.\nfinance.yahoo.com",
+      "created_at": "2026-08-08T02:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2085895288959406500",
+      "text": "Trump considers moving forward with removal of Fed governor Lisa Cook finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nTrump considers moving forward with removal of Fed governor Lisa Cook\n\nPresident Trump is moving forward with efforts to fire the Federal Reserve governor, after the Supreme Court ruled she could remain in her position while she responds to the allegations.\nfinance.yahoo.com",
+      "created_at": "2026-08-08T01:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085880188387098652",
       "text": "SpaceX's big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for investors finance.yahoo.com/markets/st…\n\nLink\n\n\n\nSpaceX&apos;s big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for...\n\nSpaceX closes out a pivotal week solidly in the green, with the stock fighting higher over the past five sessions after reporting its first earnings report as a public company and the largest share...\nfinance.yahoo.com",
       "created_at": "2026-08-08T00:06:05Z",
@@ -175,28 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085718966933012536",
-      "text": "Before and after the SpaceX rocket crashed into the moon. 🌙\n\nCan you spot the difference?\n\nSource: NASA, Korea Aerospace Research Institute via AP",
-      "created_at": "2026-08-07T13:25:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085710737838584053",
-      "text": "The economy shed 23,000 jobs in July. Economists had expected a gain of 80,000. \n\nMeanwhile, the unemployment rate slid to 4.1%.",
-      "created_at": "2026-08-07T12:52:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-08T00:37:08Z",
+  "_updated": "2026-08-08T02:46:26Z",
   "_username": "YahooFinance"
 }
