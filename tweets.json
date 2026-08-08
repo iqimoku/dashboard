@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086151999150588124",
+      "text": "Pro Padel League is betting on more growth — with celebrities, luxury brands in tow finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nPro Padel League is betting on more growth — with celebrities, luxury brands in tow\n\nCelebrity backers and deep-pocketed investors are betting millions on padel (pronounced &quot;paddle&quot;), a sport that has surged abroad and is now growing in the US.\nfinance.yahoo.com",
+      "created_at": "2026-08-08T18:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086136900092346629",
       "text": "Performance raises are back for 2027, but increases will be modest finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nPerformance raises are back for 2027, but increases will be modest\n\nEmployers plan to give raises of 3.5% on average in 2027, up from 3.4% in 2026, according to a new report.\nfinance.yahoo.com",
       "created_at": "2026-08-08T17:06:10Z",
@@ -186,17 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085777740691554732",
-      "text": "$SPCX powers through earnings pressure and the first share unlock 🚀",
-      "created_at": "2026-08-07T17:18:59Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-08T18:17:18Z",
+  "_updated": "2026-08-08T19:19:09Z",
   "_username": "YahooFinance"
 }
