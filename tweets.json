@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2085880188387098652",
+      "text": "SpaceX's big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for investors finance.yahoo.com/markets/st…\n\nLink\n\n\n\nSpaceX&apos;s big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for...\n\nSpaceX closes out a pivotal week solidly in the green, with the stock fighting higher over the past five sessions after reporting its first earnings report as a public company and the largest share...\nfinance.yahoo.com",
+      "created_at": "2026-08-08T00:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2085836767937151051",
       "text": "$SPCX closes out a pivotal week solidly in the green. 🚀",
       "created_at": "2026-08-07T21:13:33Z",
@@ -186,17 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085707946814529940",
-      "text": "🇺🇸 Where the US economy gained and lost jobs in July \n\nGovernment -53K\nLeisure &amp; hospitality -40K\nRetail trade -19K\nFinancial services -14K\nHealthcare +22K\nConstruction +22K",
-      "created_at": "2026-08-07T12:41:39Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-07T23:21:14Z",
+  "_updated": "2026-08-08T00:37:08Z",
   "_username": "YahooFinance"
 }
