@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2086438889745453537",
+      "text": "How AI agents can power the S&amp;P 500 higher finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nHow AI agents can power the S&amp;P 500 higher\n\nAI agents are only getting more powerful.\nfinance.yahoo.com",
+      "created_at": "2026-08-09T13:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086435348586828282",
+      "text": "Investors haven't been this bullish since 2021, according to BofA's sentiment gauge. \n\nSo much so, strategists say it's time to reduce exposure to riskier assets. They say defensive assets should help protect portfolios against negative surprises in the economy and market.",
+      "created_at": "2026-08-09T12:52:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086423789928120471",
       "text": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;Very little to like&apos;: Wall Street assesses surprise July jobs report as stocks jump\n\nThe latest monthly jobs report could take the pressure off the Fed to hike rates.\nfinance.yahoo.com",
       "created_at": "2026-08-09T12:06:10Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085795937448845640",
-      "text": "$GOOG's largest and most valuable holding in Q2 was $SPCX. 📊\n\nAlphabet held 551,189,500 shares of SpaceX, currently valued at around $71 billion, according to the company's 13F filing.\n\nHere's its full portfolio by total market cap. ⬇️",
-      "created_at": "2026-08-07T18:31:18Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085796181637046492",
-      "text": "Track Alphabet's portfolio or your own in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-07T18:32:16Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-09T12:20:17Z",
+  "_updated": "2026-08-09T13:38:52Z",
   "_username": "YahooFinance"
 }
