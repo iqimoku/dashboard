@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086393591564271962",
+      "text": "2 key checks on AI infrastructure and inflation: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n2 key checks on AI infrastructure and inflation: What to watch this week\n\nThe stock market&apos;s first week after the Big Tech earnings extravaganza went about as well as any investor could have hoped.\nfinance.yahoo.com",
+      "created_at": "2026-08-09T10:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086151999150588124",
       "text": "Pro Padel League is betting on more growth — with celebrities, luxury brands in tow finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nPro Padel League is betting on more growth — with celebrities, luxury brands in tow\n\nCelebrity backers and deep-pocketed investors are betting millions on padel (pronounced &quot;paddle&quot;), a sport that has surged abroad and is now growing in the US.\nfinance.yahoo.com",
       "created_at": "2026-08-08T18:06:10Z",
@@ -186,17 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085790030279184766",
-      "text": "The White House has sent a letter to Federal Reserve Governor Lisa Cook providing notice that President Trump is considering removing her from the central bank, according to a copy of the letter obtained by Yahoo Finance. Cook has until Aug 26 (3 weeks from 8/5) to respond",
-      "created_at": "2026-08-07T18:07:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-09T10:19:20Z",
+  "_updated": "2026-08-09T11:16:49Z",
   "_username": "YahooFinance"
 }
