@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086423789928120471",
+      "text": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;Very little to like&apos;: Wall Street assesses surprise July jobs report as stocks jump\n\nThe latest monthly jobs report could take the pressure off the Fed to hike rates.\nfinance.yahoo.com",
+      "created_at": "2026-08-09T12:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086393591564271962",
       "text": "2 key checks on AI infrastructure and inflation: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n2 key checks on AI infrastructure and inflation: What to watch this week\n\nThe stock market&apos;s first week after the Big Tech earnings extravaganza went about as well as any investor could have hoped.\nfinance.yahoo.com",
       "created_at": "2026-08-09T10:06:10Z",
@@ -209,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-09T11:16:49Z",
+  "_updated": "2026-08-09T12:20:17Z",
   "_username": "YahooFinance"
 }
