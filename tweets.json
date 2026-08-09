@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086469088952377377",
+      "text": "Wealthy shoppers are propping up the furniture industry's recovery finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nWealthy shoppers are propping up the furniture industry&apos;s recovery\n\nAmericans are back to sprucing up their homes with new furniture. After years of macroeconomic setbacks, the furniture industry is hoping a recovery will hold.\nfinance.yahoo.com",
+      "created_at": "2026-08-09T15:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086453989030183220",
       "text": "Gold’s breakout could force investors back in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGold’s breakout could force investors back in: Chart of the Day\n\nGold just had its best week since February — the investors who once crowded the trade are mostly gone.\nfinance.yahoo.com",
       "created_at": "2026-08-09T14:06:10Z",
@@ -145,7 +156,7 @@
     },
     {
       "id": "2085880188387098652",
-      "text": "SpaceX's big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for investors finance.yahoo.com/markets/st…\n\nLink\n\nSpaceX&apos;s big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for...\n\nSpaceX closes out a pivotal week solidly in the green, with the stock fighting higher over the past five sessions after reporting its first earnings report as a public company and the largest share...\nfinance.yahoo.com",
+      "text": "SpaceX's big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for investors finance.yahoo.com/markets/st…\n\nLink\n\n\n\nSpaceX&apos;s big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for...\n\nSpaceX closes out a pivotal week solidly in the green, with the stock fighting higher over the past five sessions after reporting its first earnings report as a public company and the largest share...\nfinance.yahoo.com",
       "created_at": "2026-08-08T00:06:05Z",
       "public_metrics": {
         "like_count": 0,
@@ -197,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085810767597580462",
-      "text": "Cathie Wood's Ark sold $17 million of $PLTR stock.  \n\nThat's a total of nearly 109,492 shares, according to Ark's daily trading information on August 4 and 5.",
-      "created_at": "2026-08-07T19:30:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085812309046296971",
-      "text": "Explore more premium news and analysis on Palantir in AlphaSpace: finance.yahoo.com/about/prom…",
-      "created_at": "2026-08-07T19:36:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-09T14:21:41Z",
+  "_updated": "2026-08-09T15:17:43Z",
   "_username": "YahooFinance"
 }
