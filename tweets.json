@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2086889073701011750",
+      "text": "Beth Hammack, our president and CEO, will appear on @YahooFinance with @Jenniferisms in the 3 pm ET hour. You can watch her interview here: bit.ly/4z0sUVo",
+      "created_at": "2026-08-10T18:55:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086887094878609498",
+      "text": "Stocks fell and oil prices climb as Trump says US is only \"semi-negotiating\" with Iran. \n\nIn an interview with Axios, Trump said that the US is \"low-keying\" it with Iran.",
+      "created_at": "2026-08-10T18:47:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086884150556991537",
       "text": "Fed's Beth Hammack: \"Now is the time to act.\"\n\nVideo",
       "created_at": "2026-08-10T18:35:28Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086112963237118331",
-      "text": "Is the future of security AI robots? 🤖\n\nVideo",
-      "created_at": "2026-08-08T15:31:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086106700453482878",
-      "text": "Rivian's make-or-break R2 midsize EV delivers: Road test finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nRivian&apos;s make-or-break R2 midsize EV delivers: Road test\n\nThe Rivian R2 is, frankly, the most important vehicle Rivian has ever built. It&apos;s the car that&apos;s supposed to push Rivian over the edge on cost, scale, and profits.\nfinance.yahoo.com",
-      "created_at": "2026-08-08T15:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T18:37:54Z",
+  "_updated": "2026-08-10T19:44:54Z",
   "_username": "YahooFinance"
 }
