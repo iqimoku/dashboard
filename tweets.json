@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2086947873116041637",
+      "text": "Mastercard is dropping $1.8 billion on BVNK to power its global stablecoin infrastructure — or as  @scottmelker puts it, \"a company you and I have never heard of that has bank spelled wrong.\"\n\nVideo",
+      "created_at": "2026-08-10T22:48:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086939500505149680",
+      "text": "Trump says he's going with Kevin Warsh 100%.\n\nVideo",
+      "created_at": "2026-08-10T22:15:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086933636180238827",
       "text": "Researchers recently used AI to design new viruses, a development Sen. Bernie Sanders described as potentially enabling new bioweapons.\n\nSanders cited the viruses as a reason to pause AI development in a letter to OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, and Meta CEO Mark Zuckerberg. yhoo.it/4xS9ReP",
       "created_at": "2026-08-10T21:52:06Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086514388081500199",
-      "text": "How caregiving can blow a hole in retirement savings finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nHow caregiving can blow a hole in retirement savings\n\nRetirees who are caregiving for an aging parent, spouse, or other family member face greater financial strain, lower retirement confidence, and more worry about the future — and millions of people...\nfinance.yahoo.com",
-      "created_at": "2026-08-09T18:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086499287819522233",
-      "text": "Seek more context when you hear these popular words and phrases about markets finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nSeek more context when you hear these popular words and phrases about markets\n\nA single word or phrase can be a little too imprecise to describe important matters, leading some to make incorrect assumptions.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T17:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T22:22:56Z",
+  "_updated": "2026-08-10T23:22:09Z",
   "_username": "YahooFinance"
 }
