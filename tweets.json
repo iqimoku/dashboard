@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2086832855678652426",
+      "text": "Mark Zuckerberg announces Meta's new AI model Muse Glimmer. \n\nIt's an open-weight model that can run 24/7 on your Mac or PC. \n\n\"And we've got even bigger models coming soon too,\" Zuckerberg says.\n\nVideo",
+      "created_at": "2026-08-10T15:11:38Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086825578552864962",
+      "text": "$SPCX reclaims its IPO price 📈",
+      "created_at": "2026-08-10T14:42:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086817299856506957",
+      "text": "Berkshire Hathaway reported its second-quarter earnings over the weekend, disclosing that its cash holdings had shrunk by nearly $35 billion. yhoo.it/45n9Pzc",
+      "created_at": "2026-08-10T14:09:50Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086805238367781183",
       "text": "Gold just posted its best week since February. \n\nThe breakout could force investors back in ➡️: finance.yahoo.com/markets/ar…",
       "created_at": "2026-08-10T13:21:54Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2085895288959406500",
-      "text": "Trump considers moving forward with removal of Fed governor Lisa Cook finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nTrump considers moving forward with removal of Fed governor Lisa Cook\n\nPresident Trump is moving forward with efforts to fire the Federal Reserve governor, after the Supreme Court ruled she could remain in her position while she responds to the allegations.\nfinance.yahoo.com",
-      "created_at": "2026-08-08T01:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085880188387098652",
-      "text": "SpaceX's big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for investors finance.yahoo.com/markets/st…\n\nLink\n\n\n\nSpaceX&apos;s big week: Stock jumps despite earnings storm, lock-up expiration in crucial test for...\n\nSpaceX closes out a pivotal week solidly in the green, with the stock fighting higher over the past five sessions after reporting its first earnings report as a public company and the largest share...\nfinance.yahoo.com",
-      "created_at": "2026-08-08T00:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2085836767937151051",
-      "text": "$SPCX closes out a pivotal week solidly in the green. 🚀",
-      "created_at": "2026-08-07T21:13:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T14:09:00Z",
+  "_updated": "2026-08-10T15:45:41Z",
   "_username": "YahooFinance"
 }
