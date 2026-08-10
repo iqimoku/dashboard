@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2086920946162466980",
+      "text": "What Airbnb learned from Amazon.  \nfinance.yahoo.com/video/airb…\n\nVideo",
+      "created_at": "2026-08-10T21:01:41Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086915764552962332",
+      "text": "Sen. Bernie Sanders just gave top AI CEOs a choice: voluntarily pause AI development now, or Congress will intervene. yhoo.it/4xS9ReP",
+      "created_at": "2026-08-10T20:41:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086914710738268346",
+      "text": "$NVDA sank on reports that its working with Apollo and Blackstone to assemble $500 billion in financing to build out AI, according to the Financial Times.",
+      "created_at": "2026-08-10T20:36:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086889978743972147",
       "text": "Cleveland Fed President Beth Hammack tells Yahoo Finance that the central bank needs to raise rates by more than 25 basis points, and that it's better to get an early start on that to avoid having to make bigger adjustments later.\n\n\"Nothing would make me feel better than to be wrong, that we need to change the stance of policy to help bring inflation back to target. But from where I sit, I just don't see it coming back on its own.\"\n\nuk.finance.yahoo.com/news/cl…\n\nLink\n\n\n\nCleveland Fed&apos;s Hammack: It will take more than one interest rate hike to bring down inflation\n\nCleveland Federal Reserve president Beth Hammack said Monday she anticipates more than one interest rate hike will be required to rein in what she calls broadening inflation.\nuk.finance.yahoo.com",
       "created_at": "2026-08-10T18:58:38Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086453989030183220",
-      "text": "Gold’s breakout could force investors back in: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nGold’s breakout could force investors back in: Chart of the Day\n\nGold just had its best week since February — the investors who once crowded the trade are mostly gone.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T14:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086438889745453537",
-      "text": "How AI agents can power the S&amp;P 500 higher finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nHow AI agents can power the S&amp;P 500 higher\n\nAI agents are only getting more powerful.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T13:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086435348586828282",
-      "text": "Investors haven't been this bullish since 2021, according to BofA's sentiment gauge. \n\nSo much so, strategists say it's time to reduce exposure to riskier assets. They say defensive assets should help protect portfolios against negative surprises in the economy and market.",
-      "created_at": "2026-08-09T12:52:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T20:27:49Z",
+  "_updated": "2026-08-10T21:28:45Z",
   "_username": "YahooFinance"
 }
