@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086859144351395976",
+      "text": "Turns out Michael Burry isn't sold on the future of Berkshire Hathaway without Warren Buffett at the helm. yhoo.it/4wWBeUW",
+      "created_at": "2026-08-10T16:56:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086848671887380784",
       "text": "Strategy just sold nearly 1,700 bitcoin. \n\n@scottmelker: \"Michael Saylor, here, is in a bit of a pickle ... [He] spent years here turning dollars into bitcoin. Now, he's discovered that there's a reverse button.\"\n\nVideo",
       "created_at": "2026-08-10T16:14:29Z",
@@ -68,7 +79,7 @@
     },
     {
       "id": "2086514388081500199",
-      "text": "How caregiving can blow a hole in retirement savings finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nHow caregiving can blow a hole in retirement savings\n\nRetirees who are caregiving for an aging parent, spouse, or other family member face greater financial strain, lower retirement confidence, and more worry about the future — and millions of people...\nfinance.yahoo.com",
+      "text": "How caregiving can blow a hole in retirement savings finance.yahoo.com/economy/ar…\n\nLink\n\nHow caregiving can blow a hole in retirement savings\n\nRetirees who are caregiving for an aging parent, spouse, or other family member face greater financial strain, lower retirement confidence, and more worry about the future — and millions of people...\nfinance.yahoo.com",
       "created_at": "2026-08-09T18:06:10Z",
       "public_metrics": {
         "like_count": 0,
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086061402142179624",
-      "text": "The AI boom is creating jobs far from Silicon Valley: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe AI boom is creating jobs far from Silicon Valley: Chart of the Day\n\nUS employers shed 23,000 jobs in July, while construction firms added 22,000. Nearly all of that construction hiring came from the nonresidential and infrastructure side of the business, likely...\nfinance.yahoo.com",
-      "created_at": "2026-08-08T12:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T16:38:57Z",
+  "_updated": "2026-08-10T17:40:44Z",
   "_username": "YahooFinance"
 }
