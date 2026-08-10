@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2086889978743972147",
+      "text": "Cleveland Fed President Beth Hammack tells Yahoo Finance that the central bank needs to raise rates by more than 25 basis points, and that it's better to get an early start on that to avoid having to make bigger adjustments later.\n\n\"Nothing would make me feel better than to be wrong, that we need to change the stance of policy to help bring inflation back to target. But from where I sit, I just don't see it coming back on its own.\"\n\nuk.finance.yahoo.com/news/cl…\n\nLink\n\n\n\nCleveland Fed&apos;s Hammack: It will take more than one interest rate hike to bring down inflation\n\nCleveland Federal Reserve president Beth Hammack said Monday she anticipates more than one interest rate hike will be required to rein in what she calls broadening inflation.\nuk.finance.yahoo.com",
+      "created_at": "2026-08-10T18:58:38Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086905370870464893",
+      "text": "🗣️ Latest from Michael Burry: \n\n\"Off-balance sheet liabilities today are putting both 2000 and 2008 to shame.\"",
+      "created_at": "2026-08-10T19:59:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086903708189622450",
+      "text": "Ryan Cohen is reportedly considering pulling his $56 billion eBay offer, according to Bloomberg.\n\nSince its offer in May, $GME has fallen 28% while $EBAY climbed 7.6%",
+      "created_at": "2026-08-10T19:53:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2086900527153942537",
+      "text": "Why the July jobs report is a \"mixed report,\" according to Cleveland Fed Beth Hammock.\n\nVideo",
+      "created_at": "2026-08-10T19:40:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086889073701011750",
       "text": "Beth Hammack, our president and CEO, will appear on @YahooFinance with @Jenniferisms in the 3 pm ET hour. You can watch her interview here: bit.ly/4z0sUVo",
       "created_at": "2026-08-10T18:55:02Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086423789928120471",
-      "text": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n&apos;Very little to like&apos;: Wall Street assesses surprise July jobs report as stocks jump\n\nThe latest monthly jobs report could take the pressure off the Fed to hike rates.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T12:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086393591564271962",
-      "text": "2 key checks on AI infrastructure and inflation: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n2 key checks on AI infrastructure and inflation: What to watch this week\n\nThe stock market&apos;s first week after the Big Tech earnings extravaganza went about as well as any investor could have hoped.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T10:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086151999150588124",
-      "text": "Pro Padel League is betting on more growth — with celebrities, luxury brands in tow finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nPro Padel League is betting on more growth — with celebrities, luxury brands in tow\n\nCelebrity backers and deep-pocketed investors are betting millions on padel (pronounced &quot;paddle&quot;), a sport that has surged abroad and is now growing in the US.\nfinance.yahoo.com",
-      "created_at": "2026-08-08T18:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086136900092346629",
-      "text": "Performance raises are back for 2027, but increases will be modest finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nPerformance raises are back for 2027, but increases will be modest\n\nEmployers plan to give raises of 3.5% on average in 2027, up from 3.4% in 2026, according to a new report.\nfinance.yahoo.com",
-      "created_at": "2026-08-08T17:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T19:44:54Z",
+  "_updated": "2026-08-10T20:27:49Z",
   "_username": "YahooFinance"
 }
