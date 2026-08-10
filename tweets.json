@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086933636180238827",
+      "text": "Researchers recently used AI to design new viruses, a development Sen. Bernie Sanders described as potentially enabling new bioweapons.\n\nSanders cited the viruses as a reason to pause AI development in a letter to OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, and Meta CEO Mark Zuckerberg. yhoo.it/4xS9ReP",
+      "created_at": "2026-08-10T21:52:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086920946162466980",
       "text": "What Airbnb learned from Amazon.  \nfinance.yahoo.com/video/airb…\n\nVideo",
       "created_at": "2026-08-10T21:01:41Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086469088952377377",
-      "text": "Wealthy shoppers are propping up the furniture industry's recovery finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nWealthy shoppers are propping up the furniture industry&apos;s recovery\n\nAmericans are back to sprucing up their homes with new furniture. After years of macroeconomic setbacks, the furniture industry is hoping a recovery will hold.\nfinance.yahoo.com",
-      "created_at": "2026-08-09T15:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T21:28:45Z",
+  "_updated": "2026-08-10T22:22:56Z",
   "_username": "YahooFinance"
 }
