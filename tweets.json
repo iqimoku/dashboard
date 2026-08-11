@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087295265866711139",
+      "text": "Between October 2025 and July 2026, the government racked up $963 billion in debt interest payments. \n\nThat's roughly $96 billion a month going strictly toward interest charges. 💸  Read more, from Fortune: yhoo.it/3U7oYCf",
+      "created_at": "2026-08-11T21:49:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087286772824756618",
       "text": "Google's Gemini reached 1 billion monthly users, its fastest-growing product yet. 💥\n\nVideo",
       "created_at": "2026-08-11T21:15:21Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087205858635551112",
-      "text": "Don't overlook the little guy. 💪\n\nThe $RUT surpassed the 3,000 level for the first time last week. The small-cap index's returns are outperforming the $GSPC and the Mag 7 so far in 2026.",
-      "created_at": "2026-08-11T15:53:49Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T21:31:43Z",
+  "_updated": "2026-08-11T22:27:49Z",
   "_username": "YahooFinance"
 }
