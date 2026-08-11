@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2087157186623307959",
+      "text": "Gold holds above $4,400 as the situation in Iran worsens.",
+      "created_at": "2026-08-11T12:40:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087161342721409189",
+      "text": "Intel's AI ambitions are getting more expensive.\n\n📈 $INTC's 165% rally is helping foot the bill.",
+      "created_at": "2026-08-11T12:56:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086967805421723888",
       "text": "Why the July jobs report is a \"mixed report,\" according to Cleveland Fed Beth Hammack.\n\nVideo",
       "created_at": "2026-08-11T00:07:53Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086805238367781183",
-      "text": "Gold just posted its best week since February. \n\nThe breakout could force investors back in ➡️: finance.yahoo.com/markets/ar…",
-      "created_at": "2026-08-10T13:21:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086809864173461768",
-      "text": "$BRKB just hit a new 52-week high after the company beat its earnings on Friday. yhoo.it/4fXeTza",
-      "created_at": "2026-08-10T13:40:17Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T12:33:22Z",
+  "_updated": "2026-08-11T14:09:01Z",
   "_username": "YahooFinance"
 }
