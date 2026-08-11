@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2087230362971730262",
+      "text": "Nvidia is \"the central bank of AI,\" Zacks Investment's Brian Mulberry says. 🏦\n\nVideo",
+      "created_at": "2026-08-11T17:31:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087225069328040270",
+      "text": "🗓️ YTD returns: \n\n$RUT +21%\n$GSPC +13%\n$MAGS +3.5%",
+      "created_at": "2026-08-11T17:10:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087219111667331140",
+      "text": "For investors, making every minute count starts with AlphaSpace. Exclusively for @TBPN fans, get 50% off our professional market tools: finance.yahoo.com/tbpn\n\nMore from @ryanspoon on the show⤵️\n\n\nTBPN (@tbpn)\n\nYahoo Media Group President @ryanspoon would rather figure out how to turn 10 minutes on Yahoo into 12 than figure out how to 5x total users.\n\nYahoo’s new college fantasy football product is one way he plans to get there.\n\nVideo\n  \n\n\n\n\n\n— https://nitter.net/tbpn/status/2086926370182209688#m",
+      "created_at": "2026-08-11T16:46:29Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087214382254260485",
       "text": "Trump Media reported a $238 million Q2 loss due to its crypto investments, and scrapped Crypto.com's CRO token treasury deal.\n\n\"What has two thumbs and said from the very beginning that crypto treasury companies were a bad idea? This guy,\" @scottmelker said.\n\nVideo",
       "created_at": "2026-08-11T16:27:41Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086889978743972147",
-      "text": "Cleveland Fed President Beth Hammack tells Yahoo Finance that the central bank needs to raise rates by more than 25 basis points, and that it's better to get an early start on that to avoid having to make bigger adjustments later.\n\n\"Nothing would make me feel better than to be wrong, that we need to change the stance of policy to help bring inflation back to target. But from where I sit, I just don't see it coming back on its own.\"\n\nuk.finance.yahoo.com/news/cl…\n\nLink\n\n\n\nCleveland Fed&apos;s Hammack: It will take more than one interest rate hike to bring down inflation\n\nCleveland Federal Reserve president Beth Hammack said Monday she anticipates more than one interest rate hike will be required to rein in what she calls broadening inflation.\nuk.finance.yahoo.com",
-      "created_at": "2026-08-10T18:58:38Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086905370870464893",
-      "text": "🗣️ Latest from Michael Burry: \n\n\"Off-balance sheet liabilities today are putting both 2000 and 2008 to shame.\"",
-      "created_at": "2026-08-10T19:59:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086903708189622450",
-      "text": "Ryan Cohen is reportedly considering pulling his $56 billion eBay offer, according to Bloomberg.\n\nSince its offer in May, $GME has fallen 28% while $EBAY climbed 7.6%",
-      "created_at": "2026-08-10T19:53:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T16:42:12Z",
+  "_updated": "2026-08-11T17:45:11Z",
   "_username": "YahooFinance"
 }
