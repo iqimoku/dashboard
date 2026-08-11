@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2087260306443579832",
+      "text": "Cathie Wood's Ark bought $36.9 million of SpaceX, about 316,963 shares. 🚀",
+      "created_at": "2026-08-11T19:30:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087263460128170140",
+      "text": "Ark also invested nearly $13.2 million in $CRWV, $17.6 million in $NVDA, roughly $39 million in base:0x5babfc2f240bc5de90eb7e19d789412db1dec402, and $17 million in $COIN.\n\nThe investment firm unloaded roughly $96 million of $RBLX and about $21 million of $PLTR.\n\nExplore more premium news and analysis on SpaceX in AlphaSpace: finance.yahoo.com/about/prom…",
+      "created_at": "2026-08-11T19:42:43Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087258573038330153",
+      "text": "$CRWV has plunged more than 30% since its last earnings report. 📉\n\nWhere's it headed after today's report?",
+      "created_at": "2026-08-11T19:23:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087255838243058131",
+      "text": "Five of the Mag 7 are in the red. \n\n🔴 $NVDA\n🔴 $AAPL \n🔴 $GOOGL\n🔴 $MSFT\n🔴 $AMZN\n🟢 $META\n🟢 $TSLA",
+      "created_at": "2026-08-11T19:12:25Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087250473430491613",
+      "text": "Google's Gemini is breaking company records. 💥 \n\nThe AI assistant racked up one billion monthly users faster than any of the company's other products.",
+      "created_at": "2026-08-11T18:51:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087230362971730262",
       "text": "Nvidia is \"the central bank of AI,\" Zacks Investment's Brian Mulberry says. 🏦\n\nVideo",
       "created_at": "2026-08-11T17:31:12Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086939500505149680",
-      "text": "Trump says he's going with Kevin Warsh 100%.\n\nVideo",
-      "created_at": "2026-08-10T22:15:25Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086933636180238827",
-      "text": "Researchers recently used AI to design new viruses, a development Sen. Bernie Sanders described as potentially enabling new bioweapons.\n\nSanders cited the viruses as a reason to pause AI development in a letter to OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, and Meta CEO Mark Zuckerberg. yhoo.it/4xS9ReP",
-      "created_at": "2026-08-10T21:52:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086920946162466980",
-      "text": "What Airbnb learned from Amazon.  \nfinance.yahoo.com/video/airb…\n\nVideo",
-      "created_at": "2026-08-10T21:01:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086915764552962332",
-      "text": "Sen. Bernie Sanders just gave top AI CEOs a choice: voluntarily pause AI development now, or Congress will intervene. yhoo.it/4xS9ReP",
-      "created_at": "2026-08-10T20:41:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086914710738268346",
-      "text": "$NVDA sank on reports that its working with Apollo and Blackstone to assemble $500 billion in financing to build out AI, according to the Financial Times.",
-      "created_at": "2026-08-10T20:36:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T18:41:07Z",
+  "_updated": "2026-08-11T19:51:04Z",
   "_username": "YahooFinance"
 }
