@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2087187808989348267",
+      "text": "America's stockpile of crude oil has dropped to the lowest level in more than 40 years.\n\n🛢️ The reserve has declined by roughly 116 million barrels this year. yhoo.it/4wqNj3B",
+      "created_at": "2026-08-11T14:42:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087164178070896879",
+      "text": "🚀 Intel’s monster rally is doing more than making shareholders richer. It’s helping fund the comeback.\n\n💰 $INTC raised $20B in new stock — but its 165% YTD rally means far fewer new shares are needed than a year ago.\n\n🏭 The cash comes as Intel pours billions into the factories, chips, and infrastructure behind the AI boom.\n\n📊 The rally made raising money easier. Now Intel has to make the money work.",
+      "created_at": "2026-08-11T13:08:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087179277733187814",
+      "text": "$ONON slumped 21% at market open — the stock's biggest slide since its 2021 IPO. yhoo.it/4xzIFkO",
+      "created_at": "2026-08-11T14:08:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087157186623307959",
       "text": "Gold holds above $4,400 as the situation in Iran worsens.",
       "created_at": "2026-08-11T12:40:25Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2086832855678652426",
-      "text": "Mark Zuckerberg announces Meta's new AI model Muse Glimmer. \n\nIt's an open-weight model that can run 24/7 on your Mac or PC. \n\n\"And we've got even bigger models coming soon too,\" Zuckerberg says.\n\nVideo",
-      "created_at": "2026-08-10T15:11:38Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086825578552864962",
-      "text": "$SPCX reclaims its IPO price 📈",
-      "created_at": "2026-08-10T14:42:43Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086817299856506957",
-      "text": "Berkshire Hathaway reported its second-quarter earnings over the weekend, disclosing that its cash holdings had shrunk by nearly $35 billion. yhoo.it/45n9Pzc",
-      "created_at": "2026-08-10T14:09:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T14:09:01Z",
+  "_updated": "2026-08-11T15:45:07Z",
   "_username": "YahooFinance"
 }
