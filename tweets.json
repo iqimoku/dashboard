@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2086967805421723888",
+      "text": "Why the July jobs report is a \"mixed report,\" according to Cleveland Fed Beth Hammack.\n\nVideo",
+      "created_at": "2026-08-11T00:07:53Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2086947873116041637",
       "text": "Mastercard is dropping $1.8 billion on BVNK to power its global stablecoin infrastructure — or as  @scottmelker puts it, \"a company you and I have never heard of that has bank spelled wrong.\"\n\nVideo",
       "created_at": "2026-08-10T22:48:41Z",
@@ -92,17 +103,6 @@
       "id": "2086903708189622450",
       "text": "Ryan Cohen is reportedly considering pulling his $56 billion eBay offer, according to Bloomberg.\n\nSince its offer in May, $GME has fallen 28% while $EBAY climbed 7.6%",
       "created_at": "2026-08-10T19:53:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2086900527153942537",
-      "text": "Why the July jobs report is a \"mixed report,\" according to Cleveland Fed Beth Hammock.\n\nVideo",
-      "created_at": "2026-08-10T19:40:33Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-10T23:22:09Z",
+  "_updated": "2026-08-11T00:40:55Z",
   "_username": "YahooFinance"
 }
