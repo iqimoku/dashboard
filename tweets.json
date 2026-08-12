@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2087655392520110544",
+      "text": "The US government paid out more in tariff refunds than it actually collected in July. yhoo.it/4cEUZbd",
+      "created_at": "2026-08-12T21:40:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087651661225382159",
+      "text": "Wall Street workers make $400,000 more than the average New Yorker, according to a recent report from the New York Comptroller's office.\n\nVideo",
+      "created_at": "2026-08-12T21:25:17Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087641654450692485",
       "text": "CAVA could be coming to an airport near you. 👀✈️\n\nVideo",
       "created_at": "2026-08-12T20:45:31Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087313056825000425",
-      "text": "Wondering why the 55 and older set hitting the off ramp? Check out my latest @YahooFinance column. Older Americans are dropping out of the workforce. Blame the soaring stock market. #retirement #wealth finance.yahoo.com/markets/ar…\n\nLink\n\nOlder Americans are dropping out of the workforce. Blame the soaring stock market.\n\nDroves of older workers are stepping out of the workforce, and a new Bank of America Securities report says wealth generated from a surging stock market could be an underlying factor. \nfinance.yahoo.com",
-      "created_at": "2026-08-11T22:59:47Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087526542565888141",
-      "text": "The latest inflation data shows that CPI is up nearly a full percent from one year ago. yhoo.it/4fSgfwl",
-      "created_at": "2026-08-12T13:08:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-12T21:31:25Z",
+  "_updated": "2026-08-12T22:26:31Z",
   "_username": "YahooFinance"
 }
