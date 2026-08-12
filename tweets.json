@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087325152291803197",
+      "text": "Trump Media reported a quarterly net loss of approximately $238 million on only $1.7 million of revenue.\n\n\"Their expenses are like $140 for every dollar that they made,\" @scottmelker says.\n\nVideo",
+      "created_at": "2026-08-11T23:47:51Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087295265866711139",
       "text": "Between October 2025 and July 2026, the government racked up $963 billion in debt interest payments. \n\nThat's roughly $96 billion a month going strictly toward interest charges. 💸  Read more, from Fortune: yhoo.it/3U7oYCf",
       "created_at": "2026-08-11T21:49:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087188600496529853",
-      "text": "Great to interview Cleveland Fed president Beth Hammack at such a critical time for our economy. \nWATCH here: tinyurl.com/444jxt49\n\nLink\n\n\n\nCleveland Fed&apos;s Hammack: It will take more than one interest rate hike to bring down inflation\n\nCleveland Federal Reserve president Beth Hammack said Monday she anticipates more than one interest rate hike will be required to rein in what she calls broadening inflation.\nfinance.yahoo.com",
-      "created_at": "2026-08-11T14:45:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-11T23:26:41Z",
+  "_updated": "2026-08-12T00:47:13Z",
   "_username": "YahooFinance"
 }
