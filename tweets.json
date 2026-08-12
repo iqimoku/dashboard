@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2087313056825000425",
+      "text": "Wondering why the 55 and older set hitting the off ramp? Check out my latest @YahooFinance column. Older Americans are dropping out of the workforce. Blame the soaring stock market. #retirement #wealth finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nOlder Americans are dropping out of the workforce. Blame the soaring stock market.\n\nDroves of older workers are stepping out of the workforce, and a new Bank of America Securities report says wealth generated from a surging stock market could be an underlying factor. \nfinance.yahoo.com",
+      "created_at": "2026-08-11T22:59:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087526542565888141",
+      "text": "The latest inflation data shows that CPI is up nearly a full percent from one year ago. yhoo.it/4fSgfwl",
+      "created_at": "2026-08-12T13:08:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087523439967936691",
+      "text": "Inflation growth eased slightly in July, even though recent re-escalations in the war with Iran have sparked oil price volatility. yhoo.it/4fSgfwl",
+      "created_at": "2026-08-12T12:55:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087518809745736068",
+      "text": "🛒 Where food prices rose and fell in July compared to last year 🛒\n\nGround beef +9.4%\nApples +11.1%\nRice +6.2%\nMilk +5.1%\nBread +3.7%\nCookies +2%\nChicken -2.7%\nButter -8.1%\nEggs -25.7%",
+      "created_at": "2026-08-12T12:37:23Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087517184570396773",
       "text": "🚨 Breaking: July's inflation reading \n\nCPI YoY: +3.4% vs +3.4% expected\nCore CPI YoY: +2.5% vs +2.5% expected\nCPI MoM: +0.1% vs +0.1% expected\nCore CPI MoM: +0.2% vs +0.2% expected",
       "created_at": "2026-08-12T12:30:55Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087230362971730262",
-      "text": "Nvidia is \"the central bank of AI,\" Zacks Investment's Brian Mulberry says. 🏦\n\nVideo",
-      "created_at": "2026-08-11T17:31:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087225069328040270",
-      "text": "🗓️ YTD returns: \n\n$RUT +21%\n$GSPC +13%\n$MAGS +3.5%",
-      "created_at": "2026-08-11T17:10:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087219111667331140",
-      "text": "For investors, making every minute count starts with AlphaSpace. Exclusively for @TBPN fans, get 50% off our professional market tools: finance.yahoo.com/tbpn\n\nMore from @ryanspoon on the show⤵️\n\n\nTBPN (@tbpn)\n\nYahoo Media Group President @ryanspoon would rather figure out how to turn 10 minutes on Yahoo into 12 than figure out how to 5x total users.\n\nYahoo’s new college fantasy football product is one way he plans to get there.\n\nVideo\n  \n\n\n\n\n\n— https://nitter.net/tbpn/status/2086926370182209688#m",
-      "created_at": "2026-08-11T16:46:29Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087214382254260485",
-      "text": "Trump Media reported a $238 million Q2 loss due to its crypto investments, and scrapped Crypto.com's CRO token treasury deal.\n\n\"What has two thumbs and said from the very beginning that crypto treasury companies were a bad idea? This guy,\" @scottmelker said.\n\nVideo",
-      "created_at": "2026-08-11T16:27:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-12T12:35:57Z",
+  "_updated": "2026-08-12T14:09:36Z",
   "_username": "YahooFinance"
 }
