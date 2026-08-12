@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087629139268256053",
+      "text": "$ONON plunged after releasing earnings that missed Wall Street's expectations, dragging Roger Federer's net worth under $1 billion, according to Forbes.",
+      "created_at": "2026-08-12T19:55:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087626586979779010",
       "text": "$CAVA CEO says the company noticed concerns around produce consumption in Q2, which affected same-restaurant sales. 🥗\n\n\"We have since begin to rebound,\" CAVA CEO Brett Schulman tells @BrookeDiPalma.\n\nVideo",
       "created_at": "2026-08-12T19:45:39Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087517184570396773",
-      "text": "🚨 Breaking: July's inflation reading \n\nCPI YoY: +3.4% vs +3.4% expected\nCore CPI YoY: +2.5% vs +2.5% expected\nCPI MoM: +0.1% vs +0.1% expected\nCore CPI MoM: +0.2% vs +0.2% expected",
-      "created_at": "2026-08-12T12:30:55Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-12T19:54:07Z",
+  "_updated": "2026-08-12T20:28:07Z",
   "_username": "YahooFinance"
 }
