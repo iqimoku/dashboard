@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2087517184570396773",
+      "text": "🚨 Breaking: July's inflation reading \n\nCPI YoY: +3.4% vs +3.4% expected\nCore CPI YoY: +2.5% vs +2.5% expected\nCPI MoM: +0.1% vs +0.1% expected\nCore CPI MoM: +0.2% vs +0.2% expected",
+      "created_at": "2026-08-12T12:30:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087516298712322341",
+      "text": "$CRWV soars post-earnings. 🚀\n\nCEO Michael Intrator: \"CoreWeave reached an important inflection point this quarter as our scale began to translate into expanding operating leverage.\"",
+      "created_at": "2026-08-12T12:27:24Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087325152291803197",
       "text": "Trump Media reported a quarterly net loss of approximately $238 million on only $1.7 million of revenue.\n\n\"Their expenses are like $140 for every dollar that they made,\" @scottmelker says.\n\nVideo",
       "created_at": "2026-08-11T23:47:51Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087214234463502528",
-      "text": "Truth API is \"expected to provide the company with a new revenue stream,\" Trump Media said in its earnings statement on Monday. Read more from BBC: yhoo.it/4g4xQ2Z",
-      "created_at": "2026-08-11T16:27:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087156484152947172",
-      "text": "\"It's never been easier to start a company. And I do think a one person company could be a billion dollar company. I think we might've already seen that.\"\n\n-Airbnb CEO Brian Chesky\n\n(V/@YahooFinance 'Power Players' podcast)\n\nVideo",
-      "created_at": "2026-08-11T12:37:37Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-12T11:36:12Z",
+  "_updated": "2026-08-12T12:35:57Z",
   "_username": "YahooFinance"
 }
