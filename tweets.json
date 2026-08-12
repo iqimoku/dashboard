@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2087604021699739915",
+      "text": "The Los Angeles Lakers were just sold for a whopping $12,000,000,000.\n\nHere are 10 companies worth less than LA's purple and gold:\n🍩  Krispy Kreme: $574 million\n🍔  Wendy's: $1.6 billion\n🛫  JetBlue Airways: $2.2 billion\n🏍️  Harley-Davidson: $2.7 billion\n🥤  Shake Shack: $3.1 billion\n🏃  Planet Fitness: $3.6 billion\n🏎️  Mattel: $4.2 billion\n🐊  Crocs: $6.2 billion\n🚕  Lyft: $6.2 billion\n🍕  Domino's Pizza: $11.7 billion",
+      "created_at": "2026-08-12T18:15:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087598523214692630",
+      "text": "What if the love of your life was really just an AI chatbot?\n\n@tech__unicorn 👀",
+      "created_at": "2026-08-12T17:54:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087591284869419517",
       "text": "Elon Musk says, \"In 4 or 5 years, AI will be 99% of the value of SpaceX.\"\n\nVideo",
       "created_at": "2026-08-12T17:25:22Z",
@@ -186,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087286772824756618",
-      "text": "Google's Gemini reached 1 billion monthly users, its fastest-growing product yet. 💥\n\nVideo",
-      "created_at": "2026-08-11T21:15:21Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087278356060307787",
-      "text": "$SMCI shares jumped after the bell. ↗️ \n\nThe company's Q4 earnings report offered a strong Q1 outlook, which overshadowed a revenue miss.",
-      "created_at": "2026-08-11T20:41:54Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087279107570635236",
-      "text": "$CRWV narrowed its losses per share in Q2. 📊",
-      "created_at": "2026-08-11T20:44:53Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-12T17:46:43Z",
+  "_updated": "2026-08-12T18:42:09Z",
   "_username": "YahooFinance"
 }
