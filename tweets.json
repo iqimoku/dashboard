@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2087897735114408413",
+      "text": "Bill Ackman's Pershing Square has returned to $NFLX. \n\nAs of June 30, Pershing Square's Netflix stake totaled 3.15 million shares. \n\n\"Netflix has since effectively won the streaming wars.\"",
+      "created_at": "2026-08-13T13:43:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087880233319870641",
+      "text": "🍽️ Wall Street is rewriting the restaurant pecking order.\n\n📈 Cheesecake Factory, Texas Roadhouse and other established chains are crushing the growth stars — by the widest margin in a decade.\n\n💰 The divide is about more than growth: cheaper valuations, stronger traffic, and getting more customers through existing doors.\n\n📉 Meanwhile, $CMG $SHAK $WING have been left behind.",
+      "created_at": "2026-08-13T12:33:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087877948204368332",
       "text": "Korean stocks rebound as the chip rally regains steam. 🚂",
       "created_at": "2026-08-13T12:24:28Z",
@@ -186,28 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087552190189621480",
-      "text": "July inflation data is here, showing that overall growth eased slightly.\n\nBut if you just went grocery shopping, it probably doesn't feel that way. 😮‍💨  yhoo.it/4gbImpe",
-      "created_at": "2026-08-12T14:50:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087547409538642398",
-      "text": "Mark Walter bought a majority share of the Lakers from the Buss family 14 months ago at a $10 billion valuation 💰\n\nHe just sold the team to Josh Kushner and Bob Iger for a record breaking price over $12 billion 😳\n\n(h/t @AndrewSiciliano)",
-      "created_at": "2026-08-12T14:31:01Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T12:37:18Z",
+  "_updated": "2026-08-13T14:11:37Z",
   "_username": "YahooFinance"
 }
