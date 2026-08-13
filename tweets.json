@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087948070004654520",
+      "text": "Instagram just refreshed its look for the first time in more than a decade. 👀 \n\nWhat do you think of the update? 👇",
+      "created_at": "2026-08-13T17:03:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087940833316098189",
       "text": "$SNDK is climbing today after the company announced a new long-term financial model and growth strategy during its Investor Day. 📈\n\nThe company laid out big plans for fiscal years 2028 through 2030, including mid-to-high teens revenue growth.",
       "created_at": "2026-08-13T16:34:21Z",
@@ -26,17 +37,6 @@
       "id": "2087936334434292060",
       "text": "Greenland Energy is delaying its plans to drill in Greenland after a \"strong warning\" from its government, according to Greenlandic public broadcaster KNR.",
       "created_at": "2026-08-13T16:16:28Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087927192919416903",
-      "text": "Sit-down dining is crushing the fast-food trade. 🍰 \n\nTraditional chains like $CAKE and $TXRH are outperforming growth stars like Chipotle by a record margin over the past quarter.",
-      "created_at": "2026-08-13T15:40:09Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T16:40:57Z",
+  "_updated": "2026-08-13T17:46:09Z",
   "_username": "YahooFinance"
 }
