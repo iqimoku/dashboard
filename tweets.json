@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087977966948982858",
+      "text": "Your Twitch stream could now be used to train Amazon’s AI models. 👀",
+      "created_at": "2026-08-13T19:01:54Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087971998550851686",
       "text": "Michael Burry says $NVDA's $500 billion \"Wall Street stunt\" is a \"sign of desperation\" in a recent Substack post.",
       "created_at": "2026-08-13T18:38:11Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087604021699739915",
-      "text": "The Los Angeles Lakers were just sold for a whopping $12,000,000,000.\n\nHere are 10 companies worth less than LA's purple and gold:\n🍩  Krispy Kreme: $574 million\n🍔  Wendy's: $1.6 billion\n🛫  JetBlue Airways: $2.2 billion\n🏍️  Harley-Davidson: $2.7 billion\n🥤  Shake Shack: $3.1 billion\n🏃  Planet Fitness: $3.6 billion\n🏎️  Mattel: $4.2 billion\n🐊  Crocs: $6.2 billion\n🚕  Lyft: $6.2 billion\n🍕  Domino's Pizza: $11.7 billion",
-      "created_at": "2026-08-12T18:15:59Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T18:43:13Z",
+  "_updated": "2026-08-13T19:48:07Z",
   "_username": "YahooFinance"
 }
