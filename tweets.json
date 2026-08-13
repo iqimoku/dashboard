@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087877948204368332",
+      "text": "Korean stocks rebound as the chip rally regains steam. 🚂",
+      "created_at": "2026-08-13T12:24:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087655392520110544",
       "text": "The US government paid out more in tariff refunds than it actually collected in July. yhoo.it/4cEUZbd",
       "created_at": "2026-08-12T21:40:06Z",
@@ -197,17 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087542341523431487",
-      "text": "The Los Angeles Lakers are being sold to American businessmen Josh Kushner and Bob Iger for a record breaking price over $12 billion, per @ramonashelburne.\n\nKushner and Iger were involved in the expansion process in Las Vegas, but they pivoted to make an aggressive offer to buy the Lakers from Mark Walter, who had purchased a controlling interest in the team from the Buss family last year.",
-      "created_at": "2026-08-12T14:10:53Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T11:41:30Z",
+  "_updated": "2026-08-13T12:37:18Z",
   "_username": "YahooFinance"
 }
