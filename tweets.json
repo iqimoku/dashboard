@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2087971998550851686",
+      "text": "Michael Burry says $NVDA's $500 billion \"Wall Street stunt\" is a \"sign of desperation\" in a recent Substack post.",
+      "created_at": "2026-08-13T18:38:11Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087948070004654520",
       "text": "Instagram just refreshed its look for the first time in more than a decade. 👀 \n\nWhat do you think of the update? 👇",
       "created_at": "2026-08-13T17:03:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087598523214692630",
-      "text": "What if the love of your life was really just an AI chatbot?\n\n@tech__unicorn 👀",
-      "created_at": "2026-08-12T17:54:08Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T17:46:09Z",
+  "_updated": "2026-08-13T18:43:13Z",
   "_username": "YahooFinance"
 }
