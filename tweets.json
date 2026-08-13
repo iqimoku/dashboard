@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2087926512955588880",
+      "text": "26% of Gen Z is using sports betting as part of their long-term financial plan, according to Betterment.\n\nVideo",
+      "created_at": "2026-08-13T15:37:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087913088930529617",
+      "text": "Elon Musk told SpaceX employees the company is about to become far more than just a rocket business. 🚀  yhoo.it/4x1Bths",
+      "created_at": "2026-08-13T14:44:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2087908626568487339",
+      "text": "Bill Ackman is taking another chance on $NFLX. 🎥\n\nAfter selling its stake in the streamer in 2022, Ackman's Pershing Square disclosed a new stake in the company. \n\nAs of June 30, Pershing Square's Netflix stake equals 4.9% of the firm's portfolio.",
+      "created_at": "2026-08-13T14:26:22Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2087897735114408413",
       "text": "Bill Ackman's Pershing Square has returned to $NFLX. \n\nAs of June 30, Pershing Square's Netflix stake totaled 3.15 million shares. \n\n\"Netflix has since effectively won the streaming wars.\"",
       "created_at": "2026-08-13T13:43:05Z",
@@ -175,39 +208,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087559998108750301",
-      "text": "4 stocks posting double-digit gains after earnings ⬆️\n\n$NBIS +23%\n$CRWV +19%\n$SMCI +12.5%\n$CAVA +11%",
-      "created_at": "2026-08-12T15:21:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087557741061538176",
-      "text": "The Lakers are reportedly being sold for $12.5 billion. 🏀💰",
-      "created_at": "2026-08-12T15:12:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087553582744608983",
-      "text": "🚨 Breaking news. 🚨\n\nBob Iger and Josh Kusher are buying the LA Lakers for $12 billion. \n\nYahoo Sports' @KevinOConnor  breaks down what to expect from the surprising deal.\n\nVideo",
-      "created_at": "2026-08-12T14:55:33Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -220,6 +220,6 @@
       }
     ]
   },
-  "_updated": "2026-08-13T14:11:37Z",
+  "_updated": "2026-08-13T15:44:55Z",
   "_username": "YahooFinance"
 }
