@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2088383443046420578",
+      "text": "When asked how he wants to be remembered, Apple CEO Tim Cook didn't mention tech, products, or profits — just character. 🥹 \n\nHow will you remember Cook?",
+      "created_at": "2026-08-14T21:53:07Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088371367452291425",
+      "text": "Cathie Wood scoops up $44.7 million in shares of TSMC and SpaceX.",
+      "created_at": "2026-08-14T21:05:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088368562482053527",
       "text": "It's been a solid month for some of the biggest stocks out there, and we're only halfway through. \n\nMarket cap increases in August:\n🟢 $NVDA: $591 billion\n🟢 $SPCX: $417 billion\n🟢 $MSFT: $228 billion\n🟢 $MU: $168 bilion\n🟢 $TSLA: $123 billion\n🟢 $META: $85 billion\n🟢 $WMT: $32 billion\n🟢 $LLY: $29 billion\n🟢 $JPM: $29 billion\n🟢 $AVGO: $18 billion",
       "created_at": "2026-08-14T20:53:59Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088028747836588345",
-      "text": "I am very excited about proud about the @Yahoo x Nonfiction Hotlist collaboration we announced earlier in the year. Nearly 1,000 submissions later, we have unveiled the 20 Selections across five categories (art, biography, business, nature, sports) and you can view them all at yahoo.com/nonfictionhotlist",
-      "created_at": "2026-08-13T22:23:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088007996123050080",
-      "text": "Inside Kowloon, America's largest Chinese restaurant.  🍱🥢\n\nVideo",
-      "created_at": "2026-08-13T21:01:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T21:12:36Z",
+  "_updated": "2026-08-14T22:08:57Z",
   "_username": "YahooFinance"
 }
