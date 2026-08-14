@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2088275838152085799",
+      "text": "$RDDT stock surges nearly 16% on Friday after announcing it will be part of the S&amp;P 500 starting August 18. 👀📈\n\n\"Now that they're a big part of the S&amp;P 500, well, they're going to be in a lot of index funds all of a sudden. So like it or not, you're going to own it,\" Investopedia's @calebsilver says.\n\nVideo",
+      "created_at": "2026-08-14T14:45:32Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088277239947255846",
+      "text": "Fresh off an NBA title, the New York Knicks still fall $250 million short of the Los Angeles Lakers' blockbuster valuation. 🏀🗽 yhoo.it/4bP45lq",
+      "created_at": "2026-08-14T14:51:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088271150891601993",
+      "text": "Dario Amodei’s wife, Cami Clark, serves as his strategic adviser, but according to the Wall Street Journal, most information about her has seemingly been scrubbed from the internet.",
+      "created_at": "2026-08-14T14:26:55Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088256079410917605",
       "text": "$RDDT is joining the S&amp;P 500 on Aug. 18.",
       "created_at": "2026-08-14T13:27:01Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087926512955588880",
-      "text": "26% of Gen Z is using sports betting as part of their long-term financial plan, according to Betterment.\n\nVideo",
-      "created_at": "2026-08-13T15:37:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087913088930529617",
-      "text": "Elon Musk told SpaceX employees the company is about to become far more than just a rocket business. 🚀  yhoo.it/4x1Bths",
-      "created_at": "2026-08-13T14:44:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087908626568487339",
-      "text": "Bill Ackman is taking another chance on $NFLX. 🎥\n\nAfter selling its stake in the streamer in 2022, Ackman's Pershing Square disclosed a new stake in the company. \n\nAs of June 30, Pershing Square's Netflix stake equals 4.9% of the firm's portfolio.",
-      "created_at": "2026-08-13T14:26:22Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T14:04:57Z",
+  "_updated": "2026-08-14T15:38:35Z",
   "_username": "YahooFinance"
 }
