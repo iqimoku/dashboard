@@ -12,6 +12,17 @@
       }
     },
     {
+      "id": "2088357935843827903",
+      "text": "Read more on the new Trump Account changes here: finance.yahoo.com/personal-f…\n\nLink\n\n\n\nTrump Accounts just added another perk for working parents\n\nTrump Accounts could get pretax paycheck contributions under Treasury and IRS proposals. Here’s a rundown of the latest guidelines for workers and employers.\nfinance.yahoo.com",
+      "created_at": "2026-08-14T20:11:46Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088328070746812477",
       "text": "$MCD's new Red Bull drink has brought some unexpected challenges.\n\nEmployees have taken to Reddit to share how different franchises have tried to prevent or ban workers from drinking them on shift.",
       "created_at": "2026-08-14T18:13:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088001507094372423",
-      "text": "$NFLX finished the day up over 5% after Bill Ackman's Pershing Square Capital Management announced a new position in the company.",
-      "created_at": "2026-08-13T20:35:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T19:39:50Z",
+  "_updated": "2026-08-14T20:18:16Z",
   "_username": "YahooFinance"
 }
