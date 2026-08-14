@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2088316999491363233",
+      "text": "Jeff Bezos just bought into Liverpool FC. ⚽ \n\nA consortium including Bezos and Facebook co-founder Eduardo Saverin picked up a 30% stake at a $6 billion valuation — and Bloomberg reports they eventually want full control of the club. yhoo.it/4xBIuVT",
+      "created_at": "2026-08-14T17:29:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088305837596872732",
+      "text": "Taco Bell's former CEO is dishing out a spicy take on his longtime competitor, McDonald's.",
+      "created_at": "2026-08-14T16:44:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088298845427880395",
       "text": "Strategy could face MSCI index removal under a new proposal — a new methodology that would exclude \"non-operating companies from its global, investable market indexes.\"\n\nIf these rules are adopted, @scottmelker says, other indexes could follow.\n\nVideo",
       "created_at": "2026-08-14T16:16:58Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087971998550851686",
-      "text": "Michael Burry says $NVDA's $500 billion \"Wall Street stunt\" is a \"sign of desperation\" in a recent Substack post.",
-      "created_at": "2026-08-13T18:38:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2087948070004654520",
-      "text": "Instagram just refreshed its look for the first time in more than a decade. 👀 \n\nWhat do you think of the update? 👇",
-      "created_at": "2026-08-13T17:03:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T16:36:59Z",
+  "_updated": "2026-08-14T17:41:38Z",
   "_username": "YahooFinance"
 }
