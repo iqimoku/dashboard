@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2088368562482053527",
+      "text": "It's been a solid month for some of the biggest stocks out there, and we're only halfway through. \n\nMarket cap increases in August:\n🟢 $NVDA: $591 billion\n🟢 $SPCX: $417 billion\n🟢 $MSFT: $228 billion\n🟢 $MU: $168 bilion\n🟢 $TSLA: $123 billion\n🟢 $META: $85 billion\n🟢 $WMT: $32 billion\n🟢 $LLY: $29 billion\n🟢 $JPM: $29 billion\n🟢 $AVGO: $18 billion",
+      "created_at": "2026-08-14T20:53:59Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088361655432282583",
+      "text": "$WING sold fewer wings and made more money.\n\nSame-store sales: -7.5%. Profit: +16.9%",
+      "created_at": "2026-08-14T20:26:33Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088357744449323265",
+      "text": "$RDDT ended the day up over 12% on news that it will be included in the S&amp;P 500.",
+      "created_at": "2026-08-14T20:11:00Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088355740012498992",
+      "text": "Josh Kushner’s Thrive Capital released its Q2 stock portfolio:\n\n$SPCX $3.2B, 84.8%\n$AMZN $215.5M\n$OSCR $180.9M\n$SHOP $102.3M\n$FIG $79.5M",
+      "created_at": "2026-08-14T20:03:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088339985288073269",
       "text": "Trump Accounts just added another perk for working parents.  \n\nUnder the proposal, parents can attribute up to $2,500 per year, tax-free, directly to their child's account through their paychecks. Employers would also be able to match up to $2,500 per year, tax-free.  \n\nThe proposal will be subject to a public hearing on Oct. 15, 2026, before they are finalized.",
       "created_at": "2026-08-14T19:00:26Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088241769322316268",
-      "text": "Yahoo Media Group and The Nonfiction Hotlist partnered to recognize 20 standout short films, including five in the Business &amp; Economics category:\n\nWatch all the films here: yahoo.com/nonfictionhotlist/\n\nLink\n\n\n\nNonfiction Hotlist — twenty short documentaries, presented with care.\n\nStories that reflect the voices and ideas shaping our world today.\nyahoo.com",
-      "created_at": "2026-08-14T12:30:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088029060110881037",
-      "text": "And... we are hosting a film festival in celebration on Sunday, August 23rd at @americandream and you're invited! Learn more and RSVP at: yahoonfhfilmfestival.splasht…\n\n\n\n\nRyan Spoon (@ryanspoon)\n\nI am very excited about proud about the @Yahoo x Nonfiction Hotlist collaboration we announced earlier in the year. Nearly 1,000 submissions later, we have unveiled the 20 Selections across five categories (art, biography, business, nature, sports) and you can view them all at yahoo.com/nonfictionhotlist\n\n\n\n\n\n— https://nitter.net/ryanspoon/status/2088028747836588345#m",
-      "created_at": "2026-08-13T22:24:56Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088019157040107596",
-      "text": "Selena Gomez is being accused of fraud by investors from her mental health startup, Wondermind.\n\nVideo",
-      "created_at": "2026-08-13T21:45:35Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088004705649565777",
-      "text": "More than 50% of American consumers are carrying credit card balances to cover the rising cost of essential expenses. \n\nRoughly 25% are carrying these debts for six months or longer. yhoo.it/4guHxsK",
-      "created_at": "2026-08-13T20:48:09Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T20:18:16Z",
+  "_updated": "2026-08-14T21:12:36Z",
   "_username": "YahooFinance"
 }
