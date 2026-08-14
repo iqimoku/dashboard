@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088339985288073269",
+      "text": "Trump Accounts just added another perk for working parents.  \n\nUnder the proposal, parents can attribute up to $2,500 per year, tax-free, directly to their child's account through their paychecks. Employers would also be able to match up to $2,500 per year, tax-free.  \n\nThe proposal will be subject to a public hearing on Oct. 15, 2026, before they are finalized.",
+      "created_at": "2026-08-14T19:00:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088328070746812477",
       "text": "$MCD's new Red Bull drink has brought some unexpected challenges.\n\nEmployees have taken to Reddit to share how different franchises have tried to prevent or ban workers from drinking them on shift.",
       "created_at": "2026-08-14T18:13:05Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2087997135471993277",
-      "text": "$GSPC has hit an all-time high as concerns that the Federal Reserve could tighten monetary policy eased.",
-      "created_at": "2026-08-13T20:18:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-14T18:36:26Z",
+  "_updated": "2026-08-14T19:39:50Z",
   "_username": "YahooFinance"
 }
