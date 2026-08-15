@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088658514931527708",
+      "text": "Why Medicare Advantage providers are cutting plans — and what to do if your coverage is affected finance.yahoo.com/healthcare…\n\nLink\n\n\n\nWhy Medicare Advantage providers are cutting plans — and what to do if your coverage is affected\n\nMedicare Advantage plans are shrinking. Here&apos;s what to expect and what to do if your plan is affected.\nfinance.yahoo.com",
+      "created_at": "2026-08-15T16:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088624779125223569",
       "text": "Forget luxury high-rises — the hottest housing markets right now are quiet commuter towns. 🚲 🚗 🚌 \n\nLow inventory and high demand are driving frantic bidding wars in these top-ranked suburban neighborhoods. yhoo.it/4i8WAtl",
       "created_at": "2026-08-15T13:52:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088275838152085799",
-      "text": "$RDDT stock surges nearly 16% on Friday after announcing it will be part of the S&amp;P 500 starting August 18. 👀📈\n\n\"Now that they're a big part of the S&amp;P 500, well, they're going to be in a lot of index funds all of a sudden. So like it or not, you're going to own it,\" Investopedia's @calebsilver says.\n\nVideo",
-      "created_at": "2026-08-14T14:45:32Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-15T16:08:10Z",
+  "_updated": "2026-08-15T17:09:38Z",
   "_username": "YahooFinance"
 }
