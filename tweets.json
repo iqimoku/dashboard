@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088703814857621890",
+      "text": "The market for older condos is cratering as buyers shun rising HOA fees finance.yahoo.com/real-estat…\n\nLink\n\n\n\nThe market for older condos is cratering as buyers shun rising HOA fees\n\nThe median condo built before 2000 comes with double the monthly fees of one built in the last decade.\nfinance.yahoo.com",
+      "created_at": "2026-08-15T19:06:10Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088688714008461328",
       "text": "Lamborghini's pricey Revuelto SV supercar debuts at Monterey with scarcity as its strategy, CEO says finance.yahoo.com/markets/st…\n\nLink\n\n\n\nLamborghini&apos;s pricey Revuelto SV supercar debuts at Monterey with scarcity as its strategy, CEO says\n\nLamborghini brought its most extreme car to the lawn at the Quail, A Motorsports Gathering -  the Revuelto SV, a 1,050-horsepower naturally aspirated hybrid V12 that the company calls the most...\nfinance.yahoo.com",
       "created_at": "2026-08-15T18:06:10Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088294383544119675",
-      "text": "$SNDK is climbing again on Friday, extending gains from a 12% rise in the prior session. \n\nWall Street was overwhelmingly bullish on the company's long-term growth targets for 2028 through 2030, announced at the company's investor day.",
-      "created_at": "2026-08-14T15:59:14Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-15T19:11:46Z",
+  "_updated": "2026-08-15T20:07:31Z",
   "_username": "YahooFinance"
 }
