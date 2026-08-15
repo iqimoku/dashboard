@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088624779125223569",
+      "text": "Forget luxury high-rises — the hottest housing markets right now are quiet commuter towns. 🚲 🚗 🚌 \n\nLow inventory and high demand are driving frantic bidding wars in these top-ranked suburban neighborhoods. yhoo.it/4i8WAtl",
+      "created_at": "2026-08-15T13:52:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088613216003797492",
       "text": "It’s economic issues (and Iran) that are dragging Donald Trump’s approval down to second term lows finance.yahoo.com/economy/ar…\n\nLink\n\n\n\nIt’s economic issues (and Iran) that are dragging Donald Trump’s approval down to second term lows\n\nPresident Trump&apos;s approval rating remains underwater, with a variety of economic issues weighing most heavily on the president and his party as the midterm elections are less than three months away.\nfinance.yahoo.com",
       "created_at": "2026-08-15T13:06:09Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088277239947255846",
-      "text": "Fresh off an NBA title, the New York Knicks still fall $250 million short of the Los Angeles Lakers' blockbuster valuation. 🏀🗽 yhoo.it/4bP45lq",
-      "created_at": "2026-08-14T14:51:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-15T13:20:37Z",
+  "_updated": "2026-08-15T14:09:14Z",
   "_username": "YahooFinance"
 }
