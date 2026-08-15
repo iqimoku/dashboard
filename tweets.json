@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088730811470119420",
+      "text": "If you could go back to the '90s, what would you buy? 🤔\n\nVideo",
+      "created_at": "2026-08-15T20:53:26Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088703814857621890",
       "text": "The market for older condos is cratering as buyers shun rising HOA fees finance.yahoo.com/real-estat…\n\nLink\n\n\n\nThe market for older condos is cratering as buyers shun rising HOA fees\n\nThe median condo built before 2000 comes with double the monthly fees of one built in the last decade.\nfinance.yahoo.com",
       "created_at": "2026-08-15T19:06:10Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088298845427880395",
-      "text": "Strategy could face MSCI index removal under a new proposal — a new methodology that would exclude \"non-operating companies from its global, investable market indexes.\"\n\nIf these rules are adopted, @scottmelker says, other indexes could follow.\n\nVideo",
-      "created_at": "2026-08-14T16:16:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-15T20:07:31Z",
+  "_updated": "2026-08-15T21:08:57Z",
   "_username": "YahooFinance"
 }
