@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088733746333708378",
+      "text": "Joe Rogan’s live reaction to news that Donald Trump’s media company is selling early access to market-moving Truth Social posts: \"Wait a minute, is that real? 🤯 yhoo.it/4wwJ3Q3",
+      "created_at": "2026-08-15T21:05:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088730811470119420",
       "text": "If you could go back to the '90s, what would you buy? 🤔\n\nVideo",
       "created_at": "2026-08-15T20:53:26Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088305837596872732",
-      "text": "Taco Bell's former CEO is dishing out a spicy take on his longtime competitor, McDonald's.",
-      "created_at": "2026-08-14T16:44:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-15T21:08:57Z",
+  "_updated": "2026-08-15T22:05:22Z",
   "_username": "YahooFinance"
 }
