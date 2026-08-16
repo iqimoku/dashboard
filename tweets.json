@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088945385435758878",
+      "text": "Key checks from Walmart and the big box stores: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nKey checks from Walmart and the big box stores: What to watch this week\n\nBig box store earnings headline what should be a relatively quiet week.\nfinance.yahoo.com",
+      "created_at": "2026-08-16T11:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088733746333708378",
       "text": "Joe Rogan’s live reaction to news that Donald Trump’s media company is selling early access to market-moving Truth Social posts: \"Wait a minute, is that real? 🤯 yhoo.it/4wwJ3Q3",
       "created_at": "2026-08-15T21:05:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088316999491363233",
-      "text": "Jeff Bezos just bought into Liverpool FC. ⚽ \n\nA consortium including Bezos and Facebook co-founder Eduardo Saverin picked up a 30% stake at a $6 billion valuation — and Bloomberg reports they eventually want full control of the club. yhoo.it/4xBIuVT",
-      "created_at": "2026-08-14T17:29:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-16T11:08:30Z",
+  "_updated": "2026-08-16T12:11:34Z",
   "_username": "YahooFinance"
 }
