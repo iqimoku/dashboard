@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2088990683453407431",
+      "text": "Meta to face massive social media addiction trial Tuesday finance.yahoo.com/technology…\n\nLink\n\n\n\nMeta to face massive social media addiction trial Tuesday\n\nA lawsuit filed by 29 attorneys general related to Meta&apos;s impact on teens will go to trial Tuesday.\nfinance.yahoo.com",
+      "created_at": "2026-08-16T14:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088975583560531988",
       "text": "20 reasons why Wendy's may be doomed finance.yahoo.com/markets/ar…\n\nLink\n\n20 reasons why Wendy&apos;s may be doomed\n\nCan Wendy&apos;s even survive?\nfinance.yahoo.com",
       "created_at": "2026-08-16T13:06:05Z",
@@ -24,7 +35,7 @@
     },
     {
       "id": "2088945385435758878",
-      "text": "Key checks from Walmart and the big box stores: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nKey checks from Walmart and the big box stores: What to watch this week\n\nBig box store earnings headline what should be a relatively quiet week.\nfinance.yahoo.com",
+      "text": "Key checks from Walmart and the big box stores: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\nKey checks from Walmart and the big box stores: What to watch this week\n\nBig box store earnings headline what should be a relatively quiet week.\nfinance.yahoo.com",
       "created_at": "2026-08-16T11:06:05Z",
       "public_metrics": {
         "like_count": 0,
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088339985288073269",
-      "text": "Trump Accounts just added another perk for working parents.  \n\nUnder the proposal, parents can attribute up to $2,500 per year, tax-free, directly to their child's account through their paychecks. Employers would also be able to match up to $2,500 per year, tax-free.  \n\nThe proposal will be subject to a public hearing on Oct. 15, 2026, before they are finalized.",
-      "created_at": "2026-08-14T19:00:26Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-16T14:09:53Z",
+  "_updated": "2026-08-16T15:08:33Z",
   "_username": "YahooFinance"
 }
