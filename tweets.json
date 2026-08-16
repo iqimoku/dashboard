@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "id": "2088975583560531988",
+      "text": "20 reasons why Wendy's may be doomed finance.yahoo.com/markets/ar…\n\nLink\n\n20 reasons why Wendy&apos;s may be doomed\n\nCan Wendy&apos;s even survive?\nfinance.yahoo.com",
+      "created_at": "2026-08-16T13:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2088960485144117583",
+      "text": "The AI trade got crushed. The bull market barely noticed: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe AI trade got crushed. The bull market barely noticed: Chart of the Day\n\nTech just got cheaper without a bear market taking a wrecking ball to stock prices.\nfinance.yahoo.com",
+      "created_at": "2026-08-16T12:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2088945385435758878",
       "text": "Key checks from Walmart and the big box stores: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nKey checks from Walmart and the big box stores: What to watch this week\n\nBig box store earnings headline what should be a relatively quiet week.\nfinance.yahoo.com",
       "created_at": "2026-08-16T11:06:05Z",
@@ -197,28 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088357935843827903",
-      "text": "Read more on the new Trump Account changes here: finance.yahoo.com/personal-f…\n\nLink\n\n\n\nTrump Accounts just added another perk for working parents\n\nTrump Accounts could get pretax paycheck contributions under Treasury and IRS proposals. Here’s a rundown of the latest guidelines for workers and employers.\nfinance.yahoo.com",
-      "created_at": "2026-08-14T20:11:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088328070746812477",
-      "text": "$MCD's new Red Bull drink has brought some unexpected challenges.\n\nEmployees have taken to Reddit to share how different franchises have tried to prevent or ban workers from drinking them on shift.",
-      "created_at": "2026-08-14T18:13:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-16T12:11:34Z",
+  "_updated": "2026-08-16T13:21:42Z",
   "_username": "YahooFinance"
 }
