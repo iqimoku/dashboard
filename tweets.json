@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2089232274847912242",
+      "text": "Why Medicare Advantage providers are cutting plans — and what to do if your coverage is affected finance.yahoo.com/news/why-m…\n\nLink\n\n\n\nWhy Medicare Advantage providers are cutting plans — and what to do if your coverage is affected\n\nMedicare Advantage plans are shrinking. Here&apos;s what to expect and what to do if your plan is affected.\nfinance.yahoo.com",
+      "created_at": "2026-08-17T06:06:05Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089086317573357981",
       "text": "Joe Rogan had a lot of questions on recent episode of The Joe Rogan Experience when he learned Trump Media is selling early access to \"market-moving\" Truth Social posts. 👀 yhoo.it/4wwJ3Q3",
       "created_at": "2026-08-16T20:26:06Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088368562482053527",
-      "text": "It's been a solid month for some of the biggest stocks out there, and we're only halfway through. \n\nMarket cap increases in August:\n🟢 $NVDA: $591 billion\n🟢 $SPCX: $417 billion\n🟢 $MSFT: $228 billion\n🟢 $MU: $168 bilion\n🟢 $TSLA: $123 billion\n🟢 $META: $85 billion\n🟢 $WMT: $32 billion\n🟢 $LLY: $29 billion\n🟢 $JPM: $29 billion\n🟢 $AVGO: $18 billion",
-      "created_at": "2026-08-14T20:53:59Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-17T05:23:58Z",
+  "_updated": "2026-08-17T06:25:15Z",
   "_username": "YahooFinance"
 }
