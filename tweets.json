@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2089407778288738445",
+      "text": "Billionaire Dylan Taylor told Fortune that he agrees with the likes of Elon Musk, Jeff Bezos, and Sam Altman, who have all predicted a future where humans live and work in space.",
+      "created_at": "2026-08-17T17:43:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089406598942773431",
+      "text": "$TGT's 2026 rally will be put to the test with its earnings report on Wednesday. 👀\n\nRead more from @BrianSozzi: finance.yahoo.com/markets/st…",
+      "created_at": "2026-08-17T17:38:47Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089402687615914418",
+      "text": "🚀 SpaceX’s biggest investors are finally visible.\n\n🐋 More than 1,500 investors disclosed stakes — but just 23 account for over 80% of reported shares.\n\n🏦 Alphabet, Fidelity, Saudi Arabia’s PIF, Nvidia and even Harvard are among the heavyweights.\n\n📈 Now those whales are coming into view just as millions more $SPCX shares become eligible to trade.",
+      "created_at": "2026-08-17T17:23:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089395016661717497",
       "text": "World Liberty Financial, a Trump-backed crypto company, has received a conditional US bank charter.\n\n@scottmelker breaks it down:\n\nVideo",
       "created_at": "2026-08-17T16:52:45Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088703814857621890",
-      "text": "The market for older condos is cratering as buyers shun rising HOA fees finance.yahoo.com/real-estat…\n\nLink\n\n\n\nThe market for older condos is cratering as buyers shun rising HOA fees\n\nThe median condo built before 2000 comes with double the monthly fees of one built in the last decade.\nfinance.yahoo.com",
-      "created_at": "2026-08-15T19:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088688714008461328",
-      "text": "Lamborghini's pricey Revuelto SV supercar debuts at Monterey with scarcity as its strategy, CEO says finance.yahoo.com/markets/st…\n\nLink\n\n\n\nLamborghini&apos;s pricey Revuelto SV supercar debuts at Monterey with scarcity as its strategy, CEO says\n\nLamborghini brought its most extreme car to the lawn at the Quail, A Motorsports Gathering -  the Revuelto SV, a 1,050-horsepower naturally aspirated hybrid V12 that the company calls the most...\nfinance.yahoo.com",
-      "created_at": "2026-08-15T18:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088658514931527708",
-      "text": "Why Medicare Advantage providers are cutting plans — and what to do if your coverage is affected finance.yahoo.com/healthcare…\n\nLink\n\n\n\nWhy Medicare Advantage providers are cutting plans — and what to do if your coverage is affected\n\nMedicare Advantage plans are shrinking. Here&apos;s what to expect and what to do if your plan is affected.\nfinance.yahoo.com",
-      "created_at": "2026-08-15T16:06:10Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-17T17:14:24Z",
+  "_updated": "2026-08-17T18:18:14Z",
   "_username": "YahooFinance"
 }
