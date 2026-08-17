@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2089468838861488394",
+      "text": "$SBUX brought back the Unicorn Frappuccino for a few days, which led to its highest North American sales weekend ever.",
+      "created_at": "2026-08-17T21:46:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089451937259237676",
+      "text": "The 30-year yield just hit its highest level since June 2007.",
+      "created_at": "2026-08-17T20:38:56Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089453827694932087",
+      "text": "US stocks fell for the day as oil prices and Treasury yields jumped amid renewed concerns that the US-Iran war could reignite.\n\n$GSPC -0.51%\n$DJI -0.50%\n$IXIC -0.31%",
+      "created_at": "2026-08-17T20:46:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089459129089716546",
+      "text": "Ohtani's New Balance cleats from the 2025 MLB Tokyo Series sold for over $440,000 on The Realest.  ⚾️\n\n\"The space is on fire ... Setting an all-time record by nearly 5x, there's so much room to grow the category,\" Realest Founder and CEO @djskee says. 🔥\n\nVideo",
+      "created_at": "2026-08-17T21:07:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089446985166123400",
       "text": "$STUB finished the day down over 11% due to the lingering shock of a near-zero profit result from its Q2 earnings report.",
       "created_at": "2026-08-17T20:19:15Z",
@@ -175,50 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089018268430315624",
-      "text": "A data breach has exposed sensitive personal data, including home addresses, for over 13,000 crypto wallet customers. @scottmelker breaks down the risks to users.\n\nVideo",
-      "created_at": "2026-08-16T15:55:41Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088990683453407431",
-      "text": "Meta to face massive social media addiction trial Tuesday finance.yahoo.com/technology…\n\nLink\n\n\n\nMeta to face massive social media addiction trial Tuesday\n\nA lawsuit filed by 29 attorneys general related to Meta&apos;s impact on teens will go to trial Tuesday.\nfinance.yahoo.com",
-      "created_at": "2026-08-16T14:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088975583560531988",
-      "text": "20 reasons why Wendy's may be doomed finance.yahoo.com/markets/ar…\n\nLink\n\n\n\n20 reasons why Wendy&apos;s may be doomed\n\nCan Wendy&apos;s even survive?\nfinance.yahoo.com",
-      "created_at": "2026-08-16T13:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2088960485144117583",
-      "text": "The AI trade got crushed. The bull market barely noticed: Chart of the Day finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nThe AI trade got crushed. The bull market barely noticed: Chart of the Day\n\nTech just got cheaper without a bear market taking a wrecking ball to stock prices.\nfinance.yahoo.com",
-      "created_at": "2026-08-16T12:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-17T21:13:19Z",
+  "_updated": "2026-08-17T22:10:00Z",
   "_username": "YahooFinance"
 }
