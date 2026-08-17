@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2089446985166123400",
+      "text": "$STUB finished the day down over 11% due to the lingering shock of a near-zero profit result from its Q2 earnings report.",
+      "created_at": "2026-08-17T20:19:15Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089427257047535772",
       "text": "Some of the coolest cars we saw at Monterey Car Week were Aston Martin's Valen, Audi's new Nuvolari, McLaren Mcl 6GT, and Bugatti's Destrier.\n\nWhich one would you drive? 🏎️\n\nVideo",
       "created_at": "2026-08-17T19:00:52Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2088945385435758878",
-      "text": "Key checks from Walmart and the big box stores: What to watch this week finance.yahoo.com/markets/ar…\n\nLink\n\n\n\nKey checks from Walmart and the big box stores: What to watch this week\n\nBig box store earnings headline what should be a relatively quiet week.\nfinance.yahoo.com",
-      "created_at": "2026-08-16T11:06:05Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-17T20:11:16Z",
+  "_updated": "2026-08-17T21:13:19Z",
   "_username": "YahooFinance"
 }
