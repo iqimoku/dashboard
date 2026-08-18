@@ -1,9 +1,9 @@
 {
   "data": [
     {
-      "id": "2089744043907420438",
-      "text": "Catch up on the latest in crypto news with @scottmelker: nitter.net/i/broadcasts/1aKbdEdkA…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1aKbdEdkAjqJX",
-      "created_at": "2026-08-18T15:59:40Z",
+      "id": "2089752400458342612",
+      "text": "Crypto exchange BitMart has shut down, and users are reporting that they’ve been blocked from making withdrawals.\n\n@scottmelker breaks it down:\n\nVideo",
+      "created_at": "2026-08-18T16:32:52Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -208,6 +208,17 @@
         "reply_count": 0,
         "impression_count": 0
       }
+    },
+    {
+      "id": "2089402687615914418",
+      "text": "🚀 SpaceX’s biggest investors are finally visible.\n\n🐋 More than 1,500 investors disclosed stakes — but just 23 account for over 80% of reported shares.\n\n🏦 Alphabet, Fidelity, Saudi Arabia’s PIF, Nvidia and even Harvard are among the heavyweights.\n\n📈 Now those whales are coming into view just as millions more $SPCX shares become eligible to trade.",
+      "created_at": "2026-08-17T17:23:14Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
     }
   ],
   "includes": {
@@ -220,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-18T16:15:16Z",
+  "_updated": "2026-08-18T17:14:32Z",
   "_username": "YahooFinance"
 }
