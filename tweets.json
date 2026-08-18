@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2089798268804833568",
+      "text": "$NVDA could be trading at a discount of up to 50%, according to Bank of America.",
+      "created_at": "2026-08-18T19:35:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089795906333773843",
+      "text": "State Farm is giving out its largest dividend in history. Do you qualify?\n\nFind out: finance.yahoo.com/personal-f…",
+      "created_at": "2026-08-18T19:25:45Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089787743333163113",
+      "text": "Mounting debt and government spending are weighing on bond markets, even as weak economic data cools rate-hike expectations.",
+      "created_at": "2026-08-18T18:53:19Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089776170246017439",
       "text": "$AMZN is buying tons of rare books, cutting off their spines, and scanning them for AI training, according to TechCrunch.",
       "created_at": "2026-08-18T18:07:19Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089446985166123400",
-      "text": "$STUB finished the day down over 11% due to the lingering shock of a near-zero profit result from its Q2 earnings report.",
-      "created_at": "2026-08-17T20:19:15Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089427257047535772",
-      "text": "Some of the coolest cars we saw at Monterey Car Week were Aston Martin's Valen, Audi's new Nuvolari, McLaren Mcl 6GT, and Bugatti's Destrier.\n\nWhich one would you drive? 🏎️\n\nVideo",
-      "created_at": "2026-08-17T19:00:52Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089425485969211558",
-      "text": "President Trump \"likes\" the idea of declaring the Strait of Hormuz a US territory.\n\nVideo",
-      "created_at": "2026-08-17T18:53:50Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-18T19:18:26Z",
+  "_updated": "2026-08-18T20:08:35Z",
   "_username": "YahooFinance"
 }
