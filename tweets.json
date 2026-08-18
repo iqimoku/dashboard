@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2089823556091703577",
+      "text": "OpenAI launches ChatGPT for teens amid safety concerns.\n\nVideo",
+      "created_at": "2026-08-18T21:15:37Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089810554059714685",
       "text": "Chip stocks have taken a hit across the board amid concerns over AI spending and the war in Iran.",
       "created_at": "2026-08-18T20:23:57Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089453827694932087",
-      "text": "US stocks fell for the day as oil prices and Treasury yields jumped amid renewed concerns that the US-Iran war could reignite.\n\n$GSPC -0.51%\n$DJI -0.50%\n$IXIC -0.31%",
-      "created_at": "2026-08-17T20:46:27Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-18T21:10:39Z",
+  "_updated": "2026-08-18T22:08:19Z",
   "_username": "YahooFinance"
 }
