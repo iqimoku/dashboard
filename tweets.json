@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2089810554059714685",
+      "text": "Chip stocks have taken a hit across the board amid concerns over AI spending and the war in Iran.",
+      "created_at": "2026-08-18T20:23:57Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089798268804833568",
       "text": "$NVDA could be trading at a discount of up to 50%, according to Bank of America.",
       "created_at": "2026-08-18T19:35:08Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089459129089716546",
-      "text": "Ohtani's New Balance cleats from the 2025 MLB Tokyo Series sold for over $440,000 on The Realest.  ⚾️\n\n\"The space is on fire ... Setting an all-time record by nearly 5x, there's so much room to grow the category,\" Realest Founder and CEO @djskee says. 🔥\n\nVideo",
-      "created_at": "2026-08-17T21:07:31Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-18T20:08:35Z",
+  "_updated": "2026-08-18T21:10:39Z",
   "_username": "YahooFinance"
 }
