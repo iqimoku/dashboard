@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2089712976676729090",
+      "text": "ABC is suing Trump's FCC  for what they're calling a \"retaliatory campaign\" against them.",
+      "created_at": "2026-08-18T13:56:13Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089690321164579171",
       "text": "🏦 Wall Street is backing away from a September Fed hike.\n\n📈 The 30-year Treasury yield is going the other way — climbing to its highest level since 2007.\n\n🤔 @biancoresearch’s provocative question: What if bonds need the Fed to hike before long-term rates finally fall?\n\n🔥 “Bond traders can stop panicking when the Fed starts panicking,” he writes.\n\n🔗 Reply:",
       "created_at": "2026-08-18T12:26:11Z",
@@ -208,17 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089330501383340377",
-      "text": "$MU is heating up, crossing $1,000.",
-      "created_at": "2026-08-17T12:36:24Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-18T13:32:54Z",
+  "_updated": "2026-08-18T14:19:28Z",
   "_username": "YahooFinance"
 }
