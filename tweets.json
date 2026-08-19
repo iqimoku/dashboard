@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2090085237892034564",
+      "text": "EMJ Capital Founder and President @ericjackson thinks SpaceX \"doesn't really mean much.\"\n\n\"If you choose to play it, you could get burned depending on what the valuation is going to be.\"\n\nVideo",
+      "created_at": "2026-08-19T14:35:27Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090084124283289973",
+      "text": "$TGT's overhaul is winning over investors. 🎯\n\nTarget's latest earnings showed sales increased in all merchandise departments, led by beauty and food. The company even jacked up its full-year sales and profit outlooks.\n\nRead more from @BrianSozzi: finance.yahoo.com/markets/st…",
+      "created_at": "2026-08-19T14:31:01Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090083996986183982",
+      "text": "Eggs, vacation packages, $1.50 hot dogs, and now… health insurance? 🌭📦 \n\nCostco is officially launching branded Medicare plans.\n\nVideo",
+      "created_at": "2026-08-19T14:30:31Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2090075859969261781",
       "text": "The US Treasury announced that it's doubling its repurchases of government debt to help the bond market out.",
       "created_at": "2026-08-19T13:58:11Z",
@@ -186,39 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089741383716188251",
-      "text": "$HD is up modestly after beating Wall Street's earnings expectations despite what CFO Richard McPhail calls \"frozen housing market conditions\".",
-      "created_at": "2026-08-18T15:49:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089736270532477426",
-      "text": "$XOS just secured its first U.S. Air Fore contract, sending shares rocketing. 🚀",
-      "created_at": "2026-08-18T15:28:46Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089733586106691865",
-      "text": "Anthropic is gaining on $SPCX for 2026's largest IPO.\n\nFueled by surging revenue growth, the AI star is rapidly closing the gap ahead of a potential Q4 debut. 📈🤖 yhoo.it/4xcCbZo",
-      "created_at": "2026-08-18T15:18:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T14:20:08Z",
+  "_updated": "2026-08-19T15:17:23Z",
   "_username": "YahooFinance"
 }
