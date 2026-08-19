@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "id": "2090184103903596847",
+      "text": "$MRNA just capped its best day ever, nearly tripling its value. 💰 \n\nThe stock surged on Wednesday after the company reported positive results from its late-stage trial of a melanoma vaccine developed with Merck.\n\nVideo",
+      "created_at": "2026-08-19T21:08:18Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090176294205964725",
+      "text": "Bitcoin bounced back today. 🔥\n\nIt surged above $68,000 amid optimism over the Treasury increasing its buybacks of US debt.",
+      "created_at": "2026-08-19T20:37:16Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090173324684865989",
+      "text": "The 30-year yield fell after the US Treasury Department said it would increase buybacks of long-dated government debt \"by at least double.\"",
+      "created_at": "2026-08-19T20:25:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090170219939402089",
+      "text": "The national debt just smashed through a new record high, clocking in at just north of $40 trillion. 🤯",
+      "created_at": "2026-08-19T20:13:08Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2090166397632438783",
       "text": "China is getting a trade edge by avoiding the Strait of Hormuz and taking an alternative route through the Arctic that's being dubbed the \"Ice Silk Road.\"\n\nRead more: finance.yahoo.com/economy/po…",
       "created_at": "2026-08-19T19:57:57Z",
@@ -153,50 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2090055549685576150",
-      "text": "$MRNA soars on successful results for a melanoma cancer vaccine. 💉",
-      "created_at": "2026-08-19T12:37:29Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089904451695902872",
-      "text": "BREAKING:President Trump posted on Truth Social that he paused the 50% tariffs that were supposed to take effect tomorrow morning, saying they “have a deal.”\nThis would have led to higher prices for beer, dairy, hockey gear, electronics &amp; building materials like plywood &amp; cement.",
-      "created_at": "2026-08-19T02:37:04Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2090023475637297524",
-      "text": "Target CEO Michael Fiddelke to @YahooFinance on earnings beat this morning:\n\n\"We're encouraged. We laid out a plan for the year that had a lot of change in it — more change to what we were selling and how we were going to sell it than in the last decade. And a couple of quarters in, it's great to see a strong guest response to some of the places we're making changes.There's a lot of work still in front of us, and the goal isn't a couple strong quarters. The goal is years of sustained top-line growth. And so we'll turn the page on this one and get back to work.\"\n\nSays he is \"encouraged\" by the start to the back to school shopping season.",
-      "created_at": "2026-08-19T10:30:02Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2090040953201471893",
-      "text": "You sitting on any of these big gains for Sandisk, Dell, Micron and Intel?",
-      "created_at": "2026-08-19T11:39:28Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T20:11:22Z",
+  "_updated": "2026-08-19T21:13:35Z",
   "_username": "YahooFinance"
 }
