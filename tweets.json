@@ -1,9 +1,31 @@
 {
   "data": [
     {
-      "id": "2090085237892034564",
-      "text": "EMJ Capital Founder and President @ericjackson thinks SpaceX \"doesn't really mean much.\"\n\n\"If you choose to play it, you could get burned depending on what the valuation is going to be.\"\n\nVideo",
-      "created_at": "2026-08-19T14:35:27Z",
+      "id": "2090106409971011868",
+      "text": "Catch up on the latest in crypto news with @scottmelker: nitter.net/i/broadcasts/1YxNrbrWk…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1YxNrbrWkEXxw",
+      "created_at": "2026-08-19T15:59:35Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090104049022484864",
+      "text": "Costco is officially bringing Medicare plans to its warehouse aisles. 🩺 \n\nThe mega retailer is launching the Kirkland-branded healthcare plans in three states, pending regulatory approval. yhoo.it/4xeJTlM",
+      "created_at": "2026-08-19T15:50:12Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090095525705965869",
+      "text": "EMJ Capital Founder and President @ericjackson thinks the SpaceX IPO \"doesn't really mean much.\"\n\n\"If you choose to play it, you could get burned depending on what the valuation is going to be.\"\n\nVideo",
+      "created_at": "2026-08-19T15:16:20Z",
       "public_metrics": {
         "like_count": 0,
         "retweet_count": 0,
@@ -175,50 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089740618897453385",
-      "text": "My new show BUILT DIFFERENT airs this Friday with @YahooFinance.\nI will be talking with entrepreneurs who have inspired, motivated, taught me something special, helped me avoid potholes in the business, and most importantly keep moving forward.",
-      "created_at": "2026-08-18T15:46:03Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089761813235744865",
-      "text": "$BIDU is sinking after the company missed its Q2 earnings estimates.\n\nThe Chinese tech titan missed analyst estimates on revenue, earnings and net income. 📉",
-      "created_at": "2026-08-18T17:10:16Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089752400458342612",
-      "text": "Crypto exchange BitMart has shut down, and users are reporting that they’ve been blocked from making withdrawals.\n\n@scottmelker breaks it down:\n\nVideo",
-      "created_at": "2026-08-18T16:32:52Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089741662226420043",
-      "text": "Home Depot's CFO just called it a \"frozen housing market\". 🧊\n\nHe implied in the company's earnings call that greater uncertainty in the market led the company to reaffirm rather than raise its guidance.",
-      "created_at": "2026-08-18T15:50:12Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T15:17:23Z",
+  "_updated": "2026-08-19T16:15:07Z",
   "_username": "YahooFinance"
 }
