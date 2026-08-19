@@ -1,6 +1,61 @@
 {
   "data": [
     {
+      "id": "2090058164649558317",
+      "text": "President Trump posted on Truth Social that new tariffs on Canadian goods are paused for three days, just hours before the tariffs were due to come into effect.",
+      "created_at": "2026-08-19T12:47:52Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090055549685576150",
+      "text": "$MRNA soars on successful results for a melanoma cancer vaccine. 💉",
+      "created_at": "2026-08-19T12:37:29Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2089904451695902872",
+      "text": "BREAKING:President Trump posted on Truth Social that he paused the 50% tariffs that were supposed to take effect tomorrow morning, saying they “have a deal.”\nThis would have led to higher prices for beer, dairy, hockey gear, electronics &amp; building materials like plywood &amp; cement.",
+      "created_at": "2026-08-19T02:37:04Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090023475637297524",
+      "text": "Target CEO Michael Fiddelke to @YahooFinance on earnings beat this morning:\n\n\"We're encouraged. We laid out a plan for the year that had a lot of change in it — more change to what we were selling and how we were going to sell it than in the last decade. And a couple of quarters in, it's great to see a strong guest response to some of the places we're making changes.There's a lot of work still in front of us, and the goal isn't a couple strong quarters. The goal is years of sustained top-line growth. And so we'll turn the page on this one and get back to work.\"\n\nSays he is \"encouraged\" by the start to the back to school shopping season.",
+      "created_at": "2026-08-19T10:30:02Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090040953201471893",
+      "text": "You sitting on any of these big gains for Sandisk, Dell, Micron and Intel?",
+      "created_at": "2026-08-19T11:39:28Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2089834826903765409",
       "text": "Is this the right move by OpenAI?",
       "created_at": "2026-08-18T22:00:24Z",
@@ -164,61 +219,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089712976676729090",
-      "text": "ABC is suing Trump's FCC  for what they're calling a \"retaliatory campaign\" against them.",
-      "created_at": "2026-08-18T13:56:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089690321164579171",
-      "text": "🏦 Wall Street is backing away from a September Fed hike.\n\n📈 The 30-year Treasury yield is going the other way — climbing to its highest level since 2007.\n\n🤔 @biancoresearch’s provocative question: What if bonds need the Fed to hike before long-term rates finally fall?\n\n🔥 “Bond traders can stop panicking when the Fed starts panicking,” he writes.\n\n🔗 Reply:",
-      "created_at": "2026-08-18T12:26:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089695045666345116",
-      "text": "$KLAR plunges after trimming its sales guidance ✂️",
-      "created_at": "2026-08-18T12:44:58Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089693348369957098",
-      "text": "$RDDT officially joined the S&amp;P 500 today!",
-      "created_at": "2026-08-18T12:38:13Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089468838861488394",
-      "text": "$SBUX brought back the Unicorn Frappuccino for a few days, which led to its highest North American sales weekend ever.",
-      "created_at": "2026-08-17T21:46:06Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -231,6 +231,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T12:16:55Z",
+  "_updated": "2026-08-19T13:34:15Z",
   "_username": "YahooFinance"
 }
