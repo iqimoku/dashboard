@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "id": "2090204183542554659",
+      "text": "A prolonged slowdown is taking hold of the US housing market.\n\nHome sales are on track to hit a 15-year low by the end of this year, Business Insider reports. yhoo.it/4xKteWP",
+      "created_at": "2026-08-19T22:28:06Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2090188413064351908",
       "text": "President Trump says that the government has \"talked about\" purchasing bitcoin.\n\nVideo",
       "created_at": "2026-08-19T21:25:26Z",
@@ -186,17 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2090075859969261781",
-      "text": "The US Treasury announced that it's doubling its repurchases of government debt to help the bond market out.",
-      "created_at": "2026-08-19T13:58:11Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T22:11:04Z",
+  "_updated": "2026-08-19T23:10:51Z",
   "_username": "YahooFinance"
 }
