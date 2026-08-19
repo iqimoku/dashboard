@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "id": "2090122274787479815",
+      "text": "Is $NVDA's stock cheap? \n\n\"It's been cheap for a while. Great company, great CEO,\" EMJ Capital Founder and President @ericjackson says.\n\nVideo",
+      "created_at": "2026-08-19T17:02:37Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090121653292257722",
+      "text": "Goldman Sachs is reporting that AI usage by companies increased the US unemployment rate by 0.1%.",
+      "created_at": "2026-08-19T17:00:09Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
+      "id": "2090114502637326549",
+      "text": ".@scottmelker breaks down the SEC's newest proposed crypto regulations.\n\nCrypto companies would be allowed to raise up to $5 million in four years for a token after publishing a white paper.\n\nVideo",
+      "created_at": "2026-08-19T16:31:44Z",
+      "public_metrics": {
+        "like_count": 0,
+        "retweet_count": 0,
+        "reply_count": 0,
+        "impression_count": 0
+      }
+    },
+    {
       "id": "2090106409971011868",
       "text": "Catch up on the latest in crypto news with @scottmelker: nitter.net/i/broadcasts/1YxNrbrWk…\n\nLink\n\n\n\nYahoo Finance\n\nThe Daily Wolf\nhttps://nitter.net/i/broadcasts/1YxNrbrWkEXxw",
       "created_at": "2026-08-19T15:59:35Z",
@@ -164,39 +197,6 @@
         "reply_count": 0,
         "impression_count": 0
       }
-    },
-    {
-      "id": "2089795906333773843",
-      "text": "State Farm is giving out its largest dividend in history. Do you qualify?\n\nFind out: finance.yahoo.com/personal-f…",
-      "created_at": "2026-08-18T19:25:45Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089787743333163113",
-      "text": "Mounting debt and government spending are weighing on bond markets, even as weak economic data cools rate-hike expectations.",
-      "created_at": "2026-08-18T18:53:19Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
-    },
-    {
-      "id": "2089776170246017439",
-      "text": "$AMZN is buying tons of rare books, cutting off their spines, and scanning them for AI training, according to TechCrunch.",
-      "created_at": "2026-08-18T18:07:19Z",
-      "public_metrics": {
-        "like_count": 0,
-        "retweet_count": 0,
-        "reply_count": 0,
-        "impression_count": 0
-      }
     }
   ],
   "includes": {
@@ -209,6 +209,6 @@
       }
     ]
   },
-  "_updated": "2026-08-19T16:15:07Z",
+  "_updated": "2026-08-19T17:14:15Z",
   "_username": "YahooFinance"
 }
