@@ -8,8 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;600;700;800&display=swap');
 
 :root {
-  --bg:#08090e; --surface:#0f1018; --surface2:#141520; --border:#1d1f2e;
-  --text:#e8eaf0; --muted:#4a506a;
+  --bg:#1b2130; --surface:#252d42; --surface2:#2b3550; --border:#3a4562;
+  --text:#e6eaf2; --muted:#a9b3c9;
   --s1:#4fc3f7; --s2:#00e5a0; --s3:#f5a623; --s4:#ff4d4d;
   --mtt-full:#a78bfa; --mtt-high:#6ee7b7; --mtt-mid:#fbbf24; --mtt-low:#f87171;
   --accent:#a78bfa;
@@ -40,7 +40,7 @@
 body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;}
 
 /* ── HEADER ── */
-.header{background:linear-gradient(135deg,#0b0c18 0%,#131424 60%,#08090e 100%);border-bottom:1px solid var(--border);padding:22px 36px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.header{background:linear-gradient(135deg,#1f2638 0%,#252d46 60%,#1b2130 100%);border-bottom:1px solid var(--border);padding:22px 36px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .h-eyebrow{font-family:'Space Mono',monospace;font-size:10px;color:#8a7fc7;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;opacity:.85;}
 .h-title{font-size:28px;font-weight:800;line-height:1;background:linear-gradient(135deg,#fff 20%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .h-sub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5;}
@@ -196,7 +196,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 /* ── MODAL ── */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .22s;}
 .overlay.open{opacity:1;pointer-events:all;}
-.modal{background:#0f1018;border:1px solid var(--border);border-radius:14px;width:100%;max-width:720px;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.97);transition:transform .22s;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:14px;width:100%;max-width:720px;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(20px) scale(.97);transition:transform .22s;}
 .overlay.open .modal{transform:translateY(0) scale(1);}
 .modal.stage-1{border-top:4px solid var(--s1);}.modal.stage-2{border-top:4px solid var(--s2);}
 .modal.stage-3{border-top:4px solid var(--s3);}.modal.stage-4{border-top:4px solid var(--s4);}
@@ -957,17 +957,85 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   .stage-lbl{display:none;}
   .ext-badge{font-size:8px;}
 }
+
+/* ══ UI v2 — czytelność: karty, kontrast, rozmiary czcionek ══ */
+.info-banner.collapsed{padding-top:10px;padding-bottom:10px;}
+.info-banner.collapsed .ib-cols{display:none;}
+.info-banner.collapsed .ib-headline{margin-bottom:0;}
+.ib-headline{cursor:pointer;}
+.ib-toggle{font-size:12px;font-weight:600;color:var(--accent);margin-left:6px;}
+.ib-col-desc,.ib-text{font-size:13px;color:#b4bdd1;}
+.h-sub{font-size:13px;color:var(--muted);}
+.tab{font-size:14px;color:var(--muted);}
+.tab-cnt{font-size:11px;}
+.legend-bar{padding:14px 36px;gap:12px 28px;}
+.leg-label{font-size:11px;color:var(--muted);}
+.li{font-size:13px;color:#d3d9e6;}
+.btn{font-size:13px;padding:8px 14px;color:#c9d0e0;}
+.search-input,select.sector-sel{font-size:13px;padding-top:8px;padding-bottom:8px;}
+.search-input{padding-left:32px;}
+.vt-btn{font-size:13px;padding:7px 12px;}
+.disclaimer{font-size:12px;}
+.ss-l,.sum-note{font-size:12px;}
+.sum-t{font-size:11px;}
+#stage-dist{flex-basis:100%;display:flex;flex-direction:column;gap:10px;}
+#stage-dist .sd-title{font-size:14px;font-weight:600;color:#d3d9e6;}
+#stage-dist .sd-bar{display:flex;height:14px;border-radius:7px;overflow:hidden;gap:2px;}
+#stage-dist .sd-seg{min-width:2px;}
+#stage-dist .sd-legend{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:14px;color:#d3d9e6;}
+#stage-dist .sd-legend b{font-weight:700;}
+
+.card,.card.stage-1,.card.stage-2,.card.stage-3,.card.stage-4{border-top:1px solid var(--border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:14px;}
+.card .card-hint{display:none;}
+.card .live-badge{display:none;}
+.card-top{display:flex;gap:14px;align-items:center;}
+.card .stage-num{width:56px;height:56px;flex-shrink:0;border-radius:12px;font-size:30px;border:2px solid currentColor;}
+.card .ch-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+.card .c-name{font-size:18px;font-weight:700;margin:0;}
+.c-stage-lbl{font-size:13px;font-weight:600;}
+.stage-1 .c-stage-lbl{color:var(--s1);}.stage-2 .c-stage-lbl{color:var(--s2);}
+.stage-3 .c-stage-lbl{color:var(--s3);}.stage-4 .c-stage-lbl{color:var(--s4);}
+.card-price{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.card .cm-price,.card .cm-chg{background:none;padding:0;}
+.card .cm-price .cm-v{font-size:24px;font-weight:600;}
+.card .cm-price .cur{font-size:13px;color:var(--muted);font-weight:500;}
+.card .cm-chg .cm-v{font-size:15px;}
+.card .cm-price .cm-v,.card .cm-chg .cm-v{color:var(--text) !important;animation:none !important;}
+.card .mtt-bar-wrap{border-top:none;padding:0;display:flex;align-items:center;gap:10px;}
+.card .mtt-bar-label{font-size:14px;font-weight:600;color:var(--text);font-family:'Outfit',sans-serif;letter-spacing:0;display:block;width:80px;flex-shrink:0;}
+.card .mtt-score-txt{font-size:14px;margin-left:2px;}
+.card .mtt-dots{flex:1;margin:0;gap:3px;}
+.card .mtt-dot{flex:1;width:auto;height:8px;border-radius:2px;}
+.card .mtt-dot.pass{background:var(--mtt-full);}
+.card .mtt-dot.fail{background:#3d4868;}
+.card .mtt-dot.unknown{background:#3d4868;border:none;}
+.card-flags{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;}
+.card .ext-chip{font-size:13px;font-weight:600;border-radius:6px;padding:3px 8px;border:1px solid var(--border);white-space:nowrap;}
+.card .ext-chip.ext-low{color:var(--s2);border-color:rgba(0,229,160,.4);}
+.card .ext-chip.ext-mid{color:var(--s3);border-color:rgba(245,166,35,.45);}
+.card .ext-chip.ext-high{color:var(--s4);border-color:rgba(255,77,77,.45);}
+.card .ext-chip.ext-stale{color:#b4bdd1;border-color:rgba(180,189,209,.4);}
+.card .c-sector{font-size:13px;color:var(--muted);margin:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card .c-ticker{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0;color:var(--text);}
+.card-details{display:none;}
+.card .card-signals{display:contents;}
+.card .cs-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.card .cs-tags:empty{display:none;}
+.card .card-tv-link{position:absolute;top:10px;right:10px;font-size:11px;}
+.card-top{padding-right:44px;}
+.card .stag{font-size:11px;}
+.card .tag-mtt{display:none;}
 </style>
 </head>
 <body>
 
 
 <!-- ══ INFO BANNER ══ -->
-<div class="info-banner">
+<div class="info-banner collapsed" id="info-banner">
   <div class="ib-left">
     <div class="ib-icon">📊</div>
     <div class="ib-text">
-      <div class="ib-headline">Jak działa IQimoku Dashboard?</div>
+      <div class="ib-headline" onclick="toggleBanner()">Jak działa IQimoku Dashboard? <span class="ib-toggle" id="ib-toggle">pokaż ▾</span></div>
       <div class="ib-cols">
         <div class="ib-col">
           <div class="ib-col-icon">⚡</div>
@@ -999,7 +1067,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
   <div>
     <div class="h-eyebrow">Analiza Techniczna • GPW Warszawa + Frankfurt + NYSE/Nasdaq</div>
     <div class="h-title">Stage Analysis + Minervini Trend Template</div>
-    <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • Lipiec 2026</div>
+    <div class="h-sub">Metoda Stan Weinsteina (4 fazy) + Minervini Trend Template (8 kryteriów) • WIG20 · mWIG40 · DAX · NDX · NYSE • <span id="h-sub-date"></span></div>
   </div>
   <div class="h-badges">
     <div class="ctrl-update-badge" id="updateBadge">✓ Aktualizacja: 12 lipca 2026</div>
@@ -1023,14 +1091,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
 </div>
 
 <div class="legend-bar" id="legend-bar">
-  <span class="leg-label">Weinstein:</span>
-  <div class="leg-group">
-    <div class="li"><div class="ld s1"></div>Faza 1</div>
-    <div class="li"><div class="ld s2"></div>Faza 2</div>
-    <div class="li"><div class="ld s3"></div>Faza 3</div>
-    <div class="li"><div class="ld s4"></div>Faza 4</div>
-  </div>
-  <span class="leg-sep">|</span>
+  <div id="stage-dist"></div>
   <span class="leg-label">MTT:</span>
   <div class="leg-group">
     <div class="li"><div class="ld mtt-full"></div>8/8 Pełny</div>
@@ -1113,7 +1174,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
     <div class="coffee-stat"><div class="coffee-stat-v">S1-S4</div><div class="coffee-stat-l">Weinstein</div></div>
   </div>
 </div>
-<div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Lipiec 2026. Kliknij spółkę po szczegóły.</div>
+<div class="disclaimer" id="disclaimer">⚠️ Analiza wg Weinsteina (MA30W) + Minervini Trend Template (8 kryteriów). <strong>Nie jest to porada inwestycyjna.</strong> Cel edukacyjny. Kliknij spółkę po szczegóły.</div>
 
 <!-- ══ STAN RYNKU ══ -->
 <div class="market-view" id="market-view">
@@ -1200,7 +1261,7 @@ select.sector-sel{background:var(--surface);border:1px solid var(--border);color
       <!-- CYCLE CHART -->
       <div class="meth-section">
         <div class="meth-section-title">Model cyklu rynkowego Weinsteina</div>
-        <div style="background:#08090e;border:1px solid var(--border);border-radius:8px;padding:20px 16px 12px;overflow-x:auto;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:20px 16px 12px;overflow-x:auto;">
           <svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:640px;height:auto;">
             <rect x="0"   y="0" width="180" height="215" fill="rgba(79,195,247,0.10)"/>
             <rect x="180" y="0" width="250" height="215" fill="rgba(0,229,160,0.10)"/>
@@ -2528,56 +2589,54 @@ function renderCard(s){
   // Prosty cross-screener: Faza 2 + niskie rozciągnięcie + wolumen pow. śr.
   const crossTag = isCrossSignal(s) ? `<span class="stag tag-cross" title="Faza 2 + niskie rozciągnięcie ATR + wolumen powyżej średniej">🎯 Blisko przebicia</span>` : '';
 
+  const stLbl = ['','Akumulacja','Wzrost','Dystrybucja','Spadek'][s.stage];
+  const extWord = extD.stale ? 'dane nieaktualne' : (extCls==='ext-low' ? 'blisko wejścia' : extCls==='ext-mid' ? 'umiarkowane' : 'przegrzane');
+  const extChipTxt = extD.stale ? '⚠️ dane nieaktualne' : ('EXT ' + (extD.ext>=0?'+':'') + extD.ext.toFixed(1) + '× · ' + extWord);
+  const chgTxt = fmtChg(s.chg);
+
   return `<div class="card stage-${s.stage}"
     data-stage="${s.stage}" data-mtt="${score}" data-sector="${s.sector}"
     data-name="${s.name.toLowerCase()}" data-ticker="${s.ticker.toLowerCase()}"
     data-idx="${s.idx}"
     onclick="openModal('${s.ticker}','${s.idx}')">
-    <span class="card-hint">↗ szczegóły</span>
-    <div class="card-header">
+    <div class="card-top">
+      <div class="stage-num">${s.stage}</div>
       <div class="ch-info">
-        <div class="c-ticker">${s.ticker}${liveData[liveKey(s.idx, s.ticker)]?'<span class="live-badge">LIVE</span>':''}</div>
         <div class="c-name">${s.name}</div>
-        <div class="c-sector">${s.sector}</div>
-        <span class="c-idx idx-${s.idx}">${idxName[s.idx]}</span>
-      </div>
-      <div class="ch-badges">
-        <div class="stage-badge">
-          <div class="stage-num">${s.stage}</div>
-          <div class="stage-lbl">${['','AKUM.','WZROST','DYST.','SPADEK'][s.stage]}</div>
-        </div>
-        <div class="ext-badge ${extCls}" title="${extTitle}">${extTxt}</div>
+        <div class="c-stage-lbl">Faza ${s.stage} · ${stLbl}</div>
       </div>
     </div>
-    <div class="mini-chart">
-      <div class="mini-bar-bg">
-        <div class="mini-bar-fill" style="width:${sp[s.stage]}%"></div>
-        <div class="mini-dot" style="left:${dp[s.stage]}%"></div>
-      </div>
-      <div class="mini-lbls"><span>S1</span><span>S2</span><span>S3</span><span>S4</span></div>
+    <div class="card-price">
+      <div class="cm cm-price"><span class="cm-v nu">${fmt(s.price,s.idx)}</span> <span class="cur">${cur}</span></div>
+      <div class="cm cm-chg"><span class="cm-v nu">${chgTxt}</span></div>
     </div>
     <div class="mtt-bar-wrap">
-      <div class="mtt-bar-header">
-        <div class="mtt-bar-label"><span class="mtt-logo">MTT</span> Minervini Trend Template</div>
-        <div class="mtt-score-txt ${mttScoreCls}">${mttScoreTxt}</div>
-      </div>
-      <div class="mtt-track"><div class="mtt-fill" style="width:${mttFillPctVal}%;background:${mttFillCol}"></div></div>
+      <div class="mtt-bar-label">MTT <span class="mtt-score-txt ${mttScoreCls}">${mttScoreTxt}</span></div>
       <div class="mtt-dots">${dots}</div>
     </div>
-    <div class="card-metrics">
-      <div class="cm"><div class="cm-l">KURS (${cur})</div><div class="cm-v nu">${fmt(s.price,s.idx)}</div></div>
-      <div class="cm"><div class="cm-l">ZMIANA</div><div class="cm-v ${ch}">${s.chg}</div></div>
+    <div class="card-flags">
+      <span class="ext-chip ${extCls}" title="${extTitle}">${extChipTxt}</span>
+      <span class="c-sector"><span class="c-ticker">${s.ticker}</span> · ${s.sector}</span>
+    </div>
+    <div class="card-details">
       <div class="cm"><div class="cm-l">MA30W</div><div class="cm-v ${mas}">${fmt(s.ma30w,s.idx)}</div></div>
-      <div class="cm"><div class="cm-l">TREND MA</div><div class="cm-v nu" style="font-size:10px">${s.matrend}</div></div>
-      <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu" style="font-size:10px">${s.vol}</div></div>
-      <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu" style="font-size:10px">${s.rs}</div></div>
-      <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}" style="font-size:${extD.stale?'9.5px':'12px'}">${extTxt}</div></div>
+      <div class="cm"><div class="cm-l">TREND MA</div><div class="cm-v nu">${s.matrend}</div></div>
+      <div class="cm"><div class="cm-l">WOLUMEN</div><div class="cm-v nu">${s.vol}</div></div>
+      <div class="cm"><div class="cm-l">RS</div><div class="cm-v nu">${s.rs}</div></div>
+      <div class="cm"><div class="cm-l">EXT (ATR)</div><div class="cm-v ${extCls}">${extTxt}</div></div>
     </div>
     <div class="card-signals">
-      <div class="cs-tags">${mttTag}${crossTag}</div>
+      <div class="cs-tags">${crossTag}</div>
       ${getTVSymbol(s.idx, s.ticker) ? `<a class="card-tv-link" href="https://www.tradingview.com/symbols/${getTVSymbol(s.idx, s.ticker).replace(':','-')}/" target="_blank" rel="noopener" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h4v2H9v4H7V7zm6 0h4v10h-2v-8h-2V7z"/></svg>TV</a>` : ''}
     </div>
   </div>`;
+}
+
+// Zmiana ceny: strzałka + wartość bezwzględna (kolor niesie tylko faza, nie kierunek ceny)
+function fmtChg(str){
+  const t = String(str);
+  const neg = t.trim().startsWith('-');
+  return (neg ? '▼ ' : '▲ ') + t.replace(/^[+\-−]/,'').trim();
 }
 
 function getFiltered(){
@@ -2756,7 +2815,26 @@ function renderGrid(){
     g.classList.remove('compact-mode');
     g.innerHTML=data.length?data.map(renderCard).join(''):'<div class="no-results">Brak spółek spełniających kryteria.</div>';
   }
+  renderStageDist();
   renderSummary();
+}
+
+function renderStageDist(){
+  const el=document.getElementById('stage-dist'); if(!el) return;
+  const all=STOCKS[currentTab]||[]; const n=all.length||1;
+  const c={1:0,2:0,3:0,4:0}; all.forEach(s=>c[s.stage]++);
+  const col={1:'var(--s1)',2:'var(--s2)',3:'var(--s3)',4:'var(--s4)'};
+  const nm={1:'akumulacja',2:'wzrost',3:'dystrybucja',4:'spadek'};
+  const pc=k=>Math.round(c[k]/n*100);
+  el.innerHTML = `<div class="sd-title">${idxName[currentTab]}: rozkład faz</div>`+
+    `<div class="sd-bar">${[1,2,3,4].filter(k=>c[k]>0).map(k=>`<div class="sd-seg" style="flex:${c[k]};background:${col[k]}"></div>`).join('')}</div>`+
+    `<div class="sd-legend">${[1,2,3,4].map(k=>`<span><b style="color:${col[k]}">Faza ${k}</b> ${nm[k]} · ${pc(k)}% (${c[k]})</span>`).join('')}</div>`;
+}
+
+function toggleBanner(){
+  const b=document.getElementById('info-banner'); if(!b) return;
+  b.classList.toggle('collapsed');
+  const t=document.getElementById('ib-toggle'); if(t) t.textContent = b.classList.contains('collapsed') ? 'pokaż ▾' : 'ukryj ▴';
 }
 
 function renderSummary(){
@@ -4619,7 +4697,7 @@ function updateCardsWithLiveData() {
         ? newPrice.toLocaleString('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2})
         : newPrice.toFixed(2);
       priceEl.textContent = fmt;
-      priceEl.className = 'cm-v ' + (newPrice > oldPrice ? 'live-up' : newPrice < oldPrice ? 'live-dn' : 'nu');
+      priceEl.className = 'cm-v nu';
     }
     // Add LIVE badge whenever liveData exists for this ticker (regardless of price change)
     const tickerEl = card.querySelector('.c-ticker');
@@ -4633,9 +4711,8 @@ function updateCardsWithLiveData() {
     // Change % (index 1)
     const chgEl = metrics[1]?.querySelector('.cm-v');
     if (chgEl && d.chg != null) {
-      const chgStr = (d.chg >= 0 ? '+' : '') + d.chg.toFixed(2) + '%';
-      chgEl.textContent = chgStr;
-      chgEl.className = 'cm-v ' + (d.chg > 0 ? 'up' : d.chg < 0 ? 'dn' : 'nu');
+      chgEl.textContent = (d.chg < 0 ? '▼ ' : '▲ ') + Math.abs(d.chg).toFixed(2) + '%';
+      chgEl.className = 'cm-v nu';
     }
 
     // MA30W / SMA150 (index 2)
@@ -4753,6 +4830,8 @@ renderGrid();
 (() => {
   const badge = document.getElementById('updateBadge');
   if (badge) badge.textContent = `✓ Aktualizacja: ${polishDateLabel(LAST_UPDATE)}`;
+  const hs = document.getElementById('h-sub-date');
+  if (hs) { const [yy, mm] = LAST_UPDATE.split('-').map(Number); hs.textContent = PL_MONTHS[mm-1].charAt(0).toUpperCase() + PL_MONTHS[mm-1].slice(1) + ' ' + yy; }
 
   // Krótki format d.m.RRRR do małych badge'y w rogach zakładek
   const [y, m, d] = LAST_UPDATE.split('-');
